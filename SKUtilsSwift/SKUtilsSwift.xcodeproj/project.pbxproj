@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */; };
+		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF1B1D3802D600EB7212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF1A1D3802D600EB7212 /* AppDelegate.swift */; };
 		A5ADBF1D1D3802D600EB7212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF1C1D3802D600EB7212 /* ViewController.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
+		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1A1D3802D600EB7212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5ADBF1C1D3802D600EB7212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */,
+				A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */,
 				A5ADBF311D3802D600EB7212 /* Info.plist */,
 			);
 			path = SKUtilsSwiftTests;
@@ -106,6 +111,7 @@
 			children = (
 				A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */,
 				A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */,
+				A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */,
 			);
 			path = SKValidators;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */,
 				A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */,
 				A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */,
 				A5ADBF1D1D3802D600EB7212 /* ViewController.swift in Sources */,
@@ -222,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */,
 				A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +414,7 @@
 				A5ADBF361D3802D600EB7212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5ADBF371D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +423,7 @@
 				A5ADBF391D3802D600EB7212 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

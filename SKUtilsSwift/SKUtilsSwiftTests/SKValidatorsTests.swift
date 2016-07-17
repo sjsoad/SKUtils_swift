@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import SKUtilsSwift
+
 class SKValidatorsTests: XCTestCase {
     
     override func setUp() {
@@ -20,16 +22,32 @@ class SKValidatorsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testBaseValidator() {
+        let shortString = "test"
+        let normalString = "normal"
+        let longString = "too long string"
+        let baseValidator = SKBaseValidator()
+        baseValidator.minTextLenght = 5
+        baseValidator.maxTextLenght = 8
+        XCTAssertFalse(baseValidator.isTextValid(shortString))
+        XCTAssertTrue(baseValidator.isTextValid(normalString))
+        XCTAssertFalse(baseValidator.isTextValid(longString))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testEmailValidator() {
+        let invalidEmail = "email@invalid"
+        let validEmail = "email@gmail.com"
+        let emailValidator = SKEmailValidator()
+        XCTAssertFalse(emailValidator.isTextValid(invalidEmail))
+        XCTAssertTrue(emailValidator.isTextValid(validEmail))
+    }
+
+    func testPasswordValidator() {
+        let ivalidPassword = "invalidpassword"
+        let validPassword = "ValidPass1"
+        let passValidator = SKPasswordValidator()
+        XCTAssertFalse(passValidator.isTextValid(ivalidPassword))
+        XCTAssertTrue(passValidator.isTextValid(validPassword))
     }
     
 }
