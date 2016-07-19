@@ -25,6 +25,15 @@ class SKLoginVM: NSObject {
     }
     
     func login() -> Void {
-        
+        var valid = false
+        if let email = self.email {
+            valid = self.isEmailValid(email)
+        }
+        if let pass = self.pass {
+            valid = self.isPassValid(pass)
+        }
+        if valid {
+            
+        }
     }
 }
