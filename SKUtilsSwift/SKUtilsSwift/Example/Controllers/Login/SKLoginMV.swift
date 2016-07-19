@@ -35,7 +35,9 @@ class SKLoginMV: UIViewController {
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
-        
+        self.loginVM.email = self.emailTextField.text
+        self.loginVM.pass = self.passTextField.text
+        self.loginVM.login()
     }
     
 }

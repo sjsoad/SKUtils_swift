@@ -13,6 +13,9 @@ class SKLoginVM: NSObject {
     @IBOutlet weak var emailValidator: SKEmailValidator!
     @IBOutlet weak var passValidator: SKPasswordValidator!
     
+    var email: String? = nil
+    var pass: String? = nil
+    
     func isEmailValid(text: String) -> Bool {
         return self.emailValidator.isTextValid(text)
     }
@@ -21,4 +24,7 @@ class SKLoginVM: NSObject {
         return self.passValidator.isTextValid(text)
     }
     
+    func login() -> Void {
+        
+    }
 }
