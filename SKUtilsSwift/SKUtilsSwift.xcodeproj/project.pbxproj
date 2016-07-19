@@ -15,6 +15,7 @@
 		A52B204A1D3BDE6D00F77226 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B20491D3BDE6D00F77226 /* Extensions.swift */; };
 		A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
+		A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 		A52B20491D3BDE6D00F77226 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
+		A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldsManager.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5ADBF211D3802D600EB7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +145,22 @@
 			path = SKUtilsSwift/Categories;
 			sourceTree = SOURCE_ROOT;
 		};
+		A5A5B3391D3E8FF800070CD7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A5A5B33A1D3E8FF800070CD7 /* SKTextFieldsManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A5A5B33A1D3E8FF800070CD7 /* SKTextFieldsManager */ = {
+			isa = PBXGroup;
+			children = (
+				A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */,
+			);
+			path = SKTextFieldsManager;
+			sourceTree = "<group>";
+		};
 		A5ADBF0E1D3802D500EB7212 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +182,7 @@
 		A5ADBF191D3802D600EB7212 /* SKUtilsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				A5A5B3391D3E8FF800070CD7 /* Managers */,
 				A52B20481D3BDE2200F77226 /* Categories */,
 				A5ADBF3A1D3802F100EB7212 /* SKValidators */,
 				04FD882C1D3E4E8F00080A35 /* SKtextFieldAccessoryView */,
@@ -303,6 +322,7 @@
 				0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
 				A52B204A1D3BDE6D00F77226 /* Extensions.swift in Sources */,
+				A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
