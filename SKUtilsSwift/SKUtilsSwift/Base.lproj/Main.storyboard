@@ -38,23 +38,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-38-slr" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="215" width="560" height="50"/>
+                                        <rect key="frame" x="20" y="338" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email or username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LZJ-sm-mzf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="validationRuleBuilder">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="textFieldDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="UBr-VW-mzs"/>
                                                     <action selector="textFieldDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="XsL-nL-A7f"/>
+                                                    <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="oS7-qY-wEr"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -86,22 +81,20 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="textField" destination="hGP-TG-lyu" id="K5M-KS-Jga"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-Mg-dB2" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="275" width="560" height="50"/>
+                                        <rect key="frame" x="20" y="398" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="a8m-kb-KVJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="validationRuleBuilder">
-                                                        <integer key="value" value="0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>
                                                     <action selector="textFieldDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="bL6-dw-Zzd"/>
                                                     <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cqp-oe-JkL"/>
@@ -136,9 +129,12 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="textField" destination="F8C-Sf-dgR" id="oli-XR-Cyh"/>
+                                        </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-p9-QKn">
-                                        <rect key="frame" x="20" y="345" width="560" height="50"/>
+                                        <rect key="frame" x="20" y="468" width="560" height="50"/>
                                         <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="hNt-ab-Iua"/>
@@ -159,7 +155,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="5nn-Mg-dB2" firstAttribute="centerY" secondItem="ZVf-mc-Ulh" secondAttribute="centerY" id="30g-vx-MN4"/>
+                                    <constraint firstItem="5nn-Mg-dB2" firstAttribute="centerY" secondItem="ZVf-mc-Ulh" secondAttribute="centerY" constant="123" id="30g-vx-MN4"/>
                                     <constraint firstItem="gd7-38-slr" firstAttribute="leading" secondItem="ZVf-mc-Ulh" secondAttribute="leading" constant="20" id="3oi-aM-mPR"/>
                                     <constraint firstItem="5nn-Mg-dB2" firstAttribute="leading" secondItem="ZVf-mc-Ulh" secondAttribute="leading" constant="20" id="LER-7A-1CA"/>
                                     <constraint firstAttribute="trailing" secondItem="rfy-p9-QKn" secondAttribute="trailing" constant="20" id="SeY-hH-ZsY"/>
@@ -183,14 +179,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="QAe-91-Bjb"/>
                     <connections>
-                        <outlet property="emailTextField" destination="hGP-TG-lyu" id="WLz-zH-Fgb"/>
+                        <outlet property="emailTextField" destination="gd7-38-slr" id="fje-bi-0vl"/>
                         <outlet property="loginButton" destination="rfy-p9-QKn" id="tGU-Fr-oNG"/>
                         <outlet property="loginVM" destination="HzZ-rY-LhB" id="RmC-RZ-Xpr"/>
-                        <outlet property="passTextField" destination="F8C-Sf-dgR" id="gZl-BP-Ooe"/>
+                        <outlet property="passTextField" destination="5nn-Mg-dB2" id="o4g-Gu-j2R"/>
+                        <outlet property="textFieldsManager" destination="Htg-Sl-ZzP" id="O4n-Sc-Jaz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="Htg-Sl-ZzP" customClass="SKTextFieldsManager" customModule="SKUtilsSwift" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="scroll" destination="ZVf-mc-Ulh" id="Zrs-rE-nJe"/>
                     </connections>

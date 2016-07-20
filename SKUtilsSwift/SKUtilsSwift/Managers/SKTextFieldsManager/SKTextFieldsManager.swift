@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kAnimationDuration = 0.25
+
 class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
 
     var textFields : [AnyObject] = Array()
@@ -15,21 +17,24 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     @IBOutlet var scroll : UIScrollView? = nil {
         didSet {
             self.getTextFieldsInView(scroll)
+            self.addTapGestureRecognizer()
         }
     }
+    @IBInspectable var hideOnTap : Bool = true
+    @IBInspectable var additionalSpaceAboveKeyboard : CGFloat = 0.0
     
-    @IBInspectable var hideOnTap : Bool = true {
-        didSet {
+    override init() {
+        super.init()
+        self.subscribeForKeyboardNotifications()
+    }
+    
+    func addTapGestureRecognizer() -> Void {
+        if self.hideOnTap {
             let tap = UITapGestureRecognizer(target: self, action: #selector(SKTextFieldsManager.hideKeyboard))
             if let scroll = self.scroll {
                 scroll.addGestureRecognizer(tap)
             }
         }
-    }
-    
-    override init() {
-        super.init()
-        self.subscribeForKeyboardNotifications()
     }
     
     func getTextFieldsInView(view: UIView?) -> Void {
@@ -53,14 +58,26 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     func keyboardWillShow(notification: NSNotification) -> Void {
-        NSLog("show")
+        if let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue() {
+            UIView.animateWithDuration(kAnimationDuration) {
+                if let scroll = self.scroll {
+                    scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
+                    self.scrollToTextField(rect.size.height)
+                }
+            }
+        }
     }
     
     func keyboardWillHide(notification: NSNotification) -> Void {
-        NSLog("hide")
+        UIView.animateWithDuration(kAnimationDuration) { 
+            if let scroll = self.scroll {
+                scroll.contentInset = UIEdgeInsetsZero
+            }
+        }
     }
     
     func firstResponder() -> UITextField? {
+        self.sortTextFieldsByY()
         for textField in self.textFields {
             if textField.isFirstResponder() {
                 return textField as? UITextField
@@ -70,12 +87,49 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     func textFieldReturnButtonPressed(textField: UITextField) -> Void {
-        NSLog("%@", textField.description)
+        self.sortTextFieldsByY()
+        if let index = self.textFields.indexOf({$0 === textField}) {
+            let newIndex = index + 1
+            if newIndex < self.textFields.count {
+                let nextTextField = self.textFields[index + 1]
+                nextTextField.becomeFirstResponder()
+            }
+            else {
+                self.hideKeyboard()
+            }
+        }
     }
     
     func hideKeyboard() -> Void {
         self.textFields.forEach { textField in
             textField.resignFirstResponder()
         }
+    }
+    
+    func scrollToTextField(keyboardHeight: CGFloat) -> Void {
+        if let activeTextField = self.firstResponder() {
+            if let window = UIApplication.sharedApplication().keyWindow {
+                let activeTextFieldRect = activeTextField.convertRect(activeTextField.frame, toView: window)
+                var visibleRect = window.frame
+                visibleRect.size.height = visibleRect.size.height - keyboardHeight
+                if !CGRectContainsRect(visibleRect, activeTextFieldRect) {
+                    if let scroll = self.scroll {
+                        let y = scroll.contentOffset.y + activeTextFieldRect.origin.y + activeTextFieldRect.size.height - visibleRect.size.height + self.additionalSpaceAboveKeyboard
+                        let pointToScroll = CGPointMake(0, y);
+                        scroll.setContentOffset(pointToScroll, animated: false)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func sortTextFieldsByY() -> Void {
+        let window = UIApplication.sharedApplication().keyWindow
+        let sortedArray = self.textFields.sort { (object1, object2) -> Bool in
+            let obj1Rect = object1.convertRect(object1.frame, toView: window)
+            let obj2Rect = object1.convertRect(object2.frame, toView: window)
+            return obj1Rect.origin.y > obj2Rect.origin.y
+        }
+        self.textFields = sortedArray
     }
 }
