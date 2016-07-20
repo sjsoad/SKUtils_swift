@@ -31,11 +31,9 @@ class SKLoginMV: UIViewController {
     @IBAction func textFieldDidBeginEditing(sender: UITextField) {
         if emailTextField == sender {
             emailTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
-//            self.animateActionOnTextField(emailTextField.visualisationView!)
         }
         if passTextField == sender {
             passTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
-//            self.animateActionOnTextField(passTextField.visualisationView!)
         }
     }
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
@@ -76,16 +74,17 @@ class SKLoginMV: UIViewController {
     func animateLoginButton() -> Void {
         self.loginButton.animation = "pop"
         self.loginButton.curve = "easeOut"
-        self.loginButton.force = 0.2
-        self.loginButton.duration = 0.5
+        self.loginButton.force = CGFloat.random(0.1, max: 0.2)
+        self.loginButton.duration = CGFloat.random(0.3, max: 0.5)
         self.loginButton.animate()
     }
     
     func animateActionOnTextField(view: SpringView) -> Void {
-        view.animation = "pop"
+        view.animation = "shake"
         view.curve = "easeOut"
-        view.force = 0.1
-        view.duration = 0.5
+        view.delay = CGFloat.random(0.0, max: 0.2)
+        view.force = CGFloat.random(0.05, max: 0.2)
+        view.duration = CGFloat.random(0.3, max: 0.5)
         view.animate()
     }
 }
