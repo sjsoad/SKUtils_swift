@@ -31,11 +31,11 @@ class SKLoginMV: UIViewController {
     @IBAction func textFieldDidBeginEditing(sender: UITextField) {
         if emailTextField == sender {
             emailTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
-            self.animateActionOnTextField(emailTextField.visualisationView!)
+//            self.animateActionOnTextField(emailTextField.visualisationView!)
         }
         if passTextField == sender {
             passTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
-            self.animateActionOnTextField(passTextField.visualisationView!)
+//            self.animateActionOnTextField(passTextField.visualisationView!)
         }
     }
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
@@ -59,11 +59,17 @@ class SKLoginMV: UIViewController {
     
     func validateEmailTextField() -> Void {
         let validText = self.loginVM.isEmailValid(self.emailTextField.text)
+        if !validText {
+            self.animateActionOnTextField(self.emailTextField.visualisationView!)
+        }
         self.emailTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
     }
     
     func validatePassTextField() -> Void {
-        let validText = self.loginVM.isEmailValid(self.passTextField.text)
+        let validText = self.loginVM.isPassValid(self.passTextField.text)
+        if !validText {
+            self.animateActionOnTextField(self.passTextField.visualisationView!)
+        }
         self.passTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
     }
     
