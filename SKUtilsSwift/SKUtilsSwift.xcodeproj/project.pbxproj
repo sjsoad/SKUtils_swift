@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */; };
-		0484BCE41D3FABC400885A38 /* PMTween.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0484BCE31D3FABC400885A38 /* PMTween.framework */; };
-		0484BCE51D3FABC400885A38 /* PMTween.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0484BCE31D3FABC400885A38 /* PMTween.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
 		0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCED1D3E146F00D22867 /* SKLoginMV.swift */; };
 		0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */; };
@@ -46,7 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0484BCE51D3FABC400885A38 /* PMTween.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,7 +54,7 @@
 		031D1B7D1F1507BCF90B13F0 /* Pods-SKUtilsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseTextField.swift; sourceTree = "<group>"; };
 		0484BCE21D3FAA7600885A38 /* SKUtilsSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SKUtilsSwift-Bridging-Header.h"; path = "SKUtilsSwift/SKUtilsSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		0484BCE31D3FABC400885A38 /* PMTween.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = PMTween.framework; path = "/Users/mac/Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/PMTween/PMTween.framework"; sourceTree = "<absolute>"; };
+		0484BCEB1D3FCEFB00885A38 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "Pods/../build/Debug-iphoneos/Spring/Spring.framework"; sourceTree = "<group>"; };
 		049161EF1D3E05A000E01686 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495CCED1D3E146F00D22867 /* SKLoginMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginMV.swift; sourceTree = "<group>"; };
 		0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginVM.swift; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */,
-				0484BCE41D3FABC400885A38 /* PMTween.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +175,7 @@
 		422DCC9D2AE5B2AADA041281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0484BCE31D3FABC400885A38 /* PMTween.framework */,
+				0484BCEB1D3FCEFB00885A38 /* Spring.framework */,
 				F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */,
 				97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */,
 			);
@@ -623,6 +619,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
+				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -640,6 +640,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
+				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

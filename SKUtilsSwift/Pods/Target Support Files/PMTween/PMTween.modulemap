@@ -1,6 +1,0 @@
-framework module PMTween {
-  umbrella header "PMTween-umbrella.h"
-
-  export *
-  module * { export * }
-}
