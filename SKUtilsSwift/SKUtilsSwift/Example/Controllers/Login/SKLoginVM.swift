@@ -16,12 +16,26 @@ class SKLoginVM: NSObject {
     var email: String? = nil
     var pass: String? = nil
     
+    var delegate: SKLoginDelegate? = nil
+    
+    var canTryToLogin: Bool = false
+    
     func isEmailValid(text: String?) -> Bool {
-        return self.emailValidator.isTextValid(text)
+        let valid = self.emailValidator.isTextValid(text)
+        if let delegate = self.delegate {
+            delegate.validateEmailTextField(valid)
+        }
+        self.canTryToLogin = valid
+        return valid
     }
     
     func isPassValid(text: String?) -> Bool {
-        return self.passValidator.isTextValid(text)
+        let valid = self.passValidator.isTextValid(text)
+        if let delegate = self.delegate {
+            delegate.validatePassTextField(valid)
+        }
+        self.canTryToLogin = valid
+        return valid
     }
     
     func login() -> Void {

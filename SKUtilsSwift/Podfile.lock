@@ -1,7 +1,9 @@
 PODS:
+  - NVActivityIndicatorView (2.9)
   - Spring (1.0.3)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
 
 EXTERNAL SOURCES:
@@ -15,8 +17,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 0084f6be71bdf4735b5424ebfb530b1e3db3276c
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: bf60415c2d32e54a9ecdf427d7df7c347203b420
+PODFILE CHECKSUM: dac804249052418de396fd41d069c155f0ba7dfb
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

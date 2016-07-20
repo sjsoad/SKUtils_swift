@@ -8,25 +8,25 @@
 
 import UIKit
 import Spring
+import NVActivityIndicatorView
 
-class SKLoginMV: UIViewController {
+protocol SKLoginDelegate {
+    func validateEmailTextField(valid: Bool) -> Void
+    func validatePassTextField(valid: Bool) -> Void
+}
+
+class SKLoginMV: UIViewController, NVActivityIndicatorViewable, SKLoginDelegate {
     
-    @IBOutlet var loginVM: SKLoginVM!
+    @IBOutlet var loginVM: SKLoginVM! {
+        didSet {
+            self.loginVM.delegate = self
+        }
+    }
     @IBOutlet var textFieldsManager: SKTextFieldsManager!
     
     @IBOutlet weak var loginButton: SpringButton!
     @IBOutlet weak var emailTextField: SKBaseTextField!
     @IBOutlet weak var passTextField: SKBaseTextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func textFieldDidBeginEditing(sender: UITextField) {
         if emailTextField == sender {
@@ -38,38 +38,43 @@ class SKLoginMV: UIViewController {
     }
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
         if emailTextField == sender {
-           self.validateEmailTextField()
+           self.loginVM.isEmailValid(self.emailTextField.text)
         }
         if passTextField == sender {
-            self.validatePassTextField()
+            self.loginVM.isPassValid(self.passTextField.text)
         }
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
         self.animateLoginButton()
         self.textFieldsManager.hideKeyboard()
-        self.validateEmailTextField()
-        self.validatePassTextField()
-        self.loginVM.email = self.emailTextField.text
-        self.loginVM.pass = self.passTextField.text
-        self.loginVM.login()
+        self.loginVM.isEmailValid(self.emailTextField.text)
+        self.loginVM.isPassValid(self.passTextField.text)
+        if self.loginVM.canTryToLogin {
+            self.loginVM.email = self.emailTextField.text
+            self.loginVM.pass = self.passTextField.text
+            startActivityAnimating(CGSizeMake(80, 30), message: nil, type: .BallClipRotate, color: UIColor.whiteColor(), padding: 0)
+            self.loginVM.login()
+        }
     }
     
-    func validateEmailTextField() -> Void {
-        let validText = self.loginVM.isEmailValid(self.emailTextField.text)
-        if !validText {
+    //Delegate
+    
+    func validateEmailTextField(valid: Bool) -> Void {
+        if !valid {
             self.animateActionOnTextField(self.emailTextField.visualisationView!)
         }
-        self.emailTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
+        self.emailTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(valid)
     }
     
-    func validatePassTextField() -> Void {
-        let validText = self.loginVM.isPassValid(self.passTextField.text)
-        if !validText {
+    func validatePassTextField(valid: Bool) -> Void {
+        if !valid {
             self.animateActionOnTextField(self.passTextField.visualisationView!)
         }
-        self.passTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
+        self.passTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(valid)
     }
+    
+    //Animation
     
     func animateLoginButton() -> Void {
         self.loginButton.animation = "pop"

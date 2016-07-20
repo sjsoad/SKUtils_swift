@@ -6,6 +6,7 @@ target 'SKUtilsSwift' do
   use_frameworks!
 
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+pod 'NVActivityIndicatorView'
 
   target 'SKUtilsSwiftTests' do
     inherit! :search_paths
