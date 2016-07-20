@@ -256,14 +256,7 @@
                         <outlet property="scroll" destination="ZVf-mc-Ulh" id="Zrs-rE-nJe"/>
                     </connections>
                 </customObject>
-                <customObject id="HzZ-rY-LhB" customClass="SKLoginVM" customModule="SKUtilsSwift" customModuleProvider="target">
-                    <connections>
-                        <outlet property="emailValidator" destination="cWD-pE-amH" id="bA0-Ax-OcY"/>
-                        <outlet property="passValidator" destination="p4P-8o-d9x" id="q56-bZ-GHJ"/>
-                    </connections>
-                </customObject>
-                <customObject id="cWD-pE-amH" customClass="SKEmailValidator" customModule="SKUtilsSwift" customModuleProvider="target"/>
-                <customObject id="p4P-8o-d9x" customClass="SKPasswordValidator" customModule="SKUtilsSwift" customModuleProvider="target"/>
+                <customObject id="HzZ-rY-LhB" customClass="SKLoginVM" customModule="SKUtilsSwift" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="754" y="430"/>
         </scene>

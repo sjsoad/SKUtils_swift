@@ -10,8 +10,8 @@ import UIKit
 
 class SKLoginVM: NSObject {
 
-    @IBOutlet weak var emailValidator: SKEmailValidator!
-    @IBOutlet weak var passValidator: SKPasswordValidator!
+    var emailValidator: SKEmailValidator = SKEmailValidator()
+    var passValidator: SKPasswordValidator = SKPasswordValidator()
     
     var email: String? = nil
     var pass: String? = nil
