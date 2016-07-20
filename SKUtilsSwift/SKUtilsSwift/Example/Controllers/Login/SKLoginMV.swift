@@ -14,12 +14,11 @@ class SKLoginMV: UIViewController {
     @IBOutlet var textFieldsManager: SKTextFieldsManager!
     
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var emailTextField: SKTextFieldAccessoryView!
-    @IBOutlet weak var passTextField: SKTextFieldAccessoryView!
+    @IBOutlet weak var emailTextField: SKBaseTextField!
+    @IBOutlet weak var passTextField: SKBaseTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -29,18 +28,18 @@ class SKLoginMV: UIViewController {
     }
     
     @IBAction func textFieldDidBeginEditing(sender: UITextField) {
-        if emailTextField.textField == sender {
-            emailTextField.currentViewState = .SKAccessoryViewStateActive
+        if emailTextField == sender {
+            emailTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
         }
-        if passTextField.textField == sender {
-            passTextField.currentViewState = .SKAccessoryViewStateActive
+        if passTextField == sender {
+            passTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
         }
     }
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
-        if emailTextField.textField == sender {
+        if emailTextField == sender {
            self.validateEmailTextField()
         }
-        if passTextField.textField == sender {
+        if passTextField == sender {
             self.validatePassTextField()
         }
     }
@@ -49,20 +48,18 @@ class SKLoginMV: UIViewController {
         self.textFieldsManager.hideKeyboard()
         self.validateEmailTextField()
         self.validatePassTextField()
-        self.loginVM.email = self.emailTextField.textField!.text
-        self.loginVM.pass = self.passTextField.textField!.text
+        self.loginVM.email = self.emailTextField.text
+        self.loginVM.pass = self.passTextField.text
         self.loginVM.login()
     }
     
     func validateEmailTextField() -> Void {
-        if let text = self.emailTextField.textField?.text {
-            self.emailTextField.currentViewState = !self.loginVM.isPassValid(text)  ? .SKAccessoryViewStateError : .SKAccessoryViewStateSuccess
-        }
+        let validText = self.loginVM.isEmailValid(self.emailTextField.text)
+        self.emailTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
     }
     
     func validatePassTextField() -> Void {
-        if let text = self.passTextField.textField?.text {
-                 self.passTextField.currentViewState = !self.loginVM.isPassValid(text)  ? .SKAccessoryViewStateError : .SKAccessoryViewStateSuccess
-        }
+        let validText = self.loginVM.isEmailValid(self.passTextField.text)
+        self.passTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(validText)
     }
 }

@@ -13,11 +13,14 @@ class SKBaseValidator: NSObject {
     @IBInspectable var maxTextLenght = 256
     @IBInspectable var minTextLenght = 1
     
-    func isTextValid(text: String) -> Bool {
-        if minTextLenght > maxTextLenght {
-            return text.characters.count >= minTextLenght
+    func isTextValid(text: String?) -> Bool {
+        if let text = text {
+            if minTextLenght > maxTextLenght {
+                return text.characters.count >= minTextLenght
+            }
+            return text.characters.count >= minTextLenght && text.characters.count <= maxTextLenght
         }
-        return text.characters.count >= minTextLenght && text.characters.count <= maxTextLenght
+        return false
     }
     
 }

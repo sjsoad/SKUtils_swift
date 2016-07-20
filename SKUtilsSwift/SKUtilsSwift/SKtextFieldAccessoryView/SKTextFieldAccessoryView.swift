@@ -13,6 +13,15 @@ enum SKAccessoryViewState : Int {
     case SKAccessoryViewStateSuccess
     case SKAccessoryViewStateDefault
     case SKAccessoryViewStateActive
+    
+    static func stateForBool(valid: Bool) -> SKAccessoryViewState {
+        if valid {
+            return .SKAccessoryViewStateSuccess
+        }
+        else {
+            return .SKAccessoryViewStateError
+        }
+    }
 }
 
 typealias drawingClosure = (view: SKTextFieldAccessoryView) -> Void
@@ -23,8 +32,6 @@ class SKTextFieldAccessoryView: UIView {
     @IBInspectable var successStateColor : UIColor = UIColor.greenColor()
     @IBInspectable var defaultStateColor : UIColor = UIColor.lightGrayColor()
     @IBInspectable var activeStateColor  : UIColor = UIColor.darkGrayColor()
-    
-    @IBOutlet var textField : UITextField? = nil
     
     var closure: drawingClosure?
     

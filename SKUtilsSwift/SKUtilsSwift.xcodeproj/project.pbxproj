@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */; };
+		0484BCE41D3FABC400885A38 /* PMTween.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0484BCE31D3FABC400885A38 /* PMTween.framework */; };
+		0484BCE51D3FABC400885A38 /* PMTween.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0484BCE31D3FABC400885A38 /* PMTween.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
 		0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCED1D3E146F00D22867 /* SKLoginMV.swift */; };
 		0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */; };
 		04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */; };
 		04FD88331D3E546900080A35 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD88321D3E546900080A35 /* SKUtils.swift */; };
+		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
 		A52B204A1D3BDE6D00F77226 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B20491D3BDE6D00F77226 /* Extensions.swift */; };
 		A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
@@ -22,6 +26,7 @@
 		A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */; };
 		A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */; };
 		A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */; };
+		F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +39,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0484BCE61D3FABC400885A38 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0484BCE51D3FABC400885A38 /* PMTween.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		031D1B7D1F1507BCF90B13F0 /* Pods-SKUtilsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseTextField.swift; sourceTree = "<group>"; };
+		0484BCE21D3FAA7600885A38 /* SKUtilsSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SKUtilsSwift-Bridging-Header.h"; path = "SKUtilsSwift/SKUtilsSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		0484BCE31D3FABC400885A38 /* PMTween.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = PMTween.framework; path = "/Users/mac/Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/PMTween/PMTween.framework"; sourceTree = "<absolute>"; };
 		049161EF1D3E05A000E01686 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495CCED1D3E146F00D22867 /* SKLoginMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginMV.swift; sourceTree = "<group>"; };
 		0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginVM.swift; sourceTree = "<group>"; };
 		04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldAccessoryView.swift; sourceTree = "<group>"; };
 		04FD88321D3E546900080A35 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
+		12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
+		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52B20491D3BDE6D00F77226 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
@@ -54,6 +79,9 @@
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseValidator.swift; sourceTree = "<group>"; };
 		A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmailValidator.swift; sourceTree = "<group>"; };
+		AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */,
+				0484BCE41D3FABC400885A38 /* PMTween.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,15 +98,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0484BCD51D3F9FCA00885A38 /* SKTextFields */ = {
+			isa = PBXGroup;
+			children = (
+				0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */,
+			);
+			path = SKTextFields;
+			sourceTree = "<group>";
+		};
 		049161EB1D3E05A000E01686 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				0484BCE21D3FAA7600885A38 /* SKUtilsSwift-Bridging-Header.h */,
 				A5ADBF1E1D3802D600EB7212 /* Main.storyboard */,
 				A5ADBF211D3802D600EB7212 /* Assets.xcassets */,
 				A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */,
@@ -136,6 +176,16 @@
 			path = SKUtils;
 			sourceTree = "<group>";
 		};
+		422DCC9D2AE5B2AADA041281 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0484BCE31D3FABC400885A38 /* PMTween.framework */,
+				F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */,
+				97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A52B20481D3BDE2200F77226 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +217,8 @@
 				A5ADBF191D3802D600EB7212 /* SKUtilsSwift */,
 				A5ADBF2E1D3802D600EB7212 /* SKUtilsSwiftTests */,
 				A5ADBF181D3802D500EB7212 /* Products */,
+				EDC2369EC59B9D1E81F7D2E7 /* Pods */,
+				422DCC9D2AE5B2AADA041281 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +234,7 @@
 		A5ADBF191D3802D600EB7212 /* SKUtilsSwift */ = {
 			isa = PBXGroup;
 			children = (
+				0484BCD51D3F9FCA00885A38 /* SKTextFields */,
 				A5A5B3391D3E8FF800070CD7 /* Managers */,
 				A52B20481D3BDE2200F77226 /* Categories */,
 				A5ADBF3A1D3802F100EB7212 /* SKValidators */,
@@ -212,6 +265,17 @@
 			path = SKValidators;
 			sourceTree = "<group>";
 		};
+		EDC2369EC59B9D1E81F7D2E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */,
+				12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */,
+				031D1B7D1F1507BCF90B13F0 /* Pods-SKUtilsSwiftTests.debug.xcconfig */,
+				CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,9 +283,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF341D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwift" */;
 			buildPhases = (
+				A9354D285CBEE76B6CE8E78F /* 📦 Check Pods Manifest.lock */,
 				A5ADBF131D3802D500EB7212 /* Sources */,
 				A5ADBF141D3802D500EB7212 /* Frameworks */,
 				A5ADBF151D3802D500EB7212 /* Resources */,
+				1F3AB7A13F0A2E3D43D691B8 /* 📦 Embed Pods Frameworks */,
+				699A45CCF61F292C351F5208 /* 📦 Copy Pods Resources */,
+				0484BCE61D3FABC400885A38 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF371D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwiftTests" */;
 			buildPhases = (
+				C3433215472A0DC257E62D71 /* 📦 Check Pods Manifest.lock */,
 				A5ADBF271D3802D600EB7212 /* Sources */,
 				A5ADBF281D3802D600EB7212 /* Frameworks */,
 				A5ADBF291D3802D600EB7212 /* Resources */,
+				AE2AE676BCEE4F9FF1F2395D /* 📦 Embed Pods Frameworks */,
+				6ACF7B37F2216AF071C6B932 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +379,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F3AB7A13F0A2E3D43D691B8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		699A45CCF61F292C351F5208 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACF7B37F2216AF071C6B932 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9354D285CBEE76B6CE8E78F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2AE676BCEE4F9FF1F2395D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3433215472A0DC257E62D71 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5ADBF131D3802D500EB7212 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +482,7 @@
 				04FD88331D3E546900080A35 /* SKUtils.swift in Sources */,
 				A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
+				0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */,
 				A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */,
 				0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
@@ -454,6 +619,7 @@
 		};
 		A5ADBF351D3802D600EB7212 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -462,6 +628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SKUtilsSwift/SKUtilsSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -469,6 +636,7 @@
 		};
 		A5ADBF361D3802D600EB7212 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -477,12 +645,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SKUtilsSwift/SKUtilsSwift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		A5ADBF381D3802D600EB7212 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 031D1B7D1F1507BCF90B13F0 /* Pods-SKUtilsSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SKUtilsSwiftTests/Info.plist;
@@ -495,6 +665,7 @@
 		};
 		A5ADBF391D3802D600EB7212 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SKUtilsSwiftTests/Info.plist;

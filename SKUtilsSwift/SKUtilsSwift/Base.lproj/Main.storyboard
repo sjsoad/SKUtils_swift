@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -40,7 +42,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-38-slr" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="338" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu" customClass="SKBaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LZJ-sm-mzf"/>
@@ -50,6 +52,7 @@
                                                 <connections>
                                                     <action selector="textFieldDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="XsL-nL-A7f"/>
                                                     <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="oS7-qY-wEr"/>
+                                                    <outlet property="visualisationView" destination="gd7-38-slr" id="aTb-Y8-TDw"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -81,14 +84,11 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="textField" destination="hGP-TG-lyu" id="K5M-KS-Jga"/>
-                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-Mg-dB2" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="398" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR" customClass="SKBaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="a8m-kb-KVJ"/>
@@ -98,6 +98,7 @@
                                                 <connections>
                                                     <action selector="textFieldDidBeginEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="bL6-dw-Zzd"/>
                                                     <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cqp-oe-JkL"/>
+                                                    <outlet property="visualisationView" destination="5nn-Mg-dB2" id="i5r-P6-asp"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -129,9 +130,6 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <outlet property="textField" destination="F8C-Sf-dgR" id="oli-XR-Cyh"/>
-                                        </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-p9-QKn">
                                         <rect key="frame" x="20" y="468" width="560" height="50"/>
@@ -153,11 +151,18 @@
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsO-7S-bKb"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="7Qk-36-n2S">
+                                        <rect key="frame" x="90" y="-92" width="420" height="420"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7Qk-36-n2S" secondAttribute="height" multiplier="1:1" id="fcg-xB-ec3"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="5nn-Mg-dB2" firstAttribute="centerY" secondItem="ZVf-mc-Ulh" secondAttribute="centerY" constant="123" id="30g-vx-MN4"/>
                                     <constraint firstItem="gd7-38-slr" firstAttribute="leading" secondItem="ZVf-mc-Ulh" secondAttribute="leading" constant="20" id="3oi-aM-mPR"/>
                                     <constraint firstItem="5nn-Mg-dB2" firstAttribute="leading" secondItem="ZVf-mc-Ulh" secondAttribute="leading" constant="20" id="LER-7A-1CA"/>
+                                    <constraint firstItem="gd7-38-slr" firstAttribute="top" secondItem="7Qk-36-n2S" secondAttribute="bottom" constant="10" id="QJb-Nt-nBX"/>
                                     <constraint firstAttribute="trailing" secondItem="rfy-p9-QKn" secondAttribute="trailing" constant="20" id="SeY-hH-ZsY"/>
                                     <constraint firstItem="5nn-Mg-dB2" firstAttribute="top" secondItem="gd7-38-slr" secondAttribute="bottom" constant="10" id="XfV-VW-hAo"/>
                                     <constraint firstAttribute="bottom" secondItem="rfy-p9-QKn" secondAttribute="bottom" constant="20" id="ens-j3-xcH"/>
@@ -165,6 +170,7 @@
                                     <constraint firstItem="rfy-p9-QKn" firstAttribute="leading" secondItem="ZVf-mc-Ulh" secondAttribute="leading" constant="20" id="nJE-jj-QeD"/>
                                     <constraint firstAttribute="trailing" secondItem="gd7-38-slr" secondAttribute="trailing" constant="20" id="rlU-B6-w2d"/>
                                     <constraint firstAttribute="trailing" secondItem="5nn-Mg-dB2" secondAttribute="trailing" constant="20" id="uTc-bJ-nSq"/>
+                                    <constraint firstItem="7Qk-36-n2S" firstAttribute="centerX" secondItem="ZVf-mc-Ulh" secondAttribute="centerX" id="ubH-Zg-Rdd"/>
                                     <constraint firstItem="5nn-Mg-dB2" firstAttribute="centerX" secondItem="ZVf-mc-Ulh" secondAttribute="centerX" id="z3o-nd-0nm"/>
                                 </constraints>
                             </scrollView>
@@ -175,14 +181,15 @@
                             <constraint firstItem="ZVf-mc-Ulh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QeS-p4-xOP"/>
                             <constraint firstAttribute="trailing" secondItem="ZVf-mc-Ulh" secondAttribute="trailing" id="dLK-J7-k4i"/>
                             <constraint firstItem="ZVf-mc-Ulh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaG-g6-Vsv"/>
+                            <constraint firstItem="7Qk-36-n2S" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="swg-r7-ixo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QAe-91-Bjb"/>
                     <connections>
-                        <outlet property="emailTextField" destination="gd7-38-slr" id="fje-bi-0vl"/>
+                        <outlet property="emailTextField" destination="hGP-TG-lyu" id="bj2-tL-Q22"/>
                         <outlet property="loginButton" destination="rfy-p9-QKn" id="tGU-Fr-oNG"/>
                         <outlet property="loginVM" destination="HzZ-rY-LhB" id="RmC-RZ-Xpr"/>
-                        <outlet property="passTextField" destination="5nn-Mg-dB2" id="o4g-Gu-j2R"/>
+                        <outlet property="passTextField" destination="F8C-Sf-dgR" id="Roj-RK-oPj"/>
                         <outlet property="textFieldsManager" destination="Htg-Sl-ZzP" id="O4n-Sc-Jaz"/>
                     </connections>
                 </viewController>
@@ -207,4 +214,7 @@
             <point key="canvasLocation" x="754" y="430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchImage" width="3000" height="2250"/>
+    </resources>
 </document>
