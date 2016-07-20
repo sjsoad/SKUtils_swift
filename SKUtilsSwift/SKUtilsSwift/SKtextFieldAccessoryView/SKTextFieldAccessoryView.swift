@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 enum SKAccessoryViewState : Int {
     case SKAccessoryViewStateError
@@ -26,7 +27,7 @@ enum SKAccessoryViewState : Int {
 
 typealias drawingClosure = (view: SKTextFieldAccessoryView) -> Void
 
-class SKTextFieldAccessoryView: UIView {
+class SKTextFieldAccessoryView: SpringView {
     
     @IBInspectable var errorStateColor   : UIColor = UIColor.redColor()
     @IBInspectable var successStateColor : UIColor = UIColor.greenColor()

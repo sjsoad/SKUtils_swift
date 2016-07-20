@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Spring
 
-class SKBaseTextField: UITextField {
+class SKBaseTextField: SpringTextField {
     
     @IBOutlet var visualisationView : SKTextFieldAccessoryView? = nil
 
