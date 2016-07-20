@@ -24,6 +24,8 @@ class SKTextFieldAccessoryView: UIView {
     @IBInspectable var defaultStateColor : UIColor = UIColor.lightGrayColor()
     @IBInspectable var activeStateColor  : UIColor = UIColor.darkGrayColor()
     
+    @IBOutlet var textField : UITextField? = nil
+    
     var closure: drawingClosure?
     
     var currentViewState: SKAccessoryViewState = .SKAccessoryViewStateDefault {

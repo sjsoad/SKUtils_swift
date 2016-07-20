@@ -83,6 +83,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="textField" destination="hGP-TG-lyu" id="I0C-nc-fNs"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-Mg-dB2" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="275" width="560" height="50"/>
@@ -133,6 +136,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="textField" destination="F8C-Sf-dgR" id="If1-Fp-ZDJ"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-p9-QKn">
                                 <rect key="frame" x="20" y="345" width="560" height="50"/>
@@ -171,10 +177,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QAe-91-Bjb"/>
                     <connections>
-                        <outlet property="emailTextField" destination="hGP-TG-lyu" id="WLz-zH-Fgb"/>
                         <outlet property="loginButton" destination="rfy-p9-QKn" id="tGU-Fr-oNG"/>
                         <outlet property="loginVM" destination="HzZ-rY-LhB" id="RmC-RZ-Xpr"/>
-                        <outlet property="passTextField" destination="F8C-Sf-dgR" id="gZl-BP-Ooe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
