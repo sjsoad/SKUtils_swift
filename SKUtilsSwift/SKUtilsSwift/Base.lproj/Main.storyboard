@@ -260,6 +260,103 @@
             </objects>
             <point key="canvasLocation" x="754" y="430"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="taA-fC-PG9">
+            <objects>
+                <viewController id="evO-74-igw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qDS-nP-Sh5"/>
+                        <viewControllerLayoutGuide type="bottom" id="2aG-5I-dHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKe-QI-2K9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="VXl-le-hX5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VXl-le-hX5" secondAttribute="height" multiplier="2:1" id="YIc-mE-b1f"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztV-An-4GZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cOi-UW-VGB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="ejv-UN-VKD" customClass="SpringImageView" customModule="Spring">
+                                            <rect key="frame" x="225" y="75" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ejv-UN-VKD" secondAttribute="height" multiplier="1:1" id="FhK-Ux-QN9"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeDown"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                    <real key="value" value="0.25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXt-3O-uex" customClass="SpringLabel" customModule="Spring">
+                                            <rect key="frame" x="8" y="233" width="584" height="21"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="6hW-1S-yiL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeLeft"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ejv-UN-VKD" firstAttribute="height" secondItem="cOi-UW-VGB" secondAttribute="height" multiplier="0.5" id="RGz-ij-E8F"/>
+                                        <constraint firstItem="ejv-UN-VKD" firstAttribute="centerX" secondItem="cOi-UW-VGB" secondAttribute="centerX" id="VTD-Q2-9Kh"/>
+                                        <constraint firstAttribute="trailing" secondItem="FXt-3O-uex" secondAttribute="trailing" constant="8" id="bPp-uL-nyh"/>
+                                        <constraint firstItem="FXt-3O-uex" firstAttribute="leading" secondItem="cOi-UW-VGB" secondAttribute="leading" constant="8" id="f4E-4R-DlF"/>
+                                        <constraint firstItem="FXt-3O-uex" firstAttribute="top" secondItem="ejv-UN-VKD" secondAttribute="bottom" constant="8" id="fAK-1O-4uq"/>
+                                        <constraint firstItem="ejv-UN-VKD" firstAttribute="centerY" secondItem="cOi-UW-VGB" secondAttribute="centerY" id="h1i-9E-SVD"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VXl-le-hX5" firstAttribute="top" secondItem="IKe-QI-2K9" secondAttribute="top" id="3uq-uT-7Kc"/>
+                            <constraint firstItem="VXl-le-hX5" firstAttribute="leading" secondItem="IKe-QI-2K9" secondAttribute="leading" id="6Gu-E2-KNv"/>
+                            <constraint firstItem="ztV-An-4GZ" firstAttribute="width" secondItem="VXl-le-hX5" secondAttribute="width" id="AI9-qM-eDf"/>
+                            <constraint firstItem="VXl-le-hX5" firstAttribute="width" secondItem="IKe-QI-2K9" secondAttribute="width" id="KQD-dJ-ybf"/>
+                            <constraint firstAttribute="trailing" secondItem="VXl-le-hX5" secondAttribute="trailing" id="Xth-is-Kgl"/>
+                            <constraint firstItem="ztV-An-4GZ" firstAttribute="height" secondItem="VXl-le-hX5" secondAttribute="height" id="Y8b-U4-yWN"/>
+                            <constraint firstItem="ztV-An-4GZ" firstAttribute="centerX" secondItem="VXl-le-hX5" secondAttribute="centerX" id="hgz-Wz-xgS"/>
+                            <constraint firstItem="ztV-An-4GZ" firstAttribute="centerY" secondItem="VXl-le-hX5" secondAttribute="centerY" id="utN-MT-3Y8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXc-ZW-ojR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="430"/>
+        </scene>
     </scenes>
     <resources>
         <image name="launchImage" width="3000" height="2250"/>
