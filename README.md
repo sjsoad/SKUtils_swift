@@ -5,8 +5,7 @@ ToDo:
 1. SKDatePickerTextField
 2. Categories
 3. DataSources
-4. SKFieldsManager
-5. Other managers
-6. Headers
-7. ImageViewer
-8. GitHub Simple app
+4. Other managers
+5. Headers
+6. ImageViewer
+7. GitHub Simple app
