@@ -7,10 +7,15 @@ target 'SKUtilsSwift' do
 
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 pod 'NVActivityIndicatorView'
+pod 'RealmSwift'
+pod 'RxSwift'
+pod 'RxCocoa'
 
   target 'SKUtilsSwiftTests' do
     inherit! :search_paths
     # Pods for testing
+ pod 'RxBlocking'
+ pod 'RxTests'
   end
 
 end
