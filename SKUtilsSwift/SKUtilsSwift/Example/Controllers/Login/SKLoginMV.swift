@@ -30,10 +30,10 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                                emailString: self.emailTextField.rx_text.asObservable(),
                                passString: self.passTextField.rx_text.asObservable())
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
-            self?.loginButton.enabled = canLogin
-            if canLogin {
+            if self?.loginButton.enabled != canLogin && canLogin {
                 self?.animateLoginButton()
             }
+            self?.loginButton.enabled = canLogin
         }.addDisposableTo(disposeBag)
         
         self.loginVM.loginValidation.subscribeNext { [weak self] emailValid in
