@@ -14,9 +14,13 @@
 		04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */; };
 		04FD88331D3E546900080A35 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD88321D3E546900080A35 /* SKUtils.swift */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
+		A52145291D4FB54300E12CEA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145271D4FB54300E12CEA /* RxCocoa.framework */; };
+		A521452A1D4FB54300E12CEA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145281D4FB54300E12CEA /* RxSwift.framework */; };
+		A521452E1D4FD03800E12CEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521452D1D4FD03800E12CEA /* API.swift */; };
+		A52145301D4FD16700E12CEA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521452F1D4FD16700E12CEA /* APIManager.swift */; };
 		A5276CB61D3FFF680059948C /* SKRandomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5276CB51D3FFF680059948C /* SKRandomExtension.swift */; };
 		A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */; };
-		A52B204A1D3BDE6D00F77226 /* SKIBDesignableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B20491D3BDE6D00F77226 /* SKIBDesignableExtension.swift */; };
+		A52B204A1D3BDE6D00F77226 /* SKIBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B20491D3BDE6D00F77226 /* SKIBDesignableView.swift */; };
 		A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */; };
@@ -64,9 +68,13 @@
 		04FD88321D3E546900080A35 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
 		12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
+		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
+		A521452D1D4FD03800E12CEA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "API Manager/API.swift"; sourceTree = "<group>"; };
+		A521452F1D4FD16700E12CEA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "API Manager/APIManager.swift"; sourceTree = "<group>"; };
 		A5276CB51D3FFF680059948C /* SKRandomExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRandomExtension.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A52B20491D3BDE6D00F77226 /* SKIBDesignableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIBDesignableExtension.swift; sourceTree = "<group>"; };
+		A52B20491D3BDE6D00F77226 /* SKIBDesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIBDesignableView.swift; sourceTree = "<group>"; };
 		A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldsManager.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52145291D4FB54300E12CEA /* RxCocoa.framework in Frameworks */,
+				A521452A1D4FB54300E12CEA /* RxSwift.framework in Frameworks */,
 				A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */,
 				F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */,
 			);
@@ -117,6 +127,7 @@
 		049161EB1D3E05A000E01686 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				A521452C1D4FD00000E12CEA /* API Manager */,
 				0484BCE21D3FAA7600885A38 /* SKUtilsSwift-Bridging-Header.h */,
 				A5ADBF1E1D3802D600EB7212 /* Main.storyboard */,
 				A5ADBF211D3802D600EB7212 /* Assets.xcassets */,
@@ -180,6 +191,8 @@
 		422DCC9D2AE5B2AADA041281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A52145271D4FB54300E12CEA /* RxCocoa.framework */,
+				A52145281D4FB54300E12CEA /* RxSwift.framework */,
 				A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */,
 				0484BCEB1D3FCEFB00885A38 /* Spring.framework */,
 				F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */,
@@ -188,10 +201,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A521452C1D4FD00000E12CEA /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A521452D1D4FD03800E12CEA /* API.swift */,
+				A521452F1D4FD16700E12CEA /* APIManager.swift */,
+			);
+			name = "API Manager";
+			sourceTree = "<group>";
+		};
 		A52B20481D3BDE2200F77226 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				A52B20491D3BDE6D00F77226 /* SKIBDesignableExtension.swift */,
+				A52B20491D3BDE6D00F77226 /* SKIBDesignableView.swift */,
 				A5276CB51D3FFF680059948C /* SKRandomExtension.swift */,
 			);
 			name = Categories;
@@ -486,11 +508,13 @@
 				04FD88331D3E546900080A35 /* SKUtils.swift in Sources */,
 				A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
+				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
 				0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */,
 				A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */,
+				A521452E1D4FD03800E12CEA /* API.swift in Sources */,
 				0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
-				A52B204A1D3BDE6D00F77226 /* SKIBDesignableExtension.swift in Sources */,
+				A52B204A1D3BDE6D00F77226 /* SKIBDesignableView.swift in Sources */,
 				A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +654,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -651,6 +676,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

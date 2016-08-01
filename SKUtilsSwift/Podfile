@@ -10,6 +10,7 @@ pod 'NVActivityIndicatorView'
 pod 'RealmSwift'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'Alamofire'
 
   target 'SKUtilsSwiftTests' do
     inherit! :search_paths

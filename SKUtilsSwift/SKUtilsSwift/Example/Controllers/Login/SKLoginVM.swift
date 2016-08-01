@@ -7,42 +7,41 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class SKLoginVM: NSObject {
 
     var emailValidator: SKEmailValidator = SKEmailValidator()
     var passValidator: SKPasswordValidator = SKPasswordValidator()
     
-    var email: String? = nil
-    var pass: String? = nil
+    var loginValidation = Observable.just(false)
+    var passwordValidation = Observable.just(false)
     
-    var delegate: SKLoginDelegate? = nil
+    var canLogin = Observable.just(false)
     
-    var canTryToLogin: Bool = false
-    
-    func isEmailValid(text: String?) -> Bool {
-        let valid = self.emailValidator.isTextValid(text)
-        if let delegate = self.delegate {
-            delegate.validateEmailTextField(valid)
-        }
-        self.canTryToLogin = valid
-        return valid
-    }
-    
-    func isPassValid(text: String?) -> Bool {
-        let valid = self.passValidator.isTextValid(text)
-        if let delegate = self.delegate {
-            delegate.validatePassTextField(valid)
-        }
-        self.canTryToLogin = valid
-        return valid
+    func setupWith(emailField : ControlEvent<Void>, passwordTextField: ControlEvent<Void>, emailString: Observable<String>, passString: Observable<String>) {
+        let emailValidation = emailString.map({email in
+             self.emailValidator.isTextValid(email)
+        }).shareReplay(1)
+        
+        let passValidation = passString.map({pass in
+            self.passValidator.isTextValid(pass)
+        }).shareReplay(1)
+        
+        loginValidation = emailField.map({
+            true
+        }).shareReplay(1)
+
+        passwordValidation = passwordTextField.map({
+            true
+        }).shareReplay(1)
+        
+        canLogin = Observable.combineLatest(emailValidation, passValidation, resultSelector: { (email, password) in
+            return email && password
+        })
     }
     
     func login() -> Void {
-        var valid = self.isEmailValid(self.email)
-            valid = self.isPassValid(self.pass)
-        if valid {
-            
-        }
     }
 }

@@ -9,71 +9,67 @@
 import UIKit
 import Spring
 import NVActivityIndicatorView
+import RxCocoa
+import RxSwift
 
-protocol SKLoginDelegate {
-    func validateEmailTextField(valid: Bool) -> Void
-    func validatePassTextField(valid: Bool) -> Void
-}
-
-class SKLoginMV: UIViewController, NVActivityIndicatorViewable, SKLoginDelegate {
+class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     
-    @IBOutlet var loginVM: SKLoginVM! {
-        didSet {
-            self.loginVM.delegate = self
-        }
-    }
+    @IBOutlet var loginVM: SKLoginVM!
     @IBOutlet var textFieldsManager: SKTextFieldsManager!
     
     @IBOutlet weak var loginButton: SpringButton!
     @IBOutlet weak var emailTextField: SKBaseTextField!
     @IBOutlet weak var passTextField: SKBaseTextField!
     
-    @IBAction func textFieldDidBeginEditing(sender: UITextField) {
-        if emailTextField == sender {
-            emailTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
-        }
-        if passTextField == sender {
-            passTextField.visualisationView!.currentViewState = .SKAccessoryViewStateActive
+    var disposeBag = DisposeBag()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.loginVM.setupWith(self.emailTextField.rx_controlEvent(UIControlEvents.EditingDidEnd),
+                               passwordTextField: self.passTextField.rx_controlEvent(UIControlEvents.EditingDidEnd),
+                               emailString: self.emailTextField.rx_text.asObservable(),
+                               passString: self.passTextField.rx_text.asObservable())
+        self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
+            self?.loginButton.enabled = canLogin
+            if canLogin {
+                self?.animateLoginButton()
+            }
+        }.addDisposableTo(disposeBag)
+        
+        self.loginVM.loginValidation.subscribeNext { [weak self] emailValid in
+            self?.proceedTextField(self!.emailTextField, valid: emailValid)
+            }.addDisposableTo(disposeBag)
+        
+        self.loginVM.passwordValidation.subscribeNext { [weak self] passValid in
+            self?.proceedTextField(self!.passTextField, valid: passValid)
+            }.addDisposableTo(disposeBag)
+    }
+    
+    func proceedTextField(textField: SKBaseTextField, valid: Bool) -> Void {
+        if let view = textField.visualisationView {
+            view.currentViewState = SKAccessoryViewState.stateForBool(valid)
+            if !valid {
+                self.animateActionOnTextField(view)
+            }
         }
     }
-    @IBAction func textFieldDidEndEditing(sender: UITextField) {
-        if emailTextField == sender {
-           self.loginVM.isEmailValid(self.emailTextField.text)
-        }
-        if passTextField == sender {
-            self.loginVM.isPassValid(self.passTextField.text)
+    
+    @IBAction func resetTextField(textField: SKBaseTextField) {
+        if let view = textField.visualisationView {
+            view.currentViewState = .SKAccessoryViewStateActive
         }
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
-        self.animateLoginButton()
         self.textFieldsManager.hideKeyboard()
-        self.loginVM.isEmailValid(self.emailTextField.text)
-        self.loginVM.isPassValid(self.passTextField.text)
-        if self.loginVM.canTryToLogin {
-            self.loginVM.email = self.emailTextField.text
-            self.loginVM.pass = self.passTextField.text
-            startActivityAnimating(CGSizeMake(80, 30), message: nil, type: .BallClipRotate, color: UIColor.whiteColor(), padding: 0)
-            self.loginVM.login()
-        }
+        startActivityAnimating(CGSizeMake(80, 30),
+                               message: nil,
+                               type: .BallClipRotate,
+                               color: UIColor.whiteColor(),
+                               padding: 0)
+        self.loginVM.login()
     }
-    
-    //Delegate
-    
-    func validateEmailTextField(valid: Bool) -> Void {
-        if !valid {
-            self.animateActionOnTextField(self.emailTextField.visualisationView!)
-        }
-        self.emailTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(valid)
-    }
-    
-    func validatePassTextField(valid: Bool) -> Void {
-        if !valid {
-            self.animateActionOnTextField(self.passTextField.visualisationView!)
-        }
-        self.passTextField.visualisationView!.currentViewState = SKAccessoryViewState.stateForBool(valid)
-    }
-    
+
     //Animation
     
     func animateLoginButton() -> Void {
