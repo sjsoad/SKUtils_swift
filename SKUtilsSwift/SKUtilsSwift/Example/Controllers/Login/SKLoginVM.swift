@@ -12,8 +12,8 @@ import RxSwift
 
 class SKLoginVM: NSObject {
 
-    var emailValidator: SKEmailValidator = SKEmailValidator()
-    var passValidator: SKPasswordValidator = SKPasswordValidator()
+    var emailValidator: SKBaseValidator = SKBaseValidator()
+    var passValidator: SKBaseValidator = SKBaseValidator()
     
     var emailValidation = Observable.just(false)
     var passValidation = Observable.just(false)
@@ -57,10 +57,10 @@ class SKLoginVM: NSObject {
         
         logining = loginButtonTap.withLatestFrom(usernameAndPassword)
             .flatMapLatest({ (username, password) in
-            return Observable.just(true)
+                return APIManager.loginWithParameters(username, password: password).observeOn(MainScheduler.instance)
         })
             .flatMapLatest { loggedIn -> Observable<Bool> in
-            Observable.just(false)
+                Observable.just(loggedIn)
             }
             .shareReplay(1)
     }
