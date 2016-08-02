@@ -24,7 +24,10 @@ class SKLoginVM: NSObject {
     var passValid = false
 
 
-    func setupWith(emailField : ControlEvent<Void>, passwordTextField: ControlEvent<Void>, emailString: Observable<String>, passString: Observable<String>) {
+    func setupWith(emailFieldDidEndEditing : ControlEvent<Void>,
+                   passwordTextFieldDidEndEditing: ControlEvent<Void>,
+                   emailString: Observable<String>,
+                   passString: Observable<String>) {
         let emailStringValidation = emailString.flatMapLatest { email in
             Observable.just(self.emailValidator.isTextValid(email))
             }.shareReplay(1)
@@ -33,11 +36,11 @@ class SKLoginVM: NSObject {
             Observable.just(self.passValidator.isTextValid(pass))
             }.shareReplay(1)
         
-        self.emailValidation = emailField.map({_ in
+        self.emailValidation = emailFieldDidEndEditing.map({_ in
             self.emailValid
         }).shareReplay(1)
         
-        self.passValidation = passwordTextField.map({_ in
+        self.passValidation = passwordTextFieldDidEndEditing.map({_ in
             self.passValid
         }).shareReplay(1)
         
