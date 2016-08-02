@@ -25,8 +25,8 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginVM.setupWith(self.emailTextField.rx_controlEvent(.AllEvents),
-                               passwordTextField: self.passTextField.rx_controlEvent(.AllEvents),
+        self.loginVM.setupWith(self.emailTextField.rx_controlEvent(.EditingDidEnd),
+                               passwordTextField: self.passTextField.rx_controlEvent(.EditingDidEnd),
                                emailString: self.emailTextField.rx_text.asObservable(),
                                passString: self.passTextField.rx_text.asObservable())
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
