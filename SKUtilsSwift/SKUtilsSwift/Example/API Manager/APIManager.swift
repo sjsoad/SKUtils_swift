@@ -7,7 +7,14 @@
 //
 
 import Foundation
+import Alamofire
 
 class APIManager: NSObject {
-
+    class func loginWithParameters(username: String, password: String) -> Void {
+        Alamofire.request(.GET, "https://api.github.com/user")
+            .authenticate(user: username, password: password)
+            .responseJSON { (JSON) in
+                print(JSON)
+        }
+    }
 }

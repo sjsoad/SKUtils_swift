@@ -25,10 +25,11 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginVM.setupWith(self.emailTextField.rx_controlEvent(.EditingDidEnd),
-                               passwordTextField: self.passTextField.rx_controlEvent(.EditingDidEnd),
-                               emailString: self.emailTextField.rx_text.asObservable(),
-                               passString: self.passTextField.rx_text.asObservable())
+        self.loginVM.setupWith(emailTextField.rx_controlEvent(.EditingDidEnd),
+                               passwordTextFieldDidEndEditing: passTextField.rx_controlEvent(.EditingDidEnd),
+                               emailString: emailTextField.rx_text.asObservable(),
+                               passString: passTextField.rx_text.asObservable(),
+                               loginButtonTap: loginButton.rx_tap.asObservable())
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
             if canLogin {
                 self?.animateLoginButton()
@@ -43,6 +44,20 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         self.loginVM.passValidation.subscribeNext { [weak self] passValid in
             self?.proceedTextField(self!.passTextField, valid: passValid)
             }.addDisposableTo(disposeBag)
+        
+        self.loginVM.logining.subscribeNext { [weak self] logining in
+            self?.textFieldsManager.hideKeyboard()
+            if logining {
+                self!.startActivityAnimating(CGSizeMake(80, 30),
+                    message: nil,
+                    type: .BallClipRotate,
+                    color: UIColor.whiteColor(),
+                    padding: 0)
+            }
+            else {
+                self!.stopActivityAnimating()
+            }
+        }.addDisposableTo(disposeBag)
     }
     
     func proceedTextField(textField: SKBaseTextField, valid: Bool) -> Void {
@@ -58,16 +73,6 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         if let view = textField.visualisationView {
             view.currentViewState = .SKAccessoryViewStateActive
         }
-    }
-    
-    @IBAction func loginButtonPressed(sender: UIButton) {
-        self.textFieldsManager.hideKeyboard()
-        startActivityAnimating(CGSizeMake(80, 30),
-                               message: nil,
-                               type: .BallClipRotate,
-                               color: UIColor.whiteColor(),
-                               padding: 0)
-        self.loginVM.login()
     }
 
     //Animation
