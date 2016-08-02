@@ -20,26 +20,44 @@ class SKLoginVM: NSObject {
     
     var canLogin = Observable.just(false)
     
-    func setupWith(emailField : ControlEvent<Void>, passwordTextField: ControlEvent<Void>, emailString: Observable<String>, passString: Observable<String>) {
-        let emailValidation = emailString.map({email in
-             self.emailValidator.isTextValid(email)
-        }).shareReplay(1)
-        
-        let passValidation = passString.map({pass in
-            self.passValidator.isTextValid(pass)
-        }).shareReplay(1)
-        
-        loginValidation = emailField.map({
-            true
-        }).shareReplay(1)
+var disposeBag = DisposeBag()
 
-        passwordValidation = passwordTextField.map({
-            true
-        }).shareReplay(1)
+    func setupWith(emailField : ControlEvent<Void>, passwordTextField: ControlEvent<Void>, emailString: Observable<String>, passString: Observable<String>) {
+        let emailValidation = emailString.flatMapLatest { email in
+            Observable.just(self.emailValidator.isTextValid(email))
+            }.shareReplay(1)
+        
+        let passValidation = passString.flatMapLatest {pass in
+            Observable.just(self.passValidator.isTextValid(pass))
+            }.shareReplay(1)
+        
+        self.loginValidation = Observable.combineLatest(emailValidation, emailField, resultSelector: { (email, onEndEditing) in
+            return email
+        })
+
+        self.passwordValidation = Observable.combineLatest(passValidation, passwordTextField, resultSelector: { (password, onEndEditing) in
+            return password
+        })
+        
+//        self.loginValidation = emailField.map({_ in
+//            //            emailValidation
+//            email
+//            //            emailValidation.map{ valid in
+//            //                valid
+//            //            }.shareReplay(1)
+//        }).shareReplayLatestWhileConnected()
+//        
+//        self.passwordValidation = passwordTextField.map({_ in
+//            
+//            password
+//            //            passValidation.subscribeNext { valid in
+//            //                valid
+//            //            }.addDisposableTo(disposeBag)
+//        }).shareReplayLatestWhileConnected()
         
         canLogin = Observable.combineLatest(emailValidation, passValidation, resultSelector: { (email, password) in
             return email && password
-        })
+        }).distinctUntilChanged()
     }
     
     func login() -> Void {

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,36 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>RxBlocking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>RxTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Spring.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,7 +68,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06EE53FD546E116A15426544899AAD76</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22CDFADD9E8547A119121DCDA2674168</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>540465DC4E77843A5A1F091D47F52687</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6BB507FE042F499A4DBDDECD3859055E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D21B33B98AF2A28FC6749B494503768</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DE90EEFE87840F826F9512E032F0D3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,7 +103,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80ADFE7654ADD861E95FB529474CB869</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8698C4558AE758AD92477EC134E714F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A33D7EE84C5B00F5DF00882CEA36E957</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,7 +133,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>CCEABB5CC93FE366925EA2759579D182</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D0CA7A9E86D471987C62D1C1A177CB1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E949DB6D814375DC2749639381E84F61</key>
 		<dict>
 			<key>primary</key>
 			<true/>

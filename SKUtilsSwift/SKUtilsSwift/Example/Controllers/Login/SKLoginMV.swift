@@ -30,7 +30,7 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                                emailString: self.emailTextField.rx_text.asObservable(),
                                passString: self.passTextField.rx_text.asObservable())
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
-            if self?.loginButton.enabled != canLogin && canLogin {
+            if canLogin {
                 self?.animateLoginButton()
             }
             self?.loginButton.enabled = canLogin
