@@ -21,7 +21,7 @@ class APIManager: NSObject {
             let request = Alamofire.request(.GET, "https://api.github.com/user", headers: headers)
                 .responseJSON { (response) in
                     print(response)
-                    if let value = response.result.value {
+                    if response.result.value != nil {
                         observer.onNext(true)
                         observer.onCompleted()
                     }else if let error = response.result.error {
