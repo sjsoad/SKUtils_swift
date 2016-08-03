@@ -62,7 +62,6 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                 print(error)
             },
             onCompleted: {
-                self.textFieldsManager.hideKeyboard()
                 self.stopActivityAnimating()
         }).addDisposableTo(disposeBag)
     }

@@ -61,7 +61,7 @@ class SKLoginVM: NSObject {
         })
         
         loggedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
-            .flatMapLatest({ (username, password)in
+            .flatMapLatest({ (username, password) in
                 return APIManager.loginWithParameters(username, password: password)
         })
             .flatMapLatest { loggedIn -> Observable<Bool> in
