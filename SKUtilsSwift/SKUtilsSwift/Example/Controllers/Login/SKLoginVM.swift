@@ -65,7 +65,7 @@ class SKLoginVM: NSObject {
                 return APIManager.loginWithParameters(username, password: password)
         })
             .flatMapLatest { loggedIn -> Observable<Bool> in
-                Observable.just(false)
+                Observable.just(loggedIn)
             }
             .shareReplay(1)
     }

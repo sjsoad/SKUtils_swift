@@ -18,15 +18,16 @@ class APIManager: NSObject {
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         return Observable.create({ observer in
-            let request = Alamofire.request(.GET, "https://api.github.com/user", headers: headers)
+            let request = Alamofire.request(.GET, URLs.HOST+URLs.loginEndpoint, headers: headers)
+                .validate()
                 .responseJSON { (response) in
-                    print(response)
-                    if response.result.value != nil {
-                        observer.onNext(true)
-                        observer.onCompleted()
-                    }else if let error = response.result.error {
+                    let success = response.result.value != nil
+                    if success {
+                        observer.onNext(success)
+                    } else if let error = response.result.error {
                         observer.onError(error)
                     }
+                    observer.onCompleted()
             }
             return AnonymousDisposable {
                 request.cancel()

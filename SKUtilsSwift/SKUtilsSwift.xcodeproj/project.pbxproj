@@ -127,12 +127,12 @@
 		049161EB1D3E05A000E01686 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				A521452C1D4FD00000E12CEA /* API Manager */,
 				0484BCE21D3FAA7600885A38 /* SKUtilsSwift-Bridging-Header.h */,
 				A5ADBF1E1D3802D600EB7212 /* Main.storyboard */,
 				A5ADBF211D3802D600EB7212 /* Assets.xcassets */,
 				A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */,
 				A5ADBF261D3802D600EB7212 /* Info.plist */,
+				A521452C1D4FD00000E12CEA /* API Manager */,
 				049161EC1D3E05A000E01686 /* Controllers */,
 				049161EE1D3E05A000E01686 /* Delegate */,
 				049161F01D3E05A000E01686 /* Views */,

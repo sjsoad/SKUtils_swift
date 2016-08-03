@@ -54,13 +54,17 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                 padding: 0)
         }.addDisposableTo(disposeBag)
         
-        self.loginVM.loggedIn.subscribeNext { [weak self] loggedIn in
-            self?.textFieldsManager.hideKeyboard()
-            self!.stopActivityAnimating()
-            if loggedIn {
-            
-            }
-        }.addDisposableTo(disposeBag)
+        self.loginVM.loggedIn.subscribe(
+            onNext: { response in
+            print(response)
+            },
+            onError: { error in
+                print(error)
+            },
+            onCompleted: {
+                self.textFieldsManager.hideKeyboard()
+                self.stopActivityAnimating()
+        }).addDisposableTo(disposeBag)
     }
     
     func proceedTextField(textField: SKBaseTextField, valid: Bool) -> Void {

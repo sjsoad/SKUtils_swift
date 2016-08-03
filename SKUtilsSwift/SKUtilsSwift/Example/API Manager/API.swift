@@ -9,6 +9,6 @@
 import Foundation
 
 struct URLs {
-    let HOST = "https://api.github.com"
-    let loginEndpoint = "/user"
+    static let HOST = "https://api.github.com"
+    static let loginEndpoint = "/user"
 }
