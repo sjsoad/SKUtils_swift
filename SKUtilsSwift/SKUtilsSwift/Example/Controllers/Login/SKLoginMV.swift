@@ -17,7 +17,7 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet var loginVM: SKLoginVM!
     @IBOutlet var textFieldsManager: SKTextFieldsManager!
     
-    @IBOutlet weak var loginButton: SpringButton!
+    @IBOutlet weak var loginButton: PopOnEnableButton!
     @IBOutlet weak var emailTextField: SKBaseTextField!
     @IBOutlet weak var passTextField: SKBaseTextField!
     
@@ -30,10 +30,8 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                                emailString: emailTextField.rx_text.asObservable(),
                                passString: passTextField.rx_text.asObservable(),
                                loginButtonTap: loginButton.rx_tap.asObservable())
+        
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
-            if canLogin {
-                self?.animateLoginButton()
-            }
             self?.loginButton.enabled = canLogin
         }.addDisposableTo(disposeBag)
         
@@ -82,14 +80,6 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     }
 
     //Animation
-    
-    func animateLoginButton() -> Void {
-        self.loginButton.animation = "pop"
-        self.loginButton.curve = "easeOut"
-        self.loginButton.force = CGFloat.random(0.1, max: 0.2)
-        self.loginButton.duration = CGFloat.random(0.3, max: 0.5)
-        self.loginButton.animate()
-    }
     
     func animateActionOnTextField(view: SpringView) -> Void {
         view.animation = "shake"

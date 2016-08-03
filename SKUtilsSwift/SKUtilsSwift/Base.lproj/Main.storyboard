@@ -130,7 +130,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-p9-QKn" customClass="SpringButton" customModule="Spring">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-p9-QKn" customClass="PopOnEnableButton" customModule="SKUtilsSwift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="468" width="560" height="50"/>
                                         <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -147,25 +147,6 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeInOut"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                                <real key="value" value="0.20000000000000001"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
-                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
@@ -239,7 +220,7 @@
                     <navigationItem key="navigationItem" id="QAe-91-Bjb"/>
                     <connections>
                         <outlet property="emailTextField" destination="hGP-TG-lyu" id="bj2-tL-Q22"/>
-                        <outlet property="loginButton" destination="rfy-p9-QKn" id="tGU-Fr-oNG"/>
+                        <outlet property="loginButton" destination="rfy-p9-QKn" id="u5h-iR-jsJ"/>
                         <outlet property="loginVM" destination="HzZ-rY-LhB" id="RmC-RZ-Xpr"/>
                         <outlet property="passTextField" destination="F8C-Sf-dgR" id="Roj-RK-oPj"/>
                         <outlet property="textFieldsManager" destination="Htg-Sl-ZzP" id="O4n-Sc-Jaz"/>

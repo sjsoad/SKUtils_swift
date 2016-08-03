@@ -30,6 +30,7 @@
 		A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */; };
 		A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */; };
 		A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */; };
+		A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */; };
 		F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseValidator.swift; sourceTree = "<group>"; };
 		A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmailValidator.swift; sourceTree = "<group>"; };
+		A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOnEnableButton.swift; sourceTree = "<group>"; };
 		AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 		049161F01D3E05A000E01686 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */,
 				A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */,
 				04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */,
 				A5276CB61D3FFF680059948C /* SKRandomExtension.swift in Sources */,
