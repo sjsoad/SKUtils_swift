@@ -47,15 +47,18 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         
         self.loginVM.logining.subscribeNext { [weak self] logining in
             self?.textFieldsManager.hideKeyboard()
-            if logining {
-                self!.startActivityAnimating(CGSizeMake(80, 30),
-                    message: nil,
-                    type: .BallClipRotate,
-                    color: UIColor.whiteColor(),
-                    padding: 0)
-            }
-            else {
-                self!.stopActivityAnimating()
+            self!.startActivityAnimating(CGSizeMake(80, 30),
+                message: nil,
+                type: .BallClipRotate,
+                color: UIColor.whiteColor(),
+                padding: 0)
+        }.addDisposableTo(disposeBag)
+        
+        self.loginVM.loggedIn.subscribeNext { [weak self] loggedIn in
+            self?.textFieldsManager.hideKeyboard()
+            self!.stopActivityAnimating()
+            if loggedIn {
+            
             }
         }.addDisposableTo(disposeBag)
     }
