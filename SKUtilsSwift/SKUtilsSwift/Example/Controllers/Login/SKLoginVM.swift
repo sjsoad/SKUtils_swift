@@ -19,7 +19,6 @@ class SKLoginVM: NSObject {
     var passValidation = Observable.just(false)
     
     var canLogin = Observable.just(false)
-    var logining = Observable.just(false)
     var loggedIn = Observable.just(false)
     
     var emailValid = false
@@ -30,6 +29,7 @@ class SKLoginVM: NSObject {
                    emailString: Observable<String>,
                    passString: Observable<String>,
                    loginButtonTap: Observable<Void>) {
+        
         let emailStringValidation = emailString.flatMapLatest { email in
             Observable.just(self.emailValidator.isTextValid(email))
             }.shareReplay(1)
@@ -55,10 +55,6 @@ class SKLoginVM: NSObject {
         }).distinctUntilChanged()
         
         let usernameAndPassword = Observable.combineLatest(emailString, passString) { ($0, $1) }
-        
-        logining = loginButtonTap.map({ _ in
-            return true
-        })
         
         loggedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
             .flatMapLatest({ (username, password) in

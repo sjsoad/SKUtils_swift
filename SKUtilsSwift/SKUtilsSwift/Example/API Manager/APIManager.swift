@@ -18,11 +18,13 @@ class APIManager: NSObject {
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         return Observable.create({ observer in
-            let request = Alamofire.request(.GET, URLs.HOST+URLs.loginEndpoint, headers: headers)
+            let request = Alamofire.request(.GET, URLs.HOST + URLs.loginEndpoint, headers: headers)
                 .validate()
                 .responseJSON { (response) in
                     let success = response.result.value != nil
                     if success {
+                        print(response.result.value)
+                        DatabaseManager.addObjectFromJSON(response.result.value, type: GitHubUser.self)
                         observer.onNext(success)
                     } else if let error = response.result.error {
                         observer.onError(error)

@@ -43,20 +43,13 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
             self?.proceedTextField(self!.passTextField, valid: passValid)
             }.addDisposableTo(disposeBag)
         
-        self.loginVM.logining.subscribeNext { [weak self] logining in
-            self?.textFieldsManager.hideKeyboard()
-            self!.startActivityAnimating(CGSizeMake(80, 30),
-                message: nil,
-                type: .BallClipRotate,
-                color: UIColor.whiteColor(),
-                padding: 0)
-        }.addDisposableTo(disposeBag)
-        
         self.loginVM.loggedIn.subscribe(
             onNext: { response in
+                self.stopActivityAnimating()
             print(response)
             },
             onError: { error in
+                self.stopActivityAnimating()
                 print(error)
             },
             onCompleted: {
@@ -79,6 +72,14 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         }
     }
 
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        self.textFieldsManager.hideKeyboard()
+        self.startActivityAnimating(CGSizeMake(80, 30),
+                                     message: nil,
+                                     type: .BallClipRotate,
+                                     color: UIColor.whiteColor(),
+                                     padding: 0)
+    }
     //Animation
     
     func animateActionOnTextField(view: SpringView) -> Void {
