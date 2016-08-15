@@ -18,6 +18,8 @@ class SKLoginVM: NSObject {
     var emailValidation = Observable.just(false)
     var passValidation = Observable.just(false)
     
+//    var usernameAndPassword = Observable.just(false)
+    
     var canLogin = Observable.just(false)
     var loggedIn = Observable.just(false)
     
@@ -59,6 +61,8 @@ class SKLoginVM: NSObject {
         loggedIn = loginButtonTap.withLatestFrom(usernameAndPassword)
             .flatMapLatest({ (username, password) in
                 return APIManager.loginWithParameters(username, password: password)
+                .observeOn(MainScheduler.instance)
+                .catchErrorJustReturn(false)
         })
             .flatMapLatest { loggedIn -> Observable<Bool> in
                 Observable.just(loggedIn)

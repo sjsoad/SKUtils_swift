@@ -11,6 +11,14 @@ import RealmSwift
 
 class DatabaseManager: NSObject {
     
+    class func configureRealm() {
+        var config = Realm.Configuration()
+        config.deleteRealmIfMigrationNeeded = true
+        Realm.Configuration.defaultConfiguration = config
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString)
+    }
+    
     class func logout() {
         let realm = try! Realm()
         try! realm.write {

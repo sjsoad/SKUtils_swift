@@ -11,6 +11,7 @@ import Spring
 import NVActivityIndicatorView
 import RxCocoa
 import RxSwift
+import SWMessages
 
 class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     
@@ -44,17 +45,20 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
             }.addDisposableTo(disposeBag)
         
         self.loginVM.loggedIn.subscribe(
-            onNext: { response in
+            onNext: { success in
                 self.stopActivityAnimating()
-            print(response)
-            },
-            onError: { error in
-                self.stopActivityAnimating()
-                print(error)
-            },
-            onCompleted: {
-                self.stopActivityAnimating()
-        }).addDisposableTo(disposeBag)
+                if success {
+                    print("success");
+                }
+                else {
+                    SWMessage.sharedInstance.showNotificationInViewController(self,
+                        title: "Error",
+                        subtitle: "For some reasons you cannot login. Try later.",
+                        type: .Error,
+                        duration: .Custom(1),
+                        canBeDismissedByUser: false)
+                }
+            }).addDisposableTo(disposeBag)
     }
     
     func proceedTextField(textField: SKBaseTextField, valid: Bool) -> Void {

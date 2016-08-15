@@ -11,6 +11,7 @@ pod 'RealmSwift'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Alamofire'
+pod 'SWMessages'
 
   target 'SKUtilsSwiftTests' do
     inherit! :search_paths

@@ -13,6 +13,7 @@
 		0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */; };
 		04EBCC451D53359C00CDA8F6 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC441D53359C00CDA8F6 /* GitHubUser.swift */; };
 		04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC471D5336E700CDA8F6 /* DatabaseManager.swift */; };
+		04EBCC4B1D53853F00CDA8F6 /* SWMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */; };
 		04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */; };
 		04FD88331D3E546900080A35 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD88321D3E546900080A35 /* SKUtils.swift */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
@@ -69,6 +70,7 @@
 		0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginVM.swift; sourceTree = "<group>"; };
 		04EBCC441D53359C00CDA8F6 /* GitHubUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubUser.swift; path = Models/GitHubUser.swift; sourceTree = "<group>"; };
 		04EBCC471D5336E700CDA8F6 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWMessages.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/SWMessages/SWMessages.framework"; sourceTree = "<group>"; };
 		04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldAccessoryView.swift; sourceTree = "<group>"; };
 		04FD88321D3E546900080A35 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
 		12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EBCC4B1D53853F00CDA8F6 /* SWMessages.framework in Frameworks */,
 				A52145291D4FB54300E12CEA /* RxCocoa.framework in Frameworks */,
 				A521452A1D4FB54300E12CEA /* RxSwift.framework in Frameworks */,
 				A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */,
@@ -216,6 +219,7 @@
 		422DCC9D2AE5B2AADA041281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */,
 				A52145271D4FB54300E12CEA /* RxCocoa.framework */,
 				A52145281D4FB54300E12CEA /* RxSwift.framework */,
 				A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */,
@@ -333,6 +337,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF341D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwift" */;
 			buildPhases = (
+				D7B1FD1018735D247D3C1FFE /* 📦 Check Pods Manifest.lock */,
 				A9354D285CBEE76B6CE8E78F /* [CP] Check Pods Manifest.lock */,
 				A5ADBF131D3802D500EB7212 /* Sources */,
 				A5ADBF141D3802D500EB7212 /* Frameworks */,
@@ -340,6 +345,8 @@
 				1F3AB7A13F0A2E3D43D691B8 /* [CP] Embed Pods Frameworks */,
 				699A45CCF61F292C351F5208 /* [CP] Copy Pods Resources */,
 				0484BCE61D3FABC400885A38 /* Embed Frameworks */,
+				0D2AEE10B1B588BC80A569DB /* 📦 Embed Pods Frameworks */,
+				40FEE270CC14C5CBF2BF9DDD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,12 +361,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF371D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwiftTests" */;
 			buildPhases = (
+				F22123BD84E3765A9D8BAAAA /* 📦 Check Pods Manifest.lock */,
 				C3433215472A0DC257E62D71 /* [CP] Check Pods Manifest.lock */,
 				A5ADBF271D3802D600EB7212 /* Sources */,
 				A5ADBF281D3802D600EB7212 /* Frameworks */,
 				A5ADBF291D3802D600EB7212 /* Resources */,
 				AE2AE676BCEE4F9FF1F2395D /* [CP] Embed Pods Frameworks */,
 				6ACF7B37F2216AF071C6B932 /* [CP] Copy Pods Resources */,
+				F5F48F35AD20F03B20024894 /* 📦 Embed Pods Frameworks */,
+				DB48B9BEDD39A38C78C6C53E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,6 +440,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D2AEE10B1B588BC80A569DB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1F3AB7A13F0A2E3D43D691B8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +468,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40FEE270CC14C5CBF2BF9DDD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		699A45CCF61F292C351F5208 /* [CP] Copy Pods Resources */ = {
@@ -518,6 +558,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7B1FD1018735D247D3C1FFE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB48B9BEDD39A38C78C6C53E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22123BD84E3765A9D8BAAAA /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5F48F35AD20F03B20024894 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

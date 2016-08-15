@@ -14,6 +14,7 @@ PODS:
   - RxTests (2.6.0):
     - RxSwift (~> 2.5)
   - Spring (1.0.3)
+  - SWMessages (0.2.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - RxSwift
   - RxTests
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
+  - SWMessages
 
 EXTERNAL SOURCES:
   Spring:
@@ -45,7 +47,8 @@ SPEC CHECKSUMS:
   RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
   RxTests: cdcc379c70e80089a8bc2c99515223339d1c3b81
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SWMessages: 881ff7ed84cb796bde83533de09566ffc4826453
 
-PODFILE CHECKSUM: db82345cee9a48f2e5005936a6e83019e401c99c
+PODFILE CHECKSUM: 95691270f6de3d62e53c97e8967f229ca0bc331e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0
