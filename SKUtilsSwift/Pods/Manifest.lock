@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (3.4.1)
-  - NVActivityIndicatorView (2.9)
+  - NVActivityIndicatorView (2.10)
+  - ObjectMapper (1.4.0)
   - Realm (1.0.2):
     - Realm/Headers (= 1.0.2)
   - Realm/Headers (1.0.2)
@@ -19,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - NVActivityIndicatorView
+  - ObjectMapper
   - RealmSwift
   - RxBlocking
   - RxCocoa
@@ -39,7 +41,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  NVActivityIndicatorView: 0084f6be71bdf4735b5424ebfb530b1e3db3276c
+  NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   RxBlocking: f2e0a7e74d5e9d3029d2b1118e2af01f583fbdd8
@@ -49,6 +52,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SWMessages: 881ff7ed84cb796bde83533de09566ffc4826453
 
-PODFILE CHECKSUM: 95691270f6de3d62e53c97e8967f229ca0bc331e
+PODFILE CHECKSUM: baaee81dcac15444710d367f8f324b862dabdedd
 
 COCOAPODS: 1.0.0

@@ -6,11 +6,17 @@ target 'SKUtilsSwift' do
   use_frameworks!
 
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+
 pod 'NVActivityIndicatorView'
+
 pod 'RealmSwift'
+pod 'ObjectMapper'
+
 pod 'RxSwift'
 pod 'RxCocoa'
+
 pod 'Alamofire'
+
 pod 'SWMessages'
 
   target 'SKUtilsSwiftTests' do

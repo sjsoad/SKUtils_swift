@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SKUtilsSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>393B7372FB746939353383371B73311B</key>
+		<key>2872299EF5C89FFEF2BEABF76E089259</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48F16267A16E6358A95E690D78408A0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>596BA49362A150E6057544CF6FD17E73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A97AACFAD87FB04D57EADF982F7E8180</key>
+		<key>B6E453E5DB61F7AC78B41E79D6F43E81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0B1B9BC6C2599D8D6BFD0A0ED13E303</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C0CBC6C61AA52F4ADB1DBBC9E15D7288</key>
+		<key>C31A540DD6DB56404A28511F9FCEB0D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +122,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D91A7ABBFC2616DFD14DD3B382F72E40</key>
+		<key>D0F8657B9251E6040181CF00A51A9FC4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED8DB99B4ACBEAEDC88BDEEC6499230C</key>
+		<key>D33AF7DD002FF2BCB29582C967690564</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F2A24D2BABA0BB46F063E68196B2512D</key>
+		<key>D36A1C957B746EE49720FDEF4BFC26C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
