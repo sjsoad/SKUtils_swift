@@ -10,8 +10,9 @@
 
 import Foundation
 import RealmSwift
+import ObjectMapper
 
-class GitHubUser: Object {
+class GitHubUser: Object, Mappable {
     
     dynamic var avatar_url: String? = nil
     dynamic var bio: String? = nil
@@ -58,9 +59,12 @@ class GitHubUser: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-// Specify properties to ignore (Realm won't persist these)
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+
+    }
 }

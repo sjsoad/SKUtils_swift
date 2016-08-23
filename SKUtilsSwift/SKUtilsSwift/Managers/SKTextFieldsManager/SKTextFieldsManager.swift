@@ -30,7 +30,8 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     func addTapGestureRecognizer() -> Void {
         if self.hideOnTap {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(SKTextFieldsManager.hideKeyboard))
+            let tap = UITapGestureRecognizer(target: self,
+                                             action: #selector(SKTextFieldsManager.hideKeyboard))
             if let scroll = self.scroll {
                 scroll.addGestureRecognizer(tap)
             }
@@ -42,7 +43,9 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             for subView in parent.subviews {
                 if subView.isKindOfClass(UITextField) {
                     let textField = subView as! UITextField
-                    textField.addTarget(self, action: #selector(SKTextFieldsManager.textFieldReturnButtonPressed), forControlEvents: UIControlEvents.EditingDidEndOnExit)
+                    textField.addTarget(self,
+                                        action: #selector(SKTextFieldsManager.textFieldReturnButtonPressed),
+                                        forControlEvents: UIControlEvents.EditingDidEndOnExit)
                     self.textFields.append(textField)
                 }
                 else {
@@ -53,8 +56,14 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     func subscribeForKeyboardNotifications() -> Void {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SKTextFieldsManager.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SKTextFieldsManager.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(SKTextFieldsManager.keyboardWillShow),
+                                                         name: UIKeyboardWillShowNotification,
+                                                         object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(SKTextFieldsManager.keyboardWillHide),
+                                                         name: UIKeyboardWillHideNotification,
+                                                         object: nil)
     }
     
     func keyboardWillShow(notification: NSNotification) -> Void {
@@ -62,7 +71,7 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             UIView.animateWithDuration(kAnimationDuration) {
                 if let scroll = self.scroll {
                     scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
-                    self.scrollToTextField(rect.size.height)
+                    self.scrollToActiveTextField(rect.size.height)
                 }
             }
         }
@@ -106,7 +115,7 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    func scrollToTextField(keyboardHeight: CGFloat) -> Void {
+    func scrollToActiveTextField(keyboardHeight: CGFloat) -> Void {
         if let activeTextField = self.firstResponder() {
             if let window = UIApplication.sharedApplication().keyWindow {
                 let activeTextFieldRect = activeTextField.convertRect(activeTextField.frame, toView: window)
@@ -125,10 +134,10 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     private func sortTextFieldsByY() -> Void {
         let window = UIApplication.sharedApplication().keyWindow
-        let sortedArray = self.textFields.sort { (object1, object2) -> Bool in
-            let obj1Rect = object1.convertRect(object1.frame, toView: window)
-            let obj2Rect = object1.convertRect(object2.frame, toView: window)
-            return obj1Rect.origin.y > obj2Rect.origin.y
+        let sortedArray = self.textFields.sort { (currentObject, nextObject) -> Bool in
+            let currentObjectRect = currentObject.convertRect(currentObject.frame, toView: window)
+            let nextObjectRect = nextObject.convertRect(nextObject.frame, toView: window)
+            return currentObjectRect.origin.y > nextObjectRect.origin.y
         }
         self.textFields = sortedArray
     }

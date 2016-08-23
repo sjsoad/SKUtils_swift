@@ -11,6 +11,24 @@ import RealmSwift
 
 class DatabaseManager: NSObject {
     
+    //MARK: - test data
+    
+    class func mapTestJSONToDatabase() {
+        if let filePath = NSBundle.mainBundle().pathForResource("testJSON", ofType: "txt") {
+            let json = try! String(contentsOfFile: filePath)
+            if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
+                do {
+                    let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+                    print(dictionary)
+                } catch let error as NSError {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    //MARK: - Methods
+    
     class func configureRealm() {
         var config = Realm.Configuration()
         config.deleteRealmIfMigrationNeeded = true
