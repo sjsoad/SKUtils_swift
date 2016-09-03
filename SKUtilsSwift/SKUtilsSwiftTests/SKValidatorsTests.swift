@@ -50,4 +50,14 @@ class SKValidatorsTests: XCTestCase {
         XCTAssertTrue(passValidator.isTextValid(validPassword))
     }
     
+    func testEqualValidator() {
+        let firstString = "some string"
+        let secondString = "string to compare"
+        let thirdString = "string to compare"
+        let equalValidator = SKEqualValidator()
+        XCTAssertFalse(equalValidator.isTextEqual(nil, secondString: nil))
+        XCTAssertFalse(equalValidator.isTextEqual(firstString, secondString: secondString))
+        XCTAssertTrue(equalValidator.isTextEqual(thirdString, secondString: secondString))
+    }
+    
 }

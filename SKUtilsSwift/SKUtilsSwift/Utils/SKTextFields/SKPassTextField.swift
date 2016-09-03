@@ -13,7 +13,6 @@ class SKPassTextField: SKBaseTextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.secureTextEntry = true
-        self.textValidator = SKPasswordValidator()
     }
     
 }

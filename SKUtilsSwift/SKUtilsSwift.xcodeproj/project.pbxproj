@@ -8,32 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
-		0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
 		0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCED1D3E146F00D22867 /* SKLoginMV.swift */; };
 		0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495CCEF1D3E15BB00D22867 /* SKLoginVM.swift */; };
 		04EBCC451D53359C00CDA8F6 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC441D53359C00CDA8F6 /* GitHubUser.swift */; };
 		04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC471D5336E700CDA8F6 /* DatabaseManager.swift */; };
 		04EBCC4B1D53853F00CDA8F6 /* SWMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */; };
-		04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */; };
-		04FD88331D3E546900080A35 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD88321D3E546900080A35 /* SKUtils.swift */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
 		A52145291D4FB54300E12CEA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145271D4FB54300E12CEA /* RxCocoa.framework */; };
 		A521452A1D4FB54300E12CEA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145281D4FB54300E12CEA /* RxSwift.framework */; };
 		A521452E1D4FD03800E12CEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521452D1D4FD03800E12CEA /* API.swift */; };
 		A52145301D4FD16700E12CEA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521452F1D4FD16700E12CEA /* APIManager.swift */; };
-		A5276CB61D3FFF680059948C /* SKRandomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5276CB51D3FFF680059948C /* SKRandomExtension.swift */; };
 		A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */; };
-		A52B204A1D3BDE6D00F77226 /* SKIBDesignableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B20491D3BDE6D00F77226 /* SKIBDesignableViewExtension.swift */; };
-		A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */; };
+		A53891C91D7AE40B00CEE380 /* SKIBDesignableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891B81D7AE40B00CEE380 /* SKIBDesignableViewExtension.swift */; };
+		A53891CA1D7AE40B00CEE380 /* SKRandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891B91D7AE40B00CEE380 /* SKRandomNumberExtension.swift */; };
+		A53891CB1D7AE40B00CEE380 /* SKTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891BC1D7AE40B00CEE380 /* SKTextFieldsManager.swift */; };
+		A53891CC1D7AE40B00CEE380 /* SKTextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891BE1D7AE40B00CEE380 /* SKTextFieldAccessoryView.swift */; };
+		A53891CD1D7AE40B00CEE380 /* SKBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C01D7AE40B00CEE380 /* SKBaseTextField.swift */; };
+		A53891CE1D7AE40B00CEE380 /* SKEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C11D7AE40B00CEE380 /* SKEmailTextField.swift */; };
+		A53891CF1D7AE40B00CEE380 /* SKPassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C21D7AE40B00CEE380 /* SKPassTextField.swift */; };
+		A53891D01D7AE40B00CEE380 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C41D7AE40B00CEE380 /* SKUtils.swift */; };
+		A53891D11D7AE40B00CEE380 /* SKBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C61D7AE40B00CEE380 /* SKBaseValidator.swift */; };
+		A53891D21D7AE40B00CEE380 /* SKEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C71D7AE40B00CEE380 /* SKEmailValidator.swift */; };
+		A53891D31D7AE40B00CEE380 /* SKPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891C81D7AE40B00CEE380 /* SKPasswordValidator.swift */; };
+		A53891D51D7AE45400CEE380 /* SKEqualValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891D41D7AE45400CEE380 /* SKEqualValidator.swift */; };
+		A53891D91D7AE8F300CEE380 /* SKLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53891D81D7AE8F300CEE380 /* SKLocationService.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
-		A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
 		A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */; };
-		A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */; };
-		A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */; };
 		A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */; };
 		F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */; };
 /* End PBXBuildFile section */
@@ -64,7 +68,6 @@
 /* Begin PBXFileReference section */
 		031D1B7D1F1507BCF90B13F0 /* Pods-SKUtilsSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		045970A41D64B26100C45A1D /* testJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testJSON.txt; path = Resources/testJSON.txt; sourceTree = "<group>"; };
-		0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseTextField.swift; sourceTree = "<group>"; };
 		0484BCEB1D3FCEFB00885A38 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "Pods/../build/Debug-iphoneos/Spring/Spring.framework"; sourceTree = "<group>"; };
 		049161EF1D3E05A000E01686 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0495CCED1D3E146F00D22867 /* SKLoginMV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLoginMV.swift; sourceTree = "<group>"; };
@@ -72,20 +75,27 @@
 		04EBCC441D53359C00CDA8F6 /* GitHubUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubUser.swift; path = Models/GitHubUser.swift; sourceTree = "<group>"; };
 		04EBCC471D5336E700CDA8F6 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWMessages.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/SWMessages/SWMessages.framework"; sourceTree = "<group>"; };
-		04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldAccessoryView.swift; sourceTree = "<group>"; };
-		04FD88321D3E546900080A35 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
 		12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		A521452D1D4FD03800E12CEA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "API Manager/API.swift"; sourceTree = "<group>"; };
 		A521452F1D4FD16700E12CEA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIManager.swift; path = "API Manager/APIManager.swift"; sourceTree = "<group>"; };
-		A5276CB51D3FFF680059948C /* SKRandomExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRandomExtension.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A52B20491D3BDE6D00F77226 /* SKIBDesignableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIBDesignableViewExtension.swift; sourceTree = "<group>"; };
-		A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
+		A53891B81D7AE40B00CEE380 /* SKIBDesignableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIBDesignableViewExtension.swift; sourceTree = "<group>"; };
+		A53891B91D7AE40B00CEE380 /* SKRandomNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKRandomNumberExtension.swift; sourceTree = "<group>"; };
+		A53891BC1D7AE40B00CEE380 /* SKTextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldsManager.swift; sourceTree = "<group>"; };
+		A53891BE1D7AE40B00CEE380 /* SKTextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldAccessoryView.swift; sourceTree = "<group>"; };
+		A53891C01D7AE40B00CEE380 /* SKBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseTextField.swift; sourceTree = "<group>"; };
+		A53891C11D7AE40B00CEE380 /* SKEmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmailTextField.swift; sourceTree = "<group>"; };
+		A53891C21D7AE40B00CEE380 /* SKPassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPassTextField.swift; sourceTree = "<group>"; };
+		A53891C41D7AE40B00CEE380 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
+		A53891C61D7AE40B00CEE380 /* SKBaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseValidator.swift; sourceTree = "<group>"; };
+		A53891C71D7AE40B00CEE380 /* SKEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmailValidator.swift; sourceTree = "<group>"; };
+		A53891C81D7AE40B00CEE380 /* SKPasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPasswordValidator.swift; sourceTree = "<group>"; };
+		A53891D41D7AE45400CEE380 /* SKEqualValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEqualValidator.swift; sourceTree = "<group>"; };
+		A53891D81D7AE8F300CEE380 /* SKLocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLocationService.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
-		A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextFieldsManager.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5ADBF211D3802D600EB7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -94,8 +104,6 @@
 		A5ADBF2B1D3802D600EB7212 /* SKUtilsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKUtilsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUtilsSwiftTests.swift; sourceTree = "<group>"; };
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKBaseValidator.swift; sourceTree = "<group>"; };
-		A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEmailValidator.swift; sourceTree = "<group>"; };
 		A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOnEnableButton.swift; sourceTree = "<group>"; };
 		AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,14 +152,6 @@
 				045970A41D64B26100C45A1D /* testJSON.txt */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		0484BCD51D3F9FCA00885A38 /* SKTextFields */ = {
-			isa = PBXGroup;
-			children = (
-				0484BCDC1D3F9FEA00885A38 /* SKBaseTextField.swift */,
-			);
-			path = SKTextFields;
 			sourceTree = "<group>";
 		};
 		049161EB1D3E05A000E01686 /* Example */ = {
@@ -209,22 +209,6 @@
 			path = "Database Manager";
 			sourceTree = "<group>";
 		};
-		04FD882C1D3E4E8F00080A35 /* SKtextFieldAccessoryView */ = {
-			isa = PBXGroup;
-			children = (
-				04FD882D1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift */,
-			);
-			path = SKtextFieldAccessoryView;
-			sourceTree = "<group>";
-		};
-		04FD88311D3E544500080A35 /* SKUtils */ = {
-			isa = PBXGroup;
-			children = (
-				04FD88321D3E546900080A35 /* SKUtils.swift */,
-			);
-			path = SKUtils;
-			sourceTree = "<group>";
-		};
 		422DCC9D2AE5B2AADA041281 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,30 +232,96 @@
 			name = "API Manager";
 			sourceTree = "<group>";
 		};
-		A52B20481D3BDE2200F77226 /* Categories */ = {
+		A53891B61D7AE40B00CEE380 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A52B20491D3BDE6D00F77226 /* SKIBDesignableViewExtension.swift */,
-				A5276CB51D3FFF680059948C /* SKRandomExtension.swift */,
+				A53891D61D7AE8E500CEE380 /* Services */,
+				A53891B71D7AE40B00CEE380 /* Categories */,
+				A53891BA1D7AE40B00CEE380 /* Managers */,
+				A53891BD1D7AE40B00CEE380 /* SKtextFieldAccessoryView */,
+				A53891BF1D7AE40B00CEE380 /* SKTextFields */,
+				A53891C31D7AE40B00CEE380 /* SKUtils */,
+				A53891C51D7AE40B00CEE380 /* SKValidators */,
 			);
-			name = Categories;
-			path = SKUtilsSwift/Categories;
-			sourceTree = SOURCE_ROOT;
+			path = Utils;
+			sourceTree = "<group>";
 		};
-		A5A5B3391D3E8FF800070CD7 /* Managers */ = {
+		A53891B71D7AE40B00CEE380 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				A5A5B33A1D3E8FF800070CD7 /* SKTextFieldsManager */,
+				A53891B81D7AE40B00CEE380 /* SKIBDesignableViewExtension.swift */,
+				A53891B91D7AE40B00CEE380 /* SKRandomNumberExtension.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		A53891BA1D7AE40B00CEE380 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A53891BB1D7AE40B00CEE380 /* SKTextFieldsManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A5A5B33A1D3E8FF800070CD7 /* SKTextFieldsManager */ = {
+		A53891BB1D7AE40B00CEE380 /* SKTextFieldsManager */ = {
 			isa = PBXGroup;
 			children = (
-				A5A5B33B1D3E900E00070CD7 /* SKTextFieldsManager.swift */,
+				A53891BC1D7AE40B00CEE380 /* SKTextFieldsManager.swift */,
 			);
 			path = SKTextFieldsManager;
+			sourceTree = "<group>";
+		};
+		A53891BD1D7AE40B00CEE380 /* SKtextFieldAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				A53891BE1D7AE40B00CEE380 /* SKTextFieldAccessoryView.swift */,
+			);
+			path = SKtextFieldAccessoryView;
+			sourceTree = "<group>";
+		};
+		A53891BF1D7AE40B00CEE380 /* SKTextFields */ = {
+			isa = PBXGroup;
+			children = (
+				A53891C01D7AE40B00CEE380 /* SKBaseTextField.swift */,
+				A53891C11D7AE40B00CEE380 /* SKEmailTextField.swift */,
+				A53891C21D7AE40B00CEE380 /* SKPassTextField.swift */,
+			);
+			path = SKTextFields;
+			sourceTree = "<group>";
+		};
+		A53891C31D7AE40B00CEE380 /* SKUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A53891C41D7AE40B00CEE380 /* SKUtils.swift */,
+			);
+			path = SKUtils;
+			sourceTree = "<group>";
+		};
+		A53891C51D7AE40B00CEE380 /* SKValidators */ = {
+			isa = PBXGroup;
+			children = (
+				A53891C61D7AE40B00CEE380 /* SKBaseValidator.swift */,
+				A53891C71D7AE40B00CEE380 /* SKEmailValidator.swift */,
+				A53891C81D7AE40B00CEE380 /* SKPasswordValidator.swift */,
+				A53891D41D7AE45400CEE380 /* SKEqualValidator.swift */,
+			);
+			path = SKValidators;
+			sourceTree = "<group>";
+		};
+		A53891D61D7AE8E500CEE380 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A53891D71D7AE8E500CEE380 /* SKLocationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A53891D71D7AE8E500CEE380 /* SKLocationService */ = {
+			isa = PBXGroup;
+			children = (
+				A53891D81D7AE8F300CEE380 /* SKLocationService.swift */,
+			);
+			path = SKLocationService;
 			sourceTree = "<group>";
 		};
 		A5ADBF0E1D3802D500EB7212 = {
@@ -297,12 +347,7 @@
 		A5ADBF191D3802D600EB7212 /* SKUtilsSwift */ = {
 			isa = PBXGroup;
 			children = (
-				0484BCD51D3F9FCA00885A38 /* SKTextFields */,
-				A5A5B3391D3E8FF800070CD7 /* Managers */,
-				A52B20481D3BDE2200F77226 /* Categories */,
-				A5ADBF3A1D3802F100EB7212 /* SKValidators */,
-				04FD882C1D3E4E8F00080A35 /* SKtextFieldAccessoryView */,
-				04FD88311D3E544500080A35 /* SKUtils */,
+				A53891B61D7AE40B00CEE380 /* Utils */,
 				049161EB1D3E05A000E01686 /* Example */,
 			);
 			path = SKUtilsSwift;
@@ -316,16 +361,6 @@
 				A5ADBF311D3802D600EB7212 /* Info.plist */,
 			);
 			path = SKUtilsSwiftTests;
-			sourceTree = "<group>";
-		};
-		A5ADBF3A1D3802F100EB7212 /* SKValidators */ = {
-			isa = PBXGroup;
-			children = (
-				A5ADBF3F1D38036C00EB7212 /* SKBaseValidator.swift */,
-				A5ADBF411D38082300EB7212 /* SKEmailValidator.swift */,
-				A58C09B01D3B62F300D4A3FD /* SKPasswordValidator.swift */,
-			);
-			path = SKValidators;
 			sourceTree = "<group>";
 		};
 		EDC2369EC59B9D1E81F7D2E7 /* Pods */ = {
@@ -637,23 +672,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53891CA1D7AE40B00CEE380 /* SKRandomNumberExtension.swift in Sources */,
 				A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */,
-				A58C09B11D3B62F300D4A3FD /* SKPasswordValidator.swift in Sources */,
-				04FD882E1D3E4E8F00080A35 /* SKTextFieldAccessoryView.swift in Sources */,
-				A5276CB61D3FFF680059948C /* SKRandomExtension.swift in Sources */,
 				04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */,
-				04FD88331D3E546900080A35 /* SKUtils.swift in Sources */,
-				A5ADBF401D38036C00EB7212 /* SKBaseValidator.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
 				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
-				0484BCDD1D3F9FEA00885A38 /* SKBaseTextField.swift in Sources */,
-				A5ADBF421D38082300EB7212 /* SKEmailValidator.swift in Sources */,
 				A521452E1D4FD03800E12CEA /* API.swift in Sources */,
+				A53891CE1D7AE40B00CEE380 /* SKEmailTextField.swift in Sources */,
+				A53891D21D7AE40B00CEE380 /* SKEmailValidator.swift in Sources */,
+				A53891D01D7AE40B00CEE380 /* SKUtils.swift in Sources */,
 				0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */,
+				A53891CC1D7AE40B00CEE380 /* SKTextFieldAccessoryView.swift in Sources */,
+				A53891D91D7AE8F300CEE380 /* SKLocationService.swift in Sources */,
+				A53891C91D7AE40B00CEE380 /* SKIBDesignableViewExtension.swift in Sources */,
+				A53891CD1D7AE40B00CEE380 /* SKBaseTextField.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
+				A53891CB1D7AE40B00CEE380 /* SKTextFieldsManager.swift in Sources */,
+				A53891D31D7AE40B00CEE380 /* SKPasswordValidator.swift in Sources */,
+				A53891CF1D7AE40B00CEE380 /* SKPassTextField.swift in Sources */,
+				A53891D51D7AE45400CEE380 /* SKEqualValidator.swift in Sources */,
 				04EBCC451D53359C00CDA8F6 /* GitHubUser.swift in Sources */,
-				A52B204A1D3BDE6D00F77226 /* SKIBDesignableViewExtension.swift in Sources */,
-				A5A5B33C1D3E900E00070CD7 /* SKTextFieldsManager.swift in Sources */,
+				A53891D11D7AE40B00CEE380 /* SKBaseValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

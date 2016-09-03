@@ -13,7 +13,6 @@ class SKEmailTextField: SKBaseTextField {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.keyboardType = .EmailAddress
-        self.textValidator = SKEmailValidator()
     }
     
 }
