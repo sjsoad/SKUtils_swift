@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SKPasswordValidator: SKBaseValidator {
+class PasswordValidator: BaseValidator {
 
     @IBInspectable var passwordRegularExpresionString = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$"
     @IBInspectable var passwordPredicateString        = "SELF MATCHES %@"

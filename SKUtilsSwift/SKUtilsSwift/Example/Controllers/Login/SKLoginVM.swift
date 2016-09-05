@@ -12,8 +12,8 @@ import RxSwift
 
 class SKLoginVM: NSObject {
 
-    var emailValidator: SKBaseValidator = SKBaseValidator()
-    var passValidator: SKBaseValidator = SKBaseValidator()
+    var emailValidator: BaseValidator = BaseValidator()
+    var passValidator: BaseValidator = BaseValidator()
     
     var emailValidation = Observable.just(false)
     var passValidation = Observable.just(false)

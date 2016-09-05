@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sqd-oC-Bzx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sqd-oC-Bzx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,10 +40,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVf-mc-Ulh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-38-slr" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-38-slr" customClass="TextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="338" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu" customClass="SKBaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGP-TG-lyu" customClass="BaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LZJ-sm-mzf"/>
@@ -85,10 +85,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-Mg-dB2" customClass="SKTextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nn-Mg-dB2" customClass="TextFieldAccessoryView" customModule="SKUtilsSwift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="398" width="560" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR" customClass="SKBaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8C-Sf-dgR" customClass="BaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="540" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="a8m-kb-KVJ"/>
@@ -209,12 +209,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZVf-mc-Ulh" secondAttribute="bottom" id="0zA-Un-5hf"/>
                             <constraint firstItem="fX0-Qe-JwA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2m4-ME-XRA"/>
                             <constraint firstItem="fX0-Qe-JwA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Glt-US-A6H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fX0-Qe-JwA" secondAttribute="bottom" id="O45-Gp-7pv"/>
                             <constraint firstItem="ZVf-mc-Ulh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QeS-p4-xOP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZVf-mc-Ulh" secondAttribute="bottom" id="YjY-kd-e4R"/>
                             <constraint firstAttribute="trailing" secondItem="ZVf-mc-Ulh" secondAttribute="trailing" id="dLK-J7-k4i"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fX0-Qe-JwA" secondAttribute="bottom" id="nXT-sy-myq"/>
                             <constraint firstItem="ZVf-mc-Ulh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaG-g6-Vsv"/>
                             <constraint firstItem="7Qk-36-n2S" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="swg-r7-ixo"/>
                             <constraint firstAttribute="trailing" secondItem="fX0-Qe-JwA" secondAttribute="trailing" id="zxM-uj-H1v"/>
@@ -230,7 +230,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="Htg-Sl-ZzP" customClass="SKTextFieldsManager" customModule="SKUtilsSwift" customModuleProvider="target">
+                <customObject id="Htg-Sl-ZzP" customClass="TextFieldsManager" customModule="SKUtilsSwift" customModuleProvider="target">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
                     </userDefinedRuntimeAttributes>

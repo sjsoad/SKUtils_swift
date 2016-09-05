@@ -10,7 +10,7 @@ import UIKit
 
 let kAnimationDuration = 0.25
 
-class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
+class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
 
     var textFields : [AnyObject] = Array()
 
@@ -31,7 +31,7 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     func addTapGestureRecognizer() -> Void {
         if self.hideOnTap {
             let tap = UITapGestureRecognizer(target: self,
-                                             action: #selector(SKTextFieldsManager.hideKeyboard))
+                                             action: #selector(TextFieldsManager.hideKeyboard))
             if let scroll = self.scroll {
                 scroll.addGestureRecognizer(tap)
             }
@@ -44,7 +44,7 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                 if subView.isKindOfClass(UITextField) {
                     let textField = subView as! UITextField
                     textField.addTarget(self,
-                                        action: #selector(SKTextFieldsManager.textFieldReturnButtonPressed),
+                                        action: #selector(TextFieldsManager.textFieldReturnButtonPressed),
                                         forControlEvents: UIControlEvents.EditingDidEndOnExit)
                     self.textFields.append(textField)
                 }
@@ -57,11 +57,11 @@ class SKTextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     func subscribeForKeyboardNotifications() -> Void {
         NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(SKTextFieldsManager.keyboardWillShow),
+                                                         selector: #selector(TextFieldsManager.keyboardWillShow),
                                                          name: UIKeyboardWillShowNotification,
                                                          object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self,
-                                                         selector: #selector(SKTextFieldsManager.keyboardWillHide),
+                                                         selector: #selector(TextFieldsManager.keyboardWillHide),
                                                          name: UIKeyboardWillHideNotification,
                                                          object: nil)
     }

@@ -9,25 +9,25 @@
 import UIKit
 import Spring
 
-enum SKAccessoryViewState : Int {
-    case SKAccessoryViewStateError
-    case SKAccessoryViewStateSuccess
-    case SKAccessoryViewStateDefault
-    case SKAccessoryViewStateActive
+enum AccessoryViewState : Int {
+    case AccessoryViewStateError
+    case AccessoryViewStateSuccess
+    case AccessoryViewStateDefault
+    case AccessoryViewStateActive
     
-    static func stateForBool(valid: Bool) -> SKAccessoryViewState {
+    static func stateForBool(valid: Bool) -> AccessoryViewState {
         if valid {
-            return .SKAccessoryViewStateSuccess
+            return .AccessoryViewStateSuccess
         }
         else {
-            return .SKAccessoryViewStateError
+            return .AccessoryViewStateError
         }
     }
 }
 
-typealias drawingClosure = (view: SKTextFieldAccessoryView) -> Void
+typealias drawingClosure = (view: TextFieldAccessoryView) -> Void
 
-class SKTextFieldAccessoryView: SpringView {
+class TextFieldAccessoryView: SpringView {
     
     @IBInspectable var errorStateColor   : UIColor = UIColor.redColor()
     @IBInspectable var successStateColor : UIColor = UIColor.greenColor()
@@ -36,7 +36,7 @@ class SKTextFieldAccessoryView: SpringView {
     
     var closure: drawingClosure?
     
-    var currentViewState: SKAccessoryViewState = .SKAccessoryViewStateDefault {
+    var currentViewState: AccessoryViewState = .AccessoryViewStateDefault {
         didSet {
             self.setNeedsDisplay()
         }
@@ -44,10 +44,10 @@ class SKTextFieldAccessoryView: SpringView {
     
     func currentStateColor() -> UIColor {
         switch self.currentViewState {
-        case .SKAccessoryViewStateError   : return self.errorStateColor
-        case .SKAccessoryViewStateSuccess : return self.successStateColor
-        case .SKAccessoryViewStateDefault : return self.defaultStateColor
-        case .SKAccessoryViewStateActive  : return self.activeStateColor
+        case .AccessoryViewStateError   : return self.errorStateColor
+        case .AccessoryViewStateSuccess : return self.successStateColor
+        case .AccessoryViewStateDefault : return self.defaultStateColor
+        case .AccessoryViewStateActive  : return self.activeStateColor
         }
     }
 

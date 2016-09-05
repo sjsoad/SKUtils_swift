@@ -9,31 +9,24 @@
 import UIKit
 import CoreLocation
 
-class SKLocationService: NSObject, CLLocationManagerDelegate {
-    
-    static let sharedInstance = SKLocationService()
+class LocationService: NSObject {
     
     var settingsAlertTitle: String?
     var settingsAlertMessage: String?
     var alertSettingsButtonTitle: String?
     var alertCancelButtonTitle: String?
     
-    private var locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     
     override init() {
         super.init()
-        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     //MARK: - Public methods
     
-    func startLocationService() {
+    func setupLocationService() {
         self.checkLocationServiceState()
-    }
-    
-    func currentLocation() -> CLLocationCoordinate2D? {
-        return locationManager.location?.coordinate
     }
     
     //MARK: - Private methods
@@ -44,7 +37,6 @@ class SKLocationService: NSObject, CLLocationManagerDelegate {
             if locationManager.respondsToSelector(#selector(CLLocationManager.requestAlwaysAuthorization)) {
                 locationManager.requestAlwaysAuthorization()
             }
-            locationManager.startUpdatingLocation()
             break
         case .Restricted, .Denied, .AuthorizedWhenInUse:
             self.showSettingsAlert()
@@ -78,19 +70,5 @@ class SKLocationService: NSObject, CLLocationManagerDelegate {
         if UIApplication.sharedApplication().canOpenURL(settingsURL!) {
             UIApplication.sharedApplication().openURL(settingsURL!)
         }
-    }
-    
-    //MARK: - CLLocationManagerDelegate
-    
-    func locationManager(manager: CLLocationManager,
-                         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    func locationManager(manager: CLLocationManager,
-                         didUpdateLocations locations: [CLLocation]) {
-        
     }
 }

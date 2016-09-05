@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SKBaseValidator: NSObject {
+class BaseValidator: NSObject {
 
     @IBInspectable var maxTextLenght = 256
     @IBInspectable var minTextLenght = 1

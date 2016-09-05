@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SKEmailValidator: SKBaseValidator {
+class EmailValidator: BaseValidator {
     
     @IBInspectable var emailRegularExpresionString = "[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}"
     @IBInspectable var emailPredicateString        = "SELF MATCHES %@"

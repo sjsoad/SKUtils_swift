@@ -16,11 +16,11 @@ import SWMessages
 class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet var loginVM: SKLoginVM!
-    @IBOutlet var textFieldsManager: SKTextFieldsManager!
+    @IBOutlet var textFieldsManager: TextFieldsManager!
     
     @IBOutlet weak var loginButton: PopOnEnableButton!
-    @IBOutlet weak var emailTextField: SKBaseTextField!
-    @IBOutlet weak var passTextField: SKBaseTextField!
+    @IBOutlet weak var emailTextField: BaseTextField!
+    @IBOutlet weak var passTextField: BaseTextField!
     
     var disposeBag = DisposeBag()
     
@@ -61,18 +61,18 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
             }).addDisposableTo(disposeBag)
     }
     
-    func proceedTextField(textField: SKBaseTextField, valid: Bool) -> Void {
+    func proceedTextField(textField: BaseTextField, valid: Bool) -> Void {
         if let view = textField.visualisationView {
-            view.currentViewState = SKAccessoryViewState.stateForBool(valid)
+            view.currentViewState = AccessoryViewState.stateForBool(valid)
             if !valid {
                 self.animateActionOnTextField(view)
             }
         }
     }
     
-    @IBAction func resetTextField(textField: SKBaseTextField) {
+    @IBAction func resetTextField(textField: BaseTextField) {
         if let view = textField.visualisationView {
-            view.currentViewState = .SKAccessoryViewStateActive
+            view.currentViewState = .AccessoryViewStateActive
         }
     }
 

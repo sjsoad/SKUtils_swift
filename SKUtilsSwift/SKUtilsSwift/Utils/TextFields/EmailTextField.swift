@@ -1,5 +1,5 @@
 //
-//  SKPassTextField.swift
+//  SKEmailTextField.swift
 //  SKUtilsSwift
 //
 //  Created by Sergey Kostyan on 18.07.16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SKPassTextField: SKBaseTextField {
+class EmailTextField: BaseTextField {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.secureTextEntry = true
+        self.keyboardType = .EmailAddress
     }
     
 }
