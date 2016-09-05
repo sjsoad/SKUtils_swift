@@ -2,9 +2,14 @@
 
 ToDo:
 
-1. SKDatePickerTextField
-2. Categories
-3. DataSources
-4. Other managers
-5. ImageViewer
-6. GitHub Simple app
+High priority:
+- DataSources
+
+Minor priority:
+- SKDatePickerTextField
+- Categories
+- Other managers
+- ImageViewer
+
+Bonus:
+- GitHub Simple app
