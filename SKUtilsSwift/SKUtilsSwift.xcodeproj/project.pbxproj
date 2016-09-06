@@ -33,6 +33,9 @@
 		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
 		A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */; };
+		A529949F1D7F2B94000F969E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529949E1D7F2B94000F969E /* ConfigurableCell.swift */; };
+		A52994A11D7F2F2C000F969E /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52994A01D7F2F2C000F969E /* TableViewDataSource.swift */; };
+		A52994A31D7F3973000F969E /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52994A21D7F3973000F969E /* TableSectionModel.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
@@ -95,6 +98,9 @@
 		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
+		A529949E1D7F2B94000F969E /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		A52994A01D7F2F2C000F969E /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		A52994A21D7F3973000F969E /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -310,9 +316,20 @@
 			path = TextFieldsManager;
 			sourceTree = "<group>";
 		};
+		A529949D1D7F2B6D000F969E /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A529949E1D7F2B94000F969E /* ConfigurableCell.swift */,
+				A52994A01D7F2F2C000F969E /* TableViewDataSource.swift */,
+				A52994A21D7F3973000F969E /* TableSectionModel.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
 		A53891B61D7AE40B00CEE380 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A529949D1D7F2B6D000F969E /* DataSources */,
 				A526BEE41D7DD8C600C3AA13 /* TextFieldAccessoryView */,
 				A526BEE61D7DD8C600C3AA13 /* TextFields */,
 				A526BEEA1D7DD8C600C3AA13 /* Utils */,
@@ -680,12 +697,15 @@
 				A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */,
 				A526BF031D7DD8C600C3AA13 /* IBDesignableViewExtension.swift in Sources */,
 				04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */,
+				A52994A31D7F3973000F969E /* TableSectionModel.swift in Sources */,
 				A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */,
 				A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */,
+				A529949F1D7F2B94000F969E /* ConfigurableCell.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
+				A52994A11D7F2F2C000F969E /* TableViewDataSource.swift in Sources */,
 				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
 				A521452E1D4FD03800E12CEA /* API.swift in Sources */,
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
