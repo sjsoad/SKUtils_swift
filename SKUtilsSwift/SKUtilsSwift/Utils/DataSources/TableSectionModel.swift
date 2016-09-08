@@ -10,17 +10,15 @@ import UIKit
 
 class TableSectionModel: NSObject {
 
-    var items: Array<AnyObject>?
+    var items: Array<AnyObject> = []
     var header: TableSectionHeader?
     var footer: TableSectionFooter?
 }
 
 class TableSectionHeader: NSObject {
     var headerTitle: String?
-    var headerView: UIView?
 }
 
 class TableSectionFooter: NSObject {
     var footerTitle: String?
-    var footerView: UIView?
 }
