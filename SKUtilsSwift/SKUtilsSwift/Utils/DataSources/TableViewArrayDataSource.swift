@@ -8,12 +8,11 @@
 
 import UIKit
 
-class TableViewArrayDataSource: NSObject, UITableViewDataSource, ArrayDataSource {
+class TableViewArrayDataSource: NSObject , ArrayDataSource {
 
     @IBInspectable var reuseIdentifier: String?
     @IBOutlet var tableView: UITableView!
     var sections : [TableSectionModel] = []
-
     
     //MARK: - Public
     

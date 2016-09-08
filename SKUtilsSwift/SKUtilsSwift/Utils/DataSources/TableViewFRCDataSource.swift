@@ -9,12 +9,11 @@
 import UIKit
 import CoreData
 
-class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
+class TableViewFRCDataSource: NSObject, FRCDataSource {
 
     @IBInspectable var reuseIdentifier: String?
     @IBOutlet var tableView: UITableView!
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
-    
     
     //MARK: - Public
     
