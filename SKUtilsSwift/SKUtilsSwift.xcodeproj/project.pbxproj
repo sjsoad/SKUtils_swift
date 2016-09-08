@@ -39,6 +39,7 @@
 		A55095B91D81D810008EDB02 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55095B81D81D810008EDB02 /* ArrayDataSource.swift */; };
 		A55095BB1D81D925008EDB02 /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55095BA1D81D925008EDB02 /* TableSectionModel.swift */; };
 		A55095BD1D81E115008EDB02 /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55095BC1D81E115008EDB02 /* FRCDataSource.swift */; };
+		A55095BF1D81EB04008EDB02 /* TableViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55095BE1D81EB04008EDB02 /* TableViewFRCDataSource.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
@@ -107,6 +108,7 @@
 		A55095B81D81D810008EDB02 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		A55095BA1D81D925008EDB02 /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
 		A55095BC1D81E115008EDB02 /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
+		A55095BE1D81EB04008EDB02 /* TableViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFRCDataSource.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				A55095B81D81D810008EDB02 /* ArrayDataSource.swift */,
 				A55095BC1D81E115008EDB02 /* FRCDataSource.swift */,
 				A52994A01D7F2F2C000F969E /* TableViewArrayDataSource.swift */,
+				A55095BE1D81EB04008EDB02 /* TableViewFRCDataSource.swift */,
 				A55095BA1D81D925008EDB02 /* TableSectionModel.swift */,
 			);
 			path = DataSources;
@@ -714,6 +717,7 @@
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
+				A55095BF1D81EB04008EDB02 /* TableViewFRCDataSource.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
 				A52994A11D7F2F2C000F969E /* TableViewArrayDataSource.swift in Sources */,
 				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
