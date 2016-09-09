@@ -6,26 +6,53 @@
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
+//TODO: READM ME
+
+/* -------------------------------------------------------------------------------------------------------------------------
+ Add description to NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription in order to use location Service
+ Add this property to yoor class and init it with valid arguments, add delegate and enjoy.
+ 
+ let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
+                              settingAlertConfiguration: SettingAlertConfiguration(title: "Location Service",
+                                                                                 message: "Location service is disabled! Please turn on it in Settings",
+                                                                     settingsButtonTitle: "Go to Settings",
+                                                                       cancelButtonTitle: "Cancel"))
+ 
+---------------------------------------------------------------------------------------------------------------------------- */
+
+
 import UIKit
 import CoreLocation
 
+enum LocationUsage: String {
+    case requestWhenInUseAuthorization
+    case requestAlwaysAuthorization
+}
+
+struct SettingAlertConfiguration {
+    var title : String
+    var message : String
+    var settingsButtonTitle : String
+    var cancelButtonTitle : String
+}
+
 class LocationService: NSObject {
-    
-    var settingsAlertTitle: String?
-    var settingsAlertMessage: String?
-    var alertSettingsButtonTitle: String?
-    var alertCancelButtonTitle: String?
+
     
     var locationManager = CLLocationManager()
     
-    override init() {
-        super.init()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    private var alertConfiguration: SettingAlertConfiguration
+    private var locationUsage: LocationUsage
+    
+    init(withLocationUsage locationUsage: LocationUsage,
+                           settingAlertConfiguration: SettingAlertConfiguration) {
+        self.locationUsage = locationUsage
+        self.alertConfiguration = settingAlertConfiguration
     }
     
     //MARK: - Public methods
     
-    func setupLocationService() {
+    func startLocationService() {
         self.checkLocationServiceState()
     }
     
@@ -34,8 +61,8 @@ class LocationService: NSObject {
     private func checkLocationServiceState() {
         switch CLLocationManager.authorizationStatus() {
         case .NotDetermined:
-            if locationManager.respondsToSelector(#selector(CLLocationManager.requestAlwaysAuthorization)) {
-                locationManager.requestAlwaysAuthorization()
+            if locationManager.respondsToSelector(NSSelectorFromString(locationUsage.rawValue)) {
+                locationManager.performSelector(NSSelectorFromString(locationUsage.rawValue))
             }
             break
         case .Restricted, .Denied, .AuthorizedWhenInUse:
@@ -48,18 +75,19 @@ class LocationService: NSObject {
     }
     
     private func showSettingsAlert() {
-        let alert = UIAlertController.init(title: settingsAlertTitle,
-                                           message: settingsAlertMessage,
+        let alert = UIAlertController.init(title: alertConfiguration.title,
+                                           message: alertConfiguration.message,
                                            preferredStyle: .Alert)
-        let settingsAction = UIAlertAction.init(title: alertSettingsButtonTitle,
+        let settingsAction = UIAlertAction.init(title: alertConfiguration.settingsButtonTitle,
                                                 style: .Default) { (action) in
                                                     self.openSettings()
         }
-        let cancelAction = UIAlertAction.init(title: alertCancelButtonTitle,
+        let cancelAction = UIAlertAction.init(title: alertConfiguration.cancelButtonTitle,
                                               style: .Cancel,
                                               handler: nil)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
+        //TODO: in order to show this alert you need to have viewController
         if let topView = UIApplication.sharedApplication().keyWindow?.rootViewController {
             topView.presentViewController(alert, animated: true, completion: nil)
         }

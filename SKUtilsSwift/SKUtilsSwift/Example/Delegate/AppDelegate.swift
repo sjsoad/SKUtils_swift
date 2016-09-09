@@ -13,14 +13,18 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
+                                 settingAlertConfiguration: SettingAlertConfiguration(title: "Location Service",
+                                                                                    message: "Location service is disabled! Please turn on it in Settings",
+                                                                        settingsButtonTitle: "Go to Settings",
+                                                                          cancelButtonTitle: "Cancel"))
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         DatabaseManager.configureRealm()
         DatabaseManager.mapTestJSONToDatabase()
         
-        return true
+        return true 
     }
 
     func applicationWillResignActive(application: UIApplication) {
