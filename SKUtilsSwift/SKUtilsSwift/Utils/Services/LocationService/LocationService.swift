@@ -12,11 +12,15 @@
  Add description to NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription in order to use location Service
  Add this property to yoor class and init it with valid arguments, add delegate and enjoy.
  
- let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
-                              settingAlertConfiguration: SettingAlertConfiguration(title: "Location Service",
-                                                                                 message: "Location service is disabled! Please turn on it in Settings",
-                                                                     settingsButtonTitle: "Go to Settings",
-                                                                       cancelButtonTitle: "Cancel"))
+ var locationSerice : LocationService = {
+    let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
+                                                     message: "Location service is disabled! Please turn on it in Settings",
+                                         settingsButtonTitle: "Go to Settings",
+                                           cancelButtonTitle: "Cancel")
+    let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
+                                 settingAlertConfiguration: alertConfiguration)
+    return locationSerice
+ }()
  
 ---------------------------------------------------------------------------------------------------------------------------- */
 
@@ -56,6 +60,24 @@ class LocationService: NSObject {
         self.checkLocationServiceState()
     }
     
+    func start(updateLocation updateLocation: Bool, updateHeading: Bool) {
+        if updateLocation {
+            self.locationManager.startUpdatingLocation()
+        }
+        if updateHeading {
+            self.locationManager.stopUpdatingHeading()
+        }
+    }
+    
+    func stop(updateLocation updateLocation: Bool, updateHeading: Bool) {
+        if updateLocation {
+            self.locationManager.stopUpdatingLocation()
+        }
+        if updateHeading {
+            self.locationManager.stopUpdatingHeading()
+        }
+    }
+    
     //MARK: - Private methods
     
     private func checkLocationServiceState() {
@@ -64,6 +86,7 @@ class LocationService: NSObject {
             if locationManager.respondsToSelector(NSSelectorFromString(locationUsage.rawValue)) {
                 locationManager.performSelector(NSSelectorFromString(locationUsage.rawValue))
             }
+            self.start(updateLocation: true, updateHeading: true)
             break
         case .Restricted, .Denied, .AuthorizedWhenInUse:
             self.showSettingsAlert()
