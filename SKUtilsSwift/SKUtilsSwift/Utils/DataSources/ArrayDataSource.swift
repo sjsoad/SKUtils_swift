@@ -10,7 +10,7 @@ import Foundation
 
 protocol ArrayDataSource: AbstractDataSource {
     
-    var sections: [TableSectionModel]  { get }
+    var sections: [SectionModel]  { get }
     
 }
 

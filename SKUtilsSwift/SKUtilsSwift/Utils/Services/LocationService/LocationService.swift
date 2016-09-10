@@ -14,11 +14,11 @@
  
  var locationSerice : LocationService = {
     let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
-                                                     message: "Location service is disabled! Please turn on it in Settings",
-                                         settingsButtonTitle: "Go to Settings",
-                                           cancelButtonTitle: "Cancel")
+                                                       message: "Location service is disabled! Please turn on it in Settings",
+                                                       settingsButtonTitle: "Go to Settings",
+                                                       cancelButtonTitle: "Cancel")
     let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
-                                 settingAlertConfiguration: alertConfiguration)
+                                         settingAlertConfiguration: alertConfiguration)
     return locationSerice
  }()
  

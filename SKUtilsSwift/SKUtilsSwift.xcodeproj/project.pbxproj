@@ -33,18 +33,20 @@
 		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
 		A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */; };
-		A529949F1D7F2B94000F969E /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529949E1D7F2B94000F969E /* ConfigurableCell.swift */; };
-		A55095B71D81D6FF008EDB02 /* AbstractDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55095B61D81D6FF008EDB02 /* AbstractDataSource.swift */; };
-		A555D6521D83D60F00445FD4 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D64C1D83D60F00445FD4 /* ArrayDataSource.swift */; };
-		A555D6531D83D60F00445FD4 /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D64D1D83D60F00445FD4 /* TableSectionModel.swift */; };
-		A555D6541D83D60F00445FD4 /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D64E1D83D60F00445FD4 /* TableViewArrayDataSource.swift */; };
-		A555D6551D83D60F00445FD4 /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D6501D83D60F00445FD4 /* FRCDataSource.swift */; };
-		A555D6561D83D60F00445FD4 /* TableViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D6511D83D60F00445FD4 /* TableViewFRCDataSource.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
 		A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */; };
+		A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */; };
+		A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */; };
+		A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */; };
+		A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF31D84147E00791E03 /* FRCDataSource.swift */; };
+		A5C13BFE1D84147E00791E03 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF41D84147E00791E03 /* SectionModel.swift */; };
+		A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */; };
+		A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */; };
+		A5C13C021D8414A600791E03 /* CollectionViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */; };
+		A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */; };
 		A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */; };
 		F0ED497C8FC03CBAA8F3E77B /* Pods_SKUtilsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */; };
 /* End PBXBuildFile section */
@@ -102,13 +104,6 @@
 		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A529949E1D7F2B94000F969E /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		A55095B61D81D6FF008EDB02 /* AbstractDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDataSource.swift; sourceTree = "<group>"; };
-		A555D64C1D83D60F00445FD4 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
-		A555D64D1D83D60F00445FD4 /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
-		A555D64E1D83D60F00445FD4 /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
-		A555D6501D83D60F00445FD4 /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
-		A555D6511D83D60F00445FD4 /* TableViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFRCDataSource.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +113,15 @@
 		A5ADBF2B1D3802D600EB7212 /* SKUtilsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKUtilsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUtilsSwiftTests.swift; sourceTree = "<group>"; };
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDataSource.swift; sourceTree = "<group>"; };
+		A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		A5C13BF31D84147E00791E03 /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
+		A5C13BF41D84147E00791E03 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
+		A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFRCDataSource.swift; sourceTree = "<group>"; };
+		A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSource.swift; sourceTree = "<group>"; };
+		A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFRCDataSource.swift; sourceTree = "<group>"; };
 		A5E017AF1D5275370021D3D2 /* PopOnEnableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOnEnableButton.swift; sourceTree = "<group>"; };
 		AA6764B4953E89D21DC575F5 /* Pods-SKUtilsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CBD5E5390317C85874638557 /* Pods-SKUtilsSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -324,20 +328,10 @@
 			path = TextFieldsManager;
 			sourceTree = "<group>";
 		};
-		A529949D1D7F2B6D000F969E /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				A555D64A1D83D60F00445FD4 /* TableView */,
-				A529949E1D7F2B94000F969E /* ConfigurableCell.swift */,
-				A55095B61D81D6FF008EDB02 /* AbstractDataSource.swift */,
-			);
-			path = DataSources;
-			sourceTree = "<group>";
-		};
 		A53891B61D7AE40B00CEE380 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A529949D1D7F2B6D000F969E /* DataSources */,
+				A5C13BEC1D84147E00791E03 /* DataSources */,
 				A526BEE41D7DD8C600C3AA13 /* TextFieldAccessoryView */,
 				A526BEE61D7DD8C600C3AA13 /* TextFields */,
 				A526BEEA1D7DD8C600C3AA13 /* Utils */,
@@ -347,34 +341,6 @@
 				A526BEF71D7DD8C600C3AA13 /* Services */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		A555D64A1D83D60F00445FD4 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				A555D64B1D83D60F00445FD4 /* Array */,
-				A555D64F1D83D60F00445FD4 /* FRC */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		A555D64B1D83D60F00445FD4 /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				A555D64C1D83D60F00445FD4 /* ArrayDataSource.swift */,
-				A555D64D1D83D60F00445FD4 /* TableSectionModel.swift */,
-				A555D64E1D83D60F00445FD4 /* TableViewArrayDataSource.swift */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		A555D64F1D83D60F00445FD4 /* FRC */ = {
-			isa = PBXGroup;
-			children = (
-				A555D6501D83D60F00445FD4 /* FRCDataSource.swift */,
-				A555D6511D83D60F00445FD4 /* TableViewFRCDataSource.swift */,
-			);
-			path = FRC;
 			sourceTree = "<group>";
 		};
 		A5ADBF0E1D3802D500EB7212 = {
@@ -414,6 +380,70 @@
 				A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */,
 			);
 			path = SKUtilsSwiftTests;
+			sourceTree = "<group>";
+		};
+		A5C13BEC1D84147E00791E03 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */,
+				A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */,
+				A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */,
+				A5C13BF31D84147E00791E03 /* FRCDataSource.swift */,
+				A5C13BF41D84147E00791E03 /* SectionModel.swift */,
+				A5C13BEF1D84147E00791E03 /* CollectionView */,
+				A5C13BF51D84147E00791E03 /* TableView */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		A5C13BEF1D84147E00791E03 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13BF01D84147E00791E03 /* Array */,
+				A5C13BF11D84147E00791E03 /* FRC */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		A5C13BF01D84147E00791E03 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		A5C13BF11D84147E00791E03 /* FRC */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */,
+			);
+			path = FRC;
+			sourceTree = "<group>";
+		};
+		A5C13BF51D84147E00791E03 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13BF61D84147E00791E03 /* Array */,
+				A5C13BF81D84147E00791E03 /* FRC */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A5C13BF61D84147E00791E03 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		A5C13BF81D84147E00791E03 /* FRC */ = {
+			isa = PBXGroup;
+			children = (
+				A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */,
+			);
+			path = FRC;
 			sourceTree = "<group>";
 		};
 		EDC2369EC59B9D1E81F7D2E7 /* Pods */ = {
@@ -726,28 +756,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */,
-				A555D6551D83D60F00445FD4 /* FRCDataSource.swift in Sources */,
+				A5C13BFE1D84147E00791E03 /* SectionModel.swift in Sources */,
 				A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */,
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
+				A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */,
+				A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */,
 				A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */,
 				A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */,
 				A526BF031D7DD8C600C3AA13 /* IBDesignableViewExtension.swift in Sources */,
 				04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */,
+				A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */,
 				A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */,
 				A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */,
-				A555D6521D83D60F00445FD4 /* ArrayDataSource.swift in Sources */,
-				A529949F1D7F2B94000F969E /* ConfigurableCell.swift in Sources */,
-				A55095B71D81D6FF008EDB02 /* AbstractDataSource.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
-				A555D6531D83D60F00445FD4 /* TableSectionModel.swift in Sources */,
-				A555D6561D83D60F00445FD4 /* TableViewFRCDataSource.swift in Sources */,
+				A5C13C021D8414A600791E03 /* CollectionViewArrayDataSource.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
-				A555D6541D83D60F00445FD4 /* TableViewArrayDataSource.swift in Sources */,
+				A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */,
+				A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
 				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
+				A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */,
 				A521452E1D4FD03800E12CEA /* API.swift in Sources */,
+				A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */,
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
 				0495CCF01D3E15BB00D22867 /* SKLoginVM.swift in Sources */,
 				A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */,

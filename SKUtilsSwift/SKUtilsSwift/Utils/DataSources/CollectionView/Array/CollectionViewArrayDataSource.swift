@@ -1,58 +1,59 @@
 //
-//  TableViewDataSource.swift
+//  CollectionViewArrayDataSource.swift
 //  SKUtilsSwift
 //
-//  Created by Sergey Kostyan on 06.09.16.
+//  Created by Sergey Kostyan on 10.09.16.
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
 import UIKit
 
-class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSource {
+class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, ArrayDataSource {
 
     @IBInspectable var reuseIdentifier: String?
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var collectionView: UICollectionView!
     var sections : [SectionModel] = []
     
     //MARK: - Public
     
     func initWithSections(sections sections: [SectionModel],
-                                   tableView: UITableView,
+                                   collectionView: UICollectionView,
                                    reuseIdentifier: String?) {
         self.sections = sections
         self.reuseIdentifier = reuseIdentifier
-        self.tableView = tableView
+        self.collectionView = collectionView
     }
     
     func reload(withSections sections: [SectionModel]) {
         self.sections = sections
-        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
     func append(withSection section: SectionModel) {
         self.sections.append(section)
-        self.tableView.reloadData()
+        self.collectionView.reloadData()
     }
     
     //MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return numberOfSections()
     }
-    func tableView(tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return numberOfItemsInSection(section)
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier!)
+    func collectionView(collectionView: UICollectionView,
+                        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier!, forIndexPath: indexPath)
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath)
             configurableCell.configureWithModel(itemModel)
         }
-
-        return cell ?? UITableViewCell()
+        
+        return cell ?? UICollectionViewCell()
     }
+    
 }

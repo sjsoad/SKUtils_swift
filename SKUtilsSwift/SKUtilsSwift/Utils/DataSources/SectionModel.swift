@@ -8,17 +8,17 @@
 
 import UIKit
 
-class TableSectionModel: NSObject {
+class SectionModel: NSObject {
 
     var items: Array<AnyObject> = []
-    var header: TableSectionHeader?
-    var footer: TableSectionFooter?
+    var header: SectionHeader?
+    var footer: SectionFooter?
 }
 
-class TableSectionHeader: NSObject {
+class SectionHeader: NSObject {
     var headerTitle: String?
 }
 
-class TableSectionFooter: NSObject {
+class SectionFooter: NSObject {
     var footerTitle: String?
 }

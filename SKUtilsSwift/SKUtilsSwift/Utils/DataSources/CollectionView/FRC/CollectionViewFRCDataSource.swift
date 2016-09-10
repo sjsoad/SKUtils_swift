@@ -1,15 +1,15 @@
 //
-//  TableViewFRCDataSource.swift
+//  CollectionViewFRCDataSource.swift
 //  SKUtilsSwift
 //
-//  Created by Sergey Kostyan on 08.09.16.
+//  Created by Sergey Kostyan on 10.09.16.
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
+class CollectionViewFRCDataSource: NSObject, UICollectionViewDataSource, FRCDataSource {
 
     @IBInspectable var reuseIdentifier: String?
     @IBOutlet var tableView: UITableView!
@@ -18,33 +18,32 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
     //MARK: - Public
     
     func initWithFRC(fetchedResultController fetchedResultController: NSFetchedResultsController,
-                                   tableView: UITableView,
-                                   reuseIdentifier: String?) {
+                                             tableView: UITableView,
+                                             reuseIdentifier: String?) {
         self.fetchedResultController = fetchedResultController
         self.reuseIdentifier = reuseIdentifier
         self.tableView = tableView
     }
-
+    
     //MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return numberOfSections()
     }
-    func tableView(tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         return numberOfItemsInSection(section)
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier!)
+    func collectionView(collectionView: UICollectionView,
+                        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier!, forIndexPath: indexPath)
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath)
             configurableCell.configureWithModel(itemModel)
         }
         
-        return cell ?? UITableViewCell()
+        return cell ?? UICollectionViewCell()
     }
-
 }
