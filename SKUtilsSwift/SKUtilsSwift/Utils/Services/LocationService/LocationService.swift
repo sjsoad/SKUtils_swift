@@ -60,20 +60,20 @@ class LocationService: NSObject {
         self.checkLocationServiceState()
     }
     
-    func start(updateLocation updateLocation: Bool, updateHeading: Bool) {
-        if updateLocation {
+    func start(updatingLocation updatingLocation: Bool, updatingHeading: Bool) {
+        if updatingLocation {
             self.locationManager.startUpdatingLocation()
         }
-        if updateHeading {
+        if updatingHeading {
             self.locationManager.stopUpdatingHeading()
         }
     }
     
-    func stop(updateLocation updateLocation: Bool, updateHeading: Bool) {
-        if updateLocation {
+    func stop(updatingLocation updatingLocation: Bool, updatingHeading: Bool) {
+        if updatingLocation {
             self.locationManager.stopUpdatingLocation()
         }
-        if updateHeading {
+        if updatingHeading {
             self.locationManager.stopUpdatingHeading()
         }
     }
@@ -86,7 +86,7 @@ class LocationService: NSObject {
             if locationManager.respondsToSelector(NSSelectorFromString(locationUsage.rawValue)) {
                 locationManager.performSelector(NSSelectorFromString(locationUsage.rawValue))
             }
-            self.start(updateLocation: true, updateHeading: true)
+            self.start(updatingLocation: true, updatingHeading: true)
             break
         case .Restricted, .Denied, .AuthorizedWhenInUse:
             self.showSettingsAlert()

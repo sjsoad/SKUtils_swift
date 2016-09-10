@@ -30,8 +30,6 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.locationSerice.startLocationService()
         
-        appDelegate.locationSerice.start(updateLocation: true, updateHeading: true)
-        
         self.loginVM.setupWith(emailTextField.rx_controlEvent(.EditingDidEnd),
                                passwordTextFieldDidEndEditing: passTextField.rx_controlEvent(.EditingDidEnd),
                                emailString: emailTextField.rx_text.asObservable(),
