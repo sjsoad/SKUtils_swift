@@ -3,7 +3,7 @@
 ToDo:
 
 High priority:
-- DataSources
+- CollectionView DataSource
 
 Minor priority:
 - SKDatePickerTextField
