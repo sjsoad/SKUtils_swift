@@ -3,10 +3,11 @@
 ToDo:
 
 High priority:
-- CollectionView DataSource
+- SKDatePickerTextField
+- GCM
+- Image Picker
 
 Minor priority:
-- SKDatePickerTextField
 - Categories
 - Other managers
 - ImageViewer
