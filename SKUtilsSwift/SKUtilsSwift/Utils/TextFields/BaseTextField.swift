@@ -9,7 +9,7 @@
 import UIKit
 import Spring
 
-class BaseTextField: SpringTextField {
+class BaseTextField: SpringTextField /*UITextField*/ {
     
     @IBOutlet var visualisationView : TextFieldAccessoryView? = nil
 
