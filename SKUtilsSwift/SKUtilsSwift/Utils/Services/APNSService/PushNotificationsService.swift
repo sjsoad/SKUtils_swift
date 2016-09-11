@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PushNotificationsService: NSObject, APNSService {
+class PushNotificationsService<T: AnyObject where T: APNSService>: NSObject, APNSService {
 
-    var service: APNSService?
+    var service: T?
     
-    init(service: APNSService) {
+    init(service: T) {
         self.service = service
     }
     
