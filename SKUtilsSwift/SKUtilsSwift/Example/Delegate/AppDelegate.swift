@@ -13,7 +13,7 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var locationSerice : LocationService = {
+    var locationSerice: LocationService = {
         let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
                                                          message: "Location service is disabled! Please turn on it in Settings",
                                              settingsButtonTitle: "Go to Settings",
@@ -22,11 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                      settingAlertConfiguration: alertConfiguration)
         return locationSerice
     }()
-
+    var apnsService = PushNotificationsService(service: FCMService())
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         DatabaseManager.configureRealm()
         DatabaseManager.mapTestJSONToDatabase()
+        
+        apnsService.setupService()
+        apnsService.registerForPushNotifications(application)
         
         return true 
     }
@@ -46,10 +50,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        apnsService.connectToService()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        apnsService.disconnectFromService()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 

@@ -42,7 +42,6 @@ struct SettingAlertConfiguration {
 
 class LocationService: NSObject {
 
-    
     var locationManager = CLLocationManager()
     
     private var alertConfiguration: SettingAlertConfiguration

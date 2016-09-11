@@ -19,6 +19,9 @@ pod 'Alamofire'
 
 pod 'SWMessages'
 
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+
   target 'SKUtilsSwiftTests' do
     inherit! :search_paths
     # Pods for testing

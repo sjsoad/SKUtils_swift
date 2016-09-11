@@ -15,6 +15,7 @@
 		04EBCC481D5336E700CDA8F6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBCC471D5336E700CDA8F6 /* DatabaseManager.swift */; };
 		04EBCC4B1D53853F00CDA8F6 /* SWMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
+		A51A373B1D85513000B8840E /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A373A1D85513000B8840E /* APNSService.swift */; };
 		A52145291D4FB54300E12CEA /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145271D4FB54300E12CEA /* RxCocoa.framework */; };
 		A521452A1D4FB54300E12CEA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52145281D4FB54300E12CEA /* RxSwift.framework */; };
 		A521452E1D4FD03800E12CEA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521452D1D4FD03800E12CEA /* API.swift */; };
@@ -33,6 +34,8 @@
 		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
 		A5276CB81D4004750059948C /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */; };
+		A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */; };
+		A57ED7331D85AFCB003AD499 /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED7321D85AFCB003AD499 /* FCMService.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF201D3802D600EB7212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF1E1D3802D600EB7212 /* Main.storyboard */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
@@ -86,6 +89,7 @@
 		04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWMessages.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/SWMessages/SWMessages.framework"; sourceTree = "<group>"; };
 		12B99144D5DA85775421A9A8 /* Pods-SKUtilsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKUtilsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKUtilsSwift/Pods-SKUtilsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51A373A1D85513000B8840E /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
 		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		A521452D1D4FD03800E12CEA /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = "API Manager/API.swift"; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
+		A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
+		A57ED7321D85AFCB003AD499 /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF1F1D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -241,6 +247,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A51A37391D8550FF00B8840E /* APNSService */ = {
+			isa = PBXGroup;
+			children = (
+				A57ED7311D85AFBA003AD499 /* FCM */,
+				A51A373A1D85513000B8840E /* APNSService.swift */,
+				A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */,
+			);
+			path = APNSService;
+			sourceTree = "<group>";
+		};
 		A521452C1D4FD00000E12CEA /* API Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +323,7 @@
 		A526BEF71D7DD8C600C3AA13 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A51A37391D8550FF00B8840E /* APNSService */,
 				A526BEF81D7DD8C600C3AA13 /* LocationService */,
 			);
 			path = Services;
@@ -341,6 +358,14 @@
 				A526BEF71D7DD8C600C3AA13 /* Services */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A57ED7311D85AFBA003AD499 /* FCM */ = {
+			isa = PBXGroup;
+			children = (
+				A57ED7321D85AFCB003AD499 /* FCMService.swift */,
+			);
+			path = FCM;
 			sourceTree = "<group>";
 		};
 		A5ADBF0E1D3802D500EB7212 = {
@@ -464,7 +489,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF341D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwift" */;
 			buildPhases = (
-				D7B1FD1018735D247D3C1FFE /* 📦 Check Pods Manifest.lock */,
+				D7B1FD1018735D247D3C1FFE /* [CP] Check Pods Manifest.lock */,
 				A9354D285CBEE76B6CE8E78F /* [CP] Check Pods Manifest.lock */,
 				A5ADBF131D3802D500EB7212 /* Sources */,
 				A5ADBF141D3802D500EB7212 /* Frameworks */,
@@ -488,7 +513,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5ADBF371D3802D600EB7212 /* Build configuration list for PBXNativeTarget "SKUtilsSwiftTests" */;
 			buildPhases = (
-				F22123BD84E3765A9D8BAAAA /* 📦 Check Pods Manifest.lock */,
+				F22123BD84E3765A9D8BAAAA /* [CP] Check Pods Manifest.lock */,
 				C3433215472A0DC257E62D71 /* [CP] Check Pods Manifest.lock */,
 				A5ADBF271D3802D600EB7212 /* Sources */,
 				A5ADBF281D3802D600EB7212 /* Frameworks */,
@@ -688,14 +713,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D7B1FD1018735D247D3C1FFE /* 📦 Check Pods Manifest.lock */ = {
+		D7B1FD1018735D247D3C1FFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,14 +743,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKUtilsSwiftTests/Pods-SKUtilsSwiftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F22123BD84E3765A9D8BAAAA /* 📦 Check Pods Manifest.lock */ = {
+		F22123BD84E3765A9D8BAAAA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -757,8 +782,10 @@
 			files = (
 				A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */,
 				A5C13BFE1D84147E00791E03 /* SectionModel.swift in Sources */,
+				A57ED7331D85AFCB003AD499 /* FCMService.swift in Sources */,
 				A5E017B01D5275370021D3D2 /* PopOnEnableButton.swift in Sources */,
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
+				A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */,
 				A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */,
@@ -777,6 +804,7 @@
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
 				0495CCEE1D3E146F00D22867 /* SKLoginMV.swift in Sources */,
 				A52145301D4FD16700E12CEA /* APIManager.swift in Sources */,
+				A51A373B1D85513000B8840E /* APNSService.swift in Sources */,
 				A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */,
 				A521452E1D4FD03800E12CEA /* API.swift in Sources */,
 				A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */,
