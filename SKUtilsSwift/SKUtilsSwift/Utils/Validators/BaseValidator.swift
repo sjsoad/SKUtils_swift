@@ -22,5 +22,5 @@ class BaseValidator: NSObject {
         }
         return false
     }
-    
+
 }

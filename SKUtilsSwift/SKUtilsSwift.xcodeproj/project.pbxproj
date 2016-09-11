@@ -281,8 +281,8 @@
 			children = (
 				A526BEED1D7DD8C600C3AA13 /* BaseValidator.swift */,
 				A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */,
-				A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */,
 				A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */,
+				A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";

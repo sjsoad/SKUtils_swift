@@ -25,7 +25,7 @@ enum AccessoryViewState : Int {
     }
 }
 
-typealias drawingClosure = (view: TextFieldAccessoryView) -> Void
+typealias drawingHandler = (view: TextFieldAccessoryView) -> Void
 
 class TextFieldAccessoryView: SpringView {
     
@@ -34,7 +34,7 @@ class TextFieldAccessoryView: SpringView {
     @IBInspectable var defaultStateColor : UIColor = UIColor.lightGrayColor()
     @IBInspectable var activeStateColor  : UIColor = UIColor.darkGrayColor()
     
-    var closure: drawingClosure?
+    var drawing: drawingHandler?
     
     var currentViewState: AccessoryViewState = .AccessoryViewStateDefault {
         didSet {
@@ -53,8 +53,8 @@ class TextFieldAccessoryView: SpringView {
 
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        if let drawingClosure = self.closure {
-            drawingClosure(view: self)
+        if let drawingHandler = self.drawing {
+            drawingHandler(view: self)
         }
         else {
             self.layer.borderColor = self.currentStateColor().CGColor
