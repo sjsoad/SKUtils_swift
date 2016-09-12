@@ -87,10 +87,9 @@ class LocationService: NSObject {
             }
             self.start(updatingLocation: true, updatingHeading: true)
             break
-        case .Restricted, .Denied, .AuthorizedWhenInUse:
+        case .Restricted, .Denied:
             self.showSettingsAlert()
             break
-            
         default:
             print("default")
         }
