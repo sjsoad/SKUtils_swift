@@ -12,7 +12,7 @@ class PassTextField: BaseTextField {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.secureTextEntry = true
+        self.isSecureTextEntry = true
     }
     
 }

@@ -50,7 +50,7 @@ public class SoundPlayer: NSObject {
             AudioServicesPlaySystemSound(soundID)
 
         } else {
-            print("Could not find sound file name `\(soundFile)`")
+            println("Could not find sound file name `\(soundFile)`")
         }
     }
 

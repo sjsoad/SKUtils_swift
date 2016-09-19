@@ -13,7 +13,7 @@ class BaseValidator: NSObject {
     @IBInspectable var maxTextLenght = 256
     @IBInspectable var minTextLenght = 1
     
-    func isTextValid(text: String?) -> Bool {
+    func isTextValid(_ text: String?) -> Bool {
         if let text = text {
             if minTextLenght > maxTextLenght {
                 return text.characters.count >= minTextLenght

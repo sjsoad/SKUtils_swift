@@ -49,7 +49,7 @@ public extension UIView {
 
     public func showLoading() {
 
-        if self.viewWithTag(LoadingViewConstants.Tag) != nil {
+        if let loadingXibView = self.viewWithTag(LoadingViewConstants.Tag) {
             // If loading view is already found in current view hierachy, do nothing
             return
         }
@@ -60,7 +60,7 @@ public extension UIView {
         self.addSubview(loadingXibView)
 
         loadingXibView.alpha = 0
-        SpringAnimation.spring(0.7, animations: {
+        spring(0.7, {
             loadingXibView.alpha = 1
         })
     }
@@ -70,10 +70,10 @@ public extension UIView {
         if let loadingXibView = self.viewWithTag(LoadingViewConstants.Tag) {
             loadingXibView.alpha = 1
 
-            SpringAnimation.springWithCompletion(0.7, animations: {
+            springWithCompletion(0.7, {
                 loadingXibView.alpha = 0
                 loadingXibView.transform = CGAffineTransformMakeScale(3, 3)
-            }, completion: { (completed) -> Void in
+            }, { (completed) -> Void in
                 loadingXibView.removeFromSuperview()
             })
         }

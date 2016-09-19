@@ -12,7 +12,7 @@ class EmailTextField: BaseTextField {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.keyboardType = .EmailAddress
+        self.keyboardType = .emailAddress
     }
     
 }

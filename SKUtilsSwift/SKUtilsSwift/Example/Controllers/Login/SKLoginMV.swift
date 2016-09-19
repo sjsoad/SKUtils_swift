@@ -27,17 +27,17 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.locationSerice.startLocationService()
         
-        self.loginVM.setupWith(emailTextField.rx_controlEvent(.EditingDidEnd),
-                               passwordTextFieldDidEndEditing: passTextField.rx_controlEvent(.EditingDidEnd),
+        self.loginVM.setupWith(emailTextField.rx_controlEvent(.editingDidEnd),
+                               passwordTextFieldDidEndEditing: passTextField.rx_controlEvent(.editingDidEnd),
                                emailString: emailTextField.rx_text.asObservable(),
                                passString: passTextField.rx_text.asObservable(),
                                loginButtonTap: loginButton.rx_tap.asObservable())
         
         self.loginVM.canLogin.subscribeNext { [weak self] canLogin in
-            self?.loginButton.enabled = canLogin
+            self?.loginButton.isEnabled = canLogin
         }.addDisposableTo(disposeBag)
         
         self.loginVM.emailValidation.subscribeNext { [weak self] emailValid in
@@ -58,14 +58,14 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
                     SWMessage.sharedInstance.showNotificationInViewController(self,
                         title: "Error",
                         subtitle: "For some reasons you cannot login. Try later.",
-                        type: .Error,
-                        duration: .Custom(1),
+                        type: .error,
+                        duration: .custom(1),
                         canBeDismissedByUser: false)
                 }
             }).addDisposableTo(disposeBag)
     }
     
-    func proceedTextField(textField: BaseTextField, valid: Bool) -> Void {
+    func proceedTextField(_ textField: BaseTextField, valid: Bool) -> Void {
         if let view = textField.visualisationView {
             view.currentViewState = AccessoryViewState.stateForBool(valid)
             if !valid {
@@ -74,23 +74,23 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    @IBAction func resetTextField(textField: BaseTextField) {
+    @IBAction func resetTextField(_ textField: BaseTextField) {
         if let view = textField.visualisationView {
-            view.currentViewState = .AccessoryViewStateActive
+            view.currentViewState = .accessoryViewStateActive
         }
     }
 
-    @IBAction func loginButtonPressed(sender: AnyObject) {
+    @IBAction func loginButtonPressed(_ sender: AnyObject) {
         self.textFieldsManager.hideKeyboard()
-        self.startActivityAnimating(CGSizeMake(80, 30),
+        self.startActivityAnimating(CGSize(width: 80, height: 30),
                                      message: nil,
-                                     type: .BallClipRotate,
-                                     color: UIColor.whiteColor(),
+                                     type: .ballClipRotate,
+                                     color: UIColor.white,
                                      padding: 0)
     }
     //Animation
     
-    func animateActionOnTextField(view: SpringView) -> Void {
+    func animateActionOnTextField(_ view: SpringView) -> Void {
         view.animation = "shake"
         view.curve = "easeOut"
         view.delay = CGFloat.random(0.0, max: 0.2)

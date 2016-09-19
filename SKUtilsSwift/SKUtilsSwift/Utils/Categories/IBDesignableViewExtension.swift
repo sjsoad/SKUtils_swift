@@ -22,7 +22,7 @@ import UIKit
     
     @IBInspectable var borderColor: UIColor? {
         set {
-            layer.borderColor = newValue?.CGColor
+            layer.borderColor = newValue?.cgColor
         }
         get {
             return layer.borderColor?.UIColor
@@ -40,7 +40,7 @@ import UIKit
 }
 
 extension CGColor {
-    private var UIColor: UIKit.UIColor {
-        return UIKit.UIColor(CGColor: self)
+    fileprivate var UIColor: UIKit.UIColor {
+        return UIKit.UIColor(cgColor: self)
     }
 }

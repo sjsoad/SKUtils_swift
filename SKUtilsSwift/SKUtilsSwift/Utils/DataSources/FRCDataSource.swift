@@ -11,7 +11,7 @@ import CoreData
 
 protocol FRCDataSource: AbstractDataSource {
     
-    var fetchedResultController: NSFetchedResultsController { get }
+    var fetchedResultController: NSFetchedResultsController<AnyObject> { get }
     
 }
 
@@ -24,7 +24,7 @@ extension FRCDataSource {
         return 0
     }
     
-    func numberOfItemsInSection(sectionIndex: Int) -> Int {
+    func numberOfItemsInSection(_ sectionIndex: Int) -> Int {
         if let sections = fetchedResultController.sections {
             let section = sections[sectionIndex]
             if let items = section.objects {
@@ -34,8 +34,8 @@ extension FRCDataSource {
         return 0
     }
     
-    func itemAtIndexPath(indexPath: NSIndexPath) -> AnyObject {
-        return fetchedResultController.objectAtIndexPath(indexPath)
+    func itemAtIndexPath(_ indexPath: IndexPath) -> AnyObject {
+        return fetchedResultController.object(at: indexPath)
     }
     
 }

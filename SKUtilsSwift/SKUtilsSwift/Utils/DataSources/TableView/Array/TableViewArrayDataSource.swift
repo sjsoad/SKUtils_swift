@@ -16,7 +16,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     
     //MARK: - Public
     
-    func initWithSections(sections sections: [SectionModel],
+    func initWithSections(sections: [SectionModel],
                                    tableView: UITableView,
                                    reuseIdentifier: String?) {
         self.sections = sections
@@ -36,17 +36,17 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     
     //MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()
     }
-    func tableView(tableView: UITableView,
+    func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         return numberOfItemsInSection(section)
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier!)
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath)

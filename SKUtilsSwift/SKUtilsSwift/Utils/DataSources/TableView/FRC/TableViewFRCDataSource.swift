@@ -17,7 +17,7 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
     
     //MARK: - Public
     
-    func initWithFRC(fetchedResultController fetchedResultController: NSFetchedResultsController,
+    func initWithFRC(fetchedResultController: NSFetchedResultsController<AnyObject>,
                                    tableView: UITableView,
                                    reuseIdentifier: String?) {
         self.fetchedResultController = fetchedResultController
@@ -27,17 +27,17 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
 
     //MARK: - UITableViewDataSource
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()
     }
-    func tableView(tableView: UITableView,
+    func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         return numberOfItemsInSection(section)
     }
     
-    func tableView(tableView: UITableView,
-                   cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier!)
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath)

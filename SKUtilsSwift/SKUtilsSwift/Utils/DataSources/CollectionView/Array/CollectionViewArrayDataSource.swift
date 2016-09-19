@@ -16,7 +16,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     //MARK: - Public
     
-    func initWithSections(sections sections: [SectionModel],
+    func initWithSections(sections: [SectionModel],
                                    collectionView: UICollectionView,
                                    reuseIdentifier: String?) {
         self.sections = sections
@@ -36,17 +36,17 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     //MARK: - UITableViewDataSource
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return numberOfSections()
     }
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return numberOfItemsInSection(section)
     }
     
-    func collectionView(collectionView: UICollectionView,
-                        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier!, forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier!, for: indexPath)
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath)

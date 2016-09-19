@@ -26,7 +26,7 @@ class SKLoginVM: NSObject {
     var emailValid = false
     var passValid = false
 
-    func setupWith(emailFieldDidEndEditing : ControlEvent<Void>,
+    func setupWith(_ emailFieldDidEndEditing : ControlEvent<Void>,
                    passwordTextFieldDidEndEditing: ControlEvent<Void>,
                    emailString: Observable<String>,
                    passString: Observable<String>,

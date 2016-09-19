@@ -11,7 +11,7 @@ import Foundation
 protocol AbstractDataSource {
     
     func numberOfSections() -> Int
-    func numberOfItemsInSection(sectionIndex: Int) -> Int
-    func itemAtIndexPath(indexPath: NSIndexPath) -> AnyObject
+    func numberOfItemsInSection(_ sectionIndex: Int) -> Int
+    func itemAtIndexPath(_ indexPath: IndexPath) -> AnyObject
     
 }

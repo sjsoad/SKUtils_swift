@@ -12,9 +12,9 @@ import RxCocoa
 import RxSwift
 
 class APIManager: NSObject {
-    class func loginWithParameters(username: String, password: String) -> Observable<Bool> {
-        let credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+    class func loginWithParameters(_ username: String, password: String) -> Observable<Bool> {
+        let credentialData = "\(username):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString(options: [])
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         return Observable.create({ observer in

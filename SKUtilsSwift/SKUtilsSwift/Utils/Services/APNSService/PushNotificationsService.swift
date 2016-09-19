@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PushNotificationsService<T: AnyObject where T: APNSService>: NSObject, APNSService {
+class PushNotificationsService<T: AnyObject>: NSObject, APNSService where T: APNSService {
 
     var service: T?
     
@@ -22,15 +22,15 @@ class PushNotificationsService<T: AnyObject where T: APNSService>: NSObject, APN
         }
     }
     
-    func registerForPushNotifications(application: UIApplication) {
+    func registerForPushNotifications(_ application: UIApplication) {
         if #available(iOS 8.0, *) {
-            let settings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound],
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound],
                                                                                   categories: nil)
             application.registerUserNotificationSettings(settings)
             application.registerForRemoteNotifications()
         } else {
-            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
-            application.registerForRemoteNotificationTypes(types)
+            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
+            application.registerForRemoteNotifications(matching: types)
         }
     }
     

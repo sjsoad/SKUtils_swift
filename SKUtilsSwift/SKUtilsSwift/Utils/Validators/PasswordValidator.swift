@@ -13,12 +13,12 @@ class PasswordValidator: BaseValidator {
     @IBInspectable var passwordRegularExpresionString = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$"
     @IBInspectable var passwordPredicateString        = "SELF MATCHES %@"
     
-    override func isTextValid(text: String?) -> Bool {
+    override func isTextValid(_ text: String?) -> Bool {
         if let text = text {
             var isTextValid = super.isTextValid(text)
             if isTextValid {
                 let passwordValidationPredicate = NSPredicate(format: passwordPredicateString, passwordRegularExpresionString)
-                isTextValid = passwordValidationPredicate.evaluateWithObject(text)
+                isTextValid = passwordValidationPredicate.evaluate(with: text)
             }
             return isTextValid
         }

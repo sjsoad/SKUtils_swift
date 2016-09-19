@@ -64,7 +64,7 @@ class GitHubUser: Object, Mappable {
         self.init()
     }
     
-    func mapping(map: Map) {
+    func mapping(_ map: Map) {
 
     }
 }

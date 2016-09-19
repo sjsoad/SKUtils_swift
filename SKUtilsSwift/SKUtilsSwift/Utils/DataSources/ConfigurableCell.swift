@@ -12,12 +12,12 @@ import UIKit
 protocol ConfigurableCell {
     
     static var reuseIdentifier: String { get }
-    func configureWithModel<T: AnyObject>(model: T)
+    func configureWithModel<T: AnyObject>(_ model: T)
 }
 
 extension ConfigurableCell where Self: UIView {
     
     static var reuseIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }

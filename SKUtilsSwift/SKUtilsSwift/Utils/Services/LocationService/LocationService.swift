@@ -44,8 +44,8 @@ class LocationService: NSObject {
 
     var locationManager = CLLocationManager()
     
-    private var alertConfiguration: SettingAlertConfiguration
-    private var locationUsage: LocationUsage
+    fileprivate var alertConfiguration: SettingAlertConfiguration
+    fileprivate var locationUsage: LocationUsage
     
     init(withLocationUsage locationUsage: LocationUsage,
                            settingAlertConfiguration: SettingAlertConfiguration) {
@@ -59,7 +59,7 @@ class LocationService: NSObject {
         self.checkLocationServiceState()
     }
     
-    func start(updatingLocation updatingLocation: Bool, updatingHeading: Bool) {
+    func start(updatingLocation: Bool, updatingHeading: Bool) {
         if updatingLocation {
             self.locationManager.startUpdatingLocation()
         }
@@ -68,7 +68,7 @@ class LocationService: NSObject {
         }
     }
     
-    func stop(updatingLocation updatingLocation: Bool, updatingHeading: Bool) {
+    func stop(updatingLocation: Bool, updatingHeading: Bool) {
         if updatingLocation {
             self.locationManager.stopUpdatingLocation()
         }
@@ -79,15 +79,15 @@ class LocationService: NSObject {
     
     //MARK: - Private methods
     
-    private func checkLocationServiceState() {
+    fileprivate func checkLocationServiceState() {
         switch CLLocationManager.authorizationStatus() {
-        case .NotDetermined:
-            if locationManager.respondsToSelector(NSSelectorFromString(locationUsage.rawValue)) {
-                locationManager.performSelector(NSSelectorFromString(locationUsage.rawValue))
+        case .notDetermined:
+            if locationManager.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
+                locationManager.perform(NSSelectorFromString(locationUsage.rawValue))
             }
             self.start(updatingLocation: true, updatingHeading: true)
             break
-        case .Restricted, .Denied:
+        case .restricted, .denied:
             self.showSettingsAlert()
             break
         default:
@@ -95,29 +95,29 @@ class LocationService: NSObject {
         }
     }
     
-    private func showSettingsAlert() {
+    fileprivate func showSettingsAlert() {
         let alert = UIAlertController.init(title: alertConfiguration.title,
                                            message: alertConfiguration.message,
-                                           preferredStyle: .Alert)
+                                           preferredStyle: .alert)
         let settingsAction = UIAlertAction.init(title: alertConfiguration.settingsButtonTitle,
-                                                style: .Default) { (action) in
+                                                style: .default) { (action) in
                                                     self.openSettings()
         }
         let cancelAction = UIAlertAction.init(title: alertConfiguration.cancelButtonTitle,
-                                              style: .Cancel,
+                                              style: .cancel,
                                               handler: nil)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
         //TODO: in order to show this alert you need to have viewController
-        if let topView = UIApplication.sharedApplication().keyWindow?.rootViewController {
-            topView.presentViewController(alert, animated: true, completion: nil)
+        if let topView = UIApplication.shared.keyWindow?.rootViewController {
+            topView.present(alert, animated: true, completion: nil)
         }
     }
     
-    private func openSettings() {
-        let settingsURL = NSURL.init(string: UIApplicationOpenSettingsURLString)
-        if UIApplication.sharedApplication().canOpenURL(settingsURL!) {
-            UIApplication.sharedApplication().openURL(settingsURL!)
+    fileprivate func openSettings() {
+        let settingsURL = URL.init(string: UIApplicationOpenSettingsURLString)
+        if UIApplication.shared.canOpenURL(settingsURL!) {
+            UIApplication.shared.openURL(settingsURL!)
         }
     }
 }

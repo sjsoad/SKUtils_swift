@@ -11,7 +11,7 @@ import Spring
 
 class PopOnEnableButton: SpringButton {
 
-    override var enabled: Bool {
+    override var isEnabled: Bool {
         didSet {
             self.animateButton()
         }

@@ -35,14 +35,14 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     //MARK: - Getting UITextFields
     
-    func getTextFieldsInView(view: UIView?) -> Void {
+    func getTextFieldsInView(_ view: UIView?) -> Void {
         if let parent = view {
             for subView in parent.subviews {
-                if subView.isKindOfClass(UITextField) {
+                if subView.isKind(of: UITextField.self) {
                     let textField = subView as! UITextField
                     textField.addTarget(self,
                                         action: #selector(TextFieldsManager.textFieldReturnButtonPressed),
-                                        forControlEvents: UIControlEvents.EditingDidEndOnExit)
+                                        for: UIControlEvents.editingDidEndOnExit)
                     self.textFields.append(textField)
                 }
                 else {
@@ -67,42 +67,42 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     //MARK: - Subscribe for keyboard notifications
     
     func subscribeForKeyboardNotifications() -> Void {
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                                          selector: #selector(TextFieldsManager.keyboardWillShow),
-                                                         name: UIKeyboardWillShowNotification,
+                                                         name: NSNotification.Name.UIKeyboardWillShow,
                                                          object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self,
+        NotificationCenter.default.addObserver(self,
                                                          selector: #selector(TextFieldsManager.keyboardWillHide),
-                                                         name: UIKeyboardWillHideNotification,
+                                                         name: NSNotification.Name.UIKeyboardWillHide,
                                                          object: nil)
     }
     
     //MARK: - Handle keyboard notifications
     
-    func keyboardWillShow(notification: NSNotification) -> Void {
-        if let rect = notification.userInfo![UIKeyboardFrameEndUserInfoKey]?.CGRectValue() {
-            UIView.animateWithDuration(kAnimationDuration) {
+    func keyboardWillShow(_ notification: Notification) -> Void {
+        if let rect = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue {
+            UIView.animate(withDuration: kAnimationDuration, animations: {
                 if let scroll = self.scroll {
                     scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
                     self.scrollToActiveTextField(rect.size.height)
                 }
-            }
+            }) 
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) -> Void {
-        UIView.animateWithDuration(kAnimationDuration) { 
+    func keyboardWillHide(_ notification: Notification) -> Void {
+        UIView.animate(withDuration: kAnimationDuration, animations: { 
             if let scroll = self.scroll {
-                scroll.contentInset = UIEdgeInsetsZero
+                scroll.contentInset = UIEdgeInsets.zero
             }
-        }
+        }) 
     }
     
     //MARK: - Other functions
     
-    func textFieldReturnButtonPressed(textField: UITextField) -> Void {
+    func textFieldReturnButtonPressed(_ textField: UITextField) -> Void {
         self.sortTextFieldsByY()
-        if let index = self.textFields.indexOf({$0 === textField}) {
+        if let index = self.textFields.index(where: {$0 === textField}) {
             let newIndex = index + 1
             if newIndex < self.textFields.count {
                 let nextTextField = self.textFields[index + 1]
@@ -120,11 +120,11 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    func scrollToActiveTextField(keyboardHeight: CGFloat) -> Void {
+    func scrollToActiveTextField(_ keyboardHeight: CGFloat) -> Void {
         if let activeTextField = self.firstResponder() {
             if let scrollView = self.scroll {
-                let frame = scrollView.convertRect(activeTextField.bounds,
-                                                   fromView: activeTextField)
+                let frame = scrollView.convert(activeTextField.bounds,
+                                                   from: activeTextField)
                 scrollView.scrollRectToVisible(frame, animated: true)
             }
         }
@@ -135,18 +135,18 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     func firstResponder() -> UITextField? {
         self.sortTextFieldsByY()
         for textField in self.textFields {
-            if textField.isFirstResponder() {
+            if textField.isFirstResponder {
                 return textField as? UITextField
             }
         }
         return nil
     }
     
-    private func sortTextFieldsByY() -> Void {
-        let window = UIApplication.sharedApplication().keyWindow
-        let sortedArray = self.textFields.sort { (currentObject, nextObject) -> Bool in
-            let currentObjectRect = currentObject.convertRect(currentObject.frame, toView: window)
-            let nextObjectRect = nextObject.convertRect(nextObject.frame, toView: window)
+    fileprivate func sortTextFieldsByY() -> Void {
+        let window = UIApplication.shared.keyWindow
+        let sortedArray = self.textFields.sorted { (currentObject, nextObject) -> Bool in
+            let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
+            let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
             return currentObjectRect.origin.y < nextObjectRect.origin.y
         }
         self.textFields = sortedArray

@@ -34,7 +34,7 @@ import UIKit
     
     @IBInspectable public var sidePadding: CGFloat = 0 {
         didSet {
-            let padding = UIView(frame: CGRectMake(0, 0, sidePadding, sidePadding))
+            var padding = UIView(frame: CGRectMake(0, 0, sidePadding, sidePadding))
             
             leftViewMode = UITextFieldViewMode.Always
             leftView = padding
@@ -46,7 +46,7 @@ import UIKit
     
     @IBInspectable public var leftPadding: CGFloat = 0 {
         didSet {
-            let padding = UIView(frame: CGRectMake(0, 0, leftPadding, 0))
+            var padding = UIView(frame: CGRectMake(0, 0, leftPadding, 0))
             
             leftViewMode = UITextFieldViewMode.Always
             leftView = padding
@@ -55,7 +55,7 @@ import UIKit
     
     @IBInspectable public var rightPadding: CGFloat = 0 {
         didSet {
-            let padding = UIView(frame: CGRectMake(0, 0, rightPadding, 0))
+            var padding = UIView(frame: CGRectMake(0, 0, 0, rightPadding))
             
             rightViewMode = UITextFieldViewMode.Always
             rightView = padding
@@ -82,13 +82,13 @@ import UIKit
    
     @IBInspectable public var lineHeight: CGFloat = 1.5 {
         didSet {
-            let font = UIFont(name: self.font!.fontName, size: self.font!.pointSize)
-            let text = self.text
+            var font = UIFont(name: self.font.fontName, size: self.font.pointSize)
+            var text = self.text
             
-            let paragraphStyle = NSMutableParagraphStyle()
+            var paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = lineHeight
             
-            let attributedString = NSMutableAttributedString(string: text!)
+            var attributedString = NSMutableAttributedString(string: text!)
             attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
             attributedString.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attributedString.length))
             

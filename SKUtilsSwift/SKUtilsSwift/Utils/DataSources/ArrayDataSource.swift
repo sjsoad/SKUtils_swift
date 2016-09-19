@@ -20,16 +20,16 @@ extension ArrayDataSource {
         return sections.count
     }
     
-    func numberOfItemsInSection(sectionIndex: Int) -> Int {
+    func numberOfItemsInSection(_ sectionIndex: Int) -> Int {
         let section = sections[sectionIndex]
         let items = section.items
         return items.count
     }
     
-    func itemAtIndexPath(indexPath: NSIndexPath) -> AnyObject {
-        let section = sections[indexPath.section]
+    func itemAtIndexPath(_ indexPath: IndexPath) -> AnyObject {
+        let section = sections[(indexPath as NSIndexPath).section]
         let items = section.items
-        return items[indexPath.row]
+        return items[(indexPath as NSIndexPath).row]
     }
     
 }

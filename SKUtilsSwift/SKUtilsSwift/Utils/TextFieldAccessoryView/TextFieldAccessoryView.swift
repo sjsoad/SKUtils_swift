@@ -10,33 +10,33 @@ import UIKit
 import Spring
 
 enum AccessoryViewState : Int {
-    case AccessoryViewStateError
-    case AccessoryViewStateSuccess
-    case AccessoryViewStateDefault
-    case AccessoryViewStateActive
+    case accessoryViewStateError
+    case accessoryViewStateSuccess
+    case accessoryViewStateDefault
+    case accessoryViewStateActive
     
-    static func stateForBool(valid: Bool) -> AccessoryViewState {
+    static func stateForBool(_ valid: Bool) -> AccessoryViewState {
         if valid {
-            return .AccessoryViewStateSuccess
+            return .accessoryViewStateSuccess
         }
         else {
-            return .AccessoryViewStateError
+            return .accessoryViewStateError
         }
     }
 }
 
-typealias drawingHandler = (view: TextFieldAccessoryView) -> Void
+typealias drawingHandler = (_ view: TextFieldAccessoryView) -> Void
 
 class TextFieldAccessoryView: SpringView {
     
-    @IBInspectable var errorStateColor   : UIColor = UIColor.redColor()
-    @IBInspectable var successStateColor : UIColor = UIColor.greenColor()
-    @IBInspectable var defaultStateColor : UIColor = UIColor.lightGrayColor()
-    @IBInspectable var activeStateColor  : UIColor = UIColor.darkGrayColor()
+    @IBInspectable var errorStateColor   : UIColor = UIColor.red
+    @IBInspectable var successStateColor : UIColor = UIColor.green
+    @IBInspectable var defaultStateColor : UIColor = UIColor.lightGray
+    @IBInspectable var activeStateColor  : UIColor = UIColor.darkGray
     
     var drawing: drawingHandler?
     
-    var currentViewState: AccessoryViewState = .AccessoryViewStateDefault {
+    var currentViewState: AccessoryViewState = .accessoryViewStateDefault {
         didSet {
             self.setNeedsDisplay()
         }
@@ -44,20 +44,20 @@ class TextFieldAccessoryView: SpringView {
     
     func currentStateColor() -> UIColor {
         switch self.currentViewState {
-        case .AccessoryViewStateError   : return self.errorStateColor
-        case .AccessoryViewStateSuccess : return self.successStateColor
-        case .AccessoryViewStateDefault : return self.defaultStateColor
-        case .AccessoryViewStateActive  : return self.activeStateColor
+        case .accessoryViewStateError   : return self.errorStateColor
+        case .accessoryViewStateSuccess : return self.successStateColor
+        case .accessoryViewStateDefault : return self.defaultStateColor
+        case .accessoryViewStateActive  : return self.activeStateColor
         }
     }
 
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         if let drawingHandler = self.drawing {
-            drawingHandler(view: self)
+            drawingHandler(self)
         }
         else {
-            self.layer.borderColor = self.currentStateColor().CGColor
+            self.layer.borderColor = self.currentStateColor().cgColor
         }
     }
 }

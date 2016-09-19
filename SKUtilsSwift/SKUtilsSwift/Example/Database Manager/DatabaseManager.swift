@@ -14,11 +14,11 @@ class DatabaseManager: NSObject {
     //MARK: - test data
     
     class func mapTestJSONToDatabase() {
-        if let filePath = NSBundle.mainBundle().pathForResource("testJSON", ofType: "txt") {
+        if let filePath = Bundle.main.path(forResource: "testJSON", ofType: "txt") {
             let json = try! String(contentsOfFile: filePath)
-            if let data = json.dataUsingEncoding(NSUTF8StringEncoding) {
+            if let data = json.data(using: String.Encoding.utf8) {
                 do {
-                    let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+                    let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject]
                     print(dictionary)
                 } catch let error as NSError {
                     print(error)
@@ -44,7 +44,7 @@ class DatabaseManager: NSObject {
         }
     }
     
-    class func addObjectFromJSON<T: RealmSwift.Object>(fromJSON: AnyObject?, type: T.Type) {
+    class func addObjectFromJSON<T: RealmSwift.Object>(_ fromJSON: AnyObject?, type: T.Type) {
         let realm = try! Realm()
         if let json = fromJSON {
             try! realm.write {
