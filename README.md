@@ -4,13 +4,14 @@ ToDo:
 
 High priority:
 - SKDatePickerTextField
-- GCM
+- Location Service alert fix
 - Image Picker
 
 Minor priority:
 - Categories
 - Other managers
 - ImageViewer
+- Premissions
 
 Bonus:
 - GitHub Simple app
