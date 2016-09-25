@@ -106,7 +106,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             let newIndex = index + 1
             if newIndex < self.textFields.count {
                 let nextTextField = self.textFields[index + 1]
-                nextTextField.becomeFirstResponder()
+                _ = nextTextField.becomeFirstResponder()
             }
             else {
                 self.hideKeyboard()
@@ -116,7 +116,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     func hideKeyboard() -> Void {
         self.textFields.forEach { textField in
-            textField.resignFirstResponder()
+            _ = textField.resignFirstResponder()
         }
     }
     
@@ -135,7 +135,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     func firstResponder() -> UITextField? {
         self.sortTextFieldsByY()
         for textField in self.textFields {
-            if textField.isFirstResponder {
+            if textField.isFirstResponder ?? true {
                 return textField as? UITextField
             }
         }

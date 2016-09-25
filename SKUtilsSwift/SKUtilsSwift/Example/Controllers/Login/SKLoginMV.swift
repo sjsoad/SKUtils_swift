@@ -27,8 +27,8 @@ class SKLoginMV: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.locationSerice.startLocationService()
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.locationSerice.startLocationService()
         
         self.loginVM.setupWith(emailTextField.rx_controlEvent(.editingDidEnd),
                                passwordTextFieldDidEndEditing: passTextField.rx_controlEvent(.editingDidEnd),

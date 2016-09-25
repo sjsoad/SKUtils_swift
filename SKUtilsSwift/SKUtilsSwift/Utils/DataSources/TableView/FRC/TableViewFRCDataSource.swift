@@ -13,11 +13,11 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
 
     @IBInspectable var reuseIdentifier: String?
     @IBOutlet var tableView: UITableView!
-    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSManagedObject>()
     
     //MARK: - Public
     
-    func initWithFRC(fetchedResultController: NSFetchedResultsController<AnyObject>,
+    func initWithFRC(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
                                    tableView: UITableView,
                                    reuseIdentifier: String?) {
         self.fetchedResultController = fetchedResultController

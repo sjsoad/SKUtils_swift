@@ -7,27 +7,26 @@
 //
 
 import UIKit
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var locationSerice: LocationService = {
-        let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
-                                                         message: "Location service is disabled! Please turn on it in Settings",
-                                             settingsButtonTitle: "Go to Settings",
-                                               cancelButtonTitle: "Cancel")
-        let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
-                                     settingAlertConfiguration: alertConfiguration)
+//        let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
+//                                                         message: "Location service is disabled! Please turn on it in Settings",
+//                                             settingsButtonTitle: "Go to Settings",
+//                                               cancelButtonTitle: "Cancel")
+        let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization/*,
+                                     settingAlertConfiguration: alertConfiguration*/)
         return locationSerice
     }()
 //    var apnsService = PushNotificationsService(service: FCMService())
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        DatabaseManager.configureRealm()
-        DatabaseManager.mapTestJSONToDatabase()
+//        DatabaseManager.configureRealm()
+//        DatabaseManager.mapTestJSONToDatabase()
         
 //        apnsService.setupService()
 //        apnsService.registerForPushNotifications(application)

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Spring
 
 enum AccessoryViewState : Int {
     case accessoryViewStateError
@@ -27,7 +26,7 @@ enum AccessoryViewState : Int {
 
 typealias drawingHandler = (_ view: TextFieldAccessoryView) -> Void
 
-class TextFieldAccessoryView: SpringView {
+class TextFieldAccessoryView: UIView {
     
     @IBInspectable var errorStateColor   : UIColor = UIColor.red
     @IBInspectable var successStateColor : UIColor = UIColor.green

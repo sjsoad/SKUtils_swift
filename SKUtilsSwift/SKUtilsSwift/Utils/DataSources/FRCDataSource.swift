@@ -11,7 +11,7 @@ import CoreData
 
 protocol FRCDataSource: AbstractDataSource {
     
-    var fetchedResultController: NSFetchedResultsController<AnyObject> { get }
+    var fetchedResultController: NSFetchedResultsController<NSManagedObject> { get }
     
 }
 
