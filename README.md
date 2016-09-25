@@ -4,7 +4,6 @@ ToDo:
 
 High priority:
 - SKDatePickerTextField
-- Location Service alert fix
 - Image Picker
 
 Minor priority:
