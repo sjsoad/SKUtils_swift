@@ -24,7 +24,6 @@
 		A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF31D7DD8C600C3AA13 /* RandomNumberExtension.swift */; };
 		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
-		A560CA3A1D97BD5600B6B304 /* BaseServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA391D97BD5600B6B304 /* BaseServicePermissions.swift */; };
 		A560CA3C1D97BE2C00B6B304 /* LocationServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA3B1D97BE2C00B6B304 /* LocationServicePermissions.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
 		A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */; };
@@ -32,7 +31,6 @@
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
-		A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */; };
 		A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */; };
 		A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */; };
 		A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */; };
@@ -91,7 +89,6 @@
 		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A560CA391D97BD5600B6B304 /* BaseServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseServicePermissions.swift; sourceTree = "<group>"; };
 		A560CA3B1D97BE2C00B6B304 /* LocationServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServicePermissions.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
 		A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		A5ADBF241D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5ADBF261D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		A5ADBF2B1D3802D600EB7212 /* SKUtilsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKUtilsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUtilsSwiftTests.swift; sourceTree = "<group>"; };
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDataSource.swift; sourceTree = "<group>"; };
 		A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
@@ -324,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				A5ADBF311D3802D600EB7212 /* Info.plist */,
-				A5ADBF2F1D3802D600EB7212 /* SKUtilsSwiftTests.swift */,
 				A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */,
 			);
 			path = SKUtilsSwiftTests;
@@ -399,7 +394,6 @@
 			children = (
 				A5FFC5911D97A77E00090D06 /* LocationPermissions */,
 				A5FFC5921D97A7A200090D06 /* ServicePermissions.swift */,
-				A560CA391D97BD5600B6B304 /* BaseServicePermissions.swift */,
 			);
 			path = PermissionsService;
 			sourceTree = "<group>";
@@ -653,7 +647,6 @@
 				A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */,
 				A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
-				A560CA3A1D97BD5600B6B304 /* BaseServicePermissions.swift in Sources */,
 				A560CA3C1D97BE2C00B6B304 /* LocationServicePermissions.swift in Sources */,
 				A51A373B1D85513000B8840E /* APNSService.swift in Sources */,
 				A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */,
@@ -669,7 +662,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */,
-				A5ADBF301D3802D600EB7212 /* SKUtilsSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,7 +790,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;
@@ -822,7 +814,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/RxCocoa",
 				);
 				INFOPLIST_FILE = SKUtilsSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;

@@ -37,28 +37,27 @@ class LocationService: NSObject {
 
     var locationManager = CLLocationManager()
     
-//    fileprivate var alertConfiguration: SettingAlertConfiguration
     fileprivate var locationUsage: LocationUsage
+    fileprivate var locationServicePermissions: LocationServicePermissions
     
-    init(withLocationUsage locationUsage: LocationUsage/*,
-                           settingAlertConfiguration: SettingAlertConfiguration*/) {
+    init(withLocationUsage locationUsage: LocationUsage,
+         locationServicePermissions: LocationServicePermissions) {
         self.locationUsage = locationUsage
-//        self.alertConfiguration = settingAlertConfiguration
+        self.locationServicePermissions = locationServicePermissions;
     }
     
     //MARK: - Public methods
     
-//    func startLocationService() {
-//        self.checkLocationServiceState()
-//    }
-    
     func start(updatingLocation: Bool, updatingHeading: Bool) {
-        if updatingLocation {
-            self.locationManager.startUpdatingLocation()
+        switch self.locationServicePermissions.isServiceAvailable() {
+        case .permissionsNotAsked:
+            self.askPermissions()
+            break
+        default:
+            break
         }
-        if updatingHeading {
-            self.locationManager.stopUpdatingHeading()
-        }
+        self._start(updatingLocation: updatingLocation,
+                    updatingHeading: updatingHeading)
     }
     
     func stop(updatingLocation: Bool, updatingHeading: Bool) {
@@ -72,45 +71,18 @@ class LocationService: NSObject {
     
     //MARK: - Private methods
     
-//    fileprivate func checkLocationServiceState() {
-//        switch CLLocationManager.authorizationStatus() {
-//        case .notDetermined:
-//            if locationManager.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
-//                locationManager.perform(NSSelectorFromString(locationUsage.rawValue))
-//            }
-//            self.start(updatingLocation: true, updatingHeading: true)
-//            break
-//        case .restricted, .denied:
-//            self.showSettingsAlert()
-//            break
-//        default:
-//            print("default")
-//        }
-//    }
-//    
-//    fileprivate func showSettingsAlert() {
-//        let alert = UIAlertController.init(title: alertConfiguration.title,
-//                                           message: alertConfiguration.message,
-//                                           preferredStyle: .alert)
-//        let settingsAction = UIAlertAction.init(title: alertConfiguration.settingsButtonTitle,
-//                                                style: .default) { (action) in
-//                                                    self.openSettings()
-//        }
-//        let cancelAction = UIAlertAction.init(title: alertConfiguration.cancelButtonTitle,
-//                                              style: .cancel,
-//                                              handler: nil)
-//        alert.addAction(settingsAction)
-//        alert.addAction(cancelAction)
-//        //TODO: in order to show this alert you need to have viewController
-//        if let topView = UIApplication.shared.keyWindow?.rootViewController {
-//            topView.present(alert, animated: true, completion: nil)
-//        }
-//    }
-//    
-//    fileprivate func openSettings() {
-//        let settingsURL = URL.init(string: UIApplicationOpenSettingsURLString)
-//        if UIApplication.shared.canOpenURL(settingsURL!) {
-//            UIApplication.shared.openURL(settingsURL!)
-//        }
-//    }
+    fileprivate func _start(updatingLocation: Bool, updatingHeading: Bool) {
+        if updatingLocation {
+            self.locationManager.startUpdatingLocation()
+        }
+        if updatingHeading {
+            self.locationManager.stopUpdatingHeading()
+        }
+    }
+    
+    fileprivate func askPermissions() {
+        if locationManager.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
+            locationManager.perform(NSSelectorFromString(locationUsage.rawValue))
+        }
+    }
 }

@@ -7,24 +7,29 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
     var locationSerice: LocationService = {
-//        let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
-//                                                         message: "Location service is disabled! Please turn on it in Settings",
-//                                             settingsButtonTitle: "Go to Settings",
-//                                               cancelButtonTitle: "Cancel")
-        let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization/*,
-                                     settingAlertConfiguration: alertConfiguration*/)
+        let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
+                                                         message: "Location service is disabled! Please turn on it in Settings",
+                                             settingsButtonTitle: "Go to Settings",
+                                               cancelButtonTitle: "Cancel")
+        let locationServicePermissions = LocationServicePermissions(settingAlertConfiguration: alertConfiguration)
+        let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
+                                     locationServicePermissions: locationServicePermissions)
         return locationSerice
     }()
 //    var apnsService = PushNotificationsService(service: FCMService())
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.locationSerice.start(updatingLocation: true, updatingHeading: true)
+        self.locationSerice.locationManager.delegate = self;
 //        DatabaseManager.configureRealm()
 //        DatabaseManager.mapTestJSONToDatabase()
         
@@ -58,6 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("update location")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("update heading")
+    }
 
 }
 

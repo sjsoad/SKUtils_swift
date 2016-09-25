@@ -7,7 +7,25 @@
 //
 
 import UIKit
+import CoreLocation
 
-class LocationServicePermissions: BaseServicePermissions {
+class LocationServicePermissions: NSObject, ServicePermissions {
+ 
+    var alertConfiguration: SettingAlertConfiguration
     
+    init(settingAlertConfiguration: SettingAlertConfiguration) {
+        self.alertConfiguration = settingAlertConfiguration
+    }
+    
+    func isServiceAvailable() -> PermissionsState {
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse:
+            return .permissionsGranted
+        case .notDetermined:
+            return .permissionsNotAsked
+        case .restricted, .denied:
+            self.showSettingsAlert()
+            return .permissionsDenied
+        }
+    }
 }
