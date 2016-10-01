@@ -38,18 +38,18 @@ class LocationService: NSObject {
     var locationManager = CLLocationManager()
     
     fileprivate var locationUsage: LocationUsage
-    fileprivate var locationServicePermissions: LocationServicePermissions
+    fileprivate var locationPermissions: LocationPermissions
     
     init(withLocationUsage locationUsage: LocationUsage,
-         locationServicePermissions: LocationServicePermissions) {
+         locationPermissions: LocationPermissions) {
         self.locationUsage = locationUsage
-        self.locationServicePermissions = locationServicePermissions;
+        self.locationPermissions = locationPermissions;
     }
     
     //MARK: - Public methods
     
     func start(updatingLocation: Bool, updatingHeading: Bool) {
-        switch self.locationServicePermissions.isServiceAvailable() {
+        switch self.locationPermissions.permissionsState() {
         case .permissionsNotAsked:
             self.askPermissions()
             break

@@ -9,12 +9,6 @@
 import Foundation
 import UIKit
 
-enum PermissionsState: NSInteger {
-    case permissionsNotAsked
-    case permissionsGranted
-    case permissionsDenied
-}
-
 struct SettingAlertConfiguration {
     var title : String
     var message : String
@@ -25,10 +19,9 @@ struct SettingAlertConfiguration {
 protocol ServicePermissions {
     
     var alertConfiguration: SettingAlertConfiguration { get }
-    func isServiceAvailable() -> PermissionsState
+    func permissionsState() -> PermissionsState
     func showSettingsAlert()
     func openSettings()
-    
 }
 
 extension ServicePermissions {
@@ -46,7 +39,7 @@ extension ServicePermissions {
                                               handler: nil)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        //TODO: in order to show this alert you need to have viewController
+        //in order to show this alert you need to have viewController
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.windowLevel = UIWindowLevelAlert + 1;
         window.makeKeyAndVisible()

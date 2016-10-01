@@ -53,7 +53,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
             configurableCell.configureWithModel(itemModel)
         }
         
-        return cell ?? UICollectionViewCell()
+        return cell 
     }
     
 }

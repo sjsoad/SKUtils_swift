@@ -24,7 +24,14 @@
 		A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF31D7DD8C600C3AA13 /* RandomNumberExtension.swift */; };
 		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
-		A560CA3C1D97BE2C00B6B304 /* LocationServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA3B1D97BE2C00B6B304 /* LocationServicePermissions.swift */; };
+		A550FA021D9F98B200451249 /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA011D9F98B200451249 /* BluetoothPermissions.swift */; };
+		A550FA051D9F9C2900451249 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA041D9F9C2900451249 /* CameraPermissions.swift */; };
+		A550FA081D9FA2EB00451249 /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */; };
+		A550FA0C1D9FB91500451249 /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */; };
+		A550FA0E1D9FB92500451249 /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */; };
+		A550FA101D9FBCE700451249 /* PermissionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0F1D9FBCE700451249 /* PermissionsState.swift */; };
+		A550FA121D9FC29400451249 /* PermissionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA111D9FC29400451249 /* PermissionsRequest.swift */; };
+		A560CA3C1D97BE2C00B6B304 /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
 		A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */; };
 		A57ED7331D85AFCB003AD499 /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED7321D85AFCB003AD499 /* FCMService.swift */; };
@@ -89,7 +96,14 @@
 		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A560CA3B1D97BE2C00B6B304 /* LocationServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServicePermissions.swift; sourceTree = "<group>"; };
+		A550FA011D9F98B200451249 /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
+		A550FA041D9F9C2900451249 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
+		A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
+		A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
+		A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
+		A550FA0F1D9FBCE700451249 /* PermissionsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsState.swift; sourceTree = "<group>"; };
+		A550FA111D9FC29400451249 /* PermissionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsRequest.swift; sourceTree = "<group>"; };
+		A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
 		A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
 		A57ED7321D85AFCB003AD499 /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
@@ -280,6 +294,46 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A550FA001D9F98B200451249 /* BluetoothPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A550FA011D9F98B200451249 /* BluetoothPermissions.swift */,
+			);
+			path = BluetoothPermissions;
+			sourceTree = "<group>";
+		};
+		A550FA031D9F9C1B00451249 /* CameraPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A550FA041D9F9C2900451249 /* CameraPermissions.swift */,
+			);
+			path = CameraPermissions;
+			sourceTree = "<group>";
+		};
+		A550FA061D9FA2DD00451249 /* ContactsPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */,
+			);
+			path = ContactsPermissions;
+			sourceTree = "<group>";
+		};
+		A550FA091D9FB86D00451249 /* MicrophonePermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */,
+			);
+			path = MicrophonePermissions;
+			sourceTree = "<group>";
+		};
+		A550FA0A1D9FB86D00451249 /* PhotosPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */,
+			);
+			path = PhotosPermissions;
+			sourceTree = "<group>";
+		};
 		A57ED7311D85AFBA003AD499 /* FCM */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,8 +446,15 @@
 		A5FFC5901D97A77E00090D06 /* PermissionsService */ = {
 			isa = PBXGroup;
 			children = (
+				A550FA091D9FB86D00451249 /* MicrophonePermissions */,
+				A550FA0A1D9FB86D00451249 /* PhotosPermissions */,
+				A550FA061D9FA2DD00451249 /* ContactsPermissions */,
+				A550FA031D9F9C1B00451249 /* CameraPermissions */,
+				A550FA001D9F98B200451249 /* BluetoothPermissions */,
 				A5FFC5911D97A77E00090D06 /* LocationPermissions */,
 				A5FFC5921D97A7A200090D06 /* ServicePermissions.swift */,
+				A550FA0F1D9FBCE700451249 /* PermissionsState.swift */,
+				A550FA111D9FC29400451249 /* PermissionsRequest.swift */,
 			);
 			path = PermissionsService;
 			sourceTree = "<group>";
@@ -401,7 +462,7 @@
 		A5FFC5911D97A77E00090D06 /* LocationPermissions */ = {
 			isa = PBXGroup;
 			children = (
-				A560CA3B1D97BE2C00B6B304 /* LocationServicePermissions.swift */,
+				A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */,
 			);
 			path = LocationPermissions;
 			sourceTree = "<group>";
@@ -634,26 +695,33 @@
 				A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */,
+				A550FA021D9F98B200451249 /* BluetoothPermissions.swift in Sources */,
 				A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */,
 				A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */,
 				A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */,
 				A526BF031D7DD8C600C3AA13 /* IBDesignableViewExtension.swift in Sources */,
+				A550FA051D9F9C2900451249 /* CameraPermissions.swift in Sources */,
 				A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */,
 				A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */,
+				A550FA121D9FC29400451249 /* PermissionsRequest.swift in Sources */,
+				A550FA0E1D9FB92500451249 /* MicrophonePermissions.swift in Sources */,
 				A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
 				A5C13C021D8414A600791E03 /* CollectionViewArrayDataSource.swift in Sources */,
+				A550FA0C1D9FB91500451249 /* PhotoLibraryPermissions.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
 				A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */,
 				A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
-				A560CA3C1D97BE2C00B6B304 /* LocationServicePermissions.swift in Sources */,
+				A560CA3C1D97BE2C00B6B304 /* LocationPermissions.swift in Sources */,
+				A550FA101D9FBCE700451249 /* PermissionsState.swift in Sources */,
 				A51A373B1D85513000B8840E /* APNSService.swift in Sources */,
 				A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */,
 				A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */,
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
 				A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
+				A550FA081D9FA2EB00451249 /* ContactsPermissions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

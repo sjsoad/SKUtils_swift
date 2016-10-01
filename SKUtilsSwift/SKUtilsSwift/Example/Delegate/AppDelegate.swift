@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                                                          message: "Location service is disabled! Please turn on it in Settings",
                                              settingsButtonTitle: "Go to Settings",
                                                cancelButtonTitle: "Cancel")
-        let locationServicePermissions = LocationServicePermissions(settingAlertConfiguration: alertConfiguration)
+        let locationPermissions = LocationPermissions(settingAlertConfiguration: alertConfiguration)
         let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
-                                     locationServicePermissions: locationServicePermissions)
+                                     locationPermissions: locationPermissions)
         return locationSerice
     }()
 //    var apnsService = PushNotificationsService(service: FCMService())
@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.locationSerice.start(updatingLocation: true, updatingHeading: true)
+        self.locationSerice.start(updatingLocation: true,
+                                  updatingHeading: true)
         self.locationSerice.locationManager.delegate = self;
 //        DatabaseManager.configureRealm()
 //        DatabaseManager.mapTestJSONToDatabase()
