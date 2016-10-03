@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EqualValidator: NSObject {
+class EqualStringsValidator: NSObject {
 
     func isTextEqual(_ firstString: String?, secondString: String?) -> Bool {
         if firstString == nil || secondString == nil {
