@@ -17,9 +17,9 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
     
     //MARK: - Public
     
-    func initWithFRC(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
-                                   tableView: UITableView,
-                                   reuseIdentifier: String?) {
+    init(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
+         tableView: UITableView,
+         reuseIdentifier: String?) {
         self.fetchedResultController = fetchedResultController
         self.reuseIdentifier = reuseIdentifier
         self.tableView = tableView
