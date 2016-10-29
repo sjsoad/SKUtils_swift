@@ -10,7 +10,31 @@
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
-		A51A373B1D85513000B8840E /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A373A1D85513000B8840E /* APNSService.swift */; };
+		A5210D031DC4F589002EFC23 /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CEC1DC4F588002EFC23 /* FCMService.swift */; };
+		A5210D041DC4F589002EFC23 /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CEE1DC4F588002EFC23 /* APNSService.swift */; };
+		A5210D051DC4F589002EFC23 /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CEF1DC4F588002EFC23 /* PushNotificationsService.swift */; };
+		A5210D061DC4F589002EFC23 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CF11DC4F588002EFC23 /* LocationService.swift */; };
+		A5210D071DC4F589002EFC23 /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CF41DC4F588002EFC23 /* BluetoothPermissions.swift */; };
+		A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CF61DC4F588002EFC23 /* CameraPermissions.swift */; };
+		A5210D091DC4F589002EFC23 /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CF81DC4F588002EFC23 /* ContactsPermissions.swift */; };
+		A5210D0A1DC4F589002EFC23 /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CFA1DC4F588002EFC23 /* LocationPermissions.swift */; };
+		A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CFC1DC4F588002EFC23 /* MicrophonePermissions.swift */; };
+		A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CFE1DC4F588002EFC23 /* PhotoLibraryPermissions.swift */; };
+		A5210D0D1DC4F589002EFC23 /* PermissionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D001DC4F588002EFC23 /* PermissionsRequest.swift */; };
+		A5210D0E1DC4F589002EFC23 /* PermissionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D011DC4F588002EFC23 /* PermissionsState.swift */; };
+		A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D021DC4F588002EFC23 /* ServicePermissions.swift */; };
+		A5210D211DC4F5A2002EFC23 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D111DC4F5A2002EFC23 /* ArrayDataSource.swift */; };
+		A5210D221DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D141DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift */; };
+		A5210D231DC4F5A2002EFC23 /* CollectionViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D161DC4F5A2002EFC23 /* CollectionViewFRCDataSource.swift */; };
+		A5210D241DC4F5A2002EFC23 /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D171DC4F5A2002EFC23 /* FRCDataSource.swift */; };
+		A5210D251DC4F5A2002EFC23 /* AbstractDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D191DC4F5A2002EFC23 /* AbstractDataSource.swift */; };
+		A5210D261DC4F5A2002EFC23 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D1A1DC4F5A2002EFC23 /* ConfigurableCell.swift */; };
+		A5210D271DC4F5A2002EFC23 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D1B1DC4F5A2002EFC23 /* SectionModel.swift */; };
+		A5210D281DC4F5A2002EFC23 /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D1E1DC4F5A2002EFC23 /* TableViewArrayDataSource.swift */; };
+		A5210D291DC4F5A2002EFC23 /* TableViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D201DC4F5A2002EFC23 /* TableViewFRCDataSource.swift */; };
+		A5210D2D1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D2B1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift */; };
+		A5210D2E1DC4F5D2002EFC23 /* RandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */; };
+		A5210D311DC4F6E0002EFC23 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D301DC4F6E0002EFC23 /* UIViewControllerExtension.swift */; };
 		A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE51D7DD8C600C3AA13 /* TextFieldAccessoryView.swift */; };
 		A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE71D7DD8C600C3AA13 /* BaseTextField.swift */; };
 		A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE81D7DD8C600C3AA13 /* EmailTextField.swift */; };
@@ -20,34 +44,12 @@
 		A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */; };
 		A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */; };
 		A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */; };
-		A526BF031D7DD8C600C3AA13 /* IBDesignableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF21D7DD8C600C3AA13 /* IBDesignableViewExtension.swift */; };
-		A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF31D7DD8C600C3AA13 /* RandomNumberExtension.swift */; };
-		A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF91D7DD8C600C3AA13 /* LocationService.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
-		A550FA021D9F98B200451249 /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA011D9F98B200451249 /* BluetoothPermissions.swift */; };
-		A550FA051D9F9C2900451249 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA041D9F9C2900451249 /* CameraPermissions.swift */; };
-		A550FA081D9FA2EB00451249 /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */; };
-		A550FA0C1D9FB91500451249 /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */; };
-		A550FA0E1D9FB92500451249 /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */; };
-		A550FA101D9FBCE700451249 /* PermissionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA0F1D9FBCE700451249 /* PermissionsState.swift */; };
-		A550FA121D9FC29400451249 /* PermissionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA111D9FC29400451249 /* PermissionsRequest.swift */; };
-		A560CA3C1D97BE2C00B6B304 /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */; };
+		A550FA2E1DA0073700451249 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA2D1DA0073700451249 /* ImagePicker.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
-		A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */; };
-		A57ED7331D85AFCB003AD499 /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57ED7321D85AFCB003AD499 /* FCMService.swift */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
-		A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */; };
-		A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */; };
-		A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */; };
-		A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF31D84147E00791E03 /* FRCDataSource.swift */; };
-		A5C13BFE1D84147E00791E03 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF41D84147E00791E03 /* SectionModel.swift */; };
-		A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */; };
-		A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */; };
-		A5C13C021D8414A600791E03 /* CollectionViewArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */; };
-		A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */; };
-		A5FFC5931D97A7A200090D06 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FFC5921D97A7A200090D06 /* ServicePermissions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +81,31 @@
 		049161EF1D3E05A000E01686 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWMessages.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/SWMessages/SWMessages.framework"; sourceTree = "<group>"; };
 		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51A373A1D85513000B8840E /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
+		A5210CEC1DC4F588002EFC23 /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
+		A5210CEE1DC4F588002EFC23 /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
+		A5210CEF1DC4F588002EFC23 /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
+		A5210CF11DC4F588002EFC23 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		A5210CF41DC4F588002EFC23 /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
+		A5210CF61DC4F588002EFC23 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
+		A5210CF81DC4F588002EFC23 /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
+		A5210CFA1DC4F588002EFC23 /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
+		A5210CFC1DC4F588002EFC23 /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
+		A5210CFE1DC4F588002EFC23 /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
+		A5210D001DC4F588002EFC23 /* PermissionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsRequest.swift; sourceTree = "<group>"; };
+		A5210D011DC4F588002EFC23 /* PermissionsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsState.swift; sourceTree = "<group>"; };
+		A5210D021DC4F588002EFC23 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
+		A5210D111DC4F5A2002EFC23 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		A5210D141DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSource.swift; sourceTree = "<group>"; };
+		A5210D161DC4F5A2002EFC23 /* CollectionViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFRCDataSource.swift; sourceTree = "<group>"; };
+		A5210D171DC4F5A2002EFC23 /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
+		A5210D191DC4F5A2002EFC23 /* AbstractDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDataSource.swift; sourceTree = "<group>"; };
+		A5210D1A1DC4F5A2002EFC23 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		A5210D1B1DC4F5A2002EFC23 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		A5210D1E1DC4F5A2002EFC23 /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
+		A5210D201DC4F5A2002EFC23 /* TableViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFRCDataSource.swift; sourceTree = "<group>"; };
+		A5210D2B1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableViewExtension.swift; sourceTree = "<group>"; };
+		A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberExtension.swift; sourceTree = "<group>"; };
+		A5210D301DC4F6E0002EFC23 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		A526BEE51D7DD8C600C3AA13 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
@@ -91,22 +117,10 @@
 		A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualValidator.swift; sourceTree = "<group>"; };
 		A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		A526BEF21D7DD8C600C3AA13 /* IBDesignableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableViewExtension.swift; sourceTree = "<group>"; };
-		A526BEF31D7DD8C600C3AA13 /* RandomNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberExtension.swift; sourceTree = "<group>"; };
-		A526BEF91D7DD8C600C3AA13 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A550FA011D9F98B200451249 /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
-		A550FA041D9F9C2900451249 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
-		A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
-		A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
-		A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
-		A550FA0F1D9FBCE700451249 /* PermissionsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsState.swift; sourceTree = "<group>"; };
-		A550FA111D9FC29400451249 /* PermissionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsRequest.swift; sourceTree = "<group>"; };
-		A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
+		A550FA2D1DA0073700451249 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
-		A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
-		A57ED7321D85AFCB003AD499 /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF211D3802D600EB7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -114,16 +128,6 @@
 		A5ADBF261D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		A5ADBF2B1D3802D600EB7212 /* SKUtilsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKUtilsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF311D3802D600EB7212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractDataSource.swift; sourceTree = "<group>"; };
-		A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
-		A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
-		A5C13BF31D84147E00791E03 /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
-		A5C13BF41D84147E00791E03 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
-		A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewArrayDataSource.swift; sourceTree = "<group>"; };
-		A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFRCDataSource.swift; sourceTree = "<group>"; };
-		A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewArrayDataSource.swift; sourceTree = "<group>"; };
-		A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewFRCDataSource.swift; sourceTree = "<group>"; };
-		A5FFC5921D97A7A200090D06 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
 		F44BE5ADA5BB06C5940DCE46 /* Pods_SKUtilsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,7 @@
 		049161EB1D3E05A000E01686 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				A550FA2F1DA0105C00451249 /* ViewControllers */,
 				0459709F1D64B1F100C45A1D /* Resources */,
 				049161EE1D3E05A000E01686 /* Delegate */,
 			);
@@ -189,14 +194,209 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A51A37391D8550FF00B8840E /* APNSService */ = {
+		A5210CE91DC4F588002EFC23 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A57ED7311D85AFBA003AD499 /* FCM */,
-				A51A373A1D85513000B8840E /* APNSService.swift */,
-				A57ED72F1D8557D1003AD499 /* PushNotificationsService.swift */,
+				A5210CEA1DC4F588002EFC23 /* APNSService */,
+				A5210CF01DC4F588002EFC23 /* LocationService */,
+				A5210CF21DC4F588002EFC23 /* ServicePermissions */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A5210CEA1DC4F588002EFC23 /* APNSService */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CEB1DC4F588002EFC23 /* FCM */,
+				A5210CED1DC4F588002EFC23 /* Required */,
 			);
 			path = APNSService;
+			sourceTree = "<group>";
+		};
+		A5210CEB1DC4F588002EFC23 /* FCM */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CEC1DC4F588002EFC23 /* FCMService.swift */,
+			);
+			path = FCM;
+			sourceTree = "<group>";
+		};
+		A5210CED1DC4F588002EFC23 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CEE1DC4F588002EFC23 /* APNSService.swift */,
+				A5210CEF1DC4F588002EFC23 /* PushNotificationsService.swift */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		A5210CF01DC4F588002EFC23 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CF11DC4F588002EFC23 /* LocationService.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		A5210CF21DC4F588002EFC23 /* ServicePermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CF31DC4F588002EFC23 /* BluetoothPermissions */,
+				A5210CF51DC4F588002EFC23 /* CameraPermissions */,
+				A5210CF71DC4F588002EFC23 /* ContactsPermissions */,
+				A5210CF91DC4F588002EFC23 /* LocationPermissions */,
+				A5210CFB1DC4F588002EFC23 /* MicrophonePermissions */,
+				A5210CFD1DC4F588002EFC23 /* PhotosPermissions */,
+				A5210CFF1DC4F588002EFC23 /* Required */,
+			);
+			path = ServicePermissions;
+			sourceTree = "<group>";
+		};
+		A5210CF31DC4F588002EFC23 /* BluetoothPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CF41DC4F588002EFC23 /* BluetoothPermissions.swift */,
+			);
+			path = BluetoothPermissions;
+			sourceTree = "<group>";
+		};
+		A5210CF51DC4F588002EFC23 /* CameraPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CF61DC4F588002EFC23 /* CameraPermissions.swift */,
+			);
+			path = CameraPermissions;
+			sourceTree = "<group>";
+		};
+		A5210CF71DC4F588002EFC23 /* ContactsPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CF81DC4F588002EFC23 /* ContactsPermissions.swift */,
+			);
+			path = ContactsPermissions;
+			sourceTree = "<group>";
+		};
+		A5210CF91DC4F588002EFC23 /* LocationPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CFA1DC4F588002EFC23 /* LocationPermissions.swift */,
+			);
+			path = LocationPermissions;
+			sourceTree = "<group>";
+		};
+		A5210CFB1DC4F588002EFC23 /* MicrophonePermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CFC1DC4F588002EFC23 /* MicrophonePermissions.swift */,
+			);
+			path = MicrophonePermissions;
+			sourceTree = "<group>";
+		};
+		A5210CFD1DC4F588002EFC23 /* PhotosPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210CFE1DC4F588002EFC23 /* PhotoLibraryPermissions.swift */,
+			);
+			path = PhotosPermissions;
+			sourceTree = "<group>";
+		};
+		A5210CFF1DC4F588002EFC23 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D001DC4F588002EFC23 /* PermissionsRequest.swift */,
+				A5210D011DC4F588002EFC23 /* PermissionsState.swift */,
+				A5210D021DC4F588002EFC23 /* ServicePermissions.swift */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		A5210D101DC4F5A2002EFC23 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D111DC4F5A2002EFC23 /* ArrayDataSource.swift */,
+				A5210D171DC4F5A2002EFC23 /* FRCDataSource.swift */,
+				A5210D121DC4F5A2002EFC23 /* CollectionView */,
+				A5210D181DC4F5A2002EFC23 /* Required */,
+				A5210D1C1DC4F5A2002EFC23 /* TableView */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		A5210D121DC4F5A2002EFC23 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D131DC4F5A2002EFC23 /* Array */,
+				A5210D151DC4F5A2002EFC23 /* FRC */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		A5210D131DC4F5A2002EFC23 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D141DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		A5210D151DC4F5A2002EFC23 /* FRC */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D161DC4F5A2002EFC23 /* CollectionViewFRCDataSource.swift */,
+			);
+			path = FRC;
+			sourceTree = "<group>";
+		};
+		A5210D181DC4F5A2002EFC23 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D191DC4F5A2002EFC23 /* AbstractDataSource.swift */,
+				A5210D1A1DC4F5A2002EFC23 /* ConfigurableCell.swift */,
+				A5210D1B1DC4F5A2002EFC23 /* SectionModel.swift */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		A5210D1C1DC4F5A2002EFC23 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D1D1DC4F5A2002EFC23 /* Array */,
+				A5210D1F1DC4F5A2002EFC23 /* FRC */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		A5210D1D1DC4F5A2002EFC23 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D1E1DC4F5A2002EFC23 /* TableViewArrayDataSource.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		A5210D1F1DC4F5A2002EFC23 /* FRC */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D201DC4F5A2002EFC23 /* TableViewFRCDataSource.swift */,
+			);
+			path = FRC;
+			sourceTree = "<group>";
+		};
+		A5210D2A1DC4F5D2002EFC23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5210D2B1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift */,
+				A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */,
+				A5210D301DC4F6E0002EFC23 /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5210D321DC4F748002EFC23 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A526BEE41D7DD8C600C3AA13 /* TextFieldAccessoryView */ = {
@@ -236,39 +436,12 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
-		A526BEF11D7DD8C600C3AA13 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				A526BEF21D7DD8C600C3AA13 /* IBDesignableViewExtension.swift */,
-				A526BEF31D7DD8C600C3AA13 /* RandomNumberExtension.swift */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		A526BEF41D7DD8C600C3AA13 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				A526BF071D7DD8DD00C3AA13 /* TextFieldsManager */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		A526BEF71D7DD8C600C3AA13 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				A5FFC5901D97A77E00090D06 /* PermissionsService */,
-				A51A37391D8550FF00B8840E /* APNSService */,
-				A526BEF81D7DD8C600C3AA13 /* LocationService */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		A526BEF81D7DD8C600C3AA13 /* LocationService */ = {
-			isa = PBXGroup;
-			children = (
-				A526BEF91D7DD8C600C3AA13 /* LocationService.swift */,
-			);
-			path = LocationService;
 			sourceTree = "<group>";
 		};
 		A526BF071D7DD8DD00C3AA13 /* TextFieldsManager */ = {
@@ -282,64 +455,33 @@
 		A53891B61D7AE40B00CEE380 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A5C13BEC1D84147E00791E03 /* DataSources */,
+				A5210D321DC4F748002EFC23 /* Protocols */,
+				A5210D2A1DC4F5D2002EFC23 /* Extensions */,
+				A5210D101DC4F5A2002EFC23 /* DataSources */,
+				A5210CE91DC4F588002EFC23 /* Services */,
+				A550FA2C1DA0072300451249 /* ImagePicker */,
 				A526BEE41D7DD8C600C3AA13 /* TextFieldAccessoryView */,
 				A526BEE61D7DD8C600C3AA13 /* TextFields */,
 				A526BEEA1D7DD8C600C3AA13 /* Utils */,
 				A526BEEC1D7DD8C600C3AA13 /* Validators */,
-				A526BEF11D7DD8C600C3AA13 /* Categories */,
 				A526BEF41D7DD8C600C3AA13 /* Managers */,
-				A526BEF71D7DD8C600C3AA13 /* Services */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		A550FA001D9F98B200451249 /* BluetoothPermissions */ = {
+		A550FA2C1DA0072300451249 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				A550FA011D9F98B200451249 /* BluetoothPermissions.swift */,
+				A550FA2D1DA0073700451249 /* ImagePicker.swift */,
 			);
-			path = BluetoothPermissions;
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
-		A550FA031D9F9C1B00451249 /* CameraPermissions */ = {
+		A550FA2F1DA0105C00451249 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A550FA041D9F9C2900451249 /* CameraPermissions.swift */,
 			);
-			path = CameraPermissions;
-			sourceTree = "<group>";
-		};
-		A550FA061D9FA2DD00451249 /* ContactsPermissions */ = {
-			isa = PBXGroup;
-			children = (
-				A550FA071D9FA2EB00451249 /* ContactsPermissions.swift */,
-			);
-			path = ContactsPermissions;
-			sourceTree = "<group>";
-		};
-		A550FA091D9FB86D00451249 /* MicrophonePermissions */ = {
-			isa = PBXGroup;
-			children = (
-				A550FA0D1D9FB92500451249 /* MicrophonePermissions.swift */,
-			);
-			path = MicrophonePermissions;
-			sourceTree = "<group>";
-		};
-		A550FA0A1D9FB86D00451249 /* PhotosPermissions */ = {
-			isa = PBXGroup;
-			children = (
-				A550FA0B1D9FB91500451249 /* PhotoLibraryPermissions.swift */,
-			);
-			path = PhotosPermissions;
-			sourceTree = "<group>";
-		};
-		A57ED7311D85AFBA003AD499 /* FCM */ = {
-			isa = PBXGroup;
-			children = (
-				A57ED7321D85AFCB003AD499 /* FCMService.swift */,
-			);
-			path = FCM;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A5ADBF0E1D3802D500EB7212 = {
@@ -377,94 +519,6 @@
 				A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */,
 			);
 			path = SKUtilsSwiftTests;
-			sourceTree = "<group>";
-		};
-		A5C13BEC1D84147E00791E03 /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13BED1D84147E00791E03 /* AbstractDataSource.swift */,
-				A5C13BEE1D84147E00791E03 /* ArrayDataSource.swift */,
-				A5C13BF21D84147E00791E03 /* ConfigurableCell.swift */,
-				A5C13BF31D84147E00791E03 /* FRCDataSource.swift */,
-				A5C13BF41D84147E00791E03 /* SectionModel.swift */,
-				A5C13BEF1D84147E00791E03 /* CollectionView */,
-				A5C13BF51D84147E00791E03 /* TableView */,
-			);
-			path = DataSources;
-			sourceTree = "<group>";
-		};
-		A5C13BEF1D84147E00791E03 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13BF01D84147E00791E03 /* Array */,
-				A5C13BF11D84147E00791E03 /* FRC */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		A5C13BF01D84147E00791E03 /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13C011D8414A600791E03 /* CollectionViewArrayDataSource.swift */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		A5C13BF11D84147E00791E03 /* FRC */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13C031D8414B900791E03 /* CollectionViewFRCDataSource.swift */,
-			);
-			path = FRC;
-			sourceTree = "<group>";
-		};
-		A5C13BF51D84147E00791E03 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13BF61D84147E00791E03 /* Array */,
-				A5C13BF81D84147E00791E03 /* FRC */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		A5C13BF61D84147E00791E03 /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13BF71D84147E00791E03 /* TableViewArrayDataSource.swift */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		A5C13BF81D84147E00791E03 /* FRC */ = {
-			isa = PBXGroup;
-			children = (
-				A5C13BF91D84147E00791E03 /* TableViewFRCDataSource.swift */,
-			);
-			path = FRC;
-			sourceTree = "<group>";
-		};
-		A5FFC5901D97A77E00090D06 /* PermissionsService */ = {
-			isa = PBXGroup;
-			children = (
-				A550FA091D9FB86D00451249 /* MicrophonePermissions */,
-				A550FA0A1D9FB86D00451249 /* PhotosPermissions */,
-				A550FA061D9FA2DD00451249 /* ContactsPermissions */,
-				A550FA031D9F9C1B00451249 /* CameraPermissions */,
-				A550FA001D9F98B200451249 /* BluetoothPermissions */,
-				A5FFC5911D97A77E00090D06 /* LocationPermissions */,
-				A5FFC5921D97A7A200090D06 /* ServicePermissions.swift */,
-				A550FA0F1D9FBCE700451249 /* PermissionsState.swift */,
-				A550FA111D9FC29400451249 /* PermissionsRequest.swift */,
-			);
-			path = PermissionsService;
-			sourceTree = "<group>";
-		};
-		A5FFC5911D97A77E00090D06 /* LocationPermissions */ = {
-			isa = PBXGroup;
-			children = (
-				A560CA3B1D97BE2C00B6B304 /* LocationPermissions.swift */,
-			);
-			path = LocationPermissions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,41 +741,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5FFC5931D97A7A200090D06 /* ServicePermissions.swift in Sources */,
 				A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */,
-				A5C13BFE1D84147E00791E03 /* SectionModel.swift in Sources */,
-				A57ED7331D85AFCB003AD499 /* FCMService.swift in Sources */,
+				A5210D041DC4F589002EFC23 /* APNSService.swift in Sources */,
+				A5210D031DC4F589002EFC23 /* FCMService.swift in Sources */,
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
-				A57ED7301D8557D1003AD499 /* PushNotificationsService.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
-				A5C13BFB1D84147E00791E03 /* ArrayDataSource.swift in Sources */,
-				A550FA021D9F98B200451249 /* BluetoothPermissions.swift in Sources */,
-				A5C13BFD1D84147E00791E03 /* FRCDataSource.swift in Sources */,
+				A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */,
+				A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */,
+				A5210D061DC4F589002EFC23 /* LocationService.swift in Sources */,
+				A5210D0D1DC4F589002EFC23 /* PermissionsRequest.swift in Sources */,
 				A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */,
 				A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */,
-				A526BF031D7DD8C600C3AA13 /* IBDesignableViewExtension.swift in Sources */,
-				A550FA051D9F9C2900451249 /* CameraPermissions.swift in Sources */,
-				A5C13BFA1D84147E00791E03 /* AbstractDataSource.swift in Sources */,
-				A526BF061D7DD8C600C3AA13 /* LocationService.swift in Sources */,
-				A550FA121D9FC29400451249 /* PermissionsRequest.swift in Sources */,
-				A550FA0E1D9FB92500451249 /* MicrophonePermissions.swift in Sources */,
-				A526BF041D7DD8C600C3AA13 /* RandomNumberExtension.swift in Sources */,
+				A5210D291DC4F5A2002EFC23 /* TableViewFRCDataSource.swift in Sources */,
+				A5210D311DC4F6E0002EFC23 /* UIViewControllerExtension.swift in Sources */,
+				A5210D281DC4F5A2002EFC23 /* TableViewArrayDataSource.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
-				A5C13C021D8414A600791E03 /* CollectionViewArrayDataSource.swift in Sources */,
-				A550FA0C1D9FB91500451249 /* PhotoLibraryPermissions.swift in Sources */,
+				A550FA2E1DA0073700451249 /* ImagePicker.swift in Sources */,
+				A5210D271DC4F5A2002EFC23 /* SectionModel.swift in Sources */,
+				A5210D241DC4F5A2002EFC23 /* FRCDataSource.swift in Sources */,
+				A5210D221DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift in Sources */,
+				A5210D051DC4F589002EFC23 /* PushNotificationsService.swift in Sources */,
+				A5210D251DC4F5A2002EFC23 /* AbstractDataSource.swift in Sources */,
+				A5210D231DC4F5A2002EFC23 /* CollectionViewFRCDataSource.swift in Sources */,
+				A5210D0E1DC4F589002EFC23 /* PermissionsState.swift in Sources */,
+				A5210D261DC4F5A2002EFC23 /* ConfigurableCell.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
-				A5C13C041D8414B900791E03 /* CollectionViewFRCDataSource.swift in Sources */,
-				A5C13C001D84147E00791E03 /* TableViewFRCDataSource.swift in Sources */,
+				A5210D211DC4F5A2002EFC23 /* ArrayDataSource.swift in Sources */,
+				A5210D2E1DC4F5D2002EFC23 /* RandomNumberExtension.swift in Sources */,
+				A5210D0A1DC4F589002EFC23 /* LocationPermissions.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
-				A560CA3C1D97BE2C00B6B304 /* LocationPermissions.swift in Sources */,
-				A550FA101D9FBCE700451249 /* PermissionsState.swift in Sources */,
-				A51A373B1D85513000B8840E /* APNSService.swift in Sources */,
-				A5C13BFF1D84147E00791E03 /* TableViewArrayDataSource.swift in Sources */,
-				A5C13BFC1D84147E00791E03 /* ConfigurableCell.swift in Sources */,
+				A5210D071DC4F589002EFC23 /* BluetoothPermissions.swift in Sources */,
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
+				A5210D2D1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift in Sources */,
+				A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */,
 				A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */,
+				A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
-				A550FA081D9FA2EB00451249 /* ContactsPermissions.swift in Sources */,
+				A5210D091DC4F589002EFC23 /* ContactsPermissions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

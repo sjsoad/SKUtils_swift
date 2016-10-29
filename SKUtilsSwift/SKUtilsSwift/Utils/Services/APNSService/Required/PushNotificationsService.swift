@@ -6,6 +6,18 @@
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
+//TODO: READM ME
+
+/* -------------------------------------------------------------------------------------------------------------------------
+ Create apns service instance with service type
+    var apnsService = PushNotificationsService(service: FCMService())
+
+ Setup and register for push notifications in AppDelegate
+    apnsService.setupService()
+    apnsService.registerForPushNotifications(application)
+ 
+---------------------------------------------------------------------------------------------------------------------------- */
+
 import UIKit
 
 class PushNotificationsService<T: AnyObject>: NSObject, APNSService where T: APNSService {

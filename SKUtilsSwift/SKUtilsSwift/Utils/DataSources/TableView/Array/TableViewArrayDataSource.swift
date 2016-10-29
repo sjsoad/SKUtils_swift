@@ -41,7 +41,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     }
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return numberOfItemsInSection(section)
+        return numberOfItemsInSection(sectionIndex: section)
     }
     
     func tableView(_ tableView: UITableView,
@@ -49,7 +49,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
         
         if let configurableCell = cell as? ConfigurableCell {
-            let itemModel = itemAtIndexPath(indexPath)
+            let itemModel = itemAtIndexPath(indexPath: indexPath)
             configurableCell.configureWithModel(itemModel)
         }
 

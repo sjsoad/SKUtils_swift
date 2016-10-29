@@ -41,7 +41,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     }
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return numberOfItemsInSection(section)
+        return numberOfItemsInSection(sectionIndex: section)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -49,7 +49,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier!, for: indexPath)
         
         if let configurableCell = cell as? ConfigurableCell {
-            let itemModel = itemAtIndexPath(indexPath)
+            let itemModel = itemAtIndexPath(indexPath: indexPath)
             configurableCell.configureWithModel(itemModel)
         }
         

@@ -24,7 +24,7 @@ extension FRCDataSource {
         return 0
     }
     
-    func numberOfItemsInSection(_ sectionIndex: Int) -> Int {
+    func numberOfItemsInSection(sectionIndex: Int) -> Int {
         if let sections = fetchedResultController.sections {
             let section = sections[sectionIndex]
             if let items = section.objects {
@@ -34,7 +34,7 @@ extension FRCDataSource {
         return 0
     }
     
-    func itemAtIndexPath(_ indexPath: IndexPath) -> AnyObject {
+    func itemAtIndexPath(indexPath: IndexPath) -> AnyObject {
         return fetchedResultController.object(at: indexPath)
     }
     

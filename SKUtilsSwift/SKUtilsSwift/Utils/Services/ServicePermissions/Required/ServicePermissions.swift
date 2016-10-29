@@ -39,14 +39,7 @@ extension ServicePermissions {
                                               handler: nil)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        //in order to show this alert you need to have viewController
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.windowLevel = UIWindowLevelAlert + 1;
-        window.makeKeyAndVisible()
-        window.rootViewController = UIViewController()
-        if let topView = window.rootViewController {
-            topView.present(alert, animated: true, completion: nil)
-        }
+        alert.show(animated: true, completion: nil)
     }
     
     func openSettings() {

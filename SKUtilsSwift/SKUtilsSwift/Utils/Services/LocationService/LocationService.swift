@@ -11,19 +11,18 @@
 /* -------------------------------------------------------------------------------------------------------------------------
  Add description to NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription in order to use location Service
  Add this property to yoor class and init it with valid arguments, add delegate and enjoy.
- 
- var locationSerice : LocationService = {
+
+var locationSerice: LocationService = {
     let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
                                                        message: "Location service is disabled! Please turn on it in Settings",
                                                        settingsButtonTitle: "Go to Settings",
                                                        cancelButtonTitle: "Cancel")
+    let locationPermissions = LocationPermissions(settingAlertConfiguration: alertConfiguration)
     let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
-                                         settingAlertConfiguration: alertConfiguration)
+                                         locationPermissions: locationPermissions)
     return locationSerice
- }()
- 
+}()
 ---------------------------------------------------------------------------------------------------------------------------- */
-
 
 import UIKit
 import CoreLocation
@@ -53,11 +52,13 @@ class LocationService: NSObject {
         case .permissionsNotAsked:
             self.askPermissions()
             break
+        case .permissionsGranted:
+            self._start(updatingLocation: updatingLocation,
+                        updatingHeading: updatingHeading)
+            break
         default:
             break
         }
-        self._start(updatingLocation: updatingLocation,
-                    updatingHeading: updatingHeading)
     }
     
     func stop(updatingLocation: Bool, updatingHeading: Bool) {
