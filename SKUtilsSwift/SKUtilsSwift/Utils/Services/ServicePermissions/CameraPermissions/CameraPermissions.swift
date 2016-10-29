@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraPermissions: NSObject, ServicePermissions, PermissionsRequest {
+class CameraPermissions: NSObject, ServicePermissions, RequestPermissions {
 
     var alertConfiguration: SettingAlertConfiguration
     

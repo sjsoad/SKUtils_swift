@@ -10,7 +10,7 @@ import UIKit
 
 public typealias handler = (PermissionsState) -> Void
 
-protocol PermissionsRequest {
+protocol RequestPermissions {
     
     func requestPermissions(handler: @escaping handler)
 }

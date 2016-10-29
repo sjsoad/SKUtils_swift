@@ -10,7 +10,7 @@ import UIKit
 import Contacts
 import AddressBook
 
-class ContactsPermissions: NSObject, ServicePermissions, PermissionsRequest {
+class ContactsPermissions: NSObject, ServicePermissions, RequestPermissions {
 
     var alertConfiguration: SettingAlertConfiguration
     

@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class PhotoLibraryPermissions: NSObject, ServicePermissions, PermissionsRequest {
+class PhotoLibraryPermissions: NSObject, ServicePermissions, RequestPermissions {
 
     var alertConfiguration: SettingAlertConfiguration
     

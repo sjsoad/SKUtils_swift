@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MicrophonePermissions: NSObject, ServicePermissions, PermissionsRequest {
+class MicrophonePermissions: NSObject, ServicePermissions, RequestPermissions {
 
     var alertConfiguration: SettingAlertConfiguration
     
