@@ -16,9 +16,9 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     
     //MARK: - Public
     
-    func initWithSections(sections: [SectionModel],
-                                   tableView: UITableView,
-                                   reuseIdentifier: String?) {
+    init(sections: [SectionModel],
+         tableView: UITableView,
+         reuseIdentifier: String?) {
         self.sections = sections
         self.reuseIdentifier = reuseIdentifier
         self.tableView = tableView

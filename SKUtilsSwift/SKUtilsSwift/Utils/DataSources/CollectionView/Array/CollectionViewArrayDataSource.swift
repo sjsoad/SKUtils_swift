@@ -16,9 +16,9 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     //MARK: - Public
     
-    func initWithSections(sections: [SectionModel],
-                                   collectionView: UICollectionView,
-                                   reuseIdentifier: String?) {
+    init(sections: [SectionModel],
+         collectionView: UICollectionView,
+         reuseIdentifier: String?) {
         self.sections = sections
         self.reuseIdentifier = reuseIdentifier
         self.collectionView = collectionView

@@ -10,7 +10,6 @@ Minor priority:
 - Categories
 - Other managers
 - ImageViewer
-- Premissions
 
 Bonus:
 - GitHub Simple app

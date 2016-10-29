@@ -35,6 +35,7 @@
 		A5210D2D1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D2B1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift */; };
 		A5210D2E1DC4F5D2002EFC23 /* RandomNumberExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */; };
 		A5210D311DC4F6E0002EFC23 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D301DC4F6E0002EFC23 /* UIViewControllerExtension.swift */; };
+		A5210D361DC4FF77002EFC23 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210D351DC4FF76002EFC23 /* EqualStringsValidator.swift */; };
 		A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE51D7DD8C600C3AA13 /* TextFieldAccessoryView.swift */; };
 		A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE71D7DD8C600C3AA13 /* BaseTextField.swift */; };
 		A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEE81D7DD8C600C3AA13 /* EmailTextField.swift */; };
@@ -42,7 +43,6 @@
 		A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEB1D7DD8C600C3AA13 /* SKUtils.swift */; };
 		A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEED1D7DD8C600C3AA13 /* BaseValidator.swift */; };
 		A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */; };
-		A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */; };
 		A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
 		A550FA2E1DA0073700451249 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA2D1DA0073700451249 /* ImagePicker.swift */; };
@@ -106,6 +106,7 @@
 		A5210D2B1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableViewExtension.swift; sourceTree = "<group>"; };
 		A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberExtension.swift; sourceTree = "<group>"; };
 		A5210D301DC4F6E0002EFC23 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		A5210D351DC4FF76002EFC23 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		A526BEE51D7DD8C600C3AA13 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		A526BEEB1D7DD8C600C3AA13 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
 		A526BEED1D7DD8C600C3AA13 /* BaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseValidator.swift; sourceTree = "<group>"; };
 		A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualValidator.swift; sourceTree = "<group>"; };
 		A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
@@ -428,10 +428,10 @@
 		A526BEEC1D7DD8C600C3AA13 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				A5210D351DC4FF76002EFC23 /* EqualStringsValidator.swift */,
 				A526BEED1D7DD8C600C3AA13 /* BaseValidator.swift */,
 				A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */,
 				A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */,
-				A526BEEF1D7DD8C600C3AA13 /* EqualValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -747,6 +747,7 @@
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */,
+				A5210D361DC4FF77002EFC23 /* EqualStringsValidator.swift in Sources */,
 				A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */,
 				A5210D061DC4F589002EFC23 /* LocationService.swift in Sources */,
 				A5210D0D1DC4F589002EFC23 /* RequestPermissions.swift in Sources */,
@@ -774,7 +775,6 @@
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
 				A5210D2D1DC4F5D2002EFC23 /* IBDesignableViewExtension.swift in Sources */,
 				A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */,
-				A526BF011D7DD8C600C3AA13 /* EqualValidator.swift in Sources */,
 				A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
 				A5210D091DC4F589002EFC23 /* ContactsPermissions.swift in Sources */,

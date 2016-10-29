@@ -26,7 +26,7 @@ class SKValidatorsTests: XCTestCase {
         let shortString = "test"
         let normalString = "normal"
         let longString = "too long string"
-        let baseValidator = SKBaseValidator()
+        let baseValidator = BaseValidator()
         baseValidator.minTextLenght = 5
         baseValidator.maxTextLenght = 8
         XCTAssertFalse(baseValidator.isTextValid(shortString))
@@ -37,7 +37,7 @@ class SKValidatorsTests: XCTestCase {
     func testEmailValidator() {
         let invalidEmail = "email@invalid"
         let validEmail = "email@gmail.com"
-        let emailValidator = SKEmailValidator()
+        let emailValidator = EmailValidator()
         XCTAssertFalse(emailValidator.isTextValid(invalidEmail))
         XCTAssertTrue(emailValidator.isTextValid(validEmail))
     }
@@ -45,7 +45,7 @@ class SKValidatorsTests: XCTestCase {
     func testPasswordValidator() {
         let ivalidPassword = "invalidpassword"
         let validPassword = "ValidPass1"
-        let passValidator = SKPasswordValidator()
+        let passValidator = PasswordValidator()
         XCTAssertFalse(passValidator.isTextValid(ivalidPassword))
         XCTAssertTrue(passValidator.isTextValid(validPassword))
     }
@@ -54,7 +54,7 @@ class SKValidatorsTests: XCTestCase {
         let firstString = "some string"
         let secondString = "string to compare"
         let thirdString = "string to compare"
-        let equalValidator = SKEqualValidator()
+        let equalValidator = EqualStringsValidator()
         XCTAssertFalse(equalValidator.isTextEqual(nil, secondString: nil))
         XCTAssertFalse(equalValidator.isTextEqual(firstString, secondString: secondString))
         XCTAssertTrue(equalValidator.isTextEqual(thirdString, secondString: secondString))
