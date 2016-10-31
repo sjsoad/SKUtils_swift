@@ -1,0 +1,32 @@
+//
+//  PresentationProtocol.swift
+//  SKUtilsSwift
+//
+//  Created by Sergey Kostyan on 31.10.16.
+//  Copyright © 2016 Sergey Kostyan. All rights reserved.
+//
+
+import UIKit
+
+public typealias completionHandler = () -> Void
+
+protocol PresentationProtocol {
+    
+    func show(animated: Bool, completion: completionHandler?)
+    
+}
+
+extension PresentationProtocol {
+    
+    func show(animated: Bool, completion: completionHandler?) {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.windowLevel = UIWindowLevelAlert;
+        window.makeKeyAndVisible()
+        let controller = UIViewController()
+        window.rootViewController = controller
+        controller.present(self as! UIViewController,
+                           animated: true,
+                           completion: completion)
+    }
+    
+}
