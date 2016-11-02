@@ -14,10 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     var window: UIWindow?
     var locationSerice: LocationService = {
-        let alertConfiguration = SettingAlertConfiguration(title: "Location Service",
-                                                         message: "Location service is disabled! Please turn on it in Settings",
-                                             settingsButtonTitle: "Go to Settings",
-                                               cancelButtonTitle: "Cancel")
+        let alertConfiguration = AlertConfigurator(title: "Location Service",
+                                                   message: "Location service is disabled! Please turn on it in Settings",
+                                                   settingsButtonTitle: "Go to Settings",
+                                                   cancelButtonTitle: "Cancel")
         let locationPermissions = LocationPermissions(settingAlertConfiguration: alertConfiguration)
         let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
                                      locationPermissions: locationPermissions)

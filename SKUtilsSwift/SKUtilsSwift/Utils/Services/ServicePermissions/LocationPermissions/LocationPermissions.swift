@@ -11,9 +11,9 @@ import CoreLocation
 
 class LocationPermissions: NSObject, ServicePermissions {
  
-    var alertConfiguration: SettingAlertConfiguration
+    var alertConfiguration: AlertConfigurator
     
-    init(settingAlertConfiguration: SettingAlertConfiguration) {
+    init(settingAlertConfiguration: AlertConfigurator) {
         self.alertConfiguration = settingAlertConfiguration
     }
     

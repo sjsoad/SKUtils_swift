@@ -1,15 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GUE-iF-1U9">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GUE-iF-1U9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Example View Controller-->
         <scene sceneID="bmO-v1-Xsh">
             <objects>
-                <viewController id="GUE-iF-1U9" sceneMemberID="viewController">
+                <viewController id="GUE-iF-1U9" customClass="ExampleViewController" customModule="SKUtilsSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FA4-gC-wCP"/>
                         <viewControllerLayoutGuide type="bottom" id="lbL-sJ-tDa"/>
@@ -19,15 +23,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-fb-rDI">
+                                <rect key="frame" x="168" y="323.5" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idV-HG-bFI">
+                                <rect key="frame" x="142.5" y="352" width="89" height="30"/>
+                                <state key="normal" title="Image Picker"/>
+                                <connections>
+                                    <action selector="imagePickerButtonPressed:" destination="GUE-iF-1U9" eventType="touchUpInside" id="1Gb-Ag-AWb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thr-M6-GnH">
+                                <rect key="frame" x="172" y="385" width="30" height="30"/>
+                                <state key="normal" title="Mail"/>
+                                <connections>
+                                    <action selector="mailButtonPressed:" destination="GUE-iF-1U9" eventType="touchUpInside" id="Dst-JR-ViY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fr1-fb-rDI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" id="Ctf-44-wG5"/>
                             <constraint firstItem="fr1-fb-rDI" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="cU6-gD-edU"/>
+                            <constraint firstItem="thr-M6-GnH" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="eDj-SH-h8U"/>
+                            <constraint firstItem="thr-M6-GnH" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" multiplier="1.2" id="fhZ-n5-7Zb"/>
+                            <constraint firstItem="idV-HG-bFI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" multiplier="1.1" id="hzZ-r6-ghq"/>
+                            <constraint firstItem="idV-HG-bFI" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="ohD-Cw-as1"/>
                         </constraints>
                     </view>
                 </viewController>

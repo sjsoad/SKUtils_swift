@@ -9,16 +9,9 @@
 import Foundation
 import UIKit
 
-struct SettingAlertConfiguration {
-    var title : String
-    var message : String
-    var settingsButtonTitle : String
-    var cancelButtonTitle : String
-}
-
 protocol ServicePermissions {
     
-    var alertConfiguration: SettingAlertConfiguration { get }
+    var alertConfiguration: AlertConfigurator { get }
     func permissionsState() -> PermissionsState
     func showSettingsAlert()
     func openSettings()

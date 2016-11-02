@@ -19,14 +19,12 @@ protocol PresentationProtocol {
 extension PresentationProtocol {
     
     func show(animated: Bool, completion: completionHandler?) {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.windowLevel = UIWindowLevelAlert;
-        window.makeKeyAndVisible()
         let controller = UIViewController()
-        window.rootViewController = controller
+        _ = WindowBuilder.alertWindow(rootController: controller)
         controller.present(self as! UIViewController,
                            animated: true,
                            completion: completion)
+        
     }
     
 }

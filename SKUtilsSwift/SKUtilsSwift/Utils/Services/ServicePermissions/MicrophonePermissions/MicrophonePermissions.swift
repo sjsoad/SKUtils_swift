@@ -11,9 +11,9 @@ import AVFoundation
 
 class MicrophonePermissions: NSObject, ServicePermissions, RequestPermissions {
 
-    var alertConfiguration: SettingAlertConfiguration
+    var alertConfiguration: AlertConfigurator
     
-    init(settingAlertConfiguration: SettingAlertConfiguration) {
+    init(settingAlertConfiguration: AlertConfigurator) {
         self.alertConfiguration = settingAlertConfiguration
     }
     
