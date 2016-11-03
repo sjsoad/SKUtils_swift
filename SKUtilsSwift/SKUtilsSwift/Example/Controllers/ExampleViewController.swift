@@ -17,7 +17,9 @@ class ExampleViewController: UIViewController {
                                                    cancelButtonTitle: "Cancel")
         let cameraPermissions = CameraPermissions(settingAlertConfiguration: alertConfiguration)
         let libraryPermissions = PhotoLibraryPermissions(settingAlertConfiguration: alertConfiguration)
-        let imagePicker = ImagePicker(configurationHandler: nil,
+        let imagePicker = ImagePicker(configurationHandler: {picker in
+            print(picker)
+        },
                                       cameraPermissions: cameraPermissions,
                                       libraryPermissions: libraryPermissions)
         imagePicker.imagePickerController.delegate = imagePicker
@@ -28,7 +30,9 @@ class ExampleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.imagePicker.configurationHandler = {picker in
+            print(picker)
+        }
         // Do any additional setup after loading the view.
     }
 

@@ -24,13 +24,20 @@ var imagePicker: ImagePicker = {
 
 import UIKit
 
-public typealias configurationHandler = (_ picker: UIImagePickerController) -> Void
-public typealias selectionHandler     = (_ picker: UIImagePickerController, _ mediaInfo: [String : Any]) -> Void
-public typealias cancelHandler        = (_ picker: UIImagePickerController) -> Void
+public typealias configurationHandler = (UIImagePickerController) -> Void
+public typealias selectionHandler     = (UIImagePickerController, [String : Any]) -> Void
+public typealias cancelHandler        = (UIImagePickerController) -> Void
 
 class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var imagePickerController: UIImagePickerController
+    var configurationHandler: configurationHandler? {
+        didSet {
+            if let configurationHandler = self.configurationHandler {
+                configurationHandler(self.imagePickerController)
+            }
+        }
+    }
     fileprivate var selectionHandler: selectionHandler?
     fileprivate var cancelHandler: cancelHandler?
     fileprivate var cameraPermissions: CameraPermissions
@@ -43,8 +50,9 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         self.imagePickerController = UIImagePickerController()
         self.cameraPermissions = cameraPermissions
         self.libraryPermissions = libraryPermissions
-        if let configurationHandler = configurationHandler {
-            configurationHandler(self.imagePickerController)
+        self.configurationHandler = configurationHandler
+        if let config = self.configurationHandler {
+            config(self.imagePickerController)
         }
     }
     
