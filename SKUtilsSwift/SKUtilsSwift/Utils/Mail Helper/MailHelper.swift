@@ -11,8 +11,12 @@ import MessageUI
 
 class MailHelper: NSObject {
 
-    public func showComposer() {
-        
+    static func mailComposer() -> MFMailComposeViewController? {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposerVC = MFMailComposeViewController()
+            return mailComposerVC
+        }
+        return nil
     }
     
 }

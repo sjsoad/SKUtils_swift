@@ -24,6 +24,8 @@ class ExampleViewController: UIViewController {
         return imagePicker
     }()
     
+    var mailComposer = MailHelper.mailComposer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,10 @@ class ExampleViewController: UIViewController {
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
-        
+        if let mail = mailComposer {
+            self .present(mail,
+                          animated: true,
+                          completion: nil)
+        }
     }
 }

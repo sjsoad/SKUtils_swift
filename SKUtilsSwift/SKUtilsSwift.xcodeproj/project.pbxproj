@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
+		047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */; };
+		047BB2381DCB39DE00C6B8A3 /* AlertPresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2371DCB39DE00C6B8A3 /* AlertPresentationProtocol.swift */; };
 		048A7F8D1DC9E20C00DF1E7A /* WindowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */; };
 		048A7F8F1DC9E69100DF1E7A /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */; };
 		048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */; };
@@ -54,7 +56,6 @@
 		A5ACAD641DC7B146006AEC3F /* AlertController+PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */; };
 		A5ACAD661DC7B18B006AEC3F /* PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACAD651DC7B18B006AEC3F /* PresentationProtocol.swift */; };
 		A5ACAD681DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACAD671DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift */; };
-		A5ACAD6A1DC7B4CE006AEC3F /* MailComposer+PresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACAD691DC7B4CE006AEC3F /* MailComposer+PresentableProtocol.swift */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		045970A41D64B26100C45A1D /* testJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testJSON.txt; path = Resources/testJSON.txt; sourceTree = "<group>"; };
+		047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBuilder.swift; sourceTree = "<group>"; };
+		047BB2371DCB39DE00C6B8A3 /* AlertPresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationProtocol.swift; sourceTree = "<group>"; };
 		0484BCEB1D3FCEFB00885A38 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "Pods/../build/Debug-iphoneos/Spring/Spring.framework"; sourceTree = "<group>"; };
 		048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowBuilder.swift; sourceTree = "<group>"; };
 		048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
@@ -135,7 +138,6 @@
 		A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController+PresentationProtocol.swift"; sourceTree = "<group>"; };
 		A5ACAD651DC7B18B006AEC3F /* PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationProtocol.swift; sourceTree = "<group>"; };
 		A5ACAD671DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagePickerController+PresentationProtocol.swift"; sourceTree = "<group>"; };
-		A5ACAD691DC7B4CE006AEC3F /* MailComposer+PresentableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MailComposer+PresentableProtocol.swift"; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF211D3802D600EB7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A5ADBF241D3802D600EB7212 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */,
 				048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */,
+				047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -420,7 +423,6 @@
 				A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */,
 				A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */,
 				A5ACAD671DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift */,
-				A5ACAD691DC7B4CE006AEC3F /* MailComposer+PresentableProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				A5ACAD651DC7B18B006AEC3F /* PresentationProtocol.swift */,
+				047BB2371DCB39DE00C6B8A3 /* AlertPresentationProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				TargetAttributes = {
 					A5ADBF161D3802D500EB7212 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = URM2H9Q872;
 						LastSwiftMigration = 0800;
 					};
 					A5ADBF2A1D3802D600EB7212 = {
@@ -784,6 +788,7 @@
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */,
+				047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */,
 				A5ACAD641DC7B146006AEC3F /* AlertController+PresentationProtocol.swift in Sources */,
 				A5210D361DC4FF77002EFC23 /* EqualStringsValidator.swift in Sources */,
 				A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */,
@@ -802,7 +807,6 @@
 				A5210D241DC4F5A2002EFC23 /* FRCDataSource.swift in Sources */,
 				A5210D221DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift in Sources */,
 				A5210D051DC4F589002EFC23 /* PushNotificationsService.swift in Sources */,
-				A5ACAD6A1DC7B4CE006AEC3F /* MailComposer+PresentableProtocol.swift in Sources */,
 				A5ACAD681DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift in Sources */,
 				048A7F8D1DC9E20C00DF1E7A /* WindowBuilder.swift in Sources */,
 				A5210D251DC4F5A2002EFC23 /* AbstractDataSource.swift in Sources */,
@@ -817,6 +821,7 @@
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
 				A5210D071DC4F589002EFC23 /* BluetoothPermissions.swift in Sources */,
 				A526BEFA1D7DD8C600C3AA13 /* TextFieldAccessoryView.swift in Sources */,
+				047BB2381DCB39DE00C6B8A3 /* AlertPresentationProtocol.swift in Sources */,
 				A5210D2D1DC4F5D2002EFC23 /* DesignableViewExtension.swift in Sources */,
 				A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */,
 				A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */,
@@ -952,6 +957,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = URM2H9Q872;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
@@ -961,7 +967,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biudee.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -976,6 +982,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = URM2H9Q872;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Spring",
@@ -985,7 +992,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sk.SKUtilsSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biudee.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;

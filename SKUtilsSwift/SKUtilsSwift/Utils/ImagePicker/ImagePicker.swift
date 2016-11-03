@@ -84,10 +84,11 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         case .permissionsNotAsked:
             permissionsRequest.requestPermissions(handler: { (state) in
                 if state == .permissionsGranted {
-    //WARNING: - not showing
+                DispatchQueue.main.async {
                         self.process(permissionsState: state,
                                      permissionsRequest: permissionsRequest,
                                      completionHandler:  completionHandler)
+                    }
                 }
             })
             break

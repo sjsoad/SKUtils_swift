@@ -13,14 +13,13 @@ public typealias completionHandler = () -> Void
 protocol PresentationProtocol {
     
     func show(animated: Bool, completion: completionHandler?)
-    
 }
 
 extension PresentationProtocol {
     
     func show(animated: Bool, completion: completionHandler?) {
         let controller = UIViewController()
-        _ = WindowBuilder.alertWindow(rootController: controller)
+        _ = WindowBuilder.normalWindow(rootController: controller)
         controller.present(self as! UIViewController,
                            animated: true,
                            completion: completion)

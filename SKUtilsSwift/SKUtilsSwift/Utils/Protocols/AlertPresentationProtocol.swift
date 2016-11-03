@@ -1,23 +1,27 @@
 //
-//  MailComposer+PresentableProtocol.swift
+//  AlertPresentationProtocol.swift
 //  SKUtilsSwift
 //
-//  Created by Sergey Kostyan on 31.10.16.
+//  Created by Mac on 03.11.16.
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
 import UIKit
-import MessageUI
 
-extension MFMailComposeViewController: PresentationProtocol {
+protocol AlertPresentationProtocol: PresentationProtocol {
+    
+}
 
+extension AlertPresentationProtocol {
+    
     func show(animated: Bool, completion: completionHandler?) {
         let controller = UIViewController()
-        _ = WindowBuilder.normalWindow(rootController: controller)
-        controller.present(self,
+        _ = WindowBuilder.alertWindow(rootController: controller)
+        controller.present(self as! UIViewController,
                            animated: true,
                            completion: completion)
         
     }
     
 }
+
