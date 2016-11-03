@@ -38,10 +38,10 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
             }
         }
     }
-    fileprivate var selectionHandler: selectionHandler?
-    fileprivate var cancelHandler: cancelHandler?
-    fileprivate var cameraPermissions: CameraPermissions
-    fileprivate var libraryPermissions: PhotoLibraryPermissions
+    var selectionHandler: selectionHandler?
+    var cancelHandler: cancelHandler?
+    var cameraPermissions: CameraPermissions
+    var libraryPermissions: PhotoLibraryPermissions
     
     init(configurationHandler: configurationHandler?,
          cameraPermissions: CameraPermissions,
