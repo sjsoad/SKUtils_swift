@@ -21,8 +21,6 @@ class MailBuilder: NSObject {
         if let body = body {
             mailComposerVC.setMessageBody(body, isHTML: isHTML)
         }
-//        mailComposerVC.setSubject(subject)
-        
         
     }
     

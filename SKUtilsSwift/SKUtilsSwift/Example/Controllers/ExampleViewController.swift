@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class ExampleViewController: UIViewController {
+class ExampleViewController: UIViewController, MailProtocol {
 
     var imagePicker: ImagePicker = {
         let alertConfiguration = AlertConfigurator(title: "Service",
@@ -25,8 +26,6 @@ class ExampleViewController: UIViewController {
         imagePicker.imagePickerController.delegate = imagePicker
         return imagePicker
     }()
-    
-    var mailComposer = MailHelper.mailComposer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +47,7 @@ class ExampleViewController: UIViewController {
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
-        if let mail = mailComposer {
-            self .present(mail,
-                          animated: true,
-                          completion: nil)
-        }
+        self.mailComposer.setSubject("Bla-Bla-Bla")
+        self.showMailComposer(animated: true, completion: nil)
     }
 }

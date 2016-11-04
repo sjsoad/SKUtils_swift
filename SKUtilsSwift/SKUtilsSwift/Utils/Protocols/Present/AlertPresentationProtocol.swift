@@ -8,6 +8,8 @@
 
 import UIKit
 
+//public typealias completionHandler = () -> Void
+
 protocol AlertPresentationProtocol: PresentationProtocol {
     
 }
