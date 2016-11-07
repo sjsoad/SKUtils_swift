@@ -4,11 +4,8 @@ ToDo:
 
 High priority:
 - SKDatePickerTextField
-- Image Picker
 
 Minor priority:
-- Categories
-- Other managers
 - ImageViewer
 
 Bonus:
