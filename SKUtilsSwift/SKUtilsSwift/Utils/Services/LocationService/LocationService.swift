@@ -77,7 +77,7 @@ class LocationService: NSObject {
             self.locationManager.startUpdatingLocation()
         }
         if updatingHeading {
-            self.locationManager.stopUpdatingHeading()
+            self.locationManager.startUpdatingHeading()
         }
     }
     

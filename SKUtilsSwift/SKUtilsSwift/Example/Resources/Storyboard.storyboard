@@ -38,14 +38,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q5r-vy-zFB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-fb-rDI">
-                                <rect key="frame" x="168" y="323.5" width="39" height="20.5"/>
+                                <rect key="frame" x="168" y="256.5" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idV-HG-bFI">
-                                <rect key="frame" x="142.5" y="352" width="89" height="30"/>
+                                <rect key="frame" x="142.5" y="318.5" width="89" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Image Picker"/>
                                 <connections>
                                     <action selector="imagePickerButtonPressed:" destination="GUE-iF-1U9" eventType="touchUpInside" id="1Gb-Ag-AWb"/>
@@ -53,6 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thr-M6-GnH">
                                 <rect key="frame" x="172" y="385" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Mail"/>
                                 <connections>
                                     <action selector="mailButtonPressed:" destination="GUE-iF-1U9" eventType="touchUpInside" id="Dst-JR-ViY"/>
@@ -61,19 +66,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fr1-fb-rDI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" id="Ctf-44-wG5"/>
+                            <constraint firstAttribute="trailing" secondItem="q5r-vy-zFB" secondAttribute="trailing" id="AIw-cr-XzC"/>
+                            <constraint firstItem="fr1-fb-rDI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" multiplier="0.8" id="Ctf-44-wG5"/>
+                            <constraint firstItem="q5r-vy-zFB" firstAttribute="leading" secondItem="iWy-Ro-tFJ" secondAttribute="leading" id="WPY-ZP-gnw"/>
                             <constraint firstItem="fr1-fb-rDI" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="cU6-gD-edU"/>
                             <constraint firstItem="thr-M6-GnH" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="eDj-SH-h8U"/>
                             <constraint firstItem="thr-M6-GnH" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" multiplier="1.2" id="fhZ-n5-7Zb"/>
-                            <constraint firstItem="idV-HG-bFI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" multiplier="1.1" id="hzZ-r6-ghq"/>
+                            <constraint firstItem="idV-HG-bFI" firstAttribute="centerY" secondItem="iWy-Ro-tFJ" secondAttribute="centerY" id="hzZ-r6-ghq"/>
+                            <constraint firstItem="lbL-sJ-tDa" firstAttribute="top" secondItem="q5r-vy-zFB" secondAttribute="bottom" id="iM5-lN-afR"/>
                             <constraint firstItem="idV-HG-bFI" firstAttribute="centerX" secondItem="iWy-Ro-tFJ" secondAttribute="centerX" id="ohD-Cw-as1"/>
+                            <constraint firstItem="q5r-vy-zFB" firstAttribute="top" secondItem="iWy-Ro-tFJ" secondAttribute="top" id="xSj-bn-FL9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="es8-iN-qH0"/>
+                    <connections>
+                        <outlet property="imageView" destination="q5r-vy-zFB" id="x9E-kT-CBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0Y-e4-HRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="182"/>
+            <point key="canvasLocation" x="188" y="181.25937031484258"/>
         </scene>
     </scenes>
 </document>

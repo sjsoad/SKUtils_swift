@@ -11,6 +11,8 @@ import MessageUI
 
 class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     var imagePicker: ImagePicker = {
         let alertTitles = AlertTitles(title: "Service",
                                       message: "Service is disabled! Please turn on it in Settings",
@@ -40,8 +42,15 @@ class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewCo
         // Dispose of any resources that can be recreated.
     }
     
+    func applyImage(image: UIImage?) {
+        self.imageView.image = image
+    }
+    
     @IBAction func imagePickerButtonPressed(_ sender: Any) {
-        imagePicker.show(selectionHandler: nil,
+        imagePicker.show(selectionHandler: { [weak self] (picker, mediaInfo) in
+            let image = mediaInfo[UIImagePickerControllerOriginalImage] as? UIImage
+            self?.applyImage(image: image)
+        },
                          cancelHandler: nil,
                          completionHandler: nil)
     }
