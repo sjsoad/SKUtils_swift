@@ -8,16 +8,16 @@
 
 import UIKit
 
-public typealias completionHandler = () -> Void
+public typealias CompletionHandler = () -> Void
 
 protocol PresentationProtocol {
     
-    func show(animated: Bool, completion: completionHandler?)
+    func show(animated: Bool, completion: CompletionHandler?)
 }
 
 extension PresentationProtocol {
     
-    func show(animated: Bool, completion: completionHandler?) {
+    func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
         _ = WindowBuilder.normalWindow(rootController: controller)
         controller.present(self as! UIViewController,

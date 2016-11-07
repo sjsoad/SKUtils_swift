@@ -8,9 +8,9 @@
 
 import UIKit
 
-public typealias handler = (PermissionsState) -> Void
+public typealias Handler = (PermissionsState) -> Void
 
 protocol RequestPermissions {
     
-    func requestPermissions(handler: @escaping handler)
+    func requestPermissions(handler: @escaping Handler)
 }

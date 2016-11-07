@@ -9,15 +9,15 @@
 import UIKit
 import MessageUI
 
-class ExampleViewController: UIViewController, MailProtocol {
+class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewControllerDelegate {
 
     var imagePicker: ImagePicker = {
-        let alertConfiguration = AlertConfigurator(title: "Service",
-                                                   message: "Service is disabled! Please turn on it in Settings",
-                                                   settingsButtonTitle: "Go to Settings",
-                                                   cancelButtonTitle: "Cancel")
-        let cameraPermissions = CameraPermissions(settingAlertConfiguration: alertConfiguration)
-        let libraryPermissions = PhotoLibraryPermissions(settingAlertConfiguration: alertConfiguration)
+        let alertTitles = AlertTitles(title: "Service",
+                                      message: "Service is disabled! Please turn on it in Settings",
+                                      actionButtonTitle: "Go to Settings",
+                                      cancelButtonTitle: "Cancel")
+        let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
+        let libraryPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
         let imagePicker = ImagePicker(configurationHandler: {picker in
             print(picker)
         },
@@ -47,7 +47,15 @@ class ExampleViewController: UIViewController, MailProtocol {
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
-        self.mailComposer.setSubject("Bla-Bla-Bla")
-        self.showMailComposer(animated: true, completion: nil)
+        self.showMailComposer(animated: true, configurationHandler: { (mailComposer) in
+            mailComposer.setSubject("someSubject")
+            mailComposer.mailComposeDelegate = self
+        }, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult,
+                               error: Error?) {
+        controller .dismiss(animated: true, completion: nil)
     }
 }

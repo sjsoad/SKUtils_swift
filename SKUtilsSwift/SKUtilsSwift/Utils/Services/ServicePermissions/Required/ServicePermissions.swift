@@ -9,9 +9,16 @@
 import Foundation
 import UIKit
 
+struct AlertTitles {
+    var title : String
+    var message : String
+    var actionButtonTitle : String
+    var cancelButtonTitle : String
+}
+
 protocol ServicePermissions {
     
-    var alertConfiguration: AlertConfigurator { get }
+    var alertTitles: AlertTitles { get }
     func permissionsState() -> PermissionsState
     func showSettingsAlert()
     func openSettings()
@@ -20,18 +27,18 @@ protocol ServicePermissions {
 extension ServicePermissions {
     
     func showSettingsAlert() {
-        let alert = UIAlertController.init(title: alertConfiguration.title,
-                                           message: alertConfiguration.message,
-                                           preferredStyle: .alert)
-        let settingsAction = UIAlertAction.init(title: alertConfiguration.settingsButtonTitle,
-                                                style: .default) { (action) in
-                                                    self.openSettings()
-        }
-        let cancelAction = UIAlertAction.init(title: alertConfiguration.cancelButtonTitle,
-                                              style: .cancel,
-                                              handler: nil)
-        alert.addAction(settingsAction)
-        alert.addAction(cancelAction)
+        let settingsAction = AlertActionBuilder.defaultAction(title: alertTitles.actionButtonTitle)
+        let cancelAction = AlertActionBuilder.cancelAction(title: alertTitles.cancelButtonTitle)
+        let alertConfigurator = AlertConfigurator(title: alertTitles.title,
+                                                  message: alertTitles.message,
+                                                  actions: [settingsAction, cancelAction],
+                                                  actionHandler: { (action, index, controller) in
+                                                    if index == 0 {
+                                                        self.openSettings()
+                                                    }
+        },
+                                                  preferredStyle: .alert)
+        let alert = AlertBuilder.alert(configurator: alertConfigurator)
         alert.show(animated: true, completion: nil)
     }
     

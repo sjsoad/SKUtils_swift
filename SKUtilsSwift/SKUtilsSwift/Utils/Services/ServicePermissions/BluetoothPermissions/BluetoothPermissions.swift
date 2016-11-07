@@ -11,10 +11,10 @@ import CoreBluetooth
 
 class BluetoothPermissions: NSObject, ServicePermissions  {
 
-    var alertConfiguration: AlertConfigurator
+    var alertTitles: AlertTitles
     
-    init(settingAlertConfiguration: AlertConfigurator) {
-        self.alertConfiguration = settingAlertConfiguration
+    init(settingAlertTitles: AlertTitles) {
+        self.alertTitles = settingAlertTitles
     }
     
     func permissionsState() -> PermissionsState {

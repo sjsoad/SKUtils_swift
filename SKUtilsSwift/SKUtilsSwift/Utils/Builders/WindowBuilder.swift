@@ -19,8 +19,8 @@ class WindowBuilder: NSObject {
         return WindowBuilder.window(windowLevel: UIWindowLevelNormal,
                                     rootController: rootController)
     }
- 
-    private static func window(windowLevel: UIWindowLevel,
+    
+    static func window(windowLevel: UIWindowLevel,
                                rootController: UIViewController?) -> UIWindow {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.windowLevel = windowLevel;

@@ -16,6 +16,8 @@
 		048A7F8F1DC9E69100DF1E7A /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */; };
 		048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
+		04F37EB81DD0ABC4001CA0AF /* AlertActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F37EB71DD0ABC4001CA0AF /* AlertActionBuilder.swift */; };
+		04F37EBA1DD0AEEF001CA0AF /* AlertAction+Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F37EB91DD0AEEF001CA0AF /* AlertAction+Handler.swift */; };
 		53EC6457C8851607D3356FB7 /* Pods_SKUtilsSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */; };
 		A5210D031DC4F589002EFC23 /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CEC1DC4F588002EFC23 /* FCMService.swift */; };
 		A5210D041DC4F589002EFC23 /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5210CEE1DC4F588002EFC23 /* APNSService.swift */; };
@@ -95,6 +97,8 @@
 		048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleViewController.swift; path = Controllers/ExampleViewController.swift; sourceTree = "<group>"; };
 		049161EF1D3E05A000E01686 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EBCC491D5384BC00CDA8F6 /* SWMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWMessages.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-csnlhtvwnfjzdbequgsgifrpbkpk/Build/Products/Debug-iphonesimulator/SWMessages/SWMessages.framework"; sourceTree = "<group>"; };
+		04F37EB71DD0ABC4001CA0AF /* AlertActionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionBuilder.swift; sourceTree = "<group>"; };
+		04F37EB91DD0AEEF001CA0AF /* AlertAction+Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertAction+Handler.swift"; sourceTree = "<group>"; };
 		97DCB33A753439CD14F85792 /* Pods_SKUtilsSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SKUtilsSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5210CEC1DC4F588002EFC23 /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
 		A5210CEE1DC4F588002EFC23 /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 			children = (
 				048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */,
 				048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */,
+				04F37EB71DD0ABC4001CA0AF /* AlertActionBuilder.swift */,
 				047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */,
 			);
 			path = Builders;
@@ -432,6 +437,7 @@
 				A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */,
 				A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */,
 				A5ACAD671DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift */,
+				04F37EB91DD0AEEF001CA0AF /* AlertAction+Handler.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -813,6 +819,7 @@
 				A5210D241DC4F5A2002EFC23 /* FRCDataSource.swift in Sources */,
 				A5210D221DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift in Sources */,
 				A5210D051DC4F589002EFC23 /* PushNotificationsService.swift in Sources */,
+				04F37EBA1DD0AEEF001CA0AF /* AlertAction+Handler.swift in Sources */,
 				A5ACAD681DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift in Sources */,
 				048A7F8D1DC9E20C00DF1E7A /* WindowBuilder.swift in Sources */,
 				A5210D251DC4F5A2002EFC23 /* AbstractDataSource.swift in Sources */,
@@ -824,6 +831,7 @@
 				A5210D211DC4F5A2002EFC23 /* ArrayDataSource.swift in Sources */,
 				A5210D2E1DC4F5D2002EFC23 /* RandomNumberExtension.swift in Sources */,
 				048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */,
+				04F37EB81DD0ABC4001CA0AF /* AlertActionBuilder.swift in Sources */,
 				A5210D0A1DC4F589002EFC23 /* LocationPermissions.swift in Sources */,
 				A526BEFB1D7DD8C600C3AA13 /* BaseTextField.swift in Sources */,
 				A5210D071DC4F589002EFC23 /* BluetoothPermissions.swift in Sources */,

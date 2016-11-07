@@ -11,17 +11,7 @@ import MessageUI
 
 class MailBuilder: NSObject {
 
-    func mailComposer(body: String?,
-                      isHTML: Bool,
-                      subject: String?,
-                      toRecipients: [String]?,
-                      ccRecipients: [String]?,
-                      bccRecipients: [String]?) {
-        let mailComposerVC = MFMailComposeViewController()
-        if let body = body {
-            mailComposerVC.setMessageBody(body, isHTML: isHTML)
-        }
-        
+    static func mailComposer() -> MFMailComposeViewController {
+        return MFMailComposeViewController()
     }
-    
 }

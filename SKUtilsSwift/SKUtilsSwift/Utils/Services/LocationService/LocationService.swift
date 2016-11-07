@@ -13,16 +13,16 @@
  Add this property to yoor class and init it with valid arguments, add delegate and enjoy.
 
 var locationSerice: LocationService = {
-    let alertConfiguration = AlertConfigurator(title: "Location Service",
-                                               message: "Location service is disabled! Please turn on it in Settings",
-                                               settingsButtonTitle: "Go to Settings",
-                                               cancelButtonTitle: "Cancel")
-    let locationPermissions = LocationPermissions(settingAlertConfiguration: alertConfiguration)
+    let alertTitles = AlertTitles(title: "Location Service",
+                                  message: "Location service is disabled! Please turn on it in Settings",
+                                  actionButtonTitle: "Go to Settings",
+                                  cancelButtonTitle: "Cancel")
+    let locationPermissions = LocationPermissions(settingAlertTitles: alertTitles)
     let locationSerice = LocationService(withLocationUsage: .requestAlwaysAuthorization,
                                          locationPermissions: locationPermissions)
     return locationSerice
 }()
----------------------------------------------------------------------------------------------------------------------------- */
+ /---------------------------------------------------------------------------------------------------------------------------- */
 
 import UIKit
 import CoreLocation

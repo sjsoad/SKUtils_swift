@@ -9,35 +9,29 @@
 import UIKit
 import MessageUI
 
-//public typealias completionHandler = () -> Void
+public typealias MailConfigurator = (MFMailComposeViewController) -> Void
 
-protocol MailProtocol: MFMailComposeViewControllerDelegate {
+protocol MailProtocol {
 
-    var mailComposer: MFMailComposeViewController { get }
-    func showMailComposer(animated: Bool, completion: completionHandler?)
+    func showMailComposer(animated: Bool,
+                          configurationHandler: MailConfigurator?,
+                          completion: CompletionHandler?)
     
 }
 
 extension MailProtocol {
     
-    var mailComposer: MFMailComposeViewController {
-        let composer = MFMailComposeViewController()
-        composer.mailComposeDelegate = self
-        return composer
-    }
-    
-    func showMailComposer(animated: Bool, completion: completionHandler?) {
+    func showMailComposer(animated: Bool,
+                          configurationHandler: MailConfigurator?,
+                          completion: CompletionHandler?) {
         if let vc = self as? UIViewController {
-            vc.present(mailComposer,
+            let mail = MailBuilder.mailComposer()
+            if let confoguration = configurationHandler {
+                confoguration(mail)
+            }
+            vc.present(mail,
                        animated: animated,
                        completion: completion)
         }
     }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController,
-                               didFinishWith result: MFMailComposeResult,
-                               error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
 }

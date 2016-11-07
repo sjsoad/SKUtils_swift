@@ -16,13 +16,12 @@ protocol AlertPresentationProtocol: PresentationProtocol {
 
 extension AlertPresentationProtocol {
     
-    func show(animated: Bool, completion: completionHandler?) {
+    func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
         _ = WindowBuilder.alertWindow(rootController: controller)
         controller.present(self as! UIViewController,
                            animated: true,
                            completion: completion)
-        
     }
     
 }
