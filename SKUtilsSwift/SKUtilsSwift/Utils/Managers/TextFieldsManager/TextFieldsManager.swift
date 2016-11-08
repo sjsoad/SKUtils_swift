@@ -11,9 +11,9 @@ import UIKit
 let kAnimationDuration = 0.25
 
 class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
-
+    
     var textFields : [AnyObject] = Array()
-
+    
     @IBOutlet var scroll : UIScrollView? = nil {
         didSet {
             self.getTextFieldsInView(scroll)
@@ -68,13 +68,13 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     func subscribeForKeyboardNotifications() -> Void {
         NotificationCenter.default.addObserver(self,
-                                                         selector: #selector(TextFieldsManager.keyboardWillShow),
-                                                         name: NSNotification.Name.UIKeyboardWillShow,
-                                                         object: nil)
+                                               selector: #selector(TextFieldsManager.keyboardWillShow),
+                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               object: nil)
         NotificationCenter.default.addObserver(self,
-                                                         selector: #selector(TextFieldsManager.keyboardWillHide),
-                                                         name: NSNotification.Name.UIKeyboardWillHide,
-                                                         object: nil)
+                                               selector: #selector(TextFieldsManager.keyboardWillHide),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
     }
     
     //MARK: - Handle keyboard notifications
@@ -86,16 +86,16 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                     scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
                     self.scrollToActiveTextField(rect.size.height)
                 }
-            }) 
+            })
         }
     }
     
     func keyboardWillHide(_ notification: Notification) -> Void {
-        UIView.animate(withDuration: kAnimationDuration, animations: { 
+        UIView.animate(withDuration: kAnimationDuration, animations: {
             if let scroll = self.scroll {
                 scroll.contentInset = UIEdgeInsets.zero
             }
-        }) 
+        })
     }
     
     //MARK: - Other functions
@@ -124,7 +124,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         if let activeTextField = self.firstResponder() {
             if let scrollView = self.scroll {
                 let frame = scrollView.convert(activeTextField.bounds,
-                                                   from: activeTextField)
+                                               from: activeTextField)
                 scrollView.scrollRectToVisible(frame, animated: true)
             }
         }

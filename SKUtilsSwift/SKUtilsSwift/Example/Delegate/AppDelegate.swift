@@ -28,9 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.locationSerice.start(updatingLocation: true,
-                                  updatingHeading: true)
-        self.locationSerice.locationManager.delegate = self;
+        self.locationSerice.startUpdatingLocation()
+        self.locationSerice.delegate = self;
 //        DatabaseManager.configureRealm()
 //        DatabaseManager.mapTestJSONToDatabase()
         

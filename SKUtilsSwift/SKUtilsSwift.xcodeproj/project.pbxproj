@@ -213,9 +213,9 @@
 		049161EB1D3E05A000E01686 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				049161EE1D3E05A000E01686 /* Delegate */,
 				A550FA2F1DA0105C00451249 /* ViewControllers */,
 				0459709F1D64B1F100C45A1D /* Resources */,
-				049161EE1D3E05A000E01686 /* Delegate */,
 			);
 			path = Example;
 			sourceTree = "<group>";

@@ -7,22 +7,22 @@
 //
 
 /* -------------------------------------------------------------------------------------------------------------------------
-var imagePicker: ImagePicker = {
-    let alertTitles = AlertTitles(title: "Service",
-                                  message: "Service is disabled! Please turn on it in Settings",
-                                  actionButtonTitle: "Go to Settings",
-                                  cancelButtonTitle: "Cancel")
-    let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
-    let libraryPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
-    let imagePicker = ImagePicker(configurationHandler: {picker in
-        print(picker)
-    },
-                                  cameraPermissions: cameraPermissions,
-                                  libraryPermissions: libraryPermissions)
-    imagePicker.imagePickerController.delegate = imagePicker
-    return imagePicker
-}()
----------------------------------------------------------------------------------------------------------------------------- */
+ var imagePicker: ImagePicker = {
+ let alertTitles = AlertTitles(title: "Service",
+ message: "Service is disabled! Please turn on it in Settings",
+ actionButtonTitle: "Go to Settings",
+ cancelButtonTitle: "Cancel")
+ let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
+ let libraryPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
+ let imagePicker = ImagePicker(configurationHandler: {picker in
+ print(picker)
+ },
+ cameraPermissions: cameraPermissions,
+ libraryPermissions: libraryPermissions)
+ imagePicker.imagePickerController.delegate = imagePicker
+ return imagePicker
+ }()
+ ---------------------------------------------------------------------------------------------------------------------------- */
 
 import UIKit
 
@@ -30,16 +30,16 @@ public typealias PickerConfigurator = (UIImagePickerController) -> Void
 public typealias SelectionHandler     = (UIImagePickerController, [String : Any]) -> Void
 public typealias CancelHandler        = (UIImagePickerController) -> Void
 
-class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    var imagePickerController: UIImagePickerController
+class ImagePicker: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     var configurationHandler: PickerConfigurator? {
         didSet {
             if let configurationHandler = self.configurationHandler {
-                configurationHandler(self.imagePickerController)
+                configurationHandler(self)
             }
         }
     }
+    
     var selectionHandler: SelectionHandler?
     var cancelHandler: CancelHandler?
     var cameraPermissions: CameraPermissions
@@ -49,13 +49,13 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
          cameraPermissions: CameraPermissions,
          libraryPermissions: PhotoLibraryPermissions) {
         
-        self.imagePickerController = UIImagePickerController()
         self.cameraPermissions = cameraPermissions
         self.libraryPermissions = libraryPermissions
         self.configurationHandler = configurationHandler
-        if let config = self.configurationHandler {
-            config(self.imagePickerController)
-        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func show(selectionHandler: SelectionHandler?,
@@ -63,7 +63,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
               completionHandler: CompletionHandler?) {
         self.selectionHandler = selectionHandler;
         self.cancelHandler = cancelHandler;
-        switch self.imagePickerController.sourceType {
+        switch self.sourceType {
         case .photoLibrary, .savedPhotosAlbum:
             self.showLibrary(completionHandler: completionHandler)
             break
@@ -86,7 +86,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
                      permissionsRequest: self.libraryPermissions,
                      completionHandler:  completionHandler)
     }
-
+    
     fileprivate func process(permissionsState: PermissionsState,
                              permissionsRequest: RequestPermissions,
                              completionHandler: CompletionHandler?) {
@@ -94,7 +94,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         case .permissionsNotAsked:
             permissionsRequest.requestPermissions(handler: { (state) in
                 if state == .permissionsGranted {
-                DispatchQueue.main.async {
+                    DispatchQueue.main.async {
                         self.process(permissionsState: state,
                                      permissionsRequest: permissionsRequest,
                                      completionHandler:  completionHandler)
@@ -103,20 +103,20 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
             })
             break
         case .permissionsGranted:
-            self.imagePickerController.show(animated: true,
-                                            completion: completionHandler)
+            self.show(animated: true,
+                      completion: completionHandler)
             break
         default:
             break
         }
     }
-
+    
     //MARK: - UIImagePickerControllerDelegate
-
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : Any]) {
         if let selection = self.selectionHandler {
-            selection(self.imagePickerController, info)
+            selection(self, info)
         }
         picker.dismiss(animated: true,
                        completion: nil)
@@ -124,7 +124,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         if let cancel = self.cancelHandler {
-            cancel(self.imagePickerController)
+            cancel(self)
         }
         picker.dismiss(animated: true,
                        completion: nil)

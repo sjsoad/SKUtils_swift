@@ -21,11 +21,10 @@ class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewCo
         let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
         let libraryPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
         let imagePicker = ImagePicker(configurationHandler: {picker in
-            print(picker)
         },
                                       cameraPermissions: cameraPermissions,
                                       libraryPermissions: libraryPermissions)
-        imagePicker.imagePickerController.delegate = imagePicker
+        imagePicker.delegate = imagePicker
         return imagePicker
     }()
     

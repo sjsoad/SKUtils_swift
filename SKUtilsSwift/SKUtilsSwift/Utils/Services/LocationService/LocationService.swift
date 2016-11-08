@@ -32,9 +32,7 @@ enum LocationUsage: String {
     case requestAlwaysAuthorization
 }
 
-class LocationService: NSObject {
-
-    var locationManager = CLLocationManager()
+class LocationService: CLLocationManager {
     
     fileprivate var locationUsage: LocationUsage
     fileprivate var locationPermissions: LocationPermissions
@@ -43,47 +41,25 @@ class LocationService: NSObject {
          locationPermissions: LocationPermissions) {
         self.locationUsage = locationUsage
         self.locationPermissions = locationPermissions;
+        super.init()
+        self.checkPermissions()
     }
     
     //MARK: - Public methods
     
-    func start(updatingLocation: Bool, updatingHeading: Bool) {
+    func checkPermissions() {
         switch self.locationPermissions.permissionsState() {
         case .permissionsNotAsked:
             self.askPermissions()
-            break
-        case .permissionsGranted:
-            self._start(updatingLocation: updatingLocation,
-                        updatingHeading: updatingHeading)
             break
         default:
             break
         }
     }
     
-    func stop(updatingLocation: Bool, updatingHeading: Bool) {
-        if updatingLocation {
-            self.locationManager.stopUpdatingLocation()
-        }
-        if updatingHeading {
-            self.locationManager.stopUpdatingHeading()
-        }
-    }
-    
-    //MARK: - Private methods
-    
-    fileprivate func _start(updatingLocation: Bool, updatingHeading: Bool) {
-        if updatingLocation {
-            self.locationManager.startUpdatingLocation()
-        }
-        if updatingHeading {
-            self.locationManager.startUpdatingHeading()
-        }
-    }
-    
     fileprivate func askPermissions() {
-        if locationManager.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
-            locationManager.perform(NSSelectorFromString(locationUsage.rawValue))
+        if self.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
+            self.perform(NSSelectorFromString(locationUsage.rawValue))
         }
     }
 }
