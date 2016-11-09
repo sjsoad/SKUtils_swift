@@ -30,7 +30,7 @@ public typealias PickerConfigurator = (UIImagePickerController) -> Void
 public typealias SelectionHandler     = (UIImagePickerController, [String : Any]) -> Void
 public typealias CancelHandler        = (UIImagePickerController) -> Void
 
-class ImagePicker: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImagePickerT: UIImagePickerController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var configurationHandler: PickerConfigurator? {
         didSet {

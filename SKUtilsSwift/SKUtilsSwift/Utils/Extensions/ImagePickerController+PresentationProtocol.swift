@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIImagePickerController: PresentationProtocol {
+extension UIImagePickerController: Presentation {
     
 }

@@ -1,29 +1,26 @@
 //
-//  PresentationProtocol.swift
+//  AlertPresentationProtocol.swift
 //  SKUtilsSwift
 //
-//  Created by Sergey Kostyan on 31.10.16.
+//  Created by Mac on 03.11.16.
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
 import UIKit
 
-public typealias CompletionHandler = () -> Void
-
-protocol PresentationProtocol {
+protocol AlertPresentation: Presentation {
     
-    func show(animated: Bool, completion: CompletionHandler?)
 }
 
-extension PresentationProtocol {
+extension AlertPresentation {
     
     func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
-        _ = WindowBuilder.normalWindow(rootController: controller)
+        _ = WindowBuilder.alertWindow(rootController: controller)
         controller.present(self as! UIViewController,
                            animated: true,
                            completion: completion)
-        
     }
     
 }
+

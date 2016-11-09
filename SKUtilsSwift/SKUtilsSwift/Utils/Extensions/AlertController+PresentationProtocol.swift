@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIAlertController: AlertPresentationProtocol {
+extension UIAlertController: AlertPresentation {
     
 }

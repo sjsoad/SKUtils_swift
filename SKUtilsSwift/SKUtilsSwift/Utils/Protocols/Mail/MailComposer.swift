@@ -9,9 +9,7 @@
 import UIKit
 import MessageUI
 
-public typealias MailConfigurator = (MFMailComposeViewController) -> Void
-
-protocol MailProtocol {
+protocol MailComposer {
 
     func showMailComposer(animated: Bool,
                           configurationHandler: MailConfigurator?,
@@ -19,16 +17,13 @@ protocol MailProtocol {
     
 }
 
-extension MailProtocol {
+extension MailComposer {
     
     func showMailComposer(animated: Bool,
                           configurationHandler: MailConfigurator?,
                           completion: CompletionHandler?) {
         if let vc = self as? UIViewController {
-            let mail = MailBuilder.mailComposer()
-            if let confoguration = configurationHandler {
-                confoguration(mail)
-            }
+            let mail = MailBuilder.mailComposer().configure(configurator: configurationHandler)
             vc.present(mail,
                        animated: animated,
                        completion: completion)

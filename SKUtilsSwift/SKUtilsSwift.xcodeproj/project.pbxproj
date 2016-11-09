@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
 		047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */; };
-		047BB23F1DCB6D6400C6B8A3 /* AlertPresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23C1DCB6D6400C6B8A3 /* AlertPresentationProtocol.swift */; };
-		047BB2401DCB6D6400C6B8A3 /* PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23D1DCB6D6400C6B8A3 /* PresentationProtocol.swift */; };
-		047BB2421DCB6D7000C6B8A3 /* MailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2411DCB6D7000C6B8A3 /* MailProtocol.swift */; };
+		047BB23F1DCB6D6400C6B8A3 /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23C1DCB6D6400C6B8A3 /* AlertPresentation.swift */; };
+		047BB2401DCB6D6400C6B8A3 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */; };
+		047BB2421DCB6D7000C6B8A3 /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */; };
+		0484927B1DD307C900BFD109 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927A1DD307C900BFD109 /* ImagePicker.swift */; };
+		0484927E1DD31E0400BFD109 /* ImagePickerController+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */; };
+		048492801DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */; };
 		048A7F8D1DC9E20C00DF1E7A /* WindowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */; };
 		048A7F8F1DC9E69100DF1E7A /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */; };
 		048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */; };
@@ -53,7 +56,6 @@
 		A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEEE1D7DD8C600C3AA13 /* EmailValidator.swift */; };
 		A526BF021D7DD8C600C3AA13 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */; };
 		A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */; };
-		A550FA2E1DA0073700451249 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A550FA2D1DA0073700451249 /* ImagePicker.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
 		A58C09B31D3B65D300D4A3FD /* SKValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */; };
 		A5ACAD641DC7B146006AEC3F /* AlertController+PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */; };
@@ -88,9 +90,12 @@
 /* Begin PBXFileReference section */
 		045970A41D64B26100C45A1D /* testJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testJSON.txt; path = Resources/testJSON.txt; sourceTree = "<group>"; };
 		047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBuilder.swift; sourceTree = "<group>"; };
-		047BB23C1DCB6D6400C6B8A3 /* AlertPresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentationProtocol.swift; sourceTree = "<group>"; };
-		047BB23D1DCB6D6400C6B8A3 /* PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationProtocol.swift; sourceTree = "<group>"; };
-		047BB2411DCB6D7000C6B8A3 /* MailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailProtocol.swift; sourceTree = "<group>"; };
+		047BB23C1DCB6D6400C6B8A3 /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
+		047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
+		0484927A1DD307C900BFD109 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagePickerController+Configurator.swift"; sourceTree = "<group>"; };
+		0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MFMailComposeViewController+Configurator.swift"; sourceTree = "<group>"; };
 		0484BCEB1D3FCEFB00885A38 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "Pods/../build/Debug-iphoneos/Spring/Spring.framework"; sourceTree = "<group>"; };
 		048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowBuilder.swift; sourceTree = "<group>"; };
 		048A7F8E1DC9E69100DF1E7A /* AlertBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
@@ -137,7 +142,6 @@
 		A526BEF01D7DD8C600C3AA13 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A526BF081D7DD8DD00C3AA13 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A550FA2D1DA0073700451249 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* SKValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController+PresentationProtocol.swift"; sourceTree = "<group>"; };
@@ -185,7 +189,7 @@
 		047BB2391DCB6D6400C6B8A3 /* Mail */ = {
 			isa = PBXGroup;
 			children = (
-				047BB2411DCB6D7000C6B8A3 /* MailProtocol.swift */,
+				047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */,
 			);
 			path = Mail;
 			sourceTree = "<group>";
@@ -193,10 +197,18 @@
 		047BB23B1DCB6D6400C6B8A3 /* Present */ = {
 			isa = PBXGroup;
 			children = (
-				047BB23C1DCB6D6400C6B8A3 /* AlertPresentationProtocol.swift */,
-				047BB23D1DCB6D6400C6B8A3 /* PresentationProtocol.swift */,
+				047BB23C1DCB6D6400C6B8A3 /* AlertPresentation.swift */,
+				047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */,
 			);
 			path = Present;
+			sourceTree = "<group>";
+		};
+		048492791DD307B800BFD109 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0484927A1DD307C900BFD109 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		048A7F8B1DC9E20C00DF1E7A /* Builders */ = {
@@ -437,6 +449,8 @@
 				A5210D2C1DC4F5D2002EFC23 /* RandomNumberExtension.swift */,
 				A5ACAD631DC7B146006AEC3F /* AlertController+PresentationProtocol.swift */,
 				A5ACAD671DC7B296006AEC3F /* ImagePickerController+PresentationProtocol.swift */,
+				0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */,
+				0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */,
 				04F37EB91DD0AEEF001CA0AF /* AlertAction+Handler.swift */,
 			);
 			path = Extensions;
@@ -445,6 +459,7 @@
 		A5210D321DC4F748002EFC23 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				048492791DD307B800BFD109 /* ImagePicker */,
 				047BB2391DCB6D6400C6B8A3 /* Mail */,
 				047BB23B1DCB6D6400C6B8A3 /* Present */,
 			);
@@ -512,7 +527,6 @@
 				A5210D2A1DC4F5D2002EFC23 /* Extensions */,
 				A5210D101DC4F5A2002EFC23 /* DataSources */,
 				A5210CE91DC4F588002EFC23 /* Services */,
-				A550FA2C1DA0072300451249 /* ImagePicker */,
 				A526BEE41D7DD8C600C3AA13 /* TextFieldAccessoryView */,
 				A526BEE61D7DD8C600C3AA13 /* TextFields */,
 				A526BEEA1D7DD8C600C3AA13 /* Utils */,
@@ -520,14 +534,6 @@
 				A526BEF41D7DD8C600C3AA13 /* Managers */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		A550FA2C1DA0072300451249 /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				A550FA2D1DA0073700451249 /* ImagePicker.swift */,
-			);
-			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		A550FA2F1DA0105C00451249 /* ViewControllers */ = {
@@ -799,10 +805,12 @@
 				A526BF091D7DD8DD00C3AA13 /* TextFieldsManager.swift in Sources */,
 				A5210D041DC4F589002EFC23 /* APNSService.swift in Sources */,
 				A5210D031DC4F589002EFC23 /* FCMService.swift in Sources */,
+				0484927E1DD31E0400BFD109 /* ImagePickerController+Configurator.swift in Sources */,
 				A526BEFF1D7DD8C600C3AA13 /* BaseValidator.swift in Sources */,
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */,
 				047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */,
+				0484927B1DD307C900BFD109 /* ImagePicker.swift in Sources */,
 				A5ACAD641DC7B146006AEC3F /* AlertController+PresentationProtocol.swift in Sources */,
 				A5210D361DC4FF77002EFC23 /* EqualStringsValidator.swift in Sources */,
 				A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */,
@@ -814,7 +822,7 @@
 				A5210D291DC4F5A2002EFC23 /* TableViewFRCDataSource.swift in Sources */,
 				A5210D281DC4F5A2002EFC23 /* TableViewArrayDataSource.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
-				A550FA2E1DA0073700451249 /* ImagePicker.swift in Sources */,
+				048492801DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift in Sources */,
 				A5210D271DC4F5A2002EFC23 /* SectionModel.swift in Sources */,
 				A5210D241DC4F5A2002EFC23 /* FRCDataSource.swift in Sources */,
 				A5210D221DC4F5A2002EFC23 /* CollectionViewArrayDataSource.swift in Sources */,
@@ -827,7 +835,7 @@
 				A5210D0E1DC4F589002EFC23 /* PermissionsState.swift in Sources */,
 				A5210D261DC4F5A2002EFC23 /* ConfigurableCell.swift in Sources */,
 				A526BEFC1D7DD8C600C3AA13 /* EmailTextField.swift in Sources */,
-				047BB2401DCB6D6400C6B8A3 /* PresentationProtocol.swift in Sources */,
+				047BB2401DCB6D6400C6B8A3 /* Presentation.swift in Sources */,
 				A5210D211DC4F5A2002EFC23 /* ArrayDataSource.swift in Sources */,
 				A5210D2E1DC4F5D2002EFC23 /* RandomNumberExtension.swift in Sources */,
 				048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */,
@@ -839,8 +847,8 @@
 				A5210D2D1DC4F5D2002EFC23 /* DesignableViewExtension.swift in Sources */,
 				A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */,
 				A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */,
-				047BB23F1DCB6D6400C6B8A3 /* AlertPresentationProtocol.swift in Sources */,
-				047BB2421DCB6D7000C6B8A3 /* MailProtocol.swift in Sources */,
+				047BB23F1DCB6D6400C6B8A3 /* AlertPresentation.swift in Sources */,
+				047BB2421DCB6D7000C6B8A3 /* MailComposer.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
 				A5210D091DC4F589002EFC23 /* ContactsPermissions.swift in Sources */,
 			);

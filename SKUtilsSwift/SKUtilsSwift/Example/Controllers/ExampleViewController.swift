@@ -9,30 +9,25 @@
 import UIKit
 import MessageUI
 
-class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewControllerDelegate {
+class ExampleViewController: UIViewController, MailComposer, MFMailComposeViewControllerDelegate, ImagePicker {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    var imagePicker: ImagePicker = {
+    var imagePicker = UIImagePickerController().configure(configurator: { (picker) in
+        picker.sourceType = .camera
+    })
+    var cameraPermissions: CameraPermissions?/* = {
         let alertTitles = AlertTitles(title: "Service",
                                       message: "Service is disabled! Please turn on it in Settings",
                                       actionButtonTitle: "Go to Settings",
                                       cancelButtonTitle: "Cancel")
         let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
-        let libraryPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
-        let imagePicker = ImagePicker(configurationHandler: {picker in
-        },
-                                      cameraPermissions: cameraPermissions,
-                                      libraryPermissions: libraryPermissions)
-        imagePicker.delegate = imagePicker
-        return imagePicker
-    }()
+        return cameraPermissions
+    }()*/
+    var libraryPermissions: PhotoLibraryPermissions?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imagePicker.configurationHandler = {picker in
-            print(picker)
-        }
         // Do any additional setup after loading the view.
     }
 
@@ -46,12 +41,7 @@ class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewCo
     }
     
     @IBAction func imagePickerButtonPressed(_ sender: Any) {
-        imagePicker.show(selectionHandler: { [weak self] (picker, mediaInfo) in
-            let image = mediaInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            self?.applyImage(image: image)
-        },
-                         cancelHandler: nil,
-                         completionHandler: nil)
+        self.showPicker(completionHandler: nil)
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
@@ -60,6 +50,8 @@ class ExampleViewController: UIViewController, MailProtocol, MFMailComposeViewCo
             mailComposer.mailComposeDelegate = self
         }, completion: nil)
     }
+    
+    //MARK: - MFMailComposeViewControllerDelegate
     
     func mailComposeController(_ controller: MFMailComposeViewController,
                                didFinishWith result: MFMailComposeResult,
