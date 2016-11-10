@@ -37,7 +37,9 @@ class AlertBuilder: NSObject {
         let alert = UIAlertController(title: configurator.title,
                                       message: configurator.message,
                                       preferredStyle: configurator.preferredStyle)
-        AlertBuilder.addActions(alert: alert, configurator: configurator)
+        if configurator.actionHandler != nil {
+            AlertBuilder.addActions(alert: alert, configurator: configurator)
+        }
         return alert
     }
     

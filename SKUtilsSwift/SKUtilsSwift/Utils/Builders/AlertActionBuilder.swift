@@ -16,16 +16,37 @@ class AlertActionBuilder: NSObject {
                                   handler: nil)
     }
     
+    static func cancelAction(title: String?,
+                             handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
+        return UIAlertAction.init(title: title,
+                                  style: .cancel,
+                                  handler: handler)
+    }
+    
     static func destructiveAction(title: String?) -> UIAlertAction {
         return UIAlertAction.init(title: title,
                                   style: .destructive,
                                   handler: nil)
+    }
+    
+    static func destructiveAction(title: String?,
+                                  handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
+        return UIAlertAction.init(title: title,
+                                  style: .destructive,
+                                  handler: handler)
     }
 
     static func defaultAction(title: String?) -> UIAlertAction {
         return UIAlertAction.init(title: title,
                                   style: .default,
                                   handler: nil)
+    }
+    
+    static func defaultAction(title: String?,
+                              handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
+        return UIAlertAction.init(title: title,
+                                  style: .default,
+                                  handler: handler)
     }
     
 }

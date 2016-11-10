@@ -41,7 +41,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                 if subView.isKind(of: UITextField.self) {
                     let textField = subView as! UITextField
                     textField.addTarget(self,
-                                        action: #selector(TextFieldsManager.textFieldReturnButtonPressed),
+                                        action: #selector(TextFieldsManager.returnButtonPressed),
                                         for: UIControlEvents.editingDidEndOnExit)
                     self.textFields.append(textField)
                 }
@@ -100,7 +100,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     //MARK: - Other functions
     
-    func textFieldReturnButtonPressed(_ textField: UITextField) -> Void {
+     func returnButtonPressed(_ textField: UITextField) -> Void {
         self.sortTextFieldsByY()
         if let index = self.textFields.index(where: {$0 === textField}) {
             let newIndex = index + 1
@@ -120,7 +120,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    func scrollToActiveTextField(_ keyboardHeight: CGFloat) -> Void {
+    fileprivate func scrollToActiveTextField(_ keyboardHeight: CGFloat) -> Void {
         if let activeTextField = self.firstResponder() {
             if let scrollView = self.scroll {
                 let frame = scrollView.convert(activeTextField.bounds,
