@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044F24F01DD4D06400944819 /* AppDelegate+LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F24EF1DD4D06400944819 /* AppDelegate+LocationService.swift */; };
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
 		047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */; };
 		047BB23F1DCB6D6400C6B8A3 /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23C1DCB6D6400C6B8A3 /* AlertPresentation.swift */; };
 		047BB2401DCB6D6400C6B8A3 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */; };
-		047BB2421DCB6D7000C6B8A3 /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */; };
-		0484927B1DD307C900BFD109 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927A1DD307C900BFD109 /* ImagePicker.swift */; };
+		04828AB21DD5A6230030DB08 /* UIViewController+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04828AB11DD5A6230030DB08 /* UIViewController+AppDelegate.swift */; };
 		0484927E1DD31E0400BFD109 /* ImagePickerController+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */; };
 		048492801DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */; };
 		048A7F8D1DC9E20C00DF1E7A /* WindowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F8C1DC9E20C00DF1E7A /* WindowBuilder.swift */; };
@@ -88,12 +88,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		044F24EF1DD4D06400944819 /* AppDelegate+LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LocationService.swift"; sourceTree = "<group>"; };
 		045970A41D64B26100C45A1D /* testJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = testJSON.txt; path = Resources/testJSON.txt; sourceTree = "<group>"; };
 		047BB2351DCB34AA00C6B8A3 /* MailBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBuilder.swift; sourceTree = "<group>"; };
 		047BB23C1DCB6D6400C6B8A3 /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
 		047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
-		047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
-		0484927A1DD307C900BFD109 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		04828AB11DD5A6230030DB08 /* UIViewController+AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AppDelegate.swift"; sourceTree = "<group>"; };
 		0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagePickerController+Configurator.swift"; sourceTree = "<group>"; };
 		0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MFMailComposeViewController+Configurator.swift"; sourceTree = "<group>"; };
 		0484BCEB1D3FCEFB00885A38 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = "Pods/../build/Debug-iphoneos/Spring/Spring.framework"; sourceTree = "<group>"; };
@@ -186,14 +186,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		047BB2391DCB6D6400C6B8A3 /* Mail */ = {
-			isa = PBXGroup;
-			children = (
-				047BB2411DCB6D7000C6B8A3 /* MailComposer.swift */,
-			);
-			path = Mail;
-			sourceTree = "<group>";
-		};
 		047BB23B1DCB6D6400C6B8A3 /* Present */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,14 +193,6 @@
 				047BB23D1DCB6D6400C6B8A3 /* Presentation.swift */,
 			);
 			path = Present;
-			sourceTree = "<group>";
-		};
-		048492791DD307B800BFD109 /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				0484927A1DD307C900BFD109 /* ImagePicker.swift */,
-			);
-			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		048A7F8B1DC9E20C00DF1E7A /* Builders */ = {
@@ -236,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				049161EF1D3E05A000E01686 /* AppDelegate.swift */,
+				044F24EF1DD4D06400944819 /* AppDelegate+LocationService.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -452,6 +437,7 @@
 				0484927D1DD31E0400BFD109 /* ImagePickerController+Configurator.swift */,
 				0484927F1DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift */,
 				04F37EB91DD0AEEF001CA0AF /* AlertAction+Handler.swift */,
+				04828AB11DD5A6230030DB08 /* UIViewController+AppDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,8 +445,6 @@
 		A5210D321DC4F748002EFC23 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				048492791DD307B800BFD109 /* ImagePicker */,
-				047BB2391DCB6D6400C6B8A3 /* Mail */,
 				047BB23B1DCB6D6400C6B8A3 /* Present */,
 			);
 			path = Protocols;
@@ -810,9 +794,9 @@
 				A526BF001D7DD8C600C3AA13 /* EmailValidator.swift in Sources */,
 				A5210D0B1DC4F589002EFC23 /* MicrophonePermissions.swift in Sources */,
 				047BB2361DCB34AA00C6B8A3 /* MailBuilder.swift in Sources */,
-				0484927B1DD307C900BFD109 /* ImagePicker.swift in Sources */,
 				A5ACAD641DC7B146006AEC3F /* AlertController+PresentationProtocol.swift in Sources */,
 				A5210D361DC4FF77002EFC23 /* EqualStringsValidator.swift in Sources */,
+				044F24F01DD4D06400944819 /* AppDelegate+LocationService.swift in Sources */,
 				A5210D0F1DC4F589002EFC23 /* ServicePermissions.swift in Sources */,
 				A5210D061DC4F589002EFC23 /* LocationService.swift in Sources */,
 				A5210D0D1DC4F589002EFC23 /* RequestPermissions.swift in Sources */,
@@ -821,6 +805,7 @@
 				A526BEFE1D7DD8C600C3AA13 /* SKUtils.swift in Sources */,
 				A5210D291DC4F5A2002EFC23 /* TableViewFRCDataSource.swift in Sources */,
 				A5210D281DC4F5A2002EFC23 /* TableViewArrayDataSource.swift in Sources */,
+				04828AB21DD5A6230030DB08 /* UIViewController+AppDelegate.swift in Sources */,
 				A526BEFD1D7DD8C600C3AA13 /* PassTextField.swift in Sources */,
 				048492801DD31FA100BFD109 /* MFMailComposeViewController+Configurator.swift in Sources */,
 				A5210D271DC4F5A2002EFC23 /* SectionModel.swift in Sources */,
@@ -848,7 +833,6 @@
 				A5210D081DC4F589002EFC23 /* CameraPermissions.swift in Sources */,
 				A5210D0C1DC4F589002EFC23 /* PhotoLibraryPermissions.swift in Sources */,
 				047BB23F1DCB6D6400C6B8A3 /* AlertPresentation.swift in Sources */,
-				047BB2421DCB6D7000C6B8A3 /* MailComposer.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
 				A5210D091DC4F589002EFC23 /* ContactsPermissions.swift in Sources */,
 			);

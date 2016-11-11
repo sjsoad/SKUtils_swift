@@ -19,7 +19,7 @@ class SKUtils: NSObject {
         return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
     }
     
-    class func localiztion() -> NSString? {
+    static func localiztion() -> NSString? {
         let languages = NSLocale.preferredLanguages
         for language in languages {
             let languageDictionary = NSLocale.components(fromLocaleIdentifier: language)
@@ -27,6 +27,10 @@ class SKUtils: NSObject {
             return localization as NSString?
         }
         return nil
+    }
+    
+    static func delegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
     }
     
 }

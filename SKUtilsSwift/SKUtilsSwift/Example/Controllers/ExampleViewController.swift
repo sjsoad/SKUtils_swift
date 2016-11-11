@@ -9,22 +9,9 @@
 import UIKit
 import MessageUI
 
-class ExampleViewController: UIViewController, MailComposer, MFMailComposeViewControllerDelegate, ImagePicker {
+class ExampleViewController: UIViewController, MFMailComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    
-    var imagePicker = UIImagePickerController().configure(configurator: { (picker) in
-        picker.sourceType = .camera
-    })
-    var cameraPermissions: CameraPermissions?/* = {
-        let alertTitles = AlertTitles(title: "Service",
-                                      message: "Service is disabled! Please turn on it in Settings",
-                                      actionButtonTitle: "Go to Settings",
-                                      cancelButtonTitle: "Cancel")
-        let cameraPermissions = CameraPermissions(settingAlertTitles: alertTitles)
-        return cameraPermissions
-    }()*/
-    var libraryPermissions: PhotoLibraryPermissions?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,14 +28,30 @@ class ExampleViewController: UIViewController, MailComposer, MFMailComposeViewCo
     }
     
     @IBAction func imagePickerButtonPressed(_ sender: Any) {
-        self.showPicker(completionHandler: nil)
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
+        imagePicker.modalTransitionStyle = .coverVertical
+        self.present(imagePicker, animated: true, completion: nil)
+        
+//        appDelegate.imagePicker.show(animated: true, completion: nil)
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
-        self.showMailComposer(animated: true, configurationHandler: { (mailComposer) in
-            mailComposer.setSubject("someSubject")
-            mailComposer.mailComposeDelegate = self
-        }, completion: nil)
+//        self.showMailComposer(animated: true, configurationHandler: { (mailComposer) in
+//            mailComposer.setSubject("someSubject")
+//            mailComposer.mailComposeDelegate = self
+//        }, completion: nil)
+    }
+    
+    //MARK: - UIImagePickerControllerDelegate
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.imageView.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     //MARK: - MFMailComposeViewControllerDelegate
