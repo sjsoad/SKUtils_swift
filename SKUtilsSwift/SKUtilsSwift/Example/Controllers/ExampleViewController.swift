@@ -34,7 +34,6 @@ class ExampleViewController: UIViewController, MFMailComposeViewControllerDelega
         imagePicker.allowsEditing = false
         imagePicker.modalTransitionStyle = .coverVertical
         self.present(imagePicker, animated: true, completion: nil)
-        
 //        appDelegate.imagePicker.show(animated: true, completion: nil)
     }
     
