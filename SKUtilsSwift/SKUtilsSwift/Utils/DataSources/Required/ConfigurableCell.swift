@@ -12,7 +12,8 @@ import UIKit
 protocol ConfigurableCell {
     
     static var reuseIdentifier: String { get }
-    func configureWithModel<T: AnyObject>(_ model: T)
+    
+    func configure<T>(viewModel: T)
 }
 
 extension ConfigurableCell where Self: UIView {

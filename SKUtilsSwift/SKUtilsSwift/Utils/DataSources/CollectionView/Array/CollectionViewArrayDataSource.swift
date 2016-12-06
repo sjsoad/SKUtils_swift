@@ -11,27 +11,22 @@ import UIKit
 class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, ArrayDataSource {
 
     @IBInspectable var reuseIdentifier: String?
-    @IBOutlet var collectionView: UICollectionView!
     var sections : [SectionModel] = []
     
     //MARK: - Public
     
     init(sections: [SectionModel],
-         collectionView: UICollectionView,
          reuseIdentifier: String?) {
         self.sections = sections
         self.reuseIdentifier = reuseIdentifier
-        self.collectionView = collectionView
     }
     
     func reload(withSections sections: [SectionModel]) {
         self.sections = sections
-        self.collectionView.reloadData()
     }
     
     func append(withSection section: SectionModel) {
         self.sections.append(section)
-        self.collectionView.reloadData()
     }
     
     //MARK: - UITableViewDataSource
@@ -50,7 +45,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configureWithModel(itemModel)
+            configurableCell.configure(viewModel: itemModel)
         }
         
         return cell 

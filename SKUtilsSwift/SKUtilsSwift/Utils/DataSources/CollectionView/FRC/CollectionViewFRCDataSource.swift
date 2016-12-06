@@ -18,11 +18,9 @@ class CollectionViewFRCDataSource: NSObject, UICollectionViewDataSource, FRCData
     //MARK: - Public
     
     init(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
-         tableView: UITableView,
          reuseIdentifier: String?) {
         self.fetchedResultController = fetchedResultController
         self.reuseIdentifier = reuseIdentifier
-        self.tableView = tableView
     }
     
     //MARK: - UITableViewDataSource
@@ -41,7 +39,7 @@ class CollectionViewFRCDataSource: NSObject, UICollectionViewDataSource, FRCData
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configureWithModel(itemModel)
+            configurableCell.configure(viewModel: itemModel)
         }
         
         return cell 

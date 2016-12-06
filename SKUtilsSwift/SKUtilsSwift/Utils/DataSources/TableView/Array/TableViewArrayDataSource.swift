@@ -11,27 +11,22 @@ import UIKit
 class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSource {
 
     @IBInspectable var reuseIdentifier: String?
-    @IBOutlet var tableView: UITableView!
     var sections : [SectionModel] = []
     
     //MARK: - Public
     
     init(sections: [SectionModel],
-         tableView: UITableView,
          reuseIdentifier: String?) {
         self.sections = sections
         self.reuseIdentifier = reuseIdentifier
-        self.tableView = tableView
     }
     
     func reload(withSections sections: [SectionModel]) {
         self.sections = sections
-        self.tableView.reloadData()
     }
     
     func append(withSection section: SectionModel) {
         self.sections.append(section)
-        self.tableView.reloadData()
     }
     
     //MARK: - UITableViewDataSource
@@ -50,7 +45,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
         
         if let configurableCell = cell as? ConfigurableCell {
             let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configureWithModel(itemModel)
+            configurableCell.configure(viewModel: itemModel)
         }
 
         return cell ?? UITableViewCell()
