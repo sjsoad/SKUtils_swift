@@ -14,7 +14,7 @@ protocol ArrayTableViewProtocol {
     associatedtype ViewModelType: ArrayTableViewModelProtocol
     
     var arrayDataVM: ViewModelType? { get set }
-    func setDataSource(collectionView: UITableView)
+    func setDataSource(tableView: UITableView)
     
 }
 

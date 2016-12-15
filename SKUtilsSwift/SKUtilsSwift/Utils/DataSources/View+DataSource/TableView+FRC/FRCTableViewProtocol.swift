@@ -14,7 +14,7 @@ protocol FRCTableViewProtocol {
     associatedtype ViewModelType: FRCTableViewModelProtocol
     
     var frcDataVM: ViewModelType? { get set }
-    func setDataSource(collectionView: UITableView)
+    func setDataSource(tableView: UITableView)
     
 }
 
