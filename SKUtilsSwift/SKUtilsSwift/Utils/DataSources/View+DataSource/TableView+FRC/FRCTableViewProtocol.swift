@@ -20,11 +20,11 @@ protocol FRCTableViewProtocol {
 
 extension FRCTableViewProtocol {
     
-    func setDataSource(collectionView: UITableView) {
+    func setDataSource(tableView: UITableView) {
         if let viewModel = frcDataVM {
             if let dataSource = viewModel.frcDataSource {
-                collectionView.dataSource = dataSource
-                collectionView.reloadData()
+                tableView.dataSource = dataSource
+                tableView.reloadData()
             }
         }
     }

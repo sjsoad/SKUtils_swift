@@ -20,11 +20,11 @@ protocol ArrayTableViewProtocol {
 
 extension ArrayTableViewProtocol {
     
-    func setDataSource(collectionView: UITableView) {
+    func setDataSource(tableView: UITableView) {
         if let viewModel = arrayDataVM {
             if let dataSource = viewModel.arrayDataSource {
-                collectionView.dataSource = dataSource
-                collectionView.reloadData()
+                tableView.dataSource = dataSource
+                tableView.reloadData()
             }
         }
     }
