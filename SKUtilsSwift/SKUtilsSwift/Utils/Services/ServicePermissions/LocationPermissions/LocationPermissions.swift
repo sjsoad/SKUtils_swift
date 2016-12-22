@@ -24,7 +24,7 @@ class LocationPermissions: NSObject, ServicePermissions {
         case .notDetermined:
             return .permissionsNotAsked
         case .restricted, .denied:
-            self.showSettingsAlert()
+            showSettingsAlert()
             return .permissionsDenied
         }
     }    

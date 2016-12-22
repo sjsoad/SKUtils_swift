@@ -26,7 +26,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     }
     
     func append(withSection section: SectionModel) {
-        self.sections.append(section)
+        sections.append(section)
     }
     
     //MARK: - UITableViewDataSource

@@ -50,7 +50,7 @@ class LocationService: CLLocationManager {
     func checkPermissions() {
         switch self.locationPermissions.permissionsState() {
         case .permissionsNotAsked:
-            self.askPermissions()
+            askPermissions()
             break
         default:
             break
@@ -58,8 +58,8 @@ class LocationService: CLLocationManager {
     }
     
     fileprivate func askPermissions() {
-        if self.responds(to: NSSelectorFromString(locationUsage.rawValue)) {
-            self.perform(NSSelectorFromString(locationUsage.rawValue))
+        if responds(to: NSSelectorFromString(locationUsage.rawValue)) {
+            perform(NSSelectorFromString(locationUsage.rawValue))
         }
     }
 }
