@@ -19,12 +19,12 @@ class SKUtils: NSObject {
         return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0]
     }
     
-    static func localization() -> NSString? {
+    static func localization() -> String? {
         let languages = NSLocale.preferredLanguages
         for language in languages {
             let languageDictionary = NSLocale.components(fromLocaleIdentifier: language)
             if let localization = languageDictionary["kCFLocaleLanguageCodeKey"] {
-                return localization as NSString?
+                return localization
             }
         }
         return nil
