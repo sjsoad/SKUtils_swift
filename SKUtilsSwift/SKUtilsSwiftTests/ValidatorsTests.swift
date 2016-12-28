@@ -12,16 +12,6 @@ import XCTest
 
 class SKValidatorsTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testBaseValidator() {
         let shortString = "test"
         let normalString = "normal"
@@ -43,10 +33,10 @@ class SKValidatorsTests: XCTestCase {
     }
 
     func testPasswordValidator() {
-        let ivalidPassword = "invalidpassword"
+        let invalidPassword = "invalidpassword"
         let validPassword = "ValidPass1"
         let passValidator = PasswordValidator()
-        XCTAssertFalse(passValidator.isTextValid(ivalidPassword))
+        XCTAssertFalse(passValidator.isTextValid(invalidPassword))
         XCTAssertTrue(passValidator.isTextValid(validPassword))
     }
     
