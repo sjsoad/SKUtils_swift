@@ -20,3 +20,40 @@ Bonus:
 	 3. "CollectionView" and "TableView" folder contains each type of data source with default implementation.
 	 
 	 Additional folder "View+DataSource" contains protocols that should be implemented by UIView/UIViewController in order to use data sources.
+
+Example of implementation
+
+1. View/ViewController class
+
+class SomeView: UIView, ArrayTableViewProtocol {
+
+	typealias ViewModelType = SomeViewModel
+	var arrayDataVM: ViewModelType? {}
+
+}
+
+2. ViewModel class 
+
+class SomeViewModel: ArrayTableViewModelProtocol {
+
+    typealias ModelType = SomeModelType
+    typealias CellType = SomeCell
+    
+    var arrayData: [SomeModelType]
+    var arrayDataSource: TableViewArrayDataSource?
+   
+ }
+ 
+ 3. Cell class 
+ 
+class SomeCell: UITableViewCell, ConfigurableCell {
+
+    //MARK: - Properties
+    
+    //MARK: - Functions
+    
+    internal func configure<T>(viewModel: T) {
+      
+    }
+}
+ 
