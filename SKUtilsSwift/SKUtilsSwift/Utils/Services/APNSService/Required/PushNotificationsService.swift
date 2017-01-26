@@ -19,6 +19,7 @@
 ---------------------------------------------------------------------------------------------------------------------------- */
 
 import UIKit
+import UserNotifications
 
 class PushNotificationsService<T: AnyObject>: NSObject, APNSService where T: APNSService {
 
@@ -35,14 +36,32 @@ class PushNotificationsService<T: AnyObject>: NSObject, APNSService where T: APN
     }
     
     func registerForPushNotifications(_ application: UIApplication) {
-        if #available(iOS 8.0, *) {
-            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound],
-                                                                                  categories: nil)
-            application.registerUserNotificationSettings(settings)
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge,
+                                                                             .alert,
+                                                                             .sound])
+            { (granted, error) in }
             application.registerForRemoteNotifications()
-        } else {
-            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
-            application.registerForRemoteNotifications(matching: types)
+        }
+        // iOS 9 support
+        else if #available(iOS 9, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge,
+                                                                                                     .sound,
+                                                                                                     .alert],
+                                                                                             categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 8 support
+        else if #available(iOS 8, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge,
+                                                                                                     .sound,
+                                                                                                     .alert],
+                                                                                             categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 7 support
+        else {  
+            application.registerForRemoteNotifications(matching: [.badge, .sound, .alert])
         }
     }
     

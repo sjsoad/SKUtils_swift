@@ -294,9 +294,9 @@
 			isa = PBXGroup;
 			children = (
 				A5AD61921E0C0AA20077AA16 /* ArrayDataSource.swift */,
-				A5AD61931E0C0AA20077AA16 /* CollectionView */,
 				A5AD61981E0C0AA20077AA16 /* FRCDataSource.swift */,
 				A5AD61991E0C0AA20077AA16 /* Required */,
+				A5AD61931E0C0AA20077AA16 /* CollectionView */,
 				A5AD619D1E0C0AA20077AA16 /* TableView */,
 				A5AD61A21E0C0AA20077AA16 /* View+DataSource */,
 			);
