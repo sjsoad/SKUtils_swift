@@ -37,9 +37,7 @@ class AlertBuilder: NSObject {
         let alert = UIAlertController(title: configurator.title,
                                       message: configurator.message,
                                       preferredStyle: configurator.preferredStyle)
-        if configurator.actionHandler != nil {
-            AlertBuilder.addActions(alert: alert, configurator: configurator)
-        }
+        AlertBuilder.addActions(alert: alert, configurator: configurator)
         return alert
     }
     
@@ -48,13 +46,18 @@ class AlertBuilder: NSObject {
     fileprivate static func addActions(alert: UIAlertController, configurator: AlertConfigurator) {
         if let actions = configurator.actions {
             for action in actions {
-                let actionWithHandler = action.addHandler(handler: { (action) in
-                    let index = alert.actions.index(of: action)
-                    if let handler = configurator.actionHandler {
-                        handler(action, index, alert)
-                    }
-                })
-                alert.addAction(actionWithHandler)
+                if configurator.actionHandler != nil {
+                    let actionWithHandler = action.addHandler(handler: { (action) in
+                        let index = alert.actions.index(of: action)
+                        if let handler = configurator.actionHandler {
+                            handler(action, index, alert)
+                        }
+                    })
+                    alert.addAction(actionWithHandler)
+                }
+                else {
+                    alert.addAction(action)
+                }
             }
         }
     }

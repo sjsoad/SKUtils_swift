@@ -23,10 +23,12 @@ extension MailComposer {
                           configurationHandler: MailConfigurator?,
                           completion: CompletionHandler?) {
         if let vc = self as? UIViewController {
-            let mail = MailBuilder.mailComposer().configure(configurator: configurationHandler)
-            vc.present(mail,
-                       animated: animated,
-                       completion: completion)
+            if MFMailComposeViewController.canSendMail() {
+                let mail = MailBuilder.mailComposer().configure(configurator: configurationHandler)
+                vc.present(mail,
+                           animated: animated,
+                           completion: completion)
+            }
         }
     }
 }

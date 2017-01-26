@@ -9,7 +9,11 @@
 import UIKit
 import MessageUI
 
-class ExampleViewController: UIViewController, MFMailComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ExampleViewController: UIViewController,
+MFMailComposeViewControllerDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate,
+MailComposer {
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -38,10 +42,10 @@ class ExampleViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     @IBAction func mailButtonPressed(_ sender: Any) {
-//        self.showMailComposer(animated: true, configurationHandler: { (mailComposer) in
-//            mailComposer.setSubject("someSubject")
-//            mailComposer.mailComposeDelegate = self
-//        }, completion: nil)
+        self.showMailComposer(animated: true, configurationHandler: { (mailComposer) in
+            mailComposer.setSubject("someSubject")
+            mailComposer.mailComposeDelegate = self
+        }, completion: nil)
     }
     
     //MARK: - UIImagePickerControllerDelegate
@@ -58,6 +62,6 @@ class ExampleViewController: UIViewController, MFMailComposeViewControllerDelega
     func mailComposeController(_ controller: MFMailComposeViewController,
                                didFinishWith result: MFMailComposeResult,
                                error: Error?) {
-        controller .dismiss(animated: true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 }
