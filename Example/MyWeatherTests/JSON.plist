@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>currentWeather</key>
+	<string>{&quot;time&quot;:1480670159,&quot;summary&quot;:&quot;Clear&quot;,&quot;icon&quot;:&quot;clear-night&quot;,&quot;nearestStormDistance&quot;:248,&quot;nearestStormBearing&quot;:2,&quot;precipIntensity&quot;:0,&quot;precipProbability&quot;:0,&quot;temperature&quot;:49.49,&quot;apparentTemperature&quot;:45.68,&quot;dewPoint&quot;:33.44,&quot;humidity&quot;:0.54,&quot;windSpeed&quot;:9.21,&quot;windBearing&quot;:356,&quot;visibility&quot;:10,&quot;cloudCover&quot;:0,&quot;pressure&quot;:1021.37,&quot;ozone&quot;:268.61}</string>
+	<key>dailyWeather</key>
+	<string>{&quot;time&quot;:1480665600,&quot;summary&quot;:&quot;Clear throughout the day.&quot;,&quot;icon&quot;:&quot;clear-day&quot;,&quot;sunriseTime&quot;:1480691368,&quot;sunsetTime&quot;:1480726336,&quot;moonPhase&quot;:0.1,&quot;precipIntensity&quot;:0,&quot;precipIntensityMax&quot;:0,&quot;precipProbability&quot;:0,&quot;temperatureMin&quot;:47.12,&quot;temperatureMinTime&quot;:1480690800,&quot;temperatureMax&quot;:60.77,&quot;temperatureMaxTime&quot;:1480719600,&quot;apparentTemperatureMin&quot;:41.86,&quot;apparentTemperatureMinTime&quot;:1480690800,&quot;apparentTemperatureMax&quot;:60.77,&quot;apparentTemperatureMaxTime&quot;:1480719600,&quot;dewPoint&quot;:34.69,&quot;humidity&quot;:0.5,&quot;windSpeed&quot;:10.85,&quot;windBearing&quot;:6,&quot;visibility&quot;:10,&quot;cloudCover&quot;:0.05,&quot;pressure&quot;:1022.72,&quot;ozone&quot;:255.78}</string>
+	<key>hourlyWeather</key>
+	<string>{&quot;time&quot;:1480669200,&quot;summary&quot;:&quot;Clear&quot;,&quot;icon&quot;:&quot;clear-night&quot;,&quot;precipIntensity&quot;:0,&quot;precipProbability&quot;:0,&quot;temperature&quot;:49.59,&quot;apparentTemperature&quot;:45.96,&quot;dewPoint&quot;:33.17,&quot;humidity&quot;:0.53,&quot;windSpeed&quot;:8.76,&quot;windBearing&quot;:354,&quot;visibility&quot;:10,&quot;cloudCover&quot;:0,&quot;pressure&quot;:1021.27,&quot;ozone&quot;:269.17}</string>
+</dict>
+</plist>
