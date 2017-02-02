@@ -10,7 +10,7 @@
 
 /* -------------------------------------------------------------------------------------------------------------------------
  Add description to NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription in order to use location Service
- Add this property to yoor class and init it with valid arguments, add delegate and enjoy.
+ Add this property to your class and init it with valid arguments, add delegate and enjoy.
 
 var locationSerice: LocationService = {
     let alertTitles = AlertTitles(title: "Location Service",
