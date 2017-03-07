@@ -17,15 +17,11 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     @IBOutlet var scroll : UIScrollView? = nil {
         didSet {
             self.getTextFieldsInView(scroll)
+            self.addTapGestureRecognizer()
         }
     }
-    @IBInspectable var hideOnTap : Bool = true {
-        didSet {
-            if hideOnTap {
-                self.addTapGestureRecognizer()
-            }
-        }
-    }
+    @IBInspectable var hideOnTap : Bool = true
+    
     @IBInspectable var additionalSpaceAboveKeyboard : CGFloat = 0.0
     
     override init() {
