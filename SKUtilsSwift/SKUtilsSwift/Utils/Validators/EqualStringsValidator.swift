@@ -10,7 +10,7 @@ import UIKit
 
 class EqualStringsValidator: NSObject {
 
-    func isTextEqual(_ firstString: String?, secondString: String?) -> Bool {
+    func isEqual(_ firstString: String?, secondString: String?) -> Bool {
         if firstString == nil || secondString == nil {
             return false
         }

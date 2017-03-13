@@ -20,6 +20,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             self.addTapGestureRecognizer()
         }
     }
+    
     @IBInspectable var hideOnTap : Bool = true
     
     @IBInspectable var additionalSpaceAboveKeyboard : CGFloat = 0.0
@@ -139,12 +140,13 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     fileprivate func sortTextFieldsByY() -> Void {
-        let window = UIApplication.shared.keyWindow
-        let sortedArray = self.textFields.sorted { (currentObject, nextObject) -> Bool in
-            let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
-            let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
-            return currentObjectRect.origin.y < nextObjectRect.origin.y
+        if let window = UIApplication.shared.keyWindow {
+            let sortedArray = self.textFields.sorted { (currentObject, nextObject) -> Bool in
+                let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
+                let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
+                return currentObjectRect.origin.y < nextObjectRect.origin.y
+            }
+            self.textFields = sortedArray
         }
-        self.textFields = sortedArray
     }
 }

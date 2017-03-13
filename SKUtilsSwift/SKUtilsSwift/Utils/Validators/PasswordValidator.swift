@@ -13,9 +13,9 @@ class PasswordValidator: BaseValidator {
     @IBInspectable var passwordRegularExpresionString = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$"
     @IBInspectable var passwordPredicateString        = "SELF MATCHES %@"
     
-    override func isTextValid(_ text: String?) -> Bool {
+    override func isValid(_ text: String?) -> Bool {
         if let text = text {
-            var isTextValid = super.isTextValid(text)
+            var isTextValid = super.isValid(text)
             if isTextValid {
                 let passwordValidationPredicate = NSPredicate(format: passwordPredicateString, passwordRegularExpresionString)
                 isTextValid = passwordValidationPredicate.evaluate(with: text)

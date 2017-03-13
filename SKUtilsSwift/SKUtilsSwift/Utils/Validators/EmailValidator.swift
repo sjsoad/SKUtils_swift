@@ -13,9 +13,9 @@ class EmailValidator: BaseValidator {
     @IBInspectable var emailRegularExpresionString = "[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}"
     @IBInspectable var emailPredicateString        = "SELF MATCHES %@"
     
-    override func isTextValid(_ text: String?) -> Bool {
+    override func isValid(_ text: String?) -> Bool {
         if let text = text {
-            var isTextValid = super.isTextValid(text)
+            var isTextValid = super.isValid(text)
             if isTextValid {
                 let emailValidationPredicate = NSPredicate(format: emailPredicateString, emailRegularExpresionString)
                 isTextValid = emailValidationPredicate.evaluate(with: text)

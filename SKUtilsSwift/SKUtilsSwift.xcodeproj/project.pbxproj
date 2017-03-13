@@ -50,7 +50,6 @@
 		A5AD62151E0C0AA20077AA16 /* DynamicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61BD1E0C0AA20077AA16 /* DynamicHelper.swift */; };
 		A5AD62161E0C0AA20077AA16 /* RandomNumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61BE1E0C0AA20077AA16 /* RandomNumberHelper.swift */; };
 		A5AD62181E0C0AA20077AA16 /* TextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61C31E0C0AA20077AA16 /* TextFieldsManager.swift */; };
-		A5AD62191E0C0AA20077AA16 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61C61E0C0AA20077AA16 /* ImagePicker.swift */; };
 		A5AD621A1E0C0AA20077AA16 /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61C81E0C0AA20077AA16 /* MailComposer.swift */; };
 		A5AD621B1E0C0AA20077AA16 /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61CA1E0C0AA20077AA16 /* AlertPresentation.swift */; };
 		A5AD621C1E0C0AA20077AA16 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61CB1E0C0AA20077AA16 /* Presentation.swift */; };
@@ -72,7 +71,6 @@
 		A5AD622C1E0C0AA20077AA16 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61EA1E0C0AA20077AA16 /* EmailTextField.swift */; };
 		A5AD622D1E0C0AA20077AA16 /* PassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61EB1E0C0AA20077AA16 /* PassTextField.swift */; };
 		A5AD622E1E0C0AA20077AA16 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61ED1E0C0AA20077AA16 /* Converter.swift */; };
-		A5AD622F1E0C0AA20077AA16 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61EE1E0C0AA20077AA16 /* SKUtils.swift */; };
 		A5AD62301E0C0AA20077AA16 /* BaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61F01E0C0AA20077AA16 /* BaseValidator.swift */; };
 		A5AD62311E0C0AA20077AA16 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61F11E0C0AA20077AA16 /* EmailValidator.swift */; };
 		A5AD62321E0C0AA20077AA16 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AD61F21E0C0AA20077AA16 /* EqualStringsValidator.swift */; };
@@ -154,7 +152,6 @@
 		A5AD61BD1E0C0AA20077AA16 /* DynamicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHelper.swift; sourceTree = "<group>"; };
 		A5AD61BE1E0C0AA20077AA16 /* RandomNumberHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberHelper.swift; sourceTree = "<group>"; };
 		A5AD61C31E0C0AA20077AA16 /* TextFieldsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManager.swift; sourceTree = "<group>"; };
-		A5AD61C61E0C0AA20077AA16 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		A5AD61C81E0C0AA20077AA16 /* MailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
 		A5AD61CA1E0C0AA20077AA16 /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
 		A5AD61CB1E0C0AA20077AA16 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
@@ -176,7 +173,6 @@
 		A5AD61EA1E0C0AA20077AA16 /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		A5AD61EB1E0C0AA20077AA16 /* PassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTextField.swift; sourceTree = "<group>"; };
 		A5AD61ED1E0C0AA20077AA16 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
-		A5AD61EE1E0C0AA20077AA16 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
 		A5AD61F01E0C0AA20077AA16 /* BaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseValidator.swift; sourceTree = "<group>"; };
 		A5AD61F11E0C0AA20077AA16 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A5AD61F21E0C0AA20077AA16 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
@@ -457,19 +453,10 @@
 		A5AD61C41E0C0AA20077AA16 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A5AD61C51E0C0AA20077AA16 /* ImagePicker */,
 				A5AD61C71E0C0AA20077AA16 /* Mail */,
 				A5AD61C91E0C0AA20077AA16 /* Present */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		A5AD61C51E0C0AA20077AA16 /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				A5AD61C61E0C0AA20077AA16 /* ImagePicker.swift */,
-			);
-			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		A5AD61C71E0C0AA20077AA16 /* Mail */ = {
@@ -627,7 +614,6 @@
 			isa = PBXGroup;
 			children = (
 				A5AD61ED1E0C0AA20077AA16 /* Converter.swift */,
-				A5AD61EE1E0C0AA20077AA16 /* SKUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -809,7 +795,6 @@
 				A5AD62121E0C0AA20077AA16 /* TextField+Padding.swift in Sources */,
 				A5AD62031E0C0AA20077AA16 /* FRCCollectionViewModelProtocol.swift in Sources */,
 				A5AD61FE1E0C0AA20077AA16 /* SectionModel.swift in Sources */,
-				A5AD62191E0C0AA20077AA16 /* ImagePicker.swift in Sources */,
 				A5AD620B1E0C0AA20077AA16 /* ColorExtension.swift in Sources */,
 				044F24F01DD4D06400944819 /* AppDelegate+LocationService.swift in Sources */,
 				A5AD62141E0C0AA20077AA16 /* UIViewController+AppDelegate.swift in Sources */,
@@ -839,7 +824,6 @@
 				A5AD62181E0C0AA20077AA16 /* TextFieldsManager.swift in Sources */,
 				A5AD621E1E0C0AA20077AA16 /* APNSService.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
-				A5AD622F1E0C0AA20077AA16 /* SKUtils.swift in Sources */,
 				A5AD622D1E0C0AA20077AA16 /* PassTextField.swift in Sources */,
 				A5AD62221E0C0AA20077AA16 /* CameraPermissions.swift in Sources */,
 				A5AD62231E0C0AA20077AA16 /* ContactsPermissions.swift in Sources */,
