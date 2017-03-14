@@ -23,7 +23,9 @@ class APIClient: NSObject {
                                  method: request.HTTPMethod,
                                  parameters: request.parameters,
                                  encoding: JSONEncoding.default,
-                                 headers: request.headers).responseJSON(completionHandler: { (response) in
+                                 headers: request.headers)
+            .validate(statusCode: 200..<300)
+            .responseJSON(completionHandler: { (response) in
                                     switch response.result {
                                     case .success:
                                         if let successClosure = success {
