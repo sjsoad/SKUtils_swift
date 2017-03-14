@@ -24,11 +24,11 @@ class ValidationHelper: NSObject {
                 validField = emailValidator.isValid(field.text)
             }
             else if field is PassTextField {
-                validField = emailValidator.isValid(field.text)
+                validField = passValidator.isValid(field.text)
             }
                 
             else if field is BaseTextField {
-                validField = emailValidator.isValid(field.text)
+                validField = baseValidator.isValid(field.text)
             }
             if validField {
                 fieldsToValidate.remove(at: index)
