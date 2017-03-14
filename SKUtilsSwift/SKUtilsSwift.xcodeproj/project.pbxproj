@@ -82,6 +82,8 @@
 		A582DAF31E78207300D662C5 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DAAD1E78207300D662C5 /* EqualStringsValidator.swift */; };
 		A582DAF41E78207300D662C5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DAAE1E78207300D662C5 /* PasswordValidator.swift */; };
 		A582DAF51E78207300D662C5 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DAB01E78207300D662C5 /* ValidationHelper.swift */; };
+		A582DAFC1E78293B00D662C5 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DAF91E78293B00D662C5 /* ImagePickerViewController.swift */; };
+		A582DAFD1E78293B00D662C5 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DAFB1E78293B00D662C5 /* ImagePickerViewModel.swift */; };
 		A58C09B31D3B65D300D4A3FD /* ValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */; };
 		A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF211D3802D600EB7212 /* Assets.xcassets */; };
 		A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5ADBF231D3802D600EB7212 /* LaunchScreen.storyboard */; };
@@ -192,6 +194,8 @@
 		A582DAAD1E78207300D662C5 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A582DAAE1E78207300D662C5 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A582DAB01E78207300D662C5 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
+		A582DAF91E78293B00D662C5 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		A582DAFB1E78293B00D662C5 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsTests.swift; sourceTree = "<group>"; };
 		A5ADBF171D3802D500EB7212 /* SKUtilsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKUtilsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5ADBF211D3802D600EB7212 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 		A582DA401E78207300D662C5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A582DAF81E78293B00D662C5 /* UIViewController+ImagePicker */,
 				A582DA411E78207300D662C5 /* Builders */,
 				A582DA461E78207300D662C5 /* DataSources */,
 				A582DA641E78207300D662C5 /* Extensions */,
@@ -693,6 +698,23 @@
 			path = "Validator Helper";
 			sourceTree = "<group>";
 		};
+		A582DAF81E78293B00D662C5 /* UIViewController+ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A582DAF91E78293B00D662C5 /* ImagePickerViewController.swift */,
+				A582DAFA1E78293B00D662C5 /* View Models */,
+			);
+			path = "UIViewController+ImagePicker";
+			sourceTree = "<group>";
+		};
+		A582DAFA1E78293B00D662C5 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A582DAFB1E78293B00D662C5 /* ImagePickerViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		A5ADBF0E1D3802D500EB7212 = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +885,7 @@
 				A582DAD61E78207300D662C5 /* Utils.swift in Sources */,
 				A582DAEE1E78207300D662C5 /* EmailTextField.swift in Sources */,
 				A582DAE31E78207300D662C5 /* BluetoothPermissions.swift in Sources */,
+				A582DAFD1E78293B00D662C5 /* ImagePickerViewModel.swift in Sources */,
 				A582DAC01E78207300D662C5 /* FRCCollectionViewModelProtocol.swift in Sources */,
 				A582DAD41E78207300D662C5 /* RandomNumberHelper.swift in Sources */,
 				A582DAF51E78207300D662C5 /* ValidationHelper.swift in Sources */,
@@ -882,6 +905,7 @@
 				A582DABC1E78207300D662C5 /* TableViewArrayDataSource.swift in Sources */,
 				A582DAD51E78207300D662C5 /* ShareHelper.swift in Sources */,
 				A582DADC1E78207300D662C5 /* NativeNavigationProtocol.swift in Sources */,
+				A582DAFC1E78293B00D662C5 /* ImagePickerViewController.swift in Sources */,
 				A582DAEC1E78207300D662C5 /* TextFieldAccessoryView.swift in Sources */,
 				A582DABE1E78207300D662C5 /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A582DAB81E78207300D662C5 /* ArrayDataSource.swift in Sources */,
