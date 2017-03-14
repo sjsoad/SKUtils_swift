@@ -24,7 +24,7 @@ class APIClient: NSObject {
                                  parameters: request.parameters,
                                  encoding: JSONEncoding.default,
                                  headers: request.headers)
-            .validate(statusCode: 200..<300)
+  /*          .validate(statusCode: 200..<300)*/ // optional validation
             .responseJSON(completionHandler: { (response) in
                                     switch response.result {
                                     case .success:
