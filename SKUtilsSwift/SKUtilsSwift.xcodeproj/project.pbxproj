@@ -13,6 +13,10 @@
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
 		A553C4821E13A13D005E641A /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C4811E13A13D005E641A /* ConverterTests.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
+		A580A6001E7BE37B001F46F7 /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580A5FC1E7BE37B001F46F7 /* RequestErrorHandlerProtocol.swift */; };
+		A580A6011E7BE37B001F46F7 /* RequestExecutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580A5FD1E7BE37B001F46F7 /* RequestExecutingProtocol.swift */; };
+		A580A6021E7BE37B001F46F7 /* RequestExecutingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580A5FE1E7BE37B001F46F7 /* RequestExecutingViewProtocol.swift */; };
+		A580A6031E7BE37B001F46F7 /* RequestSucceedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A580A5FF1E7BE37B001F46F7 /* RequestSucceedProtocol.swift */; };
 		A582DAB11E78207300D662C5 /* AlertActionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DA421E78207300D662C5 /* AlertActionBuilder.swift */; };
 		A582DAB21E78207300D662C5 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DA431E78207300D662C5 /* AlertBuilder.swift */; };
 		A582DAB31E78207300D662C5 /* MailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582DA441E78207300D662C5 /* MailBuilder.swift */; };
@@ -125,6 +129,10 @@
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
 		A553C4811E13A13D005E641A /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
+		A580A5FC1E7BE37B001F46F7 /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
+		A580A5FD1E7BE37B001F46F7 /* RequestExecutingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingProtocol.swift; sourceTree = "<group>"; };
+		A580A5FE1E7BE37B001F46F7 /* RequestExecutingViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingViewProtocol.swift; sourceTree = "<group>"; };
+		A580A5FF1E7BE37B001F46F7 /* RequestSucceedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSucceedProtocol.swift; sourceTree = "<group>"; };
 		A582DA421E78207300D662C5 /* AlertActionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionBuilder.swift; sourceTree = "<group>"; };
 		A582DA431E78207300D662C5 /* AlertBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		A582DA441E78207300D662C5 /* MailBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailBuilder.swift; sourceTree = "<group>"; };
@@ -275,6 +283,17 @@
 				048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A580A5FB1E7BE37B001F46F7 /* Request Processing */ = {
+			isa = PBXGroup;
+			children = (
+				A580A5FC1E7BE37B001F46F7 /* RequestErrorHandlerProtocol.swift */,
+				A580A5FD1E7BE37B001F46F7 /* RequestExecutingProtocol.swift */,
+				A580A5FE1E7BE37B001F46F7 /* RequestExecutingViewProtocol.swift */,
+				A580A5FF1E7BE37B001F46F7 /* RequestSucceedProtocol.swift */,
+			);
+			path = "Request Processing";
 			sourceTree = "<group>";
 		};
 		A582DA401E78207300D662C5 /* Utils */ = {
@@ -478,6 +497,7 @@
 		A582DA7A1E78207300D662C5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A580A5FB1E7BE37B001F46F7 /* Request Processing */,
 				A582DA7B1E78207300D662C5 /* Api Client */,
 				A582DA7D1E78207300D662C5 /* Network Protocols */,
 			);
@@ -883,6 +903,7 @@
 				044F24F01DD4D06400944819 /* AppDelegate+LocationService.swift in Sources */,
 				A582DAD91E78207300D662C5 /* APIRequestProtocol.swift in Sources */,
 				A582DAD61E78207300D662C5 /* Utils.swift in Sources */,
+				A580A6001E7BE37B001F46F7 /* RequestErrorHandlerProtocol.swift in Sources */,
 				A582DAEE1E78207300D662C5 /* EmailTextField.swift in Sources */,
 				A582DAE31E78207300D662C5 /* BluetoothPermissions.swift in Sources */,
 				A582DAFD1E78293B00D662C5 /* ImagePickerViewModel.swift in Sources */,
@@ -900,6 +921,7 @@
 				A582DAE01E78207300D662C5 /* APNSService.swift in Sources */,
 				A582DAE81E78207300D662C5 /* PhotoLibraryPermissions.swift in Sources */,
 				A582DAEA1E78207300D662C5 /* RequestPermissions.swift in Sources */,
+				A580A6021E7BE37B001F46F7 /* RequestExecutingViewProtocol.swift in Sources */,
 				A582DAD11E78207300D662C5 /* UIViewController+AppDelegate.swift in Sources */,
 				A582DABF1E78207300D662C5 /* ArrayCollectionViewProtocol.swift in Sources */,
 				A582DABC1E78207300D662C5 /* TableViewArrayDataSource.swift in Sources */,
@@ -909,11 +931,13 @@
 				A582DAEC1E78207300D662C5 /* TextFieldAccessoryView.swift in Sources */,
 				A582DABE1E78207300D662C5 /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A582DAB81E78207300D662C5 /* ArrayDataSource.swift in Sources */,
+				A580A6031E7BE37B001F46F7 /* RequestSucceedProtocol.swift in Sources */,
 				A582DACA1E78207300D662C5 /* ImagePickerController+Configurator.swift in Sources */,
 				A582DAB91E78207300D662C5 /* ConfigurableCell.swift in Sources */,
 				A582DACB1E78207300D662C5 /* ImagePickerController+PresentationProtocol.swift in Sources */,
 				A582DAB41E78207300D662C5 /* WindowBuilder.swift in Sources */,
 				A582DAB61E78207300D662C5 /* CollectionViewFRCDataSource.swift in Sources */,
+				A580A6011E7BE37B001F46F7 /* RequestExecutingProtocol.swift in Sources */,
 				A582DACE1E78207300D662C5 /* MFMailComposeViewController+Configurator.swift in Sources */,
 				A582DAF31E78207300D662C5 /* EqualStringsValidator.swift in Sources */,
 				A582DAED1E78207300D662C5 /* BaseTextField.swift in Sources */,

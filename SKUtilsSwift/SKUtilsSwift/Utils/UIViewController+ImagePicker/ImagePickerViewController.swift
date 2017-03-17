@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImagePickerViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImagePickerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var imagePickerViewModel = ImagePickerViewModel()
     var imagePicker: UIImagePickerController = {
