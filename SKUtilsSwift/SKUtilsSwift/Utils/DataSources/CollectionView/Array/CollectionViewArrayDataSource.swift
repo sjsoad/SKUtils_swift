@@ -10,15 +10,12 @@ import UIKit
 
 class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, ArrayDataSource {
 
-    @IBInspectable var reuseIdentifier: String?
     var sections : [SectionModel] = []
     
     //MARK: - Public
     
-    init(sections: [SectionModel],
-         reuseIdentifier: String?) {
+    init(sections: [SectionModel]) {
         self.sections = sections
-        self.reuseIdentifier = reuseIdentifier
     }
     
     func reload(withSections sections: [SectionModel]) {
@@ -41,14 +38,16 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier!, for: indexPath)
-        
-        if let configurableCell = cell as? ConfigurableCell {
-            let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configure(viewModel: itemModel)
+        if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: itemModel.cellReuseIdentifier!,
+                                                          for: indexPath)
+            if let configurableCell = cell as? ConfigurableCell {
+                configurableCell.configure(viewModel: itemModel)
+            }
+            
+            return cell
         }
-        
-        return cell 
+        return UICollectionViewCell()
     }
     
 }

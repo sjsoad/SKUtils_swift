@@ -10,15 +10,12 @@ import UIKit
 
 class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSource {
 
-    @IBInspectable var reuseIdentifier: String?
     var sections : [SectionModel] = []
     
     //MARK: - Public
     
-    init(sections: [SectionModel],
-         reuseIdentifier: String?) {
+    init(sections: [SectionModel]) {
         self.sections = sections
-        self.reuseIdentifier = reuseIdentifier
     }
     
     func reload(withSections sections: [SectionModel]) {
@@ -41,13 +38,15 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
-        
-        if let configurableCell = cell as? ConfigurableCell {
-            let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configure(viewModel: itemModel)
+        if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
+            let cell = tableView.dequeueReusableCell(withIdentifier: itemModel.cellReuseIdentifier!)
+            
+            if let configurableCell = cell as? ConfigurableCell {
+                configurableCell.configure(viewModel: itemModel)
+            }
+            
+            return cell ?? UITableViewCell()
         }
-
-        return cell ?? UITableViewCell()
+        return UITableViewCell()
     }
 }

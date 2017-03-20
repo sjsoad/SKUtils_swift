@@ -35,14 +35,16 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
-        
-        if let configurableCell = cell as? ConfigurableCell {
-            let itemModel = itemAtIndexPath(indexPath: indexPath)
-            configurableCell.configure(viewModel: itemModel)
+        if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
+            
+            if let configurableCell = cell as? ConfigurableCell {
+                configurableCell.configure(viewModel: itemModel)
+            }
+            return cell ?? UITableViewCell()
         }
         
-        return cell ?? UITableViewCell()
+        return UITableViewCell()
     }
 
 }

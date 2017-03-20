@@ -9,16 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ConfigurableCell {
-    
-    static var reuseIdentifier: String { get }
+protocol ConfigurableCell: ReusableCell {
     
     func configure<T>(viewModel: T)
-}
-
-extension ConfigurableCell where Self: UIView {
-    
-    static var reuseIdentifier: String {
-        return String(describing: self)
-    }
 }
