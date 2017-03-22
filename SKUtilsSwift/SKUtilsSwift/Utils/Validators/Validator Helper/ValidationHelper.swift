@@ -45,7 +45,7 @@ extension ValidationHelper {
     func validate(fields: [UITextField],
                   validationHandler: ValidationHelperHandler? = nil) -> Bool {
         var fieldsToValidate = fields
-        for (index, field) in fieldsToValidate.enumerated() {
+        for field in fieldsToValidate {
             var validField = false
             if field is EmailTextField {
                 validField = emailValidator().isValid(field.text)
@@ -57,7 +57,8 @@ extension ValidationHelper {
             else if field is BaseTextField {
                 validField = baseValidator().isValid(field.text)
             }
-            if validField {
+            if validField,
+                let index = fieldsToValidate.index(of: field) {
                 fieldsToValidate.remove(at: index)
             }
             if let handler = validationHandler {
