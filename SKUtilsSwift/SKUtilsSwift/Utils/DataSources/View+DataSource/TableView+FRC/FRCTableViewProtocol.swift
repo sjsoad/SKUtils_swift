@@ -13,7 +13,7 @@ protocol FRCTableViewProtocol {
     
     associatedtype ViewModelType: FRCTableViewModelProtocol
     
-    var frcDataVM: ViewModelType? { get set }
+    var frcTableViewModel: ViewModelType? { get set }
     func setDataSource(tableView: UITableView)
     
 }
@@ -21,8 +21,8 @@ protocol FRCTableViewProtocol {
 extension FRCTableViewProtocol {
     
     func setDataSource(tableView: UITableView) {
-        if let viewModel = frcDataVM {
-            if let dataSource = viewModel.frcDataSource {
+        if let viewModel = frcTableViewModel {
+            if let dataSource = viewModel.frcTableViewDataSource {
                 tableView.dataSource = dataSource
                 tableView.reloadData()
             }

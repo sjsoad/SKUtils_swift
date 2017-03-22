@@ -13,7 +13,7 @@ protocol ArrayTableViewProtocol {
     
     associatedtype ViewModelType: ArrayTableViewModelProtocol
     
-    var arrayDataVM: ViewModelType? { get set }
+    var arrayTableViewModel: ViewModelType? { get set }
     func setDataSource(tableView: UITableView)
     
 }
@@ -21,8 +21,8 @@ protocol ArrayTableViewProtocol {
 extension ArrayTableViewProtocol {
     
     func setDataSource(tableView: UITableView) {
-        if let viewModel = arrayDataVM {
-            if let dataSource = viewModel.arrayDataSource {
+        if let viewModel = arrayTableViewModel {
+            if let dataSource = viewModel.tableViewDataSource {
                 tableView.dataSource = dataSource
                 tableView.reloadData()
             }

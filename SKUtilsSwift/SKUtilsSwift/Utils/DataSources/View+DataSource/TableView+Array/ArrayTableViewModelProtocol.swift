@@ -13,8 +13,7 @@ protocol ArrayTableViewModelProtocol {
     associatedtype ModelType: AnyObject
     associatedtype CellType: ConfigurableCell
     
-    var arrayData: [ModelType] { get set }
-    var arrayDataSource: TableViewArrayDataSource? { get set }
+    var tableViewDataSource: TableViewArrayDataSource? { get set }
     
     init(array: [ModelType])
     

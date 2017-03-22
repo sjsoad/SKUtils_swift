@@ -13,7 +13,7 @@ protocol ArrayCollectionViewProtocol {
     
     associatedtype ViewModelType: ArrayCollectionViewModelProtocol
     
-    var arrayDataVM: ViewModelType? { get set }
+    var arrayCollectionViewModel: ViewModelType? { get set }
     func setDataSource(collectionView: UICollectionView)
     
 }
@@ -21,8 +21,8 @@ protocol ArrayCollectionViewProtocol {
 extension ArrayCollectionViewProtocol {
     
     func setDataSource(collectionView: UICollectionView) {
-        if let viewModel = arrayDataVM {
-            if let dataSource = viewModel.arrayDataSource {
+        if let viewModel = arrayCollectionViewModel {
+            if let dataSource = viewModel.collectionViewDataSource {
                 collectionView.dataSource = dataSource
                 collectionView.reloadData()
             }

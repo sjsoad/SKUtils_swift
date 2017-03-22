@@ -14,7 +14,7 @@ protocol FRCTableViewModelProtocol {
     associatedtype CellType: ConfigurableCell
     
     var frc: NSFetchedResultsController<NSManagedObject> { get set }
-    var frcDataSource: TableViewFRCDataSource? { get set }
+    var frcTableViewDataSource: TableViewFRCDataSource? { get set }
     
     init(frc: NSFetchedResultsController<NSManagedObject>)
     

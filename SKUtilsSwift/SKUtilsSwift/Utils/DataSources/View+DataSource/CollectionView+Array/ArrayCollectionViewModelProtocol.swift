@@ -13,8 +13,7 @@ protocol ArrayCollectionViewModelProtocol {
     associatedtype ModelType: AnyObject
     associatedtype CellType: ConfigurableCell
     
-    var arrayData: [ModelType] { get set }
-    var arrayDataSource: CollectionViewArrayDataSource? { get set }
+    var collectionViewDataSource: CollectionViewArrayDataSource? { get set }
     
     init(array: [ModelType])
     
