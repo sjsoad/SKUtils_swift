@@ -11,16 +11,12 @@ import CoreData
 
 class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
 
-    @IBInspectable var reuseIdentifier: String?
-    @IBOutlet var tableView: UITableView!
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSManagedObject>()
     
     //MARK: - Public
     
-    init(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
-         reuseIdentifier: String?) {
+    init(fetchedResultController: NSFetchedResultsController<NSManagedObject>) {
         self.fetchedResultController = fetchedResultController
-        self.reuseIdentifier = reuseIdentifier
     }
 
     //MARK: - UITableViewDataSource
@@ -36,7 +32,7 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
-            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier!)
+            let cell = tableView.dequeueReusableCell(withIdentifier: itemModel.cellReuseIdentifier!)
             
             if let configurableCell = cell as? ConfigurableCell {
                 configurableCell.configure(viewModel: itemModel)

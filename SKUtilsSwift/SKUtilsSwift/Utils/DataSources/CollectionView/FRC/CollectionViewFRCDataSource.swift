@@ -11,16 +11,12 @@ import CoreData
 
 class CollectionViewFRCDataSource: NSObject, UICollectionViewDataSource, FRCDataSource {
 
-    @IBInspectable var reuseIdentifier: String?
-    @IBOutlet var tableView: UITableView!
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSManagedObject>()
     
     //MARK: - Public
     
-    init(fetchedResultController: NSFetchedResultsController<NSManagedObject>,
-         reuseIdentifier: String?) {
+    init(fetchedResultController: NSFetchedResultsController<NSManagedObject>) {
         self.fetchedResultController = fetchedResultController
-        self.reuseIdentifier = reuseIdentifier
     }
     
     //MARK: - UITableViewDataSource

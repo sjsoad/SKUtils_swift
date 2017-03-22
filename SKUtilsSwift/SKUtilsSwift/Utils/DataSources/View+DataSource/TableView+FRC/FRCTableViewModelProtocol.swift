@@ -11,7 +11,6 @@ import CoreData
 
 protocol FRCTableViewModelProtocol {
     
-    associatedtype ModelType: AnyObject
     associatedtype CellType: ConfigurableCell
     
     var frc: NSFetchedResultsController<NSManagedObject> { get set }
