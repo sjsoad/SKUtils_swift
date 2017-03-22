@@ -8,33 +8,74 @@
 
 import UIKit
 
-class ValidationHelper: NSObject {
+fileprivate typealias ValidationHelperHandler = (UITextField, Bool) -> Void
+fileprivate typealias ComparisonHelperHandler = (UITextField, UITextField, Bool) -> Void
 
-    private let allFieldsValidated = 0
+private let allFieldsValidated = 0
+
+protocol ValidationHelper {
     
-    var emailValidator = EmailValidator()
-    var passValidator = PasswordValidator()
-    var baseValidator = BaseValidator()
+    func emailValidator() -> EmailValidator
+    func passValidator() -> PasswordValidator
+    func baseValidator() -> BaseValidator
+    func equalValidator() -> EqualStringsValidator
     
-    func validate(fields: [UITextField]) -> Bool {
+    func validate(fields: [UITextField],
+                  validationHandler: ValidationHelperHandler?) -> Bool
+    func validate(thisEqual fieldOne: UITextField,
+                  this fieldTwo: UITextField,
+                  comparisonHandler: ComparisonHelperHandler?) -> Bool
+}
+
+extension ValidationHelper {
+    
+    func emailValidator() -> EmailValidator {
+        return EmailValidator()
+    }
+    func passValidator() -> PasswordValidator {
+        return PasswordValidator()
+    }
+    func baseValidator() -> BaseValidator {
+        return BaseValidator()
+    }
+    func equalValidator() -> EqualStringsValidator {
+        return EqualStringsValidator()
+    }
+
+    func validate(fields: [UITextField],
+                  validationHandler: ValidationHelperHandler? = nil) -> Bool {
         var fieldsToValidate = fields
         for (index, field) in fieldsToValidate.enumerated() {
             var validField = false
             if field is EmailTextField {
-                validField = emailValidator.isValid(field.text)
+                validField = emailValidator().isValid(field.text)
             }
             else if field is PassTextField {
-                validField = passValidator.isValid(field.text)
+                validField = passValidator().isValid(field.text)
             }
                 
             else if field is BaseTextField {
-                validField = baseValidator.isValid(field.text)
+                validField = baseValidator().isValid(field.text)
             }
             if validField {
                 fieldsToValidate.remove(at: index)
             }
+            if let handler = validationHandler {
+                handler(field, validField)
+            }
         }
         return fieldsToValidate.count == allFieldsValidated
+    }
+    
+    func validate(thisEqual fieldOne: UITextField,
+                  this fieldTwo: UITextField,
+                  comparisonHandler: ComparisonHelperHandler?) -> Bool {
+        let equalText = equalValidator().isEqual(fieldOne.text,
+                                                  secondString: fieldTwo.text)
+        if let handler = comparisonHandler {
+            handler(fieldOne, fieldTwo, equalText)
+        }
+        return equalText
     }
     
 }
