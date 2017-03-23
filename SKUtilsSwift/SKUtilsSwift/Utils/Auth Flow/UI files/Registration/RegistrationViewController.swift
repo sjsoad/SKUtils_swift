@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: BaseViewController, RequestExecutingViewProtocol {
+class RegistrationViewController: UIViewController, RequestExecutingViewProtocol {
     
     typealias navigationType = RegistrationNavigation
     
