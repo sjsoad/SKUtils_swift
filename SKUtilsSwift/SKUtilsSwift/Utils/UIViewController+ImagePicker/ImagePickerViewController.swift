@@ -49,7 +49,7 @@ class ImagePickerViewController: UIViewController, UIImagePickerControllerDelega
         if UIImagePickerController.isSourceTypeAvailable(source) {
             imagePicker.delegate = self;
             imagePicker.sourceType = source
-            self.present(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
