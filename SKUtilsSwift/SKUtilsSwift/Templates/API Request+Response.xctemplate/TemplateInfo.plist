@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>DefaultCompletionName</key>
-	<string>Protocol</string>
+	<string></string>
 	<key>Description</key>
 	<string>Generates API Request and Response</string>
 	<key>Kind</key>

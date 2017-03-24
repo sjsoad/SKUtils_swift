@@ -8,8 +8,10 @@
 	<string>Generates protocol with extension</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
-	<key>MainTemplateFile</key>
-	<string>___FILEBASENAME___Protocol.swift</string>
+	<key>MainTemplateFiles</key>
+	<array>
+		<string>___FILEBASENAME___Protocol.swift</string>
+	</array>
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>
