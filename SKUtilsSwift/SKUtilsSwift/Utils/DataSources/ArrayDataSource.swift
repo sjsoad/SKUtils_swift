@@ -27,9 +27,9 @@ extension ArrayDataSource {
     }
     
     func itemAtIndexPath(indexPath: IndexPath) -> AnyObject {
-        let section = sections[(indexPath as NSIndexPath).section]
+        let section = sections[indexPath.section]
         let items = section.items
-        return items[(indexPath as NSIndexPath).row]
+        return items[indexPath.row]
     }
     
 }
