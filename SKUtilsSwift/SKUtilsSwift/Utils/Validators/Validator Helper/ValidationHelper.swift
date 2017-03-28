@@ -22,8 +22,8 @@ protocol ValidationHelper {
     
     func validate(fields: [UITextField],
                   validationHandler: ValidationHelperHandler?) -> Bool
-    func validate(thisEqual fieldOne: UITextField,
-                  this fieldTwo: UITextField,
+    func validate(equal fieldOne: UITextField,
+                  to fieldTwo: UITextField,
                   comparisonHandler: ComparisonHelperHandler?) -> Bool
 }
 
@@ -68,8 +68,8 @@ extension ValidationHelper {
         return fieldsToValidate.count == allFieldsValidated
     }
     
-    func validate(thisEqual fieldOne: UITextField,
-                  this fieldTwo: UITextField,
+    func validate(equal fieldOne: UITextField,
+                  to fieldTwo: UITextField,
                   comparisonHandler: ComparisonHelperHandler?) -> Bool {
         let equalText = equalValidator().isEqual(fieldOne.text,
                                                   secondString: fieldTwo.text)
