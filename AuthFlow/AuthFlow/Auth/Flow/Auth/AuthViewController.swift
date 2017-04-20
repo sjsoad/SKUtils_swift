@@ -36,7 +36,7 @@ class AuthViewController: UIViewController, RequestExecutingViewProtocol {
             strongSelf.authViewModel.tryToLogin = false
             if succeed,
                 let profile = strongSelf.profileViewModel.profile {
-                <#profile received#>
+//                <#profile received#>
             }
         }
         authViewModel.requerstExecutingHandler = requerstExecutingHandler()

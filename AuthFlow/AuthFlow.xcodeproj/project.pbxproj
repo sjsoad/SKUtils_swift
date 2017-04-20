@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A54F50711EA8F83C007DD713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50701EA8F83C007DD713 /* AppDelegate.swift */; };
+		A54F50781EA8F83C007DD713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54F50771EA8F83C007DD713 /* Assets.xcassets */; };
+		A54F507B1EA8F83C007DD713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F50791EA8F83C007DD713 /* LaunchScreen.storyboard */; };
+		A54F50D31EA8F879007DD713 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50841EA8F878007DD713 /* BaseViewController.swift */; };
+		A54F50D41EA8F879007DD713 /* DissmisableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50851EA8F878007DD713 /* DissmisableViewController.swift */; };
+		A54F50D51EA8F879007DD713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50891EA8F878007DD713 /* AuthService.swift */; };
+		A54F50D61EA8F879007DD713 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F508B1EA8F878007DD713 /* FacebookAuth.swift */; };
+		A54F50D71EA8F879007DD713 /* GooglePlusAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F508D1EA8F878007DD713 /* GooglePlusAuth.swift */; };
+		A54F50D81EA8F879007DD713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54F508E1EA8F878007DD713 /* GoogleService-Info.plist */; };
+		A54F50D91EA8F879007DD713 /* InstagramAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50901EA8F878007DD713 /* InstagramAuth.swift */; };
+		A54F50DA1EA8F879007DD713 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50911EA8F878007DD713 /* InstagramAuthViewController.swift */; };
+		A54F50DB1EA8F879007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50921EA8F878007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */; };
+		A54F50DC1EA8F879007DD713 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50931EA8F878007DD713 /* AuthViewController.swift */; };
+		A54F50DD1EA8F879007DD713 /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50951EA8F878007DD713 /* AuthNavigation.swift */; };
+		A54F50DE1EA8F879007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50971EA8F878007DD713 /* AuthViewModel+GooglePlusDelegate.swift */; };
+		A54F50DF1EA8F879007DD713 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50981EA8F878007DD713 /* AuthViewModel.swift */; };
+		A54F50E01EA8F879007DD713 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50991EA8F878007DD713 /* ProfileViewModel.swift */; };
+		A54F50E11EA8F879007DD713 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F509B1EA8F878007DD713 /* ChangePassViewController.swift */; };
+		A54F50E21EA8F879007DD713 /* ChangePassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F509D1EA8F878007DD713 /* ChangePassNavigation.swift */; };
+		A54F50E31EA8F879007DD713 /* ChangePassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F509F1EA8F878007DD713 /* ChangePassViewModel.swift */; };
+		A54F50E41EA8F879007DD713 /* RegistrationNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50A21EA8F878007DD713 /* RegistrationNavigation.swift */; };
+		A54F50E51EA8F879007DD713 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50A31EA8F878007DD713 /* RegistrationViewController.swift */; };
+		A54F50E61EA8F879007DD713 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50A51EA8F878007DD713 /* RegistrationViewModel.swift */; };
+		A54F50E71EA8F879007DD713 /* RemindPassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50A81EA8F878007DD713 /* RemindPassNavigation.swift */; };
+		A54F50E81EA8F879007DD713 /* RemindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50A91EA8F878007DD713 /* RemindPassViewController.swift */; };
+		A54F50E91EA8F879007DD713 /* RemindPassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50AB1EA8F878007DD713 /* RemindPassViewModel.swift */; };
+		A54F50EA1EA8F879007DD713 /* ChangePasswordRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50AE1EA8F879007DD713 /* ChangePasswordRequestProtocol.swift */; };
+		A54F50EB1EA8F879007DD713 /* LoginRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50AF1EA8F879007DD713 /* LoginRequestProtocol.swift */; };
+		A54F50EC1EA8F879007DD713 /* ProfileRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B01EA8F879007DD713 /* ProfileRequestProtocol.swift */; };
+		A54F50ED1EA8F879007DD713 /* RegistrationRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B11EA8F879007DD713 /* RegistrationRequestProtocol.swift */; };
+		A54F50EE1EA8F879007DD713 /* RemindPasswordRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B21EA8F879007DD713 /* RemindPasswordRequestProtocol.swift */; };
+		A54F50EF1EA8F879007DD713 /* ChangePasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B41EA8F879007DD713 /* ChangePasswordRequest.swift */; };
+		A54F50F01EA8F879007DD713 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B51EA8F879007DD713 /* LoginRequest.swift */; };
+		A54F50F11EA8F879007DD713 /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B61EA8F879007DD713 /* ProfileRequest.swift */; };
+		A54F50F21EA8F879007DD713 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B71EA8F879007DD713 /* RegistrationRequest.swift */; };
+		A54F50F31EA8F879007DD713 /* RemindPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B81EA8F879007DD713 /* RemindPasswordRequest.swift */; };
+		A54F50F41EA8F879007DD713 /* SocialLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50B91EA8F879007DD713 /* SocialLoginRequest.swift */; };
+		A54F50F51EA8F879007DD713 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50BB1EA8F879007DD713 /* LoginResponse.swift */; };
+		A54F50F61EA8F879007DD713 /* ProfileRepsonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50BC1EA8F879007DD713 /* ProfileRepsonse.swift */; };
+		A54F50F71EA8F879007DD713 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50BD1EA8F879007DD713 /* RegistrationResponse.swift */; };
+		A54F50F81EA8F879007DD713 /* SucccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50BE1EA8F879007DD713 /* SucccessResponse.swift */; };
+		A54F50F91EA8F879007DD713 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C11EA8F879007DD713 /* AuthProtocol.swift */; };
+		A54F50FA1EA8F879007DD713 /* DismissProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C21EA8F879007DD713 /* DismissProtocol.swift */; };
+		A54F50FB1EA8F879007DD713 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C31EA8F879007DD713 /* NavigationProtocol.swift */; };
+		A54F50FC1EA8F879007DD713 /* PasswordRecoveringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C41EA8F879007DD713 /* PasswordRecoveringProtocol.swift */; };
+		A54F50FD1EA8F879007DD713 /* PopToProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C51EA8F879007DD713 /* PopToProtocol.swift */; };
+		A54F50FE1EA8F879007DD713 /* RegistrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C61EA8F879007DD713 /* RegistrationProtocol.swift */; };
+		A54F50FF1EA8F879007DD713 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50C91EA8F879007DD713 /* AuthenticationProtocol.swift */; };
+		A54F51001EA8F879007DD713 /* HeroIdProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50CA1EA8F879007DD713 /* HeroIdProtocol.swift */; };
+		A54F51011EA8F879007DD713 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50CC1EA8F879007DD713 /* ProfileProtocol.swift */; };
+		A54F51021EA8F879007DD713 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50CE1EA8F879007DD713 /* UserProtocol.swift */; };
+		A54F51031EA8F879007DD713 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F50D01EA8F879007DD713 /* Auth.storyboard */; };
+		A54F51041EA8F879007DD713 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F50D11EA8F879007DD713 /* Password.storyboard */; };
+		A54F51051EA8F879007DD713 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F50D21EA8F879007DD713 /* Registration.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A54F506D1EA8F83C007DD713 /* AuthFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54F50701EA8F83C007DD713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A54F50771EA8F83C007DD713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A54F507A1EA8F83C007DD713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A54F507C1EA8F83C007DD713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54F50841EA8F878007DD713 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A54F50851EA8F878007DD713 /* DissmisableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissmisableViewController.swift; sourceTree = "<group>"; };
+		A54F50891EA8F878007DD713 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A54F508B1EA8F878007DD713 /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		A54F508D1EA8F878007DD713 /* GooglePlusAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuth.swift; sourceTree = "<group>"; };
+		A54F508E1EA8F878007DD713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A54F50901EA8F878007DD713 /* InstagramAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuth.swift; sourceTree = "<group>"; };
+		A54F50911EA8F878007DD713 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
+		A54F50921EA8F878007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewController+GooglePlusUIDelegate.swift"; sourceTree = "<group>"; };
+		A54F50931EA8F878007DD713 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A54F50951EA8F878007DD713 /* AuthNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
+		A54F50971EA8F878007DD713 /* AuthViewModel+GooglePlusDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+GooglePlusDelegate.swift"; sourceTree = "<group>"; };
+		A54F50981EA8F878007DD713 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A54F50991EA8F878007DD713 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A54F509B1EA8F878007DD713 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		A54F509D1EA8F878007DD713 /* ChangePassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassNavigation.swift; sourceTree = "<group>"; };
+		A54F509F1EA8F878007DD713 /* ChangePassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewModel.swift; sourceTree = "<group>"; };
+		A54F50A21EA8F878007DD713 /* RegistrationNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNavigation.swift; sourceTree = "<group>"; };
+		A54F50A31EA8F878007DD713 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A54F50A51EA8F878007DD713 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		A54F50A81EA8F878007DD713 /* RemindPassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassNavigation.swift; sourceTree = "<group>"; };
+		A54F50A91EA8F878007DD713 /* RemindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewController.swift; sourceTree = "<group>"; };
+		A54F50AB1EA8F878007DD713 /* RemindPassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewModel.swift; sourceTree = "<group>"; };
+		A54F50AE1EA8F879007DD713 /* ChangePasswordRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequestProtocol.swift; sourceTree = "<group>"; };
+		A54F50AF1EA8F879007DD713 /* LoginRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestProtocol.swift; sourceTree = "<group>"; };
+		A54F50B01EA8F879007DD713 /* ProfileRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRequestProtocol.swift; sourceTree = "<group>"; };
+		A54F50B11EA8F879007DD713 /* RegistrationRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequestProtocol.swift; sourceTree = "<group>"; };
+		A54F50B21EA8F879007DD713 /* RemindPasswordRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPasswordRequestProtocol.swift; sourceTree = "<group>"; };
+		A54F50B41EA8F879007DD713 /* ChangePasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequest.swift; sourceTree = "<group>"; };
+		A54F50B51EA8F879007DD713 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		A54F50B61EA8F879007DD713 /* ProfileRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
+		A54F50B71EA8F879007DD713 /* RegistrationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
+		A54F50B81EA8F879007DD713 /* RemindPasswordRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPasswordRequest.swift; sourceTree = "<group>"; };
+		A54F50B91EA8F879007DD713 /* SocialLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginRequest.swift; sourceTree = "<group>"; };
+		A54F50BB1EA8F879007DD713 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A54F50BC1EA8F879007DD713 /* ProfileRepsonse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRepsonse.swift; sourceTree = "<group>"; };
+		A54F50BD1EA8F879007DD713 /* RegistrationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
+		A54F50BE1EA8F879007DD713 /* SucccessResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SucccessResponse.swift; sourceTree = "<group>"; };
+		A54F50C11EA8F879007DD713 /* AuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
+		A54F50C21EA8F879007DD713 /* DismissProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissProtocol.swift; sourceTree = "<group>"; };
+		A54F50C31EA8F879007DD713 /* NavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		A54F50C41EA8F879007DD713 /* PasswordRecoveringProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveringProtocol.swift; sourceTree = "<group>"; };
+		A54F50C51EA8F879007DD713 /* PopToProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopToProtocol.swift; sourceTree = "<group>"; };
+		A54F50C61EA8F879007DD713 /* RegistrationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationProtocol.swift; sourceTree = "<group>"; };
+		A54F50C91EA8F879007DD713 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		A54F50CA1EA8F879007DD713 /* HeroIdProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIdProtocol.swift; sourceTree = "<group>"; };
+		A54F50CC1EA8F879007DD713 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		A54F50CE1EA8F879007DD713 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
+		A54F50D01EA8F879007DD713 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		A54F50D11EA8F879007DD713 /* Password.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
+		A54F50D21EA8F879007DD713 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A54F506A1EA8F83C007DD713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A54F50641EA8F83B007DD713 = {
+			isa = PBXGroup;
+			children = (
+				A54F506F1EA8F83C007DD713 /* AuthFlow */,
+				A54F506E1EA8F83C007DD713 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A54F506E1EA8F83C007DD713 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A54F506D1EA8F83C007DD713 /* AuthFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A54F506F1EA8F83C007DD713 /* AuthFlow */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50821EA8F878007DD713 /* Auth */,
+				A54F50701EA8F83C007DD713 /* AppDelegate.swift */,
+				A54F50771EA8F83C007DD713 /* Assets.xcassets */,
+				A54F50791EA8F83C007DD713 /* LaunchScreen.storyboard */,
+				A54F507C1EA8F83C007DD713 /* Info.plist */,
+			);
+			path = AuthFlow;
+			sourceTree = "<group>";
+		};
+		A54F50821EA8F878007DD713 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50831EA8F878007DD713 /* Base */,
+				A54F50861EA8F878007DD713 /* Flow */,
+				A54F50AC1EA8F878007DD713 /* Networking */,
+				A54F50BF1EA8F879007DD713 /* Protocols */,
+				A54F50CF1EA8F879007DD713 /* UI */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A54F50831EA8F878007DD713 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50841EA8F878007DD713 /* BaseViewController.swift */,
+				A54F50851EA8F878007DD713 /* DissmisableViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A54F50861EA8F878007DD713 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50871EA8F878007DD713 /* Auth */,
+				A54F509A1EA8F878007DD713 /* Change Password */,
+				A54F50A01EA8F878007DD713 /* Registration */,
+				A54F50A61EA8F878007DD713 /* Remind Password */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		A54F50871EA8F878007DD713 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50881EA8F878007DD713 /* Auth Services */,
+				A54F50921EA8F878007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */,
+				A54F50931EA8F878007DD713 /* AuthViewController.swift */,
+				A54F50941EA8F878007DD713 /* Navigation */,
+				A54F50961EA8F878007DD713 /* View Model */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A54F50881EA8F878007DD713 /* Auth Services */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50891EA8F878007DD713 /* AuthService.swift */,
+				A54F508A1EA8F878007DD713 /* Facebook */,
+				A54F508C1EA8F878007DD713 /* Google+ */,
+				A54F508F1EA8F878007DD713 /* Instagram */,
+			);
+			path = "Auth Services";
+			sourceTree = "<group>";
+		};
+		A54F508A1EA8F878007DD713 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				A54F508B1EA8F878007DD713 /* FacebookAuth.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		A54F508C1EA8F878007DD713 /* Google+ */ = {
+			isa = PBXGroup;
+			children = (
+				A54F508D1EA8F878007DD713 /* GooglePlusAuth.swift */,
+				A54F508E1EA8F878007DD713 /* GoogleService-Info.plist */,
+			);
+			path = "Google+";
+			sourceTree = "<group>";
+		};
+		A54F508F1EA8F878007DD713 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50901EA8F878007DD713 /* InstagramAuth.swift */,
+				A54F50911EA8F878007DD713 /* InstagramAuthViewController.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		A54F50941EA8F878007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50951EA8F878007DD713 /* AuthNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50961EA8F878007DD713 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50971EA8F878007DD713 /* AuthViewModel+GooglePlusDelegate.swift */,
+				A54F50981EA8F878007DD713 /* AuthViewModel.swift */,
+				A54F50991EA8F878007DD713 /* ProfileViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A54F509A1EA8F878007DD713 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				A54F509B1EA8F878007DD713 /* ChangePassViewController.swift */,
+				A54F509C1EA8F878007DD713 /* Navigation */,
+				A54F509E1EA8F878007DD713 /* View Models */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
+		A54F509C1EA8F878007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F509D1EA8F878007DD713 /* ChangePassNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F509E1EA8F878007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F509F1EA8F878007DD713 /* ChangePassViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A54F50A01EA8F878007DD713 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50A11EA8F878007DD713 /* Navigation */,
+				A54F50A31EA8F878007DD713 /* RegistrationViewController.swift */,
+				A54F50A41EA8F878007DD713 /* View Models */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		A54F50A11EA8F878007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50A21EA8F878007DD713 /* RegistrationNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50A41EA8F878007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50A51EA8F878007DD713 /* RegistrationViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A54F50A61EA8F878007DD713 /* Remind Password */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50A71EA8F878007DD713 /* Navigation */,
+				A54F50A91EA8F878007DD713 /* RemindPassViewController.swift */,
+				A54F50AA1EA8F878007DD713 /* View Models */,
+			);
+			path = "Remind Password";
+			sourceTree = "<group>";
+		};
+		A54F50A71EA8F878007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50A81EA8F878007DD713 /* RemindPassNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50AA1EA8F878007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50AB1EA8F878007DD713 /* RemindPassViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A54F50AC1EA8F878007DD713 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50AD1EA8F879007DD713 /* Network Protocols */,
+				A54F50B31EA8F879007DD713 /* Requests */,
+				A54F50BA1EA8F879007DD713 /* Responces */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A54F50AD1EA8F879007DD713 /* Network Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50AE1EA8F879007DD713 /* ChangePasswordRequestProtocol.swift */,
+				A54F50AF1EA8F879007DD713 /* LoginRequestProtocol.swift */,
+				A54F50B01EA8F879007DD713 /* ProfileRequestProtocol.swift */,
+				A54F50B11EA8F879007DD713 /* RegistrationRequestProtocol.swift */,
+				A54F50B21EA8F879007DD713 /* RemindPasswordRequestProtocol.swift */,
+			);
+			path = "Network Protocols";
+			sourceTree = "<group>";
+		};
+		A54F50B31EA8F879007DD713 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50B41EA8F879007DD713 /* ChangePasswordRequest.swift */,
+				A54F50B51EA8F879007DD713 /* LoginRequest.swift */,
+				A54F50B61EA8F879007DD713 /* ProfileRequest.swift */,
+				A54F50B71EA8F879007DD713 /* RegistrationRequest.swift */,
+				A54F50B81EA8F879007DD713 /* RemindPasswordRequest.swift */,
+				A54F50B91EA8F879007DD713 /* SocialLoginRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		A54F50BA1EA8F879007DD713 /* Responces */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50BB1EA8F879007DD713 /* LoginResponse.swift */,
+				A54F50BC1EA8F879007DD713 /* ProfileRepsonse.swift */,
+				A54F50BD1EA8F879007DD713 /* RegistrationResponse.swift */,
+				A54F50BE1EA8F879007DD713 /* SucccessResponse.swift */,
+			);
+			path = Responces;
+			sourceTree = "<group>";
+		};
+		A54F50BF1EA8F879007DD713 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50C01EA8F879007DD713 /* Navigation */,
+				A54F50C71EA8F879007DD713 /* Other */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A54F50C01EA8F879007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50C11EA8F879007DD713 /* AuthProtocol.swift */,
+				A54F50C21EA8F879007DD713 /* DismissProtocol.swift */,
+				A54F50C31EA8F879007DD713 /* NavigationProtocol.swift */,
+				A54F50C41EA8F879007DD713 /* PasswordRecoveringProtocol.swift */,
+				A54F50C51EA8F879007DD713 /* PopToProtocol.swift */,
+				A54F50C61EA8F879007DD713 /* RegistrationProtocol.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50C71EA8F879007DD713 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50C81EA8F879007DD713 /* Auth */,
+				A54F50CA1EA8F879007DD713 /* HeroIdProtocol.swift */,
+				A54F50CB1EA8F879007DD713 /* Profile */,
+				A54F50CD1EA8F879007DD713 /* User */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A54F50C81EA8F879007DD713 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50C91EA8F879007DD713 /* AuthenticationProtocol.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A54F50CB1EA8F879007DD713 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50CC1EA8F879007DD713 /* ProfileProtocol.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A54F50CD1EA8F879007DD713 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50CE1EA8F879007DD713 /* UserProtocol.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A54F50CF1EA8F879007DD713 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50D01EA8F879007DD713 /* Auth.storyboard */,
+				A54F50D11EA8F879007DD713 /* Password.storyboard */,
+				A54F50D21EA8F879007DD713 /* Registration.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A54F506C1EA8F83C007DD713 /* AuthFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54F507F1EA8F83C007DD713 /* Build configuration list for PBXNativeTarget "AuthFlow" */;
+			buildPhases = (
+				A54F50691EA8F83C007DD713 /* Sources */,
+				A54F506A1EA8F83C007DD713 /* Frameworks */,
+				A54F506B1EA8F83C007DD713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AuthFlow;
+			productName = AuthFlow;
+			productReference = A54F506D1EA8F83C007DD713 /* AuthFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A54F50651EA8F83B007DD713 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Sergey;
+				TargetAttributes = {
+					A54F506C1EA8F83C007DD713 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A54F50681EA8F83B007DD713 /* Build configuration list for PBXProject "AuthFlow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A54F50641EA8F83B007DD713;
+			productRefGroup = A54F506E1EA8F83C007DD713 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A54F506C1EA8F83C007DD713 /* AuthFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A54F506B1EA8F83C007DD713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54F51031EA8F879007DD713 /* Auth.storyboard in Resources */,
+				A54F51051EA8F879007DD713 /* Registration.storyboard in Resources */,
+				A54F507B1EA8F83C007DD713 /* LaunchScreen.storyboard in Resources */,
+				A54F51041EA8F879007DD713 /* Password.storyboard in Resources */,
+				A54F50781EA8F83C007DD713 /* Assets.xcassets in Resources */,
+				A54F50D81EA8F879007DD713 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A54F50691EA8F83C007DD713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54F50E31EA8F879007DD713 /* ChangePassViewModel.swift in Sources */,
+				A54F50E11EA8F879007DD713 /* ChangePassViewController.swift in Sources */,
+				A54F50E51EA8F879007DD713 /* RegistrationViewController.swift in Sources */,
+				A54F50F01EA8F879007DD713 /* LoginRequest.swift in Sources */,
+				A54F50F61EA8F879007DD713 /* ProfileRepsonse.swift in Sources */,
+				A54F50EE1EA8F879007DD713 /* RemindPasswordRequestProtocol.swift in Sources */,
+				A54F50E71EA8F879007DD713 /* RemindPassNavigation.swift in Sources */,
+				A54F50F91EA8F879007DD713 /* AuthProtocol.swift in Sources */,
+				A54F50F41EA8F879007DD713 /* SocialLoginRequest.swift in Sources */,
+				A54F50711EA8F83C007DD713 /* AppDelegate.swift in Sources */,
+				A54F50E21EA8F879007DD713 /* ChangePassNavigation.swift in Sources */,
+				A54F50E61EA8F879007DD713 /* RegistrationViewModel.swift in Sources */,
+				A54F50DD1EA8F879007DD713 /* AuthNavigation.swift in Sources */,
+				A54F50DA1EA8F879007DD713 /* InstagramAuthViewController.swift in Sources */,
+				A54F51021EA8F879007DD713 /* UserProtocol.swift in Sources */,
+				A54F50FC1EA8F879007DD713 /* PasswordRecoveringProtocol.swift in Sources */,
+				A54F50DC1EA8F879007DD713 /* AuthViewController.swift in Sources */,
+				A54F50FF1EA8F879007DD713 /* AuthenticationProtocol.swift in Sources */,
+				A54F50EA1EA8F879007DD713 /* ChangePasswordRequestProtocol.swift in Sources */,
+				A54F50DB1EA8F879007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */,
+				A54F50D61EA8F879007DD713 /* FacebookAuth.swift in Sources */,
+				A54F50EC1EA8F879007DD713 /* ProfileRequestProtocol.swift in Sources */,
+				A54F50E81EA8F879007DD713 /* RemindPassViewController.swift in Sources */,
+				A54F51001EA8F879007DD713 /* HeroIdProtocol.swift in Sources */,
+				A54F50E01EA8F879007DD713 /* ProfileViewModel.swift in Sources */,
+				A54F50FE1EA8F879007DD713 /* RegistrationProtocol.swift in Sources */,
+				A54F50F11EA8F879007DD713 /* ProfileRequest.swift in Sources */,
+				A54F50F31EA8F879007DD713 /* RemindPasswordRequest.swift in Sources */,
+				A54F50ED1EA8F879007DD713 /* RegistrationRequestProtocol.swift in Sources */,
+				A54F50DE1EA8F879007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */,
+				A54F50D31EA8F879007DD713 /* BaseViewController.swift in Sources */,
+				A54F50D41EA8F879007DD713 /* DissmisableViewController.swift in Sources */,
+				A54F50D71EA8F879007DD713 /* GooglePlusAuth.swift in Sources */,
+				A54F50F71EA8F879007DD713 /* RegistrationResponse.swift in Sources */,
+				A54F50F21EA8F879007DD713 /* RegistrationRequest.swift in Sources */,
+				A54F50EB1EA8F879007DD713 /* LoginRequestProtocol.swift in Sources */,
+				A54F50FB1EA8F879007DD713 /* NavigationProtocol.swift in Sources */,
+				A54F50F81EA8F879007DD713 /* SucccessResponse.swift in Sources */,
+				A54F50D91EA8F879007DD713 /* InstagramAuth.swift in Sources */,
+				A54F50DF1EA8F879007DD713 /* AuthViewModel.swift in Sources */,
+				A54F50E41EA8F879007DD713 /* RegistrationNavigation.swift in Sources */,
+				A54F50E91EA8F879007DD713 /* RemindPassViewModel.swift in Sources */,
+				A54F51011EA8F879007DD713 /* ProfileProtocol.swift in Sources */,
+				A54F50D51EA8F879007DD713 /* AuthService.swift in Sources */,
+				A54F50EF1EA8F879007DD713 /* ChangePasswordRequest.swift in Sources */,
+				A54F50FD1EA8F879007DD713 /* PopToProtocol.swift in Sources */,
+				A54F50FA1EA8F879007DD713 /* DismissProtocol.swift in Sources */,
+				A54F50F51EA8F879007DD713 /* LoginResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A54F50791EA8F83C007DD713 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A54F507A1EA8F83C007DD713 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A54F507D1EA8F83C007DD713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A54F507E1EA8F83C007DD713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A54F50801EA8F83C007DD713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AuthFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grossum.AuthFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A54F50811EA8F83C007DD713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AuthFlow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grossum.AuthFlow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A54F50681EA8F83B007DD713 /* Build configuration list for PBXProject "AuthFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54F507D1EA8F83C007DD713 /* Debug */,
+				A54F507E1EA8F83C007DD713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A54F507F1EA8F83C007DD713 /* Build configuration list for PBXNativeTarget "AuthFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54F50801EA8F83C007DD713 /* Debug */,
+				A54F50811EA8F83C007DD713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A54F50651EA8F83B007DD713 /* Project object */;
+}

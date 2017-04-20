@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Hero
+//import Hero
 
 class BaseViewController: UIViewController, Navigatable {
 

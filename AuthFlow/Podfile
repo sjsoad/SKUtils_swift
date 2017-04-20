@@ -1,0 +1,30 @@
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'Defietser' do
+  pod 'TPKeyboardAvoiding'
+  pod 'SVProgressHUD'
+  pod 'DateTools'
+  pod 'iCarousel'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'ASValueTrackingSlider'
+  pod 'OCGoogleDirectionsAPI'
+  pod 'CRToast'
+  pod 'Realm'
+  pod 'EasyMapping'
+  pod 'SDWebImage'
+  pod 'TTSwitch'
+  pod 'AFNetworking'
+  pod 'TTRangeSlider'
+  pod 'RadioButton'
+  pod 'IQKeyboardManager'
+  pod 'SLExpandableTableView'
+  pod 'pop'
+  pod 'EAIntroView'
+  pod 'HCSStarRatingView'
+  pod 'DZNEmptyDataSet'
+#  pod 'NAOSDK'
+  
+end
