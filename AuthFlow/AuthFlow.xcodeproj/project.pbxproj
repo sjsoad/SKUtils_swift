@@ -141,7 +141,6 @@
 		A54F530C1EA8FF74007DD713 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F530B1EA8FF74007DD713 /* UserViewModel.swift */; };
 		A54F53121EA8FFAE007DD713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F530E1EA8FFAE007DD713 /* Constants.swift */; };
 		A54F53131EA8FFAE007DD713 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53111EA8FFAE007DD713 /* Profile.swift */; };
-		A54F531D1EA90358007DD713 /* HeroIdProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53151EA90358007DD713 /* HeroIdProtocol.swift */; };
 		A54F531E1EA90358007DD713 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */; };
 		A54F531F1EA90358007DD713 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F531A1EA90358007DD713 /* ProfileProtocol.swift */; };
 		A54F53201EA90358007DD713 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F531C1EA90358007DD713 /* UserProtocol.swift */; };
@@ -288,7 +287,6 @@
 		A54F530B1EA8FF74007DD713 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		A54F530E1EA8FFAE007DD713 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A54F53111EA8FFAE007DD713 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		A54F53151EA90358007DD713 /* HeroIdProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIdProtocol.swift; sourceTree = "<group>"; };
 		A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
 		A54F531A1EA90358007DD713 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		A54F531C1EA90358007DD713 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
@@ -574,7 +572,6 @@
 		A54F516B1EA8FB9D007DD713 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A54F53141EA90358007DD713 /* HeroLib */,
 				A54F53161EA90358007DD713 /* User */,
 				A54F516C1EA8FB9D007DD713 /* Navigation */,
 			);
@@ -1101,14 +1098,6 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
-		A54F53141EA90358007DD713 /* HeroLib */ = {
-			isa = PBXGroup;
-			children = (
-				A54F53151EA90358007DD713 /* HeroIdProtocol.swift */,
-			);
-			path = HeroLib;
-			sourceTree = "<group>";
-		};
 		A54F53161EA90358007DD713 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -1379,7 +1368,6 @@
 				A54F528C1EA8FD97007DD713 /* AlertActionBuilder.swift in Sources */,
 				A54F51BB1EA8FB9D007DD713 /* LoginRequestProtocol.swift in Sources */,
 				A54F529E1EA8FD97007DD713 /* FRCCollectionViewProtocol.swift in Sources */,
-				A54F531D1EA90358007DD713 /* HeroIdProtocol.swift in Sources */,
 				A54F51C81EA8FB9D007DD713 /* SucccessResponse.swift in Sources */,
 				A54F51A91EA8FB9D007DD713 /* InstagramAuth.swift in Sources */,
 				A54F52981EA8FD97007DD713 /* SectionModel.swift in Sources */,
