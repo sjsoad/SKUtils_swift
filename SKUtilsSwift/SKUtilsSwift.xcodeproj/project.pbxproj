@@ -11,23 +11,8 @@
 		045970A51D64B26100C45A1D /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 045970A41D64B26100C45A1D /* testJSON.txt */; };
 		048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A7F901DC9ED0000DF1E7A /* ExampleViewController.swift */; };
 		049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049161EF1D3E05A000E01686 /* AppDelegate.swift */; };
-		A54F4FF61EA8AC53007DD713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FA91EA8AC53007DD713 /* AuthService.swift */; };
-		A54F4FF71EA8AC53007DD713 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FAB1EA8AC53007DD713 /* FacebookAuth.swift */; };
-		A54F4FF81EA8AC53007DD713 /* GooglePlusAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FAD1EA8AC53007DD713 /* GooglePlusAuth.swift */; };
-		A54F4FF91EA8AC53007DD713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54F4FAE1EA8AC53007DD713 /* GoogleService-Info.plist */; };
-		A54F4FFA1EA8AC53007DD713 /* InstagramAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB01EA8AC53007DD713 /* InstagramAuth.swift */; };
-		A54F4FFB1EA8AC53007DD713 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB11EA8AC53007DD713 /* InstagramAuthViewController.swift */; };
-		A54F4FFC1EA8AC53007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB21EA8AC53007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */; };
-		A54F4FFD1EA8AC53007DD713 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB31EA8AC53007DD713 /* AuthViewController.swift */; };
-		A54F4FFE1EA8AC53007DD713 /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB51EA8AC53007DD713 /* AuthNavigation.swift */; };
-		A54F4FFF1EA8AC53007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB71EA8AC53007DD713 /* AuthViewModel+GooglePlusDelegate.swift */; };
-		A54F50001EA8AC53007DD713 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB81EA8AC53007DD713 /* AuthViewModel.swift */; };
-		A54F50011EA8AC53007DD713 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FB91EA8AC53007DD713 /* ProfileViewModel.swift */; };
 		A54F50021EA8AC53007DD713 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FBB1EA8AC53007DD713 /* BaseViewController.swift */; };
 		A54F50031EA8AC53007DD713 /* DissmisableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FBC1EA8AC53007DD713 /* DissmisableViewController.swift */; };
-		A54F50041EA8AC53007DD713 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FBE1EA8AC53007DD713 /* ChangePassViewController.swift */; };
-		A54F50051EA8AC53007DD713 /* ChangePassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FC01EA8AC53007DD713 /* ChangePassNavigation.swift */; };
-		A54F50061EA8AC53007DD713 /* ChangePassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FC21EA8AC53007DD713 /* ChangePassViewModel.swift */; };
 		A54F50071EA8AC53007DD713 /* ChangePasswordRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FC51EA8AC53007DD713 /* ChangePasswordRequestProtocol.swift */; };
 		A54F50081EA8AC53007DD713 /* LoginRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FC61EA8AC53007DD713 /* LoginRequestProtocol.swift */; };
 		A54F50091EA8AC53007DD713 /* ProfileRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FC71EA8AC53007DD713 /* ProfileRequestProtocol.swift */; };
@@ -53,15 +38,30 @@
 		A54F501D1EA8AC53007DD713 /* HeroIdProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FE11EA8AC53007DD713 /* HeroIdProtocol.swift */; };
 		A54F501E1EA8AC53007DD713 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FE31EA8AC53007DD713 /* ProfileProtocol.swift */; };
 		A54F501F1EA8AC53007DD713 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FE51EA8AC53007DD713 /* UserProtocol.swift */; };
-		A54F50201EA8AC53007DD713 /* RegistrationNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FE81EA8AC53007DD713 /* RegistrationNavigation.swift */; };
-		A54F50211EA8AC53007DD713 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FE91EA8AC53007DD713 /* RegistrationViewController.swift */; };
-		A54F50221EA8AC53007DD713 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FEB1EA8AC53007DD713 /* RegistrationViewModel.swift */; };
-		A54F50231EA8AC53007DD713 /* RemindPassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FEE1EA8AC53007DD713 /* RemindPassNavigation.swift */; };
-		A54F50241EA8AC53007DD713 /* RemindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FEF1EA8AC53007DD713 /* RemindPassViewController.swift */; };
-		A54F50251EA8AC53007DD713 /* RemindPassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4FF11EA8AC53007DD713 /* RemindPassViewModel.swift */; };
 		A54F50261EA8AC53007DD713 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F4FF31EA8AC53007DD713 /* Auth.storyboard */; };
 		A54F50271EA8AC53007DD713 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F4FF41EA8AC53007DD713 /* Password.storyboard */; };
 		A54F50281EA8AC53007DD713 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F4FF51EA8AC53007DD713 /* Registration.storyboard */; };
+		A54F504F1EA8B098007DD713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F502C1EA8B098007DD713 /* AuthService.swift */; };
+		A54F50501EA8B098007DD713 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F502E1EA8B098007DD713 /* FacebookAuth.swift */; };
+		A54F50511EA8B098007DD713 /* GooglePlusAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50301EA8B098007DD713 /* GooglePlusAuth.swift */; };
+		A54F50521EA8B098007DD713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54F50311EA8B098007DD713 /* GoogleService-Info.plist */; };
+		A54F50531EA8B098007DD713 /* InstagramAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50331EA8B098007DD713 /* InstagramAuth.swift */; };
+		A54F50541EA8B098007DD713 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50341EA8B098007DD713 /* InstagramAuthViewController.swift */; };
+		A54F50551EA8B098007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50351EA8B098007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */; };
+		A54F50561EA8B098007DD713 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50361EA8B098007DD713 /* AuthViewController.swift */; };
+		A54F50571EA8B098007DD713 /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50381EA8B098007DD713 /* AuthNavigation.swift */; };
+		A54F50581EA8B098007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F503A1EA8B098007DD713 /* AuthViewModel+GooglePlusDelegate.swift */; };
+		A54F50591EA8B098007DD713 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F503B1EA8B098007DD713 /* AuthViewModel.swift */; };
+		A54F505A1EA8B098007DD713 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F503C1EA8B098007DD713 /* ProfileViewModel.swift */; };
+		A54F505B1EA8B098007DD713 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F503E1EA8B098007DD713 /* ChangePassViewController.swift */; };
+		A54F505C1EA8B098007DD713 /* ChangePassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50401EA8B098007DD713 /* ChangePassNavigation.swift */; };
+		A54F505D1EA8B098007DD713 /* ChangePassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50421EA8B098007DD713 /* ChangePassViewModel.swift */; };
+		A54F505E1EA8B098007DD713 /* RegistrationNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50451EA8B098007DD713 /* RegistrationNavigation.swift */; };
+		A54F505F1EA8B098007DD713 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50461EA8B098007DD713 /* RegistrationViewController.swift */; };
+		A54F50601EA8B098007DD713 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F50481EA8B098007DD713 /* RegistrationViewModel.swift */; };
+		A54F50611EA8B098007DD713 /* RemindPassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F504B1EA8B098007DD713 /* RemindPassNavigation.swift */; };
+		A54F50621EA8B098007DD713 /* RemindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F504C1EA8B098007DD713 /* RemindPassViewController.swift */; };
+		A54F50631EA8B098007DD713 /* RemindPassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F504E1EA8B098007DD713 /* RemindPassViewModel.swift */; };
 		A553C4821E13A13D005E641A /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C4811E13A13D005E641A /* ConverterTests.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
 		A58C09B31D3B65D300D4A3FD /* ValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */; };
@@ -183,23 +183,8 @@
 		A52145271D4FB54300E12CEA /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Pods/../build/Debug-iphoneos/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
 		A52145281D4FB54300E12CEA /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		A5276CB71D4004750059948C /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = "../../../Library/Developer/Xcode/DerivedData/SKUtilsSwift-bbznyedgooohafafitmfrttvuart/Build/Products/Debug-iphonesimulator/NVActivityIndicatorView/NVActivityIndicatorView.framework"; sourceTree = "<group>"; };
-		A54F4FA91EA8AC53007DD713 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		A54F4FAB1EA8AC53007DD713 /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
-		A54F4FAD1EA8AC53007DD713 /* GooglePlusAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuth.swift; sourceTree = "<group>"; };
-		A54F4FAE1EA8AC53007DD713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A54F4FB01EA8AC53007DD713 /* InstagramAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuth.swift; sourceTree = "<group>"; };
-		A54F4FB11EA8AC53007DD713 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
-		A54F4FB21EA8AC53007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewController+GooglePlusUIDelegate.swift"; sourceTree = "<group>"; };
-		A54F4FB31EA8AC53007DD713 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		A54F4FB51EA8AC53007DD713 /* AuthNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
-		A54F4FB71EA8AC53007DD713 /* AuthViewModel+GooglePlusDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+GooglePlusDelegate.swift"; sourceTree = "<group>"; };
-		A54F4FB81EA8AC53007DD713 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		A54F4FB91EA8AC53007DD713 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A54F4FBB1EA8AC53007DD713 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A54F4FBC1EA8AC53007DD713 /* DissmisableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissmisableViewController.swift; sourceTree = "<group>"; };
-		A54F4FBE1EA8AC53007DD713 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
-		A54F4FC01EA8AC53007DD713 /* ChangePassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassNavigation.swift; sourceTree = "<group>"; };
-		A54F4FC21EA8AC53007DD713 /* ChangePassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewModel.swift; sourceTree = "<group>"; };
 		A54F4FC51EA8AC53007DD713 /* ChangePasswordRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordRequestProtocol.swift; sourceTree = "<group>"; };
 		A54F4FC61EA8AC53007DD713 /* LoginRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestProtocol.swift; sourceTree = "<group>"; };
 		A54F4FC71EA8AC53007DD713 /* ProfileRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRequestProtocol.swift; sourceTree = "<group>"; };
@@ -225,15 +210,30 @@
 		A54F4FE11EA8AC53007DD713 /* HeroIdProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIdProtocol.swift; sourceTree = "<group>"; };
 		A54F4FE31EA8AC53007DD713 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		A54F4FE51EA8AC53007DD713 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
-		A54F4FE81EA8AC53007DD713 /* RegistrationNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNavigation.swift; sourceTree = "<group>"; };
-		A54F4FE91EA8AC53007DD713 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		A54F4FEB1EA8AC53007DD713 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
-		A54F4FEE1EA8AC53007DD713 /* RemindPassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassNavigation.swift; sourceTree = "<group>"; };
-		A54F4FEF1EA8AC53007DD713 /* RemindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewController.swift; sourceTree = "<group>"; };
-		A54F4FF11EA8AC53007DD713 /* RemindPassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewModel.swift; sourceTree = "<group>"; };
 		A54F4FF31EA8AC53007DD713 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		A54F4FF41EA8AC53007DD713 /* Password.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
 		A54F4FF51EA8AC53007DD713 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		A54F502C1EA8B098007DD713 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A54F502E1EA8B098007DD713 /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		A54F50301EA8B098007DD713 /* GooglePlusAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuth.swift; sourceTree = "<group>"; };
+		A54F50311EA8B098007DD713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A54F50331EA8B098007DD713 /* InstagramAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuth.swift; sourceTree = "<group>"; };
+		A54F50341EA8B098007DD713 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
+		A54F50351EA8B098007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewController+GooglePlusUIDelegate.swift"; sourceTree = "<group>"; };
+		A54F50361EA8B098007DD713 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A54F50381EA8B098007DD713 /* AuthNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
+		A54F503A1EA8B098007DD713 /* AuthViewModel+GooglePlusDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+GooglePlusDelegate.swift"; sourceTree = "<group>"; };
+		A54F503B1EA8B098007DD713 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A54F503C1EA8B098007DD713 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A54F503E1EA8B098007DD713 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		A54F50401EA8B098007DD713 /* ChangePassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassNavigation.swift; sourceTree = "<group>"; };
+		A54F50421EA8B098007DD713 /* ChangePassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewModel.swift; sourceTree = "<group>"; };
+		A54F50451EA8B098007DD713 /* RegistrationNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNavigation.swift; sourceTree = "<group>"; };
+		A54F50461EA8B098007DD713 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A54F50481EA8B098007DD713 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		A54F504B1EA8B098007DD713 /* RemindPassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassNavigation.swift; sourceTree = "<group>"; };
+		A54F504C1EA8B098007DD713 /* RemindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewController.swift; sourceTree = "<group>"; };
+		A54F504E1EA8B098007DD713 /* RemindPassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewModel.swift; sourceTree = "<group>"; };
 		A553C4811E13A13D005E641A /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsTests.swift; sourceTree = "<group>"; };
@@ -392,83 +392,13 @@
 		A54F4FA61EA8AC53007DD713 /* Auth Flow */ = {
 			isa = PBXGroup;
 			children = (
-				A54F4FA71EA8AC53007DD713 /* Auth */,
+				A54F50291EA8B098007DD713 /* Flow */,
 				A54F4FBA1EA8AC53007DD713 /* Base */,
-				A54F4FBD1EA8AC53007DD713 /* Change Password */,
 				A54F4FC31EA8AC53007DD713 /* Networking */,
 				A54F4FD61EA8AC53007DD713 /* Protocols */,
-				A54F4FE61EA8AC53007DD713 /* Registration */,
-				A54F4FEC1EA8AC53007DD713 /* Remind Password */,
 				A54F4FF21EA8AC53007DD713 /* UI */,
 			);
 			path = "Auth Flow";
-			sourceTree = "<group>";
-		};
-		A54F4FA71EA8AC53007DD713 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FA81EA8AC53007DD713 /* Auth Services */,
-				A54F4FB21EA8AC53007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */,
-				A54F4FB31EA8AC53007DD713 /* AuthViewController.swift */,
-				A54F4FB41EA8AC53007DD713 /* Navigation */,
-				A54F4FB61EA8AC53007DD713 /* View Model */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		A54F4FA81EA8AC53007DD713 /* Auth Services */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FA91EA8AC53007DD713 /* AuthService.swift */,
-				A54F4FAA1EA8AC53007DD713 /* Facebook */,
-				A54F4FAC1EA8AC53007DD713 /* Google+ */,
-				A54F4FAF1EA8AC53007DD713 /* Instagram */,
-			);
-			path = "Auth Services";
-			sourceTree = "<group>";
-		};
-		A54F4FAA1EA8AC53007DD713 /* Facebook */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FAB1EA8AC53007DD713 /* FacebookAuth.swift */,
-			);
-			path = Facebook;
-			sourceTree = "<group>";
-		};
-		A54F4FAC1EA8AC53007DD713 /* Google+ */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FAD1EA8AC53007DD713 /* GooglePlusAuth.swift */,
-				A54F4FAE1EA8AC53007DD713 /* GoogleService-Info.plist */,
-			);
-			path = "Google+";
-			sourceTree = "<group>";
-		};
-		A54F4FAF1EA8AC53007DD713 /* Instagram */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FB01EA8AC53007DD713 /* InstagramAuth.swift */,
-				A54F4FB11EA8AC53007DD713 /* InstagramAuthViewController.swift */,
-			);
-			path = Instagram;
-			sourceTree = "<group>";
-		};
-		A54F4FB41EA8AC53007DD713 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FB51EA8AC53007DD713 /* AuthNavigation.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A54F4FB61EA8AC53007DD713 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FB71EA8AC53007DD713 /* AuthViewModel+GooglePlusDelegate.swift */,
-				A54F4FB81EA8AC53007DD713 /* AuthViewModel.swift */,
-				A54F4FB91EA8AC53007DD713 /* ProfileViewModel.swift */,
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		A54F4FBA1EA8AC53007DD713 /* Base */ = {
@@ -478,32 +408,6 @@
 				A54F4FBC1EA8AC53007DD713 /* DissmisableViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		A54F4FBD1EA8AC53007DD713 /* Change Password */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FBE1EA8AC53007DD713 /* ChangePassViewController.swift */,
-				A54F4FBF1EA8AC53007DD713 /* Navigation */,
-				A54F4FC11EA8AC53007DD713 /* View Models */,
-			);
-			path = "Change Password";
-			sourceTree = "<group>";
-		};
-		A54F4FBF1EA8AC53007DD713 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FC01EA8AC53007DD713 /* ChangePassNavigation.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A54F4FC11EA8AC53007DD713 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FC21EA8AC53007DD713 /* ChangePassViewModel.swift */,
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A54F4FC31EA8AC53007DD713 /* Networking */ = {
@@ -609,58 +513,6 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		A54F4FE61EA8AC53007DD713 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FE71EA8AC53007DD713 /* Navigation */,
-				A54F4FE91EA8AC53007DD713 /* RegistrationViewController.swift */,
-				A54F4FEA1EA8AC53007DD713 /* View Models */,
-			);
-			path = Registration;
-			sourceTree = "<group>";
-		};
-		A54F4FE71EA8AC53007DD713 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FE81EA8AC53007DD713 /* RegistrationNavigation.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A54F4FEA1EA8AC53007DD713 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FEB1EA8AC53007DD713 /* RegistrationViewModel.swift */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
-		A54F4FEC1EA8AC53007DD713 /* Remind Password */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FED1EA8AC53007DD713 /* Navigation */,
-				A54F4FEF1EA8AC53007DD713 /* RemindPassViewController.swift */,
-				A54F4FF01EA8AC53007DD713 /* View Models */,
-			);
-			path = "Remind Password";
-			sourceTree = "<group>";
-		};
-		A54F4FED1EA8AC53007DD713 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FEE1EA8AC53007DD713 /* RemindPassNavigation.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A54F4FF01EA8AC53007DD713 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				A54F4FF11EA8AC53007DD713 /* RemindPassViewModel.swift */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		A54F4FF21EA8AC53007DD713 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +521,162 @@
 				A54F4FF51EA8AC53007DD713 /* Registration.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		A54F50291EA8B098007DD713 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				A54F502A1EA8B098007DD713 /* Auth */,
+				A54F503D1EA8B098007DD713 /* Change Password */,
+				A54F50431EA8B098007DD713 /* Registration */,
+				A54F50491EA8B098007DD713 /* Remind Password */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		A54F502A1EA8B098007DD713 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A54F502B1EA8B098007DD713 /* Auth Services */,
+				A54F50351EA8B098007DD713 /* AuthViewController+GooglePlusUIDelegate.swift */,
+				A54F50361EA8B098007DD713 /* AuthViewController.swift */,
+				A54F50371EA8B098007DD713 /* Navigation */,
+				A54F50391EA8B098007DD713 /* View Model */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A54F502B1EA8B098007DD713 /* Auth Services */ = {
+			isa = PBXGroup;
+			children = (
+				A54F502C1EA8B098007DD713 /* AuthService.swift */,
+				A54F502D1EA8B098007DD713 /* Facebook */,
+				A54F502F1EA8B098007DD713 /* Google+ */,
+				A54F50321EA8B098007DD713 /* Instagram */,
+			);
+			path = "Auth Services";
+			sourceTree = "<group>";
+		};
+		A54F502D1EA8B098007DD713 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				A54F502E1EA8B098007DD713 /* FacebookAuth.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		A54F502F1EA8B098007DD713 /* Google+ */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50301EA8B098007DD713 /* GooglePlusAuth.swift */,
+				A54F50311EA8B098007DD713 /* GoogleService-Info.plist */,
+			);
+			path = "Google+";
+			sourceTree = "<group>";
+		};
+		A54F50321EA8B098007DD713 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50331EA8B098007DD713 /* InstagramAuth.swift */,
+				A54F50341EA8B098007DD713 /* InstagramAuthViewController.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		A54F50371EA8B098007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50381EA8B098007DD713 /* AuthNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50391EA8B098007DD713 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				A54F503A1EA8B098007DD713 /* AuthViewModel+GooglePlusDelegate.swift */,
+				A54F503B1EA8B098007DD713 /* AuthViewModel.swift */,
+				A54F503C1EA8B098007DD713 /* ProfileViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A54F503D1EA8B098007DD713 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				A54F503E1EA8B098007DD713 /* ChangePassViewController.swift */,
+				A54F503F1EA8B098007DD713 /* Navigation */,
+				A54F50411EA8B098007DD713 /* View Models */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
+		A54F503F1EA8B098007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50401EA8B098007DD713 /* ChangePassNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50411EA8B098007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50421EA8B098007DD713 /* ChangePassViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A54F50431EA8B098007DD713 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50441EA8B098007DD713 /* Navigation */,
+				A54F50461EA8B098007DD713 /* RegistrationViewController.swift */,
+				A54F50471EA8B098007DD713 /* View Models */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		A54F50441EA8B098007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50451EA8B098007DD713 /* RegistrationNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F50471EA8B098007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F50481EA8B098007DD713 /* RegistrationViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A54F50491EA8B098007DD713 /* Remind Password */ = {
+			isa = PBXGroup;
+			children = (
+				A54F504A1EA8B098007DD713 /* Navigation */,
+				A54F504C1EA8B098007DD713 /* RemindPassViewController.swift */,
+				A54F504D1EA8B098007DD713 /* View Models */,
+			);
+			path = "Remind Password";
+			sourceTree = "<group>";
+		};
+		A54F504A1EA8B098007DD713 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A54F504B1EA8B098007DD713 /* RemindPassNavigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		A54F504D1EA8B098007DD713 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A54F504E1EA8B098007DD713 /* RemindPassViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A550FA2F1DA0105C00451249 /* ViewControllers */ = {
@@ -1259,12 +1267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */,
+				A54F50521EA8B098007DD713 /* GoogleService-Info.plist in Resources */,
 				A54F50281EA8AC53007DD713 /* Registration.storyboard in Resources */,
 				A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */,
 				045970A51D64B26100C45A1D /* testJSON.txt in Resources */,
 				A5ADBF221D3802D600EB7212 /* Assets.xcassets in Resources */,
 				A54F50271EA8AC53007DD713 /* Password.storyboard in Resources */,
-				A54F4FF91EA8AC53007DD713 /* GoogleService-Info.plist in Resources */,
 				A54F50261EA8AC53007DD713 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1284,47 +1292,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				A596A4451E83E7C0001D98E2 /* AlertBuilder.swift in Sources */,
-				A54F50221EA8AC53007DD713 /* RegistrationViewModel.swift in Sources */,
 				A54F50161EA8AC53007DD713 /* AuthProtocol.swift in Sources */,
 				A596A4771E83E7C0001D98E2 /* MailComposer.swift in Sources */,
 				A596A4831E83E7C0001D98E2 /* PhotoLibraryPermissions.swift in Sources */,
 				A54F50151EA8AC53007DD713 /* SucccessResponse.swift in Sources */,
 				A596A44C1E83E7C0001D98E2 /* AbstractDataSource.swift in Sources */,
 				A596A4861E83E7C0001D98E2 /* ServicePermissions.swift in Sources */,
-				A54F50201EA8AC53007DD713 /* RegistrationNavigation.swift in Sources */,
 				A54F500D1EA8AC53007DD713 /* LoginRequest.swift in Sources */,
 				A596A4751E83E7C0001D98E2 /* RequestExecutingViewProtocol.swift in Sources */,
 				A596A4811E83E7C0001D98E2 /* LocationPermissions.swift in Sources */,
 				A54F500C1EA8AC53007DD713 /* ChangePasswordRequest.swift in Sources */,
 				A596A4441E83E7C0001D98E2 /* AlertActionBuilder.swift in Sources */,
 				A596A44F1E83E7C0001D98E2 /* ReusableCell.swift in Sources */,
-				A54F4FFB1EA8AC53007DD713 /* InstagramAuthViewController.swift in Sources */,
+				A54F50571EA8B098007DD713 /* AuthNavigation.swift in Sources */,
 				A596A48B1E83E7C0001D98E2 /* ImagePickerViewController.swift in Sources */,
 				A596A4491E83E7C0001D98E2 /* CollectionViewArrayDataSource.swift in Sources */,
 				A54F501E1EA8AC53007DD713 /* ProfileProtocol.swift in Sources */,
-				A54F50041EA8AC53007DD713 /* ChangePassViewController.swift in Sources */,
 				044F24F01DD4D06400944819 /* AppDelegate+LocationService.swift in Sources */,
+				A54F50541EA8B098007DD713 /* InstagramAuthViewController.swift in Sources */,
 				A596A44D1E83E7C0001D98E2 /* ConfigurableCell.swift in Sources */,
+				A54F50591EA8B098007DD713 /* AuthViewModel.swift in Sources */,
 				A54F501B1EA8AC53007DD713 /* RegistrationProtocol.swift in Sources */,
-				A54F50211EA8AC53007DD713 /* RegistrationViewController.swift in Sources */,
 				A596A48E1E83E7C0001D98E2 /* BaseValidator.swift in Sources */,
 				A596A4651E83E7C0001D98E2 /* UIView+Load.swift in Sources */,
 				A596A4671E83E7C0001D98E2 /* UIViewController+Storyboard.swift in Sources */,
 				A596A45C1E83E7C0001D98E2 /* AlertController+PresentationProtocol.swift in Sources */,
-				A54F50051EA8AC53007DD713 /* ChangePassNavigation.swift in Sources */,
 				A596A47F1E83E7C0001D98E2 /* CameraPermissions.swift in Sources */,
 				A596A4781E83E7C0001D98E2 /* AlertPresentation.swift in Sources */,
 				A54F50081EA8AC53007DD713 /* LoginRequestProtocol.swift in Sources */,
+				A54F505A1EA8B098007DD713 /* ProfileViewModel.swift in Sources */,
 				A54F50111EA8AC53007DD713 /* SocialLoginRequest.swift in Sources */,
 				A596A47E1E83E7C0001D98E2 /* BluetoothPermissions.swift in Sources */,
 				A54F50031EA8AC53007DD713 /* DissmisableViewController.swift in Sources */,
-				A54F50001EA8AC53007DD713 /* AuthViewModel.swift in Sources */,
 				A596A4541E83E7C0001D98E2 /* ArrayCollectionViewProtocol.swift in Sources */,
+				A54F504F1EA8B098007DD713 /* AuthService.swift in Sources */,
 				A596A47B1E83E7C0001D98E2 /* APNSService.swift in Sources */,
 				048A7F911DC9ED0000DF1E7A /* ExampleViewController.swift in Sources */,
+				A54F50561EA8B098007DD713 /* AuthViewController.swift in Sources */,
 				A596A4641E83E7C0001D98E2 /* TextField+Padding.swift in Sources */,
 				A596A4551E83E7C0001D98E2 /* FRCCollectionViewModelProtocol.swift in Sources */,
 				A596A47D1E83E7C0001D98E2 /* LocationService.swift in Sources */,
+				A54F505D1EA8B098007DD713 /* ChangePassViewModel.swift in Sources */,
 				A596A4791E83E7C0001D98E2 /* Presentation.swift in Sources */,
 				A596A48C1E83E7C0001D98E2 /* ImagePickerViewModel.swift in Sources */,
 				A596A45B1E83E7C0001D98E2 /* AlertAction+Handler.swift in Sources */,
@@ -1339,12 +1347,11 @@
 				A596A44B1E83E7C0001D98E2 /* FRCDataSource.swift in Sources */,
 				A54F50101EA8AC53007DD713 /* RemindPasswordRequest.swift in Sources */,
 				A596A4761E83E7C0001D98E2 /* RequestSucceedProtocol.swift in Sources */,
-				A54F50251EA8AC53007DD713 /* RemindPassViewModel.swift in Sources */,
 				A596A4621E83E7C0001D98E2 /* MailComposer+PresentableProtocol.swift in Sources */,
 				A54F50021EA8AC53007DD713 /* BaseViewController.swift in Sources */,
+				A54F505C1EA8B098007DD713 /* ChangePassNavigation.swift in Sources */,
 				A54F50191EA8AC53007DD713 /* PasswordRecoveringProtocol.swift in Sources */,
 				A54F501F1EA8AC53007DD713 /* UserProtocol.swift in Sources */,
-				A54F4FFC1EA8AC53007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */,
 				A596A4511E83E7C0001D98E2 /* TableViewArrayDataSource.swift in Sources */,
 				A54F501D1EA8AC53007DD713 /* HeroIdProtocol.swift in Sources */,
 				A596A4561E83E7C0001D98E2 /* FRCCollectionViewProtocol.swift in Sources */,
@@ -1353,7 +1360,6 @@
 				A596A45A1E83E7C0001D98E2 /* FRCTableViewProtocol.swift in Sources */,
 				A596A4461E83E7C0001D98E2 /* MailBuilder.swift in Sources */,
 				A596A47A1E83E7C0001D98E2 /* FCMService.swift in Sources */,
-				A54F4FF61EA8AC53007DD713 /* AuthService.swift in Sources */,
 				A596A44A1E83E7C0001D98E2 /* CollectionViewFRCDataSource.swift in Sources */,
 				A596A48D1E83E7C0001D98E2 /* Converter.swift in Sources */,
 				A596A4471E83E7C0001D98E2 /* WindowBuilder.swift in Sources */,
@@ -1363,13 +1369,14 @@
 				A596A4801E83E7C0001D98E2 /* ContactsPermissions.swift in Sources */,
 				A596A46A1E83E7C0001D98E2 /* QueryStringParser.swift in Sources */,
 				A596A4521E83E7C0001D98E2 /* TableViewFRCDataSource.swift in Sources */,
+				A54F505E1EA8B098007DD713 /* RegistrationNavigation.swift in Sources */,
 				A596A4571E83E7C0001D98E2 /* ArrayTableViewModelProtocol.swift in Sources */,
 				A596A4701E83E7C0001D98E2 /* APIClient.swift in Sources */,
-				A54F4FF71EA8AC53007DD713 /* FacebookAuth.swift in Sources */,
 				A54F500A1EA8AC53007DD713 /* RegistrationRequestProtocol.swift in Sources */,
 				A596A45D1E83E7C0001D98E2 /* ColorExtension.swift in Sources */,
 				A596A4251E83E7C0001D98E2 /* AppDelegate+ChangePassword.swift in Sources */,
 				A596A4731E83E7C0001D98E2 /* RequestErrorHandlerProtocol.swift in Sources */,
+				A54F50551EA8B098007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */,
 				A54F50171EA8AC53007DD713 /* DismissProtocol.swift in Sources */,
 				A596A4881E83E7C0001D98E2 /* BaseTextField.swift in Sources */,
 				A596A4611E83E7C0001D98E2 /* ImageViewExtension.swift in Sources */,
@@ -1377,6 +1384,7 @@
 				A596A4691E83E7C0001D98E2 /* MapsHelper.swift in Sources */,
 				A54F50091EA8AC53007DD713 /* ProfileRequestProtocol.swift in Sources */,
 				A596A4711E83E7C0001D98E2 /* APIRequestProtocol.swift in Sources */,
+				A54F50511EA8B098007DD713 /* GooglePlusAuth.swift in Sources */,
 				049161F21D3E05A000E01686 /* AppDelegate.swift in Sources */,
 				A596A47C1E83E7C0001D98E2 /* PushNotificationsService.swift in Sources */,
 				A596A4591E83E7C0001D98E2 /* FRCTableViewModelProtocol.swift in Sources */,
@@ -1385,33 +1393,33 @@
 				A54F50181EA8AC53007DD713 /* NavigationProtocol.swift in Sources */,
 				A596A4601E83E7C0001D98E2 /* ImagePickerController+PresentationProtocol.swift in Sources */,
 				A54F501C1EA8AC53007DD713 /* AuthenticationProtocol.swift in Sources */,
+				A54F505F1EA8B098007DD713 /* RegistrationViewController.swift in Sources */,
 				A54F500B1EA8AC53007DD713 /* RemindPasswordRequestProtocol.swift in Sources */,
+				A54F50621EA8B098007DD713 /* RemindPassViewController.swift in Sources */,
+				A54F50531EA8B098007DD713 /* InstagramAuth.swift in Sources */,
 				A596A4911E83E7C0001D98E2 /* PasswordValidator.swift in Sources */,
 				A596A4681E83E7C0001D98E2 /* DynamicHelper.swift in Sources */,
 				A54F50121EA8AC53007DD713 /* LoginResponse.swift in Sources */,
+				A54F50581EA8B098007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */,
 				A54F50141EA8AC53007DD713 /* RegistrationResponse.swift in Sources */,
 				A596A4581E83E7C0001D98E2 /* ArrayTableViewProtocol.swift in Sources */,
-				A54F4FFE1EA8AC53007DD713 /* AuthNavigation.swift in Sources */,
-				A54F50011EA8AC53007DD713 /* ProfileViewModel.swift in Sources */,
-				A54F50241EA8AC53007DD713 /* RemindPassViewController.swift in Sources */,
 				A54F501A1EA8AC53007DD713 /* PopToProtocol.swift in Sources */,
 				A596A4631E83E7C0001D98E2 /* MFMailComposeViewController+Configurator.swift in Sources */,
-				A54F4FFA1EA8AC53007DD713 /* InstagramAuth.swift in Sources */,
+				A54F50631EA8B098007DD713 /* RemindPassViewModel.swift in Sources */,
 				A596A48F1E83E7C0001D98E2 /* EmailValidator.swift in Sources */,
-				A54F50061EA8AC53007DD713 /* ChangePassViewModel.swift in Sources */,
 				A596A4721E83E7C0001D98E2 /* ResponseProtocol.swift in Sources */,
 				A596A4661E83E7C0001D98E2 /* UIViewController+AppDelegate.swift in Sources */,
+				A54F50601EA8B098007DD713 /* RegistrationViewModel.swift in Sources */,
 				A596A4871E83E7C0001D98E2 /* TextFieldAccessoryView.swift in Sources */,
-				A54F50231EA8AC53007DD713 /* RemindPassNavigation.swift in Sources */,
 				A54F50071EA8AC53007DD713 /* ChangePasswordRequestProtocol.swift in Sources */,
-				A54F4FFF1EA8AC53007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */,
+				A54F50501EA8B098007DD713 /* FacebookAuth.swift in Sources */,
 				A54F500E1EA8AC53007DD713 /* ProfileRequest.swift in Sources */,
 				A596A46E1E83E7C0001D98E2 /* Utils.swift in Sources */,
+				A54F505B1EA8B098007DD713 /* ChangePassViewController.swift in Sources */,
+				A54F50611EA8B098007DD713 /* RemindPassNavigation.swift in Sources */,
 				A596A46F1E83E7C0001D98E2 /* TextFieldsManager.swift in Sources */,
 				A54F50131EA8AC53007DD713 /* ProfileRepsonse.swift in Sources */,
 				A596A46C1E83E7C0001D98E2 /* ShareHelper.swift in Sources */,
-				A54F4FFD1EA8AC53007DD713 /* AuthViewController.swift in Sources */,
-				A54F4FF81EA8AC53007DD713 /* GooglePlusAuth.swift in Sources */,
 				A596A4501E83E7C0001D98E2 /* SectionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
