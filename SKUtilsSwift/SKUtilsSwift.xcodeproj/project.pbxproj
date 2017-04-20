@@ -56,6 +56,12 @@
 		A54F4F901EA8A7B1007DD713 /* SucccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F641EA8A7B1007DD713 /* SucccessResponse.swift */; };
 		A54F4F941EA8A8E5007DD713 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F921EA8A8E5007DD713 /* BaseViewController.swift */; };
 		A54F4F951EA8A8E5007DD713 /* DissmisableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F931EA8A8E5007DD713 /* DissmisableViewController.swift */; };
+		A54F4FA01EA8AA31007DD713 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F971EA8AA31007DD713 /* AuthService.swift */; };
+		A54F4FA11EA8AA31007DD713 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F991EA8AA31007DD713 /* FacebookAuth.swift */; };
+		A54F4FA21EA8AA31007DD713 /* GooglePlusAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F9B1EA8AA31007DD713 /* GooglePlusAuth.swift */; };
+		A54F4FA31EA8AA31007DD713 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54F4F9C1EA8AA31007DD713 /* GoogleService-Info.plist */; };
+		A54F4FA41EA8AA31007DD713 /* InstagramAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F9E1EA8AA31007DD713 /* InstagramAuth.swift */; };
+		A54F4FA51EA8AA31007DD713 /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F4F9F1EA8AA31007DD713 /* InstagramAuthViewController.swift */; };
 		A553C4821E13A13D005E641A /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553C4811E13A13D005E641A /* ConverterTests.swift */; };
 		A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57C56211D97BFCD00D744FC /* Storyboard.storyboard */; };
 		A58C09B31D3B65D300D4A3FD /* ValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */; };
@@ -222,6 +228,12 @@
 		A54F4F641EA8A7B1007DD713 /* SucccessResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SucccessResponse.swift; sourceTree = "<group>"; };
 		A54F4F921EA8A8E5007DD713 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A54F4F931EA8A8E5007DD713 /* DissmisableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissmisableViewController.swift; sourceTree = "<group>"; };
+		A54F4F971EA8AA31007DD713 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A54F4F991EA8AA31007DD713 /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		A54F4F9B1EA8AA31007DD713 /* GooglePlusAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusAuth.swift; sourceTree = "<group>"; };
+		A54F4F9C1EA8AA31007DD713 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A54F4F9E1EA8AA31007DD713 /* InstagramAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuth.swift; sourceTree = "<group>"; };
+		A54F4F9F1EA8AA31007DD713 /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
 		A553C4811E13A13D005E641A /* ConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 		A57C56211D97BFCD00D744FC /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Resources/Storyboard.storyboard; sourceTree = "<group>"; };
 		A58C09B21D3B65D300D4A3FD /* ValidatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsTests.swift; sourceTree = "<group>"; };
@@ -606,6 +618,43 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A54F4F961EA8AA31007DD713 /* Auth Services */ = {
+			isa = PBXGroup;
+			children = (
+				A54F4F971EA8AA31007DD713 /* AuthService.swift */,
+				A54F4F981EA8AA31007DD713 /* Facebook */,
+				A54F4F9A1EA8AA31007DD713 /* Google+ */,
+				A54F4F9D1EA8AA31007DD713 /* Instagram */,
+			);
+			path = "Auth Services";
+			sourceTree = "<group>";
+		};
+		A54F4F981EA8AA31007DD713 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				A54F4F991EA8AA31007DD713 /* FacebookAuth.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		A54F4F9A1EA8AA31007DD713 /* Google+ */ = {
+			isa = PBXGroup;
+			children = (
+				A54F4F9B1EA8AA31007DD713 /* GooglePlusAuth.swift */,
+				A54F4F9C1EA8AA31007DD713 /* GoogleService-Info.plist */,
+			);
+			path = "Google+";
+			sourceTree = "<group>";
+		};
+		A54F4F9D1EA8AA31007DD713 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				A54F4F9E1EA8AA31007DD713 /* InstagramAuth.swift */,
+				A54F4F9F1EA8AA31007DD713 /* InstagramAuthViewController.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
 		A550FA2F1DA0105C00451249 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -909,6 +958,7 @@
 		A596A3F81E83E7C0001D98E2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A54F4F961EA8AA31007DD713 /* Auth Services */,
 				A596A3F91E83E7C0001D98E2 /* APNSService */,
 				A596A3FF1E83E7C0001D98E2 /* LocationService */,
 				A596A4011E83E7C0001D98E2 /* ServicePermissions */,
@@ -1209,6 +1259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5ADBF251D3802D600EB7212 /* LaunchScreen.storyboard in Resources */,
+				A54F4FA31EA8AA31007DD713 /* GoogleService-Info.plist in Resources */,
 				A57C56221D97BFCD00D744FC /* Storyboard.storyboard in Resources */,
 				A54F4F7F1EA8A7B1007DD713 /* Auth.storyboard in Resources */,
 				A54F4F811EA8A7B1007DD713 /* Registration.storyboard in Resources */,
@@ -1234,6 +1285,7 @@
 			files = (
 				A54F4F681EA8A7B1007DD713 /* AuthViewModel+GooglePlusDelegate.swift in Sources */,
 				A596A4451E83E7C0001D98E2 /* AlertBuilder.swift in Sources */,
+				A54F4FA21EA8AA31007DD713 /* GooglePlusAuth.swift in Sources */,
 				A54F4F8B1EA8A7B1007DD713 /* RemindPasswordRequest.swift in Sources */,
 				A54F4F8F1EA8A7B1007DD713 /* RegistrationResponse.swift in Sources */,
 				A54F4F7C1EA8A7B1007DD713 /* RemindPassNavigation.swift in Sources */,
@@ -1243,9 +1295,11 @@
 				A596A4861E83E7C0001D98E2 /* ServicePermissions.swift in Sources */,
 				A596A4751E83E7C0001D98E2 /* RequestExecutingViewProtocol.swift in Sources */,
 				A596A4811E83E7C0001D98E2 /* LocationPermissions.swift in Sources */,
+				A54F4FA11EA8AA31007DD713 /* FacebookAuth.swift in Sources */,
 				A54F4F771EA8A7B1007DD713 /* RegistrationProtocol.swift in Sources */,
 				A596A4441E83E7C0001D98E2 /* AlertActionBuilder.swift in Sources */,
 				A596A44F1E83E7C0001D98E2 /* ReusableCell.swift in Sources */,
+				A54F4FA41EA8AA31007DD713 /* InstagramAuth.swift in Sources */,
 				A596A48B1E83E7C0001D98E2 /* ImagePickerViewController.swift in Sources */,
 				A596A4491E83E7C0001D98E2 /* CollectionViewArrayDataSource.swift in Sources */,
 				A54F4F7D1EA8A7B1007DD713 /* RemindPassViewController.swift in Sources */,
@@ -1343,8 +1397,10 @@
 				A54F4F6F1EA8A7B1007DD713 /* RegistrationNavigation.swift in Sources */,
 				A596A4581E83E7C0001D98E2 /* ArrayTableViewProtocol.swift in Sources */,
 				A54F4F651EA8A7B1007DD713 /* AuthViewController+GooglePlusUIDelegate.swift in Sources */,
+				A54F4FA01EA8AA31007DD713 /* AuthService.swift in Sources */,
 				A54F4F7E1EA8A7B1007DD713 /* RemindPassViewModel.swift in Sources */,
 				A54F4F791EA8A7B1007DD713 /* HeroIdProtocol.swift in Sources */,
+				A54F4FA51EA8AA31007DD713 /* InstagramAuthViewController.swift in Sources */,
 				A596A4631E83E7C0001D98E2 /* MFMailComposeViewController+Configurator.swift in Sources */,
 				A596A48F1E83E7C0001D98E2 /* EmailValidator.swift in Sources */,
 				A54F4F8E1EA8A7B1007DD713 /* ProfileRepsonse.swift in Sources */,
