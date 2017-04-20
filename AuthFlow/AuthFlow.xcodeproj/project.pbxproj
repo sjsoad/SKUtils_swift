@@ -51,10 +51,6 @@
 		A54F51C91EA8FB9D007DD713 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F516D1EA8FB9D007DD713 /* AuthProtocol.swift */; };
 		A54F51CC1EA8FB9D007DD713 /* PasswordRecoveringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F51701EA8FB9D007DD713 /* PasswordRecoveringProtocol.swift */; };
 		A54F51CE1EA8FB9D007DD713 /* RegistrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F51721EA8FB9D007DD713 /* RegistrationProtocol.swift */; };
-		A54F51CF1EA8FB9D007DD713 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F51751EA8FB9D007DD713 /* AuthenticationProtocol.swift */; };
-		A54F51D01EA8FB9D007DD713 /* HeroIdProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F51761EA8FB9D007DD713 /* HeroIdProtocol.swift */; };
-		A54F51D11EA8FB9D007DD713 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F51781EA8FB9D007DD713 /* ProfileProtocol.swift */; };
-		A54F51D21EA8FB9D007DD713 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F517A1EA8FB9D007DD713 /* UserProtocol.swift */; };
 		A54F51D31EA8FB9D007DD713 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F517C1EA8FB9D007DD713 /* Auth.storyboard */; };
 		A54F51D41EA8FB9D007DD713 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F517D1EA8FB9D007DD713 /* Password.storyboard */; };
 		A54F51D51EA8FB9D007DD713 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F517E1EA8FB9D007DD713 /* Registration.storyboard */; };
@@ -145,6 +141,10 @@
 		A54F530C1EA8FF74007DD713 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F530B1EA8FF74007DD713 /* UserViewModel.swift */; };
 		A54F53121EA8FFAE007DD713 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F530E1EA8FFAE007DD713 /* Constants.swift */; };
 		A54F53131EA8FFAE007DD713 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53111EA8FFAE007DD713 /* Profile.swift */; };
+		A54F531D1EA90358007DD713 /* HeroIdProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53151EA90358007DD713 /* HeroIdProtocol.swift */; };
+		A54F531E1EA90358007DD713 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */; };
+		A54F531F1EA90358007DD713 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F531A1EA90358007DD713 /* ProfileProtocol.swift */; };
+		A54F53201EA90358007DD713 /* UserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F531C1EA90358007DD713 /* UserProtocol.swift */; };
 		CD2D0A3373EAC066D304E1C8 /* Pods_AuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */; };
 /* End PBXBuildFile section */
 
@@ -198,10 +198,6 @@
 		A54F516D1EA8FB9D007DD713 /* AuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
 		A54F51701EA8FB9D007DD713 /* PasswordRecoveringProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveringProtocol.swift; sourceTree = "<group>"; };
 		A54F51721EA8FB9D007DD713 /* RegistrationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationProtocol.swift; sourceTree = "<group>"; };
-		A54F51751EA8FB9D007DD713 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
-		A54F51761EA8FB9D007DD713 /* HeroIdProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIdProtocol.swift; sourceTree = "<group>"; };
-		A54F51781EA8FB9D007DD713 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
-		A54F517A1EA8FB9D007DD713 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 		A54F517C1EA8FB9D007DD713 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		A54F517D1EA8FB9D007DD713 /* Password.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
 		A54F517E1EA8FB9D007DD713 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -292,6 +288,10 @@
 		A54F530B1EA8FF74007DD713 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		A54F530E1EA8FFAE007DD713 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A54F53111EA8FFAE007DD713 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A54F53151EA90358007DD713 /* HeroIdProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIdProtocol.swift; sourceTree = "<group>"; };
+		A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		A54F531A1EA90358007DD713 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
+		A54F531C1EA90358007DD713 /* UserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -574,8 +574,9 @@
 		A54F516B1EA8FB9D007DD713 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A54F53141EA90358007DD713 /* HeroLib */,
+				A54F53161EA90358007DD713 /* User */,
 				A54F516C1EA8FB9D007DD713 /* Navigation */,
-				A54F51731EA8FB9D007DD713 /* Other */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -589,41 +590,6 @@
 				A54F51721EA8FB9D007DD713 /* RegistrationProtocol.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A54F51731EA8FB9D007DD713 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				A54F51741EA8FB9D007DD713 /* Auth */,
-				A54F51761EA8FB9D007DD713 /* HeroIdProtocol.swift */,
-				A54F51771EA8FB9D007DD713 /* Profile */,
-				A54F51791EA8FB9D007DD713 /* User */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		A54F51741EA8FB9D007DD713 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				A54F51751EA8FB9D007DD713 /* AuthenticationProtocol.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		A54F51771EA8FB9D007DD713 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				A54F51781EA8FB9D007DD713 /* ProfileProtocol.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		A54F51791EA8FB9D007DD713 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				A54F517A1EA8FB9D007DD713 /* UserProtocol.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		A54F517B1EA8FB9D007DD713 /* UI */ = {
@@ -1135,6 +1101,48 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		A54F53141EA90358007DD713 /* HeroLib */ = {
+			isa = PBXGroup;
+			children = (
+				A54F53151EA90358007DD713 /* HeroIdProtocol.swift */,
+			);
+			path = HeroLib;
+			sourceTree = "<group>";
+		};
+		A54F53161EA90358007DD713 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A54F53171EA90358007DD713 /* Auth */,
+				A54F53191EA90358007DD713 /* Profile */,
+				A54F531B1EA90358007DD713 /* User */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A54F53171EA90358007DD713 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A54F53191EA90358007DD713 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A54F531A1EA90358007DD713 /* ProfileProtocol.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A54F531B1EA90358007DD713 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A54F531C1EA90358007DD713 /* UserProtocol.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		F89E57F57DFA755C1C9A69B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1305,7 +1313,6 @@
 				A54F51AD1EA8FB9D007DD713 /* AuthNavigation.swift in Sources */,
 				A54F51AA1EA8FB9D007DD713 /* InstagramAuthViewController.swift in Sources */,
 				A54F528F1EA8FD97007DD713 /* WindowBuilder.swift in Sources */,
-				A54F51D21EA8FB9D007DD713 /* UserProtocol.swift in Sources */,
 				A54F51F01EA8FC42007DD713 /* BaseNavigation.swift in Sources */,
 				A54F52D81EA8FD97007DD713 /* Converter.swift in Sources */,
 				A54F52901EA8FD97007DD713 /* ArrayDataSource.swift in Sources */,
@@ -1315,7 +1322,6 @@
 				A54F51AC1EA8FB9D007DD713 /* AuthViewController.swift in Sources */,
 				A54F52A61EA8FD97007DD713 /* DesignableViewExtension.swift in Sources */,
 				A54F52AB1EA8FD97007DD713 /* MFMailComposeViewController+Configurator.swift in Sources */,
-				A54F51CF1EA8FB9D007DD713 /* AuthenticationProtocol.swift in Sources */,
 				A54F52971EA8FD97007DD713 /* ReusableCell.swift in Sources */,
 				A54F51BA1EA8FB9D007DD713 /* ChangePasswordRequestProtocol.swift in Sources */,
 				A54F52C41EA8FD97007DD713 /* Presentation.swift in Sources */,
@@ -1336,7 +1342,6 @@
 				A54F529F1EA8FD97007DD713 /* ArrayTableViewModelProtocol.swift in Sources */,
 				A54F52C51EA8FD97007DD713 /* FCMService.swift in Sources */,
 				A54F51B81EA8FB9D007DD713 /* RemindPassViewController.swift in Sources */,
-				A54F51D01EA8FB9D007DD713 /* HeroIdProtocol.swift in Sources */,
 				A54F51B01EA8FB9D007DD713 /* ProfileViewModel.swift in Sources */,
 				A54F529B1EA8FD97007DD713 /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A54F52A81EA8FD97007DD713 /* ImagePickerController+PresentationProtocol.swift in Sources */,
@@ -1374,6 +1379,7 @@
 				A54F528C1EA8FD97007DD713 /* AlertActionBuilder.swift in Sources */,
 				A54F51BB1EA8FB9D007DD713 /* LoginRequestProtocol.swift in Sources */,
 				A54F529E1EA8FD97007DD713 /* FRCCollectionViewProtocol.swift in Sources */,
+				A54F531D1EA90358007DD713 /* HeroIdProtocol.swift in Sources */,
 				A54F51C81EA8FB9D007DD713 /* SucccessResponse.swift in Sources */,
 				A54F51A91EA8FB9D007DD713 /* InstagramAuth.swift in Sources */,
 				A54F52981EA8FD97007DD713 /* SectionModel.swift in Sources */,
@@ -1382,10 +1388,10 @@
 				A54F52C11EA8FD97007DD713 /* NavigationProtocol.swift in Sources */,
 				A54F51B41EA8FB9D007DD713 /* RegistrationNavigation.swift in Sources */,
 				A54F51B91EA8FB9D007DD713 /* RemindPassViewModel.swift in Sources */,
+				A54F53201EA90358007DD713 /* UserProtocol.swift in Sources */,
 				A54F52B71EA8FD97007DD713 /* TextFieldsManager.swift in Sources */,
 				A54F52B51EA8FD97007DD713 /* TextWidtHelper.swift in Sources */,
 				A54F529D1EA8FD97007DD713 /* FRCCollectionViewModelProtocol.swift in Sources */,
-				A54F51D11EA8FB9D007DD713 /* ProfileProtocol.swift in Sources */,
 				A54F51A51EA8FB9D007DD713 /* AuthService.swift in Sources */,
 				A54F52911EA8FD97007DD713 /* CollectionViewArrayDataSource.swift in Sources */,
 				A54F52DC1EA8FD97007DD713 /* PasswordValidator.swift in Sources */,
@@ -1394,11 +1400,13 @@
 				A54F52BD1EA8FD97007DD713 /* RequestExecutingViewProtocol.swift in Sources */,
 				A54F52C91EA8FD97007DD713 /* BluetoothPermissions.swift in Sources */,
 				A54F52D71EA8FD97007DD713 /* ImagePickerViewModel.swift in Sources */,
+				A54F531E1EA90358007DD713 /* AuthenticationProtocol.swift in Sources */,
 				A54F52CF1EA8FD97007DD713 /* PermissionsState.swift in Sources */,
 				A54F52A31EA8FD97007DD713 /* AlertAction+Handler.swift in Sources */,
 				A54F52A11EA8FD97007DD713 /* FRCTableViewModelProtocol.swift in Sources */,
 				A54F52B61EA8FD97007DD713 /* Utils.swift in Sources */,
 				A54F52D21EA8FD97007DD713 /* TextFieldAccessoryView.swift in Sources */,
+				A54F531F1EA90358007DD713 /* ProfileProtocol.swift in Sources */,
 				A54F528B1EA8FD97007DD713 /* AppDelegate+ChangePassword.swift in Sources */,
 				A54F52A51EA8FD97007DD713 /* ColorExtension.swift in Sources */,
 				A54F51C51EA8FB9D007DD713 /* LoginResponse.swift in Sources */,

@@ -45,9 +45,3 @@ struct GeoTouch {
     static let appScheme = "geotouch://dev.geotouch.gedzyk.com"
 
 }
-
-struct CoreData {
-    
-    static let newObjectId: Int64 = -1
-    
-}
