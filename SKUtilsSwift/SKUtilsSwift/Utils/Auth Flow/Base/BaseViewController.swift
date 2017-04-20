@@ -13,15 +13,4 @@ class BaseViewController: UIViewController, Navigatable {
 
     typealias navigationType = BaseNavigation
     
-    @IBInspectable var navigationBarVisible: Bool = false
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let navigation = navigationController {
-            if navigation.isNavigationBarHidden != !navigationBarVisible {
-                navigation.setNavigationBarHidden(!navigationBarVisible,
-                                                  animated: false)
-            }
-        }
-    }
 }
