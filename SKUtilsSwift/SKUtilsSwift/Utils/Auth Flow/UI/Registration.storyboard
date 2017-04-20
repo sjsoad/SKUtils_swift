@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XdW-t1-qYJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="aYg-LU-kmu">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="XdW-t1-qYJ" customClass="RegistrationViewController" customModule="SKUtilsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PkJ-NY-ksu"/>
+                        <viewControllerLayoutGuide type="bottom" id="uON-aM-LnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9mb-6d-qRY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUG-3N-Npj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4s-fC-9hh" customClass="BaseTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PnM-Pb-ESS" customClass="EmailTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="70" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHr-YX-LbZ" customClass="PassTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="120" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-B7-qlA">
+                                        <rect key="frame" x="10" y="190" width="355" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="registrationButtonPresed:" destination="XdW-t1-qYJ" eventType="touchUpInside" id="F0v-KQ-KgU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PnM-Pb-ESS" firstAttribute="leading" secondItem="TUG-3N-Npj" secondAttribute="leading" constant="20" id="Bvn-Zy-CNE"/>
+                                    <constraint firstAttribute="bottom" secondItem="nUY-B7-qlA" secondAttribute="bottom" constant="10" id="FNT-nc-8Yk"/>
+                                    <constraint firstAttribute="trailing" secondItem="M4s-fC-9hh" secondAttribute="trailing" constant="20" id="N8U-yW-PlV"/>
+                                    <constraint firstAttribute="trailing" secondItem="PnM-Pb-ESS" secondAttribute="trailing" constant="20" id="WdO-hZ-s7z"/>
+                                    <constraint firstItem="nUY-B7-qlA" firstAttribute="top" secondItem="iHr-YX-LbZ" secondAttribute="bottom" constant="40" id="aII-4c-AF1"/>
+                                    <constraint firstItem="nUY-B7-qlA" firstAttribute="leading" secondItem="TUG-3N-Npj" secondAttribute="leading" constant="10" id="b17-Ss-YTT"/>
+                                    <constraint firstAttribute="trailing" secondItem="iHr-YX-LbZ" secondAttribute="trailing" constant="20" id="bN7-WH-pRz"/>
+                                    <constraint firstItem="M4s-fC-9hh" firstAttribute="top" secondItem="TUG-3N-Npj" secondAttribute="top" constant="20" id="eTH-Hw-ETt"/>
+                                    <constraint firstItem="iHr-YX-LbZ" firstAttribute="top" secondItem="PnM-Pb-ESS" secondAttribute="bottom" constant="20" id="ioK-fl-v2J"/>
+                                    <constraint firstAttribute="trailing" secondItem="nUY-B7-qlA" secondAttribute="trailing" constant="10" id="j09-jw-7cl"/>
+                                    <constraint firstItem="PnM-Pb-ESS" firstAttribute="top" secondItem="M4s-fC-9hh" secondAttribute="bottom" constant="20" id="j9t-cK-YBX"/>
+                                    <constraint firstItem="iHr-YX-LbZ" firstAttribute="leading" secondItem="TUG-3N-Npj" secondAttribute="leading" constant="20" id="n6Y-oy-Oz3"/>
+                                    <constraint firstItem="M4s-fC-9hh" firstAttribute="leading" secondItem="TUG-3N-Npj" secondAttribute="leading" constant="20" id="qbx-j3-eLa"/>
+                                    <constraint firstItem="M4s-fC-9hh" firstAttribute="centerX" secondItem="TUG-3N-Npj" secondAttribute="centerX" id="zVQ-9e-9Xr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TUG-3N-Npj" firstAttribute="leading" secondItem="9mb-6d-qRY" secondAttribute="leading" id="8pW-VC-KxO"/>
+                            <constraint firstItem="uON-aM-LnY" firstAttribute="top" secondItem="TUG-3N-Npj" secondAttribute="bottom" id="rBd-Sa-R71"/>
+                            <constraint firstAttribute="trailing" secondItem="TUG-3N-Npj" secondAttribute="trailing" id="rgt-8l-FEd"/>
+                            <constraint firstItem="TUG-3N-Npj" firstAttribute="top" secondItem="PkJ-NY-ksu" secondAttribute="bottom" id="xwq-b6-ka2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4xf-ti-Hc6"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="navigationBarVisible" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroModalAnimationTypeString" value="zoom"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="emailField" destination="PnM-Pb-ESS" id="xgI-l3-Svy"/>
+                        <outlet property="passwordField" destination="iHr-YX-LbZ" id="fTo-GQ-74v"/>
+                        <outlet property="textfieldsManager" destination="dk7-3N-YKv" id="gjM-5z-4CD"/>
+                        <outlet property="username" destination="M4s-fC-9hh" id="SjB-qt-Gsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlV-wd-NYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="dk7-3N-YKv" customClass="TextFieldsManager" customModule="SKUtilsSwift" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="scroll" destination="TUG-3N-Npj" id="da4-7a-Wd1"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="54" y="355"/>
+        </scene>
+    </scenes>
+</document>
