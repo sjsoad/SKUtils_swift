@@ -1,0 +1,6 @@
+framework module Pods_AuthFlow {
+  umbrella header "Pods-AuthFlow-umbrella.h"
+
+  export *
+  module * { export * }
+}

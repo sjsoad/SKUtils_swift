@@ -22,7 +22,6 @@ class AuthViewController: UIViewController, RequestExecutingViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        heroModalAnimationType = .auto
         authViewModel.requestSucceed.bind { [weak self](succeed) in
             guard let strongSelf = self else { return }
             if succeed {
@@ -34,10 +33,10 @@ class AuthViewController: UIViewController, RequestExecutingViewProtocol {
         profileViewModel.requestSucceed.bind { [weak self](succeed) in
             guard let strongSelf = self else { return }
             strongSelf.authViewModel.tryToLogin = false
-            if succeed,
-                let profile = strongSelf.profileViewModel.profile {
+//            if succeed,
+//                let profile = strongSelf.profileViewModel.profile {
 //                <#profile received#>
-            }
+//            }
         }
         authViewModel.requerstExecutingHandler = requerstExecutingHandler()
         profileViewModel.requerstExecutingHandler = requerstExecutingHandler()
@@ -77,10 +76,6 @@ class AuthViewController: UIViewController, RequestExecutingViewProtocol {
     
     @IBAction func googlePlusButtonPressed(_ sender: UIButton) {
         authViewModel.loginWithGooglePlus(fromController: self)
-    }
-    
-    @IBAction func aboutUsButtonPressed(_ sender: UIButton) {
-        navigationType.presentAbout(from: self)
     }
     
     @IBAction func registrationButtonPressed(_ sender: UIButton) {

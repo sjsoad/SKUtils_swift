@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AuthNavigation: PasswordRecoveringProtocol, AuthProtocol {
+class AuthNavigation: PasswordRecoveringProtocol, AuthProtocol, RegistrationProtocol {
 
 }

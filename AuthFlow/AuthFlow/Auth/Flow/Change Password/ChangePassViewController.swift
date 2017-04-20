@@ -39,8 +39,9 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
         let validated = changePassViewModel.validate(fields: textFields)
         if validated,
             let token = changePassViewModel.temporaryToken {
-            let validated = changePassViewModel.validate(thisEqual: passwordField,
-                                                         this: confirmationField)
+            let validated = changePassViewModel.validate(equal: passwordField,
+                                                         to: confirmationField,
+                                                         comparisonHandler: nil)
             if validated,
                 let password = passwordField.text {
                 changePassViewModel.changePassword(password: password,

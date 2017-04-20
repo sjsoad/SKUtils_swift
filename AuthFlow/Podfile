@@ -1,30 +1,22 @@
-platform :ios, '9.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-use_frameworks!
+target 'AuthFlow' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-target 'Defietser' do
-  pod 'TPKeyboardAvoiding'
-  pod 'SVProgressHUD'
-  pod 'DateTools'
-  pod 'iCarousel'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
-  pod 'ASValueTrackingSlider'
-  pod 'OCGoogleDirectionsAPI'
-  pod 'CRToast'
-  pod 'Realm'
-  pod 'EasyMapping'
-  pod 'SDWebImage'
-  pod 'TTSwitch'
-  pod 'AFNetworking'
-  pod 'TTRangeSlider'
-  pod 'RadioButton'
-  pod 'IQKeyboardManager'
-  pod 'SLExpandableTableView'
-  pod 'pop'
-  pod 'EAIntroView'
-  pod 'HCSStarRatingView'
-  pod 'DZNEmptyDataSet'
-#  pod 'NAOSDK'
-  
+#pod 'Hero'
+#pod 'GoogleMaps'
+pod 'Google/SignIn'
+pod 'Google/Analytics'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
+pod 'Alamofire'
+pod 'NVActivityIndicatorView'
+#pod 'AERecord'
+#pod 'Groot'
+pod 'SwiftyDrop'
+  # Pods for GeoTouch
+
 end

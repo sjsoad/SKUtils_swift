@@ -10,6 +10,6 @@ import Foundation
 
 protocol Profilable {
     
-    var profile: Profile? { get set }
+   var profile: Profile? { get set }
     
 }
