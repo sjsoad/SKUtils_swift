@@ -1101,18 +1101,19 @@
 		A54F53161EA90358007DD713 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				A54F53171EA90358007DD713 /* Auth */,
+				A54F53171EA90358007DD713 /* Auth Credentials */,
 				A54F53191EA90358007DD713 /* Profile */,
 				A54F531B1EA90358007DD713 /* User */,
 			);
 			path = User;
 			sourceTree = "<group>";
 		};
-		A54F53171EA90358007DD713 /* Auth */ = {
+		A54F53171EA90358007DD713 /* Auth Credentials */ = {
 			isa = PBXGroup;
 			children = (
 				A54F53181EA90358007DD713 /* AuthenticationProtocol.swift */,
 			);
+			name = "Auth Credentials";
 			path = Auth;
 			sourceTree = "<group>";
 		};
