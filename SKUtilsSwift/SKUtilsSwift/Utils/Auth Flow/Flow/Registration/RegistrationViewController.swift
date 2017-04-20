@@ -21,14 +21,6 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     
     override func viewDidLoad(){
         super.viewDidLoad()
-//        if let scroll = textfieldsManager.scroll {
-//            let contentInset = UIEdgeInsetsMake(self.navigationController!.navigationBar.frame.size.height,
-//                                                0,
-//                                                0,
-//                                                0)
-//            scroll.contentInset = contentInset
-//            scroll.scrollIndicatorInsets = contentInset
-//        }
         registrationViewModel.requestSucceed.bind { [weak self] (registrationSucceed) in
             guard let strongSelf = self else { return }
             if registrationSucceed,
