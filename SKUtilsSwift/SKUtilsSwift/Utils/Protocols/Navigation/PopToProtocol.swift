@@ -14,6 +14,9 @@ protocol PopToProtocol {
                       from controller: UIViewController,
                       animated: Bool) -> T?
     
+    static func pop(from controller: UIViewController,
+                    animated: Bool)
+    
 }
 
 extension PopToProtocol {
@@ -33,4 +36,9 @@ extension PopToProtocol {
         return nil
     }
 
+    static func pop(from controller: UIViewController,
+                    animated: Bool) {
+        controller.navigationController?.popViewController(animated: animated)
+    }
+    
 }
