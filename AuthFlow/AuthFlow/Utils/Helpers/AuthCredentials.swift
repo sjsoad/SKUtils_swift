@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum GrantType: String {
-    case authTypeEmail = "email"
-    case authTypeFacebook = "facebook"
-    case authTypeInstagram = "instagram"
-    case authTypeGooglePlus = "google"
-}
-
 class AuthCredentials: NSObject {
     
     var accessToken: String

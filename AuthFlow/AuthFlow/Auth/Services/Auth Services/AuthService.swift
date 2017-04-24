@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+enum GrantType: String {
+    case authTypeEmail = "email"
+    case authTypeFacebook = "facebook"
+    case authTypeInstagram = "instagram"
+    case authTypeGooglePlus = "google"
+}
+
 typealias AuthServiceHandler = (_ accessToken: String? ,
                                 _ authType: GrantType,
                                 _ error: Error?) -> Void
