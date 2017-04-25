@@ -32,12 +32,7 @@ extension APIRequestProtocol {
 
     var HTTPMethod: Method { return .get }
     var parameters: [String: String]? { return nil }
-    var headers: [String: String]? {
-        return [
-            "Accept":"application/json",
-            "Content-Type":"application/json"
-        ]
-    }
+    var headers: [String: String]? { return nil }
     
     init(withURL url: String,
          parameters: [String : Any]? = nil,
