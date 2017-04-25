@@ -129,6 +129,14 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     //MARK: - Utils
     
+    func clearTextField() {
+        for field in textFields {
+            if let textField = field as? UITextField {
+                textField.text = nil
+            }
+        }
+    }
+    
     func firstResponder() -> UITextField? {
         self.sortTextFieldsByY()
         for textField in self.textFields {
