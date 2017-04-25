@@ -13,7 +13,7 @@
         <!--Auth View Controller-->
         <scene sceneID="u8j-RD-43P">
             <objects>
-                <viewController storyboardIdentifier="AuthViewController" id="YSJ-R7-aWy" customClass="AuthViewController" customModule="SKUtilsSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" id="YSJ-R7-aWy" customClass="AuthViewController" customModule="AuthFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="USW-PS-HCF"/>
                         <viewControllerLayoutGuide type="bottom" id="bfB-OU-6wE"/>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMl-xy-W3n">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMl-xy-W3n">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZaE-Th-uPq">
@@ -69,17 +69,17 @@
                                             <action selector="registrationButtonPressed:" destination="YSJ-R7-aWy" eventType="touchUpInside" id="H49-L6-72e"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdI-zz-0vt" customClass="EmailTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdI-zz-0vt" customClass="EmailTextField" customModule="AuthFlow" customModuleProvider="target">
                                         <rect key="frame" x="10" y="320" width="355" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-Mr-heD" customClass="PassTextField" customModule="SKUtilsSwift" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-Mr-heD" customClass="PassTextField" customModule="AuthFlow" customModuleProvider="target">
                                         <rect key="frame" x="10" y="370" width="355" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BX0-g9-OUE">
                                         <rect key="frame" x="10" y="440" width="355" height="30"/>
@@ -141,7 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFJ-we-zSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="2OA-Wg-2uG" customClass="TextFieldsManager" customModule="SKUtilsSwift" customModuleProvider="target">
+                <customObject id="2OA-Wg-2uG" customClass="TextFieldsManager" customModule="AuthFlow" customModuleProvider="target">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
                     </userDefinedRuntimeAttributes>
