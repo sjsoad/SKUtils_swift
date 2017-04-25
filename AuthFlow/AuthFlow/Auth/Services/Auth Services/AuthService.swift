@@ -13,6 +13,7 @@ enum GrantType: String {
     case authTypeEmail = "email"
     case authTypeFacebook = "facebook"
     case authTypeInstagram = "instagram"
+    case authTypeTwitter = "twitter"
     case authTypeGooglePlus = "google"
 }
 
@@ -21,7 +22,7 @@ typealias AuthServiceHandler = (_ accessToken: String? ,
                                 _ error: Error?) -> Void
 
 protocol AuthServiceProtocol {
-
+    
     func login(handler: @escaping AuthServiceHandler,
                fromController controller: UIViewController)
     func logout()

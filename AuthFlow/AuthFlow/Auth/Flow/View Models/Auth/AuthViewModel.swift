@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-class AuthViewModel: NSObject, LoginRequestProtocol, ValidationHelper {
+class AuthViewModel: NSObject, LoginRequestProtocol, ValidationHelper, FacebookAuthProtocol, InstagramAuthProtocol, GoogleAuthProtocol {
     
     var authHandler: AuthServiceHandler!
     
@@ -33,28 +33,6 @@ class AuthViewModel: NSObject, LoginRequestProtocol, ValidationHelper {
                 executingHandler(false, error)
             }
         }
-    }
-    
-    //MARK: - Social Auth
-    
-    func loginWithFacebook(fromController controller: UIViewController) {
-        let facebookAuth = FacebookAuth()
-        facebookAuth.login(handler: authHandler,
-                           fromController: controller)
-    }
-   
-    func loginWithInstagram(fromController controller: UIViewController) {
-        let instagramAuth = InstagramAuth()
-        instagramAuth.login(handler: authHandler,
-                            fromController: controller)
-    }
-    
-    func loginWithGooglePlus(fromController controller: AuthViewController) {
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = controller
-        let googleAuth = GooglePlusAuth()
-        googleAuth.login(handler: authHandler,
-                         fromController: controller)
     }
     
 }

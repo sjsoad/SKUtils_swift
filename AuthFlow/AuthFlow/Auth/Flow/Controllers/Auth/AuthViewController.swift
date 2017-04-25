@@ -9,7 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class AuthViewController: UIViewController, RequestExecutingViewProtocol {
+class AuthViewController: UIViewController, RequestExecutingViewProtocol, GoogleAuthViewControllerProtocol {
 
     typealias navigationType = AuthNavigation
         

@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>TRACKING_ID</key>
-	<string>UA-93005743-1</string>
+	<string>UA-93005743-2</string>
 	<key>CLIENT_ID</key>
-	<string>558778121048-ss36e0t4jjr203gr3ll8ejpu84d5h13g.apps.googleusercontent.com</string>
+	<string>781833495787-o8pppauc3hahah0mc949iqgni55173ei.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.558778121048-ss36e0t4jjr203gr3ll8ejpu84d5h13g</string>
+	<string>com.googleusercontent.apps.781833495787-o8pppauc3hahah0mc949iqgni55173ei</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.grossum.geotouch</string>
+	<string>com.grossum.StudentShare</string>
 	<key>PROJECT_ID</key>
-	<string>geo-touch</string>
+	<string>firebase-studentsharetest</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:558778121048:ios:937d5b74d3d75be3</string>
+	<string>1:781833495787:ios:c7b3c2f4918682b8</string>
 </dict>
 </plist>

@@ -1,15 +1,22 @@
 //
-//  File.swift
-//  GeoTouch
+//  GoogleAuthViewControllerProtocol.swift
+//  StudentShare
 //
-//  Created by Sergey on 03.03.17.
+//  Created by Sergey on 24.04.17.
 //  Copyright © 2017 Sergey. All rights reserved.
 //
 
+import UIKit
 import GoogleSignIn
 
-extension AuthViewController: GIDSignInUIDelegate {
-    
+//MARK: - Maybe it's not using
+
+@objc protocol GoogleAuthViewControllerProtocol: GIDSignInUIDelegate {
+
+}
+
+extension GoogleAuthViewControllerProtocol where Self: UIViewController {
+
     //MARK: - GIDSignInUIDelegate
     
     func sign(_ signIn: GIDSignIn!,
