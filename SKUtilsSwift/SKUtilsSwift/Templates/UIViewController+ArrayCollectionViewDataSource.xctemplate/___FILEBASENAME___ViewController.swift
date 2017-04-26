@@ -13,7 +13,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayTable
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel
     var arrayTableViewModel: ViewModelType? {
         didSet {
-            setDataSource(tableView: itemsTableView)
+            setDataSource(tableView: <#tableView#>)
         }
     }
 

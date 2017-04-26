@@ -10,7 +10,7 @@
 import UIKit
 import Foundation
 
-class ___FILEBASENAMEASIDENTIFIER___Cell: ConfigurableCell {
+class ___FILEBASENAMEASIDENTIFIER___Cell: <#cell type#>, ConfigurableCell {
         
     func configure<T>(viewModel: T) {
 //        if let groupVM = viewModel as? <#ViewModelType#> {
