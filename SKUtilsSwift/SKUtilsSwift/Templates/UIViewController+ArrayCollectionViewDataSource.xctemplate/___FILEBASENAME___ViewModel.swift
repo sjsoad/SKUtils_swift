@@ -21,7 +21,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayTableViewModelProtocol {
 //        let firstSectionModel = SectionModel(withItems: groups,
 //                                             header: nil,
 //                                             footer: nil)
-//        self.tableViewDataSource = TableViewArrayDataSource(sections: [firstSectionModel])
+//        tableViewDataSource = TableViewArrayDataSource(sections: [firstSectionModel])
     }
     
     func createViewModels(fromModels models: [ModelType]) -> [<#CellViewModel#>] {
