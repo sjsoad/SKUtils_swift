@@ -12,8 +12,6 @@ typealias LoginSuccessHandler = (_ response: LoginRequest.Response) -> Void
 
 protocol LoginRequestProtocol: Authenticatable, RequestSucceedProtocol, RequestErrorHandlerProtocol {
     
-    var authCredentials: AuthCredentials? { get set }
-    
     func login(email: String,
                password: String)
     func login(accessToken: String,
