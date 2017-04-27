@@ -33,10 +33,11 @@ class AuthViewController: UIViewController, RequestExecutingViewProtocol, Google
         profileViewModel.requestSucceed.bind { [weak self](succeed) in
             guard let strongSelf = self else { return }
             strongSelf.authViewModel.tryToLogin = false
-//            if succeed,
+            if succeed {
+                strongSelf.textfieldsManager.clearTextField()
+            }
 //                let profile = strongSelf.profileViewModel.profile {
 //                <#profile received#>
-//            }
         }
         authViewModel.requerstExecutingHandler = requerstExecutingHandler()
         profileViewModel.requerstExecutingHandler = requerstExecutingHandler()

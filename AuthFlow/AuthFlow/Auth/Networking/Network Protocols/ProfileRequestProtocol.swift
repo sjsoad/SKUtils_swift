@@ -10,7 +10,7 @@ import UIKit
 
 typealias ProfileSuccessHandler = (_ response: ProfileRequest.Response) -> Void
 
-protocol ProfileRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol, Profilable {
+protocol ProfileRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol, ProfileProtocol {
 
     func profile(authCredentials: AuthCredentials)
     

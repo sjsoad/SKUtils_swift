@@ -9,9 +9,9 @@
 import UIKit
 import TwitterKit
 
-class TwitterAuth: NSObject, AuthServiceProtocol {
+class TwitterAuth: NSObject, ScialNetworkAuthProtocol {
 
-    func login(handler: @escaping AuthServiceHandler,
+    func login(handler: @escaping SocalNetworkAuthHandler,
                fromController controller: UIViewController) {
         Twitter.sharedInstance().logIn(withMethods: .webBased) { (session, error) in
             if error != nil {

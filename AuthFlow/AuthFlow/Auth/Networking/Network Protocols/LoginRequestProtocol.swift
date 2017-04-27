@@ -10,7 +10,7 @@ import Foundation
 
 typealias LoginSuccessHandler = (_ response: LoginRequest.Response) -> Void
 
-protocol LoginRequestProtocol: Authenticatable, RequestSucceedProtocol, RequestErrorHandlerProtocol {
+protocol LoginRequestProtocol: AuthCredentialsProtocol, RequestSucceedProtocol, RequestErrorHandlerProtocol {
     
     func login(email: String,
                password: String)

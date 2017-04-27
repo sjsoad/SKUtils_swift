@@ -10,9 +10,9 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class FacebookAuth: NSObject, AuthServiceProtocol {
+class FacebookAuth: NSObject, ScialNetworkAuthProtocol {
 
-    func login(handler: @escaping AuthServiceHandler,
+    func login(handler: @escaping SocalNetworkAuthHandler,
                fromController controller: UIViewController) {
         let loginManager = FBSDKLoginManager()
         loginManager.logIn(withReadPermissions: ["public_profile", "email"],

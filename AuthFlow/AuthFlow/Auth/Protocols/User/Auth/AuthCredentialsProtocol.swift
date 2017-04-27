@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Authenticatable {
+protocol AuthCredentialsProtocol {
     
     var authCredentials: AuthCredentials? { get set }
     

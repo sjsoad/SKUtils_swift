@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-protocol TwitterAuthProtocol: AuthHandlerProtocol {
+protocol TwitterAuthProtocol: SocalNetworkAuthHandlerProtocol {
 
     func loginWithTwitter(fromController controller: UIViewController)
     

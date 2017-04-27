@@ -9,8 +9,8 @@
 import UIKit
 import Foundation
 
-protocol AuthHandlerProtocol {
+protocol SocalNetworkAuthHandlerProtocol {
 
-    var authHandler: AuthServiceHandler! { get set }
+    var authHandler: SocalNetworkAuthHandler! { get set }
     
 }

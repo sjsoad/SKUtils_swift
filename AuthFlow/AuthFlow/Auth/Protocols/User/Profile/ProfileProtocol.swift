@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Profilable {
+protocol ProfileProtocol {
     
    var profile: Profile? { get set }
     

@@ -25,11 +25,12 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
             guard let strongSelf = self else { return }
             if registrationSucceed,
                 let email = strongSelf.emailField.text,
-                let password = strongSelf.passwordField.text{
+                let password = strongSelf.passwordField.text {
                 navigationType.popToAuth(login: true,
                                          email: email,
                                          password: password,
                                          from: strongSelf)
+                strongSelf.textfieldsManager.clearTextField()
             }
         }
         registrationViewModel.requerstExecutingHandler = requerstExecutingHandler()

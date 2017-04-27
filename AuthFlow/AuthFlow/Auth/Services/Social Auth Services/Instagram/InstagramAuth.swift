@@ -8,9 +8,9 @@
 
 import UIKit
 
-class InstagramAuth: NSObject, AuthServiceProtocol {
+class InstagramAuth: NSObject, ScialNetworkAuthProtocol {
     
-    func login(handler: @escaping AuthServiceHandler,
+    func login(handler: @escaping SocalNetworkAuthHandler,
                fromController controller: UIViewController) {
         let instagramVC = InstagramAuthViewController(clientId: Instagram.clientId,
                                                       clientSecret: Instagram.clientSecret,

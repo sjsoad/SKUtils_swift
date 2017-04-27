@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol User {
+protocol UserViewModelProtocol {
     
     var userViewModel: UserViewModel! { get set }
     

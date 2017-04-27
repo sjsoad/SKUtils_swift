@@ -9,13 +9,13 @@
 import UIKit
 import GoogleSignIn
 
-class GooglePlusAuth: NSObject, AuthServiceProtocol {
+class GooglePlusAuth: NSObject, SocalNetworkAuthHandlerProtocol {
     
-    var handler: AuthServiceHandler?
+    var authHandler: SocalNetworkAuthHandler!
     
-    func login(handler: @escaping AuthServiceHandler,
+    func login(handler: @escaping SocalNetworkAuthHandler,
                fromController controller: UIViewController) {
-        self.handler = handler
+        authHandler = handler
         GIDSignIn.sharedInstance().signIn()
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileRepsonse: ResponseProtocol, Profilable {
+class ProfileRepsonse: ResponseProtocol, ProfileProtocol {
 
     var profile: Profile?
     

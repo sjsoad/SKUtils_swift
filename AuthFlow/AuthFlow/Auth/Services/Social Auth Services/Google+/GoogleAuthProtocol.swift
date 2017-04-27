@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import GoogleSignIn
 
-protocol GoogleAuthProtocol: AuthHandlerProtocol {
+protocol GoogleAuthProtocol: SocalNetworkAuthHandlerProtocol {
 
     func loginWithGooglePlus(fromController controller: UIViewController)
 }

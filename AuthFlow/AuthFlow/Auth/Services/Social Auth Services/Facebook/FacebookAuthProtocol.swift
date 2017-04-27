@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-protocol FacebookAuthProtocol: AuthHandlerProtocol {
+protocol FacebookAuthProtocol: SocalNetworkAuthHandlerProtocol {
 
    func loginWithFacebook(fromController: UIViewController)
     

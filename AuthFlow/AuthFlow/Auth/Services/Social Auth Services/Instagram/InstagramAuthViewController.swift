@@ -15,7 +15,7 @@ class InstagramAuthViewController: UIViewController {
     var clientId: String!
     var clientSecret: String!
     var redirectUri: String!
-    var handler: AuthServiceHandler!
+    var handler: SocalNetworkAuthHandler!
     
     private enum InstagramEndpoints: String {
         case Authorize = "/oauth/authorize/"
@@ -29,7 +29,7 @@ class InstagramAuthViewController: UIViewController {
         super.init(coder: aDecoder)
     }
 
-    init(clientId: String, clientSecret: String, redirectUri: String, handler: @escaping AuthServiceHandler) {
+    init(clientId: String, clientSecret: String, redirectUri: String, handler: @escaping SocalNetworkAuthHandler) {
         self.clientId = clientId
         self.clientSecret = clientSecret
         self.redirectUri = redirectUri

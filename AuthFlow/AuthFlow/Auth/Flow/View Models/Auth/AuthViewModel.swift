@@ -11,7 +11,7 @@ import GoogleSignIn
 
 class AuthViewModel: NSObject, LoginRequestProtocol, ValidationHelper, FacebookAuthProtocol, InstagramAuthProtocol, GoogleAuthProtocol {
     
-    var authHandler: AuthServiceHandler!
+    var authHandler: SocalNetworkAuthHandler!
     
     var requerstExecutingHandler: RequerstExecutingHandler?
     

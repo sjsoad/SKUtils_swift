@@ -10,20 +10,19 @@ import Foundation
 import UIKit
 
 enum GrantType: String {
-    case authTypeEmail = "email"
     case authTypeFacebook = "facebook"
     case authTypeInstagram = "instagram"
     case authTypeTwitter = "twitter"
     case authTypeGooglePlus = "google"
 }
 
-typealias AuthServiceHandler = (_ accessToken: String? ,
-                                _ authType: GrantType,
-                                _ error: Error?) -> Void
+typealias SocalNetworkAuthHandler = (_ accessToken: String? ,
+                                     _ authType: GrantType,
+                                     _ error: Error?) -> Void
 
-protocol AuthServiceProtocol {
+protocol ScialNetworkAuthProtocol {
     
-    func login(handler: @escaping AuthServiceHandler,
+    func login(handler: @escaping SocalNetworkAuthHandler,
                fromController controller: UIViewController)
     func logout()
     

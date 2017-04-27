@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginResponse: ResponseProtocol, Authenticatable {
+class LoginResponse: ResponseProtocol, AuthCredentialsProtocol {
 
     var authCredentials: AuthCredentials?
     

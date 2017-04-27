@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-protocol InstagramAuthProtocol: AuthHandlerProtocol {
+protocol InstagramAuthProtocol: SocalNetworkAuthHandlerProtocol {
     
     func loginWithInstagram(fromController controller: UIViewController)
     
