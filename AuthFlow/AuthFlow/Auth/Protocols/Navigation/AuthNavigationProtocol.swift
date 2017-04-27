@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AuthProtocol: PopToProtocol {
+protocol AuthNavigationProtocol: PopToNavigationProtocol {
     
     static func popToAuth(from controller: UIViewController,
                           animated: Bool)
@@ -16,7 +16,7 @@ protocol AuthProtocol: PopToProtocol {
                          animated: Bool)
 }
 
-extension AuthProtocol {
+extension AuthNavigationProtocol {
     
     static func popToAuth(from controller: UIViewController,
                           animated: Bool) {

@@ -9,14 +9,14 @@
 import UIKit
 import Foundation
 
-protocol RegistrationProtocol {
+protocol RegistrationNavigationProtocol {
 
     static func pushRegistration(from controller: UIViewController,
                                  animated: Bool)
     
 }
 
-extension RegistrationProtocol {
+extension RegistrationNavigationProtocol {
 
     static func pushRegistration(from controller: UIViewController,
                                  animated: Bool) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationNavigation: PopToProtocol {
+class RegistrationNavigation: PopToNavigationProtocol {
     
     static func popToAuth(login: Bool,
                           email: String?,

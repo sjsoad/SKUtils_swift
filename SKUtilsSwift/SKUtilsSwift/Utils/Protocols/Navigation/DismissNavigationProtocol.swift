@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DismissProtocol {
+protocol DismissNavigationProtocol {
     
     static func dismiss(controller: UIViewController,
                         animated: Bool,
@@ -16,7 +16,7 @@ protocol DismissProtocol {
     
 }
 
-extension DismissProtocol {
+extension DismissNavigationProtocol {
     
     static func dismiss(controller: UIViewController,
                         animated: Bool,

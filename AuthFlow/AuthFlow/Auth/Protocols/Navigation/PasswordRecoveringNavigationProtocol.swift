@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PasswordRecoveringProtocol {
+protocol PasswordRecoveringNavigationProtocol {
     
     static func presentPasswordReminder(from controller: UIViewController,
                                         animated: Bool)
@@ -17,7 +17,7 @@ protocol PasswordRecoveringProtocol {
     
 }
 
-extension PasswordRecoveringProtocol {
+extension PasswordRecoveringNavigationProtocol {
     
     static func presentPasswordReminder(from controller: UIViewController,
                                         animated: Bool) {
