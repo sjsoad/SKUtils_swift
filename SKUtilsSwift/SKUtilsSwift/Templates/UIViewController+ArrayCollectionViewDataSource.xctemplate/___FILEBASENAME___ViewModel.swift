@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayTableViewModelProtocol {
+class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayCollectionViewModelProtocol {
     
     typealias ModelType = <#ModelType#>
     typealias CellType = <#CellType#>
     
-    var tableViewDataSource: TableViewArrayDataSource?
+    var collectionViewDataSource: CollectionViewArrayDataSource?
     
     required init(array: [ModelType]) {
 //        let groups = createViewModels(fromModels: array)
 //        let firstSectionModel = SectionModel(withItems: groups,
 //                                             header: nil,
 //                                             footer: nil)
-//        tableViewDataSource = TableViewArrayDataSource(sections: [firstSectionModel])
+//        collectionViewDataSource = CollectionViewArrayDataSource(sections: [firstSectionModel])
     }
     
     func createViewModels(fromModels models: [ModelType]) -> [<#CellViewModel#>] {

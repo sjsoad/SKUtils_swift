@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayTableViewProtocol {
+class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayCollectionViewProtocol {
 
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel
-    var arrayTableViewModel: ViewModelType? {
+    var arrayCollectionViewModel: ViewModelType? {
         didSet {
-            setDataSource(tableView: <#tableView#>)
+            setDataSource(collectionView: <#collectionView#>)
         }
     }
 
