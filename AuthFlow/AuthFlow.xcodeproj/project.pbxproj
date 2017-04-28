@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */; };
+		A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */; };
 		A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44571EA9DB66009D7651 /* AppDelegate.swift */; };
 		A53C44B31EA9DB66009D7651 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445A1EA9DB66009D7651 /* Constants.swift */; };
 		A53C44B51EA9DB66009D7651 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445F1EA9DB66009D7651 /* AuthViewController.swift */; };
@@ -155,6 +157,8 @@
 		647A9F755AB2090DBB695690 /* Pods-AuthFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFlow.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuthFlow/Pods-AuthFlow.release.xcconfig"; sourceTree = "<group>"; };
 		6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		899B44949134F565E34D42FE /* Pods-AuthFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthFlow/Pods-AuthFlow.debug.xcconfig"; sourceTree = "<group>"; };
+		A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuth.swift; sourceTree = "<group>"; };
+		A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthProtocol.swift; sourceTree = "<group>"; };
 		A53C44571EA9DB66009D7651 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AuthFlow/AppDelegate.swift; sourceTree = "<group>"; };
 		A53C445A1EA9DB66009D7651 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A53C445F1EA9DB66009D7651 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +321,15 @@
 				6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5069B791EB2FCCD007BBB64 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */,
+				A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */,
+			);
+			path = Twitter;
 			sourceTree = "<group>";
 		};
 		A53C44581EA9DB66009D7651 /* Auth */ = {
@@ -1136,6 +1149,7 @@
 		A5646D3C1EB27D6A00B008BB /* Social Auth Services */ = {
 			isa = PBXGroup;
 			children = (
+				A5069B791EB2FCCD007BBB64 /* Twitter */,
 				A5646D3D1EB27D6A00B008BB /* SocalNetworkAuthHandlerProtocol.swift */,
 				A5646D3E1EB27D6A00B008BB /* ScialNetworkAuthProtocol.swift */,
 				A5646D3F1EB27D6A00B008BB /* Facebook */,
@@ -1336,6 +1350,7 @@
 				A54F52DB1EA8FD97007DD713 /* EqualStringsValidator.swift in Sources */,
 				A53C44DB1EA9DB66009D7651 /* ProfileProtocol.swift in Sources */,
 				A5646D501EB27D6A00B008BB /* FacebookAuth.swift in Sources */,
+				A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */,
 				A579C1F21EB1DBBD00AEF668 /* DismissNavigationProtocol.swift in Sources */,
 				A54F52BB1EA8FD97007DD713 /* RequestErrorHandlerProtocol.swift in Sources */,
 				A53C44DA1EA9DB66009D7651 /* AuthCredentialsProtocol.swift in Sources */,
@@ -1407,6 +1422,7 @@
 				A54F529C1EA8FD97007DD713 /* ArrayCollectionViewProtocol.swift in Sources */,
 				A54F52D61EA8FD97007DD713 /* ImagePickerViewController.swift in Sources */,
 				A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */,
+				A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */,
 				A53C44C51EA9DB66009D7651 /* RegistrationViewModel.swift in Sources */,
 				A54F53091EA8FF02007DD713 /* AuthCredentials.swift in Sources */,
 				A53C44D71EA9DB66009D7651 /* AuthNavigationProtocol.swift in Sources */,
