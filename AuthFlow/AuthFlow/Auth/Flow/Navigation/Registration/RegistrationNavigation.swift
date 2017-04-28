@@ -8,19 +8,7 @@
 
 import UIKit
 
-class RegistrationNavigation: PopToNavigationProtocol {
-    
-    static func popToAuth(login: Bool,
-                          email: String?,
-                          password: String?,
-                          from controller: UIViewController) {
-        if let auth: AuthViewController = popTo(controller: AuthViewController.self,
-                                                from: controller,
-                                                animated: true) {
-            auth.emailField.text = email
-            auth.passwordField.text = password
-            auth.authViewModel.tryToLogin = true
-        }
-    }
+class RegistrationNavigation: LoginNavigationProtocol {
+
     
 }

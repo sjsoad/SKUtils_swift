@@ -20,7 +20,7 @@ extension AppDelegate {
     func presentChangePasswordDialog(token: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
 //            Here you can present window with ability to change password
-            AuthNavigation.presentPasswordChanger(temporaryToken: token,
+            LoginNavigation.presentPasswordChanger(temporaryToken: token,
                                                   animated: true)
         }
 

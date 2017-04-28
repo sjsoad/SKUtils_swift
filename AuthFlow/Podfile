@@ -6,7 +6,6 @@ target 'AuthFlow' do
   use_frameworks!
 
 #pod 'Hero'
-#pod 'GoogleMaps'
 pod 'Google/SignIn'
 pod 'Google/Analytics'
 pod 'FBSDKCoreKit'
@@ -14,9 +13,9 @@ pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'Alamofire'
 pod 'NVActivityIndicatorView'
-#pod 'AERecord'
-#pod 'Groot'
+
 pod 'SwiftyDrop'
-  # Pods for GeoTouch
+pod 'Fabric'
+pod 'TwitterKit'
 
 end

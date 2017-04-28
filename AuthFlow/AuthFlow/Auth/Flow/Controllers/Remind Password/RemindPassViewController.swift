@@ -12,7 +12,7 @@ class RemindPassViewController: DissmisableViewController, Presentation, Request
 
     typealias navigationType = RemindPassNavigation
     
-    @IBOutlet var textfieldsManager: TextFieldsManager!
+    @IBOutlet var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var emailField: EmailTextField!
     
     var reminderViewModel = RemindPassViewModel()
@@ -30,8 +30,8 @@ class RemindPassViewController: DissmisableViewController, Presentation, Request
     }
 
     @IBAction func remindButtonPresed(_ sender: UIButton) {
-        textfieldsManager.hideKeyboard()
-        let textFields = textfieldsManager.textFields as! [UITextField]
+        textFieldsManager.hideKeyboard()
+        let textFields = textFieldsManager.textFields as! [UITextField]
         let validated = reminderViewModel.validate(fields: textFields)
         if validated,
             let email = emailField.text {

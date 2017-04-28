@@ -8,13 +8,15 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, RequestExecutingViewProtocol {
+class RegistrationViewController: UIViewController, RequestExecutingViewProtocol, LoginProcessingProtocol {
     
     typealias navigationType = RegistrationNavigation
     
+    var loginProcessor: LoginProcessorProtocol?
+    
     var registrationViewModel = RegistrationViewModel()
     
-    @IBOutlet var textfieldsManager: TextFieldsManager!
+    @IBOutlet var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var username: BaseTextField!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
@@ -26,11 +28,12 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
             if registrationSucceed,
                 let email = strongSelf.emailField.text,
                 let password = strongSelf.passwordField.text {
-                navigationType.popToAuth(login: true,
-                                         email: email,
-                                         password: password,
-                                         from: strongSelf)
-                strongSelf.textfieldsManager.clearTextField()
+                navigationType.moveToAuth(loginProcessor: strongSelf.loginProcessor,
+                                          email: email,
+                                          password: password,
+                                          from: strongSelf,
+                                          animated: true)
+                strongSelf.textFieldsManager.clearTextField()
             }
         }
         registrationViewModel.requerstExecutingHandler = requerstExecutingHandler()
@@ -39,8 +42,8 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     //MARK: - IBActions
     
     @IBAction func registrationButtonPresed(_ sender: UIButton) {
-        textfieldsManager.hideKeyboard()
-        let textFields = textfieldsManager.textFields as! [UITextField]
+        textFieldsManager.hideKeyboard()
+        let textFields = textFieldsManager.textFields as! [UITextField]
         let validated = registrationViewModel.validate(fields: textFields)
         if validated,
             let username = username.text,

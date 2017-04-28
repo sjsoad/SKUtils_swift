@@ -12,7 +12,7 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
 
     typealias navigationType = ChangePassNavigation
     
-    @IBOutlet var textfieldsManager: TextFieldsManager!
+    @IBOutlet var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var passwordField: PassTextField!
     @IBOutlet weak var confirmationField: PassTextField!
     
@@ -34,8 +34,8 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
     //MARK: - IBActions
     
     @IBAction func changeButtonPresed(_ sender: UIButton) {
-        textfieldsManager.hideKeyboard()
-        let textFields = textfieldsManager.textFields as! [UITextField]
+        textFieldsManager.hideKeyboard()
+        let textFields = textFieldsManager.textFields as! [UITextField]
         let validated = changePassViewModel.validate(fields: textFields)
         if validated,
             let token = changePassViewModel.temporaryToken {

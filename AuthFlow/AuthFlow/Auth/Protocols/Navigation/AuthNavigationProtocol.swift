@@ -1,36 +1,47 @@
 //
-//  AuthProtocol.swift
-//  GeoTouch
+//  AuthNavigationProtocol.swift
+//  AuthFlow
 //
-//  Created by Sergey on 13.03.17.
+//  Created by Sergey on 28.04.17.
 //  Copyright © 2017 Sergey. All rights reserved.
 //
 
 import UIKit
+import Foundation
+//import Hero
 
-protocol AuthNavigationProtocol: PopToNavigationProtocol {
-    
-    static func popToAuth(from controller: UIViewController,
-                          animated: Bool)
-    static func pushAuth(from controller: UIViewController,
-                         animated: Bool)
+protocol AuthNavigationProtocol: LoginProcessorSetupProtocol {
+
+    static func presentSignIn(from controller: UIViewController,
+                              animated: Bool)
+    static func presentSignUp(from controller: UIViewController,
+                              animated: Bool)
 }
 
 extension AuthNavigationProtocol {
-    
-    static func popToAuth(from controller: UIViewController,
-                          animated: Bool) {
-        let _ = popTo(controller: AuthViewController.self,
-                      from: controller,
-                      animated: animated)
+
+    static func presentSignIn(from controller: UIViewController,
+                              animated: Bool) {
+        let vc = LoginViewController.load(from: "Login")
+        Self.add(processor: controller,
+                 to: vc)
+        let navigation = UINavigationController(rootViewController: vc)
+        //        navigation.isHeroEnabled = true
+        controller.present(navigation,
+                           animated: animated,
+                           completion: nil)
     }
     
-    static func pushAuth(from controller: UIViewController,
-                         animated: Bool) {
-        let vc = AuthViewController.load(from: "Auth")
-        controller.navigationController?.pushViewController(vc,
-                                                            animated: animated)
+    static func presentSignUp(from controller: UIViewController,
+                              animated: Bool) {
+        let vc = RegistrationViewController.load(from: "Registration")
+        let navigation = UINavigationController(rootViewController: vc)
+        Self.add(processor: controller,
+                 to: vc)
+        //        navigation.isHeroEnabled = true
+        controller.present(navigation,
+                           animated: true,
+                           completion: nil)
     }
-    
     
 }

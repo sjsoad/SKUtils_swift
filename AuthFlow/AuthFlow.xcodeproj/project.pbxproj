@@ -11,20 +11,15 @@
 		A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */; };
 		A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44571EA9DB66009D7651 /* AppDelegate.swift */; };
 		A53C44B31EA9DB66009D7651 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445A1EA9DB66009D7651 /* Constants.swift */; };
-		A53C44B51EA9DB66009D7651 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445F1EA9DB66009D7651 /* AuthViewController.swift */; };
 		A53C44B61EA9DB66009D7651 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44611EA9DB66009D7651 /* BaseViewController.swift */; };
 		A53C44B71EA9DB66009D7651 /* DissmisableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44621EA9DB66009D7651 /* DissmisableViewController.swift */; };
 		A53C44B81EA9DB66009D7651 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44641EA9DB66009D7651 /* ChangePassViewController.swift */; };
 		A53C44B91EA9DB66009D7651 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44661EA9DB66009D7651 /* RegistrationViewController.swift */; };
 		A53C44BA1EA9DB66009D7651 /* RemindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44681EA9DB66009D7651 /* RemindPassViewController.swift */; };
-		A53C44BB1EA9DB66009D7651 /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C446B1EA9DB66009D7651 /* AuthNavigation.swift */; };
 		A53C44BC1EA9DB66009D7651 /* BaseNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C446D1EA9DB66009D7651 /* BaseNavigation.swift */; };
 		A53C44BD1EA9DB66009D7651 /* ChangePassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C446F1EA9DB66009D7651 /* ChangePassNavigation.swift */; };
 		A53C44BE1EA9DB66009D7651 /* RegistrationNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44711EA9DB66009D7651 /* RegistrationNavigation.swift */; };
 		A53C44BF1EA9DB66009D7651 /* RemindPassNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44731EA9DB66009D7651 /* RemindPassNavigation.swift */; };
-		A53C44C01EA9DB66009D7651 /* AuthViewModel+GooglePlusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44761EA9DB66009D7651 /* AuthViewModel+GooglePlusDelegate.swift */; };
-		A53C44C11EA9DB66009D7651 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44771EA9DB66009D7651 /* AuthViewModel.swift */; };
-		A53C44C21EA9DB66009D7651 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44781EA9DB66009D7651 /* ProfileViewModel.swift */; };
 		A53C44C31EA9DB66009D7651 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C447A1EA9DB66009D7651 /* UserViewModel.swift */; };
 		A53C44C41EA9DB66009D7651 /* ChangePassViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C447C1EA9DB66009D7651 /* ChangePassViewModel.swift */; };
 		A53C44C51EA9DB66009D7651 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C447E1EA9DB66009D7651 /* RegistrationViewModel.swift */; };
@@ -45,13 +40,13 @@
 		A53C44D41EA9DB66009D7651 /* ProfileRepsonse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44941EA9DB66009D7651 /* ProfileRepsonse.swift */; };
 		A53C44D51EA9DB66009D7651 /* RegistrationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44951EA9DB66009D7651 /* RegistrationResponse.swift */; };
 		A53C44D61EA9DB66009D7651 /* SucccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44961EA9DB66009D7651 /* SucccessResponse.swift */; };
-		A53C44D71EA9DB66009D7651 /* AuthNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44991EA9DB66009D7651 /* AuthNavigationProtocol.swift */; };
+		A53C44D71EA9DB66009D7651 /* LoginNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44991EA9DB66009D7651 /* LoginNavigationProtocol.swift */; };
 		A53C44D81EA9DB66009D7651 /* PasswordRecoveringNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C449A1EA9DB66009D7651 /* PasswordRecoveringNavigationProtocol.swift */; };
 		A53C44D91EA9DB66009D7651 /* RegistrationNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C449B1EA9DB66009D7651 /* RegistrationNavigationProtocol.swift */; };
 		A53C44DA1EA9DB66009D7651 /* AuthCredentialsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C449E1EA9DB66009D7651 /* AuthCredentialsProtocol.swift */; };
 		A53C44DB1EA9DB66009D7651 /* ProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44A01EA9DB66009D7651 /* ProfileProtocol.swift */; };
 		A53C44DC1EA9DB66009D7651 /* UserViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44A21EA9DB66009D7651 /* UserViewModelProtocol.swift */; };
-		A53C44E31EA9DB66009D7651 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53C44AF1EA9DB66009D7651 /* Auth.storyboard */; };
+		A53C44E31EA9DB66009D7651 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53C44AF1EA9DB66009D7651 /* Login.storyboard */; };
 		A53C44E41EA9DB66009D7651 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53C44B01EA9DB66009D7651 /* Password.storyboard */; };
 		A53C44E51EA9DB66009D7651 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53C44B11EA9DB66009D7651 /* Registration.storyboard */; };
 		A53C44E81EA9DB75009D7651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53C44E61EA9DB75009D7651 /* Assets.xcassets */; };
@@ -150,6 +145,15 @@
 		A5646D581EB27D6A00B008BB /* InstagramAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5646D4A1EB27D6A00B008BB /* InstagramAuthViewController.swift */; };
 		A579C1F21EB1DBBD00AEF668 /* DismissNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A579C1F01EB1DBBD00AEF668 /* DismissNavigationProtocol.swift */; };
 		A579C1F31EB1DBBD00AEF668 /* PopToNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A579C1F11EB1DBBD00AEF668 /* PopToNavigationProtocol.swift */; };
+		A5AC73F91EB35C7D009CDEC3 /* LoginNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC73F81EB35C7D009CDEC3 /* LoginNavigation.swift */; };
+		A5AC73FE1EB35C8A009CDEC3 /* LoginViewModel+GooglePlusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC73FB1EB35C8A009CDEC3 /* LoginViewModel+GooglePlusDelegate.swift */; };
+		A5AC73FF1EB35C8A009CDEC3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC73FC1EB35C8A009CDEC3 /* LoginViewModel.swift */; };
+		A5AC74001EB35C8A009CDEC3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC73FD1EB35C8A009CDEC3 /* ProfileViewModel.swift */; };
+		A5AC74031EB35C97009CDEC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC74021EB35C97009CDEC3 /* LoginViewController.swift */; };
+		A5AC74051EB35FA3009CDEC3 /* AuthNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC74041EB35FA3009CDEC3 /* AuthNavigationProtocol.swift */; };
+		A5AC740E1EB36310009CDEC3 /* LoginProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC740D1EB36310009CDEC3 /* LoginProcessorProtocol.swift */; };
+		A5AC74101EB36675009CDEC3 /* LoginProcessingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC740F1EB36675009CDEC3 /* LoginProcessingProtocol.swift */; };
+		A5AC74121EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC74111EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift */; };
 		CD2D0A3373EAC066D304E1C8 /* Pods_AuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,20 +165,15 @@
 		A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthProtocol.swift; sourceTree = "<group>"; };
 		A53C44571EA9DB66009D7651 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AuthFlow/AppDelegate.swift; sourceTree = "<group>"; };
 		A53C445A1EA9DB66009D7651 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A53C445F1EA9DB66009D7651 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A53C44611EA9DB66009D7651 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A53C44621EA9DB66009D7651 /* DissmisableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissmisableViewController.swift; sourceTree = "<group>"; };
 		A53C44641EA9DB66009D7651 /* ChangePassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
 		A53C44661EA9DB66009D7651 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A53C44681EA9DB66009D7651 /* RemindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassViewController.swift; sourceTree = "<group>"; };
-		A53C446B1EA9DB66009D7651 /* AuthNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
 		A53C446D1EA9DB66009D7651 /* BaseNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigation.swift; sourceTree = "<group>"; };
 		A53C446F1EA9DB66009D7651 /* ChangePassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassNavigation.swift; sourceTree = "<group>"; };
 		A53C44711EA9DB66009D7651 /* RegistrationNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNavigation.swift; sourceTree = "<group>"; };
 		A53C44731EA9DB66009D7651 /* RemindPassNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindPassNavigation.swift; sourceTree = "<group>"; };
-		A53C44761EA9DB66009D7651 /* AuthViewModel+GooglePlusDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthViewModel+GooglePlusDelegate.swift"; sourceTree = "<group>"; };
-		A53C44771EA9DB66009D7651 /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		A53C44781EA9DB66009D7651 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		A53C447A1EA9DB66009D7651 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		A53C447C1EA9DB66009D7651 /* ChangePassViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePassViewModel.swift; sourceTree = "<group>"; };
 		A53C447E1EA9DB66009D7651 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -195,13 +194,13 @@
 		A53C44941EA9DB66009D7651 /* ProfileRepsonse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRepsonse.swift; sourceTree = "<group>"; };
 		A53C44951EA9DB66009D7651 /* RegistrationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationResponse.swift; sourceTree = "<group>"; };
 		A53C44961EA9DB66009D7651 /* SucccessResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SucccessResponse.swift; sourceTree = "<group>"; };
-		A53C44991EA9DB66009D7651 /* AuthNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationProtocol.swift; sourceTree = "<group>"; };
+		A53C44991EA9DB66009D7651 /* LoginNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationProtocol.swift; sourceTree = "<group>"; };
 		A53C449A1EA9DB66009D7651 /* PasswordRecoveringNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveringNavigationProtocol.swift; sourceTree = "<group>"; };
 		A53C449B1EA9DB66009D7651 /* RegistrationNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationNavigationProtocol.swift; sourceTree = "<group>"; };
 		A53C449E1EA9DB66009D7651 /* AuthCredentialsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCredentialsProtocol.swift; sourceTree = "<group>"; };
 		A53C44A01EA9DB66009D7651 /* ProfileProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileProtocol.swift; sourceTree = "<group>"; };
 		A53C44A21EA9DB66009D7651 /* UserViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelProtocol.swift; sourceTree = "<group>"; };
-		A53C44AF1EA9DB66009D7651 /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		A53C44AF1EA9DB66009D7651 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A53C44B01EA9DB66009D7651 /* Password.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
 		A53C44B11EA9DB66009D7651 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		A53C44E61EA9DB75009D7651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AuthFlow/Assets.xcassets; sourceTree = "<group>"; };
@@ -301,6 +300,15 @@
 		A5646D4A1EB27D6A00B008BB /* InstagramAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAuthViewController.swift; sourceTree = "<group>"; };
 		A579C1F01EB1DBBD00AEF668 /* DismissNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissNavigationProtocol.swift; sourceTree = "<group>"; };
 		A579C1F11EB1DBBD00AEF668 /* PopToNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopToNavigationProtocol.swift; sourceTree = "<group>"; };
+		A5AC73F81EB35C7D009CDEC3 /* LoginNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigation.swift; sourceTree = "<group>"; };
+		A5AC73FB1EB35C8A009CDEC3 /* LoginViewModel+GooglePlusDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+GooglePlusDelegate.swift"; sourceTree = "<group>"; };
+		A5AC73FC1EB35C8A009CDEC3 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A5AC73FD1EB35C8A009CDEC3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A5AC74021EB35C97009CDEC3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5AC74041EB35FA3009CDEC3 /* AuthNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationProtocol.swift; sourceTree = "<group>"; };
+		A5AC740D1EB36310009CDEC3 /* LoginProcessorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessorProtocol.swift; sourceTree = "<group>"; };
+		A5AC740F1EB36675009CDEC3 /* LoginProcessingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessingProtocol.swift; sourceTree = "<group>"; };
+		A5AC74111EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessorSetupProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,21 +376,13 @@
 		A53C445C1EA9DB66009D7651 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A53C445D1EA9DB66009D7651 /* Auth */,
+				A5AC74011EB35C97009CDEC3 /* Login */,
 				A53C44601EA9DB66009D7651 /* Base */,
 				A53C44631EA9DB66009D7651 /* Change Password */,
 				A53C44651EA9DB66009D7651 /* Registration */,
 				A53C44671EA9DB66009D7651 /* Remind Password */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		A53C445D1EA9DB66009D7651 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				A53C445F1EA9DB66009D7651 /* AuthViewController.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		A53C44601EA9DB66009D7651 /* Base */ = {
@@ -421,21 +421,13 @@
 		A53C44691EA9DB66009D7651 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				A53C446A1EA9DB66009D7651 /* Auth */,
+				A5AC73F71EB35C7D009CDEC3 /* Login */,
 				A53C446C1EA9DB66009D7651 /* Base */,
 				A53C446E1EA9DB66009D7651 /* Change Password */,
 				A53C44701EA9DB66009D7651 /* Registration */,
 				A53C44721EA9DB66009D7651 /* Remind Password */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A53C446A1EA9DB66009D7651 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				A53C446B1EA9DB66009D7651 /* AuthNavigation.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		A53C446C1EA9DB66009D7651 /* Base */ = {
@@ -473,23 +465,13 @@
 		A53C44741EA9DB66009D7651 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				A53C44751EA9DB66009D7651 /* Auth */,
+				A5AC73FA1EB35C8A009CDEC3 /* Login */,
 				A53C44791EA9DB66009D7651 /* Base */,
 				A53C447B1EA9DB66009D7651 /* Change Password */,
 				A53C447D1EA9DB66009D7651 /* Registration */,
 				A53C447F1EA9DB66009D7651 /* Remind Password */,
 			);
 			path = "View Models";
-			sourceTree = "<group>";
-		};
-		A53C44751EA9DB66009D7651 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				A53C44761EA9DB66009D7651 /* AuthViewModel+GooglePlusDelegate.swift */,
-				A53C44771EA9DB66009D7651 /* AuthViewModel.swift */,
-				A53C44781EA9DB66009D7651 /* ProfileViewModel.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		A53C44791EA9DB66009D7651 /* Base */ = {
@@ -598,9 +580,10 @@
 		A53C44981EA9DB66009D7651 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				A53C44991EA9DB66009D7651 /* AuthNavigationProtocol.swift */,
+				A53C44991EA9DB66009D7651 /* LoginNavigationProtocol.swift */,
 				A53C449A1EA9DB66009D7651 /* PasswordRecoveringNavigationProtocol.swift */,
 				A53C449B1EA9DB66009D7651 /* RegistrationNavigationProtocol.swift */,
+				A5AC74041EB35FA3009CDEC3 /* AuthNavigationProtocol.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -608,6 +591,7 @@
 		A53C449C1EA9DB66009D7651 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC74061EB360B4009CDEC3 /* Login */,
 				A53C449D1EA9DB66009D7651 /* Auth */,
 				A53C449F1EA9DB66009D7651 /* Profile */,
 				A53C44A11EA9DB66009D7651 /* User */,
@@ -650,7 +634,7 @@
 		A53C44AE1EA9DB66009D7651 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A53C44AF1EA9DB66009D7651 /* Auth.storyboard */,
+				A53C44AF1EA9DB66009D7651 /* Login.storyboard */,
 				A53C44B01EA9DB66009D7651 /* Password.storyboard */,
 				A53C44B11EA9DB66009D7651 /* Registration.storyboard */,
 			);
@@ -1189,6 +1173,42 @@
 			path = Instagram;
 			sourceTree = "<group>";
 		};
+		A5AC73F71EB35C7D009CDEC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC73F81EB35C7D009CDEC3 /* LoginNavigation.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A5AC73FA1EB35C8A009CDEC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC73FB1EB35C8A009CDEC3 /* LoginViewModel+GooglePlusDelegate.swift */,
+				A5AC73FC1EB35C8A009CDEC3 /* LoginViewModel.swift */,
+				A5AC73FD1EB35C8A009CDEC3 /* ProfileViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A5AC74011EB35C97009CDEC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC74021EB35C97009CDEC3 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A5AC74061EB360B4009CDEC3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC740F1EB36675009CDEC3 /* LoginProcessingProtocol.swift */,
+				A5AC740D1EB36310009CDEC3 /* LoginProcessorProtocol.swift */,
+				A5AC74111EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F89E57F57DFA755C1C9A69B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1260,7 +1280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A53C44E31EA9DB66009D7651 /* Auth.storyboard in Resources */,
+				A53C44E31EA9DB66009D7651 /* Login.storyboard in Resources */,
 				A53C44E51EA9DB66009D7651 /* Registration.storyboard in Resources */,
 				A53C44E91EA9DB75009D7651 /* Info.plist in Resources */,
 				A53C44E41EA9DB66009D7651 /* Password.storyboard in Resources */,
@@ -1339,9 +1359,7 @@
 				A54F52D11EA8FD97007DD713 /* ServicePermissions.swift in Sources */,
 				A54F52AD1EA8FD97007DD713 /* UIView+Load.swift in Sources */,
 				A54F52CA1EA8FD97007DD713 /* CameraPermissions.swift in Sources */,
-				A53C44C21EA9DB66009D7651 /* ProfileViewModel.swift in Sources */,
 				A5646D4E1EB27D6A00B008BB /* SocalNetworkAuthHandlerProtocol.swift in Sources */,
-				A53C44BB1EA9DB66009D7651 /* AuthNavigation.swift in Sources */,
 				A54F52BE1EA8FD97007DD713 /* RequestSucceedProtocol.swift in Sources */,
 				A54F52A41EA8FD97007DD713 /* AlertController+PresentationProtocol.swift in Sources */,
 				A53C44D51EA9DB66009D7651 /* RegistrationResponse.swift in Sources */,
@@ -1356,6 +1374,7 @@
 				A53C44DA1EA9DB66009D7651 /* AuthCredentialsProtocol.swift in Sources */,
 				A54F52961EA8FD97007DD713 /* DataSourceViewModel.swift in Sources */,
 				A54F52CB1EA8FD97007DD713 /* ContactsPermissions.swift in Sources */,
+				A5AC74001EB35C8A009CDEC3 /* ProfileViewModel.swift in Sources */,
 				A54F52B91EA8FD97007DD713 /* APIRequestProtocol.swift in Sources */,
 				A5646D4F1EB27D6A00B008BB /* ScialNetworkAuthProtocol.swift in Sources */,
 				A5646D531EB27D6A00B008BB /* GoogleAuthViewControllerProtocol.swift in Sources */,
@@ -1384,11 +1403,13 @@
 				A54F52C31EA8FD97007DD713 /* AlertPresentation.swift in Sources */,
 				A54F52CC1EA8FD97007DD713 /* LocationPermissions.swift in Sources */,
 				A5646D571EB27D6A00B008BB /* InstagramAuthProtocol.swift in Sources */,
+				A5AC73FE1EB35C8A009CDEC3 /* LoginViewModel+GooglePlusDelegate.swift in Sources */,
 				A53C44CE1EA9DB66009D7651 /* LoginRequest.swift in Sources */,
+				A5AC74031EB35C97009CDEC3 /* LoginViewController.swift in Sources */,
 				A53C44CA1EA9DB66009D7651 /* ProfileRequestProtocol.swift in Sources */,
 				A54F52DA1EA8FD97007DD713 /* EmailValidator.swift in Sources */,
+				A5AC740E1EB36310009CDEC3 /* LoginProcessorProtocol.swift in Sources */,
 				A54F528E1EA8FD97007DD713 /* MailBuilder.swift in Sources */,
-				A53C44C01EA9DB66009D7651 /* AuthViewModel+GooglePlusDelegate.swift in Sources */,
 				A54F529F1EA8FD97007DD713 /* ArrayTableViewModelProtocol.swift in Sources */,
 				A54F52C51EA8FD97007DD713 /* FCMService.swift in Sources */,
 				A54F529B1EA8FD97007DD713 /* ArrayCollectionViewModelProtocol.swift in Sources */,
@@ -1413,26 +1434,27 @@
 				A53C44C61EA9DB66009D7651 /* RemindPassViewModel.swift in Sources */,
 				A54F52991EA8FD97007DD713 /* TableViewArrayDataSource.swift in Sources */,
 				A54F52BF1EA8FD97007DD713 /* MailComposer.swift in Sources */,
-				A53C44C11EA9DB66009D7651 /* AuthViewModel.swift in Sources */,
 				A54F52B01EA8FD97007DD713 /* DynamicHelper.swift in Sources */,
 				A54F52C61EA8FD97007DD713 /* APNSService.swift in Sources */,
 				A54F52BA1EA8FD97007DD713 /* ResponseProtocol.swift in Sources */,
 				A54F52B21EA8FD97007DD713 /* QueryStringParser.swift in Sources */,
 				A54F52B41EA8FD97007DD713 /* ShareHelper.swift in Sources */,
 				A54F529C1EA8FD97007DD713 /* ArrayCollectionViewProtocol.swift in Sources */,
+				A5AC74101EB36675009CDEC3 /* LoginProcessingProtocol.swift in Sources */,
 				A54F52D61EA8FD97007DD713 /* ImagePickerViewController.swift in Sources */,
 				A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */,
 				A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */,
 				A53C44C51EA9DB66009D7651 /* RegistrationViewModel.swift in Sources */,
 				A54F53091EA8FF02007DD713 /* AuthCredentials.swift in Sources */,
-				A53C44D71EA9DB66009D7651 /* AuthNavigationProtocol.swift in Sources */,
+				A53C44D71EA9DB66009D7651 /* LoginNavigationProtocol.swift in Sources */,
 				A54F52A01EA8FD97007DD713 /* ArrayTableViewProtocol.swift in Sources */,
-				A53C44B51EA9DB66009D7651 /* AuthViewController.swift in Sources */,
 				A54F528C1EA8FD97007DD713 /* AlertActionBuilder.swift in Sources */,
+				A5AC74051EB35FA3009CDEC3 /* AuthNavigationProtocol.swift in Sources */,
 				A54F529E1EA8FD97007DD713 /* FRCCollectionViewProtocol.swift in Sources */,
 				A54F52981EA8FD97007DD713 /* SectionModel.swift in Sources */,
 				A54F52D01EA8FD97007DD713 /* RequestPermissions.swift in Sources */,
 				A53C44D41EA9DB66009D7651 /* ProfileRepsonse.swift in Sources */,
+				A5AC74121EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift in Sources */,
 				A54F52C11EA8FD97007DD713 /* NavigationProtocol.swift in Sources */,
 				A54F52B71EA8FD97007DD713 /* TextFieldsManager.swift in Sources */,
 				A53C44D11EA9DB66009D7651 /* RemindPasswordRequest.swift in Sources */,
@@ -1452,6 +1474,8 @@
 				A54F52D71EA8FD97007DD713 /* ImagePickerViewModel.swift in Sources */,
 				A53C44B71EA9DB66009D7651 /* DissmisableViewController.swift in Sources */,
 				A54F52CF1EA8FD97007DD713 /* PermissionsState.swift in Sources */,
+				A5AC73F91EB35C7D009CDEC3 /* LoginNavigation.swift in Sources */,
+				A5AC73FF1EB35C8A009CDEC3 /* LoginViewModel.swift in Sources */,
 				A54F52A31EA8FD97007DD713 /* AlertAction+Handler.swift in Sources */,
 				A53C44D31EA9DB66009D7651 /* LoginResponse.swift in Sources */,
 				A54F52A11EA8FD97007DD713 /* FRCTableViewModelProtocol.swift in Sources */,

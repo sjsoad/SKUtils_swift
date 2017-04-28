@@ -9,20 +9,32 @@
 import UIKit
 import Foundation
 
-protocol RegistrationNavigationProtocol {
+protocol RegistrationNavigationProtocol: PopToNavigationProtocol, LoginProcessorSetupProtocol {
 
-    static func pushRegistration(from controller: UIViewController,
-                                 animated: Bool)
+    static func moveToRegistration(loginProcessor: LoginProcessorProtocol?,
+                                   from controller: UIViewController,
+                                   animated: Bool)
     
 }
 
 extension RegistrationNavigationProtocol {
 
-    static func pushRegistration(from controller: UIViewController,
-                                 animated: Bool) {
-        let vc = RegistrationViewController.load(from: "Registration")
-        controller.navigationController?.pushViewController(vc,
-                                                            animated: animated)
+    static func moveToRegistration(loginProcessor: LoginProcessorProtocol?,
+                                   from controller: UIViewController,
+                                   animated: Bool) {
+        if let vc = popTo(controller: RegistrationViewController.self,
+                                  from: controller,
+                                  animated: animated) {
+            Self.add(loginProcessor: loginProcessor,
+                     to: vc)
+        }
+        else {
+            let vc = RegistrationViewController.load(from: "Registration")
+            Self.add(loginProcessor: loginProcessor,
+                     to: vc)
+            controller.navigationController?.pushViewController(vc,
+                                                                animated: animated)
+        }
     }
     
 }

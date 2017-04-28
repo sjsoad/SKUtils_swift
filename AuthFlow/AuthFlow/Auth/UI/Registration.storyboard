@@ -85,7 +85,7 @@
                     <connections>
                         <outlet property="emailField" destination="PnM-Pb-ESS" id="xgI-l3-Svy"/>
                         <outlet property="passwordField" destination="iHr-YX-LbZ" id="fTo-GQ-74v"/>
-                        <outlet property="textfieldsManager" destination="dk7-3N-YKv" id="gjM-5z-4CD"/>
+                        <outlet property="textFieldsManager" destination="dk7-3N-YKv" id="5eD-z1-sLc"/>
                         <outlet property="username" destination="M4s-fC-9hh" id="SjB-qt-Gsw"/>
                     </connections>
                 </viewController>

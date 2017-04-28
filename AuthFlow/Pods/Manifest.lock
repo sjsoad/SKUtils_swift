@@ -6,6 +6,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Fabric (1.6.11)
   - FBSDKCoreKit (4.20.2):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.20.2):
@@ -52,9 +53,14 @@ PODS:
     - GTMSessionFetcher/Core (= 1.1.9)
   - NVActivityIndicatorView (3.5.2)
   - SwiftyDrop (3.0.3)
+  - TwitterCore (2.8.0):
+    - Fabric
+  - TwitterKit (2.8.1):
+    - TwitterCore (>= 2.8)
 
 DEPENDENCIES:
   - Alamofire
+  - Fabric
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -62,10 +68,12 @@ DEPENDENCIES:
   - Google/SignIn
   - NVActivityIndicatorView
   - SwiftyDrop
+  - TwitterKit
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FBSDKCoreKit: 82eac696eb6157da5f4266c3a241f00e9bd72471
   FBSDKLoginKit: 2211bede07c83391349eacc1fd86cf6d9289ce38
   FBSDKShareKit: ca9b22264ea49a896dafb2467c1a4f72aa41996f
@@ -80,7 +88,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   NVActivityIndicatorView: 8c10abd410a0657afd21aa853373e1a3cfc25e7f
   SwiftyDrop: 785f95aabc26c4d832576bb78dc4ba7d0594a95b
+  TwitterCore: e959987be23c767004d29eb7fab8d85d8585a2e5
+  TwitterKit: 3b6044a7320340326a4098f3e37aa1dbaeb94942
 
-PODFILE CHECKSUM: c516b871b745411d3996bec095c0f6fae94e44c7
+PODFILE CHECKSUM: bd660b9f0897d5ab3cee258c1f1bb61e0b8f1c94
 
 COCOAPODS: 1.1.1
