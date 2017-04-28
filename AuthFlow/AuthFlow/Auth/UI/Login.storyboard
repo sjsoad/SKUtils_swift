@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="u8j-RD-43P">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="YSJ-R7-aWy" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="YSJ-R7-aWy" customClass="LoginViewController" customModule="AuthFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="USW-PS-HCF"/>
                         <viewControllerLayoutGuide type="bottom" id="bfB-OU-6wE"/>
@@ -132,13 +132,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="7fH-Oy-rRa"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="navigationBarVisible" value="NO"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="emailField" destination="qdI-zz-0vt" id="QQV-dI-s5v"/>
                         <outlet property="passwordField" destination="9hO-Mr-heD" id="LIM-wT-2un"/>
-                        <outlet property="textFieldsManager" destination="2OA-Wg-2uG" id="96b-M9-VdU"/>
+                        <outlet property="textFieldsManager" destination="2OA-Wg-2uG" id="tUq-2G-gon"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFJ-we-zSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
