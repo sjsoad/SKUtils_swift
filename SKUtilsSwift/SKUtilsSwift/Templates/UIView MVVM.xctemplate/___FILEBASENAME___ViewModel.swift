@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel {
+class ___FILEBASENAMEASIDENTIFIER___ViewModel: NSObject {
     
 }
