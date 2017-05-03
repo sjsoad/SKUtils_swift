@@ -25,7 +25,7 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayTableViewModelProtocol {
     }
     
     func createViewModels(fromModels models: [ModelType]) -> [<#CellViewModel#>] {
-//        var viewModels = [ItemCellViewModel]()
+//        var viewModels = [<#CellViewModel#>]()
 //        for model in models {
 //            let viewModel = <#init view model#>
 //            viewModel.cellReuseIdentifier = <#Cell#>.reuseIdentifier
