@@ -31,11 +31,10 @@ class RemindPassViewController: DissmisableViewController, Presentation, Request
 
     @IBAction func remindButtonPresed(_ sender: UIButton) {
         textFieldsManager.hideKeyboard()
-        let textFields = textFieldsManager.textFields as! [UITextField]
-        let validated = reminderViewModel.validate(fields: textFields)
-        if validated,
-            let email = emailField.text {
-            reminderViewModel.remindPassword(email: email)
+        let result = reminderViewModel.validate(email: emailField.text)
+        if result.succeed == false,
+            let error = result.error {
+
         }
     }
     

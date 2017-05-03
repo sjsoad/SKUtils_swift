@@ -13,5 +13,27 @@ class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHe
     var requerstExecutingHandler: RequerstExecutingHandler?
 
     var requestSucceed: Dynamic<Bool> = Dynamic(false)
+ 
+    func validate(email: String?,
+                  password: String?,
+                  username: String?) -> (succeed: Bool, error: String?) {
+        let emailValidated = emailValidator().isValid(email)
+        let passwordValidated = passValidator().isValid(password)
+        let usernameValidated = baseValidator().isValid(username)
+        if !emailValidated {
+            return (false, "")
+        }
+        else if !passwordValidated {
+            return (false, "")
+            
+        } else if !usernameValidated {
+            return (false, "")
+        }
+        else {
+//            <#register(email: email!, password: password!)#>
+            return (true, nil)
+        }
+        
+    }
     
 }

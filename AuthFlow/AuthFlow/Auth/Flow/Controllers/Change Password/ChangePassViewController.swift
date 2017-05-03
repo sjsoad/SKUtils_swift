@@ -35,19 +35,25 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
     
     @IBAction func changeButtonPresed(_ sender: UIButton) {
         textFieldsManager.hideKeyboard()
-        let textFields = textFieldsManager.textFields as! [UITextField]
-        let validated = changePassViewModel.validate(fields: textFields)
-        if validated,
-            let token = changePassViewModel.temporaryToken {
-            let validated = changePassViewModel.validate(equal: passwordField,
-                                                         to: confirmationField,
-                                                         comparisonHandler: nil)
-            if validated,
-                let password = passwordField.text {
-                changePassViewModel.changePassword(password: password,
-                                                   token: token)
-            }
+        let result = changePassViewModel.validate(password: passwordField.text,
+                                                  confirmation: confirmationField.text)
+        if result.succeed == false,
+            let error = result.error {
+            
         }
+//        let textFields = textFieldsManager.textFields as! [UITextField]
+//        let validated = changePassViewModel.validate(fields: textFields)
+//        if validated,
+//            let token = changePassViewModel.temporaryToken {
+//            let validated = changePassViewModel.validate(equal: passwordField,
+//                                                         to: confirmationField,
+//                                                         comparisonHandler: nil)
+//            if validated,
+//                let password = passwordField.text {
+//                changePassViewModel.changePassword(password: password,
+//                                                   token: token)
+//            }
+//        }
     }
     
 }

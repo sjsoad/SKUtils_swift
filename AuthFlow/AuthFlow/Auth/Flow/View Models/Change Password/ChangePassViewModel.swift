@@ -14,7 +14,21 @@ class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHe
     
     var requestSucceed: Dynamic<Bool> = Dynamic(false)
     
-    var passValidator = EqualStringsValidator()
     var temporaryToken: String?
+    
+    func validate(password: String?,
+                  confirmation: String?) -> (succeed: Bool, error: String?) {
+        let passwordValidated = passValidator().isValid(password)
+        let passwordEqual = equalValidator().isEqual(password,
+                                                     secondString: confirmation)
+        if !passwordValidated {
+            return (false, "")
+            
+        } else if !passwordEqual {
+            return (false, "")
+        }
+//        <#change password#>
+        return (true, nil)
+    }
     
 }

@@ -43,15 +43,12 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     
     @IBAction func registrationButtonPresed(_ sender: UIButton) {
         textFieldsManager.hideKeyboard()
-        let textFields = textFieldsManager.textFields as! [UITextField]
-        let validated = registrationViewModel.validate(fields: textFields)
-        if validated,
-            let username = username.text,
-            let email = emailField.text,
-            let password = passwordField.text {
-            registrationViewModel.register(email: email,
-                                           nickname: username,
-                                           password: password)
+        let result = registrationViewModel.validate(email: emailField.text,
+                                                    password: passwordField.text,
+                                                    username: username.text)
+        if result.succeed == false,
+            let error = result.error {
+
         }
     }
 }

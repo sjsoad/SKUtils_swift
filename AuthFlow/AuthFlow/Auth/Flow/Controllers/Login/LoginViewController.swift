@@ -47,14 +47,12 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     
     func tryTologin() {
         textFieldsManager.hideKeyboard()
-        let textFields = textFieldsManager.textFields as! [UITextField]
-        let validated = loginViewModel.validate(fields: textFields)
-        if validated,
-            let email = emailField.text,
-            let password = passwordField.text {
-            loginViewModel.login(email: email,
-                                password: password)
+        let result = loginViewModel.validate(email: emailField.text,
+                                             password: passwordField.text)
+        if result.succeed == false,
+            let error = result.error {
         }
+
     }
     
     //MARK: - IBAction
