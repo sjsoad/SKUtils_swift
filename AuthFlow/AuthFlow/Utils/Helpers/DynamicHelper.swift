@@ -9,7 +9,9 @@
 import Foundation
 
 class Dynamic<T> {
+    
     typealias Listener = (T) -> ()
+    
     private var listeners: [Listener] = []
     init(_ v: T) {
         value = v
@@ -24,5 +26,8 @@ class Dynamic<T> {
     }
     func addListener(l: @escaping Listener) {
         listeners.append(l)
+    }
+    func clear() {
+        listeners.removeAll()
     }
 }
