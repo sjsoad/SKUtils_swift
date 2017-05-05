@@ -14,13 +14,13 @@ protocol FRCCollectionViewProtocol {
     associatedtype ViewModelType: FRCCollectionViewModelProtocol
     
     var frcCollectionViewModel: ViewModelType? { get set }
-    func setDataSource(collectionView: UICollectionView)
+    func setDataSource(for collectionView: UICollectionView)
     
 }
 
 extension FRCCollectionViewProtocol {
     
-    func setDataSource(collectionView: UICollectionView) {
+    func setDataSource(for collectionView: UICollectionView) {
         if let viewModel = frcCollectionViewModel {
             collectionView.dataSource = viewModel.frcCollectionViewDataSource
             collectionView.reloadData()
