@@ -22,10 +22,8 @@ extension FRCTableViewProtocol {
     
     func setDataSource(tableView: UITableView) {
         if let viewModel = frcTableViewModel {
-            if let dataSource = viewModel.frcTableViewDataSource {
-                tableView.dataSource = dataSource
-                tableView.reloadData()
-            }
+            tableView.dataSource = viewModel.frcTableViewDataSource
+            tableView.reloadData()
         }
     }
     

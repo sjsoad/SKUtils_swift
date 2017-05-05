@@ -22,10 +22,8 @@ extension FRCCollectionViewProtocol {
     
     func setDataSource(collectionView: UICollectionView) {
         if let viewModel = frcCollectionViewModel {
-            if let dataSource = viewModel.frcCollectionViewDataSource {
-                collectionView.dataSource = dataSource
-                collectionView.reloadData()
-            }
+            collectionView.dataSource = viewModel.frcCollectionViewDataSource
+            collectionView.reloadData()
         }
     }
     

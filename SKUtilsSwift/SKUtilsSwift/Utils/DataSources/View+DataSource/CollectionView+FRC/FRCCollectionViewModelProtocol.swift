@@ -11,10 +11,8 @@ import CoreData
 
 protocol FRCCollectionViewModelProtocol {
     
-    associatedtype CellType: ConfigurableCell
-    
     var frc: NSFetchedResultsController<NSManagedObject> { get set }
-    var frcCollectionViewDataSource: CollectionViewFRCDataSource? { get set }
+    var frcCollectionViewDataSource: CollectionViewFRCDataSource! { get set }
     
     init(frc: NSFetchedResultsController<NSManagedObject>)
     

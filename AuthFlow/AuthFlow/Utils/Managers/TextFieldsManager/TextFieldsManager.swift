@@ -12,7 +12,7 @@ let kAnimationDuration = 0.25
 
 class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
-    var textFields : [AnyObject] = Array()
+    var textFields : [UITextField] = Array()
     
     @IBOutlet var scroll : UIScrollView? = nil {
         didSet {
@@ -131,17 +131,15 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     func clearTextField() {
         for field in textFields {
-            if let textField = field as? UITextField {
-                textField.text = nil
-            }
+            field.text = nil
         }
     }
     
     func firstResponder() -> UITextField? {
-        self.sortTextFieldsByY()
-        for textField in self.textFields {
-            if textField.isFirstResponder ?? true {
-                return textField as? UITextField
+        sortTextFieldsByY()
+        for textField in textFields {
+            if textField.isFirstResponder {
+                return textField
             }
         }
         return nil

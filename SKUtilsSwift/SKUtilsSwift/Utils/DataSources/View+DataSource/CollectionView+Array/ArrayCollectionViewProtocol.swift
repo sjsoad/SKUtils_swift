@@ -22,10 +22,8 @@ extension ArrayCollectionViewProtocol {
     
     func setDataSource(collectionView: UICollectionView) {
         if let viewModel = arrayCollectionViewModel {
-            if let dataSource = viewModel.collectionViewDataSource {
-                collectionView.dataSource = dataSource
-                collectionView.reloadData()
-            }
+            collectionView.dataSource = viewModel.collectionViewDataSource
+            collectionView.reloadData()
         }
     }
     

@@ -10,10 +10,9 @@ import Foundation
 
 protocol ArrayTableViewModelProtocol {
     
-    associatedtype ModelType: AnyObject
-    associatedtype CellType: ConfigurableCell
+    associatedtype ModelType: Any
     
-    var tableViewDataSource: TableViewArrayDataSource? { get set }
+    var tableViewDataSource: TableViewArrayDataSource! { get set }
     
     init(array: [ModelType])
     

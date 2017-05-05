@@ -22,10 +22,8 @@ extension ArrayTableViewProtocol {
     
     func setDataSource(tableView: UITableView) {
         if let viewModel = arrayTableViewModel {
-            if let dataSource = viewModel.tableViewDataSource {
-                tableView.dataSource = dataSource
-                tableView.reloadData()
-            }
+            tableView.dataSource = viewModel.tableViewDataSource
+            tableView.reloadData()
         }
     }
     

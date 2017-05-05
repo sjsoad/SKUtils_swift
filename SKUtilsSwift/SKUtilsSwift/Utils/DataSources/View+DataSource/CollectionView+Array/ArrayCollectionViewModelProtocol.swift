@@ -10,10 +10,9 @@ import Foundation
 
 protocol ArrayCollectionViewModelProtocol {
     
-    associatedtype ModelType: AnyObject
-    associatedtype CellType: ConfigurableCell
+    associatedtype ModelType: Any
     
-    var collectionViewDataSource: CollectionViewArrayDataSource? { get set }
+    var collectionViewDataSource: CollectionViewArrayDataSource! { get set }
     
     init(array: [ModelType])
     
