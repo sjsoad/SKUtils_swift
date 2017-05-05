@@ -12,13 +12,12 @@ import UIKit
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayCollectionViewModelProtocol {
     
     typealias ModelType = <#ModelType#>
-    typealias CellType = <#CellType#>
     
-    var collectionViewDataSource: CollectionViewArrayDataSource?
+    var collectionViewDataSource: CollectionViewArrayDataSource!
     
     required init(array: [ModelType]) {
-//        let groups = createViewModels(fromModels: array)
-//        let firstSectionModel = SectionModel(withItems: groups,
+//        let items = createViewModels(fromModels: array)
+//        let firstSectionModel = SectionModel(withItems: items,
 //                                             header: nil,
 //                                             footer: nil)
 //        collectionViewDataSource = CollectionViewArrayDataSource(sections: [firstSectionModel])

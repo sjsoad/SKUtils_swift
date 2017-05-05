@@ -12,13 +12,12 @@ import UIKit
 class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayTableViewModelProtocol {
     
     typealias ModelType = <#ModelType#>
-    typealias CellType = <#CellType#>
     
-    var tableViewDataSource: TableViewArrayDataSource?
+    var tableViewDataSource: TableViewArrayDataSource!
     
     required init(array: [ModelType]) {
-//        let groups = createViewModels(fromModels: array)
-//        let firstSectionModel = SectionModel(withItems: groups,
+//        let items = createViewModels(fromModels: array)
+//        let firstSectionModel = SectionModel(withItems: items,
 //                                             header: nil,
 //                                             footer: nil)
 //        tableViewDataSource = TableViewArrayDataSource(sections: [firstSectionModel])
