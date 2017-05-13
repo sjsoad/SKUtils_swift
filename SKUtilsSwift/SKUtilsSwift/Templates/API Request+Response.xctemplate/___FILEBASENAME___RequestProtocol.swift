@@ -13,8 +13,10 @@ typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Requ
 protocol ___FILEBASENAME___RequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol {
     
     func exampleFunc()
-    func successHandlerFor___FILEBASENAME___() -> LoginSuccessHandler
+    func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler
     func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
+    
+    var resultFor___FILEBASENAME___: Dynamic<Bool> { get set }
 }
 
 extension LoginRequestProtocol where Self: NSObject {
@@ -43,6 +45,7 @@ extension LoginRequestProtocol where Self: NSObject {
             if let executingHandler = strongSelf.requerstExecutingHandler {
                 executingHandler(false, nil)
             }
+            strongSelf.resultFor___FILEBASENAME___.value = true
             <#process responce#>
 //            Example:
 //            strongSelf.requestSucceed.value = result of request
