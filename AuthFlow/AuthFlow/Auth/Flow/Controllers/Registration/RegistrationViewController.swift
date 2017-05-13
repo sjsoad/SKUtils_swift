@@ -23,7 +23,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        registrationViewModel.requestSucceed.bind { [weak self] (registrationSucceed) in
+        registrationViewModel.resultOfRegistrationRequest.bind { [weak self] (registrationSucceed) in
             guard let strongSelf = self else { return }
             if registrationSucceed,
                 let email = strongSelf.emailField.text,
@@ -36,7 +36,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
                 strongSelf.textFieldsManager.clearTextField()
             }
         }
-        registrationViewModel.requerstExecutingHandler = requerstExecutingHandler()
+        registrationViewModel.executingHandlerForRegistration = requerstExecutingHandler()
     }
     
     //MARK: - IBActions

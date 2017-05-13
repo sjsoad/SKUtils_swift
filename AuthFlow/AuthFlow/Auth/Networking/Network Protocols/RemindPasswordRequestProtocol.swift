@@ -10,18 +10,22 @@ import UIKit
 
 typealias RemindPasswordSuccessHandler = (_ response: RemindPasswordRequest.Response) -> Void
 
-protocol RemindPasswordRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol {
+protocol RemindPasswordRequestProtocol: RequestErrorHandlerProtocol {
 
     func remindPassword(email: String)
     
-    func remindSuccessHandler() -> RemindPasswordSuccessHandler
+    func successHandlerForRemindPassword() -> RemindPasswordSuccessHandler
+    func errorHandlerForRemindPassword() -> ErrorHandler
+    
+    var executingHandlerForRemindPassword: RequerstExecutingHandler? { get set }
+    var resultOfRemindPasswordRequest: Dynamic<Bool> { get set }
     
 }
 
 extension RemindPasswordRequestProtocol where Self: NSObject {
     
     func remindPassword(email: String) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForRemindPassword {
             executingHandler(true, nil)
         }
         let urlString = API.host + API.remindPassword
@@ -29,20 +33,24 @@ extension RemindPasswordRequestProtocol where Self: NSObject {
                                                       parameters: ["email": email])
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: remindPassRequest,
-                                         success: remindSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForRemindPassword(),
+                                         failure: errorHandlerForRemindPassword())
     }
     
     //MARK: - Handlers
     
-    func remindSuccessHandler() -> RemindPasswordSuccessHandler {
+    func successHandlerForRemindPassword() -> RemindPasswordSuccessHandler {
         return { [weak self] response in
             guard var strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+            if let executingHandler = strongSelf.executingHandlerForRemindPassword {
                 executingHandler(false, nil)
             }
-            strongSelf.requestSucceed.value = true
+            strongSelf.resultOfRemindPasswordRequest.value = true
         }
     }
 
+    func errorHandlerForRemindPassword() -> ErrorHandler {
+        return requestErrorHandler(executingHandler: executingHandlerForRemindPassword)
+    }
+    
 }

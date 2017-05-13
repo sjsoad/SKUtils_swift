@@ -9,10 +9,10 @@
 import UIKit
 
 class ProfileViewModel: NSObject, ProfileRequestProtocol {
-
-    var requerstExecutingHandler: RequerstExecutingHandler?
     
-    var requestSucceed: Dynamic<Bool> = Dynamic(false)
+    var resultOfProfileRequest: Dynamic<Bool> = Dynamic(false)
+    var executingHandlerForProfile: RequerstExecutingHandler?
+
     var profile: Profile?
     
 }

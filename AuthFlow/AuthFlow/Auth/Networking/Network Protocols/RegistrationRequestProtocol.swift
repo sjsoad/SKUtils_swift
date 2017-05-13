@@ -10,13 +10,17 @@ import Foundation
 
 typealias RegistrationSuccessHandler = (_ response: RegistrationRequest.Response) -> Void
 
-protocol RegistrationRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol {
+protocol RegistrationRequestProtocol: RequestErrorHandlerProtocol {
     
     func register(email: String,
                   nickname: String,
                   password: String)
     
-    func registrationSuccessHandler() -> RegistrationSuccessHandler
+    func successHandlerForRegistration() -> RegistrationSuccessHandler
+    func errorHandlerForRegistration() -> ErrorHandler
+    
+    var executingHandlerForRegistration: RequerstExecutingHandler? { get set }
+    var resultOfRegistrationRequest: Dynamic<Bool> { get set }
     
 }
 
@@ -35,7 +39,7 @@ extension RegistrationRequestProtocol where Self: NSObject {
     
     fileprivate func register(parameters: [String: Any]?,
                               urlString: String) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForRegistration {
             executingHandler(true, nil)
         }
         
@@ -43,20 +47,24 @@ extension RegistrationRequestProtocol where Self: NSObject {
                                                       parameters: parameters)
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: registrationRequest,
-                                         success: registrationSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForRegistration(),
+                                         failure: errorHandlerForRegistration())
     }
     
     //MARK: - Handlers
     
-    func registrationSuccessHandler() -> RegistrationSuccessHandler {
+    func successHandlerForRegistration() -> RegistrationSuccessHandler {
         return { [weak self] response in
             guard let strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+            if let executingHandler = strongSelf.executingHandlerForRegistration {
                 executingHandler(false, nil)
             }
-            strongSelf.requestSucceed.value = true
+            strongSelf.resultOfRegistrationRequest.value = true
         }
+    }
+    
+    func errorHandlerForRegistration() -> ErrorHandler {
+        return requestErrorHandler(executingHandler: executingHandlerForRegistration)
     }
     
 }

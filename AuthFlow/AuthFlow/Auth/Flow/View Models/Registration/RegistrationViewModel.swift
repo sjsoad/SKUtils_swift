@@ -10,9 +10,8 @@ import UIKit
 
 class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHelper {
     
-    var requerstExecutingHandler: RequerstExecutingHandler?
-
-    var requestSucceed: Dynamic<Bool> = Dynamic(false)
+    var resultOfRegistrationRequest: Dynamic<Bool> = Dynamic(false)
+    var executingHandlerForRegistration: RequerstExecutingHandler?
  
     func validate(email: String?,
                   password: String?,

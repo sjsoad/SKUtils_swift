@@ -19,14 +19,14 @@ class RemindPassViewController: DissmisableViewController, Presentation, Request
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reminderViewModel.requestSucceed.bind { [weak self] (success) in
+        reminderViewModel.resultOfRemindPasswordRequest.bind { [weak self] (success) in
             guard let strongSelf = self else { return }
             if success {
                 navigationType.dismiss(controller: strongSelf,
                                        animated: true)
             }
         }
-        reminderViewModel.requerstExecutingHandler = requerstExecutingHandler()
+        reminderViewModel.executingHandlerForRemindPassword = requerstExecutingHandler()
     }
 
     @IBAction func remindButtonPresed(_ sender: UIButton) {

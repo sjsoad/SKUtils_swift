@@ -10,20 +10,24 @@ import UIKit
 
 typealias ChangePasswordSuccessHandler = (_ response: ChangePasswordRequest.Response) -> Void
 
-protocol ChangePasswordRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol {
+protocol ChangePasswordRequestProtocol: RequestErrorHandlerProtocol {
     
     func changePassword(password: String,
                         token: String)
     
-    func changeSuccessHandler() -> ChangePasswordSuccessHandler
+    func successHandlerForChangePassword() -> ChangePasswordSuccessHandler
+    func errorHandlerForChangePassword() -> ErrorHandler
     
+    var executingHandlerForChangePassword: RequerstExecutingHandler? { get set }
+    var resultOfChangePasswordRequest: Dynamic<Bool> { get set }
+
 }
 
 extension ChangePasswordRequestProtocol where Self: NSObject {
     
     func changePassword(password: String,
                         token: String) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForChangePassword {
             executingHandler(true, nil)
         }
         let urlString = API.host + API.changePassword + "/" + token
@@ -31,20 +35,24 @@ extension ChangePasswordRequestProtocol where Self: NSObject {
                                                       parameters: ["plainPassword": password])
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: changePassRequest,
-                                         success: changeSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForChangePassword(),
+                                         failure: errorHandlerForChangePassword())
     }
     
     //MARK: - Handlers
     
-    func changeSuccessHandler() -> ChangePasswordSuccessHandler {
+    func successHandlerForChangePassword() -> ChangePasswordSuccessHandler {
         return { [weak self] response in
             guard var strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+            if let executingHandler = strongSelf.executingHandlerForChangePassword {
                 executingHandler(false, nil)
             }
-            strongSelf.requestSucceed.value = true
+            strongSelf.resultOfChangePasswordRequest.value = true
         }
+    }
+    
+    func errorHandlerForChangePassword() -> ErrorHandler {
+        return requestErrorHandler(executingHandler: executingHandlerForChangePassword)
     }
     
 }

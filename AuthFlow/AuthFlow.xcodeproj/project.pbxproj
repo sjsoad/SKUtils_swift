@@ -121,9 +121,6 @@
 		A5C0477E1EC6DF9600F4E0DE /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0470E1EC6DF9600F4E0DE /* APIRequestProtocol.swift */; };
 		A5C0477F1EC6DF9600F4E0DE /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0470F1EC6DF9600F4E0DE /* ResponseProtocol.swift */; };
 		A5C047801EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047111EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift */; };
-		A5C047811EC6DF9600F4E0DE /* RequestExecutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047121EC6DF9600F4E0DE /* RequestExecutingProtocol.swift */; };
-		A5C047821EC6DF9600F4E0DE /* RequestExecutingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047131EC6DF9600F4E0DE /* RequestExecutingViewProtocol.swift */; };
-		A5C047831EC6DF9600F4E0DE /* RequestSucceedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047141EC6DF9600F4E0DE /* RequestSucceedProtocol.swift */; };
 		A5C047841EC6DF9600F4E0DE /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047171EC6DF9600F4E0DE /* MailComposer.swift */; };
 		A5C047851EC6DF9600F4E0DE /* DismissNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047191EC6DF9600F4E0DE /* DismissNavigationProtocol.swift */; };
 		A5C047871EC6DF9600F4E0DE /* PopToNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0471B1EC6DF9600F4E0DE /* PopToNavigationProtocol.swift */; };
@@ -157,6 +154,7 @@
 		A5C047A31EC6DF9600F4E0DE /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0474E1EC6DF9600F4E0DE /* ValidationHelper.swift */; };
 		A5C047A51EC6DFF500F4E0DE /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047A41EC6DFF500F4E0DE /* AuthCredentials.swift */; };
 		A5C047A71EC6E32C00F4E0DE /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047A61EC6E32C00F4E0DE /* NavigationProtocol.swift */; };
+		A5C048061EC7082800F4E0DE /* RequestExecutingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C048051EC7082800F4E0DE /* RequestExecutingViewProtocol.swift */; };
 		CD2D0A3373EAC066D304E1C8 /* Pods_AuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */; };
 /* End PBXBuildFile section */
 
@@ -279,9 +277,6 @@
 		A5C0470E1EC6DF9600F4E0DE /* APIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
 		A5C0470F1EC6DF9600F4E0DE /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		A5C047111EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
-		A5C047121EC6DF9600F4E0DE /* RequestExecutingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingProtocol.swift; sourceTree = "<group>"; };
-		A5C047131EC6DF9600F4E0DE /* RequestExecutingViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingViewProtocol.swift; sourceTree = "<group>"; };
-		A5C047141EC6DF9600F4E0DE /* RequestSucceedProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestSucceedProtocol.swift; sourceTree = "<group>"; };
 		A5C047171EC6DF9600F4E0DE /* MailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
 		A5C047191EC6DF9600F4E0DE /* DismissNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissNavigationProtocol.swift; sourceTree = "<group>"; };
 		A5C0471B1EC6DF9600F4E0DE /* PopToNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopToNavigationProtocol.swift; sourceTree = "<group>"; };
@@ -315,6 +310,7 @@
 		A5C0474E1EC6DF9600F4E0DE /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		A5C047A41EC6DFF500F4E0DE /* AuthCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		A5C047A61EC6E32C00F4E0DE /* NavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		A5C048051EC7082800F4E0DE /* RequestExecutingViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -993,9 +989,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C047111EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift */,
-				A5C047121EC6DF9600F4E0DE /* RequestExecutingProtocol.swift */,
-				A5C047131EC6DF9600F4E0DE /* RequestExecutingViewProtocol.swift */,
-				A5C047141EC6DF9600F4E0DE /* RequestSucceedProtocol.swift */,
+				A5C048051EC7082800F4E0DE /* RequestExecutingViewProtocol.swift */,
 			);
 			path = "Request Processing";
 			sourceTree = "<group>";
@@ -1407,9 +1401,7 @@
 				A5646D531EB27D6A00B008BB /* GoogleAuthViewControllerProtocol.swift in Sources */,
 				A5646D541EB27D6A00B008BB /* GooglePlusAuth.swift in Sources */,
 				A53C44C71EA9DB66009D7651 /* Profile.swift in Sources */,
-				A5C047821EC6DF9600F4E0DE /* RequestExecutingViewProtocol.swift in Sources */,
 				A53C44CF1EA9DB66009D7651 /* ProfileRequest.swift in Sources */,
-				A5C047811EC6DF9600F4E0DE /* RequestExecutingProtocol.swift in Sources */,
 				A53C44BE1EA9DB66009D7651 /* RegistrationNavigation.swift in Sources */,
 				A5C0477A1EC6DF9600F4E0DE /* TextWidtHelper.swift in Sources */,
 				A53C44B31EA9DB66009D7651 /* Constants.swift in Sources */,
@@ -1424,6 +1416,7 @@
 				A5C047621EC6DF9600F4E0DE /* FRCCollectionViewProtocol.swift in Sources */,
 				A5C047541EC6DF9600F4E0DE /* ArrayDataSource.swift in Sources */,
 				A5C047881EC6DF9600F4E0DE /* AlertPresentation.swift in Sources */,
+				A5C048061EC7082800F4E0DE /* RequestExecutingViewProtocol.swift in Sources */,
 				A5C0478E1EC6DF9600F4E0DE /* LocationService.swift in Sources */,
 				A53C44CA1EA9DB66009D7651 /* ProfileRequestProtocol.swift in Sources */,
 				A5C047851EC6DF9600F4E0DE /* DismissNavigationProtocol.swift in Sources */,
@@ -1473,7 +1466,6 @@
 				A5C0479D1EC6DF9600F4E0DE /* ImagePickerViewModel.swift in Sources */,
 				A5C047581EC6DF9600F4E0DE /* AbstractDataSource.swift in Sources */,
 				A53C44D41EA9DB66009D7651 /* ProfileRepsonse.swift in Sources */,
-				A5C047831EC6DF9600F4E0DE /* RequestSucceedProtocol.swift in Sources */,
 				A5C047741EC6DF9600F4E0DE /* UIViewController+Storyboard.swift in Sources */,
 				A5C047801EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift in Sources */,
 				A5C047871EC6DF9600F4E0DE /* PopToNavigationProtocol.swift in Sources */,

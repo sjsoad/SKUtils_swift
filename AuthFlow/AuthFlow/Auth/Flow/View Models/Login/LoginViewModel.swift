@@ -11,13 +11,10 @@ import GoogleSignIn
 
 class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, FacebookAuthProtocol, InstagramAuthProtocol, GoogleAuthProtocol {
     
+    var resultOfLoginRequest: Dynamic<Bool> = Dynamic(false)
     var authHandler: SocalNetworkAuthHandler!
-    
-    var requerstExecutingHandler: RequerstExecutingHandler?
-    
-    var requestSucceed: Dynamic<Bool> = Dynamic(false)
+    var executingHandlerForLogin: RequerstExecutingHandler?
     var authCredentials: AuthCredentials?
-    
     var tryToLogin: Bool = false
     
     override init() {
@@ -29,7 +26,7 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
                 strongSelf.login(accessToken: token,
                                  grantType: type)
             }
-            else if let executingHandler = strongSelf.requerstExecutingHandler {
+            else if let executingHandler = strongSelf.executingHandlerForLogin {
                 executingHandler(false, error)
             }
         }

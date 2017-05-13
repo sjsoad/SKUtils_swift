@@ -8,18 +8,17 @@
 
 import Foundation
 
-protocol RequestErrorHandlerProtocol: RequestExecutingProtocol {
+protocol RequestErrorHandlerProtocol {
     
-    func requestErrorHandler() -> ErrorHandler
+    func requestErrorHandler(executingHandler handler: RequerstExecutingHandler?) -> ErrorHandler
     
 }
 
 extension RequestErrorHandlerProtocol where Self: NSObject {
     
-    func requestErrorHandler() -> ErrorHandler {
-        return { [weak self] error in
-            guard let strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+    func requestErrorHandler(executingHandler handler: RequerstExecutingHandler?) -> ErrorHandler {
+        return { error in
+            if let executingHandler = handler {
                 executingHandler(false, error)
             }
         }

@@ -14,7 +14,6 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     typealias navigationType = LoginNavigation
     
     var loginProcessor: LoginProcessorProtocol?
-    
     var loginViewModel = LoginViewModel()
     var profileViewModel = ProfileViewModel()
     
@@ -24,7 +23,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginViewModel.requestSucceed.bind { [weak self](succeed) in
+        loginViewModel.resultOfLoginRequest.bind { [weak self] (succeed) in
             guard let strongSelf = self else { return }
             if succeed,
                 let processor = strongSelf.loginProcessor {
@@ -32,7 +31,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
                 processor.process(viewModel: strongSelf.loginViewModel)
             }
         }
-        loginViewModel.requerstExecutingHandler = requerstExecutingHandler()
+        loginViewModel.executingHandlerForLogin = requerstExecutingHandler()
     }
     
     override func viewDidAppear(_ animated: Bool) {

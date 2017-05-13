@@ -10,21 +10,25 @@ import Foundation
 
 typealias LoginSuccessHandler = (_ response: LoginRequest.Response) -> Void
 
-protocol LoginRequestProtocol: AuthCredentialsProtocol, RequestSucceedProtocol, RequestErrorHandlerProtocol {
+protocol LoginRequestProtocol: AuthCredentialsProtocol, RequestErrorHandlerProtocol {
     
     func login(email: String,
                password: String)
     func login(accessToken: String,
                grantType: GrantType)
     
-    func loginSuccessHandler() -> LoginSuccessHandler
+    func successHandlerForLogin() ->LoginSuccessHandler
+    func errorHandlerForLogin() -> ErrorHandler
+    
+    var executingHandlerForLogin: RequerstExecutingHandler? { get set }
+    var resultOfLoginRequest: Dynamic<Bool> { get set }
 }
 
 extension LoginRequestProtocol where Self: NSObject {
 
     func login(email: String,
                password: String) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForLogin {
             executingHandler(true, nil)
         }
         let urlString = API.host + API.emailLogin
@@ -33,13 +37,13 @@ extension LoginRequestProtocol where Self: NSObject {
                                                      "_password" : password])
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: loginRequest,
-                                         success: loginSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForLogin(),
+                                         failure: errorHandlerForLogin())
     }
     
     func login(accessToken: String,
                grantType: GrantType) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForLogin {
             executingHandler(true, nil)
         }
         let socialLoginEndpoint = String(format: API.socialLogin,
@@ -48,20 +52,25 @@ extension LoginRequestProtocol where Self: NSObject {
         let socialLoginRequest = SocialLoginRequest(withURL: urlString)
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: socialLoginRequest,
-                                         success: loginSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForLogin(),
+                                         failure: errorHandlerForLogin())
     }
     
     //MARK: - Handlers
     
-    func loginSuccessHandler() -> LoginSuccessHandler {
+    func successHandlerForLogin() -> LoginSuccessHandler {
         return { [weak self] response in
             guard var strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+            if let executingHandler = strongSelf.executingHandlerForLogin {
                 executingHandler(false, nil)
             }
             strongSelf.authCredentials = response.authCredentials
-            strongSelf.requestSucceed.value = true
+            strongSelf.resultOfLoginRequest.value = true
         }
     }
+    
+    func errorHandlerForLogin() -> ErrorHandler {
+        return requestErrorHandler(executingHandler: executingHandlerForLogin)
+    }
+    
 }

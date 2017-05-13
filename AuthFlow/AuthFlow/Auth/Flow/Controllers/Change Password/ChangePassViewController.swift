@@ -20,14 +20,14 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        changePassViewModel.requestSucceed.bind { [weak self] (success) in
+        changePassViewModel.resultOfChangePasswordRequest.bind { [weak self] (success) in
             guard let strongSelf = self else { return }
             if success {
                 navigationType.dismiss(controller: strongSelf,
                                        animated: true)
             }
         }
-        changePassViewModel.requerstExecutingHandler = requerstExecutingHandler()
+        changePassViewModel.executingHandlerForChangePassword = requerstExecutingHandler()
         // Do any additional setup after loading the view.
     }
 
@@ -41,19 +41,6 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
             let error = result.error {
             
         }
-//        let textFields = textFieldsManager.textFields as! [UITextField]
-//        let validated = changePassViewModel.validate(fields: textFields)
-//        if validated,
-//            let token = changePassViewModel.temporaryToken {
-//            let validated = changePassViewModel.validate(equal: passwordField,
-//                                                         to: confirmationField,
-//                                                         comparisonHandler: nil)
-//            if validated,
-//                let password = passwordField.text {
-//                changePassViewModel.changePassword(password: password,
-//                                                   token: token)
-//            }
-//        }
     }
     
 }

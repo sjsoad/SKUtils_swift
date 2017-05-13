@@ -9,10 +9,9 @@
 import UIKit
 
 class RemindPassViewModel: NSObject, RemindPasswordRequestProtocol, ValidationHelper {
-    
-    var requerstExecutingHandler: RequerstExecutingHandler?
-    
-    var requestSucceed: Dynamic<Bool> = Dynamic(false)
+  
+    var resultOfRemindPasswordRequest: Dynamic<Bool> = Dynamic(false)
+    var executingHandlerForRemindPassword: RequerstExecutingHandler?
     
     func validate(email: String?) -> ValidationResult {
         let emailValidated = emailValidator().isValid(email)

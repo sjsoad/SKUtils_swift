@@ -10,11 +10,14 @@ import UIKit
 
 typealias ProfileSuccessHandler = (_ response: ProfileRequest.Response) -> Void
 
-protocol ProfileRequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol, ProfileProtocol {
+protocol ProfileRequestProtocol: RequestErrorHandlerProtocol, ProfileProtocol {
 
     func profile(authCredentials: AuthCredentials)
+    func successHandlerForProfile() -> ProfileSuccessHandler
+    func errorHandlerForProfile() -> ErrorHandler
     
-    func profileSuccessHandler() -> ProfileSuccessHandler
+    var executingHandlerForProfile: RequerstExecutingHandler? { get set }
+    var resultOfProfileRequest: Dynamic<Bool> { get set }
     
 }
 
@@ -30,7 +33,7 @@ extension ProfileRequestProtocol where Self: NSObject {
     fileprivate func profile(parameters: [String: Any]?,
                              headers: [String: String]?,
                              urlString: String) {
-        if let executingHandler = requerstExecutingHandler {
+        if let executingHandler = executingHandlerForProfile {
             executingHandler(true, nil)
         }
         
@@ -39,21 +42,25 @@ extension ProfileRequestProtocol where Self: NSObject {
                                             headers: headers)
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: profileRequest,
-                                         success: profileSuccessHandler(),
-                                         failure: requestErrorHandler())
+                                         success: successHandlerForProfile(),
+                                         failure: errorHandlerForProfile())
     }
     
     //MARK: - Handlers
     
-    func profileSuccessHandler() -> ProfileSuccessHandler {
+    func successHandlerForProfile() -> ProfileSuccessHandler {
         return { [weak self] response in
             guard var strongSelf = self else { return }
-            if let executingHandler = strongSelf.requerstExecutingHandler {
+            if let executingHandler = strongSelf.executingHandlerForProfile {
                 executingHandler(false, nil)
             }
             strongSelf.profile = response.profile
-            strongSelf.requestSucceed.value = true
+            strongSelf.resultOfProfileRequest.value = true
         }
     }
 
+    func errorHandlerForProfile() -> ErrorHandler {
+        return requestErrorHandler(executingHandler: executingHandlerForProfile)
+    }
+    
 }

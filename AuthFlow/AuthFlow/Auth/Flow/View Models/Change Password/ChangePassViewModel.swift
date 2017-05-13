@@ -9,11 +9,10 @@
 import UIKit
 
 class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHelper {
-
-    var requerstExecutingHandler: RequerstExecutingHandler?
     
-    var requestSucceed: Dynamic<Bool> = Dynamic(false)
-    
+    var executingHandlerForChangePasswordRequest: RequerstExecutingHandler?
+    var resultOfChangePasswordRequest: Dynamic<Bool> = Dynamic(false)
+    var executingHandlerForChangePassword: RequerstExecutingHandler?
     var temporaryToken: String?
     
     func validate(password: String?,

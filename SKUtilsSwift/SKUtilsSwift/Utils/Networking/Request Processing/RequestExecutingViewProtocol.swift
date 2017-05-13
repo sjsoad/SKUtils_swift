@@ -10,6 +10,8 @@ import UIKit
 import NVActivityIndicatorView
 import SwiftyDrop
 
+typealias RequerstExecutingHandler = (_ executing: Bool, _ error: Error?) -> Void
+
 protocol RequestExecutingViewProtocol: NVActivityIndicatorViewable {
     
     func requerstExecutingHandler() -> RequerstExecutingHandler
