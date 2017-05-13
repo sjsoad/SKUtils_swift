@@ -17,10 +17,10 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayCollectionViewModelProtocol 
     
     required init(array: [ModelType]) {
 //        let items = createViewModels(fromModels: array)
-//        let firstSectionModel = SectionModel(withItems: items,
+//        let sectionModel = SectionModel(withItems: items,
 //                                             header: nil,
 //                                             footer: nil)
-//        collectionViewDataSource = CollectionViewArrayDataSource(sections: [firstSectionModel])
+//        collectionViewDataSource = CollectionViewArrayDataSource(sections: [sectionModel])
     }
     
     func createViewModels(fromModels models: [ModelType]) -> [<#CellViewModel#>] {

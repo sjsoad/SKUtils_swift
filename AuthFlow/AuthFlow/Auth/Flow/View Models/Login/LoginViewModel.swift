@@ -35,14 +35,14 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
         }
     }
     
-    func validate(email: String?, password: String?) -> (succeed: Bool, error: String?) {
+    func validate(email: String?, password: String?) -> ValidationResult {
         let emailValidated = emailValidator().isValid(email)
         let passValidated = passValidator().isValid(password)
         if emailValidated, passValidated {
 //            <#login(email: email!, password: password!)#>
-            return (true, nil)
+            return ValidationResult(succeed: true, error: nil)
         }
-        return (false, "Credentials are not valid.")
+        return ValidationResult(succeed: false, error: "Credentials are not valid.")
     }
     
 }

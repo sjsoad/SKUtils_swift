@@ -31,8 +31,6 @@ protocol APIRequestProtocol {
 extension APIRequestProtocol {
 
     var HTTPMethod: Method { return .get }
-    var parameters: [String: String]? { return nil }
-    var headers: [String: String]? { return nil }
     
     init(withURL url: String,
          parameters: [String : Any]? = nil,

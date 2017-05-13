@@ -10,10 +10,12 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayTableViewProtocol {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel
     var arrayTableViewModel: ViewModelType? {
         didSet {
-            setDataSource(for: <#tableView#>)
+            setDataSource(for: tableView)
         }
     }
 

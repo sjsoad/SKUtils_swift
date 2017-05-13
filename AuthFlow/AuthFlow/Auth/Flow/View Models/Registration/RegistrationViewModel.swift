@@ -16,22 +16,22 @@ class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHe
  
     func validate(email: String?,
                   password: String?,
-                  username: String?) -> (succeed: Bool, error: String?) {
+                  username: String?) -> ValidationResult {
         let emailValidated = emailValidator().isValid(email)
         let passwordValidated = passValidator().isValid(password)
         let usernameValidated = baseValidator().isValid(username)
         if !emailValidated {
-            return (false, "")
+            return ValidationResult(succeed: false, error: "")
         }
         else if !passwordValidated {
-            return (false, "")
+            return ValidationResult(succeed: false, error: "")
             
         } else if !usernameValidated {
-            return (false, "")
+            return ValidationResult(succeed: false, error: "")
         }
         else {
 //            <#register(email: email!, password: password!)#>
-            return (true, nil)
+            return ValidationResult(succeed: true, error: nil)
         }
         
     }

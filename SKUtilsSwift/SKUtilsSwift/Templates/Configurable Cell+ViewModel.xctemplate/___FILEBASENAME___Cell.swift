@@ -13,8 +13,6 @@ import Foundation
 class ___FILEBASENAMEASIDENTIFIER___Cell: <#cell type#>, ConfigurableCell {
         
     func configure<T>(viewModel: T) {
-//        if let groupVM = viewModel as? <#ViewModelType#> {
-//            groupName.text = groupVM.groupName()
-//        }
+        <#if let vm = viewModel as? ViewModelType {}#>
     }
 }

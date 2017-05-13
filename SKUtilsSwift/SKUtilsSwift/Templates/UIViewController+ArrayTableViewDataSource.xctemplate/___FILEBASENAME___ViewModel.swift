@@ -17,10 +17,10 @@ class ___FILEBASENAMEASIDENTIFIER___ViewModel: ArrayTableViewModelProtocol {
     
     required init(array: [ModelType]) {
 //        let items = createViewModels(fromModels: array)
-//        let firstSectionModel = SectionModel(withItems: items,
+//        let sectionModel = SectionModel(withItems: items,
 //                                             header: nil,
 //                                             footer: nil)
-//        tableViewDataSource = TableViewArrayDataSource(sections: [firstSectionModel])
+//        tableViewDataSource = TableViewArrayDataSource(sections: [sectionModel])
     }
     
     func createViewModels(fromModels models: [ModelType]) -> [<#CellViewModel#>] {

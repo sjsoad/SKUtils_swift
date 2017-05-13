@@ -12,6 +12,7 @@
 	<array>
 		<string>___FILEBASENAME___Response.swift</string>
 		<string>___FILEBASENAME___Request.swift</string>
+		<string>___FILEBASENAME___RequestProtocol.swift</string>
 	</array>
 	<key>Platforms</key>
 	<array>

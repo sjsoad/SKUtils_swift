@@ -14,13 +14,13 @@ class RemindPassViewModel: NSObject, RemindPasswordRequestProtocol, ValidationHe
     
     var requestSucceed: Dynamic<Bool> = Dynamic(false)
     
-    func validate(email: String?) -> (succeed: Bool, error: String?) {
+    func validate(email: String?) -> ValidationResult {
         let emailValidated = emailValidator().isValid(email)
         if emailValidated {
 //            <#remindPassword(email: email!)#>
-            return (true, nil)
+            return ValidationResult(succeed: true, error: nil)
         }
-        return (false, "")
+        return ValidationResult(succeed: false, error: "")
     }
     
 }

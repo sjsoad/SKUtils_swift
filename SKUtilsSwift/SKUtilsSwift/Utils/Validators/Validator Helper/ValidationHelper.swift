@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias ValidationResult = (succeed: Bool, error: String?)
+
 protocol ValidationHelper {
     
     func emailValidator() -> EmailValidator

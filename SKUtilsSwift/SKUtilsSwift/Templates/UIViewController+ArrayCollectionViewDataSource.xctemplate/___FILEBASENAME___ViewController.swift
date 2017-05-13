@@ -10,10 +10,12 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayCollectionViewProtocol {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel
     var arrayCollectionViewModel: ViewModelType? {
         didSet {
-            setDataSource(for: <#collectionView#>)
+            setDataSource(for: collectionView)
         }
     }
 

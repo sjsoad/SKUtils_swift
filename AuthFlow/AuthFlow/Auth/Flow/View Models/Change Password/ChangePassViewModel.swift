@@ -17,18 +17,18 @@ class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHe
     var temporaryToken: String?
     
     func validate(password: String?,
-                  confirmation: String?) -> (succeed: Bool, error: String?) {
+                  confirmation: String?) -> ValidationResult {
         let passwordValidated = passValidator().isValid(password)
         let passwordEqual = equalValidator().isEqual(password,
                                                      secondString: confirmation)
         if !passwordValidated {
-            return (false, "")
+            return ValidationResult(succeed: false, error: "")
             
         } else if !passwordEqual {
-            return (false, "")
+            return ValidationResult(succeed: false, error: "")
         }
 //        <#change password#>
-        return (true, nil)
+        return ValidationResult(succeed: true, error: nil)
     }
     
 }
