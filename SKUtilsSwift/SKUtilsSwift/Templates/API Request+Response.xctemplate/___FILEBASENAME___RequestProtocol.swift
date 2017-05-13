@@ -16,7 +16,7 @@ protocol ___FILEBASENAME___RequestProtocol: RequestSucceedProtocol, RequestError
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler
     func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
     
-    var resultFor___FILEBASENAME___: Dynamic<Bool> { get set }
+    var resultFor___FILEBASENAME___Request: Dynamic<Bool> { get set }
 }
 
 extension LoginRequestProtocol where Self: NSObject {
@@ -45,7 +45,7 @@ extension LoginRequestProtocol where Self: NSObject {
             if let executingHandler = strongSelf.requerstExecutingHandler {
                 executingHandler(false, nil)
             }
-            strongSelf.resultFor___FILEBASENAME___.value = true
+            strongSelf.resultFor___FILEBASENAME___Request.value = true
             <#process responce#>
 //            Example:
 //            strongSelf.requestSucceed.value = result of request
