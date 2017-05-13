@@ -16,12 +16,12 @@ class TwitterAuth: NSObject, ScialNetworkAuthProtocol {
         Twitter.sharedInstance().logIn(withMethods: .webBased) { (session, error) in
             if error != nil {
                 handler(nil,
-                        .authTypeTwitter,
+                        .twitter,
                         error)
             }
             else if let currentSession = session {
                 handler(currentSession.authToken,
-                        .authTypeTwitter,
+                        .twitter,
                         nil)
             }
         }

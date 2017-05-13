@@ -24,15 +24,15 @@ class UserViewModel: NSObject {
     func logout() {
         if let grantType = GrantType(rawValue: profile.grantType!) {
             switch grantType {
-            case .authTypeFacebook:
+            case .facebook:
                 let facebook = FacebookAuth()
                 facebook.logout()
                 break
-            case .authTypeInstagram:
+            case .instagram:
                 let insta = InstagramAuth()
                 insta.logout()
                 break
-            case .authTypeGooglePlus:
+            case .googlePlus:
                 let google = GooglePlusAuth()
                 google.logout()
                 break

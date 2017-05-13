@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 enum GrantType: String {
-    case authTypeFacebook = "facebook"
-    case authTypeInstagram = "instagram"
-    case authTypeTwitter = "twitter"
-    case authTypeGooglePlus = "google"
+    case facebook = "facebook"
+    case instagram = "instagram"
+    case twitter = "twitter"
+    case googlePlus = "google"
 }
 
 typealias SocalNetworkAuthHandler = (_ accessToken: String? ,

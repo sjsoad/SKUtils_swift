@@ -9,17 +9,17 @@
 import UIKit
 
 enum AccessoryViewState : Int {
-    case accessoryViewStateError
-    case accessoryViewStateSuccess
-    case accessoryViewStateDefault
-    case accessoryViewStateActive
+    case error
+    case success
+    case defaults
+    case active
     
     static func stateForBool(_ valid: Bool) -> AccessoryViewState {
         if valid {
-            return .accessoryViewStateSuccess
+            return .success
         }
         else {
-            return .accessoryViewStateError
+            return .error
         }
     }
 }
@@ -35,7 +35,7 @@ class TextFieldAccessoryView: UIView {
     
     var drawing: drawingHandler?
     
-    var currentViewState: AccessoryViewState = .accessoryViewStateDefault {
+    var currentViewState: AccessoryViewState = .defaults {
         didSet {
             self.setNeedsDisplay()
         }
@@ -43,10 +43,10 @@ class TextFieldAccessoryView: UIView {
     
     func currentStateColor() -> UIColor {
         switch self.currentViewState {
-        case .accessoryViewStateError   : return self.errorStateColor
-        case .accessoryViewStateSuccess : return self.successStateColor
-        case .accessoryViewStateDefault : return self.defaultStateColor
-        case .accessoryViewStateActive  : return self.activeStateColor
+        case .error   : return self.errorStateColor
+        case .success : return self.successStateColor
+        case .defaults : return self.defaultStateColor
+        case .active  : return self.activeStateColor
         }
     }
 

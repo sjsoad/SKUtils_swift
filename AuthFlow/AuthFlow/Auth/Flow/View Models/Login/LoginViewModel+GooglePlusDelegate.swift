@@ -15,11 +15,11 @@ extension LoginViewModel: GIDSignInDelegate {
                      withError error: Error!) {
         if (error == nil) {
             authHandler(signIn.currentUser.authentication.accessToken,
-                        .authTypeGooglePlus,
+                        .googlePlus,
                         nil)
         } else {
             authHandler(nil,
-                        .authTypeGooglePlus,
+                        .googlePlus,
                         error)
         }
     }

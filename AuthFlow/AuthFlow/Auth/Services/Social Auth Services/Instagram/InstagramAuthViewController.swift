@@ -100,7 +100,7 @@ class InstagramAuthViewController: UIViewController {
         URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
             if let error = error {
                 self.handler(nil,
-                             .authTypeInstagram,
+                             .instagram,
                              error)
             } else {
                 self.getAccessToken(data: data! as NSData)
@@ -113,12 +113,12 @@ class InstagramAuthViewController: UIViewController {
             let result = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! [String: AnyObject]
             let accessToken = result["access_token"] as! String
             handler(accessToken,
-                    .authTypeInstagram,
+                    .instagram,
                     nil)
             close()
         } catch let error as NSError {
             handler(nil,
-                    .authTypeInstagram,
+                    .instagram,
                     error)
         }
     }
@@ -155,7 +155,7 @@ extension InstagramAuthViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         if (error as NSError).domain == NSURLErrorDomain {
             handler(nil,
-                    .authTypeInstagram,
+                    .instagram,
                     error)
         }
     }
