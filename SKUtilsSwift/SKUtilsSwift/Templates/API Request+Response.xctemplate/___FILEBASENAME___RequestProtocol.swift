@@ -13,7 +13,8 @@ typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Requ
 protocol ___FILEBASENAME___RequestProtocol: RequestSucceedProtocol, RequestErrorHandlerProtocol {
     
     func exampleFunc()
-    func ___FILEBASENAME___SuccessHandler() -> LoginSuccessHandler
+    func successHandlerFor___FILEBASENAME___() -> LoginSuccessHandler
+    func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
 }
 
 extension LoginRequestProtocol where Self: NSObject {
@@ -30,13 +31,13 @@ extension LoginRequestProtocol where Self: NSObject {
                                                 headers: headers)
         let apiClient = APIClient()
         let _ = apiClient.executeRequest(request: request,
-                                         success: ___FILEBASENAME___SuccessHandler(),
+                                         success: successHandlerFor___FILEBASENAME___(),
                                          failure: requestErrorHandler())
     }
     
     //MARK: - Handlers
     
-    func ___FILEBASENAME___SuccessHandler() -> ___FILEBASENAME___SuccessHandler {
+    func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler {
         return { [weak self] response in
             guard var strongSelf = self else { return }
             if let executingHandler = strongSelf.requerstExecutingHandler {
@@ -48,4 +49,9 @@ extension LoginRequestProtocol where Self: NSObject {
 //            and set parameters that was retreived
         }
     }
+    
+    func errorHandlerFor___FILEBASENAME___() -> ErrorHandler {
+        return requestErrorHandler()
+    }
+    
 }
