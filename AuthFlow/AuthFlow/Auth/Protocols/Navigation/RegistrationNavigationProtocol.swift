@@ -1,4 +1,4 @@
-//
+ //
 //  RegistrationProtocol.swift
 //  GeoTouch
 //
@@ -29,7 +29,8 @@ extension RegistrationNavigationProtocol {
                      to: vc)
         }
         else {
-            let vc = RegistrationViewController.load(from: "Registration")
+            let vc = UIStoryboard.load(controller: RegistrationViewController.self,
+                                       from: "Registration")
             Self.add(loginProcessor: loginProcessor,
                      to: vc)
             controller.navigationController?.pushViewController(vc,

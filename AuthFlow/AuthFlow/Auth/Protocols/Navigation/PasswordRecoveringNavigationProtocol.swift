@@ -21,14 +21,16 @@ extension PasswordRecoveringNavigationProtocol {
     
     func presentPasswordReminder(from controller: UIViewController,
                                  animated: Bool) {
-        let vc: RemindPassViewController = RemindPassViewController.load(from: "Password")
+        let vc = UIStoryboard.load(controller: RemindPassViewController.self,
+                                   from: "Password")
         vc.show(animated: animated,
                 completion: nil)
     }
     
     func presentPasswordChanger(temporaryToken: String,
                                 animated: Bool) {
-        let vc: ChangePassViewController = ChangePassViewController.load(from: "Password")
+        let vc = UIStoryboard.load(controller: ChangePassViewController.self,
+                                   from: "Password")
         let changePassViewModel = ChangePassViewModel(token: temporaryToken)
         vc.changePassViewModel = changePassViewModel
         vc.show(animated: animated,

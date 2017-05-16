@@ -32,7 +32,8 @@ extension LoginNavigationProtocol {
                      to: vc)
         }
         else {
-            let vc = LoginViewController.load(from: "Login")
+            let vc = UIStoryboard.load(controller: LoginViewController.self,
+                                       from: "Login")
             Self.add(loginProcessor: loginProcessor,
                      to: vc)
             controller.navigationController?.pushViewController(vc,

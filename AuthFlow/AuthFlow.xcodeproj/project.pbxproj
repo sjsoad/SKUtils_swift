@@ -108,7 +108,7 @@
 		A5C047711EC6DF9600F4E0DE /* TextField+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C046FB1EC6DF9600F4E0DE /* TextField+PlaceholderColor.swift */; };
 		A5C047721EC6DF9600F4E0DE /* UIView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C046FC1EC6DF9600F4E0DE /* UIView+Load.swift */; };
 		A5C047731EC6DF9600F4E0DE /* UIViewController+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C046FD1EC6DF9600F4E0DE /* UIViewController+AppDelegate.swift */; };
-		A5C047741EC6DF9600F4E0DE /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C046FE1EC6DF9600F4E0DE /* UIViewController+Storyboard.swift */; };
+		A5C047741EC6DF9600F4E0DE /* UIStoryboard+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C046FE1EC6DF9600F4E0DE /* UIStoryboard+Load.swift */; };
 		A5C047751EC6DF9600F4E0DE /* DynamicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047001EC6DF9600F4E0DE /* DynamicHelper.swift */; };
 		A5C047761EC6DF9600F4E0DE /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047011EC6DF9600F4E0DE /* MapsHelper.swift */; };
 		A5C047771EC6DF9600F4E0DE /* QueryStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047021EC6DF9600F4E0DE /* QueryStringParser.swift */; };
@@ -263,7 +263,7 @@
 		A5C046FB1EC6DF9600F4E0DE /* TextField+PlaceholderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextField+PlaceholderColor.swift"; sourceTree = "<group>"; };
 		A5C046FC1EC6DF9600F4E0DE /* UIView+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Load.swift"; sourceTree = "<group>"; };
 		A5C046FD1EC6DF9600F4E0DE /* UIViewController+AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AppDelegate.swift"; sourceTree = "<group>"; };
-		A5C046FE1EC6DF9600F4E0DE /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
+		A5C046FE1EC6DF9600F4E0DE /* UIStoryboard+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Load.swift"; sourceTree = "<group>"; };
 		A5C047001EC6DF9600F4E0DE /* DynamicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHelper.swift; sourceTree = "<group>"; };
 		A5C047011EC6DF9600F4E0DE /* MapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsHelper.swift; sourceTree = "<group>"; };
 		A5C047021EC6DF9600F4E0DE /* QueryStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStringParser.swift; sourceTree = "<group>"; };
@@ -920,7 +920,7 @@
 				A5C046FB1EC6DF9600F4E0DE /* TextField+PlaceholderColor.swift */,
 				A5C046FC1EC6DF9600F4E0DE /* UIView+Load.swift */,
 				A5C046FD1EC6DF9600F4E0DE /* UIViewController+AppDelegate.swift */,
-				A5C046FE1EC6DF9600F4E0DE /* UIViewController+Storyboard.swift */,
+				A5C046FE1EC6DF9600F4E0DE /* UIStoryboard+Load.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1462,7 +1462,7 @@
 				A5C0479D1EC6DF9600F4E0DE /* ImagePickerViewModel.swift in Sources */,
 				A5C047581EC6DF9600F4E0DE /* AbstractDataSource.swift in Sources */,
 				A53C44D41EA9DB66009D7651 /* ProfileRepsonse.swift in Sources */,
-				A5C047741EC6DF9600F4E0DE /* UIViewController+Storyboard.swift in Sources */,
+				A5C047741EC6DF9600F4E0DE /* UIStoryboard+Load.swift in Sources */,
 				A5C047801EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift in Sources */,
 				A5C047871EC6DF9600F4E0DE /* PopToNavigationProtocol.swift in Sources */,
 				A5C047A11EC6DF9600F4E0DE /* EqualStringsValidator.swift in Sources */,

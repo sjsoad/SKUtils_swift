@@ -22,10 +22,10 @@ extension AuthNavigationProtocol {
     
     func presentSignIn(from controller: UIViewController,
                        animated: Bool) {
-        let vc = LoginViewController.load(from: "Login")
-        Self.add(processor: controller,
-                 to: vc)
+        let vc = UIStoryboard.load(controller: LoginViewController.self,
+                                   from: "Login")
         let navigation = UINavigationController(rootViewController: vc)
+        Self.add(processor: controller, to: vc)
         //        navigation.isHeroEnabled = true
         controller.present(navigation,
                            animated: animated,
@@ -34,10 +34,10 @@ extension AuthNavigationProtocol {
     
     func presentSignUp(from controller: UIViewController,
                        animated: Bool) {
-        let vc = RegistrationViewController.load(from: "Registration")
+        let vc = UIStoryboard.load(controller: RegistrationViewController.self,
+                                   from: "Registration")
         let navigation = UINavigationController(rootViewController: vc)
-        Self.add(processor: controller,
-                 to: vc)
+        Self.add(processor: controller, to: vc)
         //        navigation.isHeroEnabled = true
         controller.present(navigation,
                            animated: true,

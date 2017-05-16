@@ -8,13 +8,15 @@
 
 import UIKit
 
-extension UIViewController {
+extension UIStoryboard {
     
-    static func load<T: UIViewController>(from storyboardName: String) -> T {
+    static func load<T: UIViewController>(controller type: T.Type,
+                     from storyboardName: String) -> T {
         let storyboard = UIStoryboard(name: storyboardName,
                                       bundle: nil)
-        let className = String(describing: self)
+        let className = String(describing: type)
         let vc = storyboard.instantiateViewController(withIdentifier: className)
         return vc as! T
     }
+    
 }
