@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationNavigation: LoginNavigationProtocol {
+class RegistrationNavigation: BaseNavigation, LoginNavigationProtocol {
 
     
 }

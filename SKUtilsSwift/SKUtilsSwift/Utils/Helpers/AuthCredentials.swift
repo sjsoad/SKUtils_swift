@@ -10,8 +10,8 @@ import Foundation
 
 class AuthCredentials: NSObject {
     
-    var accessToken: String
-    var refreshToken: String
+    var accessToken: String!
+    var refreshToken: String!
     
     init(accessToken: String,
          refreshToken: String) {

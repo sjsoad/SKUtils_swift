@@ -10,14 +10,14 @@ import UIKit
 import NVActivityIndicatorView
 
 class LoginViewController: UIViewController, RequestExecutingViewProtocol, GoogleAuthViewControllerProtocol, LoginProcessingProtocol {
-
-    typealias navigationType = LoginNavigation
     
+    let loginNavigation = LoginNavigation()
     var loginProcessor: LoginProcessorProtocol?
+    
     var loginViewModel = LoginViewModel()
     var profileViewModel = ProfileViewModel()
     
-    @IBOutlet var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
     
@@ -38,7 +38,6 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
         super.viewDidAppear(animated)
         if loginViewModel.tryToLogin {
             tryTologin()
-            loginViewModel.tryToLogin = false
         }
     }
     
@@ -51,11 +50,11 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
         if result.succeed == false,
             let error = result.error {
         }
-
+        
     }
     
     //MARK: - IBAction
- 
+    
     @IBAction func facebookButtonPressed(_ sender: UIButton) {
         loginViewModel.loginWithFacebook(fromController: self)
     }
@@ -69,9 +68,9 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     }
     
     @IBAction func registrationButtonPressed(_ sender: UIButton) {
-        navigationType.moveToRegistration(loginProcessor: loginProcessor,
-                                          from: self,
-                                          animated: true)
+        loginNavigation.moveToRegistration(loginProcessor: loginProcessor,
+                                           from: self,
+                                           animated: true)
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -79,7 +78,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     }
     
     @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
-        navigationType.presentPasswordReminder(from: self,
-                                               animated: true)
+        loginNavigation.presentPasswordReminder(from: self,
+                                                animated: true)
     }
 }

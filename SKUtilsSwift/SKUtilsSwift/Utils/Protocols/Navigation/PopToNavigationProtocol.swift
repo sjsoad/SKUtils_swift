@@ -10,20 +10,20 @@ import UIKit
 
 protocol PopToNavigationProtocol {
     
-    static func popTo<T: UIViewController>(controller type: T.Type,
-                      from controller: UIViewController,
-                      animated: Bool) -> T?
+    func popTo<T: UIViewController>(controller type: T.Type,
+               from controller: UIViewController,
+               animated: Bool) -> T?
     
-    static func pop(from controller: UIViewController,
-                    animated: Bool)
+    func pop(from controller: UIViewController,
+             animated: Bool)
     
 }
 
 extension PopToNavigationProtocol {
-
-    static func popTo<T: UIViewController>(controller type: T.Type,
-                      from controller: UIViewController,
-                      animated: Bool) -> T? {
+    
+    func popTo<T: UIViewController>(controller type: T.Type,
+               from controller: UIViewController,
+               animated: Bool) -> T? {
         if let navigation = controller.navigationController {
             if let vc = navigation.viewControllers.filter({ (viewController) -> Bool in
                 return viewController is T
@@ -35,9 +35,9 @@ extension PopToNavigationProtocol {
         }
         return nil
     }
-
-    static func pop(from controller: UIViewController,
-                    animated: Bool) {
+    
+    func pop(from controller: UIViewController,
+             animated: Bool) {
         controller.navigationController?.popViewController(animated: animated)
     }
     

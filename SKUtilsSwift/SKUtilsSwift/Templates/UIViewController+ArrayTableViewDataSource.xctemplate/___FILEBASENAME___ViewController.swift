@@ -10,6 +10,8 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayTableViewProtocol {
 
+    let navigation = ___FILEBASENAMEASIDENTIFIER___Navigation()
+    
     @IBOutlet weak var tableView: UITableView!
     
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel

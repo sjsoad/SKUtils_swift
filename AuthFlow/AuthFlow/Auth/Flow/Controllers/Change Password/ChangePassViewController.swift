@@ -10,21 +10,23 @@ import UIKit
 
 class ChangePassViewController: DissmisableViewController, Presentation, RequestExecutingViewProtocol {
 
-    typealias navigationType = ChangePassNavigation
+    let changePassNavigation = ChangePassNavigation()
     
-    @IBOutlet var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var passwordField: PassTextField!
     @IBOutlet weak var confirmationField: PassTextField!
     
-    var changePassViewModel = ChangePassViewModel()
+    var changePassViewModel: ChangePassViewModel!
+
+    //MARK -
     
     override func viewDidLoad() {
         super.viewDidLoad()
         changePassViewModel.resultOfChangePasswordRequest.bind { [weak self] (success) in
             guard let strongSelf = self else { return }
             if success {
-                navigationType.dismiss(controller: strongSelf,
-                                       animated: true)
+                strongSelf.changePassNavigation.dismiss(controller: strongSelf,
+                                                        animated: true)
             }
         }
         changePassViewModel.executingHandlerForChangePassword = requerstExecutingHandler()

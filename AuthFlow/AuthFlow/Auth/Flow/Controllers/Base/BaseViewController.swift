@@ -9,8 +9,8 @@
 import UIKit
 //import Hero
 
-class BaseViewController: UIViewController, Navigatable {
+class BaseViewController: UIViewController {
 
-    typealias navigationType = BaseNavigation
+    let baseNavigation = BaseNavigation()
     
 }

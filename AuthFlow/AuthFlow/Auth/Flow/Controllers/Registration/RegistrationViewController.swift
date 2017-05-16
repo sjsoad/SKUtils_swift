@@ -10,16 +10,15 @@ import UIKit
 
 class RegistrationViewController: UIViewController, RequestExecutingViewProtocol, LoginProcessingProtocol {
     
-    typealias navigationType = RegistrationNavigation
+    let registrationNavigation = RegistrationNavigation()
     
-    var loginProcessor: LoginProcessorProtocol?
-    
-    var registrationViewModel = RegistrationViewModel()
-    
-    @IBOutlet var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var username: BaseTextField!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
+    
+    var loginProcessor: LoginProcessorProtocol?
+    var registrationViewModel = RegistrationViewModel()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -28,11 +27,11 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
             if registrationSucceed,
                 let email = strongSelf.emailField.text,
                 let password = strongSelf.passwordField.text {
-                navigationType.moveToAuth(loginProcessor: strongSelf.loginProcessor,
-                                          email: email,
-                                          password: password,
-                                          from: strongSelf,
-                                          animated: true)
+                strongSelf.registrationNavigation.moveToAuth(loginProcessor: strongSelf.loginProcessor,
+                                                             email: email,
+                                                             password: password,
+                                                             from: strongSelf,
+                                                             animated: true)
                 strongSelf.textFieldsManager.clearTextField()
             }
         }

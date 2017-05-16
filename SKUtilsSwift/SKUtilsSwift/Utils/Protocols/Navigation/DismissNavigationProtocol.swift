@@ -10,17 +10,17 @@ import UIKit
 
 protocol DismissNavigationProtocol {
     
-    static func dismiss(controller: UIViewController,
-                        animated: Bool,
-                        completion: (() -> Swift.Void)?)
+    func dismiss(controller: UIViewController,
+                 animated: Bool,
+                 completion: (() -> Swift.Void)?)
     
 }
 
 extension DismissNavigationProtocol {
     
-    static func dismiss(controller: UIViewController,
-                        animated: Bool,
-                        completion: (() -> Swift.Void)? = nil) {
+    func dismiss(controller: UIViewController,
+                 animated: Bool,
+                 completion: (() -> Swift.Void)? = nil) {
         controller.dismiss(animated: animated,
                            completion: completion)
     }

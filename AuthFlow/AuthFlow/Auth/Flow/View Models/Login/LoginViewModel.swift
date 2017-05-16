@@ -14,8 +14,9 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
     var resultOfLoginRequest: Dynamic<Bool> = Dynamic(false)
     var authHandler: SocalNetworkAuthHandler!
     var executingHandlerForLogin: RequerstExecutingHandler?
-    var authCredentials: AuthCredentials?
     var tryToLogin: Bool = false
+    
+    internal var authCredentials: AuthCredentials?
     
     override init() {
         super.init()
@@ -33,6 +34,7 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
     }
     
     func validate(email: String?, password: String?) -> ValidationResult {
+        tryToLogin = false
         let emailValidated = emailValidator().isValid(email)
         let passValidated = passValidator().isValid(password)
         if emailValidated, passValidated {

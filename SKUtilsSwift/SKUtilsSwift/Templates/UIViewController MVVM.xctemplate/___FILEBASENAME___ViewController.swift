@@ -10,6 +10,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController {
 
+    let navigation = ___FILEBASENAMEASIDENTIFIER___Navigation()
     var viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel = ___FILEBASENAMEASIDENTIFIER___ViewModel()
 
     override func viewWillAppear(_ animated: Bool) {

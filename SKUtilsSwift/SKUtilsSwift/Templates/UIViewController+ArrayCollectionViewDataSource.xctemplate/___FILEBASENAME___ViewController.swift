@@ -10,6 +10,8 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ArrayCollectionViewProtocol {
 
+    let navigation = ___FILEBASENAMEASIDENTIFIER___Navigation()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     typealias ViewModelType = ___FILEBASENAMEASIDENTIFIER___ViewModel

@@ -12,6 +12,7 @@
 	<array>
 		<string>___FILEBASENAME___TableViewController.swift</string>
 		<string>___FILEBASENAME___TableViewModel.swift</string>
+		<string>___FILEBASENAME___Navigation.swift</string>
 	</array>
 	<key>Platforms</key>
 	<array>

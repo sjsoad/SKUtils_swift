@@ -11,13 +11,14 @@ import UIKit
 class ShareHelper: NSObject {
 
     class func share(items: [Any],
-                     applicationActivities: [UIActivity]?,
+                     excludedActivityTypes: [UIActivityType]?,
                      sender: UIBarButtonItem?,
                      from controller: UIViewController) {
-    
+        
         let activityViewController = UIActivityViewController(
             activityItems: items,
             applicationActivities: nil)
+        activityViewController.excludedActivityTypes = excludedActivityTypes
         if let popoverPresentationController = activityViewController.popoverPresentationController {
             popoverPresentationController.barButtonItem = sender
         }

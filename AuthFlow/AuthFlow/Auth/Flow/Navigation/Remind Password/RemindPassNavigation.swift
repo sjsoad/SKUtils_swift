@@ -8,6 +8,6 @@
 
 import Foundation
 
-class RemindPassNavigation: NSObject, DismissNavigationProtocol {
+class RemindPassNavigation: BaseNavigation {
     
 }

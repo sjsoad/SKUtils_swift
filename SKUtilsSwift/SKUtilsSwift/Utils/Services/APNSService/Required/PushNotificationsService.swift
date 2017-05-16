@@ -21,7 +21,7 @@
 import UIKit
 import UserNotifications
 
-class PushNotificationsService<T: AnyObject>: NSObject, APNSService where T: APNSService {
+class PushNotificationsService<T: APNSService>: NSObject, APNSService {
 
     var service: T?
     

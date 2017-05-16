@@ -10,21 +10,21 @@ import UIKit
 
 protocol LoginNavigationProtocol: PopToNavigationProtocol, LoginProcessorSetupProtocol {
     
-    static func moveToAuth(loginProcessor: LoginProcessorProtocol?,
-                           email: String?,
-                           password: String?,
-                           from controller: UIViewController,
-                           animated: Bool)
+    func moveToAuth(loginProcessor: LoginProcessorProtocol?,
+                    email: String?,
+                    password: String?,
+                    from controller: UIViewController,
+                    animated: Bool)
     
 }
 
 extension LoginNavigationProtocol {
     
-    static func moveToAuth(loginProcessor: LoginProcessorProtocol?,
-                           email: String?,
-                           password: String?,
-                           from controller: UIViewController,
-                           animated: Bool) {
+    func moveToAuth(loginProcessor: LoginProcessorProtocol?,
+                    email: String?,
+                    password: String?,
+                    from controller: UIViewController,
+                    animated: Bool) {
         if let vc = popTo(controller: LoginViewController.self,
                           from: controller,
                           animated: animated) {

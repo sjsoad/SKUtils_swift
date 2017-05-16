@@ -10,9 +10,9 @@ import UIKit
 
 class RemindPassViewController: DissmisableViewController, Presentation, RequestExecutingViewProtocol {
 
-    typealias navigationType = RemindPassNavigation
+    var remindPassNavigation = RemindPassNavigation()
     
-    @IBOutlet var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextFieldsManager!
     @IBOutlet weak var emailField: EmailTextField!
     
     var reminderViewModel = RemindPassViewModel()
@@ -22,8 +22,8 @@ class RemindPassViewController: DissmisableViewController, Presentation, Request
         reminderViewModel.resultOfRemindPasswordRequest.bind { [weak self] (success) in
             guard let strongSelf = self else { return }
             if success {
-                navigationType.dismiss(controller: strongSelf,
-                                       animated: true)
+                strongSelf.remindPassNavigation.dismiss(controller: strongSelf,
+                                                        animated: true)
             }
         }
         reminderViewModel.executingHandlerForRemindPassword = requerstExecutingHandler()

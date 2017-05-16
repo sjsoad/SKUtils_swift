@@ -20,7 +20,7 @@ protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
     var resultOf___FILEBASENAME___Request: Dynamic<Bool> { get set }
 }
 
-extension LoginRequestProtocol where Self: NSObject {
+extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
     
     func exampleFunc() {
         if let executingHandler = executingHandlerFor___FILEBASENAME___ {

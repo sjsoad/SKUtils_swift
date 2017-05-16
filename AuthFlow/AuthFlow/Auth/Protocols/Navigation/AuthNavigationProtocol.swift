@@ -11,17 +11,17 @@ import Foundation
 //import Hero
 
 protocol AuthNavigationProtocol: LoginProcessorSetupProtocol {
-
-    static func presentSignIn(from controller: UIViewController,
-                              animated: Bool)
+    
+    func presentSignIn(from controller: UIViewController,
+                       animated: Bool)
     static func presentSignUp(from controller: UIViewController,
                               animated: Bool)
 }
 
 extension AuthNavigationProtocol {
-
-    static func presentSignIn(from controller: UIViewController,
-                              animated: Bool) {
+    
+    func presentSignIn(from controller: UIViewController,
+                       animated: Bool) {
         let vc = LoginViewController.load(from: "Login")
         Self.add(processor: controller,
                  to: vc)
@@ -32,8 +32,8 @@ extension AuthNavigationProtocol {
                            completion: nil)
     }
     
-    static func presentSignUp(from controller: UIViewController,
-                              animated: Bool) {
+    func presentSignUp(from controller: UIViewController,
+                       animated: Bool) {
         let vc = RegistrationViewController.load(from: "Registration")
         let navigation = UINavigationController(rootViewController: vc)
         Self.add(processor: controller,

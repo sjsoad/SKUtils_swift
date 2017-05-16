@@ -11,7 +11,7 @@ import UIKit
 class DissmisableViewController: BaseViewController {
     
     @IBAction func dismissButtonPressed() {
-        navigationType.dismiss(controller: self,
+        baseNavigation.dismiss(controller: self,
                                animated: true)
     }
 

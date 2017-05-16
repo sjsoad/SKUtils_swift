@@ -13,7 +13,12 @@ class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHe
     var executingHandlerForChangePasswordRequest: RequerstExecutingHandler?
     var resultOfChangePasswordRequest: Dynamic<Bool> = Dynamic(false)
     var executingHandlerForChangePassword: RequerstExecutingHandler?
-    var temporaryToken: String?
+    
+    private var temporaryToken: String?
+    
+    init(token: String?) {
+        temporaryToken = token
+    }
     
     func validate(password: String?,
                   confirmation: String?) -> ValidationResult {

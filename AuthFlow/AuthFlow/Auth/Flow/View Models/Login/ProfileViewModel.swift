@@ -13,6 +13,6 @@ class ProfileViewModel: NSObject, ProfileRequestProtocol {
     var resultOfProfileRequest: Dynamic<Bool> = Dynamic(false)
     var executingHandlerForProfile: RequerstExecutingHandler?
 
-    var profile: Profile?
+    internal var profile: Profile?
     
 }

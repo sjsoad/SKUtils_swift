@@ -8,7 +8,6 @@
 
 import UIKit
 
-class BaseNavigation: NSObject,
-DismissNavigationProtocol {
+class BaseNavigation: NSObject, DismissNavigationProtocol, PopToNavigationProtocol {
     
 }

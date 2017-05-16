@@ -12,8 +12,8 @@ import GoogleSignIn
 
 class UserViewModel: NSObject {
 
-    var profile: Profile!
-    var authCredentials: AuthCredentials!
+    private var profile: Profile!
+    private var authCredentials: AuthCredentials!
  
     init(userProfile: Profile,
          credentials: AuthCredentials) {

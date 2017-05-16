@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ChangePassNavigation: NSObject, DismissNavigationProtocol {
+class ChangePassNavigation: BaseNavigation {
 
 }

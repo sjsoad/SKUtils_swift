@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoginNavigation: PasswordRecoveringNavigationProtocol, LoginNavigationProtocol, RegistrationNavigationProtocol {
+class LoginNavigation: BaseNavigation, PasswordRecoveringNavigationProtocol, LoginNavigationProtocol, RegistrationNavigationProtocol {
 
 }
