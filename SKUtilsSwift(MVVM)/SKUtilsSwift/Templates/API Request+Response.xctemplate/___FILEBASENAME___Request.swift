@@ -17,9 +17,9 @@ class ___FILEBASENAMEASIDENTIFIER___Request: APIRequestProtocol {
     var HTTPMethod: Method {
         return .<#post#>
     }
-    private(set)var parameters: [String : Any]?
-    private(set)var headers: [String: String]?
-    private(set)var path: String = ""
+    private(set) var parameters: [String : Any]?
+    private(set) var headers: [String: String]?
+    private(set) var path: String
     
     required init(withURL url: String,
                   parameters: [String : Any]? = nil,

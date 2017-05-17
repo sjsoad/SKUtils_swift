@@ -15,11 +15,16 @@ class RegistrationRequest: APIRequestProtocol {
     var HTTPMethod: Method {
         return .post
     }
-    var parameters: [String : Any]?
-    var headers: [String: String]?
-    var path: String = ""
+    private(set) var parameters: [String : Any]?
+    private(set) var headers: [String: String]?
+    private(set) var path: String
     
-    required init() {
-        
+    required init(withURL url: String,
+                  parameters: [String: Any]? = nil,
+                  headers: [String: String]? = nil) {
+        self.parameters = parameters
+        self.headers = headers
+        self.path = url
     }
+
 }
