@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AuthFlow/Auth/Protocols/Navigation/RegistrationNavigationProtocol.swift"
-            timestampString = "516619888.286728"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "moveToRegistration(loginProcessor:from:animated:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../SKUtilsSwift/SKUtilsSwift/Utils/Extensions/UIStoryboard+Load.swift"
             timestampString = "516620460.720878"
             startingColumnNumber = "9223372036854775807"

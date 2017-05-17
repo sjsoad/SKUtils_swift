@@ -25,7 +25,7 @@ extension AuthNavigationProtocol {
         let vc = UIStoryboard.load(controller: LoginViewController.self,
                                    from: "Login")
         let navigation = UINavigationController(rootViewController: vc)
-        Self.add(processor: controller, to: vc)
+        add(processor: controller, to: vc)
         //        navigation.isHeroEnabled = true
         controller.present(navigation,
                            animated: animated,
@@ -37,7 +37,7 @@ extension AuthNavigationProtocol {
         let vc = UIStoryboard.load(controller: RegistrationViewController.self,
                                    from: "Registration")
         let navigation = UINavigationController(rootViewController: vc)
-        Self.add(processor: controller, to: vc)
+        add(processor: controller, to: vc)
         //        navigation.isHeroEnabled = true
         controller.present(navigation,
                            animated: true,

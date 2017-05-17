@@ -10,12 +10,14 @@ import Foundation
 
 class QueryStringParser: NSObject {
 
-    static func queryStringParameter(url: String?,
-                                     param: String) -> String? {
+    static func parameter(fromURL url: String?,
+                          name: String) -> String? {
         if let url = url,
             let urlComponents = URLComponents(string: url),
-            let queryItems = (urlComponents.queryItems) {
-            return queryItems.filter({ (item) in item.name == param }).first?.value!
+            let queryItems = (urlComponents.queryItems),
+            let item = queryItems.filter({ (item) in item.name == name }).first {
+            return item.value
         }
-        return nil    }
+        return nil
+    }
 }

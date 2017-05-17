@@ -11,25 +11,25 @@ import Foundation
 
 protocol LoginProcessorSetupProtocol {
 
-    static func add(loginProcessor: LoginProcessorProtocol?,
-                    to controller: UIViewController)
+    func add(loginProcessor: LoginProcessorProtocol?,
+             to controller: UIViewController)
     
-    static func add(processor: UIViewController,
-                    to controller: UIViewController)
+    func add(processor: UIViewController,
+             to controller: UIViewController)
     
 }
 
 extension LoginProcessorSetupProtocol {
 
-    static func add(loginProcessor: LoginProcessorProtocol?,
-                    to controller: UIViewController) {
+    func add(loginProcessor: LoginProcessorProtocol?,
+             to controller: UIViewController) {
         if var vc = controller as? LoginProcessingProtocol {
             vc.loginProcessor = loginProcessor
         }
     }
-
-    static func add(processor: UIViewController,
-                    to controller: UIViewController) {
+    
+    func add(processor: UIViewController,
+             to controller: UIViewController) {
         if let loginProcessor = processor as? LoginProcessorProtocol,
             var loginProcessingVC = controller as? LoginProcessingProtocol {
             loginProcessingVC.loginProcessor = loginProcessor

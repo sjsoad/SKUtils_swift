@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginNavigationProtocol: PopToNavigationProtocol, LoginProcessorSetupProtocol {
+protocol LoginNavigationProtocol: PopNavigationProtocol, LoginProcessorSetupProtocol {
     
     func moveToAuth(loginProcessor: LoginProcessorProtocol?,
                     email: String?,
@@ -28,14 +28,14 @@ extension LoginNavigationProtocol {
         if let vc = popTo(controller: LoginViewController.self,
                           from: controller,
                           animated: animated) {
-            Self.add(loginProcessor: loginProcessor,
-                     to: vc)
+            add(loginProcessor: loginProcessor,
+                to: vc)
         }
         else {
             let vc = UIStoryboard.load(controller: LoginViewController.self,
                                        from: "Login")
-            Self.add(loginProcessor: loginProcessor,
-                     to: vc)
+            add(loginProcessor: loginProcessor,
+                to: vc)
             controller.navigationController?.pushViewController(vc,
                                                                 animated: animated)
         }

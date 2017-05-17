@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */; };
 		A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */; };
+		A51E415A1ECC3A3D00D94493 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */; };
+		A51E415B1ECC3A3D00D94493 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41591ECC3A3D00D94493 /* LoginViewController.swift */; };
 		A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44571EA9DB66009D7651 /* AppDelegate.swift */; };
 		A53C44B31EA9DB66009D7651 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445A1EA9DB66009D7651 /* Constants.swift */; };
 		A53C44B61EA9DB66009D7651 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44611EA9DB66009D7651 /* BaseViewController.swift */; };
@@ -123,7 +125,7 @@
 		A5C047801EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047111EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift */; };
 		A5C047841EC6DF9600F4E0DE /* MailComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047171EC6DF9600F4E0DE /* MailComposer.swift */; };
 		A5C047851EC6DF9600F4E0DE /* DismissNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047191EC6DF9600F4E0DE /* DismissNavigationProtocol.swift */; };
-		A5C047871EC6DF9600F4E0DE /* PopToNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0471B1EC6DF9600F4E0DE /* PopToNavigationProtocol.swift */; };
+		A5C047871EC6DF9600F4E0DE /* PopNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0471B1EC6DF9600F4E0DE /* PopNavigationProtocol.swift */; };
 		A5C047881EC6DF9600F4E0DE /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0471D1EC6DF9600F4E0DE /* AlertPresentation.swift */; };
 		A5C047891EC6DF9600F4E0DE /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C0471E1EC6DF9600F4E0DE /* Presentation.swift */; };
 		A5C0478A1EC6DF9600F4E0DE /* DynamicTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C047211EC6DF9600F4E0DE /* DynamicTableViewCellProtocol.swift */; };
@@ -163,6 +165,8 @@
 		899B44949134F565E34D42FE /* Pods-AuthFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthFlow/Pods-AuthFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuth.swift; sourceTree = "<group>"; };
 		A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthProtocol.swift; sourceTree = "<group>"; };
+		A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A51E41591ECC3A3D00D94493 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A53C44571EA9DB66009D7651 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AuthFlow/AppDelegate.swift; sourceTree = "<group>"; };
 		A53C445A1EA9DB66009D7651 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A53C44611EA9DB66009D7651 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -278,7 +282,7 @@
 		A5C047111EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
 		A5C047171EC6DF9600F4E0DE /* MailComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailComposer.swift; sourceTree = "<group>"; };
 		A5C047191EC6DF9600F4E0DE /* DismissNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissNavigationProtocol.swift; sourceTree = "<group>"; };
-		A5C0471B1EC6DF9600F4E0DE /* PopToNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopToNavigationProtocol.swift; sourceTree = "<group>"; };
+		A5C0471B1EC6DF9600F4E0DE /* PopNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopNavigationProtocol.swift; sourceTree = "<group>"; };
 		A5C0471D1EC6DF9600F4E0DE /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
 		A5C0471E1EC6DF9600F4E0DE /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		A5C047211EC6DF9600F4E0DE /* DynamicTableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicTableViewCellProtocol.swift; sourceTree = "<group>"; };
@@ -644,6 +648,8 @@
 		A54F50641EA8F83B007DD713 = {
 			isa = PBXGroup;
 			children = (
+				A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */,
+				A51E41591ECC3A3D00D94493 /* LoginViewController.swift */,
 				A53C44E61EA9DB75009D7651 /* Assets.xcassets */,
 				A53C44E71EA9DB75009D7651 /* Info.plist */,
 				A53C44571EA9DB66009D7651 /* AppDelegate.swift */,
@@ -1015,7 +1021,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C047191EC6DF9600F4E0DE /* DismissNavigationProtocol.swift */,
-				A5C0471B1EC6DF9600F4E0DE /* PopToNavigationProtocol.swift */,
+				A5C0471B1EC6DF9600F4E0DE /* PopNavigationProtocol.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1378,6 +1384,7 @@
 				A53C44D51EA9DB66009D7651 /* RegistrationResponse.swift in Sources */,
 				A5C047A51EC6DFF500F4E0DE /* AuthCredentials.swift in Sources */,
 				A53C44B61EA9DB66009D7651 /* BaseViewController.swift in Sources */,
+				A51E415A1ECC3A3D00D94493 /* LoginPresenter.swift in Sources */,
 				A5C0475C1EC6DF9600F4E0DE /* SectionModel.swift in Sources */,
 				A53C44DB1EA9DB66009D7651 /* ProfileProtocol.swift in Sources */,
 				A5646D501EB27D6A00B008BB /* FacebookAuth.swift in Sources */,
@@ -1435,6 +1442,7 @@
 				A53C44CC1EA9DB66009D7651 /* RemindPasswordRequestProtocol.swift in Sources */,
 				A5C047771EC6DF9600F4E0DE /* QueryStringParser.swift in Sources */,
 				A5C0476B1EC6DF9600F4E0DE /* ImagePickerController+Configurator.swift in Sources */,
+				A51E415B1ECC3A3D00D94493 /* LoginViewController.swift in Sources */,
 				A5C047661EC6DF9600F4E0DE /* FRCTableViewProtocol.swift in Sources */,
 				A5646D521EB27D6A00B008BB /* GoogleAuthProtocol.swift in Sources */,
 				A5C0475E1EC6DF9600F4E0DE /* TableViewFRCDataSource.swift in Sources */,
@@ -1464,7 +1472,7 @@
 				A53C44D41EA9DB66009D7651 /* ProfileRepsonse.swift in Sources */,
 				A5C047741EC6DF9600F4E0DE /* UIStoryboard+Load.swift in Sources */,
 				A5C047801EC6DF9600F4E0DE /* RequestErrorHandlerProtocol.swift in Sources */,
-				A5C047871EC6DF9600F4E0DE /* PopToNavigationProtocol.swift in Sources */,
+				A5C047871EC6DF9600F4E0DE /* PopNavigationProtocol.swift in Sources */,
 				A5C047A11EC6DF9600F4E0DE /* EqualStringsValidator.swift in Sources */,
 				A5C047611EC6DF9600F4E0DE /* FRCCollectionViewModelProtocol.swift in Sources */,
 				A5C047681EC6DF9600F4E0DE /* AlertController+PresentationProtocol.swift in Sources */,

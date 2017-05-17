@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PopToNavigationProtocol {
+protocol PopNavigationProtocol {
     
     func popTo<T: UIViewController>(controller type: T.Type,
                from controller: UIViewController,
@@ -19,7 +19,7 @@ protocol PopToNavigationProtocol {
     
 }
 
-extension PopToNavigationProtocol {
+extension PopNavigationProtocol {
     
     func popTo<T: UIViewController>(controller type: T.Type,
                from controller: UIViewController,

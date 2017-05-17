@@ -11,8 +11,8 @@ import Foundation
 extension AppDelegate {
 
     func checkForToken(url: String?) {
-        if let token = QueryStringParser.queryStringParameter(url: url,
-                                                              param: "token") {
+        if let token = QueryStringParser.parameter(fromURL: url,
+                                                   name: "token") {
             presentChangePasswordDialog(token: token)
         }
     }
