@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>UIViewController+Presenter</string>
+	<key>Description</key>
+	<string>Generates a View Controller, Presenter</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>MainTemplateFiles</key>
+	<array>
+		<string>___FILEBASENAME___ViewController.swift</string>
+		<string>___FILEBASENAME___Presenter.swift</string>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Summary</key>
+	<string>Templates for Swift using MVP Model</string>
+</dict>
+</plist>

@@ -47,8 +47,6 @@
 		A51E41D91ECC63FD00D94493 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41B51ECC63FD00D94493 /* EqualStringsValidator.swift */; };
 		A51E41DA1ECC63FD00D94493 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41B61ECC63FD00D94493 /* PasswordValidator.swift */; };
 		A51E41DB1ECC63FD00D94493 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41B81ECC63FD00D94493 /* ValidationHelper.swift */; };
-		A51E41DE1ECC641200D94493 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41DC1ECC641200D94493 /* LoginPresenter.swift */; };
-		A51E41DF1ECC641200D94493 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41DD1ECC641200D94493 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,8 +92,6 @@
 		A51E41B51ECC63FD00D94493 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A51E41B61ECC63FD00D94493 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A51E41B81ECC63FD00D94493 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
-		A51E41DC1ECC641200D94493 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		A51E41DD1ECC641200D94493 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFE0D56C66F291D763AD36CA /* Pods_MVP_Reusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP_Reusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ADECA712880672DE40A71A /* Pods-MVP Reusable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP Reusable.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP Reusable/Pods-MVP Reusable.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,8 +139,6 @@
 			children = (
 				A51E417E1ECC63FD00D94493 /* Utils */,
 				A51E41681ECC5E3C00D94493 /* AppDelegate.swift */,
-				A51E41DC1ECC641200D94493 /* LoginPresenter.swift */,
-				A51E41DD1ECC641200D94493 /* LoginViewController.swift */,
 				A51E416C1ECC5E3C00D94493 /* Main.storyboard */,
 				A51E416F1ECC5E3C00D94493 /* Assets.xcassets */,
 				A51E41711ECC5E3C00D94493 /* LaunchScreen.storyboard */,
@@ -515,7 +509,6 @@
 				A51E41C01ECC63FD00D94493 /* ReusableCell.swift in Sources */,
 				A51E41D41ECC63FD00D94493 /* EmailTextField.swift in Sources */,
 				A51E41CC1ECC63FD00D94493 /* TextFieldsManager.swift in Sources */,
-				A51E41DF1ECC641200D94493 /* LoginViewController.swift in Sources */,
 				A51E41B91ECC63FD00D94493 /* ArrayDataSource.swift in Sources */,
 				A51E41CA1ECC63FD00D94493 /* FRCTableViewModelProtocol.swift in Sources */,
 				A51E41DA1ECC63FD00D94493 /* PasswordValidator.swift in Sources */,
@@ -546,7 +539,6 @@
 				A51E41C41ECC63FD00D94493 /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A51E41BF1ECC63FD00D94493 /* DataSourceViewModel.swift in Sources */,
 				A51E41CD1ECC63FD00D94493 /* APIClient.swift in Sources */,
-				A51E41DE1ECC641200D94493 /* LoginPresenter.swift in Sources */,
 				A51E41D01ECC63FD00D94493 /* ActivityProtocol.swift in Sources */,
 				A51E41C81ECC63FD00D94493 /* ArrayTableViewModelProtocol.swift in Sources */,
 			);
