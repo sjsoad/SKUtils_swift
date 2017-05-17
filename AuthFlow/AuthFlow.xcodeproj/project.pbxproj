@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */; };
 		A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */; };
-		A51E415A1ECC3A3D00D94493 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */; };
-		A51E415B1ECC3A3D00D94493 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E41591ECC3A3D00D94493 /* LoginViewController.swift */; };
 		A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44571EA9DB66009D7651 /* AppDelegate.swift */; };
 		A53C44B31EA9DB66009D7651 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C445A1EA9DB66009D7651 /* Constants.swift */; };
 		A53C44B61EA9DB66009D7651 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C44611EA9DB66009D7651 /* BaseViewController.swift */; };
@@ -165,8 +163,6 @@
 		899B44949134F565E34D42FE /* Pods-AuthFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthFlow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthFlow/Pods-AuthFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		A5069B7A1EB2FCCD007BBB64 /* TwitterAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuth.swift; sourceTree = "<group>"; };
 		A5069B7B1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthProtocol.swift; sourceTree = "<group>"; };
-		A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		A51E41591ECC3A3D00D94493 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A53C44571EA9DB66009D7651 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AuthFlow/AppDelegate.swift; sourceTree = "<group>"; };
 		A53C445A1EA9DB66009D7651 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A53C44611EA9DB66009D7651 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -648,8 +644,6 @@
 		A54F50641EA8F83B007DD713 = {
 			isa = PBXGroup;
 			children = (
-				A51E41581ECC3A3D00D94493 /* LoginPresenter.swift */,
-				A51E41591ECC3A3D00D94493 /* LoginViewController.swift */,
 				A53C44E61EA9DB75009D7651 /* Assets.xcassets */,
 				A53C44E71EA9DB75009D7651 /* Info.plist */,
 				A53C44571EA9DB66009D7651 /* AppDelegate.swift */,
@@ -1384,7 +1378,6 @@
 				A53C44D51EA9DB66009D7651 /* RegistrationResponse.swift in Sources */,
 				A5C047A51EC6DFF500F4E0DE /* AuthCredentials.swift in Sources */,
 				A53C44B61EA9DB66009D7651 /* BaseViewController.swift in Sources */,
-				A51E415A1ECC3A3D00D94493 /* LoginPresenter.swift in Sources */,
 				A5C0475C1EC6DF9600F4E0DE /* SectionModel.swift in Sources */,
 				A53C44DB1EA9DB66009D7651 /* ProfileProtocol.swift in Sources */,
 				A5646D501EB27D6A00B008BB /* FacebookAuth.swift in Sources */,
@@ -1442,7 +1435,6 @@
 				A53C44CC1EA9DB66009D7651 /* RemindPasswordRequestProtocol.swift in Sources */,
 				A5C047771EC6DF9600F4E0DE /* QueryStringParser.swift in Sources */,
 				A5C0476B1EC6DF9600F4E0DE /* ImagePickerController+Configurator.swift in Sources */,
-				A51E415B1ECC3A3D00D94493 /* LoginViewController.swift in Sources */,
 				A5C047661EC6DF9600F4E0DE /* FRCTableViewProtocol.swift in Sources */,
 				A5646D521EB27D6A00B008BB /* GoogleAuthProtocol.swift in Sources */,
 				A5C0475E1EC6DF9600F4E0DE /* TableViewFRCDataSource.swift in Sources */,

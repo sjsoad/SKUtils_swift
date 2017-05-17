@@ -1,0 +1,6 @@
+framework module Pods_MVP_Reusable {
+  umbrella header "Pods-MVP Reusable-umbrella.h"
+
+  export *
+  module * { export * }
+}
