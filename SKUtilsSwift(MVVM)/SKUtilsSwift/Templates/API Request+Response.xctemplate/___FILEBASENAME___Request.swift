@@ -11,17 +11,21 @@ import UIKit
 import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___Request: APIRequestProtocol {
-        
-        typealias Response = ___FILEBASENAMEASIDENTIFIER___Response
-        
-        var HTTPMethod: Method {
-            return .<#post#>
-        }
-        var parameters: [String : Any]?
-        var headers: [String: String]?
-        var path: String = ""
-        
-        required init() {
-            
-        }
+    
+    typealias Response = ___FILEBASENAMEASIDENTIFIER___Response
+    
+    var HTTPMethod: Method {
+        return .<#post#>
+    }
+    private(set)var parameters: [String : Any]?
+    private(set)var headers: [String: String]?
+    private(set)var path: String = ""
+    
+    required init(withURL url: String,
+                  parameters: [String : Any]? = nil,
+                  headers: [String : String]? = nil) {
+        self.parameters = parameters
+        self.headers = headers
+        self.path = url
+    }
 }
