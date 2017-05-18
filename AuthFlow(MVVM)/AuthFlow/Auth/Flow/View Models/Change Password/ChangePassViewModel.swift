@@ -22,8 +22,8 @@ class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHe
     
     func validate(password: String?,
                   confirmation: String?) -> ValidationResult {
-        let passwordValidated = passValidator().isValid(password)
-        let passwordEqual = equalValidator().isEqual(password,
+        let passwordValidated = passValidator.isValid(password)
+        let passwordEqual = equalValidator.isEqual(password,
                                                      secondString: confirmation)
         if !passwordValidated {
             return ValidationResult(succeed: false, error: "")

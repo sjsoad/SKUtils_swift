@@ -16,9 +16,9 @@ class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHe
     func validate(email: String?,
                   password: String?,
                   username: String?) -> ValidationResult {
-        let emailValidated = emailValidator().isValid(email)
-        let passwordValidated = passValidator().isValid(password)
-        let usernameValidated = baseValidator().isValid(username)
+        let emailValidated = emailValidator.isValid(email)
+        let passwordValidated = passValidator.isValid(password)
+        let usernameValidated = baseValidator.isValid(username)
         if !emailValidated {
             return ValidationResult(succeed: false, error: "")
         }

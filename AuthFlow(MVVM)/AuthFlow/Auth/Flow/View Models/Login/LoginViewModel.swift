@@ -35,8 +35,8 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
     
     func validate(email: String?, password: String?) -> ValidationResult {
         tryToLogin = false
-        let emailValidated = emailValidator().isValid(email)
-        let passValidated = passValidator().isValid(password)
+        let emailValidated = emailValidator.isValid(email)
+        let passValidated = passValidator.isValid(password)
         if emailValidated, passValidated {
 //            <#login(email: email!, password: password!)#>
             return ValidationResult(succeed: true, error: nil)

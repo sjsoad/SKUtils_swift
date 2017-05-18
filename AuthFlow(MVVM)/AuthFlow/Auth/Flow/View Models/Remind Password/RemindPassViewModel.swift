@@ -14,7 +14,7 @@ class RemindPassViewModel: NSObject, RemindPasswordRequestProtocol, ValidationHe
     var executingHandlerForRemindPassword: RequerstExecutingHandler?
     
     func validate(email: String?) -> ValidationResult {
-        let emailValidated = emailValidator().isValid(email)
+        let emailValidated = emailValidator.isValid(email)
         if emailValidated {
 //            <#remindPassword(email: email!)#>
             return ValidationResult(succeed: true, error: nil)
