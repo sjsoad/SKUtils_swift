@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___Interface: class {
+protocol ___FILEBASENAMEASIDENTIFIER___Interface: class, ActivityProtocol {
     
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output {
+protocol ___FILEBASENAMEASIDENTIFIER___Output: RequestExecutingProtocol {
     
 }
 
@@ -32,6 +32,12 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Out
         let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter(with: vc)
         vc.presenter = presenter
         //navigation
+    }
+    
+    //MARK: - Activity Protocol
+    
+    func activityView() -> ActivityProtocol? {
+        return view
     }
     
 }

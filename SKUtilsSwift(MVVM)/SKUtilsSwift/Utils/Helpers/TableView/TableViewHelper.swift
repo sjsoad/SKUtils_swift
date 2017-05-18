@@ -7,17 +7,10 @@
 //
 
 import UIKit
-import Foundation
 
-protocol DynamicTableViewCellProtocol {
-
-    func activateDynamicCellHeight(for tableView: UITableView)
+class TableViewHelper {
     
-}
-
-extension DynamicTableViewCellProtocol {
-
-    func activateDynamicCellHeight(for tableView: UITableView) {
+    static func activateDynamicCellHeight(for tableView: UITableView) {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
     }

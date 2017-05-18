@@ -12,6 +12,7 @@
 	<array>
 		<string>___FILEBASENAME___ViewController.swift</string>
 		<string>___FILEBASENAME___Presenter.swift</string>
+		<string>___FILEBASENAME___ViewController.xib</string>
 	</array>
 	<key>Platforms</key>
 	<array>
