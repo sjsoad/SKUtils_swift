@@ -38,12 +38,11 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel,
-            let cellReuseIdentifier = itemModel.cellReuseIdentifier {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier,
+        if let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellReuseIdentifier,
                                                           for: indexPath)
             if let configurableCell = cell as? ConfigurableCell {
-                configurableCell.configure(viewModel: itemModel)
+                configurableCell.configure(viewModel: viewModel)
             }
             return cell
         }

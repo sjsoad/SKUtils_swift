@@ -10,6 +10,6 @@ import Foundation
 
 protocol DataSourceViewModel {
     
-    var cellReuseIdentifier: String? { get set }
+    var cellReuseIdentifier: String { get }
     
 }

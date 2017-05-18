@@ -38,11 +38,10 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let itemModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel,
-            let cellReuseIdentifier = itemModel.cellReuseIdentifier,
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier),
+        if let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel,
+            let cell = tableView.dequeueReusableCell(withIdentifier:  viewModel.cellReuseIdentifier),
             let configurableCell = cell as? ConfigurableCell {
-            configurableCell.configure(viewModel: itemModel)
+            configurableCell.configure(viewModel: viewModel)
             return cell
         }
         return UITableViewCell()

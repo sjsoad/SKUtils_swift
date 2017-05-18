@@ -11,11 +11,12 @@ import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___CellViewModel: DataSourceViewModel {
     
-    var cellReuseIdentifier: String?
+    private(set) var cellReuseIdentifier: String
     private let model: <#ModelType#>
     
-    init(with objectModel: <#ModelType#>) {
+    init(with objectModel: <#ModelType#>, cellIdentifier: String) {
         model = objectModel
+        cellReuseIdentifier = cellIdentifier
     }
     
 }
