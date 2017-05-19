@@ -28,4 +28,5 @@ class ___FILEBASENAMEASIDENTIFIER___Request: APIRequestProtocol {
         self.headers = headers
         self.path = url
     }
+    
 }

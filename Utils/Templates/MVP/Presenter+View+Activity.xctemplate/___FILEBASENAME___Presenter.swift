@@ -25,7 +25,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Out
         self.view = view
     }
     
-    //MARK - -
+    // MARK - -
     
     static func showView(in <#window,navigation,etc#>: <#type#>) {
         let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
@@ -34,7 +34,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Out
         //navigation
     }
     
-    //MARK: - Activity Protocol -
+    // MARK: - Activity Protocol -
     
     func activityView() -> ActivityProtocol? {
         return view

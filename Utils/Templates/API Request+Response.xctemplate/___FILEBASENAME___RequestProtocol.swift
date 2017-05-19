@@ -38,7 +38,7 @@ extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
                                          failure: errorHandlerFor___FILEBASENAME___())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler {
         return { [weak self] response in

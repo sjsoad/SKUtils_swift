@@ -25,7 +25,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter {
         self.view = view
     }
     
-    //MARK: - -
+    // MARK: - -
     
     static func showView(in <#window,navigation,etc#>: <#type#>) {
         let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
@@ -36,7 +36,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter {
     
 }
 
-//MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
+// MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
 
 extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Output {
 
