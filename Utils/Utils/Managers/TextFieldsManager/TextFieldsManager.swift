@@ -10,25 +10,25 @@ import UIKit
 
 class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
-    var textFields : [UITextField] = Array()
+    var textFields: [UITextField] = Array()
     
-    @IBOutlet var scroll : UIScrollView? = nil {
+    @IBOutlet var scroll: UIScrollView? = nil {
         didSet {
             getTextFieldsInView(scroll)
             addTapGestureRecognizer()
         }
     }
     
-    @IBInspectable var hideOnTap : Bool = true
+    @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration = 0.25
-    @IBInspectable var additionalSpaceAboveKeyboard : CGFloat = 0.0
+    @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0
     
     override init() {
         super.init()
         subscribeForKeyboardNotifications()
     }
     
-    //MARK: - Getting UITextFields
+    // MARK: - Getting UITextFields
     
     func getTextFieldsInView(_ view: UIView?) {
         guard let view = view else { return }
@@ -38,14 +38,13 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                                     action: #selector(TextFieldsManager.returnButtonPressed),
                                     for: UIControlEvents.editingDidEndOnExit)
                 textFields.append(textField)
-            }
-            else {
+            } else {
                 getTextFieldsInView(subView)
             }
         }
     }
     
-    //MARK: - Set hide keyboard on tap
+    // MARK: - Set hide keyboard on tap
     
     func addTapGestureRecognizer() {
         guard let scroll = scroll else { return }
@@ -56,7 +55,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    //MARK: - Subscribe for keyboard notifications
+    // MARK: - Subscribe for keyboard notifications
     
     func subscribeForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
@@ -69,7 +68,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                                                object: nil)
     }
     
-    //MARK: - Handle keyboard notifications
+    // MARK: - Handle keyboard notifications
     
     func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
@@ -90,7 +89,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         })
     }
     
-    //MARK: - Other functions
+    // MARK: - Other functions
     
      func returnButtonPressed(_ textField: UITextField) {
         sortTextFieldsByY()
@@ -99,8 +98,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             if newIndex < self.textFields.count {
                 let nextTextField = self.textFields[newIndex]
                 _ = nextTextField.becomeFirstResponder()
-            }
-            else {
+            } else {
                 hideKeyboard()
             }
         }
@@ -120,7 +118,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         scroll.scrollRectToVisible(frame, animated: true)
     }
 
-    //MARK: - Utils
+    // MARK: - Utils
 
     func clearTextField() {
         for field in textFields {

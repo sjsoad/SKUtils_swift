@@ -18,8 +18,7 @@ class TwitterAuth: NSObject, ScialNetworkAuthProtocol {
                 handler(nil,
                         .twitter,
                         error)
-            }
-            else if let currentSession = session {
+            } else if let currentSession = session {
                 handler(currentSession.authToken,
                         .twitter,
                         nil)
@@ -34,5 +33,4 @@ class TwitterAuth: NSObject, ScialNetworkAuthProtocol {
         }
     }
 
-    
 }

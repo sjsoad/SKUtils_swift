@@ -20,7 +20,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     var loginProcessor: LoginProcessorProtocol?
     var registrationViewModel = RegistrationViewModel()
     
-    override func viewDidLoad(){
+    override func viewDidLoad() {
         super.viewDidLoad()
         registrationViewModel.resultOfRegistrationRequest.bind { [weak self] (registrationSucceed) in
             guard let strongSelf = self else { return }
@@ -38,7 +38,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
         registrationViewModel.executingHandlerForRegistration = requerstExecutingHandler()
     }
     
-    //MARK: - IBActions
+    // MARK: - IBActions
     
     @IBAction func registrationButtonPresed(_ sender: UIButton) {
         textFieldsManager.hideKeyboard()

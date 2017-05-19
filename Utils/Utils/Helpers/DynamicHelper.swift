@@ -10,24 +10,25 @@ import Foundation
 
 class Dynamic<T> {
     
-    typealias Listener = (T) -> ()
+    typealias Listener = (T) -> Void
     
     private var listeners: [Listener] = []
-    init(_ v: T) {
-        value = v
+    init(_ val: T) {
+        value = val
     }
     var value: T {
         didSet {
-            for l in listeners { l(value) } }
+            for listener in listeners { listener(value) } }
     }
-    func bind(l: @escaping Listener) {
-        listeners.append(l)
-        l(value)
+    func bind(listener: @escaping Listener) {
+        listeners.append(listener)
+        listener(value)
     }
-    func addListener(l: @escaping Listener) {
-        listeners.append(l)
+    func addListener(listener: @escaping Listener) {
+        listeners.append(listener)
     }
     func clear() {
         listeners.removeAll()
     }
 }
+

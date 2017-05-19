@@ -21,8 +21,7 @@ class FacebookAuth: NSObject, ScialNetworkAuthProtocol {
                                 handler(nil ,
                                         .facebook,
                                         error)
-                            }
-                            else if let result = loginResult {
+                            } else if let result = loginResult {
                                 if !result.isCancelled {
                                     handler(result.token.tokenString,
                                             .facebook,

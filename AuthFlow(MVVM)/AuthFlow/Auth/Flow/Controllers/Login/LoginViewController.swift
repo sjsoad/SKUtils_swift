@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
         }
     }
     
-    //MARK: - Action
+    // MARK: - Action
     
     func tryTologin() {
         textFieldsManager.hideKeyboard()
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
         
     }
     
-    //MARK: - IBAction
+    // MARK: - IBAction
     
     @IBAction func facebookButtonPressed(_ sender: UIButton) {
         loginViewModel.loginWithFacebook(fromController: self)

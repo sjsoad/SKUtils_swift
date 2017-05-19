@@ -33,7 +33,7 @@ class ChangePassViewController: DissmisableViewController, Presentation, Request
         // Do any additional setup after loading the view.
     }
 
-    //MARK: - IBActions
+    // MARK: - IBActions
     
     @IBAction func changeButtonPresed(_ sender: UIButton) {
         textFieldsManager.hideKeyboard()

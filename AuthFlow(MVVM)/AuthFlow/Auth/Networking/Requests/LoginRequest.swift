@@ -27,5 +27,4 @@ class LoginRequest: APIRequestProtocol {
         self.path = url
     }
 
-    
 }

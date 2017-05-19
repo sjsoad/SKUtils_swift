@@ -9,15 +9,13 @@
 import UIKit
 import GoogleSignIn
 
-//MARK: - Maybe it's not using
-
 @objc protocol GoogleAuthViewControllerProtocol: GIDSignInUIDelegate {
 
 }
 
 extension GoogleAuthViewControllerProtocol where Self: UIViewController {
 
-    //MARK: - GIDSignInUIDelegate
+    // MARK: - GIDSignInUIDelegate
     
     func sign(_ signIn: GIDSignIn!,
               present viewController: UIViewController!) {

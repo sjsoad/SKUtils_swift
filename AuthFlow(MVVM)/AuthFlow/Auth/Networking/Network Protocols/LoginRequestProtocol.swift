@@ -17,7 +17,7 @@ protocol LoginRequestProtocol: AuthCredentialsProtocol, RequestErrorHandlerProto
     func login(accessToken: String,
                grantType: GrantType)
     
-    func successHandlerForLogin() ->LoginSuccessHandler
+    func successHandlerForLogin() -> LoginSuccessHandler
     func errorHandlerForLogin() -> ErrorHandler
     
     var executingHandlerForLogin: RequerstExecutingHandler? { get set }
@@ -34,11 +34,11 @@ extension LoginRequestProtocol where Self: NSObject {
         let urlString = API.host + API.emailLogin
         let loginRequest = LoginRequest(withURL: urlString,
                                         parameters: ["_username": email,
-                                                     "_password" : password])
+                                                     "_password": password])
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: loginRequest,
-                                         success: successHandlerForLogin(),
-                                         failure: errorHandlerForLogin())
+        _ = apiClient.executeRequest(request: loginRequest,
+                                     success: successHandlerForLogin(),
+                                     failure: errorHandlerForLogin())
     }
     
     func login(accessToken: String,
@@ -51,12 +51,12 @@ extension LoginRequestProtocol where Self: NSObject {
         let urlString = API.host + socialLoginEndpoint
         let socialLoginRequest = SocialLoginRequest(withURL: urlString)
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: socialLoginRequest,
-                                         success: successHandlerForLogin(),
-                                         failure: errorHandlerForLogin())
+        _ = apiClient.executeRequest(request: socialLoginRequest,
+                                     success: successHandlerForLogin(),
+                                     failure: errorHandlerForLogin())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerForLogin() -> LoginSuccessHandler {
         return { [weak self] response in

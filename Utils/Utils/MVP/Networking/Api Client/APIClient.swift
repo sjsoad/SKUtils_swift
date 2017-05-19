@@ -16,8 +16,8 @@ class APIClient: NSObject {
     // MARK: - Public Methods
     
     func executeRequest<T: APIRequestProtocol>(request: T,
-                        success: ((_ response: T.Response) -> Void)? = nil,
-                        failure: ErrorHandler? = nil) -> Request? {
+                                               success: ((_ response: T.Response) -> Void)? = nil,
+                                            failure: ErrorHandler? = nil) -> Request? {
         
         return Alamofire.request(request.path,
                                  method: request.HTTPMethod,

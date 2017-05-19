@@ -27,8 +27,7 @@ extension RequestExecutingProtocol where Self: NSObject {
             let view = strongSelf.activityView() else { return }
             if executing {
                 view.showActivity()
-            }
-            else {
+            } else {
                 view.hideActivity()
             }
             guard let error = error else { return }

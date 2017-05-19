@@ -18,8 +18,8 @@ class InstagramAuthViewController: UIViewController {
     var handler: SocalNetworkAuthHandler!
     
     private enum InstagramEndpoints: String {
-        case Authorize = "/oauth/authorize/"
-        case AccessToken = "/oauth/access_token/"
+        case authorize = "/oauth/authorize/"
+        case accessToken = "/oauth/access_token/"
     }
     
     private var webView: UIWebView!
@@ -69,7 +69,7 @@ class InstagramAuthViewController: UIViewController {
         activityIndicatorView.isHidden = false
         activityIndicatorView.startAnimating()
         
-        let authUrl = baseURL + InstagramEndpoints.Authorize.rawValue
+        let authUrl = baseURL + InstagramEndpoints.authorize.rawValue
         let components = NSURLComponents(string: authUrl)!
         components.queryItems = [
             URLQueryItem(name: "client_id", value: clientId),
@@ -83,7 +83,7 @@ class InstagramAuthViewController: UIViewController {
     }
     
     internal func requestAccessToken(code: String) {
-        let tokenUrl = baseURL + InstagramEndpoints.AccessToken.rawValue
+        let tokenUrl = baseURL + InstagramEndpoints.accessToken.rawValue
         let components = NSURLComponents(string: tokenUrl)!
         components.queryItems = [
             URLQueryItem(name: "client_id", value: clientId),
@@ -110,8 +110,9 @@ class InstagramAuthViewController: UIViewController {
     
     private func getAccessToken(data: NSData) {
         do {
-            let result = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as! [String: AnyObject]
-            let accessToken = result["access_token"] as! String
+            guard let result = try JSONSerialization.jsonObject(with: data as Data,
+                                                                options: .allowFragments) as? [String: AnyObject],
+                let accessToken = result["access_token"] as? String else { return }
             handler(accessToken,
                     .instagram,
                     nil)
@@ -133,10 +134,9 @@ class InstagramAuthViewController: UIViewController {
 
 extension InstagramAuthViewController: UIWebViewDelegate {
     
-    
     internal func webView(_ webView: UIWebView,
-                         shouldStartLoadWith request: URLRequest,
-                         navigationType: UIWebViewNavigationType) -> Bool {
+                          shouldStartLoadWith request: URLRequest,
+                          navigationType: UIWebViewNavigationType) -> Bool {
         let urlString = request.url!.absoluteString
         if let range = urlString.range(of: redirectUri + "/?code=") {
             let location = range.upperBound

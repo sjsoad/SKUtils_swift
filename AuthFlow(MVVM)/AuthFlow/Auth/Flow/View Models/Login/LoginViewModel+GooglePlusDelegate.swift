@@ -13,7 +13,7 @@ extension LoginViewModel: GIDSignInDelegate {
     public func sign(_ signIn: GIDSignIn!,
                      didSignInFor user: GIDGoogleUser!,
                      withError error: Error!) {
-        if (error == nil) {
+        if error == nil {
             authHandler(signIn.currentUser.authentication.accessToken,
                         .googlePlus,
                         nil)

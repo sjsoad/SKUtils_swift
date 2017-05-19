@@ -30,8 +30,7 @@ extension LoginNavigationProtocol {
                           animated: animated) {
             add(loginProcessor: loginProcessor,
                 to: vc)
-        }
-        else {
+        } else {
             let vc = UIStoryboard.load(controller: LoginViewController.self,
                                        from: "Login")
             add(loginProcessor: loginProcessor,

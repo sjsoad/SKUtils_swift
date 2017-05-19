@@ -1,4 +1,4 @@
- //
+//
  //  RegistrationProtocol.swift
  //  GeoTouch
  //
@@ -27,8 +27,7 @@
                           animated: animated) {
             add(loginProcessor: loginProcessor,
                 to: vc)
-        }
-        else {
+        } else {
             let vc = UIStoryboard.load(controller: RegistrationViewController.self,
                                        from: "Registration")
             add(loginProcessor: loginProcessor,

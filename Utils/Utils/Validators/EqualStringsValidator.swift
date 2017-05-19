@@ -13,8 +13,7 @@ class EqualStringsValidator: NSObject {
     func isEqual(_ firstString: String?, secondString: String?) -> Bool {
         if firstString == nil || secondString == nil {
             return false
-        }
-        else {
+        } else {
             return firstString == secondString
         }
     }

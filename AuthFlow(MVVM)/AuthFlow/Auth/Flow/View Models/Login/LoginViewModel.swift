@@ -26,8 +26,7 @@ class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, Facebook
             if error == nil, let token = accessToken {
                 strongSelf.login(accessToken: token,
                                  grantType: type)
-            }
-            else if let executingHandler = strongSelf.executingHandlerForLogin {
+            } else if let executingHandler = strongSelf.executingHandlerForLogin {
                 executingHandler(false, error)
             }
         }

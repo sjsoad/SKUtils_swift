@@ -27,5 +27,4 @@ class RemindPasswordRequest: APIRequestProtocol {
         self.path = url
     }
 
-    
 }

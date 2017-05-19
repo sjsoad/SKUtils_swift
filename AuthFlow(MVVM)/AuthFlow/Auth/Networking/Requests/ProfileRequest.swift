@@ -23,6 +23,5 @@ class ProfileRequest: APIRequestProtocol {
         self.headers = headers
         self.path = url
     }
-
     
 }

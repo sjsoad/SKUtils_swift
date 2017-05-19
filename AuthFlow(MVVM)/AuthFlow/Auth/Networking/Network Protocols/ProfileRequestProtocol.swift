@@ -26,7 +26,7 @@ extension ProfileRequestProtocol where Self: NSObject {
     func profile(authCredentials: AuthCredentials) {
         let urlString = API.host + API.profile
         profile(parameters: nil,
-                headers: ["Authorization" : "Bearer " + authCredentials.accessToken],
+                headers: ["Authorization": "Bearer " + authCredentials.accessToken],
                 urlString: urlString)
     }
     
@@ -41,12 +41,12 @@ extension ProfileRequestProtocol where Self: NSObject {
                                             parameters: parameters,
                                             headers: headers)
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: profileRequest,
-                                         success: successHandlerForProfile(),
-                                         failure: errorHandlerForProfile())
+        _ = apiClient.executeRequest(request: profileRequest,
+                                     success: successHandlerForProfile(),
+                                     failure: errorHandlerForProfile())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerForProfile() -> ProfileSuccessHandler {
         return { [weak self] response in

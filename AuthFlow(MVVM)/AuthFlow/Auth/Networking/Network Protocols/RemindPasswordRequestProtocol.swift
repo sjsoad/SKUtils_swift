@@ -32,12 +32,12 @@ extension RemindPasswordRequestProtocol where Self: NSObject {
         let remindPassRequest = RemindPasswordRequest(withURL: urlString,
                                                       parameters: ["email": email])
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: remindPassRequest,
-                                         success: successHandlerForRemindPassword(),
-                                         failure: errorHandlerForRemindPassword())
+        _ = apiClient.executeRequest(request: remindPassRequest,
+                                     success: successHandlerForRemindPassword(),
+                                     failure: errorHandlerForRemindPassword())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerForRemindPassword() -> RemindPasswordSuccessHandler {
         return { [weak self] response in

@@ -24,5 +24,4 @@ class SocialLoginRequest: APIRequestProtocol {
         self.path = url
     }
 
-    
 }

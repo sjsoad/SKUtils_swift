@@ -34,12 +34,12 @@ extension ChangePasswordRequestProtocol where Self: NSObject {
         let changePassRequest = ChangePasswordRequest(withURL: urlString,
                                                       parameters: ["plainPassword": password])
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: changePassRequest,
-                                         success: successHandlerForChangePassword(),
-                                         failure: errorHandlerForChangePassword())
+        _ = apiClient.executeRequest(request: changePassRequest,
+                                     success: successHandlerForChangePassword(),
+                                     failure: errorHandlerForChangePassword())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerForChangePassword() -> ChangePasswordSuccessHandler {
         return { [weak self] response in

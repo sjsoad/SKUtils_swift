@@ -18,8 +18,10 @@ protocol GoogleAuthProtocol: SocalNetworkAuthHandlerProtocol {
 extension GoogleAuthProtocol {
 
     func loginWithGooglePlus(fromController controller: UIViewController) {
-        GIDSignIn.sharedInstance().delegate = self as! GIDSignInDelegate
-        GIDSignIn.sharedInstance().uiDelegate = controller as! GIDSignInUIDelegate
+        guard let delegate = self as? GIDSignInDelegate else { return }
+        guard let uiDelegate = self as? GIDSignInUIDelegate else { return }
+        GIDSignIn.sharedInstance().delegate = delegate
+        GIDSignIn.sharedInstance().uiDelegate = uiDelegate
         let googleAuth = GooglePlusAuth()
         googleAuth.login(handler: authHandler,
                          fromController: controller)

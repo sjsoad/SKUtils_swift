@@ -30,9 +30,9 @@ extension RegistrationRequestProtocol where Self: NSObject {
                   nickname: String,
                   password: String) {
         let urlString = API.host + API.registration
-        let paramteres = ["email" : email,
-                          "nickName" : nickname,
-                          "plainPassword" : password]
+        let paramteres = ["email": email,
+                          "nickName": nickname,
+                          "plainPassword": password]
         register(parameters: paramteres,
                  urlString: urlString)
     }
@@ -46,12 +46,12 @@ extension RegistrationRequestProtocol where Self: NSObject {
         let registrationRequest = RegistrationRequest(withURL: urlString,
                                                       parameters: parameters)
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: registrationRequest,
-                                         success: successHandlerForRegistration(),
-                                         failure: errorHandlerForRegistration())
+        _ = apiClient.executeRequest(request: registrationRequest,
+                                     success: successHandlerForRegistration(),
+                                     failure: errorHandlerForRegistration())
     }
     
-    //MARK: - Handlers
+    // MARK: - Handlers
     
     func successHandlerForRegistration() -> RegistrationSuccessHandler {
         return { [weak self] response in

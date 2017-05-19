@@ -21,14 +21,12 @@ class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHe
         let usernameValidated = baseValidator.isValid(username)
         if !emailValidated {
             return ValidationResult(succeed: false, error: "")
-        }
-        else if !passwordValidated {
+        } else if !passwordValidated {
             return ValidationResult(succeed: false, error: "")
             
         } else if !usernameValidated {
             return ValidationResult(succeed: false, error: "")
-        }
-        else {
+        } else {
 //            <#register(email: email!, password: password!)#>
             return ValidationResult(succeed: true, error: nil)
         }

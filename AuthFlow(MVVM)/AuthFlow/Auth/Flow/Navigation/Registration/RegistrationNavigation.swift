@@ -10,5 +10,4 @@ import UIKit
 
 class RegistrationNavigation: BaseNavigation, LoginNavigationProtocol {
 
-    
 }

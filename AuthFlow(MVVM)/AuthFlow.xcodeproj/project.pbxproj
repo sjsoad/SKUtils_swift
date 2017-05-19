@@ -1199,6 +1199,7 @@
 				A54F506B1EA8F83C007DD713 /* Resources */,
 				C71D4C19578430660B5545A8 /* [CP] Embed Pods Frameworks */,
 				15F60E85415AD11CF1E370C6 /* [CP] Copy Pods Resources */,
+				A5F5FAA71ECEFB8F00D7E984 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -1274,6 +1275,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AuthFlow/Pods-AuthFlow-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A5F5FAA71ECEFB8F00D7E984 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		C71D4C19578430660B5545A8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
