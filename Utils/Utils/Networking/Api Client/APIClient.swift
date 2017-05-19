@@ -25,11 +25,11 @@ class APIClient: NSObject {
                                  headers: request.headers)
             /*          .validate(statusCode: 200..<300)*/ // optional validation
             .responseJSON(completionHandler: { (response) in
-                let json = response.result.value as AnyObject
+                guard let json = response.result.value else { return }
                 switch response.result {
                 case .success:
                     if let successClosure = success {
-                        let response: T.Response = T.Response(JSON: json)
+                        let response: T.Response = T.Response(JSON: json as AnyObject)
                         successClosure(response)
                     }
                 case .failure(let error):
