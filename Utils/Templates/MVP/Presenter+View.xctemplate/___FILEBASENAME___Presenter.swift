@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___Interface: class, ActivityProtocol {
+protocol ___FILEBASENAMEASIDENTIFIER___Interface: class {
     
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output: RequestExecutingProtocol {
+protocol ___FILEBASENAMEASIDENTIFIER___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Output {
+class ___FILEBASENAMEASIDENTIFIER___Presenter {
     
     private weak var view: ___FILEBASENAMEASIDENTIFIER___Interface?
     
@@ -25,7 +25,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Out
         self.view = view
     }
     
-    //MARK -
+    //MARK: - -
     
     static func showView(in <#window,navigation,etc#>: <#type#>) {
         let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
@@ -34,10 +34,11 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Out
         //navigation
     }
     
-    //MARK: - Activity Protocol
-    
-    func activityView() -> ActivityProtocol? {
-        return view
-    }
-    
+}
+
+//MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
+
+extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Output {
+
+
 }

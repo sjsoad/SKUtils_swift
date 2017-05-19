@@ -12,6 +12,8 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
 
     var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter?
 
+    //MARK: - Lifecircle -
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -20,4 +22,6 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
         super.viewDidLoad()
     }
 
+    //MARK: - ___FILEBASENAMEASIDENTIFIER___Interface -
+    
 }

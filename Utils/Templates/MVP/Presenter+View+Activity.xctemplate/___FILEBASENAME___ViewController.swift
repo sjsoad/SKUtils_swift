@@ -12,12 +12,15 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
 
     var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter?
 
+    //MARK: - Lifecircle -
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    //MARK: - ___FILEBASENAMEASIDENTIFIER___Interface -
 }

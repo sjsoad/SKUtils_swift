@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Alamofire
 
 typealias ErrorHandler = (_ error: Error) -> Void
@@ -18,7 +18,6 @@ class APIClient: NSObject {
     func executeRequest<T: APIRequestProtocol>(request: T,
                         success: ((_ response: T.Response) -> Void)? = nil,
                         failure: ErrorHandler? = nil) -> Request? {
-        
         return Alamofire.request(request.path,
                                  method: request.HTTPMethod,
                                  parameters: request.parameters,
