@@ -17,7 +17,7 @@ class APIClient: NSObject {
     
     func executeRequest<T: APIRequestProtocol>(request: T,
                                                success: ((_ response: T.Response) -> Void)? = nil,
-                                            failure: ErrorHandler? = nil) -> Request? {
+                                               failure: ErrorHandler? = nil) -> Request? {
         
         return Alamofire.request(request.path,
                                  method: request.HTTPMethod,
@@ -26,10 +26,11 @@ class APIClient: NSObject {
                                  headers: request.headers)
   /*          .validate(statusCode: 200..<300)*/ // optional validation
             .responseJSON(completionHandler: { (response) in
+                let json = response.result.value as AnyObject
                                     switch response.result {
                                     case .success:
                                         if let successClosure = success {
-                                            let response: T.Response = T.Response(JSON: response.result.value as AnyObject)
+                                            let response: T.Response = T.Response(JSON: json)
                                             successClosure(response)
                                         }
                                     case .failure(let error):
