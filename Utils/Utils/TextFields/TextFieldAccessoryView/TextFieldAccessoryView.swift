@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AccessoryViewState : Int {
+enum AccessoryViewState: Int {
     case error
     case success
     case defaults
@@ -17,23 +17,22 @@ enum AccessoryViewState : Int {
     static func stateForBool(_ valid: Bool) -> AccessoryViewState {
         if valid {
             return .success
-        }
-        else {
+        } else {
             return .error
         }
     }
 }
 
-typealias drawingHandler = (_ view: TextFieldAccessoryView) -> Void
+typealias DrawingHandler = (_ view: TextFieldAccessoryView) -> Void
 
 class TextFieldAccessoryView: UIView {
     
-    @IBInspectable var errorStateColor   : UIColor = UIColor.red
-    @IBInspectable var successStateColor : UIColor = UIColor.green
-    @IBInspectable var defaultStateColor : UIColor = UIColor.lightGray
-    @IBInspectable var activeStateColor  : UIColor = UIColor.darkGray
+    @IBInspectable var errorStateColor: UIColor = UIColor.red
+    @IBInspectable var successStateColor: UIColor = UIColor.green
+    @IBInspectable var defaultStateColor: UIColor = UIColor.lightGray
+    @IBInspectable var activeStateColor: UIColor = UIColor.darkGray
     
-    var drawing: drawingHandler?
+    var drawing: DrawingHandler?
     
     var currentViewState: AccessoryViewState = .defaults {
         didSet {
@@ -54,8 +53,7 @@ class TextFieldAccessoryView: UIView {
         super.draw(rect)
         if let drawingHandler = self.drawing {
             drawingHandler(self)
-        }
-        else {
+        } else {
             self.layer.borderColor = self.currentStateColor().cgColor
         }
     }

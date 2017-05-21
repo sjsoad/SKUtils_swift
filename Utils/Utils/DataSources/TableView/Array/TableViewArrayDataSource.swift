@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSource {
+class TableViewArrayDataSource: NSObject, UITableViewDataSource, ArrayDataSource {
 
-    private(set) var sections : [SectionModel] = []
+    private(set) var sections: [SectionModel] = []
     
-    //MARK: - Public
+    // MARK: - Public
     
     init(sections: [SectionModel]) {
         self.sections = sections
@@ -26,7 +26,7 @@ class TableViewArrayDataSource: NSObject , UITableViewDataSource, ArrayDataSourc
         sections.append(section)
     }
     
-    //MARK: - UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()

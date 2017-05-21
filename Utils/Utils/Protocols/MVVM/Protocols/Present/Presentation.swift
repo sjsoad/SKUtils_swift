@@ -15,12 +15,12 @@ protocol Presentation {
     func show(animated: Bool, completion: CompletionHandler?)
 }
 
-extension Presentation {
+extension Presentation where Self: UIViewController {
     
     func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
         _ = WindowBuilder.normalWindow(rootController: controller)
-        controller.present(self as! UIViewController,
+        controller.present(self,
                            animated: true,
                            completion: completion)
         

@@ -12,15 +12,14 @@ protocol AlertPresentation: Presentation {
     
 }
 
-extension AlertPresentation {
+extension AlertPresentation where Self: UIViewController {
     
     func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
         _ = WindowBuilder.alertWindow(rootController: controller)
-        controller.present(self as! UIViewController,
+        controller.present(self,
                            animated: true,
                            completion: completion)
     }
     
 }
-
