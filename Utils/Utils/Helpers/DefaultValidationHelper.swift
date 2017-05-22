@@ -10,7 +10,7 @@ import UIKit
 
 typealias ValidationResult = (succeed: Bool, error: String?)
 
-protocol ValidationHelper {
+protocol DefaultValidationHelper {
     
     var emailValidator: EmailValidator { get }
     var passValidator: PasswordValidator { get }
@@ -19,7 +19,7 @@ protocol ValidationHelper {
     
 }
 
-extension ValidationHelper {
+extension DefaultValidationHelper {
     
     var emailValidator: EmailValidator {
         return EmailValidator()
