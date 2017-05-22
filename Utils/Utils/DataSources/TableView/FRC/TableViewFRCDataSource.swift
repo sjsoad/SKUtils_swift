@@ -13,13 +13,13 @@ class TableViewFRCDataSource: NSObject, UITableViewDataSource, FRCDataSource {
 
     private(set) var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSManagedObject>()
     
-    //MARK: - Public
+    // MARK: - Public
     
     init(fetchedResultController: NSFetchedResultsController<NSManagedObject>) {
         self.fetchedResultController = fetchedResultController
     }
 
-    //MARK: - UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return numberOfSections()

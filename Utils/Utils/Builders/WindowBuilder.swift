@@ -21,9 +21,9 @@ class WindowBuilder: NSObject {
     }
     
     static func window(windowLevel: UIWindowLevel,
-                               rootController: UIViewController?) -> UIWindow {
+                       rootController: UIViewController?) -> UIWindow {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.windowLevel = windowLevel;
+        window.windowLevel = windowLevel
         window.makeKeyAndVisible()
         window.rootViewController = rootController
         return window

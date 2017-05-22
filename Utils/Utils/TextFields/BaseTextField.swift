@@ -10,6 +10,6 @@ import UIKit
 
 class BaseTextField: UITextField {
     
-    @IBOutlet var visualisationView : TextFieldAccessoryView? = nil
+    @IBOutlet var visualisationView: TextFieldAccessoryView?
 
 }

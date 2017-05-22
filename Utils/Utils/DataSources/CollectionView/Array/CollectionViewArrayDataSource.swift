@@ -10,9 +10,9 @@ import UIKit
 
 class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, ArrayDataSource {
 
-    private(set) var sections : [SectionModel] = []
+    private(set) var sections: [SectionModel] = []
     
-    //MARK: - Public
+    // MARK: - Public
     
     init(sections: [SectionModel]) {
         self.sections = sections
@@ -26,7 +26,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
         sections.append(section)
     }
     
-    //MARK: - UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return numberOfSections()

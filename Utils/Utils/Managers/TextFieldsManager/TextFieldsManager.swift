@@ -20,7 +20,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     @IBInspectable var hideOnTap: Bool = true
-    @IBInspectable var kAnimationDuration = 0.25
+    @IBInspectable var kAnimationDuration: Double = 0.25
     @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0
     
     override init() {
