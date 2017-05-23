@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WindowBuilder: NSObject {
+extension UIWindow {
 
     static func alertWindow(rootController: UIViewController?) -> UIWindow {
         return WindowBuilder.window(windowLevel: UIWindowLevelAlert,

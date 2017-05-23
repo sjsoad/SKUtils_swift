@@ -16,7 +16,7 @@ extension AlertPresentation where Self: UIViewController {
     
     func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
-        _ = WindowBuilder.alertWindow(rootController: controller)
+        _ = UIWindow.alertWindow(rootController: controller)
         controller.present(self,
                            animated: true,
                            completion: completion)

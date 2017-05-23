@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertActionBuilder: NSObject {
+extension UIAlertAction {
     
     static func cancelAction(title: String?,
                              handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
