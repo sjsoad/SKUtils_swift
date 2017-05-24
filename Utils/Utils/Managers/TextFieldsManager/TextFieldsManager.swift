@@ -10,18 +10,18 @@ import UIKit
 
 class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
-    var textFields: [UITextField] = Array()
+    private var textInputs = [UIView]()
     
-    @IBOutlet var scroll: UIScrollView? = nil {
+    @IBOutlet private weak var scroll: UIScrollView? = nil {
         didSet {
             getTextFieldsInView(scroll)
             addTapGestureRecognizer()
         }
     }
     
-    @IBInspectable var hideOnTap: Bool = true
-    @IBInspectable var kAnimationDuration: Double = 0.25
-    @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0
+    @IBInspectable private var hideOnTap: Bool = true
+    @IBInspectable private var kAnimationDuration: Double = 0.25
+    @IBInspectable private var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
     override init() {
         super.init()
@@ -30,14 +30,17 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     // MARK: - Getting UITextFields
     
-    func getTextFieldsInView(_ view: UIView?) {
+    private func getTextFieldsInView(_ view: UIView?) {
         guard let view = view else { return }
         for subView in view.subviews {
             if let textField = subView as? UITextField {
                 textField.addTarget(self,
                                     action: #selector(TextFieldsManager.returnButtonPressed),
                                     for: UIControlEvents.editingDidEndOnExit)
-                textFields.append(textField)
+                textInputs.append(textField)
+                
+            } else if let textView = subView as? UITextView {
+                textInputs.append(textView)
             } else {
                 getTextFieldsInView(subView)
             }
@@ -46,7 +49,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     // MARK: - Set hide keyboard on tap
     
-    func addTapGestureRecognizer() {
+    private func addTapGestureRecognizer() {
         guard let scroll = scroll else { return }
         if hideOnTap {
             let tap = UITapGestureRecognizer(target: self,
@@ -57,7 +60,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     // MARK: - Subscribe for keyboard notifications
     
-    func subscribeForKeyboardNotifications() {
+    private func subscribeForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TextFieldsManager.keyboardWillShow),
                                                name: NSNotification.Name.UIKeyboardWillShow,
@@ -77,7 +80,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             guard let strongSelf = self else { return }
             guard let scroll = strongSelf.scroll else { return }
             scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
-            strongSelf.scrollToActiveTextField(rect.size.height)
+            strongSelf.scrollToActiveInputView(rect.size.height)
         })
     }
     
@@ -91,13 +94,13 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     // MARK: - Other functions
     
-     func returnButtonPressed(_ textField: UITextField) {
+    func returnButtonPressed(_ textField: UITextField) {
         sortTextFieldsByY()
-        if let index = self.textFields.index(where: {$0 === textField}) {
+        if let index = self.textInputs.index(where: {$0 === textField}) {
             let newIndex = index + 1
-            if newIndex < self.textFields.count {
-                let nextTextField = self.textFields[newIndex]
-                _ = nextTextField.becomeFirstResponder()
+            if newIndex < self.textInputs.count {
+                let nextInputView = self.textInputs[newIndex]
+                _ = nextInputView.becomeFirstResponder()
             } else {
                 hideKeyboard()
             }
@@ -105,44 +108,46 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     func hideKeyboard() {
-        textFields.forEach { textField in
+        textInputs.forEach { textField in
             _ = textField.resignFirstResponder()
         }
     }
     
-    fileprivate func scrollToActiveTextField(_ keyboardHeight: CGFloat) {
-        guard let activeTextField = firstResponder() else { return }
+    private func scrollToActiveInputView(_ keyboardHeight: CGFloat) {
+        guard let activeInputView = firstResponder() else { return }
         guard let scroll = scroll else { return }
-        let frame = scroll.convert(activeTextField.bounds,
-                                   from: activeTextField)
+        let frame = scroll.convert(activeInputView.bounds,
+                                   from: activeInputView)
         scroll.scrollRectToVisible(frame, animated: true)
     }
 
     // MARK: - Utils
 
     func clearTextField() {
-        for field in textFields {
-            field.text = nil
-        }
-    }
-    
-    func firstResponder() -> UITextField? {
-        sortTextFieldsByY()
-        for textField in textFields {
-            if textField.isFirstResponder {
-                return textField
+        for field in textInputs {
+            if let textField = field as? UITextField {
+             textField.text = nil
+            }
+            if let textView = field as? UITextView {
+                textView.text = ""
             }
         }
-        return nil
     }
     
-    fileprivate func sortTextFieldsByY() {
+    func firstResponder() -> UIView? {
+        let textInput = textInputs.first(where: { (textField) -> Bool in
+            return textField.isFirstResponder
+        })
+        return textInput
+    }
+    
+    private func sortTextFieldsByY() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let sortedArray = textFields.sorted { (currentObject, nextObject) -> Bool in
+        let sortedArray = textInputs.sorted { (currentObject, nextObject) -> Bool in
             let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
             let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
             return currentObjectRect.origin.y < nextObjectRect.origin.y
         }
-        textFields = sortedArray
+        textInputs = sortedArray
     }
 }
