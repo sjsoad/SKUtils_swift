@@ -19,9 +19,9 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    @IBInspectable private var hideOnTap: Bool = true
-    @IBInspectable private var kAnimationDuration: Double = 0.25
-    @IBInspectable private var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
+    @IBInspectable var hideOnTap: Bool = true
+    @IBInspectable var kAnimationDuration: Double = 0.25
+    @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
     override init() {
         super.init()
@@ -47,7 +47,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    // MARK: - Set hide keyboard on tap
+    // MARK: - Private -
     
     private func addTapGestureRecognizer() {
         guard let scroll = scroll else { return }
@@ -57,8 +57,6 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             scroll.addGestureRecognizer(tap)
         }
     }
-    
-    // MARK: - Subscribe for keyboard notifications
     
     private func subscribeForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
@@ -71,7 +69,25 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                                                object: nil)
     }
     
-    // MARK: - Handle keyboard notifications
+    private func sortTextFieldsByY() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let sortedArray = textInputs.sorted { (currentObject, nextObject) -> Bool in
+            let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
+            let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
+            return currentObjectRect.origin.y < nextObjectRect.origin.y
+        }
+        textInputs = sortedArray
+    }
+    
+    private func scrollToActiveInputView(_ keyboardHeight: CGFloat) {
+        guard let activeInputView = firstResponder() else { return }
+        guard let scroll = scroll else { return }
+        let frame = scroll.convert(activeInputView.bounds,
+                                   from: activeInputView)
+        scroll.scrollRectToVisible(frame, animated: true)
+    }
+    
+    // MARK: - Handle keyboard notifications -
     
     func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
@@ -92,8 +108,6 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         })
     }
     
-    // MARK: - Other functions
-    
     func returnButtonPressed(_ textField: UITextField) {
         sortTextFieldsByY()
         if let index = self.textInputs.index(where: {$0 === textField}) {
@@ -106,23 +120,15 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
             }
         }
     }
-    
+
+    // MARK: - Public
+
     func hideKeyboard() {
         textInputs.forEach { textField in
             _ = textField.resignFirstResponder()
         }
     }
     
-    private func scrollToActiveInputView(_ keyboardHeight: CGFloat) {
-        guard let activeInputView = firstResponder() else { return }
-        guard let scroll = scroll else { return }
-        let frame = scroll.convert(activeInputView.bounds,
-                                   from: activeInputView)
-        scroll.scrollRectToVisible(frame, animated: true)
-    }
-
-    // MARK: - Utils
-
     func clearTextField() {
         for field in textInputs {
             if let textField = field as? UITextField {
@@ -141,13 +147,4 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
         return textInput
     }
     
-    private func sortTextFieldsByY() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let sortedArray = textInputs.sorted { (currentObject, nextObject) -> Bool in
-            let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
-            let nextObjectRect = nextObject.convert(nextObject.frame, to: window)
-            return currentObjectRect.origin.y < nextObjectRect.origin.y
-        }
-        textInputs = sortedArray
-    }
 }
