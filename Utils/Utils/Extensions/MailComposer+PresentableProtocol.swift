@@ -9,11 +9,11 @@
 import UIKit
 import MessageUI
 
-extension MFMailComposeViewController: Presentation {
+extension MFMailComposeViewController {
 
     func show(animated: Bool, completion: CompletionHandler?) {
         let controller = UIViewController()
-        _ = WindowBuilder.normalWindow(rootController: controller)
+        _ = UIWindow.normalWindow(rootController: controller)
         controller.present(self,
                            animated: true,
                            completion: completion)

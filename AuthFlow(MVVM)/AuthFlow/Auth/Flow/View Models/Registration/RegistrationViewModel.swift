@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewModel: NSObject, RegistrationRequestProtocol, ValidationHelper {
+class RegistrationViewModel: NSObject, RegistrationRequestProtocol, DefaultValidationHelper {
     
     var resultOfRegistrationRequest: Dynamic<Bool> = Dynamic(false)
     var executingHandlerForRegistration: RequerstExecutingHandler?

@@ -12,7 +12,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     
     let registrationNavigation = RegistrationNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var username: BaseTextField!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
@@ -32,7 +32,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
                                                              password: password,
                                                              from: strongSelf,
                                                              animated: true)
-                strongSelf.textFieldsManager.clearTextField()
+                strongSelf.textFieldsManager.clearTextInputs()
             }
         }
         registrationViewModel.executingHandlerForRegistration = requerstExecutingHandler()

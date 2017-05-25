@@ -11,12 +11,12 @@ import UIKit
 extension UIWindow {
 
     static func alertWindow(rootController: UIViewController?) -> UIWindow {
-        return WindowBuilder.window(windowLevel: UIWindowLevelAlert,
+        return UIWindow.window(windowLevel: UIWindowLevelAlert,
                                     rootController: rootController)
     }
     
     static func normalWindow(rootController: UIViewController?) -> UIWindow {
-        return WindowBuilder.window(windowLevel: UIWindowLevelNormal,
+        return UIWindow.window(windowLevel: UIWindowLevelNormal,
                                     rootController: rootController)
     }
     

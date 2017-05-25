@@ -9,17 +9,17 @@
 import UIKit
 import Foundation
 
-protocol TextFieldsManagerProtocol {
+protocol TextInputsManagerProtocol {
 
-    var textFieldsManager: TextFieldsManager! { get set }
+    var textInputsManager: TextInputsManager! { get set }
     func hideKeyboard()
     
 }
 
-extension TextFieldsManagerProtocol {
+extension TextInputsManagerProtocol {
 
     func hideKeyboard() {
-        textFieldsManager.hideKeyboard()
+        textInputsManager.hideKeyboard()
     }
     
 }

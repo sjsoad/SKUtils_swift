@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, ValidationHelper {
+class ChangePassViewModel: NSObject, ChangePasswordRequestProtocol, DefaultValidationHelper {
     
     var executingHandlerForChangePasswordRequest: RequerstExecutingHandler?
     var resultOfChangePasswordRequest: Dynamic<Bool> = Dynamic(false)

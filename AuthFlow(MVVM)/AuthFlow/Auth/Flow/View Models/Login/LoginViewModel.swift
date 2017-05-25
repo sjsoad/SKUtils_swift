@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-class LoginViewModel: NSObject, LoginRequestProtocol, ValidationHelper, FacebookAuthProtocol, InstagramAuthProtocol, GoogleAuthProtocol {
+class LoginViewModel: NSObject, LoginRequestProtocol, DefaultValidationHelper, FacebookAuthProtocol, InstagramAuthProtocol, GoogleAuthProtocol {
     
     var resultOfLoginRequest: Dynamic<Bool> = Dynamic(false)
     var authHandler: SocalNetworkAuthHandler!

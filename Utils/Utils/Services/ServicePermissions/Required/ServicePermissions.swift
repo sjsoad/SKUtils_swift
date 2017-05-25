@@ -27,11 +27,11 @@ protocol ServicePermissions {
 extension ServicePermissions {
     
     func showSettingsAlert() {
-        let settingsAction = AlertActionBuilder.defaultAction(title: alertTitles.actionButtonTitle,
+        let settingsAction = UIAlertAction.defaultAction(title: alertTitles.actionButtonTitle,
                                                               handler: { action in
                                                                 self.openSettings()
         })
-        let cancelAction = AlertActionBuilder.cancelAction(title: alertTitles.cancelButtonTitle)
+        let cancelAction = UIAlertAction.cancelAction(title: alertTitles.cancelButtonTitle)
         let alert = UIAlertController(title: alertTitles.title,
                                       message: alertTitles.message,
                                       preferredStyle: .alert)

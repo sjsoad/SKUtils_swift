@@ -8,13 +8,13 @@
 
 import UIKit
 
-class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
+class TextInputsManager: NSObject, UIGestureRecognizerDelegate {
     
     private var textInputs = [UIView]()
     
     @IBOutlet private weak var scroll: UIScrollView? = nil {
         didSet {
-            getTextFieldsInView(scroll)
+            getTextInputsInView(scroll)
             addTapGestureRecognizer()
         }
     }
@@ -30,19 +30,19 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     
     // MARK: - Getting UITextFields
     
-    private func getTextFieldsInView(_ view: UIView?) {
+    private func getTextInputsInView(_ view: UIView?) {
         guard let view = view else { return }
         for subView in view.subviews {
             if let textField = subView as? UITextField {
                 textField.addTarget(self,
-                                    action: #selector(TextFieldsManager.returnButtonPressed),
+                                    action: #selector(returnButtonPressed),
                                     for: UIControlEvents.editingDidEndOnExit)
                 textInputs.append(textField)
                 
             } else if let textView = subView as? UITextView {
                 textInputs.append(textView)
             } else {
-                getTextFieldsInView(subView)
+                getTextInputsInView(subView)
             }
         }
     }
@@ -69,7 +69,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
                                                object: nil)
     }
     
-    private func sortTextFieldsByY() {
+    private func sortInputsByY() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let sortedArray = textInputs.sorted { (currentObject, nextObject) -> Bool in
             let currentObjectRect = currentObject.convert(currentObject.frame, to: window)
@@ -109,7 +109,7 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     }
     
     func returnButtonPressed(_ textField: UITextField) {
-        sortTextFieldsByY()
+        sortInputsByY()
         if let index = self.textInputs.index(where: {$0 === textField}) {
             let newIndex = index + 1
             if newIndex < self.textInputs.count {
@@ -124,12 +124,12 @@ class TextFieldsManager: NSObject, UIGestureRecognizerDelegate {
     // MARK: - Public
 
     func hideKeyboard() {
-        textInputs.forEach { textField in
-            _ = textField.resignFirstResponder()
+        textInputs.forEach { textInput in
+            _ = textInput.resignFirstResponder()
         }
     }
     
-    func clearTextField() {
+    func clearTextInputs() {
         for field in textInputs {
             if let textField = field as? UITextField {
              textField.text = nil

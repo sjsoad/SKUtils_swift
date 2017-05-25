@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RemindPassViewModel: NSObject, RemindPasswordRequestProtocol, ValidationHelper {
+class RemindPassViewModel: NSObject, RemindPasswordRequestProtocol, DefaultValidationHelper {
   
     var resultOfRemindPasswordRequest: Dynamic<Bool> = Dynamic(false)
     var executingHandlerForRemindPassword: RequerstExecutingHandler?

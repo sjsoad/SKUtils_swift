@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RemindPassViewController: DissmisableViewController, Presentation, RequestExecutingViewProtocol {
+class RemindPassViewController: DissmisableViewController, RequestExecutingViewProtocol {
 
     var remindPassNavigation = RemindPassNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     
     var reminderViewModel = RemindPassViewModel()

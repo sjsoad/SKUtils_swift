@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChangePassViewController: DissmisableViewController, Presentation, RequestExecutingViewProtocol {
+class ChangePassViewController: DissmisableViewController, RequestExecutingViewProtocol {
 
     let changePassNavigation = ChangePassNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var passwordField: PassTextField!
     @IBOutlet weak var confirmationField: PassTextField!
     

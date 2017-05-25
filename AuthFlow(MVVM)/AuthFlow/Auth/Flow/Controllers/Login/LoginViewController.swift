@@ -17,7 +17,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     var loginViewModel = LoginViewModel()
     var profileViewModel = ProfileViewModel()
     
-    @IBOutlet weak var textFieldsManager: TextFieldsManager!
+    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
     
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
             guard let strongSelf = self else { return }
             if succeed,
                 let processor = strongSelf.loginProcessor {
-                strongSelf.textFieldsManager.clearTextField()
+                strongSelf.textFieldsManager.clearTextInputs()
                 processor.process(viewModel: strongSelf.loginViewModel)
             }
         }
