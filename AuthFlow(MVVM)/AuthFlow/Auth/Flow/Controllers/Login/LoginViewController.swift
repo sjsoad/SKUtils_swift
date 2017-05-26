@@ -9,7 +9,8 @@
 import UIKit
 import NVActivityIndicatorView
 
-class LoginViewController: UIViewController, RequestExecutingViewProtocol, GoogleAuthViewControllerProtocol, LoginProcessingProtocol {
+class LoginViewController: UIViewController,
+RequestExecutingViewProtocol, GoogleAuthViewControllerProtocol, LoginProcessingProtocol, TextInputsManagerProtocol {
     
     let loginNavigation = LoginNavigation()
     var loginProcessor: LoginProcessorProtocol?
@@ -17,7 +18,9 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     var loginViewModel = LoginViewModel()
     var profileViewModel = ProfileViewModel()
     
-    @IBOutlet weak var textFieldsManager: TextInputsManager!
+    @IBOutlet weak var textInputsManager: TextInputsManager!
+    
+//    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
     
@@ -27,7 +30,7 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
             guard let strongSelf = self else { return }
             if succeed,
                 let processor = strongSelf.loginProcessor {
-                strongSelf.textFieldsManager.clearTextInputs()
+                strongSelf.textInputsManager.clearTextInputs()
                 processor.process(viewModel: strongSelf.loginViewModel)
             }
         }
@@ -44,7 +47,8 @@ class LoginViewController: UIViewController, RequestExecutingViewProtocol, Googl
     // MARK: - Action
     
     func tryTologin() {
-        textFieldsManager.hideKeyboard()
+        hideKeyboard()
+//        textFieldsManager.hideKeyboard()
         let result = loginViewModel.validate(email: emailField.text,
                                              password: passwordField.text)
         if result.succeed == false,

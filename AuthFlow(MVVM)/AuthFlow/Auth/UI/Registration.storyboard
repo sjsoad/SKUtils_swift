@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XdW-t1-qYJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XdW-t1-qYJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -85,12 +85,12 @@
                     <connections>
                         <outlet property="emailField" destination="PnM-Pb-ESS" id="xgI-l3-Svy"/>
                         <outlet property="passwordField" destination="iHr-YX-LbZ" id="fTo-GQ-74v"/>
-                        <outlet property="textFieldsManager" destination="dk7-3N-YKv" id="5eD-z1-sLc"/>
+                        <outlet property="textInputsManager" destination="dk7-3N-YKv" id="QZ1-aU-NY8"/>
                         <outlet property="username" destination="M4s-fC-9hh" id="SjB-qt-Gsw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlV-wd-NYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="dk7-3N-YKv" customClass="TextFieldsManager" customModule="AuthFlow" customModuleProvider="target">
+                <customObject id="dk7-3N-YKv" customClass="TextInputsManager" customModule="AuthFlow" customModuleProvider="target">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
                     </userDefinedRuntimeAttributes>

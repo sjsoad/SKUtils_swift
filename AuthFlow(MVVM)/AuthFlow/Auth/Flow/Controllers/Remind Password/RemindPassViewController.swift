@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RemindPassViewController: DissmisableViewController, RequestExecutingViewProtocol {
+class RemindPassViewController: DissmisableViewController, RequestExecutingViewProtocol, TextInputsManagerProtocol {
 
     var remindPassNavigation = RemindPassNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextInputsManager!
+    @IBOutlet weak var textInputsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     
     var reminderViewModel = RemindPassViewModel()
@@ -30,7 +30,7 @@ class RemindPassViewController: DissmisableViewController, RequestExecutingViewP
     }
 
     @IBAction func remindButtonPresed(_ sender: UIButton) {
-        textFieldsManager.hideKeyboard()
+        hideKeyboard()
         let result = reminderViewModel.validate(email: emailField.text)
         if result.succeed == false,
             let error = result.error {

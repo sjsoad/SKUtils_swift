@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, RequestExecutingViewProtocol, LoginProcessingProtocol {
+class RegistrationViewController: UIViewController, RequestExecutingViewProtocol, LoginProcessingProtocol, TextInputsManagerProtocol {
     
     let registrationNavigation = RegistrationNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextInputsManager!
+    @IBOutlet weak var textInputsManager: TextInputsManager!
     @IBOutlet weak var username: BaseTextField!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
@@ -32,7 +32,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
                                                              password: password,
                                                              from: strongSelf,
                                                              animated: true)
-                strongSelf.textFieldsManager.clearTextInputs()
+                strongSelf.textInputsManager.clearTextInputs()
             }
         }
         registrationViewModel.executingHandlerForRegistration = requerstExecutingHandler()
@@ -41,7 +41,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     // MARK: - IBActions
     
     @IBAction func registrationButtonPresed(_ sender: UIButton) {
-        textFieldsManager.hideKeyboard()
+        hideKeyboard()
         let result = registrationViewModel.validate(email: emailField.text,
                                                     password: passwordField.text,
                                                     username: username.text)

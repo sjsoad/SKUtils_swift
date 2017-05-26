@@ -104,7 +104,7 @@
 		A560CAFE1ED75FE700961B9B /* ArrayTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CA9E1ED75FE700961B9B /* ArrayTableViewProtocol.swift */; };
 		A560CAFF1ED75FE700961B9B /* FRCTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA01ED75FE700961B9B /* FRCTableViewModelProtocol.swift */; };
 		A560CB001ED75FE700961B9B /* FRCTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA11ED75FE700961B9B /* FRCTableViewProtocol.swift */; };
-		A560CB011ED75FE700961B9B /* TextFieldsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA21ED75FE700961B9B /* TextFieldsManagerProtocol.swift */; };
+		A560CB011ED75FE700961B9B /* TextInputsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA21ED75FE700961B9B /* TextInputsManagerProtocol.swift */; };
 		A560CB021ED75FE700961B9B /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA61ED75FE700961B9B /* FCMService.swift */; };
 		A560CB031ED75FE700961B9B /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA81ED75FE700961B9B /* APNSService.swift */; };
 		A560CB041ED75FE700961B9B /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560CAA91ED75FE700961B9B /* PushNotificationsService.swift */; };
@@ -252,7 +252,7 @@
 		A560CA9E1ED75FE700961B9B /* ArrayTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewProtocol.swift; sourceTree = "<group>"; };
 		A560CAA01ED75FE700961B9B /* FRCTableViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCTableViewModelProtocol.swift; sourceTree = "<group>"; };
 		A560CAA11ED75FE700961B9B /* FRCTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCTableViewProtocol.swift; sourceTree = "<group>"; };
-		A560CAA21ED75FE700961B9B /* TextFieldsManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsManagerProtocol.swift; sourceTree = "<group>"; };
+		A560CAA21ED75FE700961B9B /* TextInputsManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerProtocol.swift; sourceTree = "<group>"; };
 		A560CAA61ED75FE700961B9B /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
 		A560CAA81ED75FE700961B9B /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
 		A560CAA91ED75FE700961B9B /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
@@ -867,7 +867,7 @@
 			isa = PBXGroup;
 			children = (
 				A560CA8D1ED75FE700961B9B /* MVVM */,
-				A560CAA21ED75FE700961B9B /* TextFieldsManagerProtocol.swift */,
+				A560CAA21ED75FE700961B9B /* TextInputsManagerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1337,7 +1337,7 @@
 				A53C44D91EA9DB66009D7651 /* RegistrationNavigationProtocol.swift in Sources */,
 				A53C44B91EA9DB66009D7651 /* RegistrationViewController.swift in Sources */,
 				A560CAE91ED75FE700961B9B /* UIAlertActioFactory.swift in Sources */,
-				A560CB011ED75FE700961B9B /* TextFieldsManagerProtocol.swift in Sources */,
+				A560CB011ED75FE700961B9B /* TextInputsManagerProtocol.swift in Sources */,
 				A53C44BD1EA9DB66009D7651 /* ChangePassNavigation.swift in Sources */,
 				A53C44BF1EA9DB66009D7651 /* RemindPassNavigation.swift in Sources */,
 				A560CB0A1ED75FE700961B9B /* MicrophonePermissions.swift in Sources */,

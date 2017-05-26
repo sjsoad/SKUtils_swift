@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChangePassViewController: DissmisableViewController, RequestExecutingViewProtocol {
+class ChangePassViewController: DissmisableViewController, RequestExecutingViewProtocol, TextInputsManagerProtocol {
 
     let changePassNavigation = ChangePassNavigation()
     
-    @IBOutlet weak var textFieldsManager: TextInputsManager!
+    @IBOutlet weak var textInputsManager: TextInputsManager!
     @IBOutlet weak var passwordField: PassTextField!
     @IBOutlet weak var confirmationField: PassTextField!
     
@@ -36,7 +36,7 @@ class ChangePassViewController: DissmisableViewController, RequestExecutingViewP
     // MARK: - IBActions
     
     @IBAction func changeButtonPresed(_ sender: UIButton) {
-        textFieldsManager.hideKeyboard()
+        hideKeyboard()
         let result = changePassViewModel.validate(password: passwordField.text,
                                                   confirmation: confirmationField.text)
         if result.succeed == false,

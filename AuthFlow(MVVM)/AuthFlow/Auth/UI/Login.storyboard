@@ -14,7 +14,7 @@
         <scene sceneID="0L1-qx-fmO">
             <objects>
                 <navigationController id="4RP-Ve-APf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="RpK-Je-PV9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RpK-Je-PV9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -153,11 +153,11 @@
                     <connections>
                         <outlet property="emailField" destination="qdI-zz-0vt" id="QQV-dI-s5v"/>
                         <outlet property="passwordField" destination="9hO-Mr-heD" id="LIM-wT-2un"/>
-                        <outlet property="textFieldsManager" destination="2OA-Wg-2uG" id="tUq-2G-gon"/>
+                        <outlet property="textInputsManager" destination="2OA-Wg-2uG" id="eLs-fI-Pjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFJ-we-zSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="2OA-Wg-2uG" customClass="TextFieldsManager" customModule="AuthFlow" customModuleProvider="target">
+                <customObject id="2OA-Wg-2uG" customClass="TextInputsManager" customModule="AuthFlow" customModuleProvider="target">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
                     </userDefinedRuntimeAttributes>
