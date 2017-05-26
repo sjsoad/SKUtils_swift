@@ -12,7 +12,7 @@ class ChangePassViewController: DissmisableViewController, RequestExecutingViewP
 
     let changePassNavigation = ChangePassNavigation()
     
-    @IBOutlet weak var textInputsManager: TextInputsManager!
+    @IBOutlet var textInputsManager: TextInputsManager!
     @IBOutlet weak var passwordField: PassTextField!
     @IBOutlet weak var confirmationField: PassTextField!
     

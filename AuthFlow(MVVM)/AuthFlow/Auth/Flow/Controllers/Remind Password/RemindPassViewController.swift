@@ -12,7 +12,7 @@ class RemindPassViewController: DissmisableViewController, RequestExecutingViewP
 
     var remindPassNavigation = RemindPassNavigation()
     
-    @IBOutlet weak var textInputsManager: TextInputsManager!
+    @IBOutlet var textInputsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     
     var reminderViewModel = RemindPassViewModel()

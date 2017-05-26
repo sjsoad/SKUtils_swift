@@ -18,9 +18,8 @@ RequestExecutingViewProtocol, GoogleAuthViewControllerProtocol, LoginProcessingP
     var loginViewModel = LoginViewModel()
     var profileViewModel = ProfileViewModel()
     
-    @IBOutlet weak var textInputsManager: TextInputsManager!
+    @IBOutlet var textInputsManager: TextInputsManager!
     
-//    @IBOutlet weak var textFieldsManager: TextInputsManager!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
     

@@ -12,7 +12,7 @@ class RegistrationViewController: UIViewController, RequestExecutingViewProtocol
     
     let registrationNavigation = RegistrationNavigation()
     
-    @IBOutlet weak var textInputsManager: TextInputsManager!
+    @IBOutlet var textInputsManager: TextInputsManager!
     @IBOutlet weak var username: BaseTextField!
     @IBOutlet weak var emailField: EmailTextField!
     @IBOutlet weak var passwordField: PassTextField!
