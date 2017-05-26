@@ -17,7 +17,7 @@ protocol ___FILEBASENAMEASIDENTIFIER___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Presenter {
+class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject {
     
     private weak var view: ___FILEBASENAMEASIDENTIFIER___Interface?
     
