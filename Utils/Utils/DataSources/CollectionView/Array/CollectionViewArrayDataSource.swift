@@ -39,8 +39,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellReuseIdentifier,
-                                                          for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
             if let configurableCell = cell as? ConfigurableCell {
                 configurableCell.configure(viewModel: viewModel)
             }

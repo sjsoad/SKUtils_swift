@@ -15,8 +15,8 @@ class SectionModel: NSObject {
     private(set) var footer: SectionFooter?
     
     init(withItems items: [AnyObject],
-         header: SectionHeader?,
-         footer: SectionFooter?) {
+         header: SectionHeader? = nil,
+         footer: SectionFooter?= nil) {
         self.items = items
         self.header = header
         self.footer = footer
