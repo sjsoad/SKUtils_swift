@@ -29,7 +29,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     // MARK: - Private
     
     private func viewModel(for indexPath: IndexPath, kind: String) -> HeaderDataSourceViewModel? {
-        let sectionModel = sections[indexPath.row]
+        let sectionModel = sections[indexPath.section]
         if kind == UICollectionElementKindSectionHeader {
             guard let header = sectionModel.header,
                 let viewModel = header.headerViewModel as? HeaderDataSourceViewModel else { return nil }
