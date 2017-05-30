@@ -26,10 +26,17 @@ class SectionModel: NSObject {
 class SectionHeader: NSObject {
     
     var headerTitle: String?
+    var headerViewModel: AnyObject?
     
     class func header(withTitle title: String?) -> SectionHeader {
         let header = SectionHeader()
         header.headerTitle = title
+        return header
+    }
+    
+    class func header(with viewModel: AnyObject?) -> SectionHeader {
+        let header = SectionHeader()
+        header.headerViewModel = viewModel
         return header
     }
     
@@ -38,10 +45,17 @@ class SectionHeader: NSObject {
 class SectionFooter: NSObject {
     
     var footerTitle: String?
+    var footerViewModel: AnyObject?
     
     class func footer(withTitle title: String?) -> SectionFooter {
         let footer = SectionFooter()
         footer.footerTitle = title
+        return footer
+    }
+    
+    class func footer(with viewModel: AnyObject?) -> SectionFooter {
+        let footer = SectionFooter()
+        footer.footerViewModel = viewModel
         return footer
     }
 
