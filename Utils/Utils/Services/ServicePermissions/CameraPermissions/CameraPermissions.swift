@@ -31,8 +31,9 @@ class CameraPermissions: NSObject, ServicePermissions, RequestPermissions {
     }
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { _ in
-            handler(self.permissionsState())
+        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] _ in
+            guard let strongSelf = self else { return }
+            handler(strongSelf.permissionsState())
         }
     }
 }

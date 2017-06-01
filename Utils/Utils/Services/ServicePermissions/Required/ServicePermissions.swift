@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 struct AlertTitles {
-    var title : String
-    var message : String
-    var actionButtonTitle : String
-    var cancelButtonTitle : String
+    var title: String
+    var message: String
+    var actionButtonTitle: String
+    var cancelButtonTitle: String
 }
 
 protocol ServicePermissions {
@@ -28,7 +28,7 @@ extension ServicePermissions {
     
     func showSettingsAlert() {
         let settingsAction = UIAlertAction.defaultAction(title: alertTitles.actionButtonTitle,
-                                                              handler: { action in
+                                                              handler: { _ in
                                                                 self.openSettings()
         })
         let cancelAction = UIAlertAction.cancelAction(title: alertTitles.cancelButtonTitle)
@@ -37,7 +37,9 @@ extension ServicePermissions {
                                       preferredStyle: .alert)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        alert.show(animated: true, completion: nil)
+        DispatchQueue.main.sync {
+            alert.show(animated: true, completion: nil)
+        }
     }
     
     func openSettings() {

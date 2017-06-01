@@ -31,8 +31,9 @@ class PhotoLibraryPermissions: NSObject, ServicePermissions, RequestPermissions 
     }
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        PHPhotoLibrary.requestAuthorization { _ in
-            handler(self.permissionsState())
+        PHPhotoLibrary.requestAuthorization { [weak self] _ in
+            guard let strongSelf = self else { return }
+            handler(strongSelf.permissionsState())
         }
     }
     

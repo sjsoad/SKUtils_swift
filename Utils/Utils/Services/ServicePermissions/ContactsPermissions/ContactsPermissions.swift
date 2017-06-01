@@ -44,13 +44,15 @@ class ContactsPermissions: NSObject, ServicePermissions, RequestPermissions {
 
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         if #available(iOS 9.0, *) {
-            CNContactStore().requestAccess(for: .contacts) { _,_ in
-                handler(self.permissionsState())
+            CNContactStore().requestAccess(for: .contacts) { [weak self] _,_ in
+                guard let strongSelf = self else { return }
+                handler(strongSelf.permissionsState())
             }
         }
         else {
-            ABAddressBookRequestAccessWithCompletion(nil) { _,_ in
-               handler(self.permissionsState()) 
+            ABAddressBookRequestAccessWithCompletion(nil) { [weak self] _,_ in
+                guard let strongSelf = self else { return }
+                handler(strongSelf.permissionsState())
             }
         }
     }

@@ -31,8 +31,9 @@ class MicrophonePermissions: NSObject, ServicePermissions, RequestPermissions {
     }
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        AVAudioSession.sharedInstance().requestRecordPermission { _ in
-            handler(self.permissionsState())
+        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] _ in
+            guard let strongSelf = self else { return }
+            handler(strongSelf.permissionsState())
         }
     }
     
