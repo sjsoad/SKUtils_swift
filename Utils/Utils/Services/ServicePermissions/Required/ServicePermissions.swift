@@ -28,8 +28,8 @@ extension ServicePermissions {
     
     func showSettingsAlert() {
         let settingsAction = UIAlertAction.defaultAction(title: alertTitles.actionButtonTitle,
-                                                              handler: { _ in
-                                                                self.openSettings()
+                                                         handler: { _ in
+                                                            self.openSettings()
         })
         let cancelAction = UIAlertAction.cancelAction(title: alertTitles.cancelButtonTitle)
         let alert = UIAlertController(title: alertTitles.title,
@@ -37,9 +37,14 @@ extension ServicePermissions {
                                       preferredStyle: .alert)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        DispatchQueue.main.sync {
+        if Thread.isMainThread {
             alert.show(animated: true, completion: nil)
+        } else {
+            DispatchQueue.main.sync {
+                alert.show(animated: true, completion: nil)
+            }
         }
+
     }
     
     func openSettings() {
@@ -49,8 +54,7 @@ extension ServicePermissions {
                 UIApplication.shared.open(settingsURL!,
                                           options: [:],
                                           completionHandler: nil)
-            }
-            else {
+            } else {
                 UIApplication.shared.openURL(settingsURL!)
             }
         }
