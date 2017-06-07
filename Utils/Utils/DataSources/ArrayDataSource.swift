@@ -11,7 +11,7 @@ import Foundation
 protocol ArrayDataSource: AbstractDataSource {
     
     var sections: [SectionModel] { get }
-    
+    func deleteItemAtIndexPath(indexPath: IndexPath)
 }
 
 extension ArrayDataSource {
@@ -30,6 +30,11 @@ extension ArrayDataSource {
         let section = sections[indexPath.section]
         let items = section.items
         return items[indexPath.row]
+    }
+    
+    func deleteItemAtIndexPath(indexPath: IndexPath) {
+        let section = sections[indexPath.section]
+        section.removeItem(at: indexPath.row)
     }
     
 }

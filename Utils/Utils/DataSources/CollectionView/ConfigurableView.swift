@@ -14,4 +14,3 @@ protocol ConfigurableView: ReusableView {
     func configure<T>(viewModel: T)
     
 }
-

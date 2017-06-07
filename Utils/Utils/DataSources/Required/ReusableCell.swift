@@ -23,4 +23,3 @@ extension ReusableCell where Self: UIView {
         return String(describing: self)
     }
 }
-

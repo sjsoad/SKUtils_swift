@@ -33,7 +33,7 @@ class CollectionViewFRCDataSource: NSObject, UICollectionViewDataSource, FRCData
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if  let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellReuseIdentifier,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.reuseIdentifier,
                                                           for: indexPath)
             if let configurableCell = cell as? ConfigurableCell {
                 configurableCell.configure(viewModel: viewModel)

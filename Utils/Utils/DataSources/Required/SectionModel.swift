@@ -21,6 +21,10 @@ class SectionModel: NSObject {
         self.header = header
         self.footer = footer
     }
+    
+    func removeItem(at index: Int) {
+        items.remove(at: index)
+    }
 }
 
 class SectionHeader: NSObject {

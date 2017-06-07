@@ -28,15 +28,15 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     
     // MARK: - Private
     
-    private func viewModel(for indexPath: IndexPath, kind: String) -> HeaderDataSourceViewModel? {
+    private func viewModel(for indexPath: IndexPath, kind: String) -> DataSourceViewModel? {
         let sectionModel = sections[indexPath.section]
         if kind == UICollectionElementKindSectionHeader {
             guard let header = sectionModel.header,
-                let viewModel = header.headerViewModel as? HeaderDataSourceViewModel else { return nil }
+                let viewModel = header.headerViewModel as? DataSourceViewModel else { return nil }
             return viewModel
         } else if kind == UICollectionElementKindSectionFooter {
             guard let footer = sectionModel.footer,
-                let viewModel = footer.footerViewModel as? HeaderDataSourceViewModel else { return nil }
+                let viewModel = footer.footerViewModel as? DataSourceViewModel else { return nil }
             return viewModel
         }
         return nil
@@ -68,7 +68,7 @@ class CollectionViewArrayDataSource: NSObject, UICollectionViewDataSource, Array
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.cellReuseIdentifier,
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.reuseIdentifier,
                                                           for: indexPath)
             if let configurableCell = cell as? ConfigurableCell {
                 configurableCell.configure(viewModel: viewModel)

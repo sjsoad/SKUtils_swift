@@ -39,7 +39,7 @@ class TableViewArrayDataSource: NSObject, UITableViewDataSource, ArrayDataSource
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let viewModel = itemAtIndexPath(indexPath: indexPath) as? DataSourceViewModel,
-            let cell = tableView.dequeueReusableCell(withIdentifier:  viewModel.cellReuseIdentifier),
+            let cell = tableView.dequeueReusableCell(withIdentifier:  viewModel.reuseIdentifier),
             let configurableCell = cell as? ConfigurableCell {
             configurableCell.configure(viewModel: viewModel)
             return cell

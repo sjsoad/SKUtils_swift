@@ -13,7 +13,7 @@ import Foundation
 class ___FILEBASENAMEASIDENTIFIER___Cell: <#cell type#>, ConfigurableCell {
         
     func configure<T>(viewModel: T) {
-        <#guard let vm = viewModel as? ViewModelType { return }#>
+        <#guard let vm = viewModel as? ViewModelType else { return }#>
     }
     
 }
