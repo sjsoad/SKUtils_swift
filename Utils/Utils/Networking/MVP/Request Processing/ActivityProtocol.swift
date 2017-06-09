@@ -8,13 +8,12 @@
 
 import Foundation
 import NVActivityIndicatorView
-import SwiftyDrop
 
-protocol ActivityProtocol: NVActivityIndicatorViewable {
+
+protocol ActivityProtocol: NVActivityIndicatorViewable, ToastProtocol {
     
     func showActivity()
     func hideActivity()
-    func show(error: String?)
     
 }
 
@@ -28,10 +27,6 @@ extension ActivityProtocol where Self: UIViewController {
         stopAnimating()
     }
     
-    func show(error: String?) {
-        guard let error = error else { return }
-        Drop.down(error,
-                  state: .error)
-    }
+
 
 }
