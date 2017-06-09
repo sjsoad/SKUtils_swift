@@ -95,7 +95,7 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate {
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
             guard let strongSelf = self,
                 let scroll = strongSelf.scroll else { return }
-            scroll.contentInset = UIEdgeInsetsMake(0, 0, rect.size.height, 0)
+            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
             strongSelf.scrollToActiveInputView(rect.size.height)
         })
     }
