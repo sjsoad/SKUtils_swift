@@ -146,6 +146,11 @@
 		A5AC740E1EB36310009CDEC3 /* LoginProcessorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC740D1EB36310009CDEC3 /* LoginProcessorProtocol.swift */; };
 		A5AC74101EB36675009CDEC3 /* LoginProcessingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC740F1EB36675009CDEC3 /* LoginProcessingProtocol.swift */; };
 		A5AC74121EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AC74111EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift */; };
+		A5BCB55B1EF05B6700199142 /* ActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCB5581EF05B6700199142 /* ActivityProtocol.swift */; };
+		A5BCB55C1EF05B6700199142 /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCB5591EF05B6700199142 /* RequestErrorHandlerProtocol.swift */; };
+		A5BCB55D1EF05B6700199142 /* RequestExecutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCB55A1EF05B6700199142 /* RequestExecutingProtocol.swift */; };
+		A5BCB55F1EF05BB700199142 /* ToastProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCB55E1EF05BB700199142 /* ToastProtocol.swift */; };
+		A5BCB5611EF05BD700199142 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BCB5601EF05BD700199142 /* CollectionViewHelper.swift */; };
 		A5D7446F1ECDE5C8006EBE95 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D7446E1ECDE5C8006EBE95 /* AuthCredentials.swift */; };
 		CD2D0A3373EAC066D304E1C8 /* Pods_AuthFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B62069A6FD34E504048CE0C /* Pods_AuthFlow.framework */; };
 /* End PBXBuildFile section */
@@ -294,6 +299,11 @@
 		A5AC740D1EB36310009CDEC3 /* LoginProcessorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessorProtocol.swift; sourceTree = "<group>"; };
 		A5AC740F1EB36675009CDEC3 /* LoginProcessingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessingProtocol.swift; sourceTree = "<group>"; };
 		A5AC74111EB36966009CDEC3 /* LoginProcessorSetupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProcessorSetupProtocol.swift; sourceTree = "<group>"; };
+		A5BCB5581EF05B6700199142 /* ActivityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProtocol.swift; sourceTree = "<group>"; };
+		A5BCB5591EF05B6700199142 /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
+		A5BCB55A1EF05B6700199142 /* RequestExecutingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingProtocol.swift; sourceTree = "<group>"; };
+		A5BCB55E1EF05BB700199142 /* ToastProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastProtocol.swift; sourceTree = "<group>"; };
+		A5BCB5601EF05BD700199142 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
 		A5D7446E1ECDE5C8006EBE95 /* AuthCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -781,6 +791,7 @@
 		A560CA6E1ED75FE700961B9B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A5BCB5601EF05BD700199142 /* CollectionViewHelper.swift */,
 				A560CA6F1ED75FE700961B9B /* DefaultValidationHelper.swift */,
 				A560CA701ED75FE700961B9B /* DynamicHelper.swift */,
 				A560CA711ED75FE700961B9B /* MapsHelper.swift */,
@@ -822,6 +833,7 @@
 		A560CA7D1ED75FE700961B9B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A5BCB5561EF05B6700199142 /* MVP */,
 				A560CA7E1ED75FE700961B9B /* Api Client */,
 				A560CA851ED75FE700961B9B /* MVVM */,
 				A560CA891ED75FE700961B9B /* Network Protocols */,
@@ -866,6 +878,7 @@
 		A560CA8C1ED75FE700961B9B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A5BCB55E1EF05BB700199142 /* ToastProtocol.swift */,
 				A560CA8D1ED75FE700961B9B /* MVVM */,
 				A560CAA21ED75FE700961B9B /* TextInputsManagerProtocol.swift */,
 			);
@@ -1180,6 +1193,24 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A5BCB5561EF05B6700199142 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				A5BCB5571EF05B6700199142 /* Request Processing */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		A5BCB5571EF05B6700199142 /* Request Processing */ = {
+			isa = PBXGroup;
+			children = (
+				A5BCB5581EF05B6700199142 /* ActivityProtocol.swift */,
+				A5BCB5591EF05B6700199142 /* RequestErrorHandlerProtocol.swift */,
+				A5BCB55A1EF05B6700199142 /* RequestExecutingProtocol.swift */,
+			);
+			path = "Request Processing";
+			sourceTree = "<group>";
+		};
 		F89E57F57DFA755C1C9A69B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1355,6 +1386,7 @@
 				A5646D501EB27D6A00B008BB /* FacebookAuth.swift in Sources */,
 				A560CAD21ED75FE700961B9B /* TableViewArrayDataSource.swift in Sources */,
 				A560CB0F1ED75FE700961B9B /* BaseTextField.swift in Sources */,
+				A5BCB55D1EF05B6700199142 /* RequestExecutingProtocol.swift in Sources */,
 				A5069B7D1EB2FCCD007BBB64 /* TwitterAuthProtocol.swift in Sources */,
 				A560CAFF1ED75FE700961B9B /* FRCTableViewModelProtocol.swift in Sources */,
 				A560CAE21ED75FE700961B9B /* DefaultValidationHelper.swift in Sources */,
@@ -1380,7 +1412,9 @@
 				A560CAF51ED75FE700961B9B /* DismissNavigationProtocol.swift in Sources */,
 				A560CAFD1ED75FE700961B9B /* ArrayTableViewModelProtocol.swift in Sources */,
 				A560CAD31ED75FE700961B9B /* TableViewFRCDataSource.swift in Sources */,
+				A5BCB55F1EF05BB700199142 /* ToastProtocol.swift in Sources */,
 				A53C44BE1EA9DB66009D7651 /* RegistrationNavigation.swift in Sources */,
+				A5BCB5611EF05BD700199142 /* CollectionViewHelper.swift in Sources */,
 				A560CAF81ED75FE700961B9B /* Presentation.swift in Sources */,
 				A560CAF91ED75FE700961B9B /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A560CAE81ED75FE700961B9B /* TableViewHelper.swift in Sources */,
@@ -1400,6 +1434,7 @@
 				A53C44DC1EA9DB66009D7651 /* UserViewModelProtocol.swift in Sources */,
 				A53C44C31EA9DB66009D7651 /* UserViewModel.swift in Sources */,
 				A53C44CD1EA9DB66009D7651 /* ChangePasswordRequest.swift in Sources */,
+				A5BCB55B1EF05B6700199142 /* ActivityProtocol.swift in Sources */,
 				A560CB101ED75FE700961B9B /* EmailTextField.swift in Sources */,
 				A560CAF41ED75FE700961B9B /* ResponseProtocol.swift in Sources */,
 				A5646D561EB27D6A00B008BB /* InstagramAuth.swift in Sources */,
@@ -1422,6 +1457,7 @@
 				A53C44B21EA9DB66009D7651 /* AppDelegate.swift in Sources */,
 				A5069B7C1EB2FCCD007BBB64 /* TwitterAuth.swift in Sources */,
 				A53C44C51EA9DB66009D7651 /* RegistrationViewModel.swift in Sources */,
+				A5BCB55C1EF05B6700199142 /* RequestErrorHandlerProtocol.swift in Sources */,
 				A560CB091ED75FE700961B9B /* LocationPermissions.swift in Sources */,
 				A560CACD1ED75FE700961B9B /* AbstractDataSource.swift in Sources */,
 				A560CAD61ED75FE700961B9B /* DesignableViewExtension.swift in Sources */,
