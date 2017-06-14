@@ -8,9 +8,13 @@
 
 import UIKit
 
-class TextInputsManager: NSObject, UIGestureRecognizerDelegate {
+class TextInputsManager: NSObject, UIGestureRecognizerDelegate, TextInputsManagerInterface {
     
     private var textInputs = [UIView]()
+    
+    @IBInspectable private var hideOnTap: Bool = true
+    @IBInspectable private var kAnimationDuration: Double = 0.25
+    @IBInspectable private var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
     @IBOutlet private weak var scroll: UIScrollView? = nil {
         didSet {
@@ -18,10 +22,6 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate {
             addTapGestureRecognizer()
         }
     }
-    
-    @IBInspectable var hideOnTap: Bool = true
-    @IBInspectable var kAnimationDuration: Double = 0.25
-    @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
     override init() {
         super.init()
@@ -121,7 +121,7 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate {
         }
     }
 
-    // MARK: - Public
+    // MARK: - TextInputsManagerInterface -
 
     func hideKeyboard() {
         textInputs.forEach { textInput in
