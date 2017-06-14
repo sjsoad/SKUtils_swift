@@ -73,6 +73,7 @@
 		A57058871EF119E00092CDAB /* WindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058861EF119E00092CDAB /* WindowProtocol.swift */; };
 		A570588D1EF11C2B0092CDAB /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */; };
 		A570588E1EF11C2B0092CDAB /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588C1EF11C2B0092CDAB /* Presentation.swift */; };
+		A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		A57058861EF119E00092CDAB /* WindowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowProtocol.swift; sourceTree = "<group>"; };
 		A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
 		A570588C1EF11C2B0092CDAB /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		A570577A1EF117D20092CDAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A5FAD1A91EF1B4D100D79151 /* Interface Controllers */,
 				A570577B1EF117D20092CDAB /* AppDelegate */,
 				A570577D1EF117D20092CDAB /* DataSources */,
 				A57057921EF117D20092CDAB /* Extensions */,
@@ -584,6 +587,22 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		A5FAD1A91EF1B4D100D79151 /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAD1AA1EF1B4D100D79151 /* TextInputsManager */,
+			);
+			path = "Interface Controllers";
+			sourceTree = "<group>";
+		};
+		A5FAD1AA1EF1B4D100D79151 /* TextInputsManager */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */,
+			);
+			path = TextInputsManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -665,6 +684,7 @@
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
 				A57058381EF117D20092CDAB /* CollectionViewFRCDataSource.swift in Sources */,
 				A57058471EF117D20092CDAB /* TextField+PlaceholderColor.swift in Sources */,
+				A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */,
 				A570586E1EF117D20092CDAB /* PushNotificationsService.swift in Sources */,
 				A570584E1EF117D20092CDAB /* QueryStringParser.swift in Sources */,
 				A570583E1EF117D20092CDAB /* ReusableCell.swift in Sources */,
@@ -880,6 +900,7 @@
 				A57057331EF117C40092CDAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

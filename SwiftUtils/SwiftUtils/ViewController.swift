@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: TextInputsManagerController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textInputsManager = TextInputsManager()
-        textInputsManager.
+        clearTextInputs()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
