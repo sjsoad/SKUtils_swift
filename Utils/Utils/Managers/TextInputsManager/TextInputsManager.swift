@@ -8,41 +8,37 @@
 
 import UIKit
 
-class TextInputsManager: NSObject, UIGestureRecognizerDelegate, TextInputsManagerInterface {
-    
-    private var textInputs = [UIView]()
+class TextInputsManager: NSObject, TextInputsManagerInterface {
     
     @IBInspectable private var hideOnTap: Bool = true
     @IBInspectable private var kAnimationDuration: Double = 0.25
     @IBInspectable private var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
-    @IBOutlet private weak var scroll: UIScrollView? = nil {
+    @IBOutlet private weak var scroll: UIScrollView! {
         didSet {
-            getTextInputsInView(scroll)
-            addTapGestureRecognizer()
+            configureManager()
         }
     }
     
-    override init() {
-        super.init()
+    private var textInputs = [UIView]()
+    
+    private func configureManager() {
         subscribeForKeyboardNotifications()
+        textInputsInView(scroll)
+        if hideOnTap == true { addTapGestureRecognizer() }
     }
     
-    // MARK: - Getting UITextFields
+    // MARK: - Getting Inputs
     
-    private func getTextInputsInView(_ view: UIView?) {
-        guard let view = view else { return }
+    private func textInputsInView(_ view: UIView) {
         for subView in view.subviews {
             if let textField = subView as? UITextField {
-                textField.addTarget(self,
-                                    action: #selector(returnButtonPressed),
-                                    for: UIControlEvents.editingDidEndOnExit)
+                textField.addTarget(self, action: #selector(returnButtonPressed), for: .editingDidEndOnExit)
                 textInputs.append(textField)
-                
             } else if let textView = subView as? UITextView {
                 textInputs.append(textView)
             } else {
-                getTextInputsInView(subView)
+                textInputsInView(subView)
             }
         }
     }
@@ -50,22 +46,18 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate, TextInputsManage
     // MARK: - Private -
     
     private func addTapGestureRecognizer() {
-        guard let scroll = scroll else { return }
-        if hideOnTap {
-            let tap = UITapGestureRecognizer(target: self,
-                                             action: #selector(hideKeyboard))
-            scroll.addGestureRecognizer(tap)
-        }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        scroll.addGestureRecognizer(tap)
     }
     
     private func subscribeForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(_:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               name: .UIKeyboardWillShow,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillHide(_:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               name: .UIKeyboardWillHide,
                                                object: nil)
     }
     
@@ -80,49 +72,45 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate, TextInputsManage
     }
     
     private func scrollToActiveInputView(_ keyboardHeight: CGFloat) {
-        guard let activeInputView = firstResponder(),
-            let scroll = scroll else { return }
-        let frame = scroll.convert(activeInputView.bounds,
-                                   from: activeInputView)
+        guard let activeInputView = firstResponder() else { return }
+        let frame = scroll.convert(activeInputView.bounds, from: activeInputView)
         scroll.scrollRectToVisible(frame, animated: true)
     }
     
     // MARK: - Handle keyboard notifications -
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
             let rect = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else { return }
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
-            guard let strongSelf = self,
-                let scroll = strongSelf.scroll else { return }
-            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
+            guard let strongSelf = self else { return }
+            strongSelf.scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
             strongSelf.scrollToActiveInputView(rect.size.height)
         })
     }
     
-    func keyboardWillHide(_ notification: Notification) {
+    @objc private func keyboardWillHide(_ notification: Notification) {
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
-            guard let strongSelf = self,
-                let scroll = strongSelf.scroll else { return }
-            scroll.contentInset = UIEdgeInsets.zero
+            guard let strongSelf = self else { return }
+            strongSelf.scroll.contentInset = UIEdgeInsets.zero
         })
     }
     
-    func returnButtonPressed(_ textField: UITextField) {
+    @objc private func returnButtonPressed(_ textField: UITextField) {
         sortInputsByY()
-        if let index = self.textInputs.index(where: {$0 === textField}) {
+        if let index = textInputs.index(where: {$0 === textField}) {
             let newIndex = index + 1
-            if newIndex < self.textInputs.count {
-                let nextInputView = self.textInputs[newIndex]
+            if newIndex < textInputs.count {
+                let nextInputView = textInputs[newIndex]
                 _ = nextInputView.becomeFirstResponder()
             } else {
                 hideKeyboard()
             }
         }
     }
-
+    
     // MARK: - TextInputsManagerInterface -
-
+    
     func hideKeyboard() {
         textInputs.forEach { textInput in
             _ = textInput.resignFirstResponder()
@@ -132,7 +120,7 @@ class TextInputsManager: NSObject, UIGestureRecognizerDelegate, TextInputsManage
     func clearTextInputs() {
         for field in textInputs {
             if let textField = field as? UITextField {
-             textField.text = nil
+                textField.text = nil
             }
             if let textView = field as? UITextView {
                 textView.text = ""
