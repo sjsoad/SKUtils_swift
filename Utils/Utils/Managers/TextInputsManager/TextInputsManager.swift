@@ -1,5 +1,5 @@
 //
-//  SKTextFieldsManager.swift
+//  TextInputsManager.swift
 //  SKUtilsSwift
 //
 //  Created by Sergey Kostyan on 19.07.16.

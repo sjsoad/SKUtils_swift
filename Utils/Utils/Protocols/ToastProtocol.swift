@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import SwiftyDrop
+//import SwiftyDrop
 
 protocol ToastProtocol {
     
@@ -20,8 +20,8 @@ extension ToastProtocol {
     
     func show(error: String?) {
         guard let error = error else { return }
-        Drop.down(error,
-                  state: .error)
+//        Drop.down(error,
+//                  state: .error)
     }
     
 }

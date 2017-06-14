@@ -17,7 +17,7 @@ protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
     func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
     
     var executingHandlerFor___FILEBASENAME___: RequerstExecutingHandler? { get set }
-    var resultOf___FILEBASENAME___Request: Dynamic<Bool> { get set }
+    var <#result#>: Dynamic<<#responce type#>> { get set }
 }
 
 extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
@@ -46,11 +46,7 @@ extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
             if let executingHandler = strongSelf.executingHandlerFor___FILEBASENAME___ {
                 executingHandler(false, nil)
             }
-            strongSelf.resultOf___FILEBASENAME___Request.value = true
             <#process responce#>
-//            Example:
-//            strongSelf.requestSucceed.value = result of request
-//            and set parameters that was retreived
         }
     }
     

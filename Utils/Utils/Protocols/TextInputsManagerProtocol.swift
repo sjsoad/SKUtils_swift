@@ -9,10 +9,15 @@
 import UIKit
 import Foundation
 
-protocol TextInputsManagerProtocol {
+protocol TextInputsManagerInterface {
+    
+    func hideKeyboard()
+    
+}
+
+protocol TextInputsManagerProtocol: TextInputsManagerInterface {
 
     var textInputsManager: TextInputsManager! { get set }
-    func hideKeyboard()
     
 }
 
