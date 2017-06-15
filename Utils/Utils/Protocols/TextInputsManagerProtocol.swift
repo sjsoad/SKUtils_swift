@@ -13,28 +13,7 @@ protocol TextInputsManagerInterface: class {
     
     func hideKeyboard()
     func clearTextInputs()
+    func reloadTextFieldsManager()
     func firstResponder() -> UIView?
-    
-}
-
-protocol TextInputsManagerProtocol: TextInputsManagerInterface {
-
-    var textInputsManager: TextInputsManager! { get }
-    
-}
-
-extension TextInputsManagerProtocol {
-
-    func hideKeyboard() {
-        textInputsManager.hideKeyboard()
-    }
-    
-    func clearTextInputs() {
-        textInputsManager.clearTextInputs()
-    }
-    
-    func firstResponder() -> UIView? {
-        return textInputsManager.firstResponder()
-    }
     
 }

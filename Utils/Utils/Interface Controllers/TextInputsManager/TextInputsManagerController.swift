@@ -22,6 +22,10 @@ class TextInputsManagerController: UIViewController, TextInputsManagerInterface 
         textInputsManager.clearTextInputs()
     }
     
+    internal func reloadTextFieldsManager() {
+        textInputsManager.reloadTextFieldsManager()
+    }
+    
     internal func firstResponder() -> UIView? {
         return textInputsManager.firstResponder()
     }

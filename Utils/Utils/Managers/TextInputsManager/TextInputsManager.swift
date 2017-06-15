@@ -128,6 +128,11 @@ class TextInputsManager: NSObject, TextInputsManagerInterface {
         }
     }
     
+    func reloadTextFieldsManager() {
+        textInputs.removeAll()
+        textInputsInView(scroll)
+    }
+    
     func firstResponder() -> UIView? {
         let textInput = textInputs.first(where: { (textField) -> Bool in
             return textField.isFirstResponder
