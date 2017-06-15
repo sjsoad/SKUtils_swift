@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextInputsManager: NSObject, TextInputsManagerInterface {
+class TextInputsManager: NSObject, TextInputsManaging {
     
     @IBInspectable private var hideOnTap: Bool = true
     @IBInspectable private var kAnimationDuration: Double = 0.25

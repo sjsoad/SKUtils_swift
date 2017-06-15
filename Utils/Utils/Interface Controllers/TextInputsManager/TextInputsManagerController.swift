@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextInputsManagerController: UIViewController, TextInputsManagerInterface {
+class TextInputsManagerController: UIViewController, TextInputsManaging {
 
     @IBOutlet private var textInputsManager: TextInputsManager!
     

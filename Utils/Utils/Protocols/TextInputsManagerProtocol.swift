@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-protocol TextInputsManagerInterface: class {
+protocol TextInputsManaging: class {
     
     func hideKeyboard()
     func clearTextInputs()
