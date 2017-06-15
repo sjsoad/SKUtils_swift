@@ -12,7 +12,6 @@ class ViewController: TextInputsManagerController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        clearTextInputs()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

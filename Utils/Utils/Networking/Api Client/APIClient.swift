@@ -13,17 +13,24 @@ typealias ErrorHandler = (_ error: Error) -> Void
 
 class APIClient: NSObject {
 
-    // MARK: - Public Methods
+    private var sessionManager: SessionManager!
+    
+    // MARK: - Init
+    
+    init(sessionManager: SessionManager? = Alamofire.SessionManager.default) {
+        self.sessionManager = sessionManager
+    }
+    
+    // MARK: - Public Methods -
     
     func executeRequest<T: APIRequestProtocol>(request: T,
-                                               success: ((_ response: T.Response) -> Void)? = nil,
-                                               failure: ErrorHandler? = nil) -> Request? {
-        return Alamofire.request(request.path,
-                                 method: request.HTTPMethod,
-                                 parameters: request.parameters,
-                                 encoding: JSONEncoding.default,
-                                 headers: request.headers)
-            /*          .validate(statusCode: 200..<300)*/ // optional validation
+                        success: ((_ response: T.Response) -> Void)? = nil,
+                        failure: ErrorHandler? = nil) -> Request? {
+        return sessionManager.request(request.path,
+                                      method: request.HTTPMethod,
+                                      parameters: request.parameters,
+                                      encoding: JSONEncoding.default,
+                                      headers: request.headers)
             .responseJSON(completionHandler: { (response) in
                 switch response.result {
                 case .success:
@@ -40,8 +47,12 @@ class APIClient: NSObject {
             })
     }
     
+    func pauseAllRequests(pause: Bool) {
+        sessionManager.session.delegateQueue.isSuspended = pause
+    }
+    
     func cancelAllRequests() {
-        Alamofire.SessionManager.default.session.invalidateAndCancel()
+        sessionManager.session.invalidateAndCancel()
     }
     
     func cancel(task: URLSessionTask?) {

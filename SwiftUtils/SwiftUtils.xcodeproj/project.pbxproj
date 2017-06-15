@@ -73,6 +73,12 @@
 		A57058871EF119E00092CDAB /* WindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058861EF119E00092CDAB /* WindowProtocol.swift */; };
 		A570588D1EF11C2B0092CDAB /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */; };
 		A570588E1EF11C2B0092CDAB /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588C1EF11C2B0092CDAB /* Presentation.swift */; };
+		A571EC191EF27BE40079700D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC0C1EF27BE40079700D /* APIClient.swift */; };
+		A571EC1A1EF27BE40079700D /* ActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */; };
+		A571EC1B1EF27BE40079700D /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */; };
+		A571EC1C1EF27BE40079700D /* RequestExecutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */; };
+		A571EC1F1EF27BE40079700D /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC171EF27BE40079700D /* APIRequestProtocol.swift */; };
+		A571EC201EF27BE40079700D /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC181EF27BE40079700D /* ResponseProtocol.swift */; };
 		A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +151,12 @@
 		A57058861EF119E00092CDAB /* WindowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowProtocol.swift; sourceTree = "<group>"; };
 		A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
 		A570588C1EF11C2B0092CDAB /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		A571EC0C1EF27BE40079700D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProtocol.swift; sourceTree = "<group>"; };
+		A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
+		A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingProtocol.swift; sourceTree = "<group>"; };
+		A571EC171EF27BE40079700D /* APIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
+		A571EC181EF27BE40079700D /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +213,7 @@
 		A570577A1EF117D20092CDAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A571EC0A1EF27BE40079700D /* Networking */,
 				A5FAD1A91EF1B4D100D79151 /* Interface Controllers */,
 				A570577B1EF117D20092CDAB /* AppDelegate */,
 				A570577D1EF117D20092CDAB /* DataSources */,
@@ -587,6 +600,51 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		A571EC0A1EF27BE40079700D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A571EC0B1EF27BE40079700D /* Api Client */,
+				A571EC0D1EF27BE40079700D /* MVP */,
+				A571EC161EF27BE40079700D /* Network Protocols */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A571EC0B1EF27BE40079700D /* Api Client */ = {
+			isa = PBXGroup;
+			children = (
+				A571EC0C1EF27BE40079700D /* APIClient.swift */,
+			);
+			path = "Api Client";
+			sourceTree = "<group>";
+		};
+		A571EC0D1EF27BE40079700D /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				A571EC0E1EF27BE40079700D /* Request Processing */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		A571EC0E1EF27BE40079700D /* Request Processing */ = {
+			isa = PBXGroup;
+			children = (
+				A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */,
+				A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */,
+				A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */,
+			);
+			path = "Request Processing";
+			sourceTree = "<group>";
+		};
+		A571EC161EF27BE40079700D /* Network Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A571EC171EF27BE40079700D /* APIRequestProtocol.swift */,
+				A571EC181EF27BE40079700D /* ResponseProtocol.swift */,
+			);
+			path = "Network Protocols";
+			sourceTree = "<group>";
+		};
 		A5FAD1A91EF1B4D100D79151 /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +751,7 @@
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
 				A57058851EF119A50092CDAB /* NavigationProtocol.swift in Sources */,
 				A57058761EF117D20092CDAB /* PermissionsState.swift in Sources */,
+				A571EC201EF27BE40079700D /* ResponseProtocol.swift in Sources */,
 				A570583C1EF117D20092CDAB /* ConfigurableCell.swift in Sources */,
 				A57058421EF117D20092CDAB /* String+NSRange.swift in Sources */,
 				A57058501EF117D20092CDAB /* ShareHelper.swift in Sources */,
@@ -703,9 +762,11 @@
 				A57058711EF117D20092CDAB /* CameraPermissions.swift in Sources */,
 				A57058401EF117D20092CDAB /* TableViewArrayDataSource.swift in Sources */,
 				A570584A1EF117D20092CDAB /* CollectionViewHelper.swift in Sources */,
+				A571EC1A1EF27BE40079700D /* ActivityProtocol.swift in Sources */,
 				A57058731EF117D20092CDAB /* LocationPermissions.swift in Sources */,
 				A570587D1EF117D20092CDAB /* BaseValidator.swift in Sources */,
 				A570584B1EF117D20092CDAB /* DefaultValidationHelper.swift in Sources */,
+				A571EC1C1EF27BE40079700D /* RequestExecutingProtocol.swift in Sources */,
 				A570587B1EF117D20092CDAB /* PassTextField.swift in Sources */,
 				A570583B1EF117D20092CDAB /* AbstractDataSource.swift in Sources */,
 				A57058371EF117D20092CDAB /* ConfigurableView.swift in Sources */,
@@ -723,8 +784,10 @@
 				A57058461EF117D20092CDAB /* TextField+Padding.swift in Sources */,
 				A57058441EF117D20092CDAB /* UIViewContollrer+PresentationProtocol.swift in Sources */,
 				A57058451EF117D20092CDAB /* ColorExtension.swift in Sources */,
+				A571EC191EF27BE40079700D /* APIClient.swift in Sources */,
 				A570587F1EF117D20092CDAB /* EqualStringsValidator.swift in Sources */,
 				A57058751EF117D20092CDAB /* PhotoLibraryPermissions.swift in Sources */,
+				A571EC1B1EF27BE40079700D /* RequestErrorHandlerProtocol.swift in Sources */,
 				A57058781EF117D20092CDAB /* ServicePermissions.swift in Sources */,
 				A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */,
 				A570587C1EF117D20092CDAB /* TextFieldAccessoryView.swift in Sources */,
@@ -739,6 +802,7 @@
 				A570583A1EF117D20092CDAB /* FRCDataSource.swift in Sources */,
 				A570588D1EF11C2B0092CDAB /* AlertPresentation.swift in Sources */,
 				A570583D1EF117D20092CDAB /* DataSourceViewModel.swift in Sources */,
+				A571EC1F1EF27BE40079700D /* APIRequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
