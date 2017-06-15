@@ -14,11 +14,12 @@ protocol TextInputsManagerInterface: class {
     func hideKeyboard()
     func clearTextInputs()
     func firstResponder() -> UIView?
+    
 }
 
 protocol TextInputsManagerProtocol: TextInputsManagerInterface {
 
-    var textInputsManager: TextInputsManager! { get set }
+    var textInputsManager: TextInputsManager! { get }
     
 }
 
