@@ -9,6 +9,7 @@
 import Foundation
 
 typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Request.Response) -> Void
+typealias ___FILEBASENAME___ResponceValue = ()
 
 protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
     
@@ -16,8 +17,8 @@ protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler
     func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
     
-    var executingHandlerFor___FILEBASENAME___: RequerstExecutingHandler? { get set }
-    var <#result#>: Dynamic<<#responce type#>> { get set }
+    var executingHandlerFor___FILEBASENAME___: RequerstExecutingHandler? { get }
+    var result: Dynamic<___FILEBASENAME___ResponceValue?> { get }
 }
 
 extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
@@ -33,20 +34,20 @@ extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
                                                 parameters: parameters,
                                                 headers: headers)
         let apiClient = APIClient()
-        let _ = apiClient.executeRequest(request: request,
-                                         success: successHandlerFor___FILEBASENAME___(),
-                                         failure: errorHandlerFor___FILEBASENAME___())
+        _ = apiClient.executeRequest(request: request,
+                                     success: successHandlerFor___FILEBASENAME___(),
+                                     failure: errorHandlerFor___FILEBASENAME___())
     }
     
     // MARK: - Handlers
     
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler {
         return { [weak self] response in
-            guard var strongSelf = self else { return }
+            guard let strongSelf = self else { return }
             if let executingHandler = strongSelf.executingHandlerFor___FILEBASENAME___ {
                 executingHandler(false, nil)
             }
-            <#process responce#>
+            strongSelf.result.value = response.result
         }
     }
     

@@ -11,6 +11,8 @@ import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___Response: ResponseProtocol {
     
+    var result: ___FILEBASENAME___ResponceValue?
+    
     required init(JSON: AnyObject) {
         
     }
