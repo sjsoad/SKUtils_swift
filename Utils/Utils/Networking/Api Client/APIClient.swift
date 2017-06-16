@@ -41,8 +41,8 @@ class APIClient: NSObject {
     // MARK: - Public Methods
     
     func executeRequest<T: APIRequestProtocol>(request: T,
-                                               success: ((_ response: T.Response) -> Void)? = nil,
-                                               failure: ErrorHandler? = nil) -> Request? {
+                        success: ((_ response: T.Response) -> Void)? = nil,
+                        failure: ErrorHandler? = nil) -> Request? {
         return execute(request: request, success: success, failure: failure)
     }
     
@@ -67,8 +67,8 @@ class APIClient: NSObject {
     }
     
     private func execute<T: APIRequestProtocol>(request: T,
-                                                success: ((_ response: T.Response) -> Void)? = nil,
-                                                failure: ErrorHandler? = nil) -> Request? {
+                         success: ((_ response: T.Response) -> Void)? = nil,
+                         failure: ErrorHandler? = nil) -> Request? {
         return sessionManager.request(request.path,
                                       method: request.HTTPMethod,
                                       parameters: request.parameters,
@@ -79,12 +79,9 @@ class APIClient: NSObject {
                 case .success:
                     if let successClosure = success,
                         let json = response.result.value {
-                        if let error = NetworkErrorHelper.errorFrom(JSON: json), let errorClosure = failure {
-                            errorClosure(error)
-                        } else {
-                            let response: T.Response = T.Response(JSON: json as AnyObject)
-                            successClosure(response)
-                        }
+                        // add error parser if needed
+                        let response: T.Response = T.Response(JSON: json as AnyObject)
+                        successClosure(response)
                     }
                 case .failure(let error):
                     if let errorClosure = failure {
