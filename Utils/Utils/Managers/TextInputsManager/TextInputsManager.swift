@@ -10,9 +10,9 @@ import UIKit
 
 class TextInputsManager: NSObject, TextInputsManaging {
     
-    @IBInspectable private var hideOnTap: Bool = true
-    @IBInspectable private var kAnimationDuration: Double = 0.25
-    @IBInspectable private var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
+    @IBInspectable var hideOnTap: Bool = true
+    @IBInspectable var kAnimationDuration: Double = 0.25
+    @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
     @IBOutlet private weak var scroll: UIScrollView! {
         didSet {
