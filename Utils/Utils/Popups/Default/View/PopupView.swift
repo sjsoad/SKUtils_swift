@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PopupView: UIView, PopupInterface {
-
-    var presenter: InfoOutput?
+class PopupView: UIView, PopupViewable {
+    
+    var presenter: PopupOutput?
     
     // outlets
     @IBOutlet private weak var background: UIView!
@@ -34,16 +34,16 @@ class PopupView: UIView, PopupInterface {
     }
     
     func show() {
-        changeBackgroudAlpha(to: 1) { [weak self] (_) in
+        changeAlpha(of: background, to: 1) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.changeContainerAlpha(to: 1, completion: nil)
+            strongSelf.changeAlpha(of: strongSelf.container, to: 1, completion: nil)
         }
     }
     
     func hide() {
-        changeContainerAlpha(to: 0) { [weak self] (_) in
+        changeAlpha(of: container, to: 0) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.changeBackgroudAlpha(to: 0, completion: { [weak self] (_) in
+            strongSelf.changeAlpha(of: strongSelf.background, to: 0, completion: { [weak self] (_) in
                 guard let strongSelf = self else { return }
                 strongSelf.presenter?.viewDidHide()
             })
@@ -52,23 +52,14 @@ class PopupView: UIView, PopupInterface {
     
     // MARK: - Private -
     
-    private func changeBackgroudAlpha(to value: CGFloat, completion: ((Bool) -> Void)?) {
+    private func changeAlpha(of view: UIView, to value: CGFloat, completion: ((Bool) -> Void)?) {
         UIView.animate(withDuration: 0.25,
-                       animations: { [weak self] in
-                        guard let strongSelf = self else { return }
-                        strongSelf.background.alpha = value
-            },
+                       animations: {
+                        view.alpha = value
+        },
                        completion: completion)
     }
     
-    private func changeContainerAlpha(to value: CGFloat, completion: ((Bool) -> Void)?) {
-        UIView.animate(withDuration: 0.25,
-                       animations: { [weak self] in
-                        guard let strongSelf = self else { return }
-                        strongSelf.container.alpha = value
-            },
-                       completion: completion)
-    }
     
     // MARK: - Actions -
     

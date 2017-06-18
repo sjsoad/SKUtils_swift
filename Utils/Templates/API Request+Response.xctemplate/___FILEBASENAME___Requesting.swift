@@ -11,7 +11,7 @@ import Foundation
 typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Request.Response) -> Void
 typealias ___FILEBASENAME___ResponceValue = ()
 
-protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
+protocol ___FILEBASENAME___Requesting: RequestErrorHandling {
     
     func exampleFunc()
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler
@@ -21,7 +21,7 @@ protocol ___FILEBASENAME___RequestProtocol: RequestErrorHandlerProtocol {
     var result: Dynamic<___FILEBASENAME___ResponceValue?> { get }
 }
 
-extension ___FILEBASENAME___RequestProtocol where Self: NSObject {
+extension ___FILEBASENAME___Requesting where Self: NSObject {
     
     func exampleFunc() {
         if let executingHandler = executingHandlerFor___FILEBASENAME___ {

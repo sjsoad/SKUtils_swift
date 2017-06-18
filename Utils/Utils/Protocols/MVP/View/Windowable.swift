@@ -9,13 +9,13 @@
 import UIKit
 import Foundation
 
-protocol WindowProtocol {
+protocol Windowable {
 
     var window: UIWindow? { get }
     
 }
 
-extension WindowProtocol where Self: UIViewController {
+extension Windowable where Self: UIViewController {
 
     var window: UIWindow? {
         return view.window
@@ -23,7 +23,7 @@ extension WindowProtocol where Self: UIViewController {
     
 }
 
-extension WindowProtocol where Self: UIView {
+extension Windowable where Self: UIView {
     
     var window: UIWindow? {
         return window

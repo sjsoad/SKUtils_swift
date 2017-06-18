@@ -10,14 +10,14 @@ import Foundation
 import NVActivityIndicatorView
 
 
-protocol ActivityProtocol: NVActivityIndicatorViewable, ToastProtocol {
+protocol ActivityViewable: NVActivityIndicatorViewable, AlertViewable {
     
     func showActivity()
     func hideActivity()
     
 }
 
-extension ActivityProtocol where Self: UIViewController {
+extension ActivityViewable where Self: UIViewController {
     
     func showActivity() {
         startAnimating()

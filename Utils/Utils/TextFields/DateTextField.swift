@@ -8,16 +8,7 @@
 
 import UIKit
 
-class DateTextField: BaseTextField {
-
-    var currentDate: Date {
-        set {
-            self.datePicker.date = newValue
-        }
-        get {
-            return self.datePicker.date
-        }
-    }
+class DateTextField: PickableTextField {
     
     #if TARGET_INTERFACE_BUILDER
     @IBOutlet open weak var dateFieldDelegate: AnyObject?
@@ -25,20 +16,15 @@ class DateTextField: BaseTextField {
     weak open var dateFieldDelegate: DateTextFieldDelegate?
     #endif
     
-    @IBInspectable var dateDisplayingFormat: String = "dd MM yyyy" {
+    @IBInspectable var dateDisplayingFormat: String = "dd MMM yyyy" {
         didSet {
             self.dateFormatter.dateFormat = self.dateDisplayingFormat
         }
     }
     
-    @IBInspectable var doneButtonTitle: String = "Done" {
-        didSet {
-            self.doneButton.title = self.doneButtonTitle
-        }
-    }
-    
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = self.dateDisplayingFormat
         return dateFormatter
     }()
     
@@ -51,47 +37,28 @@ class DateTextField: BaseTextField {
         return datePicker
     }()
     
-    lazy var datePickerToolbar: UIToolbar? = {
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.sizeToFit()
-        let doneButton = self.doneButton
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-                                          target: nil,
-                                          action: nil)
-        toolBar.setItems([spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        return toolBar
-    }()
-    
-    private lazy var doneButton: UIBarButtonItem = {
-        let doneButton = UIBarButtonItem(title: nil,
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(doneButtonPressed(_:)))
-        return doneButton
-    }()
-    
     // MARK: - Init -
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.inputView = self.datePicker
-        self.inputAccessoryView = self.datePickerToolbar
+        self.inputAccessoryView = self.toolbar
     }
     
     // MARK: - Functions -
     
+    override func doneButtonPressed(_ sender: UIBarButtonItem) {
+        display(selectedDate: datePicker.date)
+        guard let delegate = dateFieldDelegate else { return }
+        delegate.dateTextField?(self, didPressDoneButton: sender)
+    }
+    
+    // MARK: - Private -
+    
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
         display(selectedDate: sender.date)
         guard let delegate = dateFieldDelegate else { return }
-        delegate.dateTextField?(self, selectedDate: sender.date)
-    }
-    
-    @objc private func doneButtonPressed(_ sender: UIBarButtonItem) {
-        display(selectedDate: datePicker.date)
-        guard let delegate = dateFieldDelegate else { return }
-        delegate.dateTextField?(self, pressedDoneButton: sender)
+        delegate.dateTextField?(self, didSelectedDate: sender.date)
     }
     
     private func display(selectedDate date: Date) {
@@ -103,7 +70,7 @@ class DateTextField: BaseTextField {
 
 @objc protocol DateTextFieldDelegate : class {
 
-    @objc optional func dateTextField(_ dateTextField: DateTextField, selectedDate date: Date)
-    @objc optional func dateTextField(_ dateTextField: DateTextField, pressedDoneButton button: UIBarButtonItem)
+    @objc optional func dateTextField(_ dateTextField: DateTextField, didSelectedDate date: Date)
+    @objc optional func dateTextField(_ dateTextField: DateTextField, didPressDoneButton button: UIBarButtonItem)
     
 }

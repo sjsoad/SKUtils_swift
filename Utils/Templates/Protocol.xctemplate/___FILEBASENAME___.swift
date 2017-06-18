@@ -9,10 +9,10 @@
 import UIKit
 import Foundation
 
-protocol ___FILEBASENAMEASIDENTIFIER___Protocol {
+protocol ___FILEBASENAMEASIDENTIFIER___ {
 
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___Protocol {
+extension ___FILEBASENAMEASIDENTIFIER___ {
 
 }

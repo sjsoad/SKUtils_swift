@@ -10,7 +10,7 @@
 import UIKit
 import Foundation
 
-class ___FILEBASENAMEASIDENTIFIER___Request: APIRequestProtocol {
+class ___FILEBASENAMEASIDENTIFIER___Request: APIRequesting {
     
     typealias Response = ___FILEBASENAMEASIDENTIFIER___Response
     

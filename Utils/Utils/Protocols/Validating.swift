@@ -8,9 +8,7 @@
 
 import UIKit
 
-typealias ValidationResult = (succeed: Bool, error: String?)
-
-protocol DefaultValidationHelper {
+protocol Validating {
     
     var emailValidator: EmailValidator { get }
     var passValidator: PasswordValidator { get }
@@ -19,7 +17,7 @@ protocol DefaultValidationHelper {
     
 }
 
-extension DefaultValidationHelper {
+extension Validating {
     
     var emailValidator: EmailValidator {
         return EmailValidator()

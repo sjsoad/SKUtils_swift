@@ -10,13 +10,13 @@ import UIKit
 import Foundation
 import SwiftyDrop
 
-protocol ToastProtocol {
+protocol AlertViewable {
     
     func show(error: String?)
     
 }
 
-extension ToastProtocol {
+extension AlertViewable {
     
     func show(error: String?) {
         guard let error = error else { return }

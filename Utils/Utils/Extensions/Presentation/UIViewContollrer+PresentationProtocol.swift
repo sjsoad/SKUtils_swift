@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIViewController: Presentation {
+extension UIViewController: Presentable {
 
 }

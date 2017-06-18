@@ -11,9 +11,9 @@ import Alamofire
 
 typealias Method = Alamofire.HTTPMethod
 
-protocol APIRequestProtocol {
+protocol APIRequesting {
     
-    associatedtype Response: ResponseProtocol
+    associatedtype Response: APIResponsing
     
     var HTTPMethod: Method { get }
     var parameters: [String: Any]? { get }
@@ -26,7 +26,7 @@ protocol APIRequestProtocol {
     
 }
 
-extension APIRequestProtocol {
+extension APIRequesting {
     
     var HTTPMethod: Method { return .get }
     

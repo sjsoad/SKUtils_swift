@@ -40,7 +40,7 @@ class APIClient: NSObject {
     
     // MARK: - Public Methods
     
-    func executeRequest<T: APIRequestProtocol>(request: T,
+    func executeRequest<T: APIRequesting>(request: T,
                         success: ((_ response: T.Response) -> Void)? = nil,
                         failure: ErrorHandler? = nil) -> Request? {
         return execute(request: request, success: success, failure: failure)
@@ -66,7 +66,7 @@ class APIClient: NSObject {
         return NSError(domain: host, code: 404, userInfo: [NSLocalizedDescriptionKey: reahcabilityErrorMessage])
     }
     
-    private func execute<T: APIRequestProtocol>(request: T,
+    private func execute<T: APIRequesting>(request: T,
                          success: ((_ response: T.Response) -> Void)? = nil,
                          failure: ErrorHandler? = nil) -> Request? {
         return sessionManager.request(request.path,

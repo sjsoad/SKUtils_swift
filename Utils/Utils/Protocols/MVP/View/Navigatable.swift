@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-protocol NavigationProtocol {
+protocol Navigatable {
 
     var navigationController: UINavigationController? { get }
     

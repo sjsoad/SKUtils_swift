@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewHelper {
     
-    static func activateDynamicCellHeight(for tableView: UITableView, estimatedRowHeight height: CGFloat) {
+    static func dynamicCellHeight(for tableView: UITableView, estimatedRowHeight height: CGFloat) {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = height
     }

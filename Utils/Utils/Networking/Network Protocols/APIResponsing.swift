@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
-protocol ResponseProtocol {
+protocol APIResponsing {
 
     init (JSON: AnyObject)
 

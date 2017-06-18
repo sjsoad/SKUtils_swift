@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol RequestErrorHandlerProtocol {
+protocol RequestErrorHandling {
     
     func requestErrorHandler(executingHandler handler: RequerstExecutingHandler?) -> ErrorHandler
     
 }
 
-extension RequestErrorHandlerProtocol where Self: NSObject {
+extension RequestErrorHandling where Self: NSObject {
     
     func requestErrorHandler(executingHandler handler: RequerstExecutingHandler?) -> ErrorHandler {
         return { error in

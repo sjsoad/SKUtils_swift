@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PopupInterface: class {
+protocol PopupViewable: class {
     
     func show()
     func hide()
@@ -24,10 +24,10 @@ protocol PopupOutput {
 
 class PopupPresenter: NSObject {
 
-    weak var view: PopupInterface?
+    weak var view: PopupViewable?
     fileprivate var displayingWindow: UIWindow?
     
-    init(with view: InfoInterface) {
+    init(with view: PopupViewable) {
         self.view = view
     }
     

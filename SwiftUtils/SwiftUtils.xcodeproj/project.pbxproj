@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		33D3A46F31DAD41EB8D313C8 /* Pods_SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */; };
 		A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE4001EF5441400AD8197 /* DateTextField.swift */; };
+		A521F6791EF6742D00DB4D1E /* Validating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6781EF6742D00DB4D1E /* Validating.swift */; };
+		A521F6FD1EF6813300DB4D1E /* PopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6FA1EF6813300DB4D1E /* PopupPresenter.swift */; };
+		A521F6FE1EF6813300DB4D1E /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6FC1EF6813300DB4D1E /* PopupView.swift */; };
+		A521F7011EF6860700DB4D1E /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7001EF6860700DB4D1E /* PickerManager.swift */; };
+		A521F7031EF6878600DB4D1E /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7021EF6878600DB4D1E /* PickerTextField.swift */; };
+		A521F7051EF689F700DB4D1E /* PickableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7041EF689F700DB4D1E /* PickableTextField.swift */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
 		A57057251EF117C40092CDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057241EF117C40092CDAB /* ViewController.swift */; };
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
@@ -37,7 +43,6 @@
 		A57058481EF117D20092CDAB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570579E1EF117D20092CDAB /* DesignableView.swift */; };
 		A57058491EF117D20092CDAB /* UIView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570579F1EF117D20092CDAB /* UIView+Load.swift */; };
 		A570584A1EF117D20092CDAB /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A11EF117D20092CDAB /* CollectionViewHelper.swift */; };
-		A570584B1EF117D20092CDAB /* DefaultValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A21EF117D20092CDAB /* DefaultValidationHelper.swift */; };
 		A570584C1EF117D20092CDAB /* DynamicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A31EF117D20092CDAB /* DynamicHelper.swift */; };
 		A570584D1EF117D20092CDAB /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A41EF117D20092CDAB /* MapsHelper.swift */; };
 		A570584E1EF117D20092CDAB /* QueryStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A51EF117D20092CDAB /* QueryStringParser.swift */; };
@@ -48,8 +53,8 @@
 		A57058531EF117D20092CDAB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AB1EF117D20092CDAB /* Utils.swift */; };
 		A57058541EF117D20092CDAB /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AC1EF117D20092CDAB /* WindowFactory.swift */; };
 		A57058551EF117D20092CDAB /* TextInputsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AF1EF117D20092CDAB /* TextInputsManager.swift */; };
-		A570586A1EF117D20092CDAB /* TextInputsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057D51EF117D20092CDAB /* TextInputsManagerProtocol.swift */; };
-		A570586B1EF117D20092CDAB /* ToastProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057D61EF117D20092CDAB /* ToastProtocol.swift */; };
+		A570586A1EF117D20092CDAB /* TextInputsManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057D51EF117D20092CDAB /* TextInputsManaging.swift */; };
+		A570586B1EF117D20092CDAB /* AlertViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057D61EF117D20092CDAB /* AlertViewable.swift */; };
 		A570586C1EF117D20092CDAB /* FCMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057DA1EF117D20092CDAB /* FCMService.swift */; };
 		A570586D1EF117D20092CDAB /* APNSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057DC1EF117D20092CDAB /* APNSService.swift */; };
 		A570586E1EF117D20092CDAB /* PushNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057DD1EF117D20092CDAB /* PushNotificationsService.swift */; };
@@ -71,16 +76,16 @@
 		A570587E1EF117D20092CDAB /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057F91EF117D20092CDAB /* EmailValidator.swift */; };
 		A570587F1EF117D20092CDAB /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057FA1EF117D20092CDAB /* EqualStringsValidator.swift */; };
 		A57058801EF117D20092CDAB /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057FB1EF117D20092CDAB /* PasswordValidator.swift */; };
-		A57058851EF119A50092CDAB /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058841EF119A50092CDAB /* NavigationProtocol.swift */; };
-		A57058871EF119E00092CDAB /* WindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058861EF119E00092CDAB /* WindowProtocol.swift */; };
-		A570588D1EF11C2B0092CDAB /* AlertPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */; };
-		A570588E1EF11C2B0092CDAB /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588C1EF11C2B0092CDAB /* Presentation.swift */; };
+		A57058851EF119A50092CDAB /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058841EF119A50092CDAB /* Navigatable.swift */; };
+		A57058871EF119E00092CDAB /* Windowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57058861EF119E00092CDAB /* Windowable.swift */; };
+		A570588D1EF11C2B0092CDAB /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588B1EF11C2B0092CDAB /* AlertPresentable.swift */; };
+		A570588E1EF11C2B0092CDAB /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A570588C1EF11C2B0092CDAB /* Presentable.swift */; };
 		A571EC191EF27BE40079700D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC0C1EF27BE40079700D /* APIClient.swift */; };
 		A571EC1A1EF27BE40079700D /* ActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */; };
-		A571EC1B1EF27BE40079700D /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */; };
-		A571EC1C1EF27BE40079700D /* RequestExecutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */; };
-		A571EC1F1EF27BE40079700D /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC171EF27BE40079700D /* APIRequestProtocol.swift */; };
-		A571EC201EF27BE40079700D /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC181EF27BE40079700D /* ResponseProtocol.swift */; };
+		A571EC1B1EF27BE40079700D /* RequestErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC101EF27BE40079700D /* RequestErrorHandling.swift */; };
+		A571EC1C1EF27BE40079700D /* RequestExecuting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC111EF27BE40079700D /* RequestExecuting.swift */; };
+		A571EC1F1EF27BE40079700D /* APIRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC171EF27BE40079700D /* APIRequesting.swift */; };
+		A571EC201EF27BE40079700D /* APIResponsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571EC181EF27BE40079700D /* APIResponsing.swift */; };
 		A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +94,12 @@
 		27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.release.xcconfig"; sourceTree = "<group>"; };
 		4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		A51FE4001EF5441400AD8197 /* DateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
+		A521F6781EF6742D00DB4D1E /* Validating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validating.swift; sourceTree = "<group>"; };
+		A521F6FA1EF6813300DB4D1E /* PopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresenter.swift; sourceTree = "<group>"; };
+		A521F6FC1EF6813300DB4D1E /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		A521F7001EF6860700DB4D1E /* PickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
+		A521F7021EF6878600DB4D1E /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		A521F7041EF689F700DB4D1E /* PickableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickableTextField.swift; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57057221EF117C40092CDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57057241EF117C40092CDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +130,6 @@
 		A570579E1EF117D20092CDAB /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		A570579F1EF117D20092CDAB /* UIView+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Load.swift"; sourceTree = "<group>"; };
 		A57057A11EF117D20092CDAB /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
-		A57057A21EF117D20092CDAB /* DefaultValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultValidationHelper.swift; sourceTree = "<group>"; };
 		A57057A31EF117D20092CDAB /* DynamicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHelper.swift; sourceTree = "<group>"; };
 		A57057A41EF117D20092CDAB /* MapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsHelper.swift; sourceTree = "<group>"; };
 		A57057A51EF117D20092CDAB /* QueryStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStringParser.swift; sourceTree = "<group>"; };
@@ -130,8 +140,8 @@
 		A57057AB1EF117D20092CDAB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A57057AC1EF117D20092CDAB /* WindowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
 		A57057AF1EF117D20092CDAB /* TextInputsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManager.swift; sourceTree = "<group>"; };
-		A57057D51EF117D20092CDAB /* TextInputsManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerProtocol.swift; sourceTree = "<group>"; };
-		A57057D61EF117D20092CDAB /* ToastProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastProtocol.swift; sourceTree = "<group>"; };
+		A57057D51EF117D20092CDAB /* TextInputsManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManaging.swift; sourceTree = "<group>"; };
+		A57057D61EF117D20092CDAB /* AlertViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewable.swift; sourceTree = "<group>"; };
 		A57057DA1EF117D20092CDAB /* FCMService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCMService.swift; sourceTree = "<group>"; };
 		A57057DC1EF117D20092CDAB /* APNSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APNSService.swift; sourceTree = "<group>"; };
 		A57057DD1EF117D20092CDAB /* PushNotificationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationsService.swift; sourceTree = "<group>"; };
@@ -153,16 +163,16 @@
 		A57057F91EF117D20092CDAB /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A57057FA1EF117D20092CDAB /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A57057FB1EF117D20092CDAB /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		A57058841EF119A50092CDAB /* NavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
-		A57058861EF119E00092CDAB /* WindowProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowProtocol.swift; sourceTree = "<group>"; };
-		A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentation.swift; sourceTree = "<group>"; };
-		A570588C1EF11C2B0092CDAB /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		A57058841EF119A50092CDAB /* Navigatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
+		A57058861EF119E00092CDAB /* Windowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Windowable.swift; sourceTree = "<group>"; };
+		A570588B1EF11C2B0092CDAB /* AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		A570588C1EF11C2B0092CDAB /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		A571EC0C1EF27BE40079700D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProtocol.swift; sourceTree = "<group>"; };
-		A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
-		A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecutingProtocol.swift; sourceTree = "<group>"; };
-		A571EC171EF27BE40079700D /* APIRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
-		A571EC181EF27BE40079700D /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
+		A571EC101EF27BE40079700D /* RequestErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandling.swift; sourceTree = "<group>"; };
+		A571EC111EF27BE40079700D /* RequestExecuting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecuting.swift; sourceTree = "<group>"; };
+		A571EC171EF27BE40079700D /* APIRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequesting.swift; sourceTree = "<group>"; };
+		A571EC181EF27BE40079700D /* APIResponsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponsing.swift; sourceTree = "<group>"; };
 		A5FAD1AB1EF1B4D100D79151 /* TextInputsManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +195,47 @@
 				27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A521F6F71EF6813300DB4D1E /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				A521F6F81EF6813300DB4D1E /* Default */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
+		A521F6F81EF6813300DB4D1E /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				A521F6F91EF6813300DB4D1E /* Presenter */,
+				A521F6FB1EF6813300DB4D1E /* View */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		A521F6F91EF6813300DB4D1E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A521F6FA1EF6813300DB4D1E /* PopupPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A521F6FB1EF6813300DB4D1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A521F6FC1EF6813300DB4D1E /* PopupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A521F6FF1EF6860700DB4D1E /* Picker DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				A521F7001EF6860700DB4D1E /* PickerManager.swift */,
+			);
+			path = "Picker DataSource";
 			sourceTree = "<group>";
 		};
 		A57057161EF117C40092CDAB = {
@@ -231,6 +282,8 @@
 		A570577A1EF117D20092CDAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A521F6FF1EF6860700DB4D1E /* Picker DataSource */,
+				A521F6F71EF6813300DB4D1E /* Popups */,
 				A571EC0A1EF27BE40079700D /* Networking */,
 				A5FAD1A91EF1B4D100D79151 /* Interface Controllers */,
 				A570577B1EF117D20092CDAB /* AppDelegate */,
@@ -389,7 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				A57057A11EF117D20092CDAB /* CollectionViewHelper.swift */,
-				A57057A21EF117D20092CDAB /* DefaultValidationHelper.swift */,
 				A57057A31EF117D20092CDAB /* DynamicHelper.swift */,
 				A57057A41EF117D20092CDAB /* MapsHelper.swift */,
 				A57057A51EF117D20092CDAB /* QueryStringParser.swift */,
@@ -430,10 +482,11 @@
 		A57057BF1EF117D20092CDAB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A521F6781EF6742D00DB4D1E /* Validating.swift */,
 				A570588A1EF11C2B0092CDAB /* Presentation */,
 				A57058811EF1192B0092CDAB /* MVP */,
-				A57057D51EF117D20092CDAB /* TextInputsManagerProtocol.swift */,
-				A57057D61EF117D20092CDAB /* ToastProtocol.swift */,
+				A57057D51EF117D20092CDAB /* TextInputsManaging.swift */,
+				A57057D61EF117D20092CDAB /* AlertViewable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -557,11 +610,13 @@
 		A57057F11EF117D20092CDAB /* TextFields */ = {
 			isa = PBXGroup;
 			children = (
+				A57057F51EF117D20092CDAB /* TextFieldAccessoryView */,
 				A57057F21EF117D20092CDAB /* BaseTextField.swift */,
 				A57057F31EF117D20092CDAB /* EmailTextField.swift */,
 				A57057F41EF117D20092CDAB /* PassTextField.swift */,
-				A57057F51EF117D20092CDAB /* TextFieldAccessoryView */,
 				A51FE4001EF5441400AD8197 /* DateTextField.swift */,
+				A521F7021EF6878600DB4D1E /* PickerTextField.swift */,
+				A521F7041EF689F700DB4D1E /* PickableTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -604,8 +659,8 @@
 		A57058831EF1192B0092CDAB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A57058841EF119A50092CDAB /* NavigationProtocol.swift */,
-				A57058861EF119E00092CDAB /* WindowProtocol.swift */,
+				A57058841EF119A50092CDAB /* Navigatable.swift */,
+				A57058861EF119E00092CDAB /* Windowable.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,8 +668,8 @@
 		A570588A1EF11C2B0092CDAB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A570588B1EF11C2B0092CDAB /* AlertPresentation.swift */,
-				A570588C1EF11C2B0092CDAB /* Presentation.swift */,
+				A570588B1EF11C2B0092CDAB /* AlertPresentable.swift */,
+				A570588C1EF11C2B0092CDAB /* Presentable.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -649,8 +704,8 @@
 			isa = PBXGroup;
 			children = (
 				A571EC0F1EF27BE40079700D /* ActivityProtocol.swift */,
-				A571EC101EF27BE40079700D /* RequestErrorHandlerProtocol.swift */,
-				A571EC111EF27BE40079700D /* RequestExecutingProtocol.swift */,
+				A571EC101EF27BE40079700D /* RequestErrorHandling.swift */,
+				A571EC111EF27BE40079700D /* RequestExecuting.swift */,
 			);
 			path = "Request Processing";
 			sourceTree = "<group>";
@@ -658,8 +713,8 @@
 		A571EC161EF27BE40079700D /* Network Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A571EC171EF27BE40079700D /* APIRequestProtocol.swift */,
-				A571EC181EF27BE40079700D /* ResponseProtocol.swift */,
+				A571EC171EF27BE40079700D /* APIRequesting.swift */,
+				A571EC181EF27BE40079700D /* APIResponsing.swift */,
 			);
 			path = "Network Protocols";
 			sourceTree = "<group>";
@@ -812,7 +867,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A570586D1EF117D20092CDAB /* APNSService.swift in Sources */,
-				A570588E1EF11C2B0092CDAB /* Presentation.swift in Sources */,
+				A570588E1EF11C2B0092CDAB /* Presentable.swift in Sources */,
+				A521F6791EF6742D00DB4D1E /* Validating.swift in Sources */,
+				A521F6FD1EF6813300DB4D1E /* PopupPresenter.swift in Sources */,
 				A570584D1EF117D20092CDAB /* MapsHelper.swift in Sources */,
 				A57058551EF117D20092CDAB /* TextInputsManager.swift in Sources */,
 				A57058521EF117D20092CDAB /* UIAlertActioFactory.swift in Sources */,
@@ -820,6 +877,7 @@
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
 				A57058381EF117D20092CDAB /* CollectionViewFRCDataSource.swift in Sources */,
 				A57058471EF117D20092CDAB /* TextField+PlaceholderColor.swift in Sources */,
+				A521F7031EF6878600DB4D1E /* PickerTextField.swift in Sources */,
 				A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */,
 				A570586E1EF117D20092CDAB /* PushNotificationsService.swift in Sources */,
 				A570584E1EF117D20092CDAB /* QueryStringParser.swift in Sources */,
@@ -827,13 +885,13 @@
 				A57058791EF117D20092CDAB /* BaseTextField.swift in Sources */,
 				A570583F1EF117D20092CDAB /* SectionModel.swift in Sources */,
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
-				A57058851EF119A50092CDAB /* NavigationProtocol.swift in Sources */,
+				A57058851EF119A50092CDAB /* Navigatable.swift in Sources */,
 				A57058761EF117D20092CDAB /* PermissionsState.swift in Sources */,
-				A571EC201EF27BE40079700D /* ResponseProtocol.swift in Sources */,
+				A571EC201EF27BE40079700D /* APIResponsing.swift in Sources */,
 				A570583C1EF117D20092CDAB /* ConfigurableCell.swift in Sources */,
 				A57058421EF117D20092CDAB /* String+NSRange.swift in Sources */,
 				A57058501EF117D20092CDAB /* ShareHelper.swift in Sources */,
-				A570586B1EF117D20092CDAB /* ToastProtocol.swift in Sources */,
+				A570586B1EF117D20092CDAB /* AlertViewable.swift in Sources */,
 				A57058721EF117D20092CDAB /* ContactsPermissions.swift in Sources */,
 				A57058491EF117D20092CDAB /* UIView+Load.swift in Sources */,
 				A570586C1EF117D20092CDAB /* FCMService.swift in Sources */,
@@ -843,18 +901,19 @@
 				A571EC1A1EF27BE40079700D /* ActivityProtocol.swift in Sources */,
 				A57058731EF117D20092CDAB /* LocationPermissions.swift in Sources */,
 				A570587D1EF117D20092CDAB /* BaseValidator.swift in Sources */,
-				A570584B1EF117D20092CDAB /* DefaultValidationHelper.swift in Sources */,
-				A571EC1C1EF27BE40079700D /* RequestExecutingProtocol.swift in Sources */,
+				A571EC1C1EF27BE40079700D /* RequestExecuting.swift in Sources */,
+				A521F6FE1EF6813300DB4D1E /* PopupView.swift in Sources */,
 				A570587B1EF117D20092CDAB /* PassTextField.swift in Sources */,
 				A570583B1EF117D20092CDAB /* AbstractDataSource.swift in Sources */,
+				A521F7011EF6860700DB4D1E /* PickerManager.swift in Sources */,
 				A57058371EF117D20092CDAB /* ConfigurableView.swift in Sources */,
 				A57058361EF117D20092CDAB /* CollectionViewArrayDataSource.swift in Sources */,
-				A570586A1EF117D20092CDAB /* TextInputsManagerProtocol.swift in Sources */,
+				A570586A1EF117D20092CDAB /* TextInputsManaging.swift in Sources */,
 				A57058801EF117D20092CDAB /* PasswordValidator.swift in Sources */,
 				A57058431EF117D20092CDAB /* AlertController+PresentationProtocol.swift in Sources */,
 				A57058411EF117D20092CDAB /* TableViewFRCDataSource.swift in Sources */,
 				A57058531EF117D20092CDAB /* Utils.swift in Sources */,
-				A57058871EF119E00092CDAB /* WindowProtocol.swift in Sources */,
+				A57058871EF119E00092CDAB /* Windowable.swift in Sources */,
 				A57058741EF117D20092CDAB /* MicrophonePermissions.swift in Sources */,
 				A57058351EF117D20092CDAB /* ArrayDataSource.swift in Sources */,
 				A57058541EF117D20092CDAB /* WindowFactory.swift in Sources */,
@@ -866,22 +925,23 @@
 				A570587F1EF117D20092CDAB /* EqualStringsValidator.swift in Sources */,
 				A57058751EF117D20092CDAB /* PhotoLibraryPermissions.swift in Sources */,
 				A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */,
-				A571EC1B1EF27BE40079700D /* RequestErrorHandlerProtocol.swift in Sources */,
+				A571EC1B1EF27BE40079700D /* RequestErrorHandling.swift in Sources */,
 				A57058781EF117D20092CDAB /* ServicePermissions.swift in Sources */,
 				A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */,
 				A570587C1EF117D20092CDAB /* TextFieldAccessoryView.swift in Sources */,
 				A570586F1EF117D20092CDAB /* LocationService.swift in Sources */,
 				A570587A1EF117D20092CDAB /* EmailTextField.swift in Sources */,
 				A570584F1EF117D20092CDAB /* RandomNumberHelper.swift in Sources */,
+				A521F7051EF689F700DB4D1E /* PickableTextField.swift in Sources */,
 				A57058701EF117D20092CDAB /* BluetoothPermissions.swift in Sources */,
 				A57058771EF117D20092CDAB /* RequestPermissions.swift in Sources */,
 				A57058391EF117D20092CDAB /* ReusableView.swift in Sources */,
 				A57058481EF117D20092CDAB /* DesignableView.swift in Sources */,
 				A57058341EF117D20092CDAB /* AppDelegate+ChangePassword.swift in Sources */,
 				A570583A1EF117D20092CDAB /* FRCDataSource.swift in Sources */,
-				A570588D1EF11C2B0092CDAB /* AlertPresentation.swift in Sources */,
+				A570588D1EF11C2B0092CDAB /* AlertPresentable.swift in Sources */,
 				A570583D1EF117D20092CDAB /* DataSourceViewModel.swift in Sources */,
-				A571EC1F1EF27BE40079700D /* APIRequestProtocol.swift in Sources */,
+				A571EC1F1EF27BE40079700D /* APIRequesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

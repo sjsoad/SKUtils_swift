@@ -12,14 +12,14 @@ import SwiftyDrop
 
 typealias RequerstExecutingHandler = (_ executing: Bool, _ error: Error?) -> Void
 
-protocol RequestExecutingProtocol {
+protocol RequestExecuting {
     
-    func activityView() -> ActivityProtocol?
+    func activityView() -> ActivityViewable?
     func requerstExecutingHandler() -> RequerstExecutingHandler
     
 }
 
-extension RequestExecutingProtocol where Self: NSObject {
+extension RequestExecuting where Self: NSObject {
     
     func requerstExecutingHandler() -> RequerstExecutingHandler {
         return { [weak self] (executing, error) in
