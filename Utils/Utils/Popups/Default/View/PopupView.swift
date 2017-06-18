@@ -38,7 +38,7 @@ class PopupView: UIView, PopupViewable {
     func show() {
         changeAlpha(of: self, to: 1) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.changeAlpha(of: strongSelf.container, to: 1, completion: nil)
+            strongSelf.changeAlpha(of: strongSelf.container, to: 1)
         }
     }
     
@@ -54,7 +54,7 @@ class PopupView: UIView, PopupViewable {
     
     // MARK: - Private -
     
-    private func changeAlpha(of view: UIView, to value: CGFloat, completion: ((Bool) -> Void)?) {
+    private func changeAlpha(of view: UIView, to value: CGFloat, completion: ((Bool) -> Void)? = nil) {
         UIView.animate(withDuration: 0.25,
                        animations: {
                         view.alpha = value
