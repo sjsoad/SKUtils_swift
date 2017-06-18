@@ -18,7 +18,7 @@ protocol Outputable {
 protocol Viewable: class {
     
     associatedtype InterfaceType
-    var view: InterfaceType? { get set }
+    var view: InterfaceType? { get }
     
 }
 
@@ -39,7 +39,7 @@ protocol PopupOutput {
 class PopupPresenter: NSObject, Viewable {
     
     typealias InterfaceType = PopupViewable
-    internal weak var view: InterfaceType?
+    private(set) weak var view: InterfaceType?
     
     fileprivate var displayingWindow: UIWindow?
     
