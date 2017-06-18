@@ -47,8 +47,6 @@ class PickerTextField: PickableTextField {
         self.picker.reloadAllComponents()
     }
     
-    // MARK: - Private -
-    
 }
 
 @objc protocol PickerTextFieldDelegate : class {

@@ -16,22 +16,8 @@ class DateTextField: PickableTextField {
     weak open var dateFieldDelegate: DateTextFieldDelegate?
     #endif
     
-    @IBInspectable var dateDisplayingFormat: String = "dd MMM yyyy" {
-        didSet {
-            self.dateFormatter.dateFormat = self.dateDisplayingFormat
-        }
-    }
-    
-    lazy var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = self.dateDisplayingFormat
-        return dateFormatter
-    }()
-    
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-        datePicker.maximumDate = Date()
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
         
         return datePicker
@@ -48,7 +34,6 @@ class DateTextField: PickableTextField {
     // MARK: - Functions -
     
     override func doneButtonPressed(_ sender: UIBarButtonItem) {
-        display(selectedDate: datePicker.date)
         guard let delegate = dateFieldDelegate else { return }
         delegate.dateTextField?(self, didPressDoneButton: sender)
     }
@@ -56,14 +41,8 @@ class DateTextField: PickableTextField {
     // MARK: - Private -
     
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
-        display(selectedDate: sender.date)
         guard let delegate = dateFieldDelegate else { return }
         delegate.dateTextField?(self, didSelectedDate: sender.date)
-    }
-    
-    private func display(selectedDate date: Date) {
-        let dateString = self.dateFormatter.string(from: date)
-        self.text = dateString
     }
     
 }
