@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D3A46F31DAD41EB8D313C8 /* Pods_SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */; };
+		A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE4001EF5441400AD8197 /* DateTextField.swift */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
 		A57057251EF117C40092CDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057241EF117C40092CDAB /* ViewController.swift */; };
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
@@ -83,6 +85,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.release.xcconfig"; sourceTree = "<group>"; };
+		4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.debug.xcconfig"; sourceTree = "<group>"; };
+		A51FE4001EF5441400AD8197 /* DateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57057221EF117C40092CDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57057241EF117C40092CDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,17 +171,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D3A46F31DAD41EB8D313C8 /* Pods_SwiftUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D4278C11FCE8ED3267A45A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */,
+				27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A57057161EF117C40092CDAB = {
 			isa = PBXGroup;
 			children = (
 				A57057211EF117C40092CDAB /* SwiftUtils */,
 				A57057201EF117C40092CDAB /* Products */,
+				5D4278C11FCE8ED3267A45A6 /* Pods */,
+				B53F30DD3679F6C7ECA07164 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -543,6 +561,7 @@
 				A57057F31EF117D20092CDAB /* EmailTextField.swift */,
 				A57057F41EF117D20092CDAB /* PassTextField.swift */,
 				A57057F51EF117D20092CDAB /* TextFieldAccessoryView */,
+				A51FE4001EF5441400AD8197 /* DateTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -661,6 +680,14 @@
 			path = TextInputsManager;
 			sourceTree = "<group>";
 		};
+		B53F30DD3679F6C7ECA07164 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -668,9 +695,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A57057311EF117C40092CDAB /* Build configuration list for PBXNativeTarget "SwiftUtils" */;
 			buildPhases = (
+				DBED56923FE696EEF25F6C08 /* [CP] Check Pods Manifest.lock */,
 				A570571B1EF117C40092CDAB /* Sources */,
 				A570571C1EF117C40092CDAB /* Frameworks */,
 				A570571D1EF117C40092CDAB /* Resources */,
+				97F72AD777E5A757BD0592B6 /* [CP] Embed Pods Frameworks */,
+				AA9CD171E3FFD3258AD7B38E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -727,6 +757,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97F72AD777E5A757BD0592B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9CD171E3FFD3258AD7B38E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBED56923FE696EEF25F6C08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A570571B1EF117C40092CDAB /* Sources */ = {
@@ -787,6 +865,7 @@
 				A571EC191EF27BE40079700D /* APIClient.swift in Sources */,
 				A570587F1EF117D20092CDAB /* EqualStringsValidator.swift in Sources */,
 				A57058751EF117D20092CDAB /* PhotoLibraryPermissions.swift in Sources */,
+				A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */,
 				A571EC1B1EF27BE40079700D /* RequestErrorHandlerProtocol.swift in Sources */,
 				A57058781EF117D20092CDAB /* ServicePermissions.swift in Sources */,
 				A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */,
@@ -923,9 +1002,11 @@
 		};
 		A57057321EF117C40092CDAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grossum.SwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -935,9 +1016,11 @@
 		};
 		A57057331EF117C40092CDAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftUtils/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grossum.SwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -27,6 +27,4 @@ extension ActivityProtocol where Self: UIViewController {
         stopAnimating()
     }
     
-
-
 }
