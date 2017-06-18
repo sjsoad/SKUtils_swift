@@ -34,12 +34,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dateTextField.datePicker.date = Date().addingTimeInterval(-60*60*48)
-        dateTextField.dateDisplayingFormat = "dd MMM"
         dateTextField.doneButtonTitle = "Ok"
         pickerTextField.reload(with: pickerManager)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        PopupPresenter.show(viewName: "TestPopup", in: self.view.window)
+    }
+    
 }
 
 // MARK: - DateTextFieldDelegate -

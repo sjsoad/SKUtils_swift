@@ -9,15 +9,15 @@
 import UIKit
 
 extension UIView {
-
-    public static func loadNib(named name: String? = nil) -> Any {
-        let nibName = name ?? String(describing: self)
-        let views = UINib(
-            nibName: nibName,
-            bundle: nil
-            ).instantiate(withOwner: nil,
-                          options: nil)
-        return views[0]
+    
+    public class func fromNib<T: UIView>(named name: String) -> T? {
+        guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else { return nil }
+        for nibView in nibViews {
+            if let view = nibView as? T {
+                return view
+            }
+        }
+        return nil
     }
 
 }

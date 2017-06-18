@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTextField: UITextField {
+public class BaseTextField: UITextField {
     
     @IBOutlet var visualisationView: TextFieldAccessoryView?
 

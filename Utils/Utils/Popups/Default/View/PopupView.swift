@@ -13,13 +13,12 @@ class PopupView: UIView, PopupViewable {
     var presenter: PopupOutput?
     
     // outlets
-    @IBOutlet private weak var background: UIView!
     @IBOutlet private weak var container: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         container.alpha = 0
-        background.alpha = 0
+        self.alpha = 0
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,13 +27,16 @@ class PopupView: UIView, PopupViewable {
     
     // MARK: - Public -
     
-    static func newPopup() -> PopupView? {
-        let nibName = String(describing: self)
-        return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)?.first as? PopupView
+    static func newPopup(named name: String? = nil) -> Self? {
+        guard let name = name else {
+            let name = String(describing: self)
+            return fromNib(named: name)
+        }
+        return fromNib(named: name)
     }
     
     func show() {
-        changeAlpha(of: background, to: 1) { [weak self] (_) in
+        changeAlpha(of: self, to: 1) { [weak self] (_) in
             guard let strongSelf = self else { return }
             strongSelf.changeAlpha(of: strongSelf.container, to: 1, completion: nil)
         }
@@ -43,7 +45,7 @@ class PopupView: UIView, PopupViewable {
     func hide() {
         changeAlpha(of: container, to: 0) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.changeAlpha(of: strongSelf.background, to: 0, completion: { [weak self] (_) in
+            strongSelf.changeAlpha(of: strongSelf, to: 0, completion: { [weak self] (_) in
                 guard let strongSelf = self else { return }
                 strongSelf.presenter?.viewDidHide()
             })

@@ -23,12 +23,21 @@ protocol PopupOutput {
 }
 
 class PopupPresenter: NSObject {
-
+    
     weak var view: PopupViewable?
     fileprivate var displayingWindow: UIWindow?
     
-    init(with view: PopupViewable) {
+    required init(with view: PopupViewable) {
         self.view = view
+    }
+    
+    // MARK: - Module -
+    
+    static func show(viewName name: String? = nil, in window: UIWindow?) {
+        guard let popupView = PopupView.newPopup(named: name) else { return }
+        let presenter = self.init(with: popupView)
+        popupView.presenter = presenter
+        presenter.show(in: window)
     }
     
     func show(in window: UIWindow?) {
@@ -42,15 +51,14 @@ class PopupPresenter: NSObject {
         self.view?.show()
     }
     
+    // MARK: - Functions -
+    
     func hidePopin() {
         view?.hide()
     }
     
     func removePopin() {
-        guard let view = view as? UIView else {
-            return
-        }
-        
+        guard let view = view as? UIView else { return }
         view.removeFromSuperview()
     }
     
