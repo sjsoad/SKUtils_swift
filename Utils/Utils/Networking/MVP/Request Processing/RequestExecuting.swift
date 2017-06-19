@@ -10,18 +10,18 @@ import UIKit
 import NVActivityIndicatorView
 import SwiftyDrop
 
-typealias RequerstExecutingHandler = (_ executing: Bool, _ error: Error?) -> Void
+typealias RequestExecutingHandler = (_ executing: Bool, _ error: Error?) -> Void
 
 protocol RequestExecuting {
     
     func activityView() -> ActivityViewable?
-    func requerstExecutingHandler() -> RequerstExecutingHandler
+    func requerstExecutingHandler() -> RequestExecutingHandler
     
 }
 
 extension RequestExecuting where Self: NSObject {
     
-    func requerstExecutingHandler() -> RequerstExecutingHandler {
+    func requerstExecutingHandler() -> RequestExecutingHandler {
         return { [weak self] (executing, error) in
             guard let strongSelf = self,
             let view = strongSelf.activityView() else { return }

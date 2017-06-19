@@ -26,7 +26,6 @@ class PickerTextField: PickableTextField {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.inputView = self.picker
-        self.inputAccessoryView = self.toolbar
     }
     
     // MARK: - Functions -

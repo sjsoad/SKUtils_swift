@@ -9,14 +9,19 @@
 import UIKit
 
 class PickableTextField: BaseTextField {
-
+    
     @IBInspectable var doneButtonTitle: String = "Done" {
         didSet {
             self.doneButton.title = self.doneButtonTitle
         }
     }
-
-    lazy var toolbar: UIToolbar = {
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.inputAccessoryView = self.toolbar
+    }
+    
+    private lazy var toolbar: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()

@@ -8,28 +8,32 @@
 
 import UIKit
 
+protocol PickerRow {
+    
+    var title: String? { get }
+    var attributedTitle: NSAttributedString? { get }
+    
+}
+
 class PickerComponentObject: NSObject {
     
-    var items: [PickerRowObject] = [PickerRowObject]()
+    var items: [PickerRow] = [PickerRow]()
     
-    init(items: [PickerRowObject]) {
+    init(items: [PickerRow]) {
         self.items = items
     }
     
 }
 
-class PickerRowObject: NSObject {
+class PickerRowObject: NSObject, PickerRow {
 
-    var title: String?
-    var attributedTitle: NSAttributedString?
-    var rowView: UIView?
+    private(set) var title: String?
+    private(set) var attributedTitle: NSAttributedString?
 
     init(title: String? = nil,
-         attributedTitle: NSAttributedString? = nil,
-         rowView: UIView? = nil) {
+         attributedTitle: NSAttributedString? = nil) {
         self.title = title
         self.attributedTitle = attributedTitle
-        self.rowView = rowView
     }
     
 }
@@ -47,10 +51,10 @@ class PickerDataSourceConfigurator {
 class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
-    private var handler: ((PickerRowObject,_ component: Int,_ row: Int) -> Void)?
+    private var handler: ((PickerRow,_ component: Int,_ row: Int) -> Void)?
     
     init(configuration: PickerDataSourceConfigurator,
-         selectionHandler: ((PickerRowObject,_ component: Int,_ row: Int) -> Void)? = nil) {
+         selectionHandler: ((PickerRow,_ component: Int,_ row: Int) -> Void)? = nil) {
         self.configuration = configuration
         self.handler = selectionHandler
     }
@@ -71,6 +75,10 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         return configuration.components[component].items[row].title
     }
 
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return configuration.components[component].items[row].attributedTitle
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard let handler = handler else { return }
         let rowObject = configuration.components[component].items[row]

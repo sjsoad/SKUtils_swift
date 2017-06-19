@@ -17,7 +17,7 @@ protocol ___FILEBASENAME___Requesting: RequestErrorHandling {
     func successHandlerFor___FILEBASENAME___() -> ___FILEBASENAME___SuccessHandler
     func errorHandlerFor___FILEBASENAME___() -> ErrorHandler
     
-    var executingHandlerFor___FILEBASENAME___: RequerstExecutingHandler? { get }
+    var executingHandlerFor___FILEBASENAME___: RequestExecutingHandler? { get }
     var result: Dynamic<___FILEBASENAME___ResponceValue?> { get }
 }
 

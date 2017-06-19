@@ -28,7 +28,6 @@ class DateTextField: PickableTextField {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.inputView = self.datePicker
-        self.inputAccessoryView = self.toolbar
     }
     
     // MARK: - Functions -
