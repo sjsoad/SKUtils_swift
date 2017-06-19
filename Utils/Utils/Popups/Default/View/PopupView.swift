@@ -8,10 +8,9 @@
 
 import UIKit
 
-class PopupView: UIView, PopupViewable, Outputable {
+class PopupView: UIView, PopupViewable {
     
-    typealias PresenterType = PopupOutput
-    var presenter: PresenterType?
+    var presenter: PopupOutput?
     
     // outlets
     @IBOutlet private weak var container: UIView!
