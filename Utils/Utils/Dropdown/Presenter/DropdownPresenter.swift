@@ -113,7 +113,7 @@ class DropdownPresenter: NSObject, DropdownModule {
     // MARK: - Private -
     
     fileprivate func createDataSource() {
-        var sectionItems = [DropdownViewModel]()
+        var sectionItems = [DropdownViewable]()
         for (index, item) in items.enumerated() {
             let indexPath = IndexPath(row: index, section: 0)
             let viewModel = DropdownViewModel(text: item,

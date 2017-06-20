@@ -1,5 +1,5 @@
 //
-//  PickerTextField.swift
+//  PickableTextField.swift
 //  SwiftUtils
 //
 //  Created by Sergey Kostyan on 18.06.17.
@@ -8,48 +8,48 @@
 
 import UIKit
 
-class PickerTextField: PickableTextField {
-    
-    #if TARGET_INTERFACE_BUILDER
-    @IBOutlet open weak var pickerFieldDelegate: AnyObject?
-    #else
-    weak open var pickerFieldDelegate: PickerTextFieldDelegate?
-    #endif
+typealias PickerFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBarButtonItem) -> Void)
 
-    lazy var picker: UIPickerView = {
-        let picker = UIPickerView()
-        return picker
-    }()
+class PickerTextField: BaseTextField {
     
-    // MARK: - Init -
+    @IBInspectable var doneButtonTitle: String = "Done" {
+        didSet {
+            self.doneButton.title = self.doneButtonTitle
+        }
+    }
+    
+    var doneButtonHandler: PickerFieldDoneButtonHandler?
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.inputView = self.picker
+        self.inputAccessoryView = self.toolbar
     }
+    
+    private lazy var toolbar: UIToolbar = {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.sizeToFit()
+        let doneButton = self.doneButton
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                          target: nil,
+                                          action: nil)
+        toolBar.setItems([spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        return toolBar
+    }()
+    
+    private lazy var doneButton: UIBarButtonItem = {
+        let doneButton = UIBarButtonItem(title: self.doneButtonTitle,
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(doneButtonPressed(_:)))
+        return doneButton
+    }()
     
     // MARK: - Functions -
     
-    override func doneButtonPressed(_ sender: UIBarButtonItem) {
-        for componentIndex in 0..<picker.numberOfComponents {
-            let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
-            guard let delegate = picker.delegate else { return }
-            delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
-        }
-        guard let delegate = pickerFieldDelegate else { return }
-        delegate.pickerTextField?(self, didPressDoneButton: sender)
+    internal func doneButtonPressed(_ sender: UIBarButtonItem) {
+        doneButtonHandler?(self, sender)
     }
-    
-    func reload(with manager: PickerManager) {
-        self.picker.dataSource = manager
-        self.picker.delegate = manager
-        self.picker.reloadAllComponents()
-    }
-    
-}
-
-@objc protocol PickerTextFieldDelegate : class {
-    
-    @objc optional func pickerTextField(_ pickerTextField: PickerTextField, didPressDoneButton button: UIBarButtonItem)
     
 }

@@ -8,16 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		33D3A46F31DAD41EB8D313C8 /* Pods_SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */; };
-		A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE4001EF5441400AD8197 /* DateTextField.swift */; };
+		A51FE4011EF5441400AD8197 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51FE4001EF5441400AD8197 /* DatePickerField.swift */; };
 		A521F6791EF6742D00DB4D1E /* Validating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6781EF6742D00DB4D1E /* Validating.swift */; };
 		A521F6FD1EF6813300DB4D1E /* PopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6FA1EF6813300DB4D1E /* PopupPresenter.swift */; };
 		A521F6FE1EF6813300DB4D1E /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F6FC1EF6813300DB4D1E /* PopupView.swift */; };
 		A521F7011EF6860700DB4D1E /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7001EF6860700DB4D1E /* PickerManager.swift */; };
-		A521F7031EF6878600DB4D1E /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7021EF6878600DB4D1E /* PickerTextField.swift */; };
-		A521F7051EF689F700DB4D1E /* PickableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7041EF689F700DB4D1E /* PickableTextField.swift */; };
-		A521F70A1EF6C1A200DB4D1E /* DropdownPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7091EF6C1A200DB4D1E /* DropdownPresenter.swift */; };
-		A521F70C1EF6C1B300DB4D1E /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F70B1EF6C1B300DB4D1E /* DropdownView.swift */; };
-		A521F70E1EF6C1E600DB4D1E /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F70D1EF6C1E600DB4D1E /* DropdownView.xib */; };
+		A521F7031EF6878600DB4D1E /* PickerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7021EF6878600DB4D1E /* PickerViewField.swift */; };
+		A521F7051EF689F700DB4D1E /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7041EF689F700DB4D1E /* PickerTextField.swift */; };
 		A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */; };
 		A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F71C1EF6EB3200DB4D1E /* PopupView.xib */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
@@ -98,16 +95,13 @@
 		0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.release.xcconfig"; sourceTree = "<group>"; };
 		4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.debug.xcconfig"; sourceTree = "<group>"; };
-		A51FE4001EF5441400AD8197 /* DateTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
+		A51FE4001EF5441400AD8197 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
 		A521F6781EF6742D00DB4D1E /* Validating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validating.swift; sourceTree = "<group>"; };
 		A521F6FA1EF6813300DB4D1E /* PopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresenter.swift; sourceTree = "<group>"; };
 		A521F6FC1EF6813300DB4D1E /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		A521F7001EF6860700DB4D1E /* PickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
-		A521F7021EF6878600DB4D1E /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
-		A521F7041EF689F700DB4D1E /* PickableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickableTextField.swift; sourceTree = "<group>"; };
-		A521F7091EF6C1A200DB4D1E /* DropdownPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownPresenter.swift; sourceTree = "<group>"; };
-		A521F70B1EF6C1B300DB4D1E /* DropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
-		A521F70D1EF6C1E600DB4D1E /* DropdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
+		A521F7021EF6878600DB4D1E /* PickerViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewField.swift; sourceTree = "<group>"; };
+		A521F7041EF689F700DB4D1E /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPopup.xib; sourceTree = "<group>"; };
 		A521F71C1EF6EB3200DB4D1E /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,32 +242,6 @@
 			path = "Picker DataSource";
 			sourceTree = "<group>";
 		};
-		A521F7061EF6C17C00DB4D1E /* Dropdown */ = {
-			isa = PBXGroup;
-			children = (
-				A521F7071EF6C18E00DB4D1E /* Presenter */,
-				A521F7081EF6C18E00DB4D1E /* View */,
-			);
-			path = Dropdown;
-			sourceTree = "<group>";
-		};
-		A521F7071EF6C18E00DB4D1E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				A521F7091EF6C1A200DB4D1E /* DropdownPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		A521F7081EF6C18E00DB4D1E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A521F70B1EF6C1B300DB4D1E /* DropdownView.swift */,
-				A521F70D1EF6C1E600DB4D1E /* DropdownView.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		A57057161EF117C40092CDAB = {
 			isa = PBXGroup;
 			children = (
@@ -320,7 +288,6 @@
 		A570577A1EF117D20092CDAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A521F7061EF6C17C00DB4D1E /* Dropdown */,
 				A521F6FF1EF6860700DB4D1E /* Picker DataSource */,
 				A521F6F71EF6813300DB4D1E /* Popups */,
 				A571EC0A1EF27BE40079700D /* Networking */,
@@ -653,9 +620,9 @@
 				A57057F21EF117D20092CDAB /* BaseTextField.swift */,
 				A57057F31EF117D20092CDAB /* EmailTextField.swift */,
 				A57057F41EF117D20092CDAB /* PassTextField.swift */,
-				A51FE4001EF5441400AD8197 /* DateTextField.swift */,
-				A521F7021EF6878600DB4D1E /* PickerTextField.swift */,
-				A521F7041EF689F700DB4D1E /* PickableTextField.swift */,
+				A51FE4001EF5441400AD8197 /* DatePickerField.swift */,
+				A521F7021EF6878600DB4D1E /* PickerViewField.swift */,
+				A521F7041EF689F700DB4D1E /* PickerTextField.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -846,7 +813,6 @@
 			files = (
 				A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */,
 				A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */,
-				A521F70E1EF6C1E600DB4D1E /* DropdownView.xib in Resources */,
 				A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */,
 				A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */,
 				A57057281EF117C40092CDAB /* Main.storyboard in Resources */,
@@ -919,7 +885,7 @@
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
 				A57058381EF117D20092CDAB /* CollectionViewFRCDataSource.swift in Sources */,
 				A57058471EF117D20092CDAB /* TextField+PlaceholderColor.swift in Sources */,
-				A521F7031EF6878600DB4D1E /* PickerTextField.swift in Sources */,
+				A521F7031EF6878600DB4D1E /* PickerViewField.swift in Sources */,
 				A5FAD1AC1EF1B4D100D79151 /* TextInputsManagerController.swift in Sources */,
 				A570586E1EF117D20092CDAB /* PushNotificationsService.swift in Sources */,
 				A570584E1EF117D20092CDAB /* QueryStringParser.swift in Sources */,
@@ -939,7 +905,6 @@
 				A570586C1EF117D20092CDAB /* FCMService.swift in Sources */,
 				A57058711EF117D20092CDAB /* CameraPermissions.swift in Sources */,
 				A57058401EF117D20092CDAB /* TableViewArrayDataSource.swift in Sources */,
-				A521F70A1EF6C1A200DB4D1E /* DropdownPresenter.swift in Sources */,
 				A570584A1EF117D20092CDAB /* CollectionViewHelper.swift in Sources */,
 				A571EC1A1EF27BE40079700D /* ActivityProtocol.swift in Sources */,
 				A57058731EF117D20092CDAB /* LocationPermissions.swift in Sources */,
@@ -967,7 +932,7 @@
 				A571EC191EF27BE40079700D /* APIClient.swift in Sources */,
 				A570587F1EF117D20092CDAB /* EqualStringsValidator.swift in Sources */,
 				A57058751EF117D20092CDAB /* PhotoLibraryPermissions.swift in Sources */,
-				A51FE4011EF5441400AD8197 /* DateTextField.swift in Sources */,
+				A51FE4011EF5441400AD8197 /* DatePickerField.swift in Sources */,
 				A571EC1B1EF27BE40079700D /* RequestErrorHandling.swift in Sources */,
 				A57058781EF117D20092CDAB /* ServicePermissions.swift in Sources */,
 				A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */,
@@ -975,11 +940,10 @@
 				A570586F1EF117D20092CDAB /* LocationService.swift in Sources */,
 				A570587A1EF117D20092CDAB /* EmailTextField.swift in Sources */,
 				A570584F1EF117D20092CDAB /* RandomNumberHelper.swift in Sources */,
-				A521F7051EF689F700DB4D1E /* PickableTextField.swift in Sources */,
+				A521F7051EF689F700DB4D1E /* PickerTextField.swift in Sources */,
 				A57058701EF117D20092CDAB /* BluetoothPermissions.swift in Sources */,
 				A57058771EF117D20092CDAB /* RequestPermissions.swift in Sources */,
 				A57058391EF117D20092CDAB /* ReusableView.swift in Sources */,
-				A521F70C1EF6C1B300DB4D1E /* DropdownView.swift in Sources */,
 				A57058481EF117D20092CDAB /* DesignableView.swift in Sources */,
 				A57058341EF117D20092CDAB /* AppDelegate+ChangePassword.swift in Sources */,
 				A570583A1EF117D20092CDAB /* FRCDataSource.swift in Sources */,

@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:../Utils/Utils/Dropdown"
+      name = "Dropdown">
+      <Group
+         location = "group:Presenter"
+         name = "Presenter">
+         <FileRef
+            location = "group:DropdownPresenter.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:View"
+         name = "View">
+         <FileRef
+            location = "group:DropdownCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:DropdownCell.xib">
+         </FileRef>
+         <FileRef
+            location = "group:DropdownView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:DropdownView.xib">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:View Model"
+         name = "View Model">
+         <FileRef
+            location = "group:DropdownViewModel.swift">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
       location = "group:SwiftUtils.xcodeproj">
    </FileRef>

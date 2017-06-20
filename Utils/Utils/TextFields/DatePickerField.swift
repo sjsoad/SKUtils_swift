@@ -8,13 +8,11 @@
 
 import UIKit
 
-class DateTextField: PickableTextField {
+typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker: UIDatePicker, _ date: Date) -> Void)
+
+class DatePickerField: PickerTextField {
     
-    #if TARGET_INTERFACE_BUILDER
-    @IBOutlet open weak var dateFieldDelegate: AnyObject?
-    #else
-    weak open var dateFieldDelegate: DateTextFieldDelegate?
-    #endif
+    var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
     
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -33,22 +31,14 @@ class DateTextField: PickableTextField {
     // MARK: - Functions -
     
     override func doneButtonPressed(_ sender: UIBarButtonItem) {
-        guard let delegate = dateFieldDelegate else { return }
-        delegate.dateTextField?(self, didPressDoneButton: sender)
+        dateSelectionHandler?(self, datePicker, datePicker.date)
+        super.doneButtonPressed(sender)
     }
     
     // MARK: - Private -
     
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
-        guard let delegate = dateFieldDelegate else { return }
-        delegate.dateTextField?(self, didSelectedDate: sender.date)
+        dateSelectionHandler?(self, sender, sender.date)
     }
-    
-}
-
-@objc protocol DateTextFieldDelegate : class {
-
-    @objc optional func dateTextField(_ dateTextField: DateTextField, didSelectedDate date: Date)
-    @objc optional func dateTextField(_ dateTextField: DateTextField, didPressDoneButton button: UIBarButtonItem)
     
 }

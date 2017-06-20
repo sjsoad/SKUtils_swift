@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var dateTextField: DateTextField!
-    @IBOutlet private weak var pickerTextField: PickerTextField!
+    @IBOutlet private weak var dateTextField: DatePickerField!
+    @IBOutlet private weak var pickerTextField: PickerViewField!
     
     private var pickerManager: PickerManager = {
         var components = [PickerComponentObject]()
@@ -37,34 +37,24 @@ class ViewController: UIViewController {
         dateTextField.doneButtonTitle = "Ok"
         pickerTextField.reload(with: pickerManager)
         
+        dateTextField.dateSelectionHandler = { field, picker, date in
+            print(date)
+        }
+        dateTextField.doneButtonHandler = { field, sender in
+            field.resignFirstResponder()
+            print("done")
+        }
+        pickerTextField.doneButtonHandler = { field, sender in
+            field.resignFirstResponder()
+            print("done")
+        }
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         PopupPresenter.show(viewName: "TestPopup", in: self.view.window)
-    }
-    
-}
-
-// MARK: - DateTextFieldDelegate -
-
-extension ViewController: DateTextFieldDelegate {
-    
-    func dateTextField(_ dateTextField: DateTextField, didPressDoneButton button: UIBarButtonItem) {
-        dateTextField.resignFirstResponder()
-        print("done")
-    }
-    
-}
-
-// MARK: - PickerTextFieldDelegate -
-
-extension ViewController: PickerTextFieldDelegate {
-
-    func pickerTextField(_ pickerTextField: PickerTextField, didPressDoneButton button: UIBarButtonItem) {
-        pickerTextField.resignFirstResponder()
-        print("done")
     }
     
 }
