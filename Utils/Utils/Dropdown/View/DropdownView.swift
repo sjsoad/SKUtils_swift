@@ -13,20 +13,20 @@ class DropdownView: UIView, DropdownReloadable {
     var presenter: DropdownOutput?
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var dropdownLeadingContraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownTopContraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownWidthContraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownHeightContraint: NSLayoutConstraint!
     
-    @IBInspectable var allowsMultipleSelection: Bool = false {
-        didSet {
-            self.tableView.allowsMultipleSelection = self.allowsMultipleSelection
-        }
-    }
+    @IBInspectable var allowsMultipleSelection: Bool = false
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    static func newDropdown() -> Self? {
-        let name = String(describing: self)
-        return fromNib(named: name)
+    class func newDropdown() -> DropdownView? {
+        let nibName = String(describing: self)
+        return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)?.first as? DropdownView
     }
     
     // MARK: - DropdownViewable -
@@ -42,9 +42,39 @@ class DropdownView: UIView, DropdownReloadable {
         }
     }
     
+    func set(rectConfiguration configuration: DropdownRectConfiguration) {
+        if let x = configuration.x {
+            dropdownLeadingContraint.constant = x
+        }
+        if let y = configuration.y {
+            dropdownTopContraint.constant = y
+        }
+        if let width = configuration.width {
+            dropdownWidthContraint.constant = width
+        }
+        if let height = configuration.height {
+            dropdownHeightContraint.constant = height
+        }
+        self.layoutIfNeeded()
+}
+    
+    // MARK: - DropdownReloadable -
+    
     func reload(with dataSource: TableViewArrayDataSource) {
         tableView.dataSource = dataSource
         tableView.reloadData()
+        tableView.allowsMultipleSelection = allowsMultipleSelection
+    }
+    
+    func register(cellClass name: String) {
+        let cellNib = UINib(nibName: name, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: name)
+    }
+    
+    // MARK: - Actions -
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        presenter?.viewTriggeredCloseAction()
     }
     
     // MARK: - Private -
