@@ -13,10 +13,10 @@ class DropdownView: UIView, DropdownReloadable {
     var presenter: DropdownOutput?
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var dropdownLeadingContraint: NSLayoutConstraint!
-    @IBOutlet private weak var dropdownTopContraint: NSLayoutConstraint!
-    @IBOutlet private weak var dropdownWidthContraint: NSLayoutConstraint!
-    @IBOutlet private weak var dropdownHeightContraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownWidthConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var dropdownHeightConstraint: NSLayoutConstraint!
     
     @IBInspectable var allowsMultipleSelection: Bool = false
     
@@ -38,22 +38,22 @@ class DropdownView: UIView, DropdownReloadable {
     func hide() {
         changeAlpha(of: self, to: 0) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.presenter?.viewDidHide()
+            strongSelf.presenter?.dropdownDidHide()
         }
     }
     
     func set(rectConfiguration configuration: DropdownRectConfiguration) {
         if let x = configuration.x {
-            dropdownLeadingContraint.constant = x
+            dropdownLeadingConstraint.constant = x
         }
         if let y = configuration.y {
-            dropdownTopContraint.constant = y
+            dropdownTopConstraint.constant = y
         }
         if let width = configuration.width {
-            dropdownWidthContraint.constant = width
+            dropdownWidthConstraint.constant = width
         }
         if let height = configuration.height {
-            dropdownHeightContraint.constant = height
+            dropdownHeightConstraint.constant = height
         }
         self.layoutIfNeeded()
 }
@@ -74,7 +74,7 @@ class DropdownView: UIView, DropdownReloadable {
     // MARK: - Actions -
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
-        presenter?.viewTriggeredCloseAction()
+        presenter?.dropdownTriggeredCloseAction()
     }
     
     // MARK: - Private -
@@ -93,7 +93,7 @@ extension DropdownView: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        presenter?.viewTriggeredSelectionEvent(at: indexPath)
+        presenter?.dropdownTriggeredSelectionEvent(at: indexPath)
     }
 
 }

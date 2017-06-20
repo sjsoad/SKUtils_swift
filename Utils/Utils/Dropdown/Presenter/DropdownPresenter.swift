@@ -27,9 +27,9 @@ protocol DropdownReloadable: DropdownViewable {
 
 protocol DropdownOutput {
     
-    func viewTriggeredSelectionEvent(at indexPath: IndexPath)
-    func viewTriggeredCloseAction()
-    func viewDidHide()
+    func dropdownTriggeredSelectionEvent(at indexPath: IndexPath)
+    func dropdownTriggeredCloseAction()
+    func dropdownDidHide()
     
 }
 
@@ -129,7 +129,7 @@ class DropdownPresenter: NSObject, DropdownModule {
 
 extension DropdownPresenter: DropdownOutput {
     
-    func viewTriggeredSelectionEvent(at indexPath: IndexPath) {
+    func dropdownTriggeredSelectionEvent(at indexPath: IndexPath) {
         guard let view = view else { return }
         if let index = selectedIndexes.index(of: indexPath) {
             if selectedIndexes.count > 1 { // at least one object should be selected
@@ -151,11 +151,11 @@ extension DropdownPresenter: DropdownOutput {
         delegate?.dropdown?(presenter: self, didSelectItemAt: indexPath)
     }
     
-    func viewTriggeredCloseAction() {
+    func dropdownTriggeredCloseAction() {
         hideDropdown()
     }
     
-    func viewDidHide() {
+    func dropdownDidHide() {
         delegate?.dropdown?(didHideWith: self)
     }
     
