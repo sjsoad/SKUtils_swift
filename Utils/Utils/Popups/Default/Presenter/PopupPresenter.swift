@@ -8,20 +8,6 @@
 
 import UIKit
 
-protocol Outputable {
-    
-    associatedtype PresenterType
-    var presenter: PresenterType? { get set }
-    
-}
-
-protocol Viewable: class {
-    
-    associatedtype InterfaceType
-    var view: InterfaceType? { get }
-    
-}
-
 protocol PopupViewable: class {
     
     func show()
@@ -36,14 +22,13 @@ protocol PopupOutput {
     
 }
 
-class PopupPresenter: NSObject, Viewable {
+class PopupPresenter: NSObject {
     
-    typealias InterfaceType = PopupViewable
-    private(set) weak var view: InterfaceType?
+    private(set) weak var view: PopupViewable?
     
     fileprivate var displayingWindow: UIWindow?
     
-    required init(with view: InterfaceType) {
+    required init(with view: PopupViewable) {
         self.view = view
     }
     
