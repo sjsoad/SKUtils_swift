@@ -14,7 +14,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
     @IBInspectable var kAnimationDuration: Double = 0.25
     @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
-    @IBOutlet private weak var scroll: UIScrollView! {
+    @IBOutlet private weak var containerView: UIView! {
         didSet {
             configureManager()
         }
@@ -24,7 +24,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     private func configureManager() {
         subscribeForKeyboardNotifications()
-        textInputsInView(scroll)
+        textInputsInView(containerView)
         if hideOnTap == true { addTapGestureRecognizer() }
     }
     
@@ -47,7 +47,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     private func addTapGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        scroll.addGestureRecognizer(tap)
+        containerView.addGestureRecognizer(tap)
     }
     
     private func subscribeForKeyboardNotifications() {
@@ -72,7 +72,8 @@ class TextInputsManager: NSObject, TextInputsManaging {
     }
     
     private func scrollToActiveInputView(_ keyboardHeight: CGFloat) {
-        guard let activeInputView = firstResponder() else { return }
+        guard let activeInputView = firstResponder(),
+            let scroll = containerView as? UIScrollView else { return }
         let frame = scroll.convert(activeInputView.bounds, from: activeInputView)
         scroll.scrollRectToVisible(frame, animated: true)
     }
@@ -81,18 +82,21 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let rect = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect else { return }
+            let rect = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect,
+            let scroll = containerView as? UIScrollView else { return }
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
+            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
             strongSelf.scrollToActiveInputView(rect.size.height)
         })
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {
+        
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.scroll.contentInset = UIEdgeInsets.zero
+            guard let strongSelf = self,
+                let scroll = strongSelf.containerView as? UIScrollView else { return }
+            scroll.contentInset = UIEdgeInsets.zero
         })
     }
     
@@ -130,7 +134,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     func reloadTextFieldsManager() {
         textInputs.removeAll()
-        textInputsInView(scroll)
+        textInputsInView(containerView)
     }
     
     func firstResponder() -> UIView? {

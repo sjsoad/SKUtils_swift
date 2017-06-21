@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var textInputsManager: TextInputsManager!
     @IBOutlet private weak var dateTextField: DatePickerField!
     @IBOutlet private weak var pickerTextField: PickerViewField!
     
@@ -41,11 +42,9 @@ class ViewController: UIViewController {
             print(date)
         }
         dateTextField.doneButtonHandler = { field, sender in
-            field.resignFirstResponder()
             print("done")
         }
         pickerTextField.doneButtonHandler = { field, sender in
-            field.resignFirstResponder()
             print("done")
         }
 

@@ -47,9 +47,15 @@
                     <connections>
                         <outlet property="dateTextField" destination="aYA-XV-ADm" id="YO4-EC-KNC"/>
                         <outlet property="pickerTextField" destination="kP2-2P-ww2" id="A0b-t7-Wfq"/>
+                        <outlet property="textInputsManager" destination="gcw-gK-k2u" id="5ef-vA-vNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="gcw-gK-k2u" customClass="TextInputsManager" customModule="SwiftUtils" customModuleProvider="target">
+                    <connections>
+                        <outlet property="containerView" destination="8bC-Xf-vdC" id="6LL-y4-9IP"/>
+                    </connections>
+                </customObject>
             </objects>
         </scene>
     </scenes>
