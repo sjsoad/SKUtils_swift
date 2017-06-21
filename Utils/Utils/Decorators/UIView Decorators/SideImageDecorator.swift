@@ -33,20 +33,17 @@ class SideImageDecorator {
 extension SideImageDecorator: Decorator {
 
     func decorate<Object>(component: Object) {
-        guard let view = component as? UITextField else {
-            return
-        }
-        if let image = UIImage(named: imageName) {
-            let imageView = createImageView()
-            imageView.frame = imageViewFrame(dependsOn: image.size, height: view.frame.height)
-            imageView.image = image
-            if imageSide == .left {
-                view.leftViewMode = .always
-                view.leftView = imageView
-            } else {
-                view.rightViewMode = .always
-                view.rightView = imageView
-            }
+        guard let view = component as? UITextField,
+            let image = UIImage(named: imageName) else { return }
+        let imageView = createImageView()
+        imageView.frame = imageViewFrame(dependsOn: image.size, height: view.frame.height)
+        imageView.image = image
+        if imageSide == .left {
+            view.leftViewMode = .always
+            view.leftView = imageView
+        } else {
+            view.rightViewMode = .always
+            view.rightView = imageView
         }
     }
 

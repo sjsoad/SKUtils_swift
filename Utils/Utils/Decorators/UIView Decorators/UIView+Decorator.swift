@@ -15,10 +15,3 @@ protocol Decorator {
     
     func decorate<Object>(component: Object)
 }
-
-extension NSObject {
-    
-    func decorate(with decorator: Decorator) {
-        decorator.decorate(component: self)
-    }
-}
