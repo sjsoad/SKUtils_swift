@@ -14,13 +14,11 @@ class BaseValidator: NSObject {
     var minTextLenght = 1
     
     func isValid(_ text: String?) -> Bool {
-        if let text = text {
-            if minTextLenght > maxTextLenght {
-                return text.characters.count >= minTextLenght
-            }
-            return text.characters.count >= minTextLenght && text.characters.count <= maxTextLenght
+        guard let text = text else { return false }
+        if minTextLenght > maxTextLenght {
+            return text.characters.count >= minTextLenght
         }
-        return false
+        return text.characters.count >= minTextLenght && text.characters.count <= maxTextLenght
     }
 
 }

@@ -14,14 +14,12 @@ class EmailValidator: BaseValidator {
     var emailPredicateString        = "SELF MATCHES %@"
     
     override func isValid(_ text: String?) -> Bool {
-        if let text = text {
-            var isTextValid = super.isValid(text)
-            if isTextValid {
-                let emailValidationPredicate = NSPredicate(format: emailPredicateString, emailRegularExpresionString)
-                isTextValid = emailValidationPredicate.evaluate(with: text)
-            }
-            return isTextValid
+        guard let text = text else { return false }
+        var isTextValid = super.isValid(text)
+        if isTextValid {
+            let emailValidationPredicate = NSPredicate(format: emailPredicateString, emailRegularExpresionString)
+            isTextValid = emailValidationPredicate.evaluate(with: text)
         }
-        return false
+        return isTextValid
     }
 }

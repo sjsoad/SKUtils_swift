@@ -11,11 +11,9 @@ import UIKit
 class EqualStringsValidator: NSObject {
 
     func isEqual(_ firstString: String?, secondString: String?) -> Bool {
-        if firstString == nil || secondString == nil {
-            return false
-        } else {
-            return firstString == secondString
-        }
+        guard let first = firstString, let second = secondString else { return false }
+        guard !first.isEmpty, !second.isEmpty else { return false }
+        return first == second
     }
     
 }

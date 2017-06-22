@@ -14,15 +14,13 @@ class PasswordValidator: BaseValidator {
     var passwordPredicateString        = "SELF MATCHES %@"
     
     override func isValid(_ text: String?) -> Bool {
-        if let text = text {
-            var isTextValid = super.isValid(text)
-            if isTextValid {
-                let passwordValidationPredicate = NSPredicate(format: passwordPredicateString, passwordRegularExpresionString)
-                isTextValid = passwordValidationPredicate.evaluate(with: text)
-            }
-            return isTextValid
+        guard let text = text else { return false }
+        var isTextValid = super.isValid(text)
+        if isTextValid {
+            let passwordValidationPredicate = NSPredicate(format: passwordPredicateString, passwordRegularExpresionString)
+            isTextValid = passwordValidationPredicate.evaluate(with: text)
         }
-        return false
+        return isTextValid
     }
     
 }
