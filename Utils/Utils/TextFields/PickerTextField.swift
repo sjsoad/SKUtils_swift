@@ -25,7 +25,7 @@ class PickerTextField: BaseTextField {
         self.inputAccessoryView = self.toolbar
     }
     
-    private lazy var toolbar: UIToolbar = {
+    lazy var toolbar: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()
