@@ -52,6 +52,7 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
     private var handler: ((PickerRow, _ component: Int ,_ row: Int) -> Void)?
+    private(set) var selectedIndex: IndexPath?
     
     init(configuration: PickerDataSourceConfigurator,
          selectionHandler: ((PickerRow, _ component: Int, _ row: Int) -> Void)? = nil) {
@@ -82,6 +83,7 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard let handler = handler else { return }
         let rowObject = configuration.components[component].items[row]
+        selectedIndex = IndexPath(row: row, section: component)
         handler(rowObject, component, row)
     }
     
