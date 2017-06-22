@@ -51,10 +51,10 @@ class PickerDataSourceConfigurator {
 class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
-    private var handler: ((PickerRow,_ component: Int,_ row: Int) -> Void)?
+    private var handler: ((PickerRow, _ component: Int ,_ row: Int) -> Void)?
     
     init(configuration: PickerDataSourceConfigurator,
-         selectionHandler: ((PickerRow,_ component: Int,_ row: Int) -> Void)? = nil) {
+         selectionHandler: ((PickerRow, _ component: Int, _ row: Int) -> Void)? = nil) {
         self.configuration = configuration
         self.handler = selectionHandler
     }
