@@ -8,13 +8,29 @@
 
 import UIKit
 
+private extension UIView {
+    
+    func subviewsOf<T>(type: T.Type) -> [T] {
+        var searchedSubviews = [T]()
+        for subview in subviews {
+            if let view = subview as? T {
+                searchedSubviews.append(view)
+            } else {
+                searchedSubviews += subview.subviewsOf(type: T.self)
+            }
+        }
+        return searchedSubviews
+    }
+    
+}
+
 class TextInputsManager: NSObject, TextInputsManaging {
     
     @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration: Double = 0.25
     @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
-    @IBOutlet private weak var containerView: UIView! {
+    @IBOutlet fileprivate weak var containerView: UIView! {
         didSet {
             configureManager()
         }
@@ -24,29 +40,26 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     private func configureManager() {
         subscribeForKeyboardNotifications()
-        textInputsInView(containerView)
+        gatherTextInputs()
         if hideOnTap == true { addTapGestureRecognizer() }
-    }
-    
-    // MARK: - Getting Inputs
-    
-    private func textInputsInView(_ view: UIView) {
-        for subView in view.subviews {
-            if let textField = subView as? UITextField {
-                textField.addTarget(self, action: #selector(returnButtonPressed), for: .editingDidEndOnExit)
-                textInputs.append(textField)
-            } else if let textView = subView as? UITextView {
-                textInputs.append(textView)
-            } else {
-                textInputsInView(subView)
-            }
-        }
     }
     
     // MARK: - Private -
     
+    private func gatherTextInputs() {
+        let textFields: [UIView] = containerView.subviewsOf(type: UITextField.self).flatMap { (textField) -> UIView? in
+            textField.addTarget(self, action: #selector(returnButtonPressed), for: .editingDidEndOnExit)
+            return textField
+        }
+        let textViews: [UIView] = containerView.subviewsOf(type: UITextView.self)
+        textInputs += textFields
+        textInputs += textViews
+    }
+    
     private func addTapGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.numberOfTapsRequired = 1
+        tap.delegate = self
         containerView.addGestureRecognizer(tap)
     }
     
@@ -134,7 +147,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
     
     func reloadTextFieldsManager() {
         textInputs.removeAll()
-        textInputsInView(containerView)
+        gatherTextInputs()
     }
     
     func firstResponder() -> UIView? {
@@ -142,6 +155,25 @@ class TextInputsManager: NSObject, TextInputsManaging {
             return textField.isFirstResponder
         })
         return textInput
+    }
+    
+}
+
+extension TextInputsManager: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        let tables: [UIView] = containerView.subviewsOf(type: UITableView.self)
+        let collections: [UIView] = containerView.subviewsOf(type: UICollectionView.self)
+        var subviews = [UIView]()
+        subviews += tables
+        subviews += collections
+        for subview in subviews {
+            let point = gestureRecognizer.location(in: subview)
+            if subview.point(inside: point, with: nil) {
+                return false
+            }
+        }
+        return true
     }
     
 }

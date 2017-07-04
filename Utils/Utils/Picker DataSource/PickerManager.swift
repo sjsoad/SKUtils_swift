@@ -51,13 +51,24 @@ class PickerDataSourceConfigurator {
 class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
-    private var handler: ((PickerRow, _ component: Int ,_ row: Int) -> Void)?
+    private var handler: ((PickerRow, _ component: Int, _ row: Int) -> Void)?
     private(set) var selectedIndex: IndexPath?
     
     init(configuration: PickerDataSourceConfigurator,
          selectionHandler: ((PickerRow, _ component: Int, _ row: Int) -> Void)? = nil) {
         self.configuration = configuration
         self.handler = selectionHandler
+    }
+    
+    // MARK: - Setter -
+    
+    func set(selectedIndex: IndexPath) {
+        if selectedIndex.section >= 0 &&
+            selectedIndex.section < configuration.components.count &&
+            selectedIndex.row >= 0 &&
+            selectedIndex.row < configuration.components[selectedIndex.section].items.count {
+            self.selectedIndex = selectedIndex
+        }
     }
     
     // MARK: - UIPickerViewDataSource -
