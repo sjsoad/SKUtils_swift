@@ -17,6 +17,10 @@
 		A521F7051EF689F700DB4D1E /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7041EF689F700DB4D1E /* PickerTextField.swift */; };
 		A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */; };
 		A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F71C1EF6EB3200DB4D1E /* PopupView.xib */; };
+		A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */; };
+		A54310E51F0C11E400EB3041 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54310E41F0C11E400EB3041 /* TestView.xib */; };
+		A54310E91F0C153300EB3041 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E81F0C153300EB3041 /* XibLoadableView.swift */; };
+		A54310EB1F0C15F300EB3041 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310EA1F0C15F300EB3041 /* TestView.swift */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
 		A57057251EF117C40092CDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057241EF117C40092CDAB /* ViewController.swift */; };
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
@@ -112,6 +116,10 @@
 		A521F7041EF689F700DB4D1E /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPopup.xib; sourceTree = "<group>"; };
 		A521F71C1EF6EB3200DB4D1E /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupPresenter.swift; sourceTree = "<group>"; };
+		A54310E41F0C11E400EB3041 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		A54310E81F0C153300EB3041 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
+		A54310EA1F0C15F300EB3041 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57057221EF117C40092CDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57057241EF117C40092CDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +266,22 @@
 			path = "Picker DataSource";
 			sourceTree = "<group>";
 		};
+		A54310E61F0C151C00EB3041 /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				A54310E71F0C151C00EB3041 /* UIView */,
+			);
+			path = "Custom UI";
+			sourceTree = "<group>";
+		};
+		A54310E71F0C151C00EB3041 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A54310E81F0C153300EB3041 /* XibLoadableView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		A57057161EF117C40092CDAB = {
 			isa = PBXGroup;
 			children = (
@@ -282,8 +306,11 @@
 				A57057341EF117D20092CDAB /* Utils */,
 				A57057221EF117C40092CDAB /* AppDelegate.swift */,
 				A57057241EF117C40092CDAB /* ViewController.swift */,
+				A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */,
+				A54310EA1F0C15F300EB3041 /* TestView.swift */,
 				A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */,
 				A521F71C1EF6EB3200DB4D1E /* PopupView.xib */,
+				A54310E41F0C11E400EB3041 /* TestView.xib */,
 				A57057261EF117C40092CDAB /* Main.storyboard */,
 				A57057291EF117C40092CDAB /* Assets.xcassets */,
 				A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */,
@@ -304,6 +331,7 @@
 		A570577A1EF117D20092CDAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A54310E61F0C151C00EB3041 /* Custom UI */,
 				A571FADC1EFA75860084F5C0 /* Dropdown */,
 				A571FAD41EFA75800084F5C0 /* Decorators */,
 				A521F6FF1EF6860700DB4D1E /* Picker DataSource */,
@@ -883,6 +911,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54310E51F0C11E400EB3041 /* TestView.xib in Resources */,
 				A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */,
 				A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */,
 				A571FAE81EFA75860084F5C0 /* DropdownCell.xib in Resources */,
@@ -938,7 +967,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1001,6 +1030,7 @@
 				A57058411EF117D20092CDAB /* TableViewFRCDataSource.swift in Sources */,
 				A57058531EF117D20092CDAB /* Utils.swift in Sources */,
 				A57058871EF119E00092CDAB /* Windowable.swift in Sources */,
+				A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */,
 				A57058741EF117D20092CDAB /* MicrophonePermissions.swift in Sources */,
 				A57058351EF117D20092CDAB /* ArrayDataSource.swift in Sources */,
 				A57058541EF117D20092CDAB /* WindowFactory.swift in Sources */,
@@ -1023,8 +1053,10 @@
 				A57058771EF117D20092CDAB /* RequestPermissions.swift in Sources */,
 				A57058391EF117D20092CDAB /* ReusableView.swift in Sources */,
 				A57058481EF117D20092CDAB /* DesignableView.swift in Sources */,
+				A54310EB1F0C15F300EB3041 /* TestView.swift in Sources */,
 				A571FAE71EFA75860084F5C0 /* DropdownCell.swift in Sources */,
 				A57058341EF117D20092CDAB /* AppDelegate+ChangePassword.swift in Sources */,
+				A54310E91F0C153300EB3041 /* XibLoadableView.swift in Sources */,
 				A570583A1EF117D20092CDAB /* FRCDataSource.swift in Sources */,
 				A571FAE91EFA75860084F5C0 /* DropdownView.swift in Sources */,
 				A570588D1EF11C2B0092CDAB /* AlertPresentable.swift in Sources */,

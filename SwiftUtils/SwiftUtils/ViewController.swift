@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var textInputsManager: TextInputsManager!
     @IBOutlet private weak var dateTextField: DatePickerField!
     @IBOutlet private weak var pickerTextField: PickerViewField!
+    @IBOutlet private weak var xibView: TestView!
+    
     
     private var pickerManager: PickerManager = {
         var components = [PickerComponentObject]()
@@ -47,13 +49,13 @@ class ViewController: UIViewController {
         pickerTextField.doneButtonHandler = { field, sender in
             print("done")
         }
-
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        PopupPresenter.show(viewName: "TestPopup", in: self.view.window)
+        TestPopupPresenter.show(in: self.view.window)
+        xibView.debug()
     }
     
 }

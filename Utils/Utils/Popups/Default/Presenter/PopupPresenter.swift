@@ -34,7 +34,7 @@ class PopupPresenter: NSObject {
     
     // MARK: - Module -
     
-    static func show(viewName name: String? = nil, in window: UIWindow?) {
+    class func show(viewName name: String? = nil, in window: UIWindow?) {
         guard let popupView = PopupView.newPopup(named: name) else { return }
         let presenter = self.init(with: popupView)
         popupView.presenter = presenter

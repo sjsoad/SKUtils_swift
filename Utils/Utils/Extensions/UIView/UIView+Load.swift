@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    public class func fromNib<T: UIView>(named name: String) -> T? {
+    public class func loadNib<T: UIView>(named name: String) -> T? {
         guard let nibViews = Bundle.main.loadNibNamed(name, owner: nil, options: nil) else { return nil }
         for nibView in nibViews {
             if let view = nibView as? T {
@@ -19,5 +19,5 @@ extension UIView {
         }
         return nil
     }
-
+    
 }

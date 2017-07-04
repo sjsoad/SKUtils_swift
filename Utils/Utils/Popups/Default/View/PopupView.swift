@@ -30,9 +30,9 @@ class PopupView: UIView, PopupViewable {
     static func newPopup(named name: String? = nil) -> Self? {
         guard let name = name else {
             let name = String(describing: self)
-            return fromNib(named: name)
+            return loadNib(named: name)
         }
-        return fromNib(named: name)
+        return loadNib(named: name)
     }
     
     func show() {

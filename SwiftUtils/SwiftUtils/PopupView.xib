@@ -31,9 +31,6 @@
                         <constraint firstItem="rxV-Ux-tzd" firstAttribute="centerX" secondItem="6is-Qn-wu3" secondAttribute="centerX" id="VWn-Tb-HM4"/>
                         <constraint firstItem="rxV-Ux-tzd" firstAttribute="centerY" secondItem="6is-Qn-wu3" secondAttribute="centerY" id="iLb-jc-bph"/>
                     </constraints>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="jUb-19-Leb" appends="YES" id="r6T-dz-nAU"/>
-                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.19607843137254902" green="0.77713233230000001" blue="0.31589496140000001" alpha="0.5" colorSpace="calibratedRGB"/>
