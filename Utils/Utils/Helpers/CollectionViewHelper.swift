@@ -10,6 +10,25 @@ import UIKit
 
 class CollectionViewHelper: NSObject {
 
+    // MARK: - Update Height -
+    
+    static func updateHeight(of collectionView: UICollectionView, height contraint: NSLayoutConstraint, view: UIView) {
+        DispatchQueue.global().async {
+            let constraintValue = contraint.constant
+            let collectionContentHeight = collectionView.contentSize.height
+            if constraintValue != collectionContentHeight {
+                DispatchQueue.main.sync {
+                    contraint.constant = collectionContentHeight
+                    UIView.animate(withDuration: 0.25) {
+                        view.layoutIfNeeded()
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - Cell sizing -
+    
     static func cellSize(for collectionView: UICollectionView,
                          layout collectionViewLayout: UICollectionViewLayout,
                          numberOfCellsInRow: CGFloat,
