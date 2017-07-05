@@ -34,4 +34,13 @@ class TableViewHelper {
         tableView.estimatedRowHeight = height
     }
     
+    static func dynamicHeaderHeight(for tableView: UITableView, estimatedHeaderHeight height: CGFloat) {
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.estimatedSectionHeaderHeight = height
+    }
+    
+    static func dynamicFooterHeight(for tableView: UITableView, estimatedFooterHeight height: CGFloat) {
+        tableView.sectionFooterHeight = UITableViewAutomaticDimension
+        tableView.estimatedSectionFooterHeight = height
+    }
 }
