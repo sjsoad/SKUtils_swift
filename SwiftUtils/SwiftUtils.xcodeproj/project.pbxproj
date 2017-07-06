@@ -17,6 +17,7 @@
 		A521F7051EF689F700DB4D1E /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521F7041EF689F700DB4D1E /* PickerTextField.swift */; };
 		A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */; };
 		A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F71C1EF6EB3200DB4D1E /* PopupView.xib */; };
+		A53D23D41F0E10E500FD4D42 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D23D31F0E10E500FD4D42 /* TableViewHelper.swift */; };
 		A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */; };
 		A54310E51F0C11E400EB3041 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54310E41F0C11E400EB3041 /* TestView.xib */; };
 		A54310E91F0C153300EB3041 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E81F0C153300EB3041 /* XibLoadableView.swift */; };
@@ -53,7 +54,6 @@
 		A570584E1EF117D20092CDAB /* QueryStringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A51EF117D20092CDAB /* QueryStringParser.swift */; };
 		A570584F1EF117D20092CDAB /* RandomNumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A61EF117D20092CDAB /* RandomNumberHelper.swift */; };
 		A57058501EF117D20092CDAB /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A71EF117D20092CDAB /* ShareHelper.swift */; };
-		A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057A91EF117D20092CDAB /* TableViewHelper.swift */; };
 		A57058521EF117D20092CDAB /* UIAlertActioFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AA1EF117D20092CDAB /* UIAlertActioFactory.swift */; };
 		A57058531EF117D20092CDAB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AB1EF117D20092CDAB /* Utils.swift */; };
 		A57058541EF117D20092CDAB /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057AC1EF117D20092CDAB /* WindowFactory.swift */; };
@@ -116,6 +116,7 @@
 		A521F7041EF689F700DB4D1E /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPopup.xib; sourceTree = "<group>"; };
 		A521F71C1EF6EB3200DB4D1E /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		A53D23D31F0E10E500FD4D42 /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupPresenter.swift; sourceTree = "<group>"; };
 		A54310E41F0C11E400EB3041 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		A54310E81F0C153300EB3041 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
@@ -154,7 +155,6 @@
 		A57057A51EF117D20092CDAB /* QueryStringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStringParser.swift; sourceTree = "<group>"; };
 		A57057A61EF117D20092CDAB /* RandomNumberHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberHelper.swift; sourceTree = "<group>"; };
 		A57057A71EF117D20092CDAB /* ShareHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
-		A57057A91EF117D20092CDAB /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		A57057AA1EF117D20092CDAB /* UIAlertActioFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActioFactory.swift; sourceTree = "<group>"; };
 		A57057AB1EF117D20092CDAB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A57057AC1EF117D20092CDAB /* WindowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
@@ -492,26 +492,18 @@
 		A57057A01EF117D20092CDAB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A53D23D31F0E10E500FD4D42 /* TableViewHelper.swift */,
 				A57057A11EF117D20092CDAB /* CollectionViewHelper.swift */,
 				A57057A31EF117D20092CDAB /* DynamicHelper.swift */,
 				A57057A41EF117D20092CDAB /* MapsHelper.swift */,
 				A57057A51EF117D20092CDAB /* QueryStringParser.swift */,
 				A57057A61EF117D20092CDAB /* RandomNumberHelper.swift */,
 				A57057A71EF117D20092CDAB /* ShareHelper.swift */,
-				A57057A81EF117D20092CDAB /* TableView */,
 				A57057AA1EF117D20092CDAB /* UIAlertActioFactory.swift */,
 				A57057AB1EF117D20092CDAB /* Utils.swift */,
 				A57057AC1EF117D20092CDAB /* WindowFactory.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		A57057A81EF117D20092CDAB /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				A57057A91EF117D20092CDAB /* TableViewHelper.swift */,
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 		A57057AD1EF117D20092CDAB /* Managers */ = {
@@ -967,7 +959,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1043,7 +1035,6 @@
 				A51FE4011EF5441400AD8197 /* DatePickerField.swift in Sources */,
 				A571EC1B1EF27BE40079700D /* RequestErrorHandling.swift in Sources */,
 				A57058781EF117D20092CDAB /* ServicePermissions.swift in Sources */,
-				A57058511EF117D20092CDAB /* TableViewHelper.swift in Sources */,
 				A570587C1EF117D20092CDAB /* TextFieldAccessoryView.swift in Sources */,
 				A570586F1EF117D20092CDAB /* LocationService.swift in Sources */,
 				A570587A1EF117D20092CDAB /* EmailTextField.swift in Sources */,
@@ -1056,6 +1047,7 @@
 				A54310EB1F0C15F300EB3041 /* TestView.swift in Sources */,
 				A571FAE71EFA75860084F5C0 /* DropdownCell.swift in Sources */,
 				A57058341EF117D20092CDAB /* AppDelegate+ChangePassword.swift in Sources */,
+				A53D23D41F0E10E500FD4D42 /* TableViewHelper.swift in Sources */,
 				A54310E91F0C153300EB3041 /* XibLoadableView.swift in Sources */,
 				A570583A1EF117D20092CDAB /* FRCDataSource.swift in Sources */,
 				A571FAE91EFA75860084F5C0 /* DropdownView.swift in Sources */,

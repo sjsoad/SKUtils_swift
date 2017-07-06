@@ -117,7 +117,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
         sortInputsByY()
         if let index = textInputs.index(where: {$0 === textField}) {
             let newIndex = index + 1
-            if newIndex < textInputs.count {
+            if textInputs.indices.contains(newIndex) {
                 let nextInputView = textInputs[newIndex]
                 _ = nextInputView.becomeFirstResponder()
             } else {
