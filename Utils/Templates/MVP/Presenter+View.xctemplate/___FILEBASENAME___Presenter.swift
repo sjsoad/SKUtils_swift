@@ -31,11 +31,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject {
         let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
         let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter(with: vc)
         vc.presenter = presenter
-        presenter.show()
-    }
-    
-    func show(in <#window,navigation,etc#>: <#type#>) {
-        
+        //navigation
     }
     
 }

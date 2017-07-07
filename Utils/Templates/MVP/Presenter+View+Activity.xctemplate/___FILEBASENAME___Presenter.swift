@@ -31,11 +31,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject, ___FILEBASENAMEASIDENTI
         let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
         let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter(with: vc)
         vc.presenter = presenter
-        presenter.show()
-    }
-    
-    func show(in <#window,navigation,etc#>: <#type#>) {
-        
+        //navigation
     }
     
     // MARK: - Activity Protocol -

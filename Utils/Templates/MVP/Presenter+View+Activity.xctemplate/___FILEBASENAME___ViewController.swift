@@ -10,7 +10,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___Interface {
 
-    var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter?
+    var presenter: ___FILEBASENAMEASIDENTIFIER___Output?
 
     // MARK: - Lifecycle -
     
