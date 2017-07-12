@@ -55,10 +55,10 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <connections>
-                <outlet property="dropdownHeightContraint" destination="zNb-kB-LA1" id="Rfm-28-NH8"/>
-                <outlet property="dropdownLeadingContraint" destination="5lw-YS-pRz" id="0fe-jq-7H5"/>
-                <outlet property="dropdownTopContraint" destination="1zh-SS-ozc" id="7rM-Y8-xNs"/>
-                <outlet property="dropdownWidthContraint" destination="hzk-Pm-YzF" id="N7I-np-eQi"/>
+                <outlet property="dropdownHeightConstraint" destination="zNb-kB-LA1" id="Ixi-nd-1Dh"/>
+                <outlet property="dropdownLeadingConstraint" destination="5lw-YS-pRz" id="20g-if-Wko"/>
+                <outlet property="dropdownTopConstraint" destination="1zh-SS-ozc" id="KAN-1u-dBh"/>
+                <outlet property="dropdownWidthConstraint" destination="hzk-Pm-YzF" id="pGD-mL-hXZ"/>
                 <outlet property="tableView" destination="LIh-a6-0ci" id="R1G-jS-rJg"/>
             </connections>
         </view>

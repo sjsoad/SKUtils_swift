@@ -9,6 +9,8 @@
 import UIKit
 
 typealias DropdownRectConfiguration = (x: CGFloat?, y: CGFloat?, width: CGFloat?, height: CGFloat?)
+typealias DropdownSelectionHandler = ((_ module: DropdownModule, _ selectedIndex: IndexPath) -> Void)
+typealias DropdownClosingHandler = ((_ module: DropdownModule) -> Void)
 
 protocol DropdownViewable: class {
     
@@ -25,7 +27,7 @@ protocol DropdownReloadable: DropdownViewable {
     
 }
 
-protocol DropdownOutput {
+protocol DropdownOutput: class {
     
     func dropdownTriggeredSelectionEvent(at indexPath: IndexPath)
     func dropdownTriggeredCloseAction()
@@ -35,40 +37,47 @@ protocol DropdownOutput {
 
 protocol DropdownModule {
     
+    var selectedIndexPathes: [IndexPath] { get }
+    var allOptionSelected: Bool { get }
+    
     func show(in window: UIWindow?, rectConfiguration configuration: DropdownRectConfiguration)
     func hideDropdown()
     func removeDropdown()
-    //    func selectedIndexes() -> [IndexPath]
-    
-}
-
-@objc protocol DropdownModuleDelegate {
-    
-    @objc optional func dropdown(presenter: DropdownPresenter, didSelectItemAt indexPath: IndexPath)
-    @objc optional func dropdown(didHideWith presenter: DropdownPresenter)
     
 }
 
 class DropdownPresenter: NSObject, DropdownModule {
     
-    fileprivate weak var view: DropdownReloadable?
-    fileprivate weak var delegate: DropdownModuleDelegate?
+    fileprivate var view: DropdownReloadable?
     fileprivate var dataSource = TableViewArrayDataSource(sections: [])
     fileprivate var items = [String]()
     fileprivate var allOptionIndex: IndexPath?
-    fileprivate var selectedIndexes = [IndexPath]()
+    fileprivate var indexes = [IndexPath]()
+    fileprivate var selectionHandler: DropdownSelectionHandler?
+    fileprivate var closingHandler: DropdownClosingHandler?
+    
+    var selectedIndexPathes: [IndexPath] {
+        return indexes
+    }
+    
+    var allOptionSelected: Bool {
+        guard let allOptionIndex = allOptionIndex else { return false }
+        return indexes.contains(allOptionIndex)
+    }
     
     required init(with view: DropdownReloadable,
                   items: [String],
                   selectedIndexes: [IndexPath],
                   allOptionIndex: IndexPath? = nil,
-                  delegate: DropdownModuleDelegate? = nil) {
+                  selectionHandler: DropdownSelectionHandler? = nil,
+                  closingHandler: DropdownClosingHandler? = nil) {
         super.init()
         self.view = view
         self.items = items
-        self.selectedIndexes = selectedIndexes
+        self.indexes = selectedIndexes
         self.allOptionIndex = allOptionIndex
-        self.delegate = delegate
+        self.selectionHandler = selectionHandler
+        self.closingHandler = closingHandler
         self.createDataSource()
     }
     
@@ -77,12 +86,14 @@ class DropdownPresenter: NSObject, DropdownModule {
                         selectedIndexes: [IndexPath] = [IndexPath](),
                         allOptionIndex: IndexPath? = nil,
                         allowsMultipleSelection: Bool,
-                        delegate: DropdownModuleDelegate?) -> DropdownModule? {
+                        selectionHandler: DropdownSelectionHandler? = nil,
+                        closingHandler: DropdownClosingHandler? = nil) -> DropdownModule? {
         guard let dropdownView = DropdownView.newDropdown() else { return nil }
         let presenter = DropdownPresenter(with: dropdownView,
                                           items: items,
                                           selectedIndexes: selectedIndexes,
-                                          delegate: delegate)
+                                          selectionHandler: selectionHandler,
+                                          closingHandler: closingHandler)
         dropdownView.presenter = presenter
         dropdownView.register(cellClass: name)
         dropdownView.allowsMultipleSelection = allowsMultipleSelection
@@ -117,7 +128,7 @@ class DropdownPresenter: NSObject, DropdownModule {
         for (index, item) in items.enumerated() {
             let indexPath = IndexPath(row: index, section: 0)
             let viewModel = DropdownViewModel(text: item,
-                                              isSelected: selectedIndexes.contains(indexPath),
+                                              isSelected: indexes.contains(indexPath),
                                               cellIdentifier: DropdownCell.reuseIdentifier)
             sectionItems.append(viewModel)
         }
@@ -131,24 +142,25 @@ extension DropdownPresenter: DropdownOutput {
     
     func dropdownTriggeredSelectionEvent(at indexPath: IndexPath) {
         guard let view = view else { return }
-        if let index = selectedIndexes.index(of: indexPath) {
-            if selectedIndexes.count > 1 { // at least one object should be selected
-                selectedIndexes.remove(at: index)
+        if let index = indexes.index(of: indexPath) {
+            if indexes.count > 1 { // at least one object should be selected
+                indexes.remove(at: index)
             }
         } else {
             if view.allowsMultipleSelection && indexPath != allOptionIndex {
                 if let allOptionIndex = allOptionIndex,
-                    let index = selectedIndexes.index(of: allOptionIndex) {
-                    selectedIndexes.remove(at: index)
+                    let index = indexes.index(of: allOptionIndex) {
+                    indexes.remove(at: index)
                 }
-                selectedIndexes.append(indexPath)
+                indexes.append(indexPath)
             } else {
-                selectedIndexes = [indexPath]
+                indexes = [indexPath]
             }
         }
         createDataSource()
         view.reload(with: dataSource)
-        delegate?.dropdown?(presenter: self, didSelectItemAt: indexPath)
+        guard let selectionHandler = selectionHandler else { return }
+        selectionHandler(self, indexPath)
     }
     
     func dropdownTriggeredCloseAction() {
@@ -156,7 +168,9 @@ extension DropdownPresenter: DropdownOutput {
     }
     
     func dropdownDidHide() {
-        delegate?.dropdown?(didHideWith: self)
+        removeDropdown()
+        guard let closingHanlder = closingHandler else { return }
+        closingHanlder(self)
     }
     
 }

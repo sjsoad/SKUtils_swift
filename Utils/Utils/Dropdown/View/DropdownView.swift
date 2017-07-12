@@ -10,7 +10,7 @@ import UIKit
 
 class DropdownView: UIView, DropdownReloadable {
 
-    var presenter: DropdownOutput?
+    weak var presenter: DropdownOutput?
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var dropdownLeadingConstraint: NSLayoutConstraint!
