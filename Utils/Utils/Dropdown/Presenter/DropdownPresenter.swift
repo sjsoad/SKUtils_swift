@@ -11,6 +11,7 @@ import UIKit
 typealias DropdownRectConfiguration = (x: CGFloat?, y: CGFloat?, width: CGFloat?, height: CGFloat?)
 typealias DropdownSelectionHandler = ((_ module: DropdownModule, _ selectedIndex: IndexPath) -> Void)
 typealias DropdownClosingHandler = ((_ module: DropdownModule) -> Void)
+typealias DropdownMaximumReachedHandler = ((_ module: DropdownModule, _ maxValue: Int) -> Void)
 
 protocol DropdownViewable: class {
     
@@ -52,9 +53,11 @@ class DropdownPresenter: NSObject, DropdownModule {
     fileprivate var dataSource = TableViewArrayDataSource(sections: [])
     fileprivate var items = [String]()
     fileprivate var allOptionIndex: IndexPath?
+    fileprivate var maxSelectedItems: Int?
     fileprivate var indexes = [IndexPath]()
     fileprivate var selectionHandler: DropdownSelectionHandler?
     fileprivate var closingHandler: DropdownClosingHandler?
+    fileprivate var maximumReachedHandler: DropdownMaximumReachedHandler?
     
     var selectedIndexPathes: [IndexPath] {
         return indexes
@@ -69,15 +72,19 @@ class DropdownPresenter: NSObject, DropdownModule {
                   items: [String],
                   selectedIndexes: [IndexPath],
                   allOptionIndex: IndexPath? = nil,
+                  maxSelectedItems: Int? = nil,
                   selectionHandler: DropdownSelectionHandler? = nil,
-                  closingHandler: DropdownClosingHandler? = nil) {
+                  closingHandler: DropdownClosingHandler? = nil,
+                  maximumReachedHandler: DropdownMaximumReachedHandler? = nil) {
         super.init()
         self.view = view
         self.items = items
         self.indexes = selectedIndexes
         self.allOptionIndex = allOptionIndex
+        self.maxSelectedItems = maxSelectedItems
         self.selectionHandler = selectionHandler
         self.closingHandler = closingHandler
+        self.maximumReachedHandler = maximumReachedHandler
         self.createDataSource()
     }
     
@@ -85,15 +92,20 @@ class DropdownPresenter: NSObject, DropdownModule {
                         items: [String],
                         selectedIndexes: [IndexPath] = [IndexPath](),
                         allOptionIndex: IndexPath? = nil,
+                        maxSelectedItems: Int? = nil,
                         allowsMultipleSelection: Bool,
                         selectionHandler: DropdownSelectionHandler? = nil,
-                        closingHandler: DropdownClosingHandler? = nil) -> DropdownModule? {
+                        closingHandler: DropdownClosingHandler? = nil,
+                        maximumReachedHandler: DropdownMaximumReachedHandler? = nil) -> DropdownModule? {
         guard let dropdownView = DropdownView.newDropdown() else { return nil }
         let presenter = DropdownPresenter(with: dropdownView,
                                           items: items,
                                           selectedIndexes: selectedIndexes,
+                                          allOptionIndex: allOptionIndex,
+                                          maxSelectedItems: maxSelectedItems,
                                           selectionHandler: selectionHandler,
-                                          closingHandler: closingHandler)
+                                          closingHandler: closingHandler,
+                                          maximumReachedHandler: maximumReachedHandler)
         dropdownView.presenter = presenter
         dropdownView.register(cellClass: name)
         dropdownView.allowsMultipleSelection = allowsMultipleSelection
@@ -147,6 +159,11 @@ extension DropdownPresenter: DropdownOutput {
                 indexes.remove(at: index)
             }
         } else {
+            if let maxSelectedItems = maxSelectedItems, indexes.count >= maxSelectedItems {
+                guard let maximumReachedHandler = maximumReachedHandler else { return }
+                maximumReachedHandler(self, maxSelectedItems)
+                return
+            }
             if view.allowsMultipleSelection && indexPath != allOptionIndex {
                 if let allOptionIndex = allOptionIndex,
                     let index = indexes.index(of: allOptionIndex) {
