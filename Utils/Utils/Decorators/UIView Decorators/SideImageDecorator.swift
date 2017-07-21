@@ -19,13 +19,18 @@ class SideImageDecorator {
     fileprivate var viewOffset: CGFloat = 0
     fileprivate var textPadding: CGFloat = 0
     fileprivate var imageSide: Side = .left
+    fileprivate var imageColor: UIColor?
     
-    
-    init(imageName name: String, viewOffset offset: CGFloat, textPadding padding: CGFloat, imageSide side: Side) {
+    init(imageName name: String,
+         viewOffset offset: CGFloat,
+         textPadding padding: CGFloat,
+         imageSide side: Side,
+         imageColor color: UIColor? = nil) {
         imageName = name
         viewOffset = offset
         textPadding = padding
         imageSide = side
+        imageColor = color
     }
 
 }
@@ -38,6 +43,9 @@ extension SideImageDecorator: Decorator {
         let imageView = createImageView()
         imageView.frame = imageViewFrame(dependsOn: image.size, height: view.frame.height)
         imageView.image = image
+        if let tintColor = imageColor {
+            imageView.tintColor = tintColor
+        }
         if imageSide == .left {
             view.leftViewMode = .always
             view.leftView = imageView
