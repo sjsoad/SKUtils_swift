@@ -13,6 +13,9 @@
 		A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */; };
 		A54310E51F0C11E400EB3041 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54310E41F0C11E400EB3041 /* TestView.xib */; };
 		A54310EB1F0C15F300EB3041 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310EA1F0C15F300EB3041 /* TestView.swift */; };
+		A54BA26C1F274D1C0025A4C0 /* IpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA2691F274D1C0025A4C0 /* IpRequest.swift */; };
+		A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA26A1F274D1C0025A4C0 /* IpRequesting.swift */; };
+		A54BA26E1F274D1C0025A4C0 /* IpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA26B1F274D1C0025A4C0 /* IpResponse.swift */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
 		A57057251EF117C40092CDAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057241EF117C40092CDAB /* ViewController.swift */; };
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
@@ -126,6 +129,9 @@
 		A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupPresenter.swift; sourceTree = "<group>"; };
 		A54310E41F0C11E400EB3041 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		A54310EA1F0C15F300EB3041 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		A54BA2691F274D1C0025A4C0 /* IpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequest.swift; sourceTree = "<group>"; };
+		A54BA26A1F274D1C0025A4C0 /* IpRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequesting.swift; sourceTree = "<group>"; };
+		A54BA26B1F274D1C0025A4C0 /* IpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpResponse.swift; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57057221EF117C40092CDAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A57057241EF117C40092CDAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +259,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A54BA2681F274D100025A4C0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A54BA2691F274D1C0025A4C0 /* IpRequest.swift */,
+				A54BA26A1F274D1C0025A4C0 /* IpRequesting.swift */,
+				A54BA26B1F274D1C0025A4C0 /* IpResponse.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		A57057161EF117C40092CDAB = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +291,7 @@
 		A57057211EF117C40092CDAB /* SwiftUtils */ = {
 			isa = PBXGroup;
 			children = (
+				A54BA2681F274D100025A4C0 /* Request */,
 				A57057221EF117C40092CDAB /* AppDelegate.swift */,
 				A57057241EF117C40092CDAB /* ViewController.swift */,
 				A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */,
@@ -1099,6 +1116,7 @@
 				A5ABFCD91F22356400548D89 /* BaseTextField.swift in Sources */,
 				A5ABFCBB1F22356400548D89 /* Windowable.swift in Sources */,
 				A5ABFCB41F22356400548D89 /* APIRequesting.swift in Sources */,
+				A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */,
 				A5ABFCA81F22356400548D89 /* TableViewHelper.swift in Sources */,
 				A5ABFCD71F22356400548D89 /* RequestPermissions.swift in Sources */,
 				A5ABFCBE1F22356400548D89 /* ArrayCollectionViewModelProtocol.swift in Sources */,
@@ -1123,6 +1141,7 @@
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
 				A5ABFCB21F22356400548D89 /* RequestErrorHandlerProtocol.swift in Sources */,
 				A5ABFC9C1F22356400548D89 /* UIViewContollrer+PresentationProtocol.swift in Sources */,
+				A54BA26E1F274D1C0025A4C0 /* IpResponse.swift in Sources */,
 				A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */,
 				A5ABFCCF1F22356400548D89 /* Ponsomizer.swift in Sources */,
 				A5ABFCC61F22356400548D89 /* AlertPresentable.swift in Sources */,
@@ -1163,6 +1182,7 @@
 				A5ABFC931F22356400548D89 /* SideImageDecorator.swift in Sources */,
 				A5ABFC9A1F22356400548D89 /* String+NSRange.swift in Sources */,
 				A5ABFCC71F22356400548D89 /* Presentable.swift in Sources */,
+				A54BA26C1F274D1C0025A4C0 /* IpRequest.swift in Sources */,
 				A54310EB1F0C15F300EB3041 /* TestView.swift in Sources */,
 				A5ABFCE11F22356400548D89 /* EmailValidator.swift in Sources */,
 				A5ABFCDD1F22356400548D89 /* PickerTextField.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ___FILEBASENAME___RequestProtocol.swift
+//  IpRequestProtocol.swift
 //  SKUtilsSwift
 //
 //  Created by Sergey on 13.05.17.
@@ -8,28 +8,24 @@
 
 import Foundation
 
-typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Request.Response) -> Void
-typealias ___FILEBASENAME___ResponseValue = () // Example: Bool
+typealias IpSuccessHandler = (_ response: IpRequest.Response) -> Void
+typealias IpResponseValue = [String: String] // Example: Bool
 
-protocol ___FILEBASENAME___Requesting: RequestErrorHandling /* or RequestExecuting */ {
+protocol IpRequesting: RequestErrorHandling /* or RequestExecuting */{
     
-    func exampleFunc(successHandler: ___FILEBASENAME___SuccessHandler,
+    func exampleFunc(successHandler: @escaping IpSuccessHandler,
                      executingHandler: RequestExecutingHandler?,
                      errorHandler: ErrorHandler?)
 }
 
-extension ___FILEBASENAME___Requesting {
+extension IpRequesting {
     
-    func exampleFunc(successHandler: @escaping ___FILEBASENAME___SuccessHandler,
+    func exampleFunc(successHandler: @escaping IpSuccessHandler,
                      executingHandler: RequestExecutingHandler? = nil,
                      errorHandler: ErrorHandler? = nil) {
         executingHandler?(true)
-        let urlString = <#String#>
-        let headers = <#[String: String]#>
-        let parameters = <#[String: Any]#>
-        let request = ___FILEBASENAME___Request(withURL: urlString,
-                                                parameters: parameters,
-                                                headers: headers)
+        let urlString = "https://api.ipify.org"
+        let request = IpRequest(withURL: urlString)
         let apiClient = APIClient()
         _ = apiClient.executeRequest(request: request,
                                      success: { response in
@@ -41,5 +37,5 @@ extension ___FILEBASENAME___Requesting {
                                         errorHandler?(error)
         })
     }
-    
+ 
 }

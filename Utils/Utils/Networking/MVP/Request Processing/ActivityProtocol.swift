@@ -9,7 +9,6 @@
 import Foundation
 import NVActivityIndicatorView
 
-
 protocol ActivityViewable: NVActivityIndicatorViewable, AlertViewable {
     
     func showActivity()

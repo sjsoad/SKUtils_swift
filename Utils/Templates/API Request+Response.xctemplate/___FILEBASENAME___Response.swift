@@ -9,9 +9,9 @@
 import UIKit
 import Foundation
 
-class ___FILEBASENAMEASIDENTIFIER___Response: ResponseProtocol {
+class ___FILEBASENAMEASIDENTIFIER___Response: APIResponsing {
     
-    var result: ___FILEBASENAME___ResponceValue?
+    var result: ___FILEBASENAME___ResponseValue?
     
     required init(JSON: AnyObject) {
         

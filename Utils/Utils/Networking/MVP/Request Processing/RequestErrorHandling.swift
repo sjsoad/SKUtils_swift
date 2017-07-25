@@ -7,20 +7,20 @@
 //
 
 import Foundation
+import SwiftyDrop
 
-protocol RequestErrorHandling {
+protocol RequestErrorHandling: RequestExecuting {
     
-    func requestErrorHandler(executingHandler handler: RequestExecutingHandler?) -> ErrorHandler
+    func requestErrorHandler() -> ErrorHandler
     
 }
 
 extension RequestErrorHandling where Self: NSObject {
     
-    func requestErrorHandler(executingHandler handler: RequestExecutingHandler?) -> ErrorHandler {
-        return { error in
-            if let executingHandler = handler {
-                executingHandler(false, error)
-            }
+    func requestErrorHandler() -> ErrorHandler {
+        return { [weak self] error in
+            guard let view = self?.activityView() else { return }
+            view.show(error: error.localizedDescription)
         }
     }
 

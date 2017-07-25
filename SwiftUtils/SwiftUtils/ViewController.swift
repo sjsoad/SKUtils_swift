@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ActivityViewable, IpRequesting {
 
     @IBOutlet private weak var textInputsManager: TextInputsManager!
     @IBOutlet private weak var dateTextField: DatePickerField!
     @IBOutlet private weak var pickerTextField: PickerViewField!
     @IBOutlet private weak var xibView: TestView!
-    
     
     private var pickerManager: PickerManager = {
         var components = [PickerComponentObject]()
@@ -49,6 +48,10 @@ class ViewController: UIViewController {
         pickerTextField.doneButtonHandler = { field, sender in
             print("done")
         }
+        exampleFunc(successHandler: { (response) in
+            print(response.result ?? "nothing")
+        },
+                    errorHandler: requestErrorHandler())
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -57,5 +60,13 @@ class ViewController: UIViewController {
         TestPopupPresenter.show(in: self.view.window)
         xibView.debug()
     }
+    
+    // MARK: - RequestExecuting -
+    
+    func activityView() -> ActivityViewable? {
+        return self
+    }
+    
+    // MARK - IpRequesting -
     
 }

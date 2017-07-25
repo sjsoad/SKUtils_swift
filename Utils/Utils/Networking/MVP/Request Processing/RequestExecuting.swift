@@ -8,21 +8,20 @@
 
 import UIKit
 import NVActivityIndicatorView
-import SwiftyDrop
 
-typealias RequestExecutingHandler = (_ executing: Bool, _ error: Error?) -> Void
+typealias RequestExecutingHandler = (_ executing: Bool) -> Void
 
 protocol RequestExecuting {
     
     func activityView() -> ActivityViewable?
-    func requerstExecutingHandler() -> RequestExecutingHandler
+    func requestExecutingHandler() -> RequestExecutingHandler
     
 }
 
 extension RequestExecuting where Self: NSObject {
     
-    func requerstExecutingHandler() -> RequestExecutingHandler {
-        return { [weak self] (executing, error) in
+    func requestExecutingHandler() -> RequestExecutingHandler {
+        return { [weak self] (executing) in
             guard let strongSelf = self,
             let view = strongSelf.activityView() else { return }
             if executing {
@@ -30,8 +29,6 @@ extension RequestExecuting where Self: NSObject {
             } else {
                 view.hideActivity()
             }
-            guard let error = error else { return }
-            view.show(error: error.localizedDescription)
         }
     }
     
