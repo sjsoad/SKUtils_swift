@@ -9,7 +9,7 @@
 import Foundation
 
 typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Request.Response) -> Void
-typealias ___FILEBASENAME___ResponceValue = ()
+typealias ___FILEBASENAME___ResponseValue = ()
 
 protocol ___FILEBASENAME___Requesting: RequestErrorHandling {
     
