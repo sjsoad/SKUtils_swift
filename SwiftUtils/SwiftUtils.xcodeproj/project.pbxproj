@@ -21,6 +21,8 @@
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
 		A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57057291EF117C40092CDAB /* Assets.xcassets */; };
 		A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */; };
+		A57B012F1F2A113C001646D8 /* ScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57B012D1F2A113C001646D8 /* ScrollingViewController.swift */; };
+		A57B01301F2A113C001646D8 /* ScrollingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57B012E1F2A113C001646D8 /* ScrollingViewController.xib */; };
 		A5ABFC821F22356400548D89 /* AppDelegate+ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA31F22356400548D89 /* AppDelegate+ChangePassword.swift */; };
 		A5ABFC831F22356400548D89 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA61F22356400548D89 /* XibLoadableView.swift */; };
 		A5ABFC841F22356400548D89 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA81F22356400548D89 /* ArrayDataSource.swift */; };
@@ -139,6 +141,8 @@
 		A57057291EF117C40092CDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A570572C1EF117C40092CDAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A570572E1EF117C40092CDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57B012D1F2A113C001646D8 /* ScrollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingViewController.swift; sourceTree = "<group>"; };
+		A57B012E1F2A113C001646D8 /* ScrollingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollingViewController.xib; sourceTree = "<group>"; };
 		A5ABFBA31F22356400548D89 /* AppDelegate+ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ChangePassword.swift"; sourceTree = "<group>"; };
 		A5ABFBA61F22356400548D89 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
 		A5ABFBA81F22356400548D89 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				A54BA2681F274D100025A4C0 /* Request */,
 				A57057221EF117C40092CDAB /* AppDelegate.swift */,
 				A57057241EF117C40092CDAB /* ViewController.swift */,
+				A57B012D1F2A113C001646D8 /* ScrollingViewController.swift */,
+				A57B012E1F2A113C001646D8 /* ScrollingViewController.xib */,
 				A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */,
 				A54310EA1F0C15F300EB3041 /* TestView.swift */,
 				A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */,
@@ -1048,6 +1054,7 @@
 				A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */,
 				A5ABFC961F22356400548D89 /* DropdownCell.xib in Resources */,
 				A5ABFC981F22356400548D89 /* DropdownView.xib in Resources */,
+				A57B01301F2A113C001646D8 /* ScrollingViewController.xib in Resources */,
 				A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */,
 				A57057281EF117C40092CDAB /* Main.storyboard in Resources */,
 			);
@@ -1152,6 +1159,7 @@
 				A5ABFCCC1F22356400548D89 /* PushNotificationsService.swift in Sources */,
 				A5ABFC971F22356400548D89 /* DropdownView.swift in Sources */,
 				A5ABFCA91F22356400548D89 /* UIAlertActioFactory.swift in Sources */,
+				A57B012F1F2A113C001646D8 /* ScrollingViewController.swift in Sources */,
 				A5ABFCBA1F22356400548D89 /* Navigatable.swift in Sources */,
 				A5ABFCB11F22356400548D89 /* RequestExecuting.swift in Sources */,
 				A5ABFCA61F22356400548D89 /* RandomNumberHelper.swift in Sources */,
