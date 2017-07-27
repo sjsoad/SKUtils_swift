@@ -10,6 +10,6 @@ import UIKit
 
 class ScrollingViewController: UIViewController {
 
-    @IBOutlet private weak var textInputsManager: TextInputsManager!
+    @IBOutlet private var textInputsManager: TextInputsManager!
     
 }

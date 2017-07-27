@@ -105,7 +105,6 @@ class TextInputsManager: NSObject, TextInputsManaging {
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {
-        
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
             guard let strongSelf = self,
                 let scroll = strongSelf.containerView as? UIScrollView else { return }

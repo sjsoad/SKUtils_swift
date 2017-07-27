@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollingViewController" customModule="SwiftUtils" customModuleProvider="target">
             <connections>
+                <outlet property="textInputsManager" destination="MF4-uW-SRP" id="wBM-QL-3AM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,19 +23,11 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHx-Pe-a8K">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9r-1m-MO0">
-                            <rect key="frame" x="10" y="609" width="355" height="30"/>
-                            <color key="backgroundColor" red="0.33333333329999998" green="0.73333333329999995" blue="0.78823529410000004" alpha="1" colorSpace="deviceRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="TKZ-Xt-56o"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-tX-zTL">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-Kr-5Uw">
-                                    <rect key="frame" x="20" y="35" width="335" height="30"/>
+                                    <rect key="frame" x="20" y="20" width="335" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -44,13 +37,21 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="pQf-Kr-5Uw" secondAttribute="trailing" constant="20" id="Jmj-1b-iIG"/>
                                 <constraint firstItem="pQf-Kr-5Uw" firstAttribute="leading" secondItem="sp2-tX-zTL" secondAttribute="leading" constant="20" id="S5Y-uI-uHe"/>
-                                <constraint firstItem="pQf-Kr-5Uw" firstAttribute="centerY" secondItem="sp2-tX-zTL" secondAttribute="centerY" id="gf0-Ts-lpz"/>
-                                <constraint firstAttribute="height" constant="100" id="yjh-tD-cJ0"/>
+                                <constraint firstItem="pQf-Kr-5Uw" firstAttribute="top" secondItem="sp2-tX-zTL" secondAttribute="top" constant="20" id="xz4-65-f6B"/>
+                                <constraint firstAttribute="height" constant="1000" id="yjh-tD-cJ0"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9r-1m-MO0">
+                            <rect key="frame" x="10" y="1020" width="355" height="30"/>
+                            <color key="backgroundColor" red="0.33333333329999998" green="0.73333333329999995" blue="0.78823529410000004" alpha="1" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="TKZ-Xt-56o"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Y9r-1m-MO0" firstAttribute="centerX" secondItem="hHx-Pe-a8K" secondAttribute="centerX" id="Kme-3R-JRr"/>
+                        <constraint firstItem="sp2-tX-zTL" firstAttribute="centerX" secondItem="hHx-Pe-a8K" secondAttribute="centerX" id="Dy0-BP-1G1"/>
                         <constraint firstAttribute="bottom" secondItem="Y9r-1m-MO0" secondAttribute="bottom" priority="999" constant="20" id="NVH-I8-6ZO"/>
                         <constraint firstAttribute="trailing" secondItem="sp2-tX-zTL" secondAttribute="trailing" id="PFb-SM-dDi"/>
                         <constraint firstItem="sp2-tX-zTL" firstAttribute="top" secondItem="hHx-Pe-a8K" secondAttribute="top" id="TgN-7O-tCR"/>
@@ -64,11 +65,19 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hHx-Pe-a8K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5td-9K-VR3"/>
-                <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="Y9r-1m-MO0" secondAttribute="bottom" constant="20" id="Gzf-pQ-dTW"/>
+                <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="Y9r-1m-MO0" secondAttribute="bottom" constant="20" id="9y0-K0-bt1"/>
                 <constraint firstAttribute="bottom" secondItem="hHx-Pe-a8K" secondAttribute="bottom" id="KWa-Y5-gcw"/>
                 <constraint firstAttribute="trailing" secondItem="hHx-Pe-a8K" secondAttribute="trailing" id="ZVJ-MD-mm9"/>
                 <constraint firstItem="hHx-Pe-a8K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t0x-QB-wk1"/>
             </constraints>
         </view>
+        <customObject id="MF4-uW-SRP" customClass="TextInputsManager" customModule="SwiftUtils" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="hideOnTap" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="containerView" destination="hHx-Pe-a8K" id="sO8-d7-hcc"/>
+            </connections>
+        </customObject>
     </objects>
 </document>
