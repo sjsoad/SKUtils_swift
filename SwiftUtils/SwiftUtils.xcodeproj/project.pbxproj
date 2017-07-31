@@ -52,7 +52,6 @@
 		A5ABFC9C1F22356400548D89 /* UIViewContollrer+PresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD01F22356400548D89 /* UIViewContollrer+PresentationProtocol.swift */; };
 		A5ABFC9D1F22356400548D89 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD21F22356400548D89 /* ColorExtension.swift */; };
 		A5ABFC9E1F22356400548D89 /* UINavigationController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD31F22356400548D89 /* UINavigationController+Utils.swift */; };
-		A5ABFC9F1F22356400548D89 /* TextField+PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD51F22356400548D89 /* TextField+PlaceholderColor.swift */; };
 		A5ABFCA01F22356400548D89 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD71F22356400548D89 /* DesignableView.swift */; };
 		A5ABFCA11F22356400548D89 /* UIView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBD81F22356400548D89 /* UIView+Load.swift */; };
 		A5ABFCA21F22356400548D89 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBDA1F22356400548D89 /* CollectionViewHelper.swift */; };
@@ -172,7 +171,6 @@
 		A5ABFBD01F22356400548D89 /* UIViewContollrer+PresentationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContollrer+PresentationProtocol.swift"; sourceTree = "<group>"; };
 		A5ABFBD21F22356400548D89 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		A5ABFBD31F22356400548D89 /* UINavigationController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Utils.swift"; sourceTree = "<group>"; };
-		A5ABFBD51F22356400548D89 /* TextField+PlaceholderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TextField+PlaceholderColor.swift"; sourceTree = "<group>"; };
 		A5ABFBD71F22356400548D89 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		A5ABFBD81F22356400548D89 /* UIView+Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Load.swift"; sourceTree = "<group>"; };
 		A5ABFBDA1F22356400548D89 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
@@ -541,7 +539,6 @@
 		A5ABFBD41F22356400548D89 /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				A5ABFBD51F22356400548D89 /* TextField+PlaceholderColor.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1186,7 +1183,6 @@
 				A5ABFCA31F22356400548D89 /* DynamicHelper.swift in Sources */,
 				A5ABFC911F22356400548D89 /* Decorator.swift in Sources */,
 				A5ABFCDC1F22356400548D89 /* PassTextField.swift in Sources */,
-				A5ABFC9F1F22356400548D89 /* TextField+PlaceholderColor.swift in Sources */,
 				A5ABFC931F22356400548D89 /* SideImageDecorator.swift in Sources */,
 				A5ABFC9A1F22356400548D89 /* String+NSRange.swift in Sources */,
 				A5ABFCC71F22356400548D89 /* Presentable.swift in Sources */,
