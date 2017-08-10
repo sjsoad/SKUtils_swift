@@ -40,12 +40,12 @@ class LocationService: CLLocationManager {
     init(withLocationUsage locationUsage: LocationUsage,
          locationPermissions: LocationPermissions) {
         self.locationUsage = locationUsage
-        self.locationPermissions = locationPermissions;
+        self.locationPermissions = locationPermissions
         super.init()
         self.checkPermissions()
     }
     
-    //MARK: - Public methods
+    // MARK: - Public methods
     
     func checkPermissions() {
         switch self.locationPermissions.permissionsState() {
