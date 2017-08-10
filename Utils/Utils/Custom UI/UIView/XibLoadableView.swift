@@ -10,7 +10,7 @@ import UIKit
 
 class XibLoadableView: UIView {
 
-    @IBInspectable var nibNameFromIB: String?
+//    @IBInspectable var nibNameFromIB: String?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,10 +24,10 @@ class XibLoadableView: UIView {
  
     func instantiateFrom<T: UIView>() -> T {
         let selfType = type(of: self)
-        var nibName = String(describing: selfType)
-        if let nibNameFromIB = nibNameFromIB {
-            nibName = nibNameFromIB
-        }
+        let nibName = String(describing: selfType)
+//        if let nibNameFromIB = nibNameFromIB {
+//            nibName = nibNameFromIB
+//        }
         let nib = UINib(nibName: nibName, bundle: nil)
         
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? T else {
