@@ -52,7 +52,7 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
     private var handler: ((PickerRow, _ component: Int, _ row: Int) -> Void)?
-    private(set) var selectedIndex: IndexPath?
+    private(set) var selectedIndexes = [IndexPath]()
     
     init(configuration: PickerDataSourceConfigurator,
          selectionHandler: ((PickerRow, _ component: Int, _ row: Int) -> Void)? = nil) {
@@ -62,13 +62,8 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     
     // MARK: - Setter -
     
-    func set(selectedIndex: IndexPath) {
-        if selectedIndex.section >= 0 &&
-            selectedIndex.section < configuration.components.count &&
-            selectedIndex.row >= 0 &&
-            selectedIndex.row < configuration.components[selectedIndex.section].items.count {
-            self.selectedIndex = selectedIndex
-        }
+    func set(selectedIndexes: [IndexPath]) {
+        self.selectedIndexes = selectedIndexes
     }
     
     // MARK: - UIPickerViewDataSource -
@@ -94,7 +89,10 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard let handler = handler else { return }
         let rowObject = configuration.components[component].items[row]
-        selectedIndex = IndexPath(row: row, section: component)
+        let selectedIndex = IndexPath(row: row, section: component)
+        if selectedIndexes.indices.contains(component) {
+            selectedIndexes[component] = selectedIndex
+        }
         handler(rowObject, component, row)
     }
     

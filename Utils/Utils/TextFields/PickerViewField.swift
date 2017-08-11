@@ -37,6 +37,10 @@ class PickerViewField: PickerTextField {
         self.picker.dataSource = manager
         self.picker.delegate = manager
         self.picker.reloadAllComponents()
+        for selectedIndex in manager.selectedIndexes {
+            self.picker.selectRow(selectedIndex.row, inComponent: selectedIndex.section, animated: false)
+        }
+        
     }
     
 }
