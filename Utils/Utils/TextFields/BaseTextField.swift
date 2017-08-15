@@ -24,6 +24,15 @@ public class BaseTextField: UITextField {
         }
     }
     
+    // MARK: - Lifecyrcle -
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        updateAttributtedPlaceholder()
+    }
+    
+    // MARK: - Private -
+    
     private func updateAttributtedPlaceholder() {
         guard let text = self.placeholder, let color = self.placeholderColor else { return }
         self.attributedPlaceholder = NSAttributedString(string: text,

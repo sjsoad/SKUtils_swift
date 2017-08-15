@@ -48,14 +48,16 @@ class PickerDataSourceConfigurator {
     
 }
 
+typealias PickerManagerSelectionHandler = (PickerRow, _ component: Int, _ row: Int) -> Void
+
 class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
-    private var handler: ((PickerRow, _ component: Int, _ row: Int) -> Void)?
+    private var handler: PickerManagerSelectionHandler?
     private(set) var selectedIndexes = [IndexPath]()
     
     init(configuration: PickerDataSourceConfigurator,
-         selectionHandler: ((PickerRow, _ component: Int, _ row: Int) -> Void)? = nil) {
+         selectionHandler: PickerManagerSelectionHandler? = nil) {
         self.configuration = configuration
         self.handler = selectionHandler
     }
