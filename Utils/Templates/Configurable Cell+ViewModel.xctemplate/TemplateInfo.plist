@@ -11,7 +11,7 @@
 	<key>MainTemplateFiles</key>
 	<array>
 		<string>___FILEBASENAME___Cell.swift</string>
-		<string>___FILEBASENAME___CellViewModel.swift</string>
+		<string>___FILEBASENAME___ViewModel.swift</string>
 	</array>
 	<key>Platforms</key>
 	<array>

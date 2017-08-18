@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___Interface: class, ActivityProtocol {
+protocol ___FILEBASENAMEASIDENTIFIER___Interface: class, ActivityViewable {
     
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output: RequestExecutingProtocol {
+protocol ___FILEBASENAMEASIDENTIFIER___Output: RequestExecuting {
     
 }
 
@@ -36,7 +36,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject, ___FILEBASENAMEASIDENTI
     
     // MARK: - Activity Protocol -
     
-    func activityView() -> ActivityProtocol? {
+    func activityView() -> ActivityViewable? {
         return view
     }
     
