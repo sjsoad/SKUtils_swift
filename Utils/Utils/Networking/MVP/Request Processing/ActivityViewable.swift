@@ -1,5 +1,5 @@
 //
-//  RequestErrorHandlerProtocol.swift
+//  ActivityViewable.swift
 //  GeoTouch
 //
 //  Created by Sergey on 14.03.17.
