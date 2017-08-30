@@ -40,10 +40,18 @@ class APIClient: NSObject {
     
     // MARK: - Public Methods
     
+    @discardableResult
     func executeRequest<T: APIRequesting>(request: T,
-                        success: ((_ response: T.Response) -> Void)? = nil,
-                        failure: ErrorHandler? = nil) -> Request? {
+                                          success: ((_ response: T.Response) -> Void)? = nil,
+                                          failure: ErrorHandler? = nil) -> Request? {
         return execute(request: request, success: success, failure: failure)
+    }
+    
+    @discardableResult
+    func executeMultipartRequest<T: APIMultipartRequesting>(request: T,
+                                                            success: ((_ response: T.Response) -> Void)? = nil,
+                                                            failure: ErrorHandler? = nil) -> Request? {
+        return upload(request: request, success: success, failure: failure)
     }
     
     func pauseAllRequests(pause: Bool) {
@@ -66,9 +74,11 @@ class APIClient: NSObject {
         return NSError(domain: host, code: 404, userInfo: [NSLocalizedDescriptionKey: reahcabilityErrorMessage])
     }
     
+    // MARK: - APIRequesting -
+    
     private func execute<T: APIRequesting>(request: T,
-                         success: ((_ response: T.Response) -> Void)? = nil,
-                         failure: ErrorHandler? = nil) -> Request? {
+                                           success: ((_ response: T.Response) -> Void)? = nil,
+                                           failure: ErrorHandler? = nil) -> Request? {
         return sessionManager.request(request.path,
                                       method: request.HTTPMethod,
                                       parameters: request.parameters,
@@ -76,11 +86,11 @@ class APIClient: NSObject {
                                       headers: request.headers)
             .responseJSON(completionHandler: { (response) in
                 switch response.result {
-                case .success:
-                    if let successClosure = success,
-                        let json = response.result.value {
-                        // add error parser if needed
-                        let response: T.Response = T.Response(JSON: json as AnyObject)
+                case .success(let value):
+                    if let error = ErrorParser.checkForError(JSON: value as AnyObject), let errorClosure = failure {
+                        errorClosure(error)
+                    } else if let successClosure = success {
+                        let response: T.Response = T.Response(JSON: value as AnyObject)
                         successClosure(response)
                     }
                 case .failure(let error):
@@ -91,4 +101,75 @@ class APIClient: NSObject {
             })
     }
     
+    // MARK: - APIMultipartRequesting -
+    
+    private func upload<T: APIMultipartRequesting>(request: T,
+                                                   success: ((_ response: T.Response) -> Void)? = nil,
+                                                   failure: ErrorHandler? = nil) -> Request? {
+        
+        guard var urlRequest = try? URLRequest(url: request.path, method: request.HTTPMethod, headers: request.headers) else { return nil }
+        let boundary = "Boundary-\(UUID().uuidString)"
+        urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = createBody(parameters: request.parameters,
+                                         boundary: boundary,
+                                         data: request.multipartData,
+                                         name: request.multipartKey,
+                                         mimeType: request.mimeType,
+                                         filename: request.fileName)
+        return sessionManager.request(urlRequest).responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                if let error = ErrorParser.checkForError(JSON: value as AnyObject), let errorClosure = failure {
+                    errorClosure(error)
+                } else if let successClosure = success {
+                    let response: T.Response = T.Response(JSON: value as AnyObject)
+                    successClosure(response)
+                }
+            case .failure(let error):
+                if let errorClosure = failure {
+                    errorClosure(error)
+                }
+            }
+        }
+    }
+    
+    private func createBody(parameters: [String: Any]?,
+                            boundary: String,
+                            data: Data,
+                            name: String,
+                            mimeType: String,
+                            filename: String) -> Data {
+        let body = NSMutableData()
+        
+        let boundaryPrefix = "--\(boundary)\r\n"
+        
+        if let parameters = parameters {
+            for (key, value) in parameters {
+                body.appendString(boundaryPrefix)
+                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.appendString("\(value)\r\n")
+            }
+        }
+        
+        body.appendString(boundaryPrefix)
+        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
+        body.appendString("Content-Type: \(mimeType)\r\n\r\n")
+        body.append(data)
+        body.appendString("\r\n")
+        body.appendString("--".appending(boundary.appending("--")))
+        
+        return body as Data
+    }
+    
+}
+
+// MARK: - NSMutableData -
+
+private extension NSMutableData {
+    
+    func appendString(_ string: String) {
+        if let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+            append(data)
+        }
+    }
 }

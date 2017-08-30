@@ -28,18 +28,21 @@ extension ___FILEBASENAME___Requesting {
         let headers = <#[String: String]#>
         let parameters = <#[String: Any]#>
         let request = ___FILEBASENAME___Request(withURL: urlString,
+                                                multipartData: data,
+                                                multipartKey: <#"photo"#>,
+                                                mimeType: <#"image/jpeg"#>,
+                                                fileName: <#"photo.jpg"#>,
                                                 parameters: parameters,
                                                 headers: headers)
         let apiClient = APIClient()
-        apiClient.executeRequest(request: request,
-                                 success: { response in
-                                    executingHandler?(false)
-                                    successHandler(response)
+        apiClient.executeMultipartRequest(request: request,
+                                          success: { response in
+                                            executingHandler?(false)
+                                            successHandler(response)
         },
-                                 failure: { error in
-                                    executingHandler?(false)
-                                    errorHandler?(error)
-        })
-    }
+                                          failure: { error in
+                                            executingHandler?(false)
+                                            errorHandler?(error)
+        })    }
     
 }

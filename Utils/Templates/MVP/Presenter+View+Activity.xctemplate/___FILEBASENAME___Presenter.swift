@@ -13,11 +13,11 @@ protocol ___FILEBASENAMEASIDENTIFIER___Interface: class, ActivityViewable {
     
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output: RequestExecuting {
+protocol ___FILEBASENAMEASIDENTIFIER___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject, ___FILEBASENAMEASIDENTIFIER___Output {
+class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject, RequestExecuting {
     
     private weak var view: ___FILEBASENAMEASIDENTIFIER___Interface?
     
@@ -39,5 +39,12 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject, ___FILEBASENAMEASIDENTI
     func activityView() -> ActivityViewable? {
         return view
     }
+    
+}
+
+// MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
+
+extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Output {
+    
     
 }
