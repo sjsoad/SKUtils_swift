@@ -26,7 +26,7 @@ extension ___FILEBASENAME___Requesting {
         executingHandler?(true)
         let urlString = <#String#>
         let headers = <#[String: String]#>
-        let parameters = <#[String: Any]#>
+        let parameters = <#[String: String]#>
         let request = ___FILEBASENAME___Request(withURL: urlString,
                                                 multipartData: data,
                                                 multipartKey: <#"photo"#>,

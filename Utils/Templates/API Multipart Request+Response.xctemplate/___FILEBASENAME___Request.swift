@@ -17,7 +17,7 @@ class ___FILEBASENAMEASIDENTIFIER___Request: APIMultipartRequesting {
     var HTTPMethod: Method {
         return .<#post#>
     }
-    private(set) var parameters: [String : Any]?
+    private(set) var parameters: [String : String]?
     private(set) var headers: [String: String]?
     private(set) var path: String
     private(set) var multipartData: Data
@@ -30,7 +30,7 @@ class ___FILEBASENAMEASIDENTIFIER___Request: APIMultipartRequesting {
                   multipartKey: String,
                   mimeType: String,
                   fileName: String,
-                  parameters: [String: Any]? = nil,
+                  parameters: [String: String]? = nil,
                   headers: [String: String]? = nil) {
         self.multipartData = multipartData
         self.multipartKey = multipartKey

@@ -18,7 +18,7 @@ protocol APIMultipartRequesting {
     var multipartKey: String { get }
     var mimeType: String { get }
     var fileName: String { get }
-    var parameters: [String: Any]? { get }
+    var parameters: [String: String]? { get }
     var headers: [String: String]? { get }
     var path: String { get }
 
@@ -27,7 +27,7 @@ protocol APIMultipartRequesting {
          multipartKey: String,
          mimeType: String,
          fileName: String,
-         parameters: [String: Any]?,
+         parameters: [String: String]?,
          headers: [String: String]?)
     
 }

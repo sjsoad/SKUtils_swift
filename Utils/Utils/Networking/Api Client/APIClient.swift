@@ -133,7 +133,7 @@ class APIClient: NSObject {
         }
     }
     
-    private func createBody(parameters: [String: Any]?,
+    private func createBody(parameters: [String: String]?,
                             boundary: String,
                             data: Data,
                             name: String,
