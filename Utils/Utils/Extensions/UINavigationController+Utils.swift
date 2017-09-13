@@ -15,11 +15,18 @@ extension UINavigationController {
         let controllers = viewControllers.filter({ (viewController) -> Bool in
             return viewController is ControllerClass
         })
-        if let vc = controllers.first {
+        if let vc = controllers.last {
             popToViewController(vc, animated: true)
             return true
         }
         return false
+    }
+    
+    func stackContains<ControllerClass: UIViewController>(viewControllerOfType class: ControllerClass.Type) -> Bool {
+        let controllers = viewControllers.filter({ (viewController) -> Bool in
+            return viewController is ControllerClass
+        })
+        return controllers.last != nil
     }
     
 }
