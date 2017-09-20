@@ -110,12 +110,12 @@ class APIClient: NSObject {
         guard var urlRequest = try? URLRequest(url: request.path, method: request.HTTPMethod, headers: request.headers) else { return nil }
         let boundary = "Boundary-\(UUID().uuidString)"
         urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = createBody(parameters: request.parameters,
-                                         boundary: boundary,
-                                         data: request.multipartData,
-                                         name: request.multipartKey,
-                                         mimeType: request.mimeType,
-                                         filename: request.fileName)
+        urlRequest.httpBody = createЬMultipartBody(parameters: request.parameters,
+                                                    boundary: boundary,
+                                                    data: request.multipartData,
+                                                    name: request.multipartKey,
+                                                    mimeType: request.mimeType,
+                                                    filename: request.fileName)
         return sessionManager.request(urlRequest).responseJSON { (response) in
             switch response.result {
             case .success(let value):
@@ -133,12 +133,12 @@ class APIClient: NSObject {
         }
     }
     
-    private func createBody(parameters: [String: String]?,
-                            boundary: String,
-                            data: Data,
-                            name: String,
-                            mimeType: String,
-                            filename: String) -> Data {
+    private func createЬMultipartBody(parameters: [String: String]?,
+                                       boundary: String,
+                                       data: Data,
+                                       name: String,
+                                       mimeType: String,
+                                       filename: String) -> Data {
         let body = NSMutableData()
         
         let boundaryPrefix = "--\(boundary)\r\n"
