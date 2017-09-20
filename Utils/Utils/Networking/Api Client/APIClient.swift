@@ -68,12 +68,6 @@ class APIClient: NSObject {
         }
     }
     
-    // MARK: - Private -
-    
-    private func networkConnectionError(host: String) -> Error {
-        return NSError(domain: host, code: 404, userInfo: [NSLocalizedDescriptionKey: reahcabilityErrorMessage])
-    }
-    
     // MARK: - APIRequesting -
     
     private func execute<T: APIRequesting>(request: T,
@@ -110,12 +104,12 @@ class APIClient: NSObject {
         guard var urlRequest = try? URLRequest(url: request.path, method: request.HTTPMethod, headers: request.headers) else { return nil }
         let boundary = "Boundary-\(UUID().uuidString)"
         urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = createЬMultipartBody(parameters: request.parameters,
-                                                    boundary: boundary,
-                                                    data: request.multipartData,
-                                                    name: request.multipartKey,
-                                                    mimeType: request.mimeType,
-                                                    filename: request.fileName)
+        urlRequest.httpBody = createMultipartBody(parameters: request.parameters,
+                                                  boundary: boundary,
+                                                  data: request.multipartData,
+                                                  name: request.multipartKey,
+                                                  mimeType: request.mimeType,
+                                                  filename: request.fileName)
         return sessionManager.request(urlRequest).responseJSON { (response) in
             switch response.result {
             case .success(let value):
@@ -133,12 +127,12 @@ class APIClient: NSObject {
         }
     }
     
-    private func createЬMultipartBody(parameters: [String: String]?,
-                                       boundary: String,
-                                       data: Data,
-                                       name: String,
-                                       mimeType: String,
-                                       filename: String) -> Data {
+    private func createMultipartBody(parameters: [String: String]?,
+                                     boundary: String,
+                                     data: Data,
+                                     name: String,
+                                     mimeType: String,
+                                     filename: String) -> Data {
         let body = NSMutableData()
         
         let boundaryPrefix = "--\(boundary)\r\n"
