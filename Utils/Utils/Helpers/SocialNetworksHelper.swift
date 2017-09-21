@@ -20,37 +20,41 @@ class SocialNetworksHelper: NSObject {
     static func open(facebookProfile name: String?) {
         guard var name = name else { return }
         name = name.components(separatedBy: " ").joined()
-        let urlString = String(format: facebookProfileAppLink, name)
-        if !open(urlString) {
-            let urlString = String(format: facebookProfileWebLink, name)
-            _ = open(urlString)
-        }
+        let appLink = String(format: facebookProfileAppLink, name)
+        let webLink = String(format: facebookProfileWebLink, name)
+        open(appLink: appLink, alternative: webLink)
     }
     
     static func open(twitterProfile name: String?) {
         guard let name = name else { return }
-        let urlString = String(format: twitterProfileAppLink, name)
-        if !open(urlString) {
-            let urlString = String(format: twitterProfileWebLink, name)
-            _ = open(urlString)
-        }
+        let appLink = String(format: twitterProfileAppLink, name)
+        let webLink = String(format: twitterProfileWebLink, name)
+        open(appLink: appLink, alternative: webLink)
     }
     
     static func open(instagramProfile name: String?) {
         guard let name = name else { return }
-        let urlString = String(format: instagramProfileAppLink, name)
-        if !open(urlString) {
-            let urlString = String(format: instagramProfileWebLink, name)
-            _ = open(urlString)
+        let appLink = String(format: instagramProfileAppLink, name)
+        let webLink = String(format: instagramProfileWebLink, name)
+        open(appLink: appLink, alternative: webLink)
+    }
+    
+    // MARK: - Private -
+    
+    private static func open(appLink: String?, alternative webLink: String?) {
+        if let appLink = appLink, let appUrl = URL(string: appLink), canOpen(appUrl) {
+            open(appUrl)
+        } else  if let webLink = webLink, let webUrl = URL(string: webLink), canOpen(webUrl) {
+            open(webUrl)
         }
     }
     
-    private static func open(_ urlString: String?) -> Bool {
-        guard let urlString = urlString,
-            let URL = URL(string: urlString),
-            UIApplication.shared.canOpenURL(URL) else { return false}
-        UIApplication.shared.open(URL, options: [:], completionHandler: nil)
-        return true
+    private static func canOpen(_ url: URL) -> Bool {
+        return UIApplication.shared.canOpenURL(url)
+    }
+    
+    private static func open(_ url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
 }
