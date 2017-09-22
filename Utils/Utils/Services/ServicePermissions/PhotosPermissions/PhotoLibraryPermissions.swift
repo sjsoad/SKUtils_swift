@@ -20,6 +20,7 @@ class PhotoLibraryPermissions: NSObject, ServicePermissions {
 
 // MARL: - PermissionStateble -
 extension PhotoLibraryPermissions: PermissionsStateble {
+    
     func permissionsState() -> PermissionsState {
         switch PHPhotoLibrary.authorizationStatus() {
         case .authorized:

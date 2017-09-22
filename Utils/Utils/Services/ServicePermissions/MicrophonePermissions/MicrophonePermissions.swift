@@ -21,8 +21,8 @@ class MicrophonePermissions: NSObject, ServicePermissions {
 
 // MARK: - PermissionsStateble -
 extension MicrophonePermissions: PermissionsStateble {
+    
     func permissionsState() -> PermissionsState {
-        
         switch AVAudioSession.sharedInstance().recordPermission() {
         case AVAudioSessionRecordPermission.granted:
             return .permissionsGranted

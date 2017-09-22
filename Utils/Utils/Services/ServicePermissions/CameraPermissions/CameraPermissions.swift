@@ -38,6 +38,7 @@ extension CameraPermissions: PermissionsStateble {
 
 // MARK: - PermissionsRequesting -
 extension CameraPermissions: PermissionsRequesting {
+    
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] _ in
             guard let strongSelf = self else { return }

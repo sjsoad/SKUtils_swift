@@ -21,8 +21,8 @@ class BluetoothPermissions: NSObject, ServicePermissions  {
 
 // MARK: - PermissionsStateble -
 extension BluetoothPermissions: PermissionsStateble {
+    
     func permissionsState() -> PermissionsState {
-        
         switch CBPeripheralManager.authorizationStatus() {
         case .authorized:
             return .permissionsGranted
