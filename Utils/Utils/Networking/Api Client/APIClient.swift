@@ -100,16 +100,10 @@ class APIClient: NSObject {
     private func upload<T: APIMultipartRequesting>(request: T,
                                                    success: ((_ response: T.Response) -> Void)? = nil,
                                                    failure: ErrorHandler? = nil) -> Request? {
-        
         guard var urlRequest = try? URLRequest(url: request.path, method: request.HTTPMethod, headers: request.headers) else { return nil }
         let boundary = "Boundary-\(UUID().uuidString)"
         urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = createMultipartBody(parameters: request.parameters,
-                                                  boundary: boundary,
-                                                  data: request.multipartData,
-                                                  name: request.multipartKey,
-                                                  mimeType: request.mimeType,
-                                                  filename: request.fileName)
+        urlRequest.httpBody = request.createBody(withBoundary: boundary)
         return sessionManager.request(urlRequest).responseJSON { (response) in
             switch response.result {
             case .success(let value):
@@ -127,43 +121,4 @@ class APIClient: NSObject {
         }
     }
     
-    private func createMultipartBody(parameters: [String: String]?,
-                                     boundary: String,
-                                     data: Data,
-                                     name: String,
-                                     mimeType: String,
-                                     filename: String) -> Data {
-        let body = NSMutableData()
-        
-        let boundaryPrefix = "--\(boundary)\r\n"
-        
-        if let parameters = parameters {
-            for (key, value) in parameters {
-                body.appendString(boundaryPrefix)
-                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-                body.appendString("\(value)\r\n")
-            }
-        }
-        
-        body.appendString(boundaryPrefix)
-        body.appendString("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n")
-        body.appendString("Content-Type: \(mimeType)\r\n\r\n")
-        body.append(data)
-        body.appendString("\r\n")
-        body.appendString("--".appending(boundary.appending("--")))
-        
-        return body as Data
-    }
-    
-}
-
-// MARK: - NSMutableData -
-
-private extension NSMutableData {
-    
-    func appendString(_ string: String) {
-        if let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false) {
-            append(data)
-        }
-    }
 }
