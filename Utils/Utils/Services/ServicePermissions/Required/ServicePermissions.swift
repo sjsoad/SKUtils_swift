@@ -19,7 +19,7 @@ struct AlertTitles {
 protocol ServicePermissions {
     
     var alertTitles: AlertTitles { get }
-    func permissionsState() -> PermissionsState
+    init(settingAlertTitles: AlertTitles)
     func showSettingsAlert()
     func openSettings()
 }

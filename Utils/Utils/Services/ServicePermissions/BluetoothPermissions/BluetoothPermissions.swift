@@ -13,10 +13,14 @@ class BluetoothPermissions: NSObject, ServicePermissions  {
 
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
     
+}
+
+// MARK: - PermissionsStateble -
+extension BluetoothPermissions: PermissionsStateble {
     func permissionsState() -> PermissionsState {
         
         switch CBPeripheralManager.authorizationStatus() {

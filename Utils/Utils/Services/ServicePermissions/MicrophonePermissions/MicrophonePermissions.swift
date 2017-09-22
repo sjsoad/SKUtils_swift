@@ -9,16 +9,20 @@
 import UIKit
 import AVFoundation
 
-class MicrophonePermissions: NSObject, ServicePermissions, RequestPermissions {
+class MicrophonePermissions: NSObject, ServicePermissions {
 
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
     
+}
+
+// MARK: - PermissionsStateble -
+extension MicrophonePermissions: PermissionsStateble {
     func permissionsState() -> PermissionsState {
-    
+        
         switch AVAudioSession.sharedInstance().recordPermission() {
         case AVAudioSessionRecordPermission.granted:
             return .permissionsGranted
@@ -29,6 +33,10 @@ class MicrophonePermissions: NSObject, ServicePermissions, RequestPermissions {
             return .permissionsNotAsked
         }
     }
+}
+
+// MARK: - PermissionsRequesting -
+extension MicrophonePermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         AVAudioSession.sharedInstance().requestRecordPermission { [weak self] _ in

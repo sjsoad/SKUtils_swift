@@ -10,13 +10,17 @@ import UIKit
 import Contacts
 import AddressBook
 
-class ContactsPermissions: NSObject, ServicePermissions, RequestPermissions {
+class ContactsPermissions: NSObject, ServicePermissions {
 
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
+}
+
+// MARK: - PermissionsStateble -
+extension ContactsPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
         
@@ -41,7 +45,11 @@ class ContactsPermissions: NSObject, ServicePermissions, RequestPermissions {
             return .permissionsDenied
         }
     }
+}
 
+// MARK: - PermissionsRequesting -
+extension ContactsPermissions: PermissionsRequesting {
+    
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         if #available(iOS 9.0, *) {
             CNContactStore().requestAccess(for: .contacts) { [weak self] _,_ in

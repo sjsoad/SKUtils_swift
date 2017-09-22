@@ -67,7 +67,6 @@
 		A5ABFCAC1F22356400548D89 /* TextInputsManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBE61F22356400548D89 /* TextInputsManagerController.swift */; };
 		A5ABFCAD1F22356400548D89 /* TextInputsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBE91F22356400548D89 /* TextInputsManager.swift */; };
 		A5ABFCAE1F22356400548D89 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBEC1F22356400548D89 /* APIClient.swift */; };
-		A5ABFCAF1F22356400548D89 /* ActivityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBEF1F22356400548D89 /* ActivityProtocol.swift */; };
 		A5ABFCB01F22356400548D89 /* RequestErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBF01F22356400548D89 /* RequestErrorHandling.swift */; };
 		A5ABFCB11F22356400548D89 /* RequestExecuting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBF11F22356400548D89 /* RequestExecuting.swift */; };
 		A5ABFCB21F22356400548D89 /* RequestErrorHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBF41F22356400548D89 /* RequestErrorHandlerProtocol.swift */; };
@@ -105,8 +104,8 @@
 		A5ABFCD31F22356400548D89 /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC331F22356400548D89 /* LocationPermissions.swift */; };
 		A5ABFCD41F22356400548D89 /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC351F22356400548D89 /* MicrophonePermissions.swift */; };
 		A5ABFCD51F22356400548D89 /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC371F22356400548D89 /* PhotoLibraryPermissions.swift */; };
-		A5ABFCD61F22356400548D89 /* PermissionsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC391F22356400548D89 /* PermissionsState.swift */; };
-		A5ABFCD71F22356400548D89 /* RequestPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC3A1F22356400548D89 /* RequestPermissions.swift */; };
+		A5ABFCD61F22356400548D89 /* PermissionsStateble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC391F22356400548D89 /* PermissionsStateble.swift */; };
+		A5ABFCD71F22356400548D89 /* PermissionsRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC3A1F22356400548D89 /* PermissionsRequesting.swift */; };
 		A5ABFCD81F22356400548D89 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC3B1F22356400548D89 /* ServicePermissions.swift */; };
 		A5ABFCD91F22356400548D89 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC3D1F22356400548D89 /* BaseTextField.swift */; };
 		A5ABFCDA1F22356400548D89 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC3E1F22356400548D89 /* DatePickerField.swift */; };
@@ -119,6 +118,7 @@
 		A5ABFCE11F22356400548D89 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC471F22356400548D89 /* EmailValidator.swift */; };
 		A5ABFCE21F22356400548D89 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC481F22356400548D89 /* EqualStringsValidator.swift */; };
 		A5ABFCE31F22356400548D89 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFC491F22356400548D89 /* PasswordValidator.swift */; };
+		A5AFD2AB1F754A3E00A0FCCC /* ActivityViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AFD2AA1F754A3E00A0FCCC /* ActivityViewable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,7 +186,6 @@
 		A5ABFBE61F22356400548D89 /* TextInputsManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManagerController.swift; sourceTree = "<group>"; };
 		A5ABFBE91F22356400548D89 /* TextInputsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManager.swift; sourceTree = "<group>"; };
 		A5ABFBEC1F22356400548D89 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		A5ABFBEF1F22356400548D89 /* ActivityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProtocol.swift; sourceTree = "<group>"; };
 		A5ABFBF01F22356400548D89 /* RequestErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandling.swift; sourceTree = "<group>"; };
 		A5ABFBF11F22356400548D89 /* RequestExecuting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecuting.swift; sourceTree = "<group>"; };
 		A5ABFBF41F22356400548D89 /* RequestErrorHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandlerProtocol.swift; sourceTree = "<group>"; };
@@ -224,8 +223,8 @@
 		A5ABFC331F22356400548D89 /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
 		A5ABFC351F22356400548D89 /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
 		A5ABFC371F22356400548D89 /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
-		A5ABFC391F22356400548D89 /* PermissionsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsState.swift; sourceTree = "<group>"; };
-		A5ABFC3A1F22356400548D89 /* RequestPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPermissions.swift; sourceTree = "<group>"; };
+		A5ABFC391F22356400548D89 /* PermissionsStateble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsStateble.swift; sourceTree = "<group>"; };
+		A5ABFC3A1F22356400548D89 /* PermissionsRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsRequesting.swift; sourceTree = "<group>"; };
 		A5ABFC3B1F22356400548D89 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
 		A5ABFC3D1F22356400548D89 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		A5ABFC3E1F22356400548D89 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
@@ -238,6 +237,7 @@
 		A5ABFC471F22356400548D89 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A5ABFC481F22356400548D89 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A5ABFC491F22356400548D89 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		A5AFD2AA1F754A3E00A0FCCC /* ActivityViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -631,7 +631,7 @@
 		A5ABFBEE1F22356400548D89 /* Request Processing */ = {
 			isa = PBXGroup;
 			children = (
-				A5ABFBEF1F22356400548D89 /* ActivityProtocol.swift */,
+				A5AFD2AA1F754A3E00A0FCCC /* ActivityViewable.swift */,
 				A5ABFBF01F22356400548D89 /* RequestErrorHandling.swift */,
 				A5ABFBF11F22356400548D89 /* RequestExecuting.swift */,
 			);
@@ -935,8 +935,8 @@
 		A5ABFC381F22356400548D89 /* Required */ = {
 			isa = PBXGroup;
 			children = (
-				A5ABFC391F22356400548D89 /* PermissionsState.swift */,
-				A5ABFC3A1F22356400548D89 /* RequestPermissions.swift */,
+				A5ABFC391F22356400548D89 /* PermissionsStateble.swift */,
+				A5ABFC3A1F22356400548D89 /* PermissionsRequesting.swift */,
 				A5ABFC3B1F22356400548D89 /* ServicePermissions.swift */,
 			);
 			path = Required;
@@ -1113,7 +1113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5ABFC8D1F22356400548D89 /* ReusableCell.swift in Sources */,
-				A5ABFCD61F22356400548D89 /* PermissionsState.swift in Sources */,
+				A5ABFCD61F22356400548D89 /* PermissionsStateble.swift in Sources */,
 				A5ABFC9B1F22356400548D89 /* AlertController+PresentationProtocol.swift in Sources */,
 				A5ABFCD81F22356400548D89 /* ServicePermissions.swift in Sources */,
 				A5ABFCC41F22356400548D89 /* FRCTableViewModelProtocol.swift in Sources */,
@@ -1122,7 +1122,7 @@
 				A5ABFCB41F22356400548D89 /* APIRequesting.swift in Sources */,
 				A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */,
 				A5ABFCA81F22356400548D89 /* TableViewHelper.swift in Sources */,
-				A5ABFCD71F22356400548D89 /* RequestPermissions.swift in Sources */,
+				A5ABFCD71F22356400548D89 /* PermissionsRequesting.swift in Sources */,
 				A5ABFCBE1F22356400548D89 /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A5ABFCD11F22356400548D89 /* CameraPermissions.swift in Sources */,
 				A5ABFCD01F22356400548D89 /* BluetoothPermissions.swift in Sources */,
@@ -1136,7 +1136,6 @@
 				A5ABFCD31F22356400548D89 /* LocationPermissions.swift in Sources */,
 				A5ABFCE21F22356400548D89 /* EqualStringsValidator.swift in Sources */,
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
-				A5ABFCAF1F22356400548D89 /* ActivityProtocol.swift in Sources */,
 				A5ABFCAC1F22356400548D89 /* TextInputsManagerController.swift in Sources */,
 				A5ABFCB31F22356400548D89 /* RequestExecutingViewProtocol.swift in Sources */,
 				A5ABFC821F22356400548D89 /* AppDelegate+ChangePassword.swift in Sources */,
@@ -1184,6 +1183,7 @@
 				A5ABFC911F22356400548D89 /* Decorator.swift in Sources */,
 				A5ABFCDC1F22356400548D89 /* PassTextField.swift in Sources */,
 				A5ABFC931F22356400548D89 /* SideImageDecorator.swift in Sources */,
+				A5AFD2AB1F754A3E00A0FCCC /* ActivityViewable.swift in Sources */,
 				A5ABFC9A1F22356400548D89 /* String+NSRange.swift in Sources */,
 				A5ABFCC71F22356400548D89 /* Presentable.swift in Sources */,
 				A54BA26C1F274D1C0025A4C0 /* IpRequest.swift in Sources */,

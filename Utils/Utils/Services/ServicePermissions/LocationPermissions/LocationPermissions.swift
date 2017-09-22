@@ -13,9 +13,13 @@ class LocationPermissions: NSObject, ServicePermissions {
  
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
+}
+
+// MARK: - PermissionsStateble -
+extension LocationPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
         switch CLLocationManager.authorizationStatus() {
@@ -27,5 +31,5 @@ class LocationPermissions: NSObject, ServicePermissions {
             showSettingsAlert()
             return .permissionsDenied
         }
-    }    
+    }
 }

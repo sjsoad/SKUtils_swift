@@ -1,5 +1,5 @@
 //
-//  PermissionsRequest.swift
+//  PermissionsRequesting.swift
 //  SKUtilsSwift
 //
 //  Created by Sergey Kostyan on 01.10.16.
@@ -10,7 +10,7 @@ import UIKit
 
 typealias PermissionsStateHandler = (PermissionsState) -> Void
 
-protocol RequestPermissions {
+protocol PermissionsRequesting {
     
     func requestPermissions(handler: @escaping PermissionsStateHandler)
 }

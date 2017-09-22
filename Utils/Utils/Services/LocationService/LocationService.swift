@@ -48,18 +48,17 @@ class LocationService: CLLocationManager {
     
     // MARK: - Public methods
     
-    func permissionsState() -> PermissionsState {
-        return locationPermissions.permissionsState()
-    }
-    
-    func checkPermissions() {
-        switch locationPermissions.permissionsState() {
+    @discardableResult
+    func checkPermissions() -> PermissionsState {
+        let permissionsState = locationPermissions.permissionsState()
+        switch permissionsState {
         case .permissionsNotAsked:
             askPermissions()
             break
         default:
             break
         }
+        return permissionsState
     }
     
     // MARK: - Private -

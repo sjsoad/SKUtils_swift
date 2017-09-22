@@ -9,16 +9,18 @@
 import UIKit
 import Photos
 
-class PhotoLibraryPermissions: NSObject, ServicePermissions, RequestPermissions {
+class PhotoLibraryPermissions: NSObject, ServicePermissions {
     
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
-    
+}
+
+// MARL: - PermissionStateble -
+extension PhotoLibraryPermissions: PermissionsStateble {
     func permissionsState() -> PermissionsState {
-        
         switch PHPhotoLibrary.authorizationStatus() {
         case .authorized:
             return .permissionsGranted
@@ -29,6 +31,10 @@ class PhotoLibraryPermissions: NSObject, ServicePermissions, RequestPermissions 
             return .permissionsDenied
         }
     }
+}
+    
+// MARK: - PermissionsRequesting -
+extension PhotoLibraryPermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         PHPhotoLibrary.requestAuthorization { [weak self] _ in

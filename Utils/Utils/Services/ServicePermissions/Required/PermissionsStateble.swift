@@ -1,5 +1,5 @@
 //
-//  PermissionsState.swift
+//  PermissionsStateble.swift
 //  SKUtilsSwift
 //
 //  Created by Sergey Kostyan on 01.10.16.
@@ -12,4 +12,10 @@ public enum PermissionsState: NSInteger {
     case permissionsNotAsked
     case permissionsGranted
     case permissionsDenied
+}
+
+protocol PermissionsStateble {
+    
+    func permissionsState() -> PermissionsState
+    
 }

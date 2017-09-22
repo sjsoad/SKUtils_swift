@@ -9,16 +9,20 @@
 import UIKit
 import AVFoundation
 
-class CameraPermissions: NSObject, ServicePermissions, RequestPermissions {
+class CameraPermissions: NSObject, ServicePermissions {
 
     private(set) var alertTitles: AlertTitles
     
-    init(settingAlertTitles: AlertTitles) {
+    required init(settingAlertTitles: AlertTitles) {
         self.alertTitles = settingAlertTitles
     }
     
+}
+
+// MARK: - PermissionsStateble -
+extension CameraPermissions: PermissionsStateble {
+    
     func permissionsState() -> PermissionsState {
-        
         switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
         case .authorized:
             return .permissionsGranted
@@ -30,6 +34,10 @@ class CameraPermissions: NSObject, ServicePermissions, RequestPermissions {
         }
     }
     
+}
+
+// MARK: - PermissionsRequesting -
+extension CameraPermissions: PermissionsRequesting {
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] _ in
             guard let strongSelf = self else { return }
