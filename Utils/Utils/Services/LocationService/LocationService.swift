@@ -6,13 +6,14 @@
 //  Copyright © 2016 Sergey Kostyan. All rights reserved.
 //
 
-//TODO: READM ME
+// TODO: READ ME
 
 /* -------------------------------------------------------------------------------------------------------------------------
+ iOS 10:
  Add description to NSLocationAlwaysUsageDescription or NSLocationWhenInUseUsageDescription in order to use location Service
  Add this property to your class and init it with valid arguments, add delegate and enjoy.
 
-var locationSerice: LocationService = {
+var locationService: LocationService = {
     let alertTitles = AlertTitles(title: "Location Service",
                                   message: "Location service is disabled! Please turn on it in Settings",
                                   actionButtonTitle: "Go to Settings",
@@ -47,8 +48,12 @@ class LocationService: CLLocationManager {
     
     // MARK: - Public methods
     
+    func permissionsState() -> PermissionsState {
+        return locationPermissions.permissionsState()
+    }
+    
     func checkPermissions() {
-        switch self.locationPermissions.permissionsState() {
+        switch locationPermissions.permissionsState() {
         case .permissionsNotAsked:
             askPermissions()
             break
@@ -56,6 +61,8 @@ class LocationService: CLLocationManager {
             break
         }
     }
+    
+    // MARK: - Private -
     
     fileprivate func askPermissions() {
         if responds(to: NSSelectorFromString(locationUsage.rawValue)) {
