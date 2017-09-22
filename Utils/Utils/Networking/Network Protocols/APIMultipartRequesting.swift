@@ -29,13 +29,25 @@ protocol APIMultipartRequesting {
          fileName: String,
          parameters: [String: String]?,
          headers: [String: String]?)
-    
-    func createBody(withBoundary boundary: String) -> Data
+
+    func create() -> URLRequest?
     
 }
 extension APIMultipartRequesting {
 
     var HTTPMethod: Method { return .post }
+    
+    func create() -> URLRequest? {
+        guard var urlRequest = try? URLRequest(url: path, method: HTTPMethod, headers: headers) else { return nil }
+        let boundary = "Boundary-\(UUID().uuidString)"
+        urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = createBody(withBoundary: boundary)
+        return urlRequest
+    }
+    
+}
+
+private extension APIMultipartRequesting {
     
     func createBody(withBoundary boundary: String) -> Data {
         let body = NSMutableData()
