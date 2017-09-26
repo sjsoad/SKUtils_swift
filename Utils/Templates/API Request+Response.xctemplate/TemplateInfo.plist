@@ -20,5 +20,22 @@
 	</array>
 	<key>Summary</key>
 	<string>Generates API Request and Response</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>fileName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Name:</string>
+			<key>Description</key>
+			<string>Class name</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>Name</string>
+		</dict>
+	</array>
 </dict>
 </plist>

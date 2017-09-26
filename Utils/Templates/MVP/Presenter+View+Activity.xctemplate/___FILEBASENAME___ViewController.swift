@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___Interface {
+class ___FILEBASENAMEASIDENTIFIER___: UIViewController, ___VARIABLE_fileName:identifier___Interface {
 
-    var presenter: ___FILEBASENAMEASIDENTIFIER___Output?
+    var presenter: ___VARIABLE_fileName:identifier___Output?
 
     // MARK: - Lifecycle -
     
@@ -22,5 +22,5 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
         super.viewDidLoad()
     }
     
-    // MARK: - ___FILEBASENAMEASIDENTIFIER___Interface -
+    // MARK: - ___VARIABLE_fileName:identifier___Interface -
 }

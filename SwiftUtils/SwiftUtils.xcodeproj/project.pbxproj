@@ -23,6 +23,7 @@
 		A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */; };
 		A57B012F1F2A113C001646D8 /* ScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57B012D1F2A113C001646D8 /* ScrollingViewController.swift */; };
 		A57B01301F2A113C001646D8 /* ScrollingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57B012E1F2A113C001646D8 /* ScrollingViewController.xib */; };
+		A58602431F7A52F9008CE7E8 /* APIMultipartRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58602421F7A52F9008CE7E8 /* APIMultipartRequesting.swift */; };
 		A5ABFC821F22356400548D89 /* AppDelegate+ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA31F22356400548D89 /* AppDelegate+ChangePassword.swift */; };
 		A5ABFC831F22356400548D89 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA61F22356400548D89 /* XibLoadableView.swift */; };
 		A5ABFC841F22356400548D89 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFBA81F22356400548D89 /* ArrayDataSource.swift */; };
@@ -142,6 +143,7 @@
 		A570572E1EF117C40092CDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A57B012D1F2A113C001646D8 /* ScrollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingViewController.swift; sourceTree = "<group>"; };
 		A57B012E1F2A113C001646D8 /* ScrollingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollingViewController.xib; sourceTree = "<group>"; };
+		A58602421F7A52F9008CE7E8 /* APIMultipartRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMultipartRequesting.swift; sourceTree = "<group>"; };
 		A5ABFBA31F22356400548D89 /* AppDelegate+ChangePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ChangePassword.swift"; sourceTree = "<group>"; };
 		A5ABFBA61F22356400548D89 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
 		A5ABFBA81F22356400548D89 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 		A5ABFBF61F22356400548D89 /* Network Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A58602421F7A52F9008CE7E8 /* APIMultipartRequesting.swift */,
 				A5ABFBF71F22356400548D89 /* APIRequesting.swift */,
 				A5ABFBF81F22356400548D89 /* APIResponsing.swift */,
 			);
@@ -1137,6 +1140,7 @@
 				A5ABFCE21F22356400548D89 /* EqualStringsValidator.swift in Sources */,
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
 				A5ABFCAC1F22356400548D89 /* TextInputsManagerController.swift in Sources */,
+				A58602431F7A52F9008CE7E8 /* APIMultipartRequesting.swift in Sources */,
 				A5ABFCB31F22356400548D89 /* RequestExecutingViewProtocol.swift in Sources */,
 				A5ABFC821F22356400548D89 /* AppDelegate+ChangePassword.swift in Sources */,
 				A5ABFCC81F22356400548D89 /* TextInputsManaging.swift in Sources */,

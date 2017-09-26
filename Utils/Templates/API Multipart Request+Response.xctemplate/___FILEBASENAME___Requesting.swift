@@ -8,26 +8,26 @@
 
 import Foundation
 
-typealias ___FILEBASENAME___SuccessHandler = (_ response: ___FILEBASENAME___Request.Response) -> Void
-typealias ___FILEBASENAME___ResponseValue = () // Example: Bool
+typealias ___VARIABLE_fileName:identifier___SuccessHandler = (_ response: ___VARIABLE_fileName:identifier___Request.Response) -> Void
+typealias ___VARIABLE_fileName:identifier___ResponseValue = () // Example: Bool
 
-protocol ___FILEBASENAME___Requesting: RequestErrorHandling /* or RequestExecuting */ {
+protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling /* or RequestExecuting */ {
     
-    func exampleFunc(successHandler: @escaping ___FILEBASENAME___SuccessHandler,
+    func exampleFunc(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler?,
                      errorHandler: ErrorHandler?)
 }
 
-extension ___FILEBASENAME___Requesting {
+extension ___FILEBASENAMEASIDENTIFIER___ {
     
-    func exampleFunc(successHandler: @escaping ___FILEBASENAME___SuccessHandler,
+    func exampleFunc(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler? = nil,
                      errorHandler: ErrorHandler? = nil) {
         executingHandler?(true)
         let urlString = <#String#>
         let headers = <#[String: String]#>
         let parameters = <#[String: String]#>
-        let request = ___FILEBASENAME___Request(withURL: urlString,
+        let request = ___VARIABLE_fileName:identifier___Request(withURL: urlString,
                                                 multipartData: data,
                                                 multipartKey: <#"photo"#>,
                                                 mimeType: <#"image/jpeg"#>,

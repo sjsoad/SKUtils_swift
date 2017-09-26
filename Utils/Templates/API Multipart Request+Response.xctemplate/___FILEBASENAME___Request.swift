@@ -10,9 +10,9 @@
 import UIKit
 import Foundation
 
-class ___FILEBASENAMEASIDENTIFIER___Request: APIMultipartRequesting {
+class ___FILEBASENAMEASIDENTIFIER___: APIMultipartRequesting {
     
-    typealias Response = ___FILEBASENAMEASIDENTIFIER___Response
+    typealias Response = ___VARIABLE_fileName:identifier___Response
     
     var HTTPMethod: Method {
         return .<#post#>

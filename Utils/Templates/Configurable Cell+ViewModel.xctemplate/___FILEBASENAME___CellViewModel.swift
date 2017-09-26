@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ___FILEBASENAMEASIDENTIFIER___ViewModel: DataSourceViewModel {
+class ___FILEBASENAMEASIDENTIFIER___: DataSourceViewModel {
     
     private(set) var reuseIdentifier: String
     private let model: <#ModelType#>

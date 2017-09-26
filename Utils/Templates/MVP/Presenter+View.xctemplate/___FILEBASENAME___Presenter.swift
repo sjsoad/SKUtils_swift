@@ -9,27 +9,27 @@
 import Foundation
 import UIKit
 
-protocol ___FILEBASENAMEASIDENTIFIER___Interface: class {
+protocol ___VARIABLE_fileName:identifier___Interface: class {
     
 }
 
-protocol ___FILEBASENAMEASIDENTIFIER___Output {
+protocol ___VARIABLE_fileName:identifier___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject {
+class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
-    private weak var view: ___FILEBASENAMEASIDENTIFIER___Interface?
+    private weak var view: ___VARIABLE_fileName:identifier___Interface?
     
-    init(with view: ___FILEBASENAMEASIDENTIFIER___Interface) {
+    init(with view: ___VARIABLE_fileName:identifier___Interface) {
         self.view = view
     }
     
     // MARK: - -
     
     static func showView(in <#window,navigation,etc#>: <#type#>) {
-        let vc = ___FILEBASENAMEASIDENTIFIER___ViewController()
-        let presenter = ___FILEBASENAMEASIDENTIFIER___Presenter(with: vc)
+        let vc = ___VARIABLE_fileName:identifier___ViewController()
+        let presenter = ___VARIABLE_fileName:identifier___Presenter(with: vc)
         vc.presenter = presenter
         //navigation
     }
@@ -38,7 +38,7 @@ class ___FILEBASENAMEASIDENTIFIER___Presenter: NSObject {
 
 // MARK: - ___FILEBASENAMEASIDENTIFIER___Output -
 
-extension ___FILEBASENAMEASIDENTIFIER___Presenter: ___FILEBASENAMEASIDENTIFIER___Output {
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Output {
 
 
 }
