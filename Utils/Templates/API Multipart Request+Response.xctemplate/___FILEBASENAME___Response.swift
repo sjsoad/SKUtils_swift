@@ -11,7 +11,7 @@ import Foundation
 
 class ___FILEBASENAMEASIDENTIFIER___: APIResponsing {
     
-    var result: ___VARIABLE_fileName:identifier___ResponseValue?
+    var result: ___VARIABLE_fileName:identifier___ResponseType?
     
     required init(JSON: AnyObject) {
         

@@ -9,7 +9,7 @@
 import Foundation
 
 typealias ___VARIABLE_fileName:identifier___SuccessHandler = (_ response: ___VARIABLE_fileName:identifier___Request.Response) -> Void
-typealias ___VARIABLE_fileName:identifier___ResponseValue = () // Example: Bool
+typealias ___VARIABLE_fileName:identifier___ResponseType = () // Example: Bool
 
 protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling /* or RequestExecuting */ {
     
