@@ -8,23 +8,23 @@
 
 import UIKit
 
-private extension UIView {
-    
-    func subviewsOf<T>(type: T.Type) -> [T] {
-        var searchedSubviews = [T]()
-        for subview in subviews {
-            if let view = subview as? T {
-                searchedSubviews.append(view)
-            } else {
-                searchedSubviews += subview.subviewsOf(type: T.self)
-            }
-        }
-        return searchedSubviews
-    }
-    
+protocol KeyboardHiding: class {
+    func hideKeyboard()
 }
 
-class TextInputsManager: NSObject, TextInputsManaging {
+protocol TextInputsClearing: class {
+    func clearTextInputs()
+}
+
+protocol TextFieldsManagerReloading: class {
+    func reloadTextFieldsManager()
+}
+
+protocol FirstResponding: class {
+    func firstResponder() -> UIView?
+}
+
+class TextInputsManager: NSObject, KeyboardHiding, TextInputsClearing, TextFieldsManagerReloading, FirstResponding {
     
     @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration: Double = 0.25
@@ -125,7 +125,7 @@ class TextInputsManager: NSObject, TextInputsManaging {
         }
     }
     
-    // MARK: - TextInputsManagerInterface -
+    // MARK: - TextInputsManager Interface -
     
     func hideKeyboard() {
         textInputs.forEach { textInput in
@@ -173,6 +173,22 @@ extension TextInputsManager: UIGestureRecognizerDelegate {
             }
         }
         return true
+    }
+    
+}
+
+private extension UIView {
+    
+    func subviewsOf<T>(type: T.Type) -> [T] {
+        var searchedSubviews = [T]()
+        for subview in subviews {
+            if let view = subview as? T {
+                searchedSubviews.append(view)
+            } else {
+                searchedSubviews += subview.subviewsOf(type: T.self)
+            }
+        }
+        return searchedSubviews
     }
     
 }
