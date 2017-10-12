@@ -8,22 +8,6 @@
 
 import UIKit
 
-protocol KeyboardHiding: class {
-    func hideKeyboard()
-}
-
-protocol TextInputsClearing: class {
-    func clearTextInputs()
-}
-
-protocol TextFieldsManagerReloading: class {
-    func reloadTextFieldsManager()
-}
-
-protocol FirstResponding: class {
-    func firstResponder() -> UIView?
-}
-
 class TextInputsManager: NSObject, KeyboardHiding, TextInputsClearing, TextFieldsManagerReloading, FirstResponding {
     
     @IBInspectable var hideOnTap: Bool = true

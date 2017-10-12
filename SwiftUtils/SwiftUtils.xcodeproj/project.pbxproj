@@ -115,6 +115,10 @@
 		A543502C1F8FA6E100E2E398 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5434FC51F8FA6E100E2E398 /* EmailValidator.swift */; };
 		A543502D1F8FA6E100E2E398 /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5434FC61F8FA6E100E2E398 /* EqualStringsValidator.swift */; };
 		A543502E1F8FA6E100E2E398 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5434FC71F8FA6E100E2E398 /* PasswordValidator.swift */; };
+		A54350321F8FADC600E2E398 /* KeyboardHiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54350311F8FADC600E2E398 /* KeyboardHiding.swift */; };
+		A54350341F8FADD000E2E398 /* TextInputsClearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54350331F8FADD000E2E398 /* TextInputsClearing.swift */; };
+		A54350361F8FADD800E2E398 /* TextFieldsManagerReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54350351F8FADD800E2E398 /* TextFieldsManagerReloading.swift */; };
+		A54350381F8FADE100E2E398 /* FirstResponding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54350371F8FADE100E2E398 /* FirstResponding.swift */; };
 		A54BA26C1F274D1C0025A4C0 /* IpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA2691F274D1C0025A4C0 /* IpRequest.swift */; };
 		A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA26A1F274D1C0025A4C0 /* IpRequesting.swift */; };
 		A54BA26E1F274D1C0025A4C0 /* IpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54BA26B1F274D1C0025A4C0 /* IpResponse.swift */; };
@@ -238,6 +242,10 @@
 		A5434FC51F8FA6E100E2E398 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A5434FC61F8FA6E100E2E398 /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A5434FC71F8FA6E100E2E398 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		A54350311F8FADC600E2E398 /* KeyboardHiding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHiding.swift; sourceTree = "<group>"; };
+		A54350331F8FADD000E2E398 /* TextInputsClearing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputsClearing.swift; sourceTree = "<group>"; };
+		A54350351F8FADD800E2E398 /* TextFieldsManagerReloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldsManagerReloading.swift; sourceTree = "<group>"; };
+		A54350371F8FADE100E2E398 /* FirstResponding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstResponding.swift; sourceTree = "<group>"; };
 		A54BA2691F274D1C0025A4C0 /* IpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequest.swift; sourceTree = "<group>"; };
 		A54BA26A1F274D1C0025A4C0 /* IpRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequesting.swift; sourceTree = "<group>"; };
 		A54BA26B1F274D1C0025A4C0 /* IpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpResponse.swift; sourceTree = "<group>"; };
@@ -664,6 +672,7 @@
 		A5434F751F8FA6E000E2E398 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A54350301F8FADBA00E2E398 /* Text Inputs */,
 				A5434F761F8FA6E000E2E398 /* Alert */,
 				A5434F781F8FA6E000E2E398 /* MVP */,
 				A5434F7D1F8FA6E000E2E398 /* MVVM */,
@@ -990,6 +999,17 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		A54350301F8FADBA00E2E398 /* Text Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				A54350311F8FADC600E2E398 /* KeyboardHiding.swift */,
+				A54350331F8FADD000E2E398 /* TextInputsClearing.swift */,
+				A54350351F8FADD800E2E398 /* TextFieldsManagerReloading.swift */,
+				A54350371F8FADE100E2E398 /* FirstResponding.swift */,
+			);
+			path = "Text Inputs";
+			sourceTree = "<group>";
+		};
 		A54BA2681F274D100025A4C0 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1206,6 +1226,7 @@
 				A54350071F8FA6E100E2E398 /* ArrayCollectionViewProtocol.swift in Sources */,
 				A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */,
 				A5434FCF1F8FA6E100E2E398 /* AbstractDataSource.swift in Sources */,
+				A54350321F8FADC600E2E398 /* KeyboardHiding.swift in Sources */,
 				A5434FE01F8FA6E100E2E398 /* String+NSRange.swift in Sources */,
 				A54350091F8FA6E100E2E398 /* FRCCollectionViewProtocol.swift in Sources */,
 				A5434FD31F8FA6E100E2E398 /* SectionModel.swift in Sources */,
@@ -1228,6 +1249,7 @@
 				A54350011F8FA6E100E2E398 /* AlertViewable.swift in Sources */,
 				A5434FD91F8FA6E100E2E398 /* DropdownPresenter.swift in Sources */,
 				A543500A1F8FA6E100E2E398 /* ArrayTableViewModelProtocol.swift in Sources */,
+				A54350361F8FADD800E2E398 /* TextFieldsManagerReloading.swift in Sources */,
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
 				A5434FF91F8FA6E100E2E398 /* RequestErrorHandlerProtocol.swift in Sources */,
 				A54350041F8FA6E100E2E398 /* DismissNavigationProtocol.swift in Sources */,
@@ -1249,6 +1271,7 @@
 				A54BA26E1F274D1C0025A4C0 /* IpResponse.swift in Sources */,
 				A5434FF21F8FA6E100E2E398 /* TextInputsManagerController.swift in Sources */,
 				A5434FCC1F8FA6E100E2E398 /* CollectionViewFRCDataSource.swift in Sources */,
+				A54350381F8FADE100E2E398 /* FirstResponding.swift in Sources */,
 				A543500D1F8FA6E100E2E398 /* FRCTableViewProtocol.swift in Sources */,
 				A54350261F8FA6E100E2E398 /* EmailTextField.swift in Sources */,
 				A54350161F8FA6E100E2E398 /* KeychainService.swift in Sources */,
@@ -1271,6 +1294,7 @@
 				A5434FFC1F8FA6E100E2E398 /* APIRequesting.swift in Sources */,
 				A543502A1F8FA6E100E2E398 /* TextFieldAccessoryView.swift in Sources */,
 				A57B012F1F2A113C001646D8 /* ScrollingViewController.swift in Sources */,
+				A54350341F8FADD000E2E398 /* TextInputsClearing.swift in Sources */,
 				A5434FE31F8FA6E100E2E398 /* ColorExtension.swift in Sources */,
 				A54350291F8FA6E100E2E398 /* PickerViewField.swift in Sources */,
 				A5434FCB1F8FA6E100E2E398 /* ConfigurableView.swift in Sources */,
