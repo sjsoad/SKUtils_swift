@@ -10,8 +10,7 @@ import Foundation
 
 class QueryStringParser: NSObject {
 
-    static func parameter(fromURL url: String?,
-                          name: String) -> String? {
+    static func parameter(named name: String, fromURL url: String?) -> String? {
         if let url = url,
             let urlComponents = URLComponents(string: url),
             let queryItems = (urlComponents.queryItems),

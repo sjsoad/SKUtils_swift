@@ -92,8 +92,13 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         guard let handler = handler else { return }
         let rowObject = configuration.components[component].items[row]
         let selectedIndex = IndexPath(row: row, section: component)
-        if selectedIndexes.indices.contains(component) {
-            selectedIndexes[component] = selectedIndex
+        // TODO - Check
+        if let indexPath = selectedIndexes.filter({ (indexPath) -> Bool in
+            return indexPath.section = component
+        }).first, let index = selectedIndexes.index(of: indexPath) {
+            selectedIndexes[index] = selectedIndex
+        } else {
+            selectedIndexes.append(selectedIndex)
         }
         handler(rowObject, component, row)
     }
