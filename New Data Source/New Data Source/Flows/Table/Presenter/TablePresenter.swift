@@ -79,7 +79,7 @@ class TablePresenter: NSObject {
             let section = newSection(with: s)
             sections.append(section)
         }
-        dataSource = TableViewArrayDataSource(with: sections, featuresProvider: self)
+        dataSource = TableViewArrayDataSource(with: sections, editingProvider: self, movingProvider: self)
         view?.reload(with: dataSource)
     }
     

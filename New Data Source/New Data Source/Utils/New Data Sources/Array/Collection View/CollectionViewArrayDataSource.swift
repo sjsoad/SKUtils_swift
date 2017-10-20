@@ -11,11 +11,11 @@ import UIKit
 class CollectionViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
     
     private(set) var sections: [SectionModel] = []
-    private(set) var featuresProvider: AnyObject?
+    private(set) var movingProvider: CollectionViewRowMoving?
     
-    init(with sections: [SectionModel], featuresProvider: AnyObject? = nil) {
+    init(with sections: [SectionModel], movingProvider: CollectionViewRowMoving? = nil) {
         self.sections = sections
-        self.featuresProvider = featuresProvider
+        self.movingProvider = movingProvider
     }
     
     // MARK: - DataSourceAppendable -
@@ -113,13 +113,11 @@ extension CollectionViewArrayDataSource: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        guard let movingProvider = featuresProvider as? CollectionViewRowMoving else { return false }
-        return movingProvider.canMoveRow?(indexPath) ?? false
+        return movingProvider?.canMoveRow?(indexPath) ?? false
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        guard let movingProvider = featuresProvider as? CollectionViewRowMoving else { return }
-        movingProvider.movingHandler?(sourceIndexPath, destinationIndexPath)
+        movingProvider?.movingHandler?(sourceIndexPath, destinationIndexPath)
     }
     
 }

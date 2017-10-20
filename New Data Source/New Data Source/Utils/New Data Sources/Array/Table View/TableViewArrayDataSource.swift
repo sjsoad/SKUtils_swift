@@ -11,11 +11,13 @@ import UIKit
 class TableViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
 
     private(set) var sections: [SectionModel] = []
-    private(set) var featuresProvider: AnyObject?
+    private var editingProvider: TableViewRowEditing?
+    private var movingProvider: TableViewRowMoving?
     
-    init(with sections: [SectionModel], featuresProvider: AnyObject? = nil) {
+    init(with sections: [SectionModel], editingProvider: TableViewRowEditing? = nil, movingProvider: TableViewRowMoving? = nil) {
         self.sections = sections
-        self.featuresProvider = featuresProvider
+        self.editingProvider = editingProvider
+        self.movingProvider = movingProvider
     }
     
     // MARK: - DataSourceAppendable -
@@ -100,23 +102,20 @@ extension TableViewArrayDataSource: UITableViewDataSource {
     // Moving/reordering
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        guard let movingProvider = featuresProvider as? TableViewRowMoving else { return false }
-        return movingProvider.canMoveRow?(indexPath) ?? false
+        return movingProvider?.canMoveRow?(indexPath) ?? false
     }
     
     // Data manipulation - insert and delete support
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        guard let editingProvider = featuresProvider as? TableViewRowEditing else { return }
-        editingProvider.edititngHandler?(editingStyle, indexPath)
+        editingProvider?.edititngHandler?(editingStyle, indexPath)
     }
     
     
     // Data manipulation - reorder / moving support
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        guard let movingProvider = featuresProvider as? TableViewRowMoving else { return }
-        movingProvider.movingHandler?(sourceIndexPath, destinationIndexPath)
+        movingProvider?.movingHandler?(sourceIndexPath, destinationIndexPath)
     }
     
 }
