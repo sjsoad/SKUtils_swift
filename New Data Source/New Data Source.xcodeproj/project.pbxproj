@@ -35,6 +35,7 @@
 		A5734BAB1F98973E00833A95 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5734BA61F98973E00833A95 /* TableViewController.xib */; };
 		A5734BAD1F9899B400833A95 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5734BAC1F9899B400833A95 /* UserCell.xib */; };
 		A583A6B01F99E2CC0078923A /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A583A6AF1F99E2CC0078923A /* ReadMe.rtf */; };
+		A583A6B31F9A19800078923A /* TableViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A583A6B21F9A19800078923A /* TableViewAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		A5734BA61F98973E00833A95 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		A5734BAC1F9899B400833A95 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		A583A6AF1F99E2CC0078923A /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		A583A6B21F9A19800078923A /* TableViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 		A559FA981F962F8B00FE6B17 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A583A6B11F9A19720078923A /* Helpers */,
 				A559FA991F962F8B00FE6B17 /* New Data Sources */,
 				A559FA9C1F962F8B00FE6B17 /* Protocols */,
 			);
@@ -301,6 +304,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A583A6B11F9A19720078923A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A583A6B21F9A19800078923A /* TableViewAnimator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A583A6B31F9A19800078923A /* TableViewAnimator.swift in Sources */,
 				A5734BAA1F98973E00833A95 /* TableViewController.swift in Sources */,
 				A520B06E1F9791E200973664 /* RowMoving.swift in Sources */,
 				A520B0781F9792D500973664 /* ConfigurableCell.swift in Sources */,

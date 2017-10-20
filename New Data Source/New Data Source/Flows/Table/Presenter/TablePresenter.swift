@@ -104,6 +104,9 @@ class TablePresenter: NSObject {
     private func appendAction() {
         let section = newSection(with: dataSource.sections.count)
         dataSource.append(newSection: section) { [weak self] (indexes) in
+            
+            // Actualy can be replaced with insert
+            
             self?.view?.appendSections(at: indexes)
         }
     }

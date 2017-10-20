@@ -73,6 +73,9 @@ protocol DataSourceReordering {
     func replace(itemAt indexPath: IndexPath, with item: DataSourceModel)
     func reorderItems(at sourceIndexPath: IndexPath, and destinationIndexPath: IndexPath)
     
+    func replace(sectionAt index: Int, with section: SectionModel)
+    func reorderSections(at sourceIndex: Int, and destinationIndex: Int)
+    
 }
 
 extension ArrayDataSourceRepresentable where Self: NSObject {

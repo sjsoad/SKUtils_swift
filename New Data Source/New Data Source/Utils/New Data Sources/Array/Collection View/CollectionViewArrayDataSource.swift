@@ -59,6 +59,18 @@ class CollectionViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
         handler?([index])
     }
     
+    // MARK: - DataSourceReordering -
+    
+    func replace(sectionAt index: Int, with section: SectionModel) {
+        guard sections.indices.contains(index) else { return }
+        self.sections[index] = section
+    }
+    
+    func reorderSections(at sourceIndex: Int, and destinationIndex: Int) {
+        guard sections.indices.contains(sourceIndex), sections.indices.contains(destinationIndex) else { return }
+        self.sections.swapAt(sourceIndex, destinationIndex)
+    }
+    
     // MARK: - Private
     
     private func model(for indexPath: IndexPath, kind: String) -> DataSourceModel? {

@@ -59,33 +59,23 @@ class TableViewController: UIViewController, TableInterface {
     }
     
     func deleteRow(at indexPath: IndexPath) {
-        tableView.beginUpdates()
-        tableView.deleteRows(at: [indexPath], with: .right)
-        tableView.endUpdates()
+        TableViewAnimator.deleteRows(in: tableView, at: [indexPath], animation: .right)
     }
     
     func insertRows(at indexPathes: [IndexPath]) {
-        tableView.beginUpdates()
-        tableView.insertRows(at: indexPathes, with: .left)
-        tableView.endUpdates()
+        TableViewAnimator.insertRows(in: tableView, at: indexPathes, animation: .left)
     }
     
     func appendSections(at indexes: [Int]) {
-        tableView.beginUpdates()
-        tableView.insertSections(IndexSet(indexes), with: .left)
-        tableView.endUpdates()
+        TableViewAnimator.insertSections(in: tableView, at: indexes, animation: .left)
     }
     
     func deleteSections(at indexes: [Int]) {
-        tableView.beginUpdates()
-        tableView.deleteSections(IndexSet(indexes), with: .right)
-        tableView.endUpdates()
+        TableViewAnimator.deleteSections(in: tableView, at: indexes, animation: .right)
     }
     
     func insertSections(at indexes: [Int]) {
-        tableView.beginUpdates()
-        tableView.insertSections(IndexSet(indexes), with: .left)
-        tableView.endUpdates()
+        TableViewAnimator.insertSections(in: tableView, at: indexes, animation: .left)
     }
     
     func debug() {

@@ -19,10 +19,8 @@ This is a set of files which can help you with usage of UITableViewDataSource an
 \b0 \
 \
 2.1 Insert, delete, add, reorder rows in sections\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 2.2 Insert, delete, add sections in data source\
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
-\cf0 \
+2.2 Insert, delete, add, reorder sections in data source\
+\
 
 \b 3. How to use? (Example: TableViewArrayDataSource)
 \b0 \
@@ -46,7 +44,7 @@ First of all you need to copy files to your project and then follow simple steps
 \f1\fs22 \cf4         \cf2 var\cf4  sections = [\cf5 SectionModel\cf4 ]()
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4         \cf2 for\cf4  s \cf2 in\cf4  \cf6 \cb3 0\cf4 \cb3 ...\cf6 \cb3 2\cf4 \cb3  \{
+\f1\fs22 \cf4         \cf2 for\cf4  s \cf2 in\cf4  \cf6 0\cf4 ...\cf6 2\cf4  \{
 \f0\fs24 \cf0 \
 
 \f1\fs22 \cf4             \cf2 let\cf4  section = \cf5 newSection\cf4 (with: s)
@@ -76,7 +74,7 @@ First of all you need to copy files to your project and then follow simple steps
 \f1\fs22 \cf4         \cf2 var\cf4  items = [\cf5 UserDataSourceModel\cf4 ]()
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4         \cf2 for\cf4  i \cf2 in\cf4  \cf6 \cb3 0\cf4 \cb3 ...\cf6 \cb3 3\cf4 \cb3  \{
+\f1\fs22 \cf4         \cf2 for\cf4  i \cf2 in\cf4  \cf6 0\cf4 ...\cf6 3\cf4  \{
 \f0\fs24 \cf0 \
 
 \f1\fs22 \cf4             \cf2 let\cf4  indexPath = \cf7 IndexPath\cf4 (row: i, section: index)
@@ -103,7 +101,7 @@ First of all you need to copy files to your project and then follow simple steps
 \f1\fs22 \cf4     \cf2 private\cf4  \cf2 func\cf4  newDataSourceModel(for indexPath: \cf7 IndexPath\cf4 ) -> \cf5 UserDataSourceModel\cf4  \{
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4         \cf2 let\cf4  model = \cf5 UserDataSourceModel\cf4 (model: \cf5 User\cf4 (firstName: \cf8 \cb3 "index \cf4 \cb3 \\\cf8 \cb3 (\cf4 \cb3 indexPath.\cf7 row\cf8 \cb3 )"\cf4 \cb3 , lastName: \cf8 \cb3 "section \cf4 \cb3 \\\cf8 \cb3 (\cf4 \cb3 indexPath.\cf7 section\cf8 \cb3 )"\cf4 \cb3 ),
+\f1\fs22 \cf4         \cf2 let\cf4  model = \cf5 UserDataSourceModel\cf4 (model: \cf5 User\cf4 (firstName: \cf8 "index \cf4 \\\cf8 (\cf4 indexPath.\cf7 row\cf8 )"\cf4 , lastName: \cf8 "section \cf4 \\\cf8 (\cf4 indexPath.\cf7 section\cf8 )"\cf4 ),
 \f0\fs24 \cf0 \
 
 \f1\fs22 \cf4                                           reuseIdentifier: \cf5 UserCell\cf4 .\cf5 reuseIdentifier\cf4 )
@@ -319,8 +317,9 @@ DataSourceModel is protocol that describes how to display cell. ReuseIdentifier 
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 \cf0 \
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\i0\b 4. Options\
+\i0\b \cf0 4. Options\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
@@ -330,8 +329,8 @@ DataSourceModel is protocol that describes how to display cell. ReuseIdentifier 
 \cf0 \
 \pard\tx543\pardeftab543\pardirnatural\partightenfactor0
 
-\f1\b0\fs22 \cf4 \cb3     \cf9 \cb3 // Optional for reordering
-\f0\fs24 \cf0 \cb3 \
+\f1\b0\fs22 \cf4 \cb3     \cf9 // Optional for reordering
+\f0\fs24 \cf0 \
 
 \f1\fs22 \cf4     
 \f0\fs24 \cf0 \
@@ -351,8 +350,8 @@ DataSourceModel is protocol that describes how to display cell. ReuseIdentifier 
 \f1\fs22 \cf4         \cf2 if\cf4  sourceIndexPath.\cf7 section\cf4  != proposedDestinationIndexPath.\cf7 section\cf4  \{
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4             \cf2 let\cf4  rowInSourceSection = sourceIndexPath.\cf7 section\cf4  > proposedDestinationIndexPath.\cf7 section\cf4  ? \cf6 \cb3 0\cf4 \cb3  : sectionsCount - \cf6 \cb3 1
-\f0\fs24 \cf0 \cb3 \
+\f1\fs22 \cf4             \cf2 let\cf4  rowInSourceSection = sourceIndexPath.\cf7 section\cf4  > proposedDestinationIndexPath.\cf7 section\cf4  ? \cf6 0\cf4  : sectionsCount - \cf6 1
+\f0\fs24 \cf0 \
 
 \f1\fs22 \cf4             \cf2 return\cf4  \cf7 IndexPath\cf4 (row: rowInSourceSection, section: sourceIndexPath.\cf7 section\cf4 )
 \f0\fs24 \cf0 \
@@ -360,14 +359,14 @@ DataSourceModel is protocol that describes how to display cell. ReuseIdentifier 
 \f1\fs22 \cf4         \} \cf2 else\cf4  \cf2 if\cf4  proposedDestinationIndexPath.\cf7 row\cf4  >= sectionsCount \{
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4             \cf2 return\cf4  \cf7 IndexPath\cf4 (row: sectionsCount - \cf6 \cb3 1\cf4 \cb3 , section: sourceIndexPath.\cf7 section\cf4 )
+\f1\fs22 \cf4             \cf2 return\cf4  \cf7 IndexPath\cf4 (row: sectionsCount - \cf6 1\cf4 , section: sourceIndexPath.\cf7 section\cf4 )
 \f0\fs24 \cf0 \
 
 \f1\fs22 \cf4         \}
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4         \cf9 \cb3 // Allow the proposed destination.
-\f0\fs24 \cf0 \cb3 \
+\f1\fs22 \cf4         \cf9 // Allow the proposed destination.
+\f0\fs24 \cf0 \
 
 \f1\fs22 \cf4         \cf2 return\cf4  proposedDestinationIndexPath
 \f0\fs24 \cf0 \
@@ -426,7 +425,7 @@ Support TableViewRowEditing protocol in order to delete or insert cells. Set isE
 \f1\fs22 \cf4             \cf2 case\cf4  .\cf7 none\cf4 :
 \f0\fs24 \cf0 \
 
-\f1\fs22 \cf4                 \cf7 print\cf4 (\cf8 \cb3 "none"\cf4 \cb3 )
+\f1\fs22 \cf4                 \cf7 print\cf4 (\cf8 "none"\cf4 )
 \f0\fs24 \cf0 \
 
 \f1\fs22 \cf4             \}
@@ -439,10 +438,8 @@ Support TableViewRowEditing protocol in order to delete or insert cells. Set isE
 \f0\fs24 \cf0 \cb1 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 UI update for delete\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
-\cf0 \
+UI update for delete\
+\
 \pard\tx543\pardeftab543\pardirnatural\partightenfactor0
 
 \f1\fs22 \cf4 \cb3     \cf2 func\cf4  deleteRow(at indexPath: \cf7 IndexPath\cf4 ) \{
