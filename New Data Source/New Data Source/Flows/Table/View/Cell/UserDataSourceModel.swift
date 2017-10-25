@@ -17,12 +17,12 @@ protocol UserCellViewModelDisplaying {
 }
 
 class UserDataSourceModel: DataSourceModel {
-    
+
     private(set) var reuseIdentifier: String
     private(set) var model: User
     
     init(model: User, reuseIdentifier: String) {
-        self.model = model
+        self.user = model
         self.reuseIdentifier = reuseIdentifier
     }
     

@@ -17,11 +17,3 @@ protocol DataSourceModelIdentifying {
     var reuseIdentifier: String { get }
 
 }
-
-protocol ModelRepresentable {
-
-}
-
-protocol ViewModelRepresentable {
-    
-}
