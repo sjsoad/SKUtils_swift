@@ -136,13 +136,13 @@ class DropdownPresenter: NSObject, DropdownModule {
     // MARK: - Private -
     
     fileprivate func createDataSource() {
-        var sectionItems = [DropdownViewModel]()
+        var sectionItems = [DropdownDataSourceModel]()
         for (index, item) in items.enumerated() {
             let indexPath = IndexPath(row: index, section: 0)
-            let viewModel = DropdownViewModel(text: item,
+            let cellModel = DropdownDataSourceModel(text: item,
                                               isSelected: indexes.contains(indexPath),
                                               cellIdentifier: DropdownCell.reuseIdentifier)
-            sectionItems.append(viewModel)
+            sectionItems.append(cellModel)
         }
         let sectionModel = SectionModel(withItems: sectionItems)
         dataSource = TableViewArrayDataSource(sections: [sectionModel])

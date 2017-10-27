@@ -1,5 +1,5 @@
 //
-//  DropdownViewModel.swift
+//  DropdownDataSourceModel.swift
 //  Nioxin
 //
 //  Created by Sergey on 19.06.17.
@@ -17,7 +17,7 @@ protocol DropdownCellConfigurator {
     
 }
 
-class DropdownViewModel: DropdownCellConfigurator, DataSourceViewModel {
+class DropdownDataSourceModel: DropdownCellConfigurator, DataSourceModel {
 
     private(set) var reuseIdentifier: String
     private(set) var text: String?
