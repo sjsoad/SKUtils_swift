@@ -124,6 +124,8 @@
 		A5105C451FA360B8000D0CBB /* EqualStringsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B811FA360B8000D0CBB /* EqualStringsValidator.swift */; };
 		A5105C461FA360B8000D0CBB /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B821FA360B8000D0CBB /* PasswordValidator.swift */; };
 		A5105C491FA361F2000D0CBB /* DropdownDataSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105C481FA361F2000D0CBB /* DropdownDataSourceModel.swift */; };
+		A5105C4B1FA36510000D0CBB /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A5105C4A1FA36510000D0CBB /* ReadMe.rtf */; };
+		A5105C4D1FA366F5000D0CBB /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A5105C4C1FA366F5000D0CBB /* ReadMe.rtf */; };
 		A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */; };
 		A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A521F71C1EF6EB3200DB4D1E /* PopupView.xib */; };
 		A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */; };
@@ -261,6 +263,8 @@
 		A5105B811FA360B8000D0CBB /* EqualStringsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EqualStringsValidator.swift; sourceTree = "<group>"; };
 		A5105B821FA360B8000D0CBB /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A5105C481FA361F2000D0CBB /* DropdownDataSourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownDataSourceModel.swift; sourceTree = "<group>"; };
+		A5105C4A1FA36510000D0CBB /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
+		A5105C4C1FA366F5000D0CBB /* ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
 		A521F70F1EF6CC7A00DB4D1E /* TestPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPopup.xib; sourceTree = "<group>"; };
 		A521F71C1EF6EB3200DB4D1E /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		A54310E21F0C116C00EB3041 /* TestPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupPresenter.swift; sourceTree = "<group>"; };
@@ -650,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				A5105B111FA360B7000D0CBB /* PickerManager.swift */,
+				A5105C4C1FA366F5000D0CBB /* ReadMe.rtf */,
 			);
 			path = "Picker DataSource";
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				A5105B131FA360B7000D0CBB /* Default */,
+				A5105C4A1FA36510000D0CBB /* ReadMe.rtf */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -1253,11 +1259,13 @@
 				A54310E51F0C11E400EB3041 /* TestView.xib in Resources */,
 				A521F7101EF6CC7A00DB4D1E /* TestPopup.xib in Resources */,
 				A5105BDB1FA360B8000D0CBB /* DropdownView.xib in Resources */,
+				A5105C4B1FA36510000D0CBB /* ReadMe.rtf in Resources */,
 				A5105C031FA360B8000D0CBB /* ReadMe.rtf in Resources */,
 				A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */,
 				A521F71D1EF6EB3200DB4D1E /* PopupView.xib in Resources */,
 				A57B01301F2A113C001646D8 /* ScrollingViewController.xib in Resources */,
 				A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */,
+				A5105C4D1FA366F5000D0CBB /* ReadMe.rtf in Resources */,
 				A57057281EF117C40092CDAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
