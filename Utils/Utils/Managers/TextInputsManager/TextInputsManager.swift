@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextInputsManager: NSObject, KeyboardHiding, TextInputsClearing, TextFieldsManagerReloading, FirstResponding {
+class TextInputsManager: NSObject {
     
     @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration: Double = 0.25
@@ -108,15 +108,22 @@ class TextInputsManager: NSObject, KeyboardHiding, TextInputsClearing, TextField
             }
         }
     }
-    
-    // MARK: - TextInputsManager Interface -
-    
+  
+}
+
+// MARK: - KeyboardHiding -
+
+extension TextInputsManager: KeyboardHiding {
     func hideKeyboard() {
         textInputs.forEach { textInput in
             _ = textInput.resignFirstResponder()
         }
     }
-    
+}
+
+// MARK: - TextInputsClearing -
+
+extension TextInputsManager: TextInputsClearing {
     func clearTextInputs() {
         for field in textInputs {
             if let textField = field as? UITextField {
@@ -127,20 +134,29 @@ class TextInputsManager: NSObject, KeyboardHiding, TextInputsClearing, TextField
             }
         }
     }
-    
+}
+
+// MARK: - TextFieldsManagerReloading -
+
+extension TextInputsManager: TextFieldsManagerReloading {
     func reloadTextFieldsManager() {
         textInputs.removeAll()
         gatherTextInputs()
     }
-    
+}
+
+// MARK: - FirstResponding -
+
+extension TextInputsManager: FirstResponding {
     func firstResponder() -> UIView? {
         let textInput = textInputs.first(where: { (textField) -> Bool in
             return textField.isFirstResponder
         })
         return textInput
     }
-    
 }
+
+// MARK: - UIGestureRecognizerDelegate -
 
 extension TextInputsManager: UIGestureRecognizerDelegate {
     
@@ -160,6 +176,8 @@ extension TextInputsManager: UIGestureRecognizerDelegate {
     }
     
 }
+
+// MARK: - UIView -
 
 private extension UIView {
     

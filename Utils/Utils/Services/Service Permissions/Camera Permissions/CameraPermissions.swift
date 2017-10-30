@@ -23,7 +23,7 @@ class CameraPermissions: NSObject, ServicePermissions {
 extension CameraPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
-        switch AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             return .permissionsGranted
         case .notDetermined:
@@ -40,7 +40,7 @@ extension CameraPermissions: PermissionsStateble {
 extension CameraPermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { [weak self] _ in
+        AVCaptureDevice.requestAccess(for: .video) { [weak self] _ in
             guard let strongSelf = self else { return }
             handler(strongSelf.permissionsState())
         }

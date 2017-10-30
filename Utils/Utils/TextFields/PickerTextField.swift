@@ -48,7 +48,7 @@ class PickerTextField: BaseTextField {
     
     // MARK: - Functions -
     
-    internal func doneButtonPressed(_ sender: UIBarButtonItem) {
+    func doneButtonPressed(_ sender: UIBarButtonItem) {
         self.sendActions(for: .editingDidEndOnExit)
         doneButtonHandler?(self, sender)
     }

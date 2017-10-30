@@ -14,7 +14,7 @@ class TimerService {
     
     // MARK: - Public -
     
-    func start(timeInterval: TimeInterval, handler: Event? = nil) {
+    func start(timeInterval: TimeInterval, handler: (() -> Void)? = nil) {
         stop()
         timer = Timer(timeInterval: timeInterval, repeats: true, block: { (_) in
             handler?()

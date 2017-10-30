@@ -25,8 +25,7 @@ protocol PopupOutput {
 class PopupPresenter: NSObject {
     
     private(set) weak var view: PopupViewable?
-    
-    fileprivate var displayingWindow: UIWindow?
+    private(set) weak var displayingWindow: UIWindow?
     
     required init(with view: PopupViewable) {
         self.view = view

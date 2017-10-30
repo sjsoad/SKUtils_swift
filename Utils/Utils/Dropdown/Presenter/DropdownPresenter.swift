@@ -49,15 +49,15 @@ protocol DropdownModule {
 
 class DropdownPresenter: NSObject, DropdownModule {
     
-    fileprivate var view: DropdownReloadable?
-    fileprivate var dataSource = TableViewArrayDataSource(with: [])
-    fileprivate var items = [String]()
-    fileprivate var allOptionIndex: IndexPath?
-    fileprivate var maxSelectedItems: Int?
-    fileprivate var indexes = [IndexPath]()
-    fileprivate var selectionHandler: DropdownSelectionHandler?
-    fileprivate var closingHandler: DropdownClosingHandler?
-    fileprivate var maximumReachedHandler: DropdownMaximumReachedHandler?
+    private var view: DropdownReloadable?
+    private var dataSource = TableViewArrayDataSource(with: [])
+    private var items = [String]()
+    private var allOptionIndex: IndexPath?
+    private var maxSelectedItems: Int?
+    private var indexes = [IndexPath]()
+    private var selectionHandler: DropdownSelectionHandler?
+    private var closingHandler: DropdownClosingHandler?
+    private var maximumReachedHandler: DropdownMaximumReachedHandler?
     
     var selectedIndexPathes: [IndexPath] {
         return indexes

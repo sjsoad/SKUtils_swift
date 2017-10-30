@@ -36,7 +36,7 @@ public class BaseTextField: UITextField {
     private func updateAttributtedPlaceholder() {
         guard let text = self.placeholder, let color = self.placeholderColor else { return }
         self.attributedPlaceholder = NSAttributedString(string: text,
-                                                        attributes:[NSForegroundColorAttributeName: color])
+                                                        attributes:[.foregroundColor: color])
     }
     
 }
