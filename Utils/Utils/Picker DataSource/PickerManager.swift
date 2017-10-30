@@ -94,7 +94,7 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         let selectedIndex = IndexPath(row: row, section: component)
         // TODO - Check
         if let indexPath = selectedIndexes.filter({ (indexPath) -> Bool in
-            return indexPath.section = component
+            return indexPath.section == component
         }).first, let index = selectedIndexes.index(of: indexPath) {
             selectedIndexes[index] = selectedIndex
         } else {

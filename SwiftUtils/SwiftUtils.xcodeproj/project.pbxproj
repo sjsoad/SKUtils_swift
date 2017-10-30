@@ -77,16 +77,6 @@
 		A5105C161FA360B8000D0CBB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B2F1FA360B7000D0CBB /* ReusableView.swift */; };
 		A5105C171FA360B8000D0CBB /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B331FA360B7000D0CBB /* Navigatable.swift */; };
 		A5105C181FA360B8000D0CBB /* Windowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B341FA360B7000D0CBB /* Windowable.swift */; };
-		A5105C191FA360B8000D0CBB /* DismissNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B381FA360B7000D0CBB /* DismissNavigationProtocol.swift */; };
-		A5105C1A1FA360B8000D0CBB /* PopNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B391FA360B7000D0CBB /* PopNavigationProtocol.swift */; };
-		A5105C1B1FA360B8000D0CBB /* ArrayCollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B3C1FA360B7000D0CBB /* ArrayCollectionViewModelProtocol.swift */; };
-		A5105C1C1FA360B8000D0CBB /* ArrayCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B3D1FA360B7000D0CBB /* ArrayCollectionViewProtocol.swift */; };
-		A5105C1D1FA360B8000D0CBB /* FRCCollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B3F1FA360B7000D0CBB /* FRCCollectionViewModelProtocol.swift */; };
-		A5105C1E1FA360B8000D0CBB /* FRCCollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B401FA360B7000D0CBB /* FRCCollectionViewProtocol.swift */; };
-		A5105C1F1FA360B8000D0CBB /* ArrayTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B421FA360B7000D0CBB /* ArrayTableViewModelProtocol.swift */; };
-		A5105C201FA360B8000D0CBB /* ArrayTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B431FA360B7000D0CBB /* ArrayTableViewProtocol.swift */; };
-		A5105C211FA360B8000D0CBB /* FRCTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B451FA360B7000D0CBB /* FRCTableViewModelProtocol.swift */; };
-		A5105C221FA360B8000D0CBB /* FRCTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B461FA360B7000D0CBB /* FRCTableViewProtocol.swift */; };
 		A5105C231FA360B8000D0CBB /* Ponsomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B481FA360B7000D0CBB /* Ponsomizer.swift */; };
 		A5105C241FA360B8000D0CBB /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B4A1FA360B7000D0CBB /* AlertPresentable.swift */; };
 		A5105C251FA360B8000D0CBB /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5105B4B1FA360B7000D0CBB /* Presentable.swift */; };
@@ -216,16 +206,6 @@
 		A5105B2F1FA360B7000D0CBB /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		A5105B331FA360B7000D0CBB /* Navigatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
 		A5105B341FA360B7000D0CBB /* Windowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Windowable.swift; sourceTree = "<group>"; };
-		A5105B381FA360B7000D0CBB /* DismissNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissNavigationProtocol.swift; sourceTree = "<group>"; };
-		A5105B391FA360B7000D0CBB /* PopNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopNavigationProtocol.swift; sourceTree = "<group>"; };
-		A5105B3C1FA360B7000D0CBB /* ArrayCollectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayCollectionViewModelProtocol.swift; sourceTree = "<group>"; };
-		A5105B3D1FA360B7000D0CBB /* ArrayCollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayCollectionViewProtocol.swift; sourceTree = "<group>"; };
-		A5105B3F1FA360B7000D0CBB /* FRCCollectionViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCCollectionViewModelProtocol.swift; sourceTree = "<group>"; };
-		A5105B401FA360B7000D0CBB /* FRCCollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCCollectionViewProtocol.swift; sourceTree = "<group>"; };
-		A5105B421FA360B7000D0CBB /* ArrayTableViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewModelProtocol.swift; sourceTree = "<group>"; };
-		A5105B431FA360B7000D0CBB /* ArrayTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewProtocol.swift; sourceTree = "<group>"; };
-		A5105B451FA360B7000D0CBB /* FRCTableViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCTableViewModelProtocol.swift; sourceTree = "<group>"; };
-		A5105B461FA360B7000D0CBB /* FRCTableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCTableViewProtocol.swift; sourceTree = "<group>"; };
 		A5105B481FA360B7000D0CBB /* Ponsomizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ponsomizer.swift; sourceTree = "<group>"; };
 		A5105B4A1FA360B7000D0CBB /* AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		A5105B4B1FA360B7000D0CBB /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -699,7 +679,6 @@
 				A5105B191FA360B7000D0CBB /* Alert */,
 				A5105B1B1FA360B7000D0CBB /* Data Source */,
 				A5105B301FA360B7000D0CBB /* MVP */,
-				A5105B351FA360B7000D0CBB /* MVVM */,
 				A5105B471FA360B7000D0CBB /* Ponsomiation */,
 				A5105B491FA360B7000D0CBB /* Presentation */,
 				A5105B4C1FA360B7000D0CBB /* Text Inputs */,
@@ -822,79 +801,6 @@
 				A5105B341FA360B7000D0CBB /* Windowable.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A5105B351FA360B7000D0CBB /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B361FA360B7000D0CBB /* Protocols */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		A5105B361FA360B7000D0CBB /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B371FA360B7000D0CBB /* Navigation */,
-				A5105B3A1FA360B7000D0CBB /* View+DataSource */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		A5105B371FA360B7000D0CBB /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B381FA360B7000D0CBB /* DismissNavigationProtocol.swift */,
-				A5105B391FA360B7000D0CBB /* PopNavigationProtocol.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		A5105B3A1FA360B7000D0CBB /* View+DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B3B1FA360B7000D0CBB /* CollectionView+Array */,
-				A5105B3E1FA360B7000D0CBB /* CollectionView+FRC */,
-				A5105B411FA360B7000D0CBB /* TableView+Array */,
-				A5105B441FA360B7000D0CBB /* TableView+FRC */,
-			);
-			path = "View+DataSource";
-			sourceTree = "<group>";
-		};
-		A5105B3B1FA360B7000D0CBB /* CollectionView+Array */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B3C1FA360B7000D0CBB /* ArrayCollectionViewModelProtocol.swift */,
-				A5105B3D1FA360B7000D0CBB /* ArrayCollectionViewProtocol.swift */,
-			);
-			path = "CollectionView+Array";
-			sourceTree = "<group>";
-		};
-		A5105B3E1FA360B7000D0CBB /* CollectionView+FRC */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B3F1FA360B7000D0CBB /* FRCCollectionViewModelProtocol.swift */,
-				A5105B401FA360B7000D0CBB /* FRCCollectionViewProtocol.swift */,
-			);
-			path = "CollectionView+FRC";
-			sourceTree = "<group>";
-		};
-		A5105B411FA360B7000D0CBB /* TableView+Array */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B421FA360B7000D0CBB /* ArrayTableViewModelProtocol.swift */,
-				A5105B431FA360B7000D0CBB /* ArrayTableViewProtocol.swift */,
-			);
-			path = "TableView+Array";
-			sourceTree = "<group>";
-		};
-		A5105B441FA360B7000D0CBB /* TableView+FRC */ = {
-			isa = PBXGroup;
-			children = (
-				A5105B451FA360B7000D0CBB /* FRCTableViewModelProtocol.swift */,
-				A5105B461FA360B7000D0CBB /* FRCTableViewProtocol.swift */,
-			);
-			path = "TableView+FRC";
 			sourceTree = "<group>";
 		};
 		A5105B471FA360B7000D0CBB /* Ponsomiation */ = {
@@ -1279,9 +1185,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AERecord/AERecord.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDrop/SwiftyDrop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AERecord.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDrop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1294,9 +1211,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1309,13 +1229,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUtils-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1325,16 +1248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5105C201FA360B8000D0CBB /* ArrayTableViewProtocol.swift in Sources */,
 				A5105BEE1FA360B8000D0CBB /* MapsHelper.swift in Sources */,
 				A5105C3F1FA360B8000D0CBB /* PassTextField.swift in Sources */,
 				A54BA26D1F274D1C0025A4C0 /* IpRequesting.swift in Sources */,
 				A5105BE11FA360B8000D0CBB /* UINavigationController+Utils.swift in Sources */,
 				A5105C3D1FA360B8000D0CBB /* DatePickerField.swift in Sources */,
 				A5105C351FA360B8000D0CBB /* MicrophonePermissions.swift in Sources */,
-				A5105C221FA360B8000D0CBB /* FRCTableViewProtocol.swift in Sources */,
 				A5105C071FA360B8000D0CBB /* PickerManager.swift in Sources */,
-				A5105C1E1FA360B8000D0CBB /* FRCCollectionViewProtocol.swift in Sources */,
 				A57057251EF117C40092CDAB /* ViewController.swift in Sources */,
 				A5105C371FA360B8000D0CBB /* PermissionsRequesting.swift in Sources */,
 				A5105BFC1FA360B8000D0CBB /* RequestErrorHandlerProtocol.swift in Sources */,
@@ -1359,7 +1279,6 @@
 				A5105BF81FA360B8000D0CBB /* ErrorParser.swift in Sources */,
 				A5105BE81FA360B8000D0CBB /* DesignableView.swift in Sources */,
 				A5105C431FA360B8000D0CBB /* BaseValidator.swift in Sources */,
-				A5105C1F1FA360B8000D0CBB /* ArrayTableViewModelProtocol.swift in Sources */,
 				A5105BEC1FA360B8000D0CBB /* CollectionViewHelper.swift in Sources */,
 				A5105C2E1FA360B8000D0CBB /* KeychainService.swift in Sources */,
 				A5105BF51FA360B8000D0CBB /* Utils.swift in Sources */,
@@ -1382,8 +1301,6 @@
 				A5105BEA1FA360B8000D0CBB /* UIAlertActioFactory.swift in Sources */,
 				A5105C0C1FA360B8000D0CBB /* ConfigurableCell.swift in Sources */,
 				A5105BE21FA360B8000D0CBB /* AlertController+PresentationProtocol.swift in Sources */,
-				A5105C211FA360B8000D0CBB /* FRCTableViewModelProtocol.swift in Sources */,
-				A5105C1C1FA360B8000D0CBB /* ArrayCollectionViewProtocol.swift in Sources */,
 				A5105C391FA360B8000D0CBB /* ServicePermissions.swift in Sources */,
 				A5105BF41FA360B8000D0CBB /* TableViewHelper.swift in Sources */,
 				A5105BDE1FA360B8000D0CBB /* Dictionary+JSON.swift in Sources */,
@@ -1393,7 +1310,6 @@
 				A5105BD81FA360B8000D0CBB /* DropdownCell.swift in Sources */,
 				A5105C081FA360B8000D0CBB /* PopupPresenter.swift in Sources */,
 				A5105C131FA360B8000D0CBB /* TableViewRowMoving.swift in Sources */,
-				A5105C1B1FA360B8000D0CBB /* ArrayCollectionViewModelProtocol.swift in Sources */,
 				A5105C0D1FA360B8000D0CBB /* ReusableCell.swift in Sources */,
 				A5105C2A1FA360B8000D0CBB /* Validating.swift in Sources */,
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
@@ -1413,7 +1329,6 @@
 				A5105C021FA360B8000D0CBB /* TableViewArrayDataSource.swift in Sources */,
 				A54BA26E1F274D1C0025A4C0 /* IpResponse.swift in Sources */,
 				A5105C421FA360B8000D0CBB /* TextFieldAccessoryView.swift in Sources */,
-				A5105C191FA360B8000D0CBB /* DismissNavigationProtocol.swift in Sources */,
 				A5105C061FA360B8000D0CBB /* SectionModel.swift in Sources */,
 				A5105BDD1FA360B8000D0CBB /* Array+JSON.swift in Sources */,
 				A5105C151FA360B8000D0CBB /* ConfigurableView.swift in Sources */,
@@ -1421,12 +1336,10 @@
 				A5105C281FA360B8000D0CBB /* TextFieldsManagerReloading.swift in Sources */,
 				A5105BF21FA360B8000D0CBB /* SocialNetworksHelper.swift in Sources */,
 				A5105C041FA360B8000D0CBB /* SectionFooter.swift in Sources */,
-				A5105C1A1FA360B8000D0CBB /* PopNavigationProtocol.swift in Sources */,
 				A5105BF91FA360B8000D0CBB /* ActivityViewable.swift in Sources */,
 				A5105C411FA360B8000D0CBB /* PickerViewField.swift in Sources */,
 				A5105C0A1FA360B8000D0CBB /* AlertViewable.swift in Sources */,
 				A5105BC61FA360B8000D0CBB /* XibLoadableView.swift in Sources */,
-				A5105C1D1FA360B8000D0CBB /* FRCCollectionViewModelProtocol.swift in Sources */,
 				A5105C2F1FA360B8000D0CBB /* LocalDataStorage.swift in Sources */,
 				A54310E31F0C116C00EB3041 /* TestPopupPresenter.swift in Sources */,
 				A5105BF61FA360B8000D0CBB /* TextInputsManager.swift in Sources */,

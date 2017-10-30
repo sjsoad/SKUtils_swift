@@ -10,5 +10,7 @@ pod 'Alamofire'
 pod 'NVActivityIndicatorView'
 
 pod 'SwiftyDrop'
+pod 'SwiftKeychainWrapper'
+pod 'AERecord'
 
 end

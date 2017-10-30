@@ -50,7 +50,7 @@ protocol DropdownModule {
 class DropdownPresenter: NSObject, DropdownModule {
     
     fileprivate var view: DropdownReloadable?
-    fileprivate var dataSource = TableViewArrayDataSource(sections: [])
+    fileprivate var dataSource = TableViewArrayDataSource(with: [])
     fileprivate var items = [String]()
     fileprivate var allOptionIndex: IndexPath?
     fileprivate var maxSelectedItems: Int?
@@ -145,7 +145,7 @@ class DropdownPresenter: NSObject, DropdownModule {
             sectionItems.append(cellModel)
         }
         let sectionModel = SectionModel(withItems: sectionItems)
-        dataSource = TableViewArrayDataSource(sections: [sectionModel])
+        dataSource = TableViewArrayDataSource(with: [sectionModel])
     }
     
 }

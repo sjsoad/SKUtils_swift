@@ -19,7 +19,7 @@ class ErrorParser {
     }
 
     private static func error(with message: String) -> NSError {
-        return NSError(domain: API.host, code: 400, userInfo: [NSLocalizedDescriptionKey: message])
+        return NSError(domain: /*API.host*/ "", code: 400, userInfo: [NSLocalizedDescriptionKey: message])
     }
     
 }
