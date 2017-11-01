@@ -13,9 +13,9 @@ class TableViewHelper {
     // MARK: - Update Height -
     
     static func updateHeight(of tableView: UITableView, height contraint: NSLayoutConstraint, view: UIView) {
+        let tableContentHeight = tableView.contentSize.height
         DispatchQueue.global().async {
             let constraintValue = contraint.constant
-            let tableContentHeight = tableView.contentSize.height
             if constraintValue != tableContentHeight {
                 DispatchQueue.main.sync {
                     contraint.constant = tableContentHeight
