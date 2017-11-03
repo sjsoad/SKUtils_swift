@@ -114,7 +114,7 @@ class TextInputsManager: NSObject {
 // MARK: - KeyboardHiding -
 
 extension TextInputsManager: KeyboardHiding {
-    func hideKeyboard() {
+    @objc func hideKeyboard() {
         textInputs.forEach { textInput in
             _ = textInput.resignFirstResponder()
         }
