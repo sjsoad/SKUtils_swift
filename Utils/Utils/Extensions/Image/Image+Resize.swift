@@ -15,36 +15,57 @@ extension UIImage {
     }
     
     func size(thatFits size: CGSize) -> CGSize {
-        let originalSize = self.size
-        var scaleFactor: CGFloat = 1.0
-        if originalSize.width > originalSize.height {
-            scaleFactor = originalSize.width / size.width
-        } else {
-            scaleFactor = originalSize.height / size.height
-        }
-        let newSize = CGSize(width: originalSize.width / scaleFactor, height: originalSize.height / scaleFactor)
-        return newSize
+        let aspectWidth = calculateAspectWidth(width: size.width)
+        let aspectHeight = calculateAspectHeight(height: size.height)
+        let aspectRatio = minAspectRation(aspectWidth: aspectWidth, aspectHeight: aspectHeight)
+        return newSize(with: aspectRatio)
     }
 
     func size(thatFills size: CGSize) -> CGSize {
-        let originalSize = self.size
-        var scaleFactor: CGFloat = 1.0
-        if originalSize.width < originalSize.height {
-            scaleFactor = originalSize.width / size.width
-        } else {
-            scaleFactor = originalSize.height / size.height
-        }
-        let newSize = CGSize(width: originalSize.width / scaleFactor, height: originalSize.height / scaleFactor)
-        return newSize
+        let aspectWidth = calculateAspectWidth(width: size.width)
+        let aspectHeight = calculateAspectHeight(height: size.height)
+        let aspectRatio = maxAspectRation(aspectWidth: aspectWidth, aspectHeight: aspectHeight)
+        return newSize(with: aspectRatio)
     }
     
-    func image(withSize size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContext(size)
-        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    func image(withSize size: CGSize) -> UIImage? {
+        var scaledImageRect = CGRect.zero
+        scaledImageRect.size = size
+        return drawImage(in: scaledImageRect)
+    }
+    
+    // MARK: - Private -
+    
+    private func drawImage(in rect: CGRect) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+        draw(in: rect)
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage ?? UIImage()
+        return scaledImage
+    }
+    
+    private func calculateAspectWidth(width: CGFloat) -> CGFloat {
+        return width / size.width
+    }
+    
+    private func calculateAspectHeight(height: CGFloat) -> CGFloat {
+        return height / size.height
+    }
+    
+    private func minAspectRation(aspectWidth: CGFloat, aspectHeight: CGFloat) -> CGFloat {
+        return min(aspectWidth, aspectHeight)
+    }
+    
+    private func maxAspectRation(aspectWidth: CGFloat, aspectHeight: CGFloat) -> CGFloat {
+        return max(aspectWidth, aspectHeight)
+    }
+    
+    private func newSize(with aspectRatio: CGFloat) -> CGSize {
+        var newSize = CGSize.zero
+        newSize.width = size.width * aspectRatio
+        newSize.height = size.height * aspectRatio
+        return newSize
     }
     
 }

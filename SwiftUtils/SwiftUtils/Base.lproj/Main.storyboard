@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,16 +16,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftUtils" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYA-XV-ADm" customClass="DatePickerField" customModule="SwiftUtils" customModuleProvider="target">
-                                <rect key="frame" x="20" y="319" width="335" height="30"/>
+                                <rect key="frame" x="20" y="318.5" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -34,7 +32,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-2P-ww2" customClass="PickerViewField" customModule="SwiftUtils" customModuleProvider="target">
-                                <rect key="frame" x="20" y="369" width="335" height="30"/>
+                                <rect key="frame" x="20" y="368.5" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -57,17 +55,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Bqk-7Y-QiI" secondAttribute="trailing" id="05l-5W-FlP"/>
+                            <constraint firstItem="15f-VH-4W3" firstAttribute="trailing" secondItem="Bqk-7Y-QiI" secondAttribute="trailing" id="05l-5W-FlP"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="centerX" secondItem="aYA-XV-ADm" secondAttribute="centerX" id="6r1-LX-9Ci"/>
-                            <constraint firstItem="aYA-XV-ADm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7IC-Pg-NO6"/>
+                            <constraint firstItem="aYA-XV-ADm" firstAttribute="leading" secondItem="15f-VH-4W3" secondAttribute="leading" constant="20" id="7IC-Pg-NO6"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="width" secondItem="aYA-XV-ADm" secondAttribute="width" id="E6V-jz-tJQ"/>
-                            <constraint firstItem="aYA-XV-ADm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G9i-KB-dAh"/>
+                            <constraint firstItem="aYA-XV-ADm" firstAttribute="centerX" secondItem="15f-VH-4W3" secondAttribute="centerX" id="G9i-KB-dAh"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="top" secondItem="aYA-XV-ADm" secondAttribute="bottom" constant="20" id="Kfh-gt-oB0"/>
-                            <constraint firstAttribute="trailing" secondItem="aYA-XV-ADm" secondAttribute="trailing" constant="20" id="jgA-Cy-8af"/>
-                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uFk-iH-zR7"/>
-                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uH5-j2-Sp3"/>
+                            <constraint firstItem="15f-VH-4W3" firstAttribute="trailing" secondItem="aYA-XV-ADm" secondAttribute="trailing" constant="20" id="jgA-Cy-8af"/>
+                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="top" secondItem="15f-VH-4W3" secondAttribute="top" id="uFk-iH-zR7"/>
+                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="leading" secondItem="15f-VH-4W3" secondAttribute="leading" id="uH5-j2-Sp3"/>
                             <constraint firstItem="aYA-XV-ADm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="um0-yl-e44"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="15f-VH-4W3"/>
                     </view>
                     <connections>
                         <outlet property="dateTextField" destination="aYA-XV-ADm" id="YO4-EC-KNC"/>
@@ -83,15 +82,12 @@
                     </connections>
                 </customObject>
             </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="117.39130434782609"/>
         </scene>
         <!--Scrolling View Controller-->
         <scene sceneID="42s-eo-9wx">
             <objects>
                 <viewController id="NWe-Du-OOU" customClass="ScrollingViewController" customModule="SwiftUtils" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bct-Qy-LQy"/>
-                        <viewControllerLayoutGuide type="bottom" id="eBB-Tf-IfK"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dGk-JB-VaD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,12 +136,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eBB-Tf-IfK" firstAttribute="top" secondItem="oRE-0f-Erm" secondAttribute="bottomMargin" id="1uy-xn-E6H"/>
+                            <constraint firstItem="263-VF-w66" firstAttribute="bottom" secondItem="oRE-0f-Erm" secondAttribute="bottomMargin" id="1uy-xn-E6H"/>
                             <constraint firstItem="oRE-0f-Erm" firstAttribute="top" secondItem="dGk-JB-VaD" secondAttribute="top" id="6jP-Uy-DXn"/>
-                            <constraint firstAttribute="trailing" secondItem="oRE-0f-Erm" secondAttribute="trailing" id="H7d-3v-sKj"/>
-                            <constraint firstItem="oRE-0f-Erm" firstAttribute="leading" secondItem="dGk-JB-VaD" secondAttribute="leading" id="eY0-ui-Sbw"/>
-                            <constraint firstItem="eBB-Tf-IfK" firstAttribute="top" relation="lessThanOrEqual" secondItem="TLR-JD-yS9" secondAttribute="bottomMargin" constant="20" id="g0y-tl-kyN"/>
+                            <constraint firstItem="263-VF-w66" firstAttribute="trailing" secondItem="oRE-0f-Erm" secondAttribute="trailing" id="H7d-3v-sKj"/>
+                            <constraint firstItem="oRE-0f-Erm" firstAttribute="leading" secondItem="263-VF-w66" secondAttribute="leading" id="eY0-ui-Sbw"/>
+                            <constraint firstItem="263-VF-w66" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="TLR-JD-yS9" secondAttribute="bottomMargin" constant="20" id="g0y-tl-kyN"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="263-VF-w66"/>
                     </view>
                     <connections>
                         <outlet property="textInputsManager" destination="fBW-bi-VA3" id="jnN-nd-vJY"/>
@@ -161,7 +158,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="122.78860569715144"/>
+            <point key="canvasLocation" x="1516" y="128"/>
         </scene>
     </scenes>
 </document>
