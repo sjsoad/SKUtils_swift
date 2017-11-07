@@ -21,7 +21,7 @@ extension Presentable where Self: UIViewController {
         let controller = UIViewController()
         _ = UIWindow.normalWindow(rootController: controller)
         controller.present(self,
-                           animated: true,
+                           animated: animated,
                            completion: completion)
         
     }
