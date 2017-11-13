@@ -16,7 +16,7 @@ extension String {
     }
 
     func nsrange() -> NSRange {
-        return NSMakeRange(0, self.characters.count)
+        return NSMakeRange(0, self.count)
     }
     
 }
