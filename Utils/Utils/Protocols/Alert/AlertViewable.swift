@@ -12,16 +12,15 @@ import SwiftyDrop
 
 protocol AlertViewable {
     
-    func show(error: String?)
+    func show(message: String, state: DropState)
     
 }
 
 extension AlertViewable {
     
-    func show(error: String?) {
-        guard let error = error else { return }
-        Drop.down(error,
-                  state: .error)
+    func show(message: String, state: DropState) {
+        Drop.down(message,
+                  state: state)
     }
     
 }

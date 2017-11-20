@@ -11,7 +11,7 @@ import Foundation
 typealias IpSuccessHandler = (_ response: IpRequest.Response) -> Void
 typealias IpResponseValue = [String: String] // Example: Bool
 
-protocol IpRequesting: RequestErrorHandling /* or RequestExecuting */{
+protocol IpRequesting: RequestErrorHandling, RequestExecuting {
     
     func exampleFunc(successHandler: @escaping IpSuccessHandler,
                      executingHandler: RequestExecutingHandler?,

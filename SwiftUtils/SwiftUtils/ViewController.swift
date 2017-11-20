@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ActivityViewable, IpRequesting {
+class ViewController: UIViewController, ActivityViewable, AlertViewable, IpRequesting {
 
     @IBOutlet private weak var textInputsManager: TextInputsManager!
     @IBOutlet private weak var dateTextField: DatePickerField!
@@ -64,6 +64,10 @@ class ViewController: UIViewController, ActivityViewable, IpRequesting {
     // MARK: - RequestExecuting -
     
     func activityView() -> ActivityViewable? {
+        return self
+    }
+    
+    func alertView() -> AlertViewable? {
         return self
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 import NVActivityIndicatorView
 
-protocol ActivityViewable: NVActivityIndicatorViewable, AlertViewable {
+protocol ActivityViewable: NVActivityIndicatorViewable {
     
     func showActivity()
     func hideActivity()

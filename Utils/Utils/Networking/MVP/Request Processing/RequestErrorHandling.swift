@@ -9,8 +9,9 @@
 import Foundation
 import SwiftyDrop
 
-protocol RequestErrorHandling: RequestExecuting {
+protocol RequestErrorHandling: AlertViewable {
     
+    func alertView() -> AlertViewable?
     func requestErrorHandler() -> ErrorHandler
     
 }
@@ -19,8 +20,8 @@ extension RequestErrorHandling where Self: NSObject {
     
     func requestErrorHandler() -> ErrorHandler {
         return { [weak self] error in
-            guard let view = self?.activityView() else { return }
-            view.show(error: error.localizedDescription)
+            guard let view = self?.alertView() else { return }
+            view.show(message: error.localizedDescription, state: .error)
         }
     }
 
