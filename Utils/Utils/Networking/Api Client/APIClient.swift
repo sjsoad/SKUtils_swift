@@ -35,16 +35,14 @@ class APIClient: NSObject {
             .responseJSON(completionHandler: { (response) in
                 switch response.result {
                 case .success(let value):
-                    if let error = ErrorParser.checkForError(JSON: value as AnyObject), let errorClosure = failure {
-                        errorClosure(error)
-                    } else if let successClosure = success {
+                    if let error = ErrorParser.checkForError(JSON: value as AnyObject) {
+                        failure?(error)
+                    } else {
                         let response: T.Response = T.Response(JSON: value as AnyObject)
-                        successClosure(response)
+                        success?(response)
                     }
                 case .failure(let error):
-                    if let errorClosure = failure {
-                        errorClosure(error)
-                    }
+                    failure?(error)
                 }
             })
     }
@@ -57,16 +55,14 @@ class APIClient: NSObject {
         return sessionManager.request(urlRequest).responseJSON { (response) in
             switch response.result {
             case .success(let value):
-                if let error = ErrorParser.checkForError(JSON: value as AnyObject), let errorClosure = failure {
-                    errorClosure(error)
-                } else if let successClosure = success {
+                if let error = ErrorParser.checkForError(JSON: value as AnyObject) {
+                    failure?(error)
+                } else {
                     let response: T.Response = T.Response(JSON: value as AnyObject)
-                    successClosure(response)
+                    success?(response)
                 }
             case .failure(let error):
-                if let errorClosure = failure {
-                    errorClosure(error)
-                }
+                failure?(error)
             }
         }
     }
