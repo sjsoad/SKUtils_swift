@@ -12,12 +12,12 @@ extension UIWindow {
 
     static func alertWindow(rootController: UIViewController?) -> UIWindow {
         return UIWindow.window(windowLevel: UIWindowLevelAlert,
-                                    rootController: rootController)
+                               rootController: rootController)
     }
     
     static func normalWindow(rootController: UIViewController?) -> UIWindow {
         return UIWindow.window(windowLevel: UIWindowLevelNormal,
-                                    rootController: rootController)
+                               rootController: rootController)
     }
     
     static func window(windowLevel: UIWindowLevel,
