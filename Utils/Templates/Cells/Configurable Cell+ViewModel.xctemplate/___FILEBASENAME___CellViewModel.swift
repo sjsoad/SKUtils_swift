@@ -15,8 +15,8 @@ class ___FILEBASENAMEASIDENTIFIER___: DataSourceViewModel {
     private let model: <#ModelType#>
     
     init(with objectModel: <#ModelType#>, cellIdentifier: String) {
-        model = objectModel
-        reuseIdentifier = cellIdentifier
+        self.model = objectModel
+        self.reuseIdentifier = cellIdentifier
     }
     
 }
