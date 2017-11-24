@@ -11,7 +11,7 @@ import Foundation
 typealias ___VARIABLE_fileName:identifier___SuccessHandler = (_ response: ___VARIABLE_fileName:identifier___Request.Response) -> Void
 typealias ___VARIABLE_fileName:identifier___ResponseType = () // Example: Bool
 
-protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling /* and/or RequestExecuting */ {
+protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling, RequestExecuting {
     
     func exampleFunc(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler?,

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable {
+protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable, AlertViewable {
     
 }
 
@@ -17,7 +17,7 @@ protocol ___VARIABLE_fileName:identifier___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting {
+class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting, RequestErrorHandling {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
     
@@ -34,9 +34,15 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting {
         //navigation
     }
     
-    // MARK: - Activity Protocol -
+    // MARK: - ActivityViewable -
     
     func activityView() -> ActivityViewable? {
+        return view
+    }
+
+    // MARK: - AlertViewable -
+    
+    func alertView() -> AlertViewable? {
         return view
     }
     
