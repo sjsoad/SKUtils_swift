@@ -43,7 +43,6 @@
 		A5241BE41FA749F7008463EE /* TableViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B201FA749F7008463EE /* TableViewAnimator.swift */; };
 		A5241BE51FA749F7008463EE /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B211FA749F7008463EE /* TableViewHelper.swift */; };
 		A5241BE61FA749F7008463EE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B221FA749F7008463EE /* Utils.swift */; };
-		A5241BE71FA749F7008463EE /* TextInputsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B251FA749F7008463EE /* TextInputsManager.swift */; };
 		A5241BE81FA749F7008463EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B281FA749F7008463EE /* APIClient.swift */; };
 		A5241BE91FA749F7008463EE /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B291FA749F7008463EE /* ErrorParser.swift */; };
 		A5241BEA1FA749F7008463EE /* ActivityViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241B2C1FA749F7008463EE /* ActivityViewable.swift */; };
@@ -130,6 +129,7 @@
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
 		A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57057291EF117C40092CDAB /* Assets.xcassets */; };
 		A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */; };
+		A595A2881FCD6A5F0017CA52 /* TextInputsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2871FCD6A5F0017CA52 /* TextInputsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,7 +171,6 @@
 		A5241B201FA749F7008463EE /* TableViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAnimator.swift; sourceTree = "<group>"; };
 		A5241B211FA749F7008463EE /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		A5241B221FA749F7008463EE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		A5241B251FA749F7008463EE /* TextInputsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManager.swift; sourceTree = "<group>"; };
 		A5241B281FA749F7008463EE /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A5241B291FA749F7008463EE /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		A5241B2C1FA749F7008463EE /* ActivityViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewable.swift; sourceTree = "<group>"; };
@@ -260,6 +259,7 @@
 		A57057291EF117C40092CDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A570572C1EF117C40092CDAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A570572E1EF117C40092CDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A595A2871FCD6A5F0017CA52 /* TextInputsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,17 +505,9 @@
 		A5241B231FA749F7008463EE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A5241B241FA749F7008463EE /* TextInputsManager */,
+				A595A2861FCD6A5F0017CA52 /* Text Inputs Manager */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		A5241B241FA749F7008463EE /* TextInputsManager */ = {
-			isa = PBXGroup;
-			children = (
-				A5241B251FA749F7008463EE /* TextInputsManager.swift */,
-			);
-			path = TextInputsManager;
 			sourceTree = "<group>";
 		};
 		A5241B261FA749F7008463EE /* Networking */ = {
@@ -1055,6 +1047,14 @@
 			path = SwiftUtils;
 			sourceTree = "<group>";
 		};
+		A595A2861FCD6A5F0017CA52 /* Text Inputs Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A595A2871FCD6A5F0017CA52 /* TextInputsManager.swift */,
+			);
+			path = "Text Inputs Manager";
+			sourceTree = "<group>";
+		};
 		A5ABFB5B1F22356400548D89 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1233,6 +1233,7 @@
 				A5241C011FA749F8008463EE /* DataSourceRepresentable.swift in Sources */,
 				A5241C391FA749F8008463EE /* PasswordValidator.swift in Sources */,
 				A5241C481FA74A02008463EE /* IpRequest.swift in Sources */,
+				A595A2881FCD6A5F0017CA52 /* TextInputsManager.swift in Sources */,
 				A5241BB91FA749F7008463EE /* BottomBorderDecorator.swift in Sources */,
 				A5241C081FA749F8008463EE /* ConfigurableView.swift in Sources */,
 				A5241C0A1FA749F8008463EE /* Navigatable.swift in Sources */,
@@ -1315,7 +1316,6 @@
 				A5241BF71FA749F8008463EE /* SectionModel.swift in Sources */,
 				A5241BF11FA749F8008463EE /* APIResponsing.swift in Sources */,
 				A5241BD01FA749F7008463EE /* Image+Resize.swift in Sources */,
-				A5241BE71FA749F7008463EE /* TextInputsManager.swift in Sources */,
 				A5241C4C1FA74A02008463EE /* TestPopupPresenter.swift in Sources */,
 				A5241C2D1FA749F8008463EE /* TimerService.swift in Sources */,
 				A5241C381FA749F8008463EE /* EqualStringsValidator.swift in Sources */,
