@@ -15,8 +15,6 @@ public class BaseTextField: UITextField {
             self.updateAttributtedPlaceholder()
         }
     }
-    
-    @IBOutlet var visualisationView: TextFieldAccessoryView?
 
     public override var placeholder: String? {
         didSet {
