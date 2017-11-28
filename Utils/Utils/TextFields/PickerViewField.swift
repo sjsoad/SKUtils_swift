@@ -27,8 +27,9 @@ class PickerViewField: PickerTextField {
     override func doneButtonPressed(_ sender: UIBarButtonItem) {
         for componentIndex in 0..<picker.numberOfComponents {
             let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
-            guard let delegate = picker.delegate else { return }
-            delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
+            if let delegate = picker.delegate {
+                delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
+            }
         }
         super.doneButtonPressed(sender)
     }
