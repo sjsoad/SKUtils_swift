@@ -12,9 +12,9 @@ class PassTextField: BaseTextField {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.isSecureTextEntry = true
-        self.autocorrectionType = .no
-        self.autocapitalizationType = .none
+        isSecureTextEntry = true
+        autocorrectionType = .no
+        autocapitalizationType = .none
     }
     
 }

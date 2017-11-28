@@ -36,25 +36,25 @@ class TextFieldAccessoryView: UIView {
     
     var currentViewState: AccessoryViewState = .defaults {
         didSet {
-            self.setNeedsDisplay()
+            setNeedsDisplay()
         }
     }
     
     func currentStateColor() -> UIColor {
-        switch self.currentViewState {
-        case .error   : return self.errorStateColor
-        case .success : return self.successStateColor
-        case .defaults : return self.defaultStateColor
-        case .active  : return self.activeStateColor
+        switch currentViewState {
+        case .error   : return errorStateColor
+        case .success : return successStateColor
+        case .defaults : return defaultStateColor
+        case .active  : return activeStateColor
         }
     }
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        if let drawingHandler = self.drawing {
+        if let drawingHandler = drawing {
             drawingHandler(self)
         } else {
-            self.layer.borderColor = self.currentStateColor().cgColor
+            layer.borderColor = currentStateColor().cgColor
         }
     }
 }

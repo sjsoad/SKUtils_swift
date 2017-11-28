@@ -10,7 +10,5 @@ import UIKit
 import Foundation
 
 protocol DateSelectionHandlerSetting {
-
-    func set(dateSelectionHandler: @escaping DatePickerFieldDateSelectionHandler)
-    
+    func set(dateSelectionHandler handler: @escaping DatePickerFieldDateSelectionHandler)
 }

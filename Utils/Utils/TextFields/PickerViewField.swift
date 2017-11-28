@@ -21,7 +21,7 @@ class PickerViewField: PickerTextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.inputView = self.picker
+        inputView = picker
     }
     
     // MARK: - Actions -
@@ -43,11 +43,11 @@ class PickerViewField: PickerTextField {
 extension PickerViewField: PickerViewFieldReloading {
     
     func reload(with manager: PickerManager) {
-        self.picker.dataSource = manager
-        self.picker.delegate = manager
-        self.picker.reloadAllComponents()
+        picker.dataSource = manager
+        picker.delegate = manager
+        picker.reloadAllComponents()
         for selectedIndex in manager.selectedIndexes {
-            self.picker.selectRow(selectedIndex.row, inComponent: selectedIndex.section, animated: false)
+            picker.selectRow(selectedIndex.row, inComponent: selectedIndex.section, animated: false)
         }
     }
     

@@ -27,7 +27,7 @@ class DatePickerField: PickerTextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.inputView = self.datePicker
+        inputView = datePicker
     }
     
     // MARK: - Actions -
@@ -47,8 +47,8 @@ class DatePickerField: PickerTextField {
 
 extension DatePickerField: DateSelectionHandlerSetting {
     
-    func set(dateSelectionHandler: @escaping DatePickerFieldDateSelectionHandler) {
-        self.dateSelectionHandler = dateSelectionHandler
+    func set(dateSelectionHandler handler: @escaping DatePickerFieldDateSelectionHandler) {
+        dateSelectionHandler = handler
     }
     
 }

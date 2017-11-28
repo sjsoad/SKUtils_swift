@@ -16,7 +16,7 @@ class PickerTextField: BaseTextField {
     
     @IBInspectable private(set) var doneButtonTitle: String = "Done" {
         didSet {
-            self.doneButton.title = self.doneButtonTitle
+            doneButton.title = doneButtonTitle
         }
     }
     
@@ -26,7 +26,6 @@ class PickerTextField: BaseTextField {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()
-        let doneButton = self.doneButton
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
                                           target: nil,
                                           action: nil)
@@ -36,7 +35,7 @@ class PickerTextField: BaseTextField {
     }()
     
     private lazy var doneButton: UIBarButtonItem = {
-        let doneButton = UIBarButtonItem(title: self.doneButtonTitle,
+        let doneButton = UIBarButtonItem(title: doneButtonTitle,
                                          style: .plain,
                                          target: self,
                                          action: #selector(doneButtonPressed(_:)))
@@ -47,13 +46,13 @@ class PickerTextField: BaseTextField {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.inputAccessoryView = self.toolbar
+        inputAccessoryView = toolbar
     }
     
     // MARK: - Actions -
     
     @objc func doneButtonPressed(_ sender: UIBarButtonItem) {
-        self.sendActions(for: .editingDidEndOnExit)
+        sendActions(for: .editingDidEndOnExit)
         doneButtonHandler?(self, sender)
     }
     
@@ -73,7 +72,7 @@ extension PickerTextField: PickerDoneTitleSetting {
 
 extension PickerTextField: DoneButtonHandlerSetting {
     
-    func set(doneButtonHandler: @escaping PickerFieldDoneButtonHandler) {
-        self.doneButtonHandler = doneButtonHandler
+    func set(doneButtonHandler handler: @escaping PickerFieldDoneButtonHandler) {
+        doneButtonHandler = handler
     }
 }

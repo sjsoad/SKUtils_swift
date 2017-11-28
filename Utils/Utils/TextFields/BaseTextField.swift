@@ -14,15 +14,15 @@ public class BaseTextField: UITextField {
     
     @IBInspectable private(set) var placeholderColor: UIColor? {
         didSet {
-            self.updateAttributtedPlaceholder()
+            updateAttributtedPlaceholder()
         }
     }
-
+    
     // MARK: - Public Override -
     
     public override var placeholder: String? {
         didSet {
-            self.updateAttributtedPlaceholder()
+            updateAttributtedPlaceholder()
         }
     }
     
@@ -36,9 +36,10 @@ public class BaseTextField: UITextField {
     // MARK: - Private -
     
     private func updateAttributtedPlaceholder() {
-        guard let text = self.placeholder, let color = self.placeholderColor else { return }
-        self.attributedPlaceholder = NSAttributedString(string: text,
-                                                        attributes:[.foregroundColor: color])
+        guard let text = placeholder, let color = placeholderColor else { return }
+        attributedPlaceholder = NSAttributedString(string: text,
+                                                   attributes:[.foregroundColor: color])
     }
     
 }
+

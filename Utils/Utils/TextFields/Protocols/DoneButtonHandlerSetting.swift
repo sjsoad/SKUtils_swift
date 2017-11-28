@@ -10,7 +10,5 @@ import UIKit
 import Foundation
 
 protocol DoneButtonHandlerSetting {
-
-    func set(doneButtonHandler: @escaping PickerFieldDoneButtonHandler)
-    
+    func set(doneButtonHandler handler: @escaping PickerFieldDoneButtonHandler)
 }
