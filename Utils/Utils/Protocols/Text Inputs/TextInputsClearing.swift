@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol TextInputsClearing: class {
+protocol TextInputsClearing {
     func clearTextInputs()
 }

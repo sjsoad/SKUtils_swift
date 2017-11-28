@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-protocol FirstResponding: class {
+protocol FirstResponding {
     func firstResponder() -> UIView?
 }

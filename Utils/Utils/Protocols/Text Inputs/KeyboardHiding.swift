@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol KeyboardHiding: class {
+protocol KeyboardHiding {
     func hideKeyboard()
 }

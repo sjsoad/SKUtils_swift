@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol TextFieldsManagerReloading: class {
+protocol TextFieldsManagerReloading {
     func reloadTextFieldsManager()
 }
