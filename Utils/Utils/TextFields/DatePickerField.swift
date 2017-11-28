@@ -12,9 +12,11 @@ typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker
 
 class DatePickerField: PickerTextField {
     
-    var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
+    private var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
     
-    lazy var datePicker: UIDatePicker = {
+    // MARK: - Lazy -
+    
+    private(set) lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
         
@@ -28,7 +30,7 @@ class DatePickerField: PickerTextField {
         self.inputView = self.datePicker
     }
     
-    // MARK: - Functions -
+    // MARK: - Actions -
     
     override func doneButtonPressed(_ sender: UIBarButtonItem) {
         dateSelectionHandler?(self, datePicker, datePicker.date)
@@ -39,6 +41,14 @@ class DatePickerField: PickerTextField {
     
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
         dateSelectionHandler?(self, sender, sender.date)
+    }
+    
+}
+
+extension DatePickerField: DateSelectionHandlerSetting {
+    
+    func set(dateSelectionHandler: @escaping DatePickerFieldDateSelectionHandler) {
+        self.dateSelectionHandler = dateSelectionHandler
     }
     
 }

@@ -10,12 +10,16 @@ import UIKit
 
 public class BaseTextField: UITextField {
     
-    @IBInspectable var placeholderColor: UIColor? {
+    // MARK: - IBInspectable -
+    
+    @IBInspectable private(set) var placeholderColor: UIColor? {
         didSet {
             self.updateAttributtedPlaceholder()
         }
     }
 
+    // MARK: - Public Override -
+    
     public override var placeholder: String? {
         didSet {
             self.updateAttributtedPlaceholder()

@@ -9,8 +9,10 @@
 import UIKit
 
 class PickerViewField: PickerTextField {
-
-    lazy var picker: UIPickerView = {
+    
+    // MARK: - Lazy -
+    
+    private(set) lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         return picker
     }()
@@ -22,7 +24,7 @@ class PickerViewField: PickerTextField {
         self.inputView = self.picker
     }
     
-    // MARK: - Functions -
+    // MARK: - Actions -
     
     override func doneButtonPressed(_ sender: UIBarButtonItem) {
         for componentIndex in 0..<picker.numberOfComponents {
@@ -34,6 +36,12 @@ class PickerViewField: PickerTextField {
         super.doneButtonPressed(sender)
     }
     
+}
+
+// MARK: - PickerViewFieldReloading -
+
+extension PickerViewField: PickerViewFieldReloading {
+    
     func reload(with manager: PickerManager) {
         self.picker.dataSource = manager
         self.picker.delegate = manager
@@ -41,7 +49,7 @@ class PickerViewField: PickerTextField {
         for selectedIndex in manager.selectedIndexes {
             self.picker.selectRow(selectedIndex.row, inComponent: selectedIndex.section, animated: false)
         }
-        
     }
     
 }
+

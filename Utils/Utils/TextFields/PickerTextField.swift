@@ -12,18 +12,15 @@ typealias PickerFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBar
 
 class PickerTextField: BaseTextField {
     
-    @IBInspectable var doneButtonTitle: String = "Done" {
+    private var doneButtonHandler: PickerFieldDoneButtonHandler?
+    
+    @IBInspectable private(set) var doneButtonTitle: String = "Done" {
         didSet {
             self.doneButton.title = self.doneButtonTitle
         }
     }
     
-    var doneButtonHandler: PickerFieldDoneButtonHandler?
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.inputAccessoryView = self.toolbar
-    }
+    // MARK: - Lazy -
     
     lazy var toolbar: UIToolbar = {
         let toolBar = UIToolbar()
@@ -46,11 +43,37 @@ class PickerTextField: BaseTextField {
         return doneButton
     }()
     
-    // MARK: - Functions -
+    // MARK: - Init -
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.inputAccessoryView = self.toolbar
+    }
+    
+    // MARK: - Actions -
     
     @objc func doneButtonPressed(_ sender: UIBarButtonItem) {
         self.sendActions(for: .editingDidEndOnExit)
         doneButtonHandler?(self, sender)
     }
     
+}
+
+// MARK: - PickerDoneTitleSetting -
+
+extension PickerTextField: PickerDoneTitleSetting {
+    
+    func set(doneTitle title: String) {
+        doneButtonTitle = title
+    }
+    
+}
+
+// MARK: - DoneButtonHandlerSetting -
+
+extension PickerTextField: DoneButtonHandlerSetting {
+    
+    func set(doneButtonHandler: @escaping PickerFieldDoneButtonHandler) {
+        self.doneButtonHandler = doneButtonHandler
+    }
 }

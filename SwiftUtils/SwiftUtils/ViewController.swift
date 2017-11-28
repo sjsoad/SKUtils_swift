@@ -36,18 +36,18 @@ class ViewController: UIViewController, ActivityViewable, AlertViewable, IpReque
     override func viewDidLoad() {
         super.viewDidLoad()
         dateTextField.datePicker.date = Date().addingTimeInterval(-60*60*48)
-        dateTextField.doneButtonTitle = "Ok"
+        dateTextField.set(doneTitle: "Ok")
         pickerTextField.reload(with: pickerManager)
         
-        dateTextField.dateSelectionHandler = { field, picker, date in
+        dateTextField.set(dateSelectionHandler: { field, picker, date in
             print(date)
-        }
-        dateTextField.doneButtonHandler = { field, sender in
+        })
+        dateTextField.set(doneButtonHandler: { field, sender in
             print("done")
-        }
-        pickerTextField.doneButtonHandler = { field, sender in
+        })
+        pickerTextField.set(doneButtonHandler: { field, sender in
             print("done")
-        }
+        })
         exampleFunc(successHandler: { (response) in
             print(response.result ?? "nothing")
         },
