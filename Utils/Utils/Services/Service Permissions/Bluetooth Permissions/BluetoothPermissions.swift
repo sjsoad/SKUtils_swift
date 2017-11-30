@@ -9,17 +9,12 @@
 import UIKit
 import CoreBluetooth
 
-class BluetoothPermissions: NSObject, ServicePermissions  {
+class BluetoothPermissions: DefaultServicePermissions {
 
-    private(set) var alertTitles: AlertTitles
-    
-    required init(settingAlertTitles: AlertTitles) {
-        self.alertTitles = settingAlertTitles
-    }
-    
 }
 
 // MARK: - PermissionsStateble -
+
 extension BluetoothPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
@@ -29,7 +24,7 @@ extension BluetoothPermissions: PermissionsStateble {
         case .notDetermined:
             return .permissionsNotAsked
         case .restricted, .denied:
-            self.showSettingsAlert()
+            showSettingsAlert()
             return .permissionsDenied
         }
     }

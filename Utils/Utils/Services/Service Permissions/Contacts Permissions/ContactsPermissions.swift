@@ -10,16 +10,12 @@ import UIKit
 import Contacts
 import AddressBook
 
-class ContactsPermissions: NSObject, ServicePermissions {
+class ContactsPermissions: DefaultServicePermissions, ServicePermissions {
 
-    private(set) var alertTitles: AlertTitles
-    
-    required init(settingAlertTitles: AlertTitles) {
-        self.alertTitles = settingAlertTitles
-    }
 }
 
 // MARK: - PermissionsStateble -
+
 extension ContactsPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
@@ -31,7 +27,7 @@ extension ContactsPermissions: PermissionsStateble {
             case .notDetermined:
                 return .permissionsNotAsked
             case .restricted, .denied:
-                self.showSettingsAlert()
+                showSettingsAlert()
                 return .permissionsDenied
             }
         }
@@ -41,13 +37,14 @@ extension ContactsPermissions: PermissionsStateble {
         case .notDetermined:
             return .permissionsNotAsked
         case .restricted, .denied:
-            self.showSettingsAlert()
+            showSettingsAlert()
             return .permissionsDenied
         }
     }
 }
 
 // MARK: - PermissionsRequesting -
+
 extension ContactsPermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {

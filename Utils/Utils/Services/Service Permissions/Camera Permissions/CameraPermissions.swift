@@ -9,17 +9,12 @@
 import UIKit
 import AVFoundation
 
-class CameraPermissions: NSObject, ServicePermissions {
-
-    private(set) var alertTitles: AlertTitles
-    
-    required init(settingAlertTitles: AlertTitles) {
-        self.alertTitles = settingAlertTitles
-    }
+class CameraPermissions: DefaultServicePermissions, ServicePermissions {
     
 }
 
 // MARK: - PermissionsStateble -
+
 extension CameraPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
@@ -29,7 +24,7 @@ extension CameraPermissions: PermissionsStateble {
         case .notDetermined:
             return .permissionsNotAsked
         case .restricted, .denied:
-            self.showSettingsAlert()
+            showSettingsAlert()
             return .permissionsDenied
         }
     }
@@ -37,6 +32,7 @@ extension CameraPermissions: PermissionsStateble {
 }
 
 // MARK: - PermissionsRequesting -
+
 extension CameraPermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {

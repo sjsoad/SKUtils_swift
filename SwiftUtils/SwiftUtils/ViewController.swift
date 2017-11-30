@@ -33,8 +33,28 @@ class ViewController: UIViewController, ActivityViewable, AlertViewable, IpReque
         return pickerManager
     }()
     
+    let locationPermissions: ServicePermissions = {
+        let alertTitles = AlertTitles(title: "Location Service",
+                                      message: "Location service is disabled! Please turn on it in Settings",
+                                      actionButtonTitle: "Go to Settings",
+                                      cancelButtonTitle: "Cancel")
+        let locationPermissions = LocationPermissions(settingAlertTitles: alertTitles)
+        return locationPermissions
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let state = locationPermissions.permissionsState()
+        if state == .permissionsNotAsked {
+            locationPermissions.requestPermissions(handler: { (state) in
+                
+            })
+        }
+        
+//        let userDefaultsService: UserDefaultsSetting & UserDefaultsRemoving = DefaultUserDefaultsService()
+//        userDefaultsService.
+        
         dateTextField.datePicker.date = Date().addingTimeInterval(-60*60*48)
         dateTextField.set(doneTitle: "Ok")
         pickerTextField.reload(with: pickerManager)

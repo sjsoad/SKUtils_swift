@@ -9,16 +9,12 @@
 import UIKit
 import Photos
 
-class PhotoLibraryPermissions: NSObject, ServicePermissions {
+class PhotoLibraryPermissions: DefaultServicePermissions, ServicePermissions {
     
-    private(set) var alertTitles: AlertTitles
-    
-    required init(settingAlertTitles: AlertTitles) {
-        self.alertTitles = settingAlertTitles
-    }
 }
 
 // MARL: - PermissionStateble -
+
 extension PhotoLibraryPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
@@ -28,13 +24,14 @@ extension PhotoLibraryPermissions: PermissionsStateble {
         case .notDetermined:
             return .permissionsNotAsked
         case .restricted, .denied:
-            self.showSettingsAlert()
+            showSettingsAlert()
             return .permissionsDenied
         }
     }
 }
     
 // MARK: - PermissionsRequesting -
+
 extension PhotoLibraryPermissions: PermissionsRequesting {
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {

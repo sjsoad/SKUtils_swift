@@ -9,16 +9,21 @@
 import UIKit
 import CoreLocation
 
-class LocationPermissions: NSObject, ServicePermissions {
- 
-    private(set) var alertTitles: AlertTitles
+class LocationPermissions: DefaultServicePermissions, ServicePermissions {
+
+    private var locationManager: CLLocationManager!
+    private var requestPermissionsHandler: PermissionsStateHandler?
     
-    required init(settingAlertTitles: AlertTitles) {
-        self.alertTitles = settingAlertTitles
+    override init(settingAlertTitles: AlertTitles) {
+        super.init(settingAlertTitles: settingAlertTitles)
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
     }
+    
 }
 
 // MARK: - PermissionsStateble -
+
 extension LocationPermissions: PermissionsStateble {
     
     func permissionsState() -> PermissionsState {
@@ -32,4 +37,25 @@ extension LocationPermissions: PermissionsStateble {
             return .permissionsDenied
         }
     }
+}
+
+// MARK: - PermissionsRequesting -
+
+extension LocationPermissions: PermissionsRequesting {
+    
+    func requestPermissions(handler: @escaping PermissionsStateHandler) {
+        requestPermissionsHandler = handler
+        locationManager.requestAlwaysAuthorization()
+    }
+    
+}
+
+// MARK: - CLLocationManagerDelegate -
+
+extension LocationPermissions: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        requestPermissionsHandler?(permissionsState())
+    }
+    
 }

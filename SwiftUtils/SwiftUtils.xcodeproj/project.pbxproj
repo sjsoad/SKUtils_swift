@@ -987,10 +987,10 @@
 		A595A3811FCD7FCD0017CA52 /* Service Permissions */ = {
 			isa = PBXGroup;
 			children = (
-				A595A3821FCD7FCD0017CA52 /* Camera Permissions */,
-				A595A3841FCD7FCD0017CA52 /* Bluetooth Permissions */,
-				A595A3861FCD7FCD0017CA52 /* Contacts Permissions */,
 				A595A3881FCD7FCD0017CA52 /* Required */,
+				A595A3841FCD7FCD0017CA52 /* Bluetooth Permissions */,
+				A595A3821FCD7FCD0017CA52 /* Camera Permissions */,
+				A595A3861FCD7FCD0017CA52 /* Contacts Permissions */,
 				A595A38C1FCD7FCD0017CA52 /* Photos Permissions */,
 				A595A38E1FCD7FCD0017CA52 /* Location Permissions */,
 				A595A3901FCD7FCD0017CA52 /* Microphone Permissions */,
