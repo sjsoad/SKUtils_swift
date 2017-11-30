@@ -35,8 +35,8 @@ enum LocationUsage: String {
 
 class LocationService: CLLocationManager {
     
-    fileprivate var locationUsage: LocationUsage
-    fileprivate var locationPermissions: LocationPermissions
+    private var locationUsage: LocationUsage
+    private var locationPermissions: LocationPermissions
     
     init(withLocationUsage locationUsage: LocationUsage,
          locationPermissions: LocationPermissions) {

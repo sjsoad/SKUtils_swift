@@ -89,7 +89,9 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let handler = handler else { return }
+        guard let handler = handler,
+            configuration.components.indices.contains(component),
+            configuration.components[component].items.indices.contains(row)  else { return }
         let rowObject = configuration.components[component].items[row]
         let selectedIndex = IndexPath(row: row, section: component)
         // TODO - Check
