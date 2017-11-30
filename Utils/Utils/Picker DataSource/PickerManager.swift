@@ -81,17 +81,17 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     // MARK: - UIPickerViewDelegate -
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        guard itemExistsIn(component: component, at: row) else { return nil }
         return configuration.components[component].items[row].title
     }
 
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        guard itemExistsIn(component: component, at: row) else { return nil }
         return configuration.components[component].items[row].attributedTitle
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let handler = handler,
-            configuration.components.indices.contains(component),
-            configuration.components[component].items.indices.contains(row)  else { return }
+        guard let handler = handler, itemExistsIn(component: component, at: row) else { return }
         let rowObject = configuration.components[component].items[row]
         let selectedIndex = IndexPath(row: row, section: component)
         // TODO - Check
@@ -103,6 +103,14 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
             selectedIndexes.append(selectedIndex)
         }
         handler(rowObject, component, row)
+    }
+    
+    // MARK: - Private -
+    
+    private func itemExistsIn(component: Int, at row: Int) -> Bool {
+        guard configuration.components.indices.contains(component),
+            configuration.components[component].items.indices.contains(row) else { return false }
+        return true
     }
     
 }
