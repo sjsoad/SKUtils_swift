@@ -890,10 +890,10 @@
 			isa = PBXGroup;
 			children = (
 				A586EDAB1FD15B6D007749A5 /* ServicesRepository.swift */,
+				A586EDC31FD15C05007749A5 /* Text Inputs Service */,
 				A595A3731FCD7FCD0017CA52 /* Local Data Storage */,
 				A586EDAE1FD15BF1007749A5 /* Networking */,
 				A595A3921FCD7FCD0017CA52 /* User Default Service */,
-				A586EDC31FD15C05007749A5 /* Text Inputs Service */,
 				A595A3751FCD7FCD0017CA52 /* Timer Service */,
 				A595A37F1FCD7FCD0017CA52 /* Keychain Service */,
 				A586ED9F1FD15992007749A5 /* Validation Service */,

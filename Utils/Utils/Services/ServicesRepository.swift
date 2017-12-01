@@ -29,4 +29,10 @@ class ServicesRepository {
     class var keychainService: KeychainService {
         return DefaultKeychainService()
     }
+    
+    class var validationService: ValidationService {
+        return DefaultValidationService()
+    }
 }
+
+
