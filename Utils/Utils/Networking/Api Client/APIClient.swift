@@ -11,7 +11,20 @@ import Alamofire
 
 typealias ErrorHandler = (_ error: Error) -> Void
 
-class APIClient: NSObject {
+protocol APIClientService {
+    
+    func executeRequest<T: APIRequesting>(request: T,
+                                          success: ((_ response: T.Response) -> Void)?,
+                                          failure: ErrorHandler?) -> Request?
+    func executeMultipartRequest<T: APIMultipartRequesting>(request: T,
+                                                            success: ((_ response: T.Response) -> Void)?,
+                                                            failure: ErrorHandler?) -> Request?
+    func pauseAllRequests(pause: Bool)
+    func cancelAllRequests()
+    func cancel(task: URLSessionTask?)
+}
+
+class APIClient {
     
     private var sessionManager: SessionManager!
     
@@ -21,7 +34,11 @@ class APIClient: NSObject {
         self.sessionManager = sessionManager
     }
     
-    // MARK: - Public Methods
+}
+
+// MARK: - APIClientService -
+
+extension APIClient: APIClientService {
     
     @discardableResult
     func executeRequest<T: APIRequesting>(request: T,

@@ -534,7 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				A595A2F41FCD7FCD0017CA52 /* TextFieldAccessoryView */,
-				A595A4251FCD83A20017CA52 /* Protocols */,
+				A595A4251FCD83A20017CA52 /* Public Protocols */,
 				A595A2F31FCD7FCD0017CA52 /* PickerTextField.swift */,
 				A595A2F61FCD7FCD0017CA52 /* DatePickerField.swift */,
 				A595A2F71FCD7FCD0017CA52 /* PickerViewField.swift */,
@@ -646,12 +646,12 @@
 			isa = PBXGroup;
 			children = (
 				A595A3161FCD7FCD0017CA52 /* TextInputsManager.swift */,
-				A595A3171FCD7FCD0017CA52 /* Protocols */,
+				A595A3171FCD7FCD0017CA52 /* Public Protocols */,
 			);
 			path = "Text Inputs Manager";
 			sourceTree = "<group>";
 		};
-		A595A3171FCD7FCD0017CA52 /* Protocols */ = {
+		A595A3171FCD7FCD0017CA52 /* Public Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				A595A3181FCD7FCD0017CA52 /* TextFieldsManagerReloading.swift */,
@@ -659,7 +659,7 @@
 				A595A31A1FCD7FCD0017CA52 /* KeyboardHiding.swift */,
 				A595A31B1FCD7FCD0017CA52 /* FirstResponding.swift */,
 			);
-			path = Protocols;
+			path = "Public Protocols";
 			sourceTree = "<group>";
 		};
 		A595A31C1FCD7FCD0017CA52 /* Picker DataSource */ = {
@@ -1064,7 +1064,7 @@
 			path = "User Default Service";
 			sourceTree = "<group>";
 		};
-		A595A4251FCD83A20017CA52 /* Protocols */ = {
+		A595A4251FCD83A20017CA52 /* Public Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */,
@@ -1072,7 +1072,7 @@
 				A595A42A1FCD87230017CA52 /* DateSelectionHandlerSetting.swift */,
 				A595A42E1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift */,
 			);
-			path = Protocols;
+			path = "Public Protocols";
 			sourceTree = "<group>";
 		};
 		A5ABFB5B1F22356400548D89 /* Utils */ = {

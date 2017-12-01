@@ -8,13 +8,17 @@
 
 import UIKit
 
-class TextInputsManager: NSObject {
+protocol TextInputsService: KeyboardHiding, TextInputsClearing, TextFieldsManagerReloading, FirstResponding {
+    
+}
+
+class TextInputsManager: NSObject, TextInputsService {
     
     @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration: Double = 0.25
     @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
-    @IBOutlet fileprivate weak var containerView: UIView! {
+    @IBOutlet private weak var containerView: UIView! {
         didSet {
             configureManager()
         }
@@ -22,13 +26,13 @@ class TextInputsManager: NSObject {
     
     private var textInputs = [UIView]()
     
+    // MARK: - Private -
+    
     private func configureManager() {
         subscribeForKeyboardNotifications()
         gatherTextInputs()
         if hideOnTap == true { addTapGestureRecognizer() }
     }
-    
-    // MARK: - Private -
     
     private func gatherTextInputs() {
         let textFields: [UIView] = containerView.subviewsOf(type: UITextField.self).flatMap { (textField) -> UIView? in

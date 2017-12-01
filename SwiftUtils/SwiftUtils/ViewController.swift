@@ -46,11 +46,9 @@ class ViewController: UIViewController, ActivityViewable, AlertViewable, IpReque
         super.viewDidLoad()
         
         let state = locationPermissions.permissionsState()
-        if state == .permissionsNotAsked {
-            locationPermissions.requestPermissions(handler: { (state) in
+        locationPermissions.requestPermissions(handler: { (state) in
                 
-            })
-        }
+        })
         
 //        let userDefaultsService: UserDefaultsSetting & UserDefaultsRemoving = DefaultUserDefaultsService()
 //        userDefaultsService.
