@@ -95,7 +95,7 @@
 		A595A3E21FCD7FCE0017CA52 /* PopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A33A1FCD7FCD0017CA52 /* PopupPresenter.swift */; };
 		A595A3E31FCD7FCE0017CA52 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A33C1FCD7FCD0017CA52 /* PopupView.swift */; };
 		A595A3E41FCD7FCE0017CA52 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A595A33D1FCD7FCD0017CA52 /* ReadMe.rtf */; };
-		A595A3E51FCD7FCE0017CA52 /* UIAlertActioFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A33F1FCD7FCD0017CA52 /* UIAlertActioFactory.swift */; };
+		A595A3E51FCD7FCE0017CA52 /* AlertActioFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A33F1FCD7FCD0017CA52 /* AlertActioFactory.swift */; };
 		A595A3E61FCD7FCE0017CA52 /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3401FCD7FCD0017CA52 /* WindowFactory.swift */; };
 		A595A3EB1FCD7FCE0017CA52 /* Windowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A34A1FCD7FCD0017CA52 /* Windowable.swift */; };
 		A595A3EC1FCD7FCE0017CA52 /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A34B1FCD7FCD0017CA52 /* Navigatable.swift */; };
@@ -226,7 +226,7 @@
 		A595A33A1FCD7FCD0017CA52 /* PopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupPresenter.swift; sourceTree = "<group>"; };
 		A595A33C1FCD7FCD0017CA52 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		A595A33D1FCD7FCD0017CA52 /* ReadMe.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = ReadMe.rtf; sourceTree = "<group>"; };
-		A595A33F1FCD7FCD0017CA52 /* UIAlertActioFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActioFactory.swift; sourceTree = "<group>"; };
+		A595A33F1FCD7FCD0017CA52 /* AlertActioFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActioFactory.swift; sourceTree = "<group>"; };
 		A595A3401FCD7FCD0017CA52 /* WindowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
 		A595A34A1FCD7FCD0017CA52 /* Windowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Windowable.swift; sourceTree = "<group>"; };
 		A595A34B1FCD7FCD0017CA52 /* Navigatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
@@ -802,7 +802,7 @@
 		A595A33E1FCD7FCD0017CA52 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				A595A33F1FCD7FCD0017CA52 /* UIAlertActioFactory.swift */,
+				A595A33F1FCD7FCD0017CA52 /* AlertActioFactory.swift */,
 				A595A3401FCD7FCD0017CA52 /* WindowFactory.swift */,
 			);
 			path = Factories;
@@ -1252,7 +1252,7 @@
 				A595A39A1FCD7FCE0017CA52 /* ArrayDataSourceRepresentable.swift in Sources */,
 				A595A3C21FCD7FCE0017CA52 /* BottomBorderDecorator.swift in Sources */,
 				A586EDBF1FD15BF1007749A5 /* RequestErrorHandling.swift in Sources */,
-				A595A3E51FCD7FCE0017CA52 /* UIAlertActioFactory.swift in Sources */,
+				A595A3E51FCD7FCE0017CA52 /* AlertActioFactory.swift in Sources */,
 				A586EDA51FD159BA007749A5 /* EmailValidator.swift in Sources */,
 				A595A3D31FCD7FCE0017CA52 /* PickerManager.swift in Sources */,
 				A595A4131FCD7FCE0017CA52 /* PhotoLibraryPermissions.swift in Sources */,

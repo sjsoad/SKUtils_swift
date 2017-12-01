@@ -12,23 +12,23 @@ extension UIAlertAction {
     
     static func cancelAction(title: String?,
                              handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
-        return UIAlertAction.init(title: title,
-                                  style: .cancel,
-                                  handler: handler)
+        return UIAlertAction(title: title,
+                             style: .cancel,
+                             handler: handler)
     }
     
     static func destructiveAction(title: String?,
                                   handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
-        return UIAlertAction.init(title: title,
-                                  style: .destructive,
-                                  handler: handler)
+        return UIAlertAction(title: title,
+                             style: .destructive,
+                             handler: handler)
     }
     
     static func defaultAction(title: String?,
                               handler: ((UIAlertAction) -> Swift.Void)? = nil) -> UIAlertAction {
-        return UIAlertAction.init(title: title,
-                                  style: .default,
-                                  handler: handler)
+        return UIAlertAction(title: title,
+                             style: .default,
+                             handler: handler)
     }
     
 }
