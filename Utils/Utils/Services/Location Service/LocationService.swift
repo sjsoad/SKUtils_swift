@@ -23,6 +23,7 @@ var locationService: LocationService = {
                                          locationPermissions: locationPermissions)
     return locationSerice
 }()
+ iOS 11: Privacy - Location Always and When In Use Usage Description - new key
 /---------------------------------------------------------------------------------------------------------------------------- */
 
 import UIKit

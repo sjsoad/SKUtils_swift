@@ -8,16 +8,25 @@
 
 import Foundation
 
-class TimerService {
+protocol TimerService {
+    func start(timeInterval: TimeInterval, handler: @escaping (() -> Void))
+    func stop()
+}
+
+class DefaultTimerService {
 
     private var timer: Timer?
+
+}
+
+// MARK: - TimerService -
+
+extension DefaultTimerService: TimerService {
     
-    // MARK: - Public -
-    
-    func start(timeInterval: TimeInterval, handler: (() -> Void)? = nil) {
+    func start(timeInterval: TimeInterval, handler: @escaping (() -> Void)) {
         stop()
         timer = Timer(timeInterval: timeInterval, repeats: true, block: { (_) in
-            handler?()
+            handler()
         })
         timer?.fire()
         guard let timer = timer else { return }
@@ -28,5 +37,5 @@ class TimerService {
         timer?.invalidate()
         timer = nil
     }
-
+    
 }

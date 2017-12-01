@@ -10,42 +10,24 @@ import Foundation
 import CoreData
 import AERecord
 
-protocol DataStorageSaving {
-    
-    func save()
-}
-
-protocol DataStorageFetching {
+protocol LocalDataStorage {
     
     func fetchAll<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type,
                                                 withPredicate predicate: NSPredicate?,
                                                 orderedBy sortDescriptors: [NSSortDescriptor]?) -> [ManagedType]?
     func fetchOne<ManagedType: NSManagedObject>(from objectClass: ManagedType.Type,
                                                 withPredicate predicate: NSPredicate?) -> ManagedType?
-}
-
-protocol DataStorageCreating {
-    
-    @discardableResult
-    func create<ManagedType: NSManagedObject>(into: ManagedType.Type,
-                                              quantity: Int,
-                                              with setup:@escaping (Int, ManagedType) -> Void) -> [ManagedType]
-}
-
-protocol DataStorageUpdating {
-    
+    @discardableResult func create<ManagedType: NSManagedObject>(into: ManagedType.Type,
+                                                                 quantity: Int,
+                                                                 with setup:@escaping (Int, ManagedType) -> Void) -> [ManagedType]
     func updateObjects<ManagedType: NSManagedObject>(from: ManagedType.Type,
                                                      predicate: NSPredicate?,
                                                      with update:@escaping (Int, ManagedType) -> Void)
-    
-}
-
-protocol DataStorageDeleting {
-    
     func delete<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type, withPredicate predicate: NSPredicate?)
+    func save()
 }
 
-class LocalDataStorage {
+class DefaultLocalDataStorage {
     
     static func initialize() {
         do {
@@ -58,7 +40,7 @@ class LocalDataStorage {
     
 }
 
-extension LocalDataStorage: DataStorageFetching {
+extension DefaultLocalDataStorage: LocalDataStorage {
     
     func fetchAll<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type,
                                                 withPredicate predicate: NSPredicate? = nil,
@@ -79,10 +61,6 @@ extension LocalDataStorage: DataStorageFetching {
         }
     }
     
-}
-
-extension LocalDataStorage: DataStorageCreating {
-    
     @discardableResult
     func create<ManagedType: NSManagedObject>(into: ManagedType.Type,
                                               quantity: Int,
@@ -99,10 +77,6 @@ extension LocalDataStorage: DataStorageCreating {
         return createdObjects
     }
     
-}
-
-extension LocalDataStorage: DataStorageUpdating {
-    
     func updateObjects<ManagedType: NSManagedObject>(from: ManagedType.Type,
                                                      predicate: NSPredicate? = nil,
                                                      with update:@escaping (Int, ManagedType) -> Void) {
@@ -117,10 +91,6 @@ extension LocalDataStorage: DataStorageUpdating {
         save()
     }
     
-}
-
-extension LocalDataStorage: DataStorageDeleting {
-    
     func delete<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type, withPredicate predicate: NSPredicate? = nil) {
         if let predicate = predicate {
             ManagedType.deleteAll(with: predicate)
@@ -129,10 +99,6 @@ extension LocalDataStorage: DataStorageDeleting {
         }
         save()
     }
-    
-}
-
-extension LocalDataStorage: DataStorageSaving {
     
     func save() {
         AERecord.saveAndWait()

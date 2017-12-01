@@ -12,43 +12,82 @@ import SwiftKeychainWrapper
 private let userAccessToken = "AccessToken"
 private let loggedInUser = "LoggedInUser"
 
-class KeychainService: NSObject {
+protocol AccessTokenManaging {
+    func save(accessToken: String)
+    func loadAccessToken() -> String?
+    func deleteAccessToken()
+}
 
-    // MARK: - Access Token -
+protocol PasswordManaging {
+    func save(password: String, for email: String)
+    func password(for email: String) -> String?
+}
+
+protocol LoggedInUserManaging {
+    func save(loggedInUserId: Int)
+    func loadLoggedInUserId() -> Int?
+    func deleteLoggedInUserId()
+}
+
+protocol KeychainService: AccessTokenManaging, PasswordManaging, LoggedInUserManaging {
     
-    static func save(accessToken: String) {
-        KeychainWrapper.standard.set(accessToken, forKey: userAccessToken)
+}
+
+class DefaultKeychainService: NSObject, KeychainService {
+    
+    private var keychain: KeychainWrapper
+    
+    override init() {
+        self.keychain = KeychainWrapper.standard
     }
     
-    static func loadAccessToken() -> String? {
-        return KeychainWrapper.standard.string(forKey: userAccessToken)
+}
+
+// MARK: - AccessTokenManaging -
+
+extension DefaultKeychainService: AccessTokenManaging {
+    
+    func save(accessToken: String) {
+        keychain.set(accessToken, forKey: userAccessToken)
     }
     
-    static func deleteAccessToken() {
-        KeychainWrapper.standard.removeObject(forKey: userAccessToken)
+    func loadAccessToken() -> String? {
+        return keychain.string(forKey: userAccessToken)
     }
     
-    // MARK: - Password -
-    
-    static func save(password: String, for email: String) {
-        KeychainWrapper.standard.set(password, forKey: email)
+    func deleteAccessToken() {
+        keychain.removeObject(forKey: userAccessToken)
     }
     
-    static func password(for email: String) -> String? {
-        return KeychainWrapper.standard.string(forKey: email)
+    
+}
+
+// MARK: - PasswordManaging -
+
+extension DefaultKeychainService: PasswordManaging {
+    
+    func save(password: String, for email: String) {
+        keychain.set(password, forKey: email)
     }
     
-    // MARK: - Autologin -
-    
-    static func save(loggedInUserId: Int) {
-        KeychainWrapper.standard.set(loggedInUserId, forKey: loggedInUser)
-    }
-    
-    static func loadLoggedInUserId() -> Int? {
-        return KeychainWrapper.standard.integer(forKey: loggedInUser)
-    }
-    
-    static func deleteLoggedInUserId() {
-        KeychainWrapper.standard.removeObject(forKey: loggedInUser)
+    func password(for email: String) -> String? {
+        return keychain.string(forKey: email)
     }
 }
+
+// MARK: - LoggedInUserManaging -
+
+extension DefaultKeychainService: LoggedInUserManaging {
+    func save(loggedInUserId: Int) {
+        keychain.set(loggedInUserId, forKey: loggedInUser)
+    }
+    
+    func loadLoggedInUserId() -> Int? {
+        return keychain.integer(forKey: loggedInUser)
+    }
+    
+    func deleteLoggedInUserId() {
+        keychain.removeObject(forKey: loggedInUser)
+    }
+}
+

@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = ScrollingViewController()
 //        window?.makeKeyAndVisible()
         
+        let vs = DefaultValidationService()
+        
         return true
     }
 
