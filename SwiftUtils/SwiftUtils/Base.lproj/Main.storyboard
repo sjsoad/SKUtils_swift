@@ -19,54 +19,11 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYA-XV-ADm" customClass="DatePickerField" customModule="SwiftUtils" customModuleProvider="target">
-                                <rect key="frame" x="20" y="318.5" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.33333333329999998" green="0.73333333329999995" blue="0.78823529410000004" alpha="1" colorSpace="deviceRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-2P-ww2" customClass="PickerViewField" customModule="SwiftUtils" customModuleProvider="target">
-                                <rect key="frame" x="20" y="368.5" width="335" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.33333333329999998" green="0.73333333329999995" blue="0.78823529410000004" alpha="1" colorSpace="deviceRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kP2-2P-ww2" firstAttribute="centerX" secondItem="aYA-XV-ADm" secondAttribute="centerX" id="6r1-LX-9Ci"/>
-                            <constraint firstItem="aYA-XV-ADm" firstAttribute="leading" secondItem="15f-VH-4W3" secondAttribute="leading" constant="20" id="7IC-Pg-NO6"/>
-                            <constraint firstItem="kP2-2P-ww2" firstAttribute="width" secondItem="aYA-XV-ADm" secondAttribute="width" id="E6V-jz-tJQ"/>
-                            <constraint firstItem="aYA-XV-ADm" firstAttribute="centerX" secondItem="15f-VH-4W3" secondAttribute="centerX" id="G9i-KB-dAh"/>
-                            <constraint firstItem="kP2-2P-ww2" firstAttribute="top" secondItem="aYA-XV-ADm" secondAttribute="bottom" constant="20" id="Kfh-gt-oB0"/>
-                            <constraint firstItem="15f-VH-4W3" firstAttribute="trailing" secondItem="aYA-XV-ADm" secondAttribute="trailing" constant="20" id="jgA-Cy-8af"/>
-                            <constraint firstItem="aYA-XV-ADm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="um0-yl-e44"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="15f-VH-4W3"/>
                     </view>
-                    <connections>
-                        <outlet property="dateTextField" destination="aYA-XV-ADm" id="YO4-EC-KNC"/>
-                        <outlet property="pickerTextField" destination="kP2-2P-ww2" id="A0b-t7-Wfq"/>
-                        <outlet property="textInputsManager" destination="gcw-gK-k2u" id="5ef-vA-vNs"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="gcw-gK-k2u" customClass="TextInputsManager" customModule="SwiftUtils" customModuleProvider="target">
-                    <connections>
-                        <outlet property="containerView" destination="8bC-Xf-vdC" id="6LL-y4-9IP"/>
-                    </connections>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="117.39130434782609"/>
         </scene>
