@@ -11,7 +11,7 @@ import CoreBluetooth
 
 class BluetoothPermissions: DefaultServicePermissions {
 
-    private var bluetoothManager: CBCentralManager!
+    private var bluetoothManager: CBCentralManager?
     private var requestPermissionsHandler: ((PermissionsState) -> Void)?
     
 }
