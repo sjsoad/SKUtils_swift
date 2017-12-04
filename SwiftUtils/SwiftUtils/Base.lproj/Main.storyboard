@@ -42,28 +42,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqk-7Y-QiI" customClass="TestView" customModule="SwiftUtils" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="F37-no-I75"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="nibNameFromIB" value="PopupView"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="15f-VH-4W3" firstAttribute="trailing" secondItem="Bqk-7Y-QiI" secondAttribute="trailing" id="05l-5W-FlP"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="centerX" secondItem="aYA-XV-ADm" secondAttribute="centerX" id="6r1-LX-9Ci"/>
                             <constraint firstItem="aYA-XV-ADm" firstAttribute="leading" secondItem="15f-VH-4W3" secondAttribute="leading" constant="20" id="7IC-Pg-NO6"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="width" secondItem="aYA-XV-ADm" secondAttribute="width" id="E6V-jz-tJQ"/>
                             <constraint firstItem="aYA-XV-ADm" firstAttribute="centerX" secondItem="15f-VH-4W3" secondAttribute="centerX" id="G9i-KB-dAh"/>
                             <constraint firstItem="kP2-2P-ww2" firstAttribute="top" secondItem="aYA-XV-ADm" secondAttribute="bottom" constant="20" id="Kfh-gt-oB0"/>
                             <constraint firstItem="15f-VH-4W3" firstAttribute="trailing" secondItem="aYA-XV-ADm" secondAttribute="trailing" constant="20" id="jgA-Cy-8af"/>
-                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="top" secondItem="15f-VH-4W3" secondAttribute="top" id="uFk-iH-zR7"/>
-                            <constraint firstItem="Bqk-7Y-QiI" firstAttribute="leading" secondItem="15f-VH-4W3" secondAttribute="leading" id="uH5-j2-Sp3"/>
                             <constraint firstItem="aYA-XV-ADm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="um0-yl-e44"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="15f-VH-4W3"/>
@@ -72,7 +59,6 @@
                         <outlet property="dateTextField" destination="aYA-XV-ADm" id="YO4-EC-KNC"/>
                         <outlet property="pickerTextField" destination="kP2-2P-ww2" id="A0b-t7-Wfq"/>
                         <outlet property="textInputsManager" destination="gcw-gK-k2u" id="5ef-vA-vNs"/>
-                        <outlet property="xibView" destination="Bqk-7Y-QiI" id="bQc-0A-22E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

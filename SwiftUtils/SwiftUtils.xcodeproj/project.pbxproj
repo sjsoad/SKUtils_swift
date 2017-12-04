@@ -9,21 +9,17 @@
 /* Begin PBXBuildFile section */
 		33D3A46F31DAD41EB8D313C8 /* Pods_SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0158DFDDD7007ABA9DEDD9E8 /* Pods_SwiftUtils.framework */; };
 		A5241C471FA74A02008463EE /* ScrollingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5241C3A1FA74A01008463EE /* ScrollingViewController.xib */; };
-		A5241C481FA74A02008463EE /* IpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C3C1FA74A02008463EE /* IpRequest.swift */; };
-		A5241C491FA74A02008463EE /* IpRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C3D1FA74A02008463EE /* IpRequesting.swift */; };
-		A5241C4A1FA74A02008463EE /* IpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C3E1FA74A02008463EE /* IpResponse.swift */; };
-		A5241C4B1FA74A02008463EE /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5241C3F1FA74A02008463EE /* PopupView.xib */; };
-		A5241C4C1FA74A02008463EE /* TestPopupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C401FA74A02008463EE /* TestPopupPresenter.swift */; };
-		A5241C4D1FA74A02008463EE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C411FA74A02008463EE /* TestView.swift */; };
-		A5241C4E1FA74A02008463EE /* TestPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5241C421FA74A02008463EE /* TestPopup.xib */; };
-		A5241C4F1FA74A02008463EE /* TestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C431FA74A02008463EE /* TestPopup.swift */; };
-		A5241C501FA74A02008463EE /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5241C441FA74A02008463EE /* TestView.xib */; };
 		A5241C511FA74A02008463EE /* ScrollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C451FA74A02008463EE /* ScrollingViewController.swift */; };
 		A5241C521FA74A02008463EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5241C461FA74A02008463EE /* ViewController.swift */; };
 		A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57057221EF117C40092CDAB /* AppDelegate.swift */; };
 		A57057281EF117C40092CDAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A57057261EF117C40092CDAB /* Main.storyboard */; };
 		A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A57057291EF117C40092CDAB /* Assets.xcassets */; };
 		A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */; };
+		A582AB951FD52C2200ECDE2F /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB8C1FD52C2100ECDE2F /* PhotoLibraryPermissions.swift */; };
+		A582AB961FD52C2200ECDE2F /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB8E1FD52C2100ECDE2F /* MicrophonePermissions.swift */; };
+		A582AB971FD52C2200ECDE2F /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB901FD52C2100ECDE2F /* BluetoothPermissions.swift */; };
+		A582AB981FD52C2200ECDE2F /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB921FD52C2100ECDE2F /* ContactsPermissions.swift */; };
+		A582AB991FD52C2200ECDE2F /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB941FD52C2100ECDE2F /* LocationPermissions.swift */; };
 		A586EDA51FD159BA007749A5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA11FD159BA007749A5 /* EmailValidator.swift */; };
 		A586EDA71FD159BA007749A5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA31FD159BA007749A5 /* PasswordValidator.swift */; };
 		A586EDAA1FD159CA007749A5 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA91FD159CA007749A5 /* ValidationService.swift */; };
@@ -115,17 +111,9 @@
 		A595A4051FCD7FCE0017CA52 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3711FCD7FCD0017CA52 /* Utils.swift */; };
 		A595A4061FCD7FCE0017CA52 /* LocalDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3741FCD7FCD0017CA52 /* LocalDataStorage.swift */; };
 		A595A4071FCD7FCE0017CA52 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3761FCD7FCD0017CA52 /* TimerService.swift */; };
-		A595A4081FCD7FCE0017CA52 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3781FCD7FCD0017CA52 /* LocationService.swift */; };
 		A595A40C1FCD7FCE0017CA52 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3801FCD7FCD0017CA52 /* KeychainService.swift */; };
 		A595A40D1FCD7FCE0017CA52 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */; };
-		A595A40E1FCD7FCE0017CA52 /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3851FCD7FCD0017CA52 /* BluetoothPermissions.swift */; };
-		A595A40F1FCD7FCE0017CA52 /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3871FCD7FCD0017CA52 /* ContactsPermissions.swift */; };
-		A595A4101FCD7FCE0017CA52 /* PermissionsStateble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3891FCD7FCD0017CA52 /* PermissionsStateble.swift */; };
-		A595A4111FCD7FCE0017CA52 /* PermissionsRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38A1FCD7FCD0017CA52 /* PermissionsRequesting.swift */; };
 		A595A4121FCD7FCE0017CA52 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */; };
-		A595A4131FCD7FCE0017CA52 /* PhotoLibraryPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38D1FCD7FCD0017CA52 /* PhotoLibraryPermissions.swift */; };
-		A595A4141FCD7FCE0017CA52 /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38F1FCD7FCD0017CA52 /* LocationPermissions.swift */; };
-		A595A4151FCD7FCE0017CA52 /* MicrophonePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3911FCD7FCD0017CA52 /* MicrophonePermissions.swift */; };
 		A595A4161FCD7FCE0017CA52 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */; };
 		A595A4281FCD83A20017CA52 /* PickerViewFieldReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */; };
 		A595A4291FCD83A20017CA52 /* PickerDoneTitleSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A4271FCD83A20017CA52 /* PickerDoneTitleSetting.swift */; };
@@ -138,15 +126,6 @@
 		27608888736C53EFEA326DBA /* Pods-SwiftUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.release.xcconfig"; sourceTree = "<group>"; };
 		4F4F5465E59EA9B6DE358D33 /* Pods-SwiftUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtils/Pods-SwiftUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		A5241C3A1FA74A01008463EE /* ScrollingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollingViewController.xib; sourceTree = "<group>"; };
-		A5241C3C1FA74A02008463EE /* IpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequest.swift; sourceTree = "<group>"; };
-		A5241C3D1FA74A02008463EE /* IpRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpRequesting.swift; sourceTree = "<group>"; };
-		A5241C3E1FA74A02008463EE /* IpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IpResponse.swift; sourceTree = "<group>"; };
-		A5241C3F1FA74A02008463EE /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
-		A5241C401FA74A02008463EE /* TestPopupPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupPresenter.swift; sourceTree = "<group>"; };
-		A5241C411FA74A02008463EE /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		A5241C421FA74A02008463EE /* TestPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestPopup.xib; sourceTree = "<group>"; };
-		A5241C431FA74A02008463EE /* TestPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopup.swift; sourceTree = "<group>"; };
-		A5241C441FA74A02008463EE /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		A5241C451FA74A02008463EE /* ScrollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollingViewController.swift; sourceTree = "<group>"; };
 		A5241C461FA74A02008463EE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A570571F1EF117C40092CDAB /* SwiftUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +134,11 @@
 		A57057291EF117C40092CDAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A570572C1EF117C40092CDAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A570572E1EF117C40092CDAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A582AB8C1FD52C2100ECDE2F /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
+		A582AB8E1FD52C2100ECDE2F /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
+		A582AB901FD52C2100ECDE2F /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
+		A582AB921FD52C2100ECDE2F /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
+		A582AB941FD52C2100ECDE2F /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
 		A586EDA11FD159BA007749A5 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A586EDA31FD159BA007749A5 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		A586EDA91FD159CA007749A5 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
@@ -246,17 +230,9 @@
 		A595A3711FCD7FCD0017CA52 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A595A3741FCD7FCD0017CA52 /* LocalDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataStorage.swift; sourceTree = "<group>"; };
 		A595A3761FCD7FCD0017CA52 /* TimerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
-		A595A3781FCD7FCD0017CA52 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A595A3801FCD7FCD0017CA52 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
-		A595A3851FCD7FCD0017CA52 /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
-		A595A3871FCD7FCD0017CA52 /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
-		A595A3891FCD7FCD0017CA52 /* PermissionsStateble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsStateble.swift; sourceTree = "<group>"; };
-		A595A38A1FCD7FCD0017CA52 /* PermissionsRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionsRequesting.swift; sourceTree = "<group>"; };
 		A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
-		A595A38D1FCD7FCD0017CA52 /* PhotoLibraryPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPermissions.swift; sourceTree = "<group>"; };
-		A595A38F1FCD7FCD0017CA52 /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
-		A595A3911FCD7FCD0017CA52 /* MicrophonePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophonePermissions.swift; sourceTree = "<group>"; };
 		A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewFieldReloading.swift; sourceTree = "<group>"; };
 		A595A4271FCD83A20017CA52 /* PickerDoneTitleSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerDoneTitleSetting.swift; sourceTree = "<group>"; };
@@ -285,16 +261,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A5241C3B1FA74A02008463EE /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				A5241C3C1FA74A02008463EE /* IpRequest.swift */,
-				A5241C3D1FA74A02008463EE /* IpRequesting.swift */,
-				A5241C3E1FA74A02008463EE /* IpResponse.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		A57057161EF117C40092CDAB = {
 			isa = PBXGroup;
 			children = (
@@ -317,15 +283,8 @@
 		A57057211EF117C40092CDAB /* SwiftUtils */ = {
 			isa = PBXGroup;
 			children = (
-				A5241C3F1FA74A02008463EE /* PopupView.xib */,
-				A5241C3B1FA74A02008463EE /* Request */,
 				A5241C451FA74A02008463EE /* ScrollingViewController.swift */,
 				A5241C3A1FA74A01008463EE /* ScrollingViewController.xib */,
-				A5241C431FA74A02008463EE /* TestPopup.swift */,
-				A5241C421FA74A02008463EE /* TestPopup.xib */,
-				A5241C401FA74A02008463EE /* TestPopupPresenter.swift */,
-				A5241C411FA74A02008463EE /* TestView.swift */,
-				A5241C441FA74A02008463EE /* TestView.xib */,
 				A5241C461FA74A02008463EE /* ViewController.swift */,
 				A57057221EF117C40092CDAB /* AppDelegate.swift */,
 				A57057261EF117C40092CDAB /* Main.storyboard */,
@@ -334,6 +293,46 @@
 				A570572E1EF117C40092CDAB /* Info.plist */,
 			);
 			path = SwiftUtils;
+			sourceTree = "<group>";
+		};
+		A582AB8B1FD52C2100ECDE2F /* Photos Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				A582AB8C1FD52C2100ECDE2F /* PhotoLibraryPermissions.swift */,
+			);
+			path = "Photos Permissions";
+			sourceTree = "<group>";
+		};
+		A582AB8D1FD52C2100ECDE2F /* Microphone Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				A582AB8E1FD52C2100ECDE2F /* MicrophonePermissions.swift */,
+			);
+			path = "Microphone Permissions";
+			sourceTree = "<group>";
+		};
+		A582AB8F1FD52C2100ECDE2F /* Bluetooth Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				A582AB901FD52C2100ECDE2F /* BluetoothPermissions.swift */,
+			);
+			path = "Bluetooth Permissions";
+			sourceTree = "<group>";
+		};
+		A582AB911FD52C2100ECDE2F /* Contacts Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				A582AB921FD52C2100ECDE2F /* ContactsPermissions.swift */,
+			);
+			path = "Contacts Permissions";
+			sourceTree = "<group>";
+		};
+		A582AB931FD52C2100ECDE2F /* Location Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				A582AB941FD52C2100ECDE2F /* LocationPermissions.swift */,
+			);
+			path = "Location Permissions";
 			sourceTree = "<group>";
 		};
 		A586ED9F1FD15992007749A5 /* Validation Service */ = {
@@ -897,7 +896,6 @@
 				A595A3751FCD7FCD0017CA52 /* Timer Service */,
 				A595A37F1FCD7FCD0017CA52 /* Keychain Service */,
 				A586ED9F1FD15992007749A5 /* Validation Service */,
-				A595A3771FCD7FCD0017CA52 /* Location Service */,
 				A595A3811FCD7FCD0017CA52 /* Service Permissions */,
 			);
 			path = Services;
@@ -919,14 +917,6 @@
 			path = "Timer Service";
 			sourceTree = "<group>";
 		};
-		A595A3771FCD7FCD0017CA52 /* Location Service */ = {
-			isa = PBXGroup;
-			children = (
-				A595A3781FCD7FCD0017CA52 /* LocationService.swift */,
-			);
-			path = "Location Service";
-			sourceTree = "<group>";
-		};
 		A595A37F1FCD7FCD0017CA52 /* Keychain Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,12 +929,12 @@
 			isa = PBXGroup;
 			children = (
 				A595A3881FCD7FCD0017CA52 /* Required */,
-				A595A3841FCD7FCD0017CA52 /* Bluetooth Permissions */,
 				A595A3821FCD7FCD0017CA52 /* Camera Permissions */,
-				A595A3861FCD7FCD0017CA52 /* Contacts Permissions */,
-				A595A38C1FCD7FCD0017CA52 /* Photos Permissions */,
-				A595A38E1FCD7FCD0017CA52 /* Location Permissions */,
-				A595A3901FCD7FCD0017CA52 /* Microphone Permissions */,
+				A582AB8B1FD52C2100ECDE2F /* Photos Permissions */,
+				A582AB911FD52C2100ECDE2F /* Contacts Permissions */,
+				A582AB8D1FD52C2100ECDE2F /* Microphone Permissions */,
+				A582AB8F1FD52C2100ECDE2F /* Bluetooth Permissions */,
+				A582AB931FD52C2100ECDE2F /* Location Permissions */,
 			);
 			path = "Service Permissions";
 			sourceTree = "<group>";
@@ -957,54 +947,12 @@
 			path = "Camera Permissions";
 			sourceTree = "<group>";
 		};
-		A595A3841FCD7FCD0017CA52 /* Bluetooth Permissions */ = {
-			isa = PBXGroup;
-			children = (
-				A595A3851FCD7FCD0017CA52 /* BluetoothPermissions.swift */,
-			);
-			path = "Bluetooth Permissions";
-			sourceTree = "<group>";
-		};
-		A595A3861FCD7FCD0017CA52 /* Contacts Permissions */ = {
-			isa = PBXGroup;
-			children = (
-				A595A3871FCD7FCD0017CA52 /* ContactsPermissions.swift */,
-			);
-			path = "Contacts Permissions";
-			sourceTree = "<group>";
-		};
 		A595A3881FCD7FCD0017CA52 /* Required */ = {
 			isa = PBXGroup;
 			children = (
-				A595A3891FCD7FCD0017CA52 /* PermissionsStateble.swift */,
-				A595A38A1FCD7FCD0017CA52 /* PermissionsRequesting.swift */,
 				A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */,
 			);
 			path = Required;
-			sourceTree = "<group>";
-		};
-		A595A38C1FCD7FCD0017CA52 /* Photos Permissions */ = {
-			isa = PBXGroup;
-			children = (
-				A595A38D1FCD7FCD0017CA52 /* PhotoLibraryPermissions.swift */,
-			);
-			path = "Photos Permissions";
-			sourceTree = "<group>";
-		};
-		A595A38E1FCD7FCD0017CA52 /* Location Permissions */ = {
-			isa = PBXGroup;
-			children = (
-				A595A38F1FCD7FCD0017CA52 /* LocationPermissions.swift */,
-			);
-			path = "Location Permissions";
-			sourceTree = "<group>";
-		};
-		A595A3901FCD7FCD0017CA52 /* Microphone Permissions */ = {
-			isa = PBXGroup;
-			children = (
-				A595A3911FCD7FCD0017CA52 /* MicrophonePermissions.swift */,
-			);
-			path = "Microphone Permissions";
 			sourceTree = "<group>";
 		};
 		A595A3921FCD7FCD0017CA52 /* User Default Service */ = {
@@ -1106,15 +1054,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5241C501FA74A02008463EE /* TestView.xib in Resources */,
 				A570572D1EF117C40092CDAB /* LaunchScreen.storyboard in Resources */,
 				A595A3991FCD7FCE0017CA52 /* ReadMe.rtf in Resources */,
 				A595A3AA1FCD7FCE0017CA52 /* DropdownView.xib in Resources */,
 				A595A3D41FCD7FCE0017CA52 /* ReadMe.rtf in Resources */,
 				A570572A1EF117C40092CDAB /* Assets.xcassets in Resources */,
-				A5241C4E1FA74A02008463EE /* TestPopup.xib in Resources */,
 				A5241C471FA74A02008463EE /* ScrollingViewController.xib in Resources */,
-				A5241C4B1FA74A02008463EE /* PopupView.xib in Resources */,
 				A57057281EF117C40092CDAB /* Main.storyboard in Resources */,
 				A595A3E41FCD7FCE0017CA52 /* ReadMe.rtf in Resources */,
 				A595A3A91FCD7FCE0017CA52 /* DropdownCell.xib in Resources */,
@@ -1193,24 +1138,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A595A4151FCD7FCE0017CA52 /* MicrophonePermissions.swift in Sources */,
 				A595A3F01FCD7FCE0017CA52 /* AlertPresentable.swift in Sources */,
 				A595A3BB1FCD7FCE0017CA52 /* DatePickerField.swift in Sources */,
 				A595A39C1FCD7FCE0017CA52 /* TableViewRowEditing.swift in Sources */,
-				A5241C481FA74A02008463EE /* IpRequest.swift in Sources */,
-				A5241C491FA74A02008463EE /* IpRequesting.swift in Sources */,
 				A586EDC01FD15BF1007749A5 /* RequestExecuting.swift in Sources */,
 				A586EDAC1FD15B6D007749A5 /* ServicesRepository.swift in Sources */,
 				A595A42B1FCD87230017CA52 /* DateSelectionHandlerSetting.swift in Sources */,
 				A595A3C31FCD7FCE0017CA52 /* Decorator.swift in Sources */,
-				A595A4111FCD7FCE0017CA52 /* PermissionsRequesting.swift in Sources */,
 				A595A4291FCD83A20017CA52 /* PickerDoneTitleSetting.swift in Sources */,
 				A586EDBB1FD15BF1007749A5 /* APIRequesting.swift in Sources */,
 				A595A4031FCD7FCE0017CA52 /* TableViewAnimator.swift in Sources */,
 				A595A3D61FCD7FCE0017CA52 /* DesignableView.swift in Sources */,
-				A595A4101FCD7FCE0017CA52 /* PermissionsStateble.swift in Sources */,
 				A586EDC21FD15BF1007749A5 /* ErrorParser.swift in Sources */,
-				A595A4081FCD7FCE0017CA52 /* LocationService.swift in Sources */,
 				A595A3A31FCD7FCE0017CA52 /* DataSourceSectionRepresentable.swift in Sources */,
 				A595A3D81FCD7FCE0017CA52 /* Array+JSON.swift in Sources */,
 				A595A40D1FCD7FCE0017CA52 /* CameraPermissions.swift in Sources */,
@@ -1218,7 +1157,6 @@
 				A595A3E61FCD7FCE0017CA52 /* WindowFactory.swift in Sources */,
 				A595A39E1FCD7FCE0017CA52 /* RowMoving.swift in Sources */,
 				A595A42F1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift in Sources */,
-				A5241C4D1FA74A02008463EE /* TestView.swift in Sources */,
 				A595A4061FCD7FCE0017CA52 /* LocalDataStorage.swift in Sources */,
 				A595A3DF1FCD7FCE0017CA52 /* String+JSON.swift in Sources */,
 				A595A4041FCD7FCE0017CA52 /* ShareHelper.swift in Sources */,
@@ -1229,6 +1167,7 @@
 				A586EDBD1FD15BF1007749A5 /* APIMultipartRequesting.swift in Sources */,
 				A595A3A81FCD7FCE0017CA52 /* DropdownView.swift in Sources */,
 				A595A3C01FCD7FCE0017CA52 /* XibLoadableView.swift in Sources */,
+				A582AB951FD52C2200ECDE2F /* PhotoLibraryPermissions.swift in Sources */,
 				A595A3B91FCD7FCE0017CA52 /* PickerTextField.swift in Sources */,
 				A595A3A51FCD7FCE0017CA52 /* ReusableView.swift in Sources */,
 				A586EDCA1FD15C05007749A5 /* TextInputsManager.swift in Sources */,
@@ -1241,10 +1180,13 @@
 				A595A3DA1FCD7FCE0017CA52 /* UINavigationController+Utils.swift in Sources */,
 				A586EDCD1FD15C05007749A5 /* KeyboardHiding.swift in Sources */,
 				A595A4281FCD83A20017CA52 /* PickerViewFieldReloading.swift in Sources */,
+				A582AB991FD52C2200ECDE2F /* LocationPermissions.swift in Sources */,
 				A595A3E21FCD7FCE0017CA52 /* PopupPresenter.swift in Sources */,
+				A582AB981FD52C2200ECDE2F /* ContactsPermissions.swift in Sources */,
 				A595A3AB1FCD7FCE0017CA52 /* DropdownDataSourceModel.swift in Sources */,
 				A595A3A01FCD7FCE0017CA52 /* ReusableCell.swift in Sources */,
 				A595A3EE1FCD7FCE0017CA52 /* Ponsomizer.swift in Sources */,
+				A582AB961FD52C2200ECDE2F /* MicrophonePermissions.swift in Sources */,
 				A595A4011FCD7FCE0017CA52 /* RandomNumberHelper.swift in Sources */,
 				A595A39D1FCD7FCE0017CA52 /* TableViewRowMoving.swift in Sources */,
 				A595A40C1FCD7FCE0017CA52 /* KeychainService.swift in Sources */,
@@ -1255,20 +1197,17 @@
 				A595A3E51FCD7FCE0017CA52 /* AlertActioFactory.swift in Sources */,
 				A586EDA51FD159BA007749A5 /* EmailValidator.swift in Sources */,
 				A595A3D31FCD7FCE0017CA52 /* PickerManager.swift in Sources */,
-				A595A4131FCD7FCE0017CA52 /* PhotoLibraryPermissions.swift in Sources */,
 				A595A3BD1FCD7FCE0017CA52 /* BaseTextField.swift in Sources */,
 				A595A3951FCD7FCE0017CA52 /* TableViewArrayDataSource.swift in Sources */,
 				A586EDCE1FD15C05007749A5 /* FirstResponding.swift in Sources */,
 				A595A3BF1FCD7FCE0017CA52 /* EmailTextField.swift in Sources */,
 				A586EDCB1FD15C05007749A5 /* TextFieldsManagerReloading.swift in Sources */,
 				A5241C511FA74A02008463EE /* ScrollingViewController.swift in Sources */,
-				A5241C4A1FA74A02008463EE /* IpResponse.swift in Sources */,
 				A595A3BC1FCD7FCE0017CA52 /* PickerViewField.swift in Sources */,
 				A595A3E11FCD7FCE0017CA52 /* UIViewContollrer+Presentable.swift in Sources */,
 				A595A39F1FCD7FCE0017CA52 /* ConfigurableCell.swift in Sources */,
 				A595A3D71FCD7FCE0017CA52 /* UIView+Load.swift in Sources */,
 				A595A3BA1FCD7FCE0017CA52 /* TextFieldAccessoryView.swift in Sources */,
-				A595A40F1FCD7FCE0017CA52 /* ContactsPermissions.swift in Sources */,
 				A595A39B1FCD7FCE0017CA52 /* CollectionViewRowMoving.swift in Sources */,
 				A595A3DD1FCD7FCE0017CA52 /* String+NSRange.swift in Sources */,
 				A595A3EB1FCD7FCE0017CA52 /* Windowable.swift in Sources */,
@@ -1276,21 +1215,18 @@
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
 				A586EDBE1FD15BF1007749A5 /* ActivityViewable.swift in Sources */,
 				A595A3971FCD7FCE0017CA52 /* SectionFooter.swift in Sources */,
+				A582AB971FD52C2200ECDE2F /* BluetoothPermissions.swift in Sources */,
 				A595A3EF1FCD7FCE0017CA52 /* Presentable.swift in Sources */,
 				A595A3A61FCD7FCE0017CA52 /* DropdownPresenter.swift in Sources */,
 				A5241C521FA74A02008463EE /* ViewController.swift in Sources */,
 				A595A3DC1FCD7FCE0017CA52 /* Dictionary+JSON.swift in Sources */,
-				A595A4141FCD7FCE0017CA52 /* LocationPermissions.swift in Sources */,
 				A586EDCC1FD15C05007749A5 /* TextInputsClearing.swift in Sources */,
 				A595A3941FCD7FCE0017CA52 /* CollectionViewArrayDataSource.swift in Sources */,
 				A595A4051FCD7FCE0017CA52 /* Utils.swift in Sources */,
 				A595A4001FCD7FCE0017CA52 /* QueryStringParser.swift in Sources */,
 				A595A3981FCD7FCE0017CA52 /* SectionHeader.swift in Sources */,
 				A595A3FC1FCD7FCE0017CA52 /* CollectionViewHelper.swift in Sources */,
-				A595A40E1FCD7FCE0017CA52 /* BluetoothPermissions.swift in Sources */,
 				A595A3D51FCD7FCE0017CA52 /* ColorExtension.swift in Sources */,
-				A5241C4F1FA74A02008463EE /* TestPopup.swift in Sources */,
-				A5241C4C1FA74A02008463EE /* TestPopupPresenter.swift in Sources */,
 				A595A3DE1FCD7FCE0017CA52 /* String+Localizable.swift in Sources */,
 				A586EDA71FD159BA007749A5 /* PasswordValidator.swift in Sources */,
 				A595A3C11FCD7FCE0017CA52 /* SideImageDecorator.swift in Sources */,

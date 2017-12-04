@@ -9,31 +9,15 @@
 import UIKit
 import AVFoundation
 
-class CameraPermissions: DefaultServicePermissions, ServicePermissions {
+class CameraPermissions: DefaultServicePermissions {
     
 }
 
-// MARK: - PermissionsStateble -
+// MARK: - ServicePermissions -
 
-extension CameraPermissions: PermissionsStateble {
+extension CameraPermissions: ServicePermissions {
     
-    func permissionsState() -> PermissionsState {
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-        case .authorized:
-            return .permissionsGranted
-        case .notDetermined:
-            return .permissionsNotAsked
-        case .restricted, .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        }
-    }
-    
-}
-
-// MARK: - PermissionsRequesting -
-
-extension CameraPermissions: PermissionsRequesting {
+    typealias PermissionsState = AVAuthorizationStatus
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         AVCaptureDevice.requestAccess(for: .video) { [weak self] _ in
@@ -41,4 +25,9 @@ extension CameraPermissions: PermissionsRequesting {
             handler(strongSelf.permissionsState())
         }
     }
+    
+    func permissionsState() -> PermissionsState {
+        return AVCaptureDevice.authorizationStatus(for: .video)
+    }
+    
 }

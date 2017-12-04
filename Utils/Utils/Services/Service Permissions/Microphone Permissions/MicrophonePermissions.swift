@@ -9,30 +9,15 @@
 import UIKit
 import AVFoundation
 
-class MicrophonePermissions: DefaultServicePermissions, ServicePermissions {
+class MicrophonePermissions: DefaultServicePermissions {
     
 }
 
-// MARK: - PermissionsStateble -
+// MARK: - ServicePermissions -
 
-extension MicrophonePermissions: PermissionsStateble {
+extension MicrophonePermissions: ServicePermissions {
     
-    func permissionsState() -> PermissionsState {
-        switch AVAudioSession.sharedInstance().recordPermission() {
-        case .granted:
-            return .permissionsGranted
-        case .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        case .undetermined:
-            return .permissionsNotAsked
-        }
-    }
-}
-
-// MARK: - PermissionsRequesting -
-
-extension MicrophonePermissions: PermissionsRequesting {
+    typealias PermissionsState = AVAudioSessionRecordPermission
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         AVAudioSession.sharedInstance().requestRecordPermission { [weak self] _ in
@@ -41,4 +26,9 @@ extension MicrophonePermissions: PermissionsRequesting {
         }
     }
     
+    func permissionsState() -> PermissionsState {
+        return AVAudioSession.sharedInstance().recordPermission()
+    }
+
 }
+

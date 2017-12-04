@@ -18,7 +18,12 @@ struct AlertTitles {
 
 // MARK: - ServicePermissions -
 
-protocol ServicePermissions: PermissionsStateble, PermissionsRequesting {
+protocol ServicePermissions {
+    
+    associatedtype PermissionsState
+    
+    func permissionsState() -> PermissionsState
+    func requestPermissions(handler: @escaping (PermissionsState) -> Void)
     
 }
 
@@ -51,13 +56,7 @@ class DefaultServicePermissions: NSObject {
     private func openSettings() {
         let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
         if UIApplication.shared.canOpenURL(settingsURL!) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(settingsURL!,
-                                          options: [:],
-                                          completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(settingsURL!)
-            }
+            UIApplication.shared.open(settingsURL!, options: [:], completionHandler: nil)
         }
     }
     

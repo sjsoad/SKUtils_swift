@@ -9,11 +9,11 @@
 import UIKit
 import CoreLocation
 
-class LocationPermissions: DefaultServicePermissions, ServicePermissions {
+class LocationPermissions: DefaultServicePermissions {
 
     private var locationManager: CLLocationManager!
-    private var requestPermissionsHandler: PermissionsStateHandler?
-    
+    private var requestPermissionsHandler: ((PermissionsState) -> Void)?
+
     override init(settingAlertTitles: AlertTitles) {
         super.init(settingAlertTitles: settingAlertTitles)
         locationManager = CLLocationManager()
@@ -22,40 +22,30 @@ class LocationPermissions: DefaultServicePermissions, ServicePermissions {
     
 }
 
-// MARK: - PermissionsStateble -
+// MARK: - ServicePermissions -
 
-extension LocationPermissions: PermissionsStateble {
+extension LocationPermissions: ServicePermissions {
     
-    func permissionsState() -> PermissionsState {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedAlways, .authorizedWhenInUse:
-            return .permissionsGranted
-        case .notDetermined:
-            return .permissionsNotAsked
-        case .restricted, .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        }
-    }
-}
-
-// MARK: - PermissionsRequesting -
-
-extension LocationPermissions: PermissionsRequesting {
+    typealias PermissionsState = CLAuthorizationStatus
     
-    func requestPermissions(handler: @escaping PermissionsStateHandler) {
+    func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         requestPermissionsHandler = handler
         locationManager.requestAlwaysAuthorization()
     }
     
+    func permissionsState() -> PermissionsState {
+        return CLLocationManager.authorizationStatus()
+    }
 }
 
 // MARK: - CLLocationManagerDelegate -
 
 extension LocationPermissions: CLLocationManagerDelegate {
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // WARNING: - delegate method called for notDetermined state too -
         requestPermissionsHandler?(permissionsState())
     }
-    
+
 }
+

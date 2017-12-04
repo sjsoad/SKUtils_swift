@@ -11,21 +11,35 @@ import CoreBluetooth
 
 class BluetoothPermissions: DefaultServicePermissions {
 
+    private var bluetoothManager: CBCentralManager!
+    private var requestPermissionsHandler: ((PermissionsState) -> Void)?
+    
 }
 
-// MARK: - PermissionsStateble -
+// MARK: - ServicePermissions -
 
-extension BluetoothPermissions: PermissionsStateble {
+extension BluetoothPermissions: ServicePermissions {
+    
+    typealias PermissionsState = CBPeripheralManagerAuthorizationStatus
+    
+    func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
+        requestPermissionsHandler = handler
+        let opts = [CBCentralManagerOptionShowPowerAlertKey: false]
+        bluetoothManager = CBCentralManager(delegate: self, queue: nil, options: opts)
+    }
     
     func permissionsState() -> PermissionsState {
-        switch CBPeripheralManager.authorizationStatus() {
-        case .authorized:
-            return .permissionsGranted
-        case .notDetermined:
-            return .permissionsNotAsked
-        case .restricted, .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        }
+        return CBPeripheralManager.authorizationStatus()
     }
+    
+}
+
+// MARK: - CBCentralManagerDelegate -
+
+extension BluetoothPermissions: CBCentralManagerDelegate {
+    
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        requestPermissionsHandler?(permissionsState())
+    }
+    
 }

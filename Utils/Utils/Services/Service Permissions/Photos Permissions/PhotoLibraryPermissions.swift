@@ -9,36 +9,25 @@
 import UIKit
 import Photos
 
-class PhotoLibraryPermissions: DefaultServicePermissions, ServicePermissions {
+class PhotoLibraryPermissions: DefaultServicePermissions {
     
 }
 
-// MARL: - PermissionStateble -
+// MARL: - ServicePermissions -
 
-extension PhotoLibraryPermissions: PermissionsStateble {
+extension PhotoLibraryPermissions: ServicePermissions {
     
-    func permissionsState() -> PermissionsState {
-        switch PHPhotoLibrary.authorizationStatus() {
-        case .authorized:
-            return .permissionsGranted
-        case .notDetermined:
-            return .permissionsNotAsked
-        case .restricted, .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        }
-    }
-}
-    
-// MARK: - PermissionsRequesting -
-
-extension PhotoLibraryPermissions: PermissionsRequesting {
+    typealias PermissionsState = PHAuthorizationStatus
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
         PHPhotoLibrary.requestAuthorization { [weak self] _ in
             guard let strongSelf = self else { return }
             handler(strongSelf.permissionsState())
         }
+    }
+    
+    func permissionsState() -> PermissionsState {
+        return PHPhotoLibrary.authorizationStatus()
     }
     
 }

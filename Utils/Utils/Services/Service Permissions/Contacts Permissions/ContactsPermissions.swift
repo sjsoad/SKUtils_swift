@@ -10,56 +10,26 @@ import UIKit
 import Contacts
 import AddressBook
 
-class ContactsPermissions: DefaultServicePermissions, ServicePermissions {
+class ContactsPermissions: DefaultServicePermissions {
 
 }
 
-// MARK: - PermissionsStateble -
+// MARK: - ServicePermissions -
 
-extension ContactsPermissions: PermissionsStateble {
+extension ContactsPermissions: ServicePermissions {
     
-    func permissionsState() -> PermissionsState {
-        
-        if #available(iOS 9.0, *) {
-            switch CNContactStore.authorizationStatus(for: .contacts) {
-            case .authorized:
-                return .permissionsGranted
-            case .notDetermined:
-                return .permissionsNotAsked
-            case .restricted, .denied:
-                showSettingsAlert()
-                return .permissionsDenied
-            }
-        }
-        switch ABAddressBookGetAuthorizationStatus() {
-        case .authorized:
-            return .permissionsGranted
-        case .notDetermined:
-            return .permissionsNotAsked
-        case .restricted, .denied:
-            showSettingsAlert()
-            return .permissionsDenied
-        }
-    }
-}
-
-// MARK: - PermissionsRequesting -
-
-extension ContactsPermissions: PermissionsRequesting {
+    typealias PermissionsState = CNAuthorizationStatus
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        if #available(iOS 9.0, *) {
-            CNContactStore().requestAccess(for: .contacts) { [weak self] _,_ in
-                guard let strongSelf = self else { return }
-                handler(strongSelf.permissionsState())
-            }
-        }
-        else {
-            ABAddressBookRequestAccessWithCompletion(nil) { [weak self] _,_ in
-                guard let strongSelf = self else { return }
-                handler(strongSelf.permissionsState())
-            }
+        CNContactStore().requestAccess(for: .contacts) { [weak self] _,_ in
+            guard let strongSelf = self else { return }
+            handler(strongSelf.permissionsState())
         }
     }
     
+    func permissionsState() -> PermissionsState {
+        return CNContactStore.authorizationStatus(for: .contacts)
+    }
+
 }
+
