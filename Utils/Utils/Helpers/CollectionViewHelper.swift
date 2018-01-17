@@ -12,17 +12,13 @@ class CollectionViewHelper: NSObject {
 
     // MARK: - Update Height -
     
-    static func updateHeight(of collectionView: UICollectionView, height contraint: NSLayoutConstraint, view: UIView) {
-        DispatchQueue.global().async {
-            let constraintValue = contraint.constant
-            let collectionContentHeight = collectionView.contentSize.height
-            if constraintValue != collectionContentHeight {
-                DispatchQueue.main.sync {
-                    contraint.constant = collectionContentHeight
-                    UIView.animate(withDuration: 0.25) {
-                        view.layoutIfNeeded()
-                    }
-                }
+    static func updateHeight(of collectionView: UICollectionView, height constraint: NSLayoutConstraint, view: UIView) {
+        let constraintValue = constraint.constant
+        let collectionContentHeight = collectionView.contentSize.height + collectionView.contentInset.top + collectionView.contentInset.bottom
+        if constraintValue != collectionContentHeight {
+            constraint.constant = collectionContentHeight
+            UIView.animate(withDuration: 0.25) {
+                view.layoutIfNeeded()
             }
         }
     }

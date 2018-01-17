@@ -12,17 +12,13 @@ class TableViewHelper {
     
     // MARK: - Update Height -
     
-    static func updateHeight(of tableView: UITableView, height contraint: NSLayoutConstraint, view: UIView) {
-        let tableContentHeight = tableView.contentSize.height
-        DispatchQueue.global().async {
-            let constraintValue = contraint.constant
-            if constraintValue != tableContentHeight {
-                DispatchQueue.main.sync {
-                    contraint.constant = tableContentHeight
-                    UIView.animate(withDuration: 0.25) {
-                        view.layoutIfNeeded()
-                    }
-                }
+    static func updateHeight(of tableView: UITableView, height constraint: NSLayoutConstraint, view: UIView) {
+        let constraintValue = constraint.constant
+        let tableContentHeight = tableView.contentSize.height + tableView.contentInset.top + tableView.contentInset.bottom
+        if constraintValue != tableContentHeight {
+            constraint.constant = tableContentHeight
+            UIView.animate(withDuration: 0.25) {
+                view.layoutIfNeeded()
             }
         }
     }
