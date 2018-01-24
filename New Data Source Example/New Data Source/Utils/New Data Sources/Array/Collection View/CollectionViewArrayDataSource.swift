@@ -74,6 +74,7 @@ class CollectionViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
     // MARK: - Private
     
     private func model(for indexPath: IndexPath, kind: String) -> DataSourceModel? {
+        guard sections.indices.contains(indexPath.section) else { return nil }
         let sectionModel = sections[indexPath.section]
         if kind == UICollectionElementKindSectionHeader {
             guard let header = sectionModel.header,
