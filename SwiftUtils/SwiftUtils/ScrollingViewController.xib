@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,8 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHx-Pe-a8K">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHx-Pe-a8K">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-tX-zTL">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -42,7 +45,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9r-1m-MO0">
-                            <rect key="frame" x="10" y="609" width="355" height="30"/>
+                            <rect key="frame" x="10" y="617" width="355" height="30"/>
                             <color key="backgroundColor" red="0.33333333329999998" green="0.73333333329999995" blue="0.78823529410000004" alpha="1" colorSpace="deviceRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="TKZ-Xt-56o"/>
@@ -52,11 +55,11 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="sp2-tX-zTL" firstAttribute="centerX" secondItem="hHx-Pe-a8K" secondAttribute="centerX" id="Dy0-BP-1G1"/>
-                        <constraint firstAttribute="bottom" secondItem="Y9r-1m-MO0" secondAttribute="bottom" priority="999" constant="20" id="NVH-I8-6ZO"/>
+                        <constraint firstAttribute="bottom" secondItem="Y9r-1m-MO0" secondAttribute="bottom" priority="999" id="NVH-I8-6ZO"/>
                         <constraint firstAttribute="trailing" secondItem="sp2-tX-zTL" secondAttribute="trailing" id="PFb-SM-dDi"/>
                         <constraint firstItem="sp2-tX-zTL" firstAttribute="top" secondItem="hHx-Pe-a8K" secondAttribute="top" id="TgN-7O-tCR"/>
                         <constraint firstAttribute="trailing" secondItem="Y9r-1m-MO0" secondAttribute="trailing" constant="10" id="czf-Mh-tu2"/>
-                        <constraint firstItem="Y9r-1m-MO0" firstAttribute="top" secondItem="sp2-tX-zTL" secondAttribute="bottom" priority="999" constant="20" id="d6J-wJ-l7r"/>
+                        <constraint firstItem="Y9r-1m-MO0" firstAttribute="top" secondItem="sp2-tX-zTL" secondAttribute="bottom" priority="250" constant="20" id="d6J-wJ-l7r"/>
                         <constraint firstItem="Y9r-1m-MO0" firstAttribute="leading" secondItem="hHx-Pe-a8K" secondAttribute="leading" constant="10" id="thk-Cg-bPw"/>
                         <constraint firstItem="sp2-tX-zTL" firstAttribute="leading" secondItem="hHx-Pe-a8K" secondAttribute="leading" id="xR5-p4-qZv"/>
                     </constraints>
@@ -64,12 +67,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hHx-Pe-a8K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5td-9K-VR3"/>
-                <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="Y9r-1m-MO0" secondAttribute="bottom" constant="20" id="9y0-K0-bt1"/>
-                <constraint firstAttribute="bottom" secondItem="hHx-Pe-a8K" secondAttribute="bottom" id="KWa-Y5-gcw"/>
-                <constraint firstAttribute="trailing" secondItem="hHx-Pe-a8K" secondAttribute="trailing" id="ZVJ-MD-mm9"/>
-                <constraint firstItem="hHx-Pe-a8K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t0x-QB-wk1"/>
+                <constraint firstItem="hHx-Pe-a8K" firstAttribute="top" secondItem="vQT-je-bIb" secondAttribute="top" id="5td-9K-VR3"/>
+                <constraint firstItem="vQT-je-bIb" firstAttribute="bottom" secondItem="hHx-Pe-a8K" secondAttribute="bottom" id="KWa-Y5-gcw"/>
+                <constraint firstItem="vQT-je-bIb" firstAttribute="trailing" secondItem="hHx-Pe-a8K" secondAttribute="trailing" id="ZVJ-MD-mm9"/>
+                <constraint firstItem="hHx-Pe-a8K" firstAttribute="leading" secondItem="vQT-je-bIb" secondAttribute="leading" id="t0x-QB-wk1"/>
+                <constraint firstItem="vQT-je-bIb" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Y9r-1m-MO0" secondAttribute="bottomMargin" constant="8" id="zBS-gM-bbI"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="vQT-je-bIb"/>
         </view>
         <customObject id="MF4-uW-SRP" customClass="TextInputsManager" customModule="SwiftUtils" customModuleProvider="target">
             <userDefinedRuntimeAttributes>
