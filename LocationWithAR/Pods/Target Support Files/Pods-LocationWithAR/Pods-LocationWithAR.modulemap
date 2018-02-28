@@ -1,0 +1,6 @@
+framework module Pods_LocationWithAR {
+  umbrella header "Pods-LocationWithAR-umbrella.h"
+
+  export *
+  module * { export * }
+}

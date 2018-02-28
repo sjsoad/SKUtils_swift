@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Utils/Utils/Services/Service Permissions/Required/ServicePermissions.swift"
+            timestampString = "541520274.234095"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "openInMainThread(alert:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocationWithAR.DefaultServicePermissions.(openInMainThread in _073075A828121ED90309AA936A840B39)(alert: __ObjC.UIAlertController) -&gt; ()"
+                  moduleName = "LocationWithAR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sergey/Projects/SKUtils_Swift/Utils/Utils/Services/Service%20Permissions/Required/ServicePermissions.swift"
+                  timestampString = "541520274.288769"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in LocationWithAR.DefaultServicePermissions.(openInMainThread in _073075A828121ED90309AA936A840B39)(alert: __ObjC.UIAlertController) -&gt; ()"
+                  moduleName = "LocationWithAR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sergey/Projects/SKUtils_Swift/Utils/Utils/Services/Service%20Permissions/Required/ServicePermissions.swift"
+                  timestampString = "541520274.291788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

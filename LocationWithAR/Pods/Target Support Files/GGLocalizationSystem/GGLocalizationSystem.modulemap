@@ -1,0 +1,6 @@
+framework module GGLocalizationSystem {
+  umbrella header "GGLocalizationSystem-umbrella.h"
+
+  export *
+  module * { export * }
+}

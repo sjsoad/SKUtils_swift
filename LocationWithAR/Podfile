@@ -1,0 +1,16 @@
+platform :ios, '11.0'
+
+def shared_pods
+    
+    use_frameworks!
+    pod 'Alamofire'
+    pod 'ObjectMapper'
+    pod 'NVActivityIndicatorView'
+    pod 'GGLocalizationSystem'
+    pod 'SwiftyDrop'
+
+end
+
+target 'LocationWithAR' do
+    shared_pods
+end

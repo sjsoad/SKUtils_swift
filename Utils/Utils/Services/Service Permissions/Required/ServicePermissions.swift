@@ -48,7 +48,11 @@ class DefaultServicePermissions: NSObject {
                                       preferredStyle: .alert)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        openInMainThread(alert: alert)
+        if Thread.isMainThread {
+            alert.show(animated: true, completion: nil)
+        } else {
+            openInMainThread(alert: alert)
+        }
     }
     
     // MARK: - Private -

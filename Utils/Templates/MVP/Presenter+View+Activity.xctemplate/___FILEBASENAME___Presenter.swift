@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ___VARIABLE_fileName:identifier___Interface: class, ActivityViewable, AlertViewable {
     
