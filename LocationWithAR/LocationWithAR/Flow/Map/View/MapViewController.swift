@@ -17,12 +17,10 @@ class MapViewController: UIViewController, MapInterface {
     
     // MARK: - Lifecycle -
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.showsUserLocation = true
+        mapView.showsCompass = true
         presenter?.viewDidLoad()
     }
     

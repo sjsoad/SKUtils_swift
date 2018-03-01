@@ -40,6 +40,12 @@
 		A53A1BCF2046E697001E7188 /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BCD2046E697001E7188 /* WindowFactory.swift */; };
 		A53A1BD32046E6B3001E7188 /* UIViewContollrer+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BD12046E6B3001E7188 /* UIViewContollrer+Presentable.swift */; };
 		A53A1BD42046E6B3001E7188 /* AlertController+AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BD22046E6B3001E7188 /* AlertController+AlertPresentable.swift */; };
+		A53A1BD72046F383001E7188 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BD62046F383001E7188 /* PlaceAnnotation.swift */; };
+		A53A1BDC2046F550001E7188 /* POIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BD92046F550001E7188 /* POIResponse.swift */; };
+		A53A1BDD2046F550001E7188 /* POIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BDA2046F550001E7188 /* POIRequest.swift */; };
+		A53A1BDE2046F550001E7188 /* POIRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BDB2046F550001E7188 /* POIRequesting.swift */; };
+		A53A1BE02046F650001E7188 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BDF2046F650001E7188 /* Constants.swift */; };
+		A53A1BE22046F8AB001E7188 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BE12046F8AB001E7188 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +86,12 @@
 		A53A1BCD2046E697001E7188 /* WindowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowFactory.swift; sourceTree = "<group>"; };
 		A53A1BD12046E6B3001E7188 /* UIViewContollrer+Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewContollrer+Presentable.swift"; sourceTree = "<group>"; };
 		A53A1BD22046E6B3001E7188 /* AlertController+AlertPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController+AlertPresentable.swift"; sourceTree = "<group>"; };
+		A53A1BD62046F383001E7188 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		A53A1BD92046F550001E7188 /* POIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIResponse.swift; sourceTree = "<group>"; };
+		A53A1BDA2046F550001E7188 /* POIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIRequest.swift; sourceTree = "<group>"; };
+		A53A1BDB2046F550001E7188 /* POIRequesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIRequesting.swift; sourceTree = "<group>"; };
+		A53A1BDF2046F650001E7188 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A53A1BE12046F8AB001E7188 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +144,7 @@
 		A53A1B5E2046E336001E7188 /* LocationWithAR */ = {
 			isa = PBXGroup;
 			children = (
+				A53A1BD52046F373001E7188 /* Data Models */,
 				A53A1B792046E37D001E7188 /* Core */,
 				A53A1B7B2046E37D001E7188 /* Flow */,
 				A53A1B712046E37D001E7188 /* Misc */,
@@ -148,6 +161,8 @@
 				A53A1BA02046E4C5001E7188 /* Networking */,
 				A53A1BAD2046E4C5001E7188 /* Service Permissions */,
 				A53A1B8D2046E4A1001E7188 /* Protocols */,
+				A53A1BDF2046F650001E7188 /* Constants.swift */,
+				A53A1BE12046F8AB001E7188 /* API.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -166,6 +181,7 @@
 		A53A1B792046E37D001E7188 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A53A1BD82046F472001E7188 /* Networking */,
 				A53A1B7A2046E37D001E7188 /* AppDelegate.swift */,
 			);
 			path = Core;
@@ -406,6 +422,24 @@
 			path = ../../../Utils/Utils/Extensions/Presentation;
 			sourceTree = "<group>";
 		};
+		A53A1BD52046F373001E7188 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				A53A1BD62046F383001E7188 /* PlaceAnnotation.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		A53A1BD82046F472001E7188 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A53A1BD92046F550001E7188 /* POIResponse.swift */,
+				A53A1BDA2046F550001E7188 /* POIRequest.swift */,
+				A53A1BDB2046F550001E7188 /* POIRequesting.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -562,6 +596,7 @@
 				A53A1BBD2046E4C5001E7188 /* APIResponsing.swift in Sources */,
 				A53A1B9B2046E4A2001E7188 /* Navigatable.swift in Sources */,
 				A53A1BBC2046E4C5001E7188 /* APIRequesting.swift in Sources */,
+				A53A1BDC2046F550001E7188 /* POIResponse.swift in Sources */,
 				A53A1BC42046E4C5001E7188 /* CameraPermissions.swift in Sources */,
 				A53A1BC22046E4C5001E7188 /* APIClient.swift in Sources */,
 				A53A1B9F2046E4A2001E7188 /* AlertPresentable.swift in Sources */,
@@ -570,6 +605,7 @@
 				A53A1BC12046E4C5001E7188 /* RequestExecuting.swift in Sources */,
 				A53A1BC92046E4C5001E7188 /* LocationPermissions.swift in Sources */,
 				A53A1BCE2046E697001E7188 /* AlertActioFactory.swift in Sources */,
+				A53A1BD72046F383001E7188 /* PlaceAnnotation.swift in Sources */,
 				A53A1BBF2046E4C5001E7188 /* ActivityViewable.swift in Sources */,
 				A53A1B802046E37D001E7188 /* AppDelegate.swift in Sources */,
 				A53A1BC72046E4C5001E7188 /* ServicePermissions.swift in Sources */,
@@ -580,12 +616,16 @@
 				A53A1BC32046E4C5001E7188 /* ErrorParser.swift in Sources */,
 				A53A1B9C2046E4A2001E7188 /* AlertViewable.swift in Sources */,
 				A53A1B9D2046E4A2001E7188 /* Ponsomizer.swift in Sources */,
+				A53A1BE02046F650001E7188 /* Constants.swift in Sources */,
 				A53A1B8B2046E3E9001E7188 /* MapPresenter.swift in Sources */,
 				A53A1BD32046E6B3001E7188 /* UIViewContollrer+Presentable.swift in Sources */,
 				A53A1B9A2046E4A2001E7188 /* Windowable.swift in Sources */,
+				A53A1BDD2046F550001E7188 /* POIRequest.swift in Sources */,
 				A53A1BC82046E4C5001E7188 /* PhotoLibraryPermissions.swift in Sources */,
 				A53A1BC52046E4C5001E7188 /* BluetoothPermissions.swift in Sources */,
+				A53A1BDE2046F550001E7188 /* POIRequesting.swift in Sources */,
 				A53A1BCA2046E4C5001E7188 /* MicrophonePermissions.swift in Sources */,
+				A53A1BE22046F8AB001E7188 /* API.swift in Sources */,
 				A53A1BC62046E4C5001E7188 /* ContactsPermissions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

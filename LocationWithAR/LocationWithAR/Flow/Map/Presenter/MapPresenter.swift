@@ -32,6 +32,12 @@ class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling {
         let permissions = LocationPermissions(settingAlertTitles: alertTitles)
         return permissions
         }()
+    private lazy var locationManager: CLLocationManager = { [weak self] in
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        return locationManager
+    }()
     
     init(with view: MapInterface) {
         self.view = view
@@ -67,6 +73,12 @@ class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling {
         return view
     }
     
+    // MARK: - Private -
+    
+    private func startUpdatingLocation() {
+        locationManager.startUpdatingLocation()
+    }
+    
 }
 
 // MARK: - MapOutput -
@@ -81,9 +93,19 @@ extension MapPresenter: MapOutput {
                 self?.locationPermissions.showSettingsAlert()
             }
             if state == .authorizedAlways || state == .authorizedWhenInUse {
-                print("go")
+                self?.startUpdatingLocation()
             }
         }
+    }
+    
+}
+
+// MARK: - CLLocationManagerDelegate -
+
+extension MapPresenter: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard !locations.isEmpty else { return }
     }
     
 }
