@@ -21,7 +21,7 @@ extension ContactsPermissions: ServicePermissions {
     typealias PermissionsState = CNAuthorizationStatus
     
     func requestPermissions(handler: @escaping (PermissionsState) -> Void) {
-        CNContactStore().requestAccess(for: .contacts) { [weak self] _,_ in
+        CNContactStore().requestAccess(for: .contacts) { [weak self] _, _ in
             guard let strongSelf = self else { return }
             handler(strongSelf.permissionsState())
         }
@@ -32,4 +32,3 @@ extension ContactsPermissions: ServicePermissions {
     }
 
 }
-

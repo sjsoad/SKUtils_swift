@@ -48,4 +48,3 @@ extension LocationPermissions: CLLocationManagerDelegate {
     }
 
 }
-

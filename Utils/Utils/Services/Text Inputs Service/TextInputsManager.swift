@@ -8,17 +8,13 @@
 
 import UIKit
 
-protocol TextInputsService: KeyboardHiding, TextInputsClearing, TextFieldsManagerReloading, FirstResponding {
-    
-}
-
-class TextInputsManager: NSObject, TextInputsService {
+class TextInputsManager: NSObject {
     
     @IBInspectable var hideOnTap: Bool = true
     @IBInspectable var kAnimationDuration: Double = 0.25
     @IBInspectable var additionalSpaceAboveKeyboard: CGFloat = 0.0 // no effect
     
-    @IBOutlet private weak var containerView: UIView! {
+    @IBOutlet fileprivate weak var containerView: UIView! {
         didSet {
             configureManager()
         }
@@ -26,13 +22,13 @@ class TextInputsManager: NSObject, TextInputsService {
     
     private var textInputs = [UIView]()
     
-    // MARK: - Private -
-    
     private func configureManager() {
         subscribeForKeyboardNotifications()
         gatherTextInputs()
         if hideOnTap == true { addTapGestureRecognizer() }
     }
+    
+    // MARK: - Private -
     
     private func gatherTextInputs() {
         let textFields: [UIView] = containerView.subviewsOf(type: UITextField.self).flatMap { (textField) -> UIView? in
@@ -102,17 +98,23 @@ class TextInputsManager: NSObject, TextInputsService {
     
     @objc private func returnButtonPressed(_ textField: UITextField) {
         sortInputsByY()
-        if let index = textInputs.index(where: {$0 === textField}) {
-            let newIndex = index + 1
-            if textInputs.indices.contains(newIndex) {
-                let nextInputView = textInputs[newIndex]
-                _ = nextInputView.becomeFirstResponder()
-            } else {
-                hideKeyboard()
-            }
-        }
+        guard let index = textInputs.index(where: {$0 === textField}) else { return }
+        activateField(at: index + 1)
     }
   
+    private func activateField(at index: Int) {
+        if textInputs.indices.contains(index) {
+            let nextInputView = textInputs[index]
+            if nextInputView.canBecomeFirstResponder {
+                nextInputView.becomeFirstResponder()
+            } else {
+                activateField(at: index + 1)
+            }
+        } else {
+            hideKeyboard()
+        }
+    }
+
 }
 
 // MARK: - KeyboardHiding -
