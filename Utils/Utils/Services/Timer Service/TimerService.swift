@@ -8,20 +8,9 @@
 
 import Foundation
 
-protocol TimerService {
-    func start(timeInterval: TimeInterval, handler: @escaping (() -> Void))
-    func stop()
-}
-
 class DefaultTimerService {
 
     private var timer: Timer?
-
-}
-
-// MARK: - TimerService -
-
-extension DefaultTimerService: TimerService {
     
     func start(timeInterval: TimeInterval, handler: @escaping (() -> Void)) {
         stop()

@@ -12,40 +12,13 @@ import SwiftKeychainWrapper
 private let userAccessToken = "AccessToken"
 private let loggedInUser = "LoggedInUser"
 
-protocol AccessTokenManaging {
-    func save(accessToken: String)
-    func loadAccessToken() -> String?
-    func deleteAccessToken()
-}
-
-protocol PasswordManaging {
-    func save(password: String, for email: String)
-    func password(for email: String) -> String?
-}
-
-protocol LoggedInUserManaging {
-    func save(loggedInUserId: Int)
-    func loadLoggedInUserId() -> Int?
-    func deleteLoggedInUserId()
-}
-
-protocol KeychainService: AccessTokenManaging, PasswordManaging, LoggedInUserManaging {
-    
-}
-
-class DefaultKeychainService: NSObject, KeychainService {
+class DefaultKeychainService: NSObject {
     
     private var keychain: KeychainWrapper
     
     override init() {
         self.keychain = KeychainWrapper.standard
     }
-    
-}
-
-// MARK: - AccessTokenManaging -
-
-extension DefaultKeychainService: AccessTokenManaging {
     
     func save(accessToken: String) {
         keychain.set(accessToken, forKey: userAccessToken)
@@ -59,13 +32,6 @@ extension DefaultKeychainService: AccessTokenManaging {
         keychain.removeObject(forKey: userAccessToken)
     }
     
-    
-}
-
-// MARK: - PasswordManaging -
-
-extension DefaultKeychainService: PasswordManaging {
-    
     func save(password: String, for email: String) {
         keychain.set(password, forKey: email)
     }
@@ -73,11 +39,7 @@ extension DefaultKeychainService: PasswordManaging {
     func password(for email: String) -> String? {
         return keychain.string(forKey: email)
     }
-}
 
-// MARK: - LoggedInUserManaging -
-
-extension DefaultKeychainService: LoggedInUserManaging {
     func save(loggedInUserId: Int) {
         keychain.set(loggedInUserId, forKey: loggedInUser)
     }
@@ -89,5 +51,6 @@ extension DefaultKeychainService: LoggedInUserManaging {
     func deleteLoggedInUserId() {
         keychain.removeObject(forKey: loggedInUser)
     }
+    
 }
 

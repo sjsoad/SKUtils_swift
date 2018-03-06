@@ -10,23 +10,6 @@ import Foundation
 import CoreData
 import AERecord
 
-protocol LocalDataStorage {
-    
-    func fetchAll<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type,
-                                                withPredicate predicate: NSPredicate?,
-                                                orderedBy sortDescriptors: [NSSortDescriptor]?) -> [ManagedType]?
-    func fetchOne<ManagedType: NSManagedObject>(from objectClass: ManagedType.Type,
-                                                withPredicate predicate: NSPredicate?) -> ManagedType?
-    @discardableResult func create<ManagedType: NSManagedObject>(into: ManagedType.Type,
-                                                                 quantity: Int,
-                                                                 with setup:@escaping (Int, ManagedType) -> Void) -> [ManagedType]
-    func updateObjects<ManagedType: NSManagedObject>(from: ManagedType.Type,
-                                                     predicate: NSPredicate?,
-                                                     with update:@escaping (Int, ManagedType) -> Void)
-    func delete<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type, withPredicate predicate: NSPredicate?)
-    func save()
-}
-
 class DefaultLocalDataStorage {
     
     static func initialize() {
@@ -37,10 +20,6 @@ class DefaultLocalDataStorage {
             fatalError()
         }
     }
-    
-}
-
-extension DefaultLocalDataStorage: LocalDataStorage {
     
     func fetchAll<ManagedType: NSManagedObject>(from objectsClass: ManagedType.Type,
                                                 withPredicate predicate: NSPredicate? = nil,

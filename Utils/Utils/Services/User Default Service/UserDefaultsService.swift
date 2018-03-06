@@ -8,24 +8,9 @@
 
 import Foundation
 
-// MARK: - UserDefaultsService -
-
-protocol UserDefaultsService {
-    
-    func save(value: Any?, for key: String)
-    func value(for key: String) -> Any?
-    func removeObject(for key: String)
-}
-
-// MARK: - DefaultUserDefaultsService -
-
 class DefaultUserDefaultsService {
     
     private var defaults: UserDefaults =  UserDefaults.standard
-    
-}
-
-extension DefaultUserDefaultsService: UserDefaultsService {
     
     func save(value: Any?, for key: String) {
         defaults.set(value, forKey: key)

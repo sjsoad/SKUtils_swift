@@ -8,14 +8,6 @@
 
 import UIKit
 
-protocol ValidationService {
-    
-    func isValid(email: String?) -> Bool
-    func isValid(password: String?) -> Bool
-    func isValid(text: String?) -> Bool
-    
-}
-
 class DefaultValidationService: NSObject {
 
     private var emailValidator: Validator
@@ -29,10 +21,6 @@ class DefaultValidationService: NSObject {
         self.passValidator = passValidator
         self.baseValidator = baseValidator
     }
-    
-}
-
-extension DefaultValidationService: ValidationService {
     
     func isValid(email: String?) -> Bool {
         return emailValidator.isValid(email)

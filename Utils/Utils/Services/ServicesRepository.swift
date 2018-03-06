@@ -9,30 +9,24 @@
 import UIKit
 
 class ServicesRepository {
-
-    class var localDataStorage: LocalDataStorage {
-        return DefaultLocalDataStorage()
+    
+    private var registry = [String: Any]()
+    
+    init() {}
+    
+    func registerService<T>(service: T) {
+        let key = "\(T.self)"
+        registry[key] = service
     }
     
-    class var apiClientService: APIClientService {
-        return APIClient()
-    }
-   
-    class var userDefaultsService: UserDefaultsService {
-        return DefaultUserDefaultsService()
-    }
-    
-    class var timerService: TimerService {
-        return DefaultTimerService()
+    func getService<T>() -> T? {
+        let key = "\(T.self)"
+        if registry[key] == nil {
+            print("ServicesRepository: Nil value for \(key)")
+        }
+        return registry[key] as? T
     }
     
-    class var keychainService: KeychainService {
-        return DefaultKeychainService()
-    }
-    
-    class var validationService: ValidationService {
-        return DefaultValidationService()
-    }
 }
 
 
