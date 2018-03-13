@@ -1,8 +1,8 @@
 //
-//  MapPresenter.swift
+//  ARPresenter.swift
 //  LocationWithAR
 //
-//  Created by Sergey on 28.02.2018.
+//  Created by Sergey on 12.03.2018.
 //Copyright © 2018 Sergey. All rights reserved.
 //
 
@@ -10,21 +10,23 @@ import Foundation
 import UIKit
 import CoreLocation
 
-protocol MapInterface: class, ActivityViewable, AlertViewable {
+protocol ARInterface: class, ActivityViewable, AlertViewable {
     
     func add(places: [PlaceAnnotation])
     
 }
 
-protocol MapOutput {
+protocol AROutput {
+    
+    var currentLocation: CLLocation? { get }
     
     func viewDidLoad()
     
 }
 
-class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling, POIRequesting {
+class ARPresenter: NSObject, RequestExecuting, RequestErrorHandling, POIRequesting {
     
-    private weak var view: MapInterface?
+    private weak var view: ARInterface?
     
     private lazy var locationPermissions: LocationPermissions = { [weak self] in
         let alertTitles = AlertTitles(title: "Warning",
@@ -39,17 +41,17 @@ class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling, POIRequest
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         return locationManager
-    }()
+        }()
     
-    init(with view: MapInterface) {
+    init(with view: ARInterface) {
         self.view = view
     }
     
-    // MARK - -
+    // MARK: - -
     
     static func showView(in window: UIWindow?) {
-        let vc = MapViewController()
-        let presenter = MapPresenter(with: vc)
+        let vc = ARViewController()
+        let presenter = ARPresenter(with: vc)
         vc.presenter = presenter
         presenter.show(in: window)
     }
@@ -68,7 +70,7 @@ class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling, POIRequest
     func activityView() -> ActivityViewable? {
         return view
     }
-
+    
     // MARK: - AlertViewable -
     
     func alertView() -> AlertViewable? {
@@ -83,9 +85,13 @@ class MapPresenter: NSObject, RequestExecuting, RequestErrorHandling, POIRequest
     
 }
 
-// MARK: - MapOutput -
+// MARK: - ARPresenterOutput -
 
-extension MapPresenter: MapOutput {
+extension ARPresenter: AROutput {
+
+    var currentLocation: CLLocation? {
+        return locationManager.location
+    }
     
     func viewDidLoad() {
         let currentState: CLAuthorizationStatus = locationPermissions.permissionsState()
@@ -99,19 +105,19 @@ extension MapPresenter: MapOutput {
             }
         }
     }
-    
+
 }
 
 // MARK: - CLLocationManagerDelegate -
 
-extension MapPresenter: CLLocationManagerDelegate {
+extension ARPresenter: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard !locations.isEmpty, let location = locations.first else { return }
-        poi(for: location.coordinate, in: 1000, pageToken: nil, successHandler: { [weak self] (response) in
+        poi(for: location.coordinate, in: 100, pageToken: nil, successHandler: { [weak self] (response) in
             guard let result = response.result else { return }
             self?.view?.add(places: result.places)
-        }, executingHandler: requestExecutingHandler(), errorHandler: requestErrorHandler())
+            }, executingHandler: requestExecutingHandler(), errorHandler: requestErrorHandler())
         locationManager.stopUpdatingLocation()
     }
     

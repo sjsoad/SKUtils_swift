@@ -10,6 +10,6 @@ import Foundation
 
 struct Defaults {
     
-    static let googlePlacesAPIKey: String = "AIzaSyBaSJwysj3q-x1KlUQfgii4R0iWDCnGSzA"
+    static let googlePlacesAPIKey: String = "AIzaSyCQJdPbN_hRZCkK9F5xovFjExRCukk80dM"
     
 }

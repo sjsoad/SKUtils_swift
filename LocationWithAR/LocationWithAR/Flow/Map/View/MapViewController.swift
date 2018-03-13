@@ -25,4 +25,10 @@ class MapViewController: UIViewController, MapInterface {
     }
     
     // MARK: - MapInterface -
+    
+    func add(places: [PlaceAnnotation]) {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotations(places)
+    }
+    
 }

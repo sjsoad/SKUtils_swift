@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func startApplication() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        MapPresenter.showView(in: window)
+        ARPresenter.showView(in: window)
+//        MapPresenter.showView(in: window)
     }
     
 }
