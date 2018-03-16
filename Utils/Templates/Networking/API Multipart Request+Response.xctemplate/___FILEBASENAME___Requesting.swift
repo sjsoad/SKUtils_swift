@@ -13,14 +13,14 @@ typealias ___VARIABLE_fileName:identifier___ResponseType = () // Example: Bool
 
 protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling, RequestExecuting {
     
-    func exampleFunc(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
+    func request<#exampleFunc#>(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler?,
                      errorHandler: ErrorHandler?)
 }
 
 extension ___FILEBASENAMEASIDENTIFIER___ {
     
-    func exampleFunc(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
+    func request<#exampleFunc#>(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler? = nil,
                      errorHandler: ErrorHandler? = nil) {
         executingHandler?(true)

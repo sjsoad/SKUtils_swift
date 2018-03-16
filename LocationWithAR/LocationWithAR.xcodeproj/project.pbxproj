@@ -28,7 +28,6 @@
 		A53A1BC02046E4C5001E7188 /* RequestErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BA82046E4C5001E7188 /* RequestErrorHandling.swift */; };
 		A53A1BC12046E4C5001E7188 /* RequestExecuting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BA92046E4C5001E7188 /* RequestExecuting.swift */; };
 		A53A1BC22046E4C5001E7188 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BAB2046E4C5001E7188 /* APIClient.swift */; };
-		A53A1BC32046E4C5001E7188 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BAC2046E4C5001E7188 /* ErrorParser.swift */; };
 		A53A1BC42046E4C5001E7188 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BAF2046E4C5001E7188 /* CameraPermissions.swift */; };
 		A53A1BC52046E4C5001E7188 /* BluetoothPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BB12046E4C5001E7188 /* BluetoothPermissions.swift */; };
 		A53A1BC62046E4C5001E7188 /* ContactsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53A1BB32046E4C5001E7188 /* ContactsPermissions.swift */; };
@@ -50,6 +49,7 @@
 		A57728A92056A5E700A913BA /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57728A62056A5E700A913BA /* ARViewController.xib */; };
 		A57728AB2056A5F500A913BA /* ARPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57728AA2056A5F500A913BA /* ARPresenter.swift */; };
 		A57728AE2056A82200A913BA /* ARUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57728AD2056A82200A913BA /* ARUtils.swift */; };
+		A59F99822057FA5600352DCC /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F997E2057FA5600352DCC /* ErrorParser.swift */; };
 		A5BA01722057BB2500363E5A /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA01712057BB2400363E5A /* LocationNode.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +79,6 @@
 		A53A1BA82046E4C5001E7188 /* RequestErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestErrorHandling.swift; sourceTree = "<group>"; };
 		A53A1BA92046E4C5001E7188 /* RequestExecuting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestExecuting.swift; sourceTree = "<group>"; };
 		A53A1BAB2046E4C5001E7188 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		A53A1BAC2046E4C5001E7188 /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		A53A1BAF2046E4C5001E7188 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
 		A53A1BB12046E4C5001E7188 /* BluetoothPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPermissions.swift; sourceTree = "<group>"; };
 		A53A1BB32046E4C5001E7188 /* ContactsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPermissions.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		A57728A62056A5E700A913BA /* ARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARViewController.xib; sourceTree = "<group>"; };
 		A57728AA2056A5F500A913BA /* ARPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenter.swift; sourceTree = "<group>"; };
 		A57728AD2056A82200A913BA /* ARUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUtils.swift; sourceTree = "<group>"; };
+		A59F997E2057FA5600352DCC /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		A5BA01712057BB2400363E5A /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,10 +298,10 @@
 		A53A1BA02046E4C5001E7188 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A59F99772057FA5600352DCC /* Helpers */,
 				A53A1BA12046E4C5001E7188 /* Network Protocols */,
 				A53A1BA52046E4C5001E7188 /* MVP */,
 				A53A1BAA2046E4C5001E7188 /* Api Client */,
-				A53A1BAC2046E4C5001E7188 /* ErrorParser.swift */,
 			);
 			name = Networking;
 			path = ../../../Utils/Utils/Services/Networking;
@@ -487,6 +487,22 @@
 			path = "AR Utils";
 			sourceTree = "<group>";
 		};
+		A59F99772057FA5600352DCC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A59F997D2057FA5600352DCC /* Error Parser */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A59F997D2057FA5600352DCC /* Error Parser */ = {
+			isa = PBXGroup;
+			children = (
+				A59F997E2057FA5600352DCC /* ErrorParser.swift */,
+			);
+			path = "Error Parser";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -654,6 +670,7 @@
 				A53A1B9E2046E4A2001E7188 /* Presentable.swift in Sources */,
 				A53A1BC02046E4C5001E7188 /* RequestErrorHandling.swift in Sources */,
 				A53A1BC12046E4C5001E7188 /* RequestExecuting.swift in Sources */,
+				A59F99822057FA5600352DCC /* ErrorParser.swift in Sources */,
 				A53A1BC92046E4C5001E7188 /* LocationPermissions.swift in Sources */,
 				A53A1BD72046F383001E7188 /* PlaceAnnotation.swift in Sources */,
 				A53A1BBF2046E4C5001E7188 /* ActivityViewable.swift in Sources */,
@@ -664,7 +681,6 @@
 				A53A1BCF2046E697001E7188 /* WindowFactory.swift in Sources */,
 				A53A1BD42046E6B3001E7188 /* AlertController+AlertPresentable.swift in Sources */,
 				A5BA01722057BB2500363E5A /* LocationNode.swift in Sources */,
-				A53A1BC32046E4C5001E7188 /* ErrorParser.swift in Sources */,
 				A53A1B9C2046E4A2001E7188 /* AlertViewable.swift in Sources */,
 				A53A1B9D2046E4A2001E7188 /* Ponsomizer.swift in Sources */,
 				A53A1BE02046F650001E7188 /* Constants.swift in Sources */,

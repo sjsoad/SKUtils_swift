@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias RefreshTokenResponseType = AuthInfo
+typealias RefreshTokenResponseType = <#AuthInfo#>
 
 class RefreshTokenService: NSObject {
 

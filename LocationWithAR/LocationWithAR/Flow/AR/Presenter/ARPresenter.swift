@@ -114,7 +114,7 @@ extension ARPresenter: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard !locations.isEmpty, let location = locations.first else { return }
-        poi(for: location.coordinate, in: 100, pageToken: nil, successHandler: { [weak self] (response) in
+        poi(for: location.coordinate, in: Defaults.maxVisibleDistance, pageToken: nil, successHandler: { [weak self] (response) in
             guard let result = response.result else { return }
             self?.view?.add(places: result.places)
             }, executingHandler: requestExecutingHandler(), errorHandler: requestErrorHandler())

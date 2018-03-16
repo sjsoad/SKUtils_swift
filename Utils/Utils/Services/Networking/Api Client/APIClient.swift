@@ -11,7 +11,7 @@ import Alamofire
 
 typealias ErrorHandler = (_ error: Error) -> Void
 typealias RefreshTokenHandler = () -> Void
-//typealias RepeatRequestHandler = (_ accessToken: String) -> Void
+typealias RepeatRequestHandler = (_ accessToken: String) -> Void
 
 //private let unauthorizedErrorCode = 401
 
