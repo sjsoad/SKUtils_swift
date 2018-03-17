@@ -17,8 +17,9 @@ class ___FILEBASENAMEASIDENTIFIER___: APIRequesting {
     var HTTPMethod: Method {
         return .<#post#>
     }
+    var headers: [String: String]?
+    
     private(set) var parameters: [String : Any]?
-    private(set) var headers: [String: String]?
     private(set) var path: String
     
     required init(withURL url: String,

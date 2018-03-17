@@ -17,8 +17,9 @@ class ___FILEBASENAMEASIDENTIFIER___: APIMultipartRequesting {
     var HTTPMethod: Method {
         return .<#post#>
     }
+    var headers: [String: String]?
+    
     private(set) var parameters: [String : Any]?
-    private(set) var headers: [String: String]?
     private(set) var path: String
     private(set) var multipartData: Data
     private(set) var multipartKey: String

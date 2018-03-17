@@ -11,8 +11,9 @@ import Foundation
 typealias ___VARIABLE_fileName:identifier___SuccessHandler = (_ response: ___VARIABLE_fileName:identifier___Request.Response) -> Void
 typealias ___VARIABLE_fileName:identifier___ResponseType = () // Example: Bool
 
-protocol ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling, RequestExecuting {
+protocol ___FILEBASENAMEASIDENTIFIER___ {
     
+    var apiClient: APIClient? { get }
     func request<#exampleFunc#>(successHandler: @escaping ___VARIABLE_fileName:identifier___SuccessHandler,
                      executingHandler: RequestExecutingHandler?,
                      errorHandler: ErrorHandler?)
@@ -34,8 +35,7 @@ extension ___FILEBASENAMEASIDENTIFIER___ {
                                                 fileName: <#"photo.jpg"#>,
                                                 parameters: parameters,
                                                 headers: headers)
-        let apiClient = APIClient()
-        apiClient.executeMultipartRequest(request: request,
+        apiClient?.executeMultipartRequest(request: request,
                                           success: { response in
                                             executingHandler?(false)
                                             successHandler(response)
