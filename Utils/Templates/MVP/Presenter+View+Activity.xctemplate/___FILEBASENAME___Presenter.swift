@@ -23,7 +23,7 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting, RequestErrorHa
     
     private var servicesRepository: ServicesRepository
     
-    init(with view: ___VARIABLE_fileName:identifier___Interface) {
+    init(with view: ___VARIABLE_fileName:identifier___Interface, servicesRepository: ServicesRepository) {
         self.view = view
         self.servicesRepository = servicesRepository
     }
