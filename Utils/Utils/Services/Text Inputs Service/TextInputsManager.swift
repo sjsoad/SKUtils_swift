@@ -83,7 +83,10 @@ class TextInputsManager: NSObject {
             let scroll = containerView as? UIScrollView else { return }
         UIView.animate(withDuration: kAnimationDuration, animations: { [weak self] in
             guard let strongSelf = self else { return }
-            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: rect.size.height, right: 0)
+            // distance from screen bottom to container bottom
+            let distance = UIScreen.main.bounds.maxY - scroll.frame.maxY
+            let bottomInset = rect.size.height - distance
+            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomInset, right: 0)
             strongSelf.scrollToActiveInputView(rect.size.height)
         })
     }
