@@ -1,5 +1,5 @@
 //
-//  PickerDoneTitleSetting.swift
+//  DoneTitleSetting.swift
 //  ShadeChartsWella
 //
 //  Created by Sergey on 28.11.2017.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol PickerDoneTitleSetting {
+protocol DoneTitleSetting {
     func set(doneTitle title: String)
 }

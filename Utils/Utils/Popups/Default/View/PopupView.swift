@@ -36,9 +36,13 @@ class PopupView: UIView, PopupViewable {
     }
     
     func show() {
+        presenter?.viewWillBeShown()
         changeAlpha(of: self, to: 1) { [weak self] (_) in
             guard let strongSelf = self else { return }
-            strongSelf.changeAlpha(of: strongSelf.container, to: 1)
+            strongSelf.changeAlpha(of: strongSelf.container, to: 1, completion: { [weak self] (_) in
+                guard let strongSelf = self else { return }
+                strongSelf.presenter?.viewDidShown()
+            })
         }
     }
     
@@ -61,7 +65,6 @@ class PopupView: UIView, PopupViewable {
         },
                        completion: completion)
     }
-    
     
     // MARK: - Actions -
     

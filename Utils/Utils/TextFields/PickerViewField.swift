@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PickerViewField: PickerTextField {
+class PickerViewField: ToolbarTextField {
     
     // MARK: - Lazy -
     
@@ -52,4 +52,3 @@ extension PickerViewField: PickerViewFieldReloading {
     }
     
 }
-

@@ -18,6 +18,8 @@ protocol PopupViewable: class {
 protocol PopupOutput {
     
     func viewTriggeredCloseEvent()
+    func viewWillBeShown()
+    func viewDidShown()
     func viewDidHide()
     
 }
@@ -53,13 +55,21 @@ class PopupPresenter: NSObject {
     
     // MARK: - Functions -
     
-    func hidePopin() {
+    func hidePopun() {
         view?.hide()
     }
     
-    func removePopin() {
+    func removePopun() {
         guard let view = view as? UIView else { return }
         view.removeFromSuperview()
+    }
+    
+    func popupWillBeShown() {
+        
+    }
+
+    func popupDidShown() {
+        
     }
     
 }
@@ -67,11 +77,19 @@ class PopupPresenter: NSObject {
 extension PopupPresenter: PopupOutput {
     
     func viewTriggeredCloseEvent() {
-        hidePopin()
+        hidePopun()
+    }
+    
+    func viewWillBeShown() {
+        popupWillBeShown()
+    }
+    
+    func viewDidShown() {
+        popupDidShown()
     }
     
     func viewDidHide() {
-        removePopin()
+        removePopun()
     }
     
 }
