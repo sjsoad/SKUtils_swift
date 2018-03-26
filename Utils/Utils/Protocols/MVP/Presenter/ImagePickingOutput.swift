@@ -38,7 +38,7 @@ protocol ImagePickingOutput {
 
     func viewTriggeredCallImagePickerEvent()
     func viewTriggeredSelectionOfPicker(sourceType: UIImagePickerControllerSourceType)
-    func viewTriggedImageSelectionEvent(with image: UIImage)
+    func viewTriggedImageSelectionEvent(with info: [String : Any])
     
 }
 
