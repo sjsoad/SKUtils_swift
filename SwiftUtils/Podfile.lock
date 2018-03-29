@@ -1,16 +1,16 @@
 PODS:
-  - AERecord (4.0.0)
-  - Alamofire (4.5.1)
-  - GoogleMaps (2.5.0):
-    - GoogleMaps/Maps (= 2.5.0)
-  - GoogleMaps/Base (2.5.0)
-  - GoogleMaps/Maps (2.5.0):
+  - AERecord (4.1.0)
+  - Alamofire (4.7.0)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
     - GoogleMaps/Base
-  - NVActivityIndicatorView (4.0.0):
-    - NVActivityIndicatorView/Presenter (= 4.0.0)
-  - NVActivityIndicatorView/Presenter (4.0.0)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - SwiftKeychainWrapper (3.0.1)
-  - SwiftyDrop (4.0.1)
+  - SwiftyDrop (4.0.2)
 
 DEPENDENCIES:
   - AERecord
@@ -21,12 +21,12 @@ DEPENDENCIES:
   - SwiftyDrop
 
 SPEC CHECKSUMS:
-  AERecord: 3a14a25972dc60ed7c7b3fd62f62a5fc32ef6edd
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
-  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
+  AERecord: 8dcaff86717951c50b463d1f130f2f57f7c8dbec
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
-  SwiftyDrop: d037f6c150d50afbe1107ed5d95e75a7065b7f4c
+  SwiftyDrop: a497afbcf50f7882ac7637c8308baf07c5ed15e6
 
 PODFILE CHECKSUM: e1afee36a6e070b87acb0c111e0e239457e9989f
 

@@ -60,7 +60,7 @@ class PickerTextField: BaseTextField {
 
 // MARK: - PickerDoneTitleSetting -
 
-extension PickerTextField: PickerDoneTitleSetting {
+extension PickerTextField: DoneTitleSetting {
     
     func set(doneTitle title: String) {
         doneButtonTitle = title
