@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 protocol APIMultipartRequesting {
-
+    
     associatedtype Response: APIResponsing
     
     var HTTPMethod: Method { get }
@@ -19,7 +19,7 @@ protocol APIMultipartRequesting {
     var mimeType: String { get }
     var fileName: String { get }
     var parameters: [String: Any]? { get }
-    var headers: [String: String]? { get }
+    var headers: [String: String]? { get set }
     var path: String { get }
 
     init(withURL url: String,

@@ -17,7 +17,7 @@ protocol APIRequesting {
     
     var HTTPMethod: Method { get }
     var parameters: [String: Any]? { get }
-    var headers: [String: String]? { get }
+    var headers: [String: String]? { get set }
     var path: String { get }
     
     init(withURL url: String,
