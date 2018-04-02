@@ -22,7 +22,7 @@ class PickerTextField: BaseTextField {
     
     // MARK: - Lazy -
     
-    lazy var toolbar: UIToolbar = {
+    lazy var toolbar: UIToolbar = { [unowned self] in
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()
@@ -34,7 +34,7 @@ class PickerTextField: BaseTextField {
         return toolBar
     }()
     
-    private lazy var doneButton: UIBarButtonItem = {
+    private lazy var doneButton: UIBarButtonItem = { [unowned self] in
         let doneButton = UIBarButtonItem(title: doneButtonTitle,
                                          style: .plain,
                                          target: self,

@@ -34,7 +34,7 @@ class ToolbarTextField: BaseTextField {
         return toolBar
     }()
     
-    private lazy var doneButton: UIBarButtonItem = {
+    private lazy var doneButton: UIBarButtonItem = { [unowned self] in
         let doneButton = UIBarButtonItem(title: doneButtonTitle,
                                          style: .plain,
                                          target: self,

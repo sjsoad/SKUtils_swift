@@ -22,7 +22,6 @@
 		A582AB991FD52C2200ECDE2F /* LocationPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A582AB941FD52C2100ECDE2F /* LocationPermissions.swift */; };
 		A586EDA51FD159BA007749A5 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA11FD159BA007749A5 /* EmailValidator.swift */; };
 		A586EDA71FD159BA007749A5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA31FD159BA007749A5 /* PasswordValidator.swift */; };
-		A586EDAA1FD159CA007749A5 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDA91FD159CA007749A5 /* ValidationService.swift */; };
 		A586EDAC1FD15B6D007749A5 /* ServicesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDAB1FD15B6D007749A5 /* ServicesRepository.swift */; };
 		A586EDBB1FD15BF1007749A5 /* APIRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDB01FD15BF1007749A5 /* APIRequesting.swift */; };
 		A586EDBC1FD15BF1007749A5 /* APIResponsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDB11FD15BF1007749A5 /* APIResponsing.swift */; };
@@ -37,9 +36,6 @@
 		A586EDCD1FD15C05007749A5 /* KeyboardHiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDC81FD15C05007749A5 /* KeyboardHiding.swift */; };
 		A586EDCE1FD15C05007749A5 /* FirstResponding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDC91FD15C05007749A5 /* FirstResponding.swift */; };
 		A586EDD01FD15FAB007749A5 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586EDCF1FD15FAB007749A5 /* Validator.swift */; };
-		A58F3C5A206D55C600C263BF /* DoneTitleSetting.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C59206D55C600C263BF /* DoneTitleSetting.swift.swift */; };
-		A58F3C5F206D55CE00C263BF /* ToolbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C5C206D55CE00C263BF /* ToolbarTextField.swift */; };
-		A58F3C69206D55DE00C263BF /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C63206D55DD00C263BF /* ErrorParser.swift */; };
 		A58F3C72206D561800C263BF /* ImagePickerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C6E206D561800C263BF /* ImagePickerFactory.swift */; };
 		A58F3C73206D561800C263BF /* AlertActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C6F206D561800C263BF /* AlertActionFactory.swift */; };
 		A58F3C74206D561800C263BF /* PickerManagersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F3C70206D561800C263BF /* PickerManagersFactory.swift */; };
@@ -67,13 +63,6 @@
 		A595A3A91FCD7FCE0017CA52 /* DropdownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A595A2D91FCD7FCD0017CA52 /* DropdownCell.xib */; };
 		A595A3AA1FCD7FCE0017CA52 /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A595A2DA1FCD7FCD0017CA52 /* DropdownView.xib */; };
 		A595A3AB1FCD7FCE0017CA52 /* DropdownDataSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2DC1FCD7FCD0017CA52 /* DropdownDataSourceModel.swift */; };
-		A595A3B91FCD7FCE0017CA52 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F31FCD7FCD0017CA52 /* PickerTextField.swift */; };
-		A595A3BA1FCD7FCE0017CA52 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F51FCD7FCD0017CA52 /* TextFieldAccessoryView.swift */; };
-		A595A3BB1FCD7FCE0017CA52 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F61FCD7FCD0017CA52 /* DatePickerField.swift */; };
-		A595A3BC1FCD7FCE0017CA52 /* PickerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F71FCD7FCD0017CA52 /* PickerViewField.swift */; };
-		A595A3BD1FCD7FCE0017CA52 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F81FCD7FCD0017CA52 /* BaseTextField.swift */; };
-		A595A3BE1FCD7FCE0017CA52 /* PassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2F91FCD7FCD0017CA52 /* PassTextField.swift */; };
-		A595A3BF1FCD7FCE0017CA52 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2FA1FCD7FCD0017CA52 /* EmailTextField.swift */; };
 		A595A3C01FCD7FCE0017CA52 /* XibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A2FD1FCD7FCD0017CA52 /* XibLoadableView.swift */; };
 		A595A3C11FCD7FCE0017CA52 /* SideImageDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3001FCD7FCD0017CA52 /* SideImageDecorator.swift */; };
 		A595A3C21FCD7FCE0017CA52 /* BottomBorderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3011FCD7FCD0017CA52 /* BottomBorderDecorator.swift */; };
@@ -119,9 +108,21 @@
 		A595A40D1FCD7FCE0017CA52 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */; };
 		A595A4121FCD7FCE0017CA52 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */; };
 		A595A4161FCD7FCE0017CA52 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */; };
-		A595A4281FCD83A20017CA52 /* PickerViewFieldReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */; };
-		A595A42B1FCD87230017CA52 /* DateSelectionHandlerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A42A1FCD87230017CA52 /* DateSelectionHandlerSetting.swift */; };
-		A595A42F1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A42E1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift */; };
+		A5CF9F25207242EB0069FB30 /* ErrorParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */; };
+		A5CF9F27207242F40069FB30 /* ValidatorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */; };
+		A5CF9F38207242FE0069FB30 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F29207242FE0069FB30 /* PickerTextField.swift */; };
+		A5CF9F39207242FE0069FB30 /* ToolbarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */; };
+		A5CF9F3A207242FE0069FB30 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2C207242FE0069FB30 /* TextFieldAccessoryView.swift */; };
+		A5CF9F3B207242FE0069FB30 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */; };
+		A5CF9F3C207242FE0069FB30 /* PickerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2E207242FE0069FB30 /* PickerViewField.swift */; };
+		A5CF9F3D207242FE0069FB30 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2F207242FE0069FB30 /* BaseTextField.swift */; };
+		A5CF9F3E207242FE0069FB30 /* ToolbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F30207242FE0069FB30 /* ToolbarTextField.swift */; };
+		A5CF9F3F207242FE0069FB30 /* PassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F31207242FE0069FB30 /* PassTextField.swift */; };
+		A5CF9F40207242FE0069FB30 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F32207242FE0069FB30 /* EmailTextField.swift */; };
+		A5CF9F41207242FE0069FB30 /* DateSelectionHandlerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F34207242FE0069FB30 /* DateSelectionHandlerSetting.swift */; };
+		A5CF9F42207242FE0069FB30 /* DoneButtonHandlerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F35207242FE0069FB30 /* DoneButtonHandlerSetting.swift */; };
+		A5CF9F43207242FE0069FB30 /* DoneTitleSetting.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F36207242FE0069FB30 /* DoneTitleSetting.swift.swift */; };
+		A5CF9F44207242FE0069FB30 /* PickerViewFieldReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F37207242FE0069FB30 /* PickerViewFieldReloading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,7 +145,6 @@
 		A582AB941FD52C2100ECDE2F /* LocationPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissions.swift; sourceTree = "<group>"; };
 		A586EDA11FD159BA007749A5 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		A586EDA31FD159BA007749A5 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		A586EDA91FD159CA007749A5 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		A586EDAB1FD15B6D007749A5 /* ServicesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRepository.swift; sourceTree = "<group>"; };
 		A586EDB01FD15BF1007749A5 /* APIRequesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequesting.swift; sourceTree = "<group>"; };
 		A586EDB11FD15BF1007749A5 /* APIResponsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponsing.swift; sourceTree = "<group>"; };
@@ -159,9 +159,6 @@
 		A586EDC81FD15C05007749A5 /* KeyboardHiding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHiding.swift; sourceTree = "<group>"; };
 		A586EDC91FD15C05007749A5 /* FirstResponding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstResponding.swift; sourceTree = "<group>"; };
 		A586EDCF1FD15FAB007749A5 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		A58F3C59206D55C600C263BF /* DoneTitleSetting.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneTitleSetting.swift.swift; sourceTree = "<group>"; };
-		A58F3C5C206D55CE00C263BF /* ToolbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextField.swift; sourceTree = "<group>"; };
-		A58F3C63206D55DD00C263BF /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		A58F3C6E206D561800C263BF /* ImagePickerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerFactory.swift; sourceTree = "<group>"; };
 		A58F3C6F206D561800C263BF /* AlertActionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionFactory.swift; sourceTree = "<group>"; };
 		A58F3C70206D561800C263BF /* PickerManagersFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerManagersFactory.swift; sourceTree = "<group>"; };
@@ -189,13 +186,6 @@
 		A595A2D91FCD7FCD0017CA52 /* DropdownCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropdownCell.xib; sourceTree = "<group>"; };
 		A595A2DA1FCD7FCD0017CA52 /* DropdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
 		A595A2DC1FCD7FCD0017CA52 /* DropdownDataSourceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownDataSourceModel.swift; sourceTree = "<group>"; };
-		A595A2F31FCD7FCD0017CA52 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
-		A595A2F51FCD7FCD0017CA52 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
-		A595A2F61FCD7FCD0017CA52 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
-		A595A2F71FCD7FCD0017CA52 /* PickerViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewField.swift; sourceTree = "<group>"; };
-		A595A2F81FCD7FCD0017CA52 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
-		A595A2F91FCD7FCD0017CA52 /* PassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTextField.swift; sourceTree = "<group>"; };
-		A595A2FA1FCD7FCD0017CA52 /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		A595A2FD1FCD7FCD0017CA52 /* XibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibLoadableView.swift; sourceTree = "<group>"; };
 		A595A3001FCD7FCD0017CA52 /* SideImageDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideImageDecorator.swift; sourceTree = "<group>"; };
 		A595A3011FCD7FCD0017CA52 /* BottomBorderDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderDecorator.swift; sourceTree = "<group>"; };
@@ -241,9 +231,21 @@
 		A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
 		A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
 		A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
-		A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewFieldReloading.swift; sourceTree = "<group>"; };
-		A595A42A1FCD87230017CA52 /* DateSelectionHandlerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionHandlerSetting.swift; sourceTree = "<group>"; };
-		A595A42E1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButtonHandlerSetting.swift; sourceTree = "<group>"; };
+		A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParsingService.swift; sourceTree = "<group>"; };
+		A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsRepository.swift; sourceTree = "<group>"; };
+		A5CF9F29207242FE0069FB30 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextView.swift; sourceTree = "<group>"; };
+		A5CF9F2C207242FE0069FB30 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
+		A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
+		A5CF9F2E207242FE0069FB30 /* PickerViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewField.swift; sourceTree = "<group>"; };
+		A5CF9F2F207242FE0069FB30 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		A5CF9F30207242FE0069FB30 /* ToolbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextField.swift; sourceTree = "<group>"; };
+		A5CF9F31207242FE0069FB30 /* PassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTextField.swift; sourceTree = "<group>"; };
+		A5CF9F32207242FE0069FB30 /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		A5CF9F34207242FE0069FB30 /* DateSelectionHandlerSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectionHandlerSetting.swift; sourceTree = "<group>"; };
+		A5CF9F35207242FE0069FB30 /* DoneButtonHandlerSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneButtonHandlerSetting.swift; sourceTree = "<group>"; };
+		A5CF9F36207242FE0069FB30 /* DoneTitleSetting.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneTitleSetting.swift.swift; sourceTree = "<group>"; };
+		A5CF9F37207242FE0069FB30 /* PickerViewFieldReloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewFieldReloading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,8 +346,8 @@
 		A586ED9F1FD15992007749A5 /* Validation Service */ = {
 			isa = PBXGroup;
 			children = (
+				A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */,
 				A586EDA01FD159BA007749A5 /* Validators */,
-				A586EDA91FD159CA007749A5 /* ValidationService.swift */,
 			);
 			path = "Validation Service";
 			sourceTree = "<group>";
@@ -430,25 +432,17 @@
 		A58F3C61206D55DD00C263BF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A58F3C62206D55DD00C263BF /* Error Parser */,
+				A5CF9F23207242EB0069FB30 /* Error Parsing Service */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		A58F3C62206D55DD00C263BF /* Error Parser */ = {
-			isa = PBXGroup;
-			children = (
-				A58F3C63206D55DD00C263BF /* ErrorParser.swift */,
-			);
-			path = "Error Parser";
 			sourceTree = "<group>";
 		};
 		A595A2B21FCD7FCD0017CA52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A5CF9F28207242FE0069FB30 /* Text Inputs */,
 				A595A2B31FCD7FCD0017CA52 /* Data Sources */,
 				A595A2D31FCD7FCD0017CA52 /* Dropdown */,
-				A595A2F21FCD7FCD0017CA52 /* TextFields */,
 				A595A2FB1FCD7FCD0017CA52 /* Custom UI */,
 				A595A2FE1FCD7FCD0017CA52 /* Decorators */,
 				A595A31C1FCD7FCD0017CA52 /* Picker DataSource */,
@@ -626,30 +620,6 @@
 				A595A2DC1FCD7FCD0017CA52 /* DropdownDataSourceModel.swift */,
 			);
 			path = "Cell Model";
-			sourceTree = "<group>";
-		};
-		A595A2F21FCD7FCD0017CA52 /* TextFields */ = {
-			isa = PBXGroup;
-			children = (
-				A595A2F41FCD7FCD0017CA52 /* TextFieldAccessoryView */,
-				A595A4251FCD83A20017CA52 /* Public Protocols */,
-				A58F3C5C206D55CE00C263BF /* ToolbarTextField.swift */,
-				A595A2F31FCD7FCD0017CA52 /* PickerTextField.swift */,
-				A595A2F61FCD7FCD0017CA52 /* DatePickerField.swift */,
-				A595A2F71FCD7FCD0017CA52 /* PickerViewField.swift */,
-				A595A2F81FCD7FCD0017CA52 /* BaseTextField.swift */,
-				A595A2F91FCD7FCD0017CA52 /* PassTextField.swift */,
-				A595A2FA1FCD7FCD0017CA52 /* EmailTextField.swift */,
-			);
-			path = TextFields;
-			sourceTree = "<group>";
-		};
-		A595A2F41FCD7FCD0017CA52 /* TextFieldAccessoryView */ = {
-			isa = PBXGroup;
-			children = (
-				A595A2F51FCD7FCD0017CA52 /* TextFieldAccessoryView.swift */,
-			);
-			path = TextFieldAccessoryView;
 			sourceTree = "<group>";
 		};
 		A595A2FB1FCD7FCD0017CA52 /* Custom UI */ = {
@@ -988,17 +958,6 @@
 			path = "User Default Service";
 			sourceTree = "<group>";
 		};
-		A595A4251FCD83A20017CA52 /* Public Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				A58F3C59206D55C600C263BF /* DoneTitleSetting.swift.swift */,
-				A595A4261FCD83A20017CA52 /* PickerViewFieldReloading.swift */,
-				A595A42A1FCD87230017CA52 /* DateSelectionHandlerSetting.swift */,
-				A595A42E1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift */,
-			);
-			path = "Public Protocols";
-			sourceTree = "<group>";
-		};
 		A5ABFB5B1F22356400548D89 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1006,6 +965,50 @@
 			);
 			name = Utils;
 			path = ../Utils;
+			sourceTree = "<group>";
+		};
+		A5CF9F23207242EB0069FB30 /* Error Parsing Service */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */,
+			);
+			path = "Error Parsing Service";
+			sourceTree = "<group>";
+		};
+		A5CF9F28207242FE0069FB30 /* Text Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF9F29207242FE0069FB30 /* PickerTextField.swift */,
+				A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */,
+				A5CF9F2B207242FE0069FB30 /* TextFieldAccessoryView */,
+				A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */,
+				A5CF9F2E207242FE0069FB30 /* PickerViewField.swift */,
+				A5CF9F2F207242FE0069FB30 /* BaseTextField.swift */,
+				A5CF9F30207242FE0069FB30 /* ToolbarTextField.swift */,
+				A5CF9F31207242FE0069FB30 /* PassTextField.swift */,
+				A5CF9F32207242FE0069FB30 /* EmailTextField.swift */,
+				A5CF9F33207242FE0069FB30 /* Public Protocols */,
+			);
+			path = "Text Inputs";
+			sourceTree = "<group>";
+		};
+		A5CF9F2B207242FE0069FB30 /* TextFieldAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF9F2C207242FE0069FB30 /* TextFieldAccessoryView.swift */,
+			);
+			path = TextFieldAccessoryView;
+			sourceTree = "<group>";
+		};
+		A5CF9F33207242FE0069FB30 /* Public Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A5CF9F34207242FE0069FB30 /* DateSelectionHandlerSetting.swift */,
+				A5CF9F35207242FE0069FB30 /* DoneButtonHandlerSetting.swift */,
+				A5CF9F36207242FE0069FB30 /* DoneTitleSetting.swift.swift */,
+				A5CF9F37207242FE0069FB30 /* PickerViewFieldReloading.swift */,
+			);
+			path = "Public Protocols";
 			sourceTree = "<group>";
 		};
 		B53F30DD3679F6C7ECA07164 /* Frameworks */ = {
@@ -1164,15 +1167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CF9F27207242F40069FB30 /* ValidatorsRepository.swift in Sources */,
 				A595A3F01FCD7FCE0017CA52 /* AlertPresentable.swift in Sources */,
-				A595A3BB1FCD7FCE0017CA52 /* DatePickerField.swift in Sources */,
 				A595A39C1FCD7FCE0017CA52 /* TableViewRowEditing.swift in Sources */,
+				A5CF9F44207242FE0069FB30 /* PickerViewFieldReloading.swift in Sources */,
 				A586EDC01FD15BF1007749A5 /* RequestExecuting.swift in Sources */,
 				A586EDAC1FD15B6D007749A5 /* ServicesRepository.swift in Sources */,
-				A595A42B1FCD87230017CA52 /* DateSelectionHandlerSetting.swift in Sources */,
 				A595A3C31FCD7FCE0017CA52 /* Decorator.swift in Sources */,
 				A586EDBB1FD15BF1007749A5 /* APIRequesting.swift in Sources */,
 				A595A4031FCD7FCE0017CA52 /* TableViewAnimator.swift in Sources */,
+				A5CF9F43207242FE0069FB30 /* DoneTitleSetting.swift.swift in Sources */,
 				A595A3D61FCD7FCE0017CA52 /* DesignableView.swift in Sources */,
 				A58F3C74206D561800C263BF /* PickerManagersFactory.swift in Sources */,
 				A595A3A31FCD7FCE0017CA52 /* DataSourceSectionRepresentable.swift in Sources */,
@@ -1181,32 +1185,30 @@
 				A595A3EC1FCD7FCE0017CA52 /* Navigatable.swift in Sources */,
 				A595A3E61FCD7FCE0017CA52 /* WindowFactory.swift in Sources */,
 				A595A39E1FCD7FCE0017CA52 /* RowMoving.swift in Sources */,
-				A595A42F1FCD87CC0017CA52 /* DoneButtonHandlerSetting.swift in Sources */,
 				A595A4061FCD7FCE0017CA52 /* LocalDataStorage.swift in Sources */,
+				A5CF9F25207242EB0069FB30 /* ErrorParsingService.swift in Sources */,
 				A595A3DF1FCD7FCE0017CA52 /* String+JSON.swift in Sources */,
 				A595A4041FCD7FCE0017CA52 /* ShareHelper.swift in Sources */,
 				A595A3DB1FCD7FCE0017CA52 /* Image+Resize.swift in Sources */,
-				A586EDAA1FD159CA007749A5 /* ValidationService.swift in Sources */,
 				A595A3A11FCD7FCE0017CA52 /* DataSourceRepresentable.swift in Sources */,
 				A586EDD01FD15FAB007749A5 /* Validator.swift in Sources */,
+				A5CF9F42207242FE0069FB30 /* DoneButtonHandlerSetting.swift in Sources */,
 				A58F3C73206D561800C263BF /* AlertActionFactory.swift in Sources */,
 				A586EDBD1FD15BF1007749A5 /* APIMultipartRequesting.swift in Sources */,
-				A58F3C69206D55DE00C263BF /* ErrorParser.swift in Sources */,
 				A595A3A81FCD7FCE0017CA52 /* DropdownView.swift in Sources */,
 				A595A3C01FCD7FCE0017CA52 /* XibLoadableView.swift in Sources */,
 				A582AB951FD52C2200ECDE2F /* PhotoLibraryPermissions.swift in Sources */,
-				A595A3B91FCD7FCE0017CA52 /* PickerTextField.swift in Sources */,
 				A595A3A51FCD7FCE0017CA52 /* ReusableView.swift in Sources */,
 				A586EDCA1FD15C05007749A5 /* TextInputsManager.swift in Sources */,
 				A595A4161FCD7FCE0017CA52 /* UserDefaultsService.swift in Sources */,
 				A595A3E01FCD7FCE0017CA52 /* AlertController+AlertPresentable.swift in Sources */,
 				A595A3FE1FCD7FCE0017CA52 /* TableViewHelper.swift in Sources */,
+				A5CF9F3F207242FE0069FB30 /* PassTextField.swift in Sources */,
 				A586EDBC1FD15BF1007749A5 /* APIResponsing.swift in Sources */,
 				A595A4071FCD7FCE0017CA52 /* TimerService.swift in Sources */,
 				A586EDC11FD15BF1007749A5 /* APIClient.swift in Sources */,
 				A595A3DA1FCD7FCE0017CA52 /* UINavigationController+Utils.swift in Sources */,
 				A586EDCD1FD15C05007749A5 /* KeyboardHiding.swift in Sources */,
-				A595A4281FCD83A20017CA52 /* PickerViewFieldReloading.swift in Sources */,
 				A582AB991FD52C2200ECDE2F /* LocationPermissions.swift in Sources */,
 				A595A3E21FCD7FCE0017CA52 /* PopupPresenter.swift in Sources */,
 				A582AB981FD52C2200ECDE2F /* ContactsPermissions.swift in Sources */,
@@ -1216,6 +1218,8 @@
 				A582AB961FD52C2200ECDE2F /* MicrophonePermissions.swift in Sources */,
 				A595A4011FCD7FCE0017CA52 /* RandomNumberHelper.swift in Sources */,
 				A595A39D1FCD7FCE0017CA52 /* TableViewRowMoving.swift in Sources */,
+				A5CF9F38207242FE0069FB30 /* PickerTextField.swift in Sources */,
+				A5CF9F3D207242FE0069FB30 /* BaseTextField.swift in Sources */,
 				A595A40C1FCD7FCE0017CA52 /* KeychainService.swift in Sources */,
 				A595A4121FCD7FCE0017CA52 /* ServicePermissions.swift in Sources */,
 				A595A39A1FCD7FCE0017CA52 /* ArrayDataSourceRepresentable.swift in Sources */,
@@ -1224,33 +1228,32 @@
 				A586EDBF1FD15BF1007749A5 /* RequestErrorHandling.swift in Sources */,
 				A586EDA51FD159BA007749A5 /* EmailValidator.swift in Sources */,
 				A595A3D31FCD7FCE0017CA52 /* PickerManager.swift in Sources */,
-				A595A3BD1FCD7FCE0017CA52 /* BaseTextField.swift in Sources */,
 				A595A3951FCD7FCE0017CA52 /* TableViewArrayDataSource.swift in Sources */,
-				A58F3C5F206D55CE00C263BF /* ToolbarTextField.swift in Sources */,
+				A5CF9F3C207242FE0069FB30 /* PickerViewField.swift in Sources */,
 				A586EDCE1FD15C05007749A5 /* FirstResponding.swift in Sources */,
-				A595A3BF1FCD7FCE0017CA52 /* EmailTextField.swift in Sources */,
-				A58F3C5A206D55C600C263BF /* DoneTitleSetting.swift.swift in Sources */,
 				A586EDCB1FD15C05007749A5 /* TextFieldsManagerReloading.swift in Sources */,
 				A5241C511FA74A02008463EE /* ScrollingViewController.swift in Sources */,
-				A595A3BC1FCD7FCE0017CA52 /* PickerViewField.swift in Sources */,
 				A595A3E11FCD7FCE0017CA52 /* UIViewContollrer+Presentable.swift in Sources */,
 				A595A39F1FCD7FCE0017CA52 /* ConfigurableCell.swift in Sources */,
 				A595A3D71FCD7FCE0017CA52 /* UIView+Load.swift in Sources */,
-				A595A3BA1FCD7FCE0017CA52 /* TextFieldAccessoryView.swift in Sources */,
 				A595A39B1FCD7FCE0017CA52 /* CollectionViewRowMoving.swift in Sources */,
 				A595A3DD1FCD7FCE0017CA52 /* String+NSRange.swift in Sources */,
+				A5CF9F40207242FE0069FB30 /* EmailTextField.swift in Sources */,
 				A595A3EB1FCD7FCE0017CA52 /* Windowable.swift in Sources */,
 				A595A3A41FCD7FCE0017CA52 /* ConfigurableView.swift in Sources */,
 				A57057231EF117C40092CDAB /* AppDelegate.swift in Sources */,
 				A586EDBE1FD15BF1007749A5 /* ActivityViewable.swift in Sources */,
 				A595A3971FCD7FCE0017CA52 /* SectionFooter.swift in Sources */,
 				A582AB971FD52C2200ECDE2F /* BluetoothPermissions.swift in Sources */,
+				A5CF9F3A207242FE0069FB30 /* TextFieldAccessoryView.swift in Sources */,
 				A595A3EF1FCD7FCE0017CA52 /* Presentable.swift in Sources */,
+				A5CF9F39207242FE0069FB30 /* ToolbarTextView.swift in Sources */,
 				A595A3A61FCD7FCE0017CA52 /* DropdownPresenter.swift in Sources */,
 				A5241C521FA74A02008463EE /* ViewController.swift in Sources */,
 				A595A3DC1FCD7FCE0017CA52 /* Dictionary+JSON.swift in Sources */,
 				A586EDCC1FD15C05007749A5 /* TextInputsClearing.swift in Sources */,
 				A595A3941FCD7FCE0017CA52 /* CollectionViewArrayDataSource.swift in Sources */,
+				A5CF9F3E207242FE0069FB30 /* ToolbarTextField.swift in Sources */,
 				A595A4051FCD7FCE0017CA52 /* Utils.swift in Sources */,
 				A595A4001FCD7FCE0017CA52 /* QueryStringParser.swift in Sources */,
 				A595A3981FCD7FCE0017CA52 /* SectionHeader.swift in Sources */,
@@ -1262,12 +1265,13 @@
 				A595A3FF1FCD7FCE0017CA52 /* DynamicHelper.swift in Sources */,
 				A595A3E31FCD7FCE0017CA52 /* PopupView.swift in Sources */,
 				A595A3A21FCD7FCE0017CA52 /* DataSourceModel.swift in Sources */,
+				A5CF9F41207242FE0069FB30 /* DateSelectionHandlerSetting.swift in Sources */,
 				A595A3A71FCD7FCE0017CA52 /* DropdownCell.swift in Sources */,
 				A595A4021FCD7FCE0017CA52 /* SocialNetworksHelper.swift in Sources */,
+				A5CF9F3B207242FE0069FB30 /* DatePickerField.swift in Sources */,
 				A595A3FD1FCD7FCE0017CA52 /* MapsHelper.swift in Sources */,
 				A595A3961FCD7FCE0017CA52 /* SectionModel.swift in Sources */,
 				A595A3D91FCD7FCE0017CA52 /* Location+String.swift in Sources */,
-				A595A3BE1FCD7FCE0017CA52 /* PassTextField.swift in Sources */,
 				A595A3ED1FCD7FCE0017CA52 /* AlertViewable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
