@@ -23,14 +23,6 @@ protocol ImagePickerAlertConfigurating: UIImagePickerControllerDelegate, UINavig
     
 }
 
-extension ImagePickerAlertConfigurating {
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-}
-
 // Extend your Interface protocol with this protocol
 
 protocol ImagePickingInterface {

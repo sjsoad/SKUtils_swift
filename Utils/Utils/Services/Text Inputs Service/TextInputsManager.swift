@@ -31,7 +31,7 @@ class TextInputsManager: NSObject {
     // MARK: - Private -
     
     private func gatherTextInputs() {
-        let textFields: [UIView] = containerView.subviewsOf(type: UITextField.self).flatMap { (textField) -> UIView? in
+        let textFields: [UIView] = containerView.subviewsOf(type: UITextField.self).compactMap { (textField) -> UIView? in
             textField.addTarget(self, action: #selector(returnButtonPressed), for: .editingDidEndOnExit)
             return textField
         }

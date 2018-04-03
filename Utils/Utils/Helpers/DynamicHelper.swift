@@ -19,7 +19,7 @@ class Dynamic<T> {
     }
     var value: T {
         didSet {
-            let allListeneres = listeners.flatMap({ $0.value })
+            let allListeneres = listeners.compactMap({ $0.value })
             allListeneres.forEach { (listener) in
                 listener(value)
             }

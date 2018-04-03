@@ -13,7 +13,7 @@ extension String {
     func nsranges(of string: String) -> [NSRange] {
         guard let regex = try? NSRegularExpression(pattern: string, options: []) else { return [] }
         let mathces = regex.matches(in: self, options: [], range: self.nsrange())
-        return mathces.flatMap({ $0.range })
+        return mathces.compactMap({ $0.range })
     }
     
     func nsrange(of string: String) -> NSRange {

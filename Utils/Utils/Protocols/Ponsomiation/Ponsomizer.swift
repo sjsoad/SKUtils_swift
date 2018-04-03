@@ -28,7 +28,7 @@ protocol Ponsomizing {
 class Ponsomizer: Ponsomizing {
     
     func ponsomize(_ ponsomizableObjects: [Ponsomizable]) -> [AnyObject] {
-        return ponsomizableObjects.flatMap({ return ponsomize($0) })
+        return ponsomizableObjects.compactMap({ return ponsomize($0) })
     }
     
     func ponsomize(_ ponsomizableObject: Ponsomizable) -> AnyObject {

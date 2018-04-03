@@ -100,7 +100,6 @@
 		A595A4011FCD7FCE0017CA52 /* RandomNumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A36D1FCD7FCD0017CA52 /* RandomNumberHelper.swift */; };
 		A595A4021FCD7FCE0017CA52 /* SocialNetworksHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A36E1FCD7FCD0017CA52 /* SocialNetworksHelper.swift */; };
 		A595A4031FCD7FCE0017CA52 /* TableViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A36F1FCD7FCD0017CA52 /* TableViewAnimator.swift */; };
-		A595A4041FCD7FCE0017CA52 /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3701FCD7FCD0017CA52 /* ShareHelper.swift */; };
 		A595A4051FCD7FCE0017CA52 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3711FCD7FCD0017CA52 /* Utils.swift */; };
 		A595A4061FCD7FCE0017CA52 /* LocalDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3741FCD7FCD0017CA52 /* LocalDataStorage.swift */; };
 		A595A4071FCD7FCE0017CA52 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3761FCD7FCD0017CA52 /* TimerService.swift */; };
@@ -123,6 +122,9 @@
 		A5CF9F42207242FE0069FB30 /* DoneButtonHandlerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F35207242FE0069FB30 /* DoneButtonHandlerSetting.swift */; };
 		A5CF9F43207242FE0069FB30 /* DoneTitleSetting.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F36207242FE0069FB30 /* DoneTitleSetting.swift.swift */; };
 		A5CF9F44207242FE0069FB30 /* PickerViewFieldReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F37207242FE0069FB30 /* PickerViewFieldReloading.swift */; };
+		A5E0054B20738C24002A571B /* ItemSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0054A20738C24002A571B /* ItemSharing.swift */; };
+		A5E0054D20738C2A002A571B /* ImagePickingInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0054C20738C2A002A571B /* ImagePickingInterface.swift */; };
+		A5E0054F20738C38002A571B /* ImagePickingOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E0054E20738C38002A571B /* ImagePickingOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,7 +225,6 @@
 		A595A36D1FCD7FCD0017CA52 /* RandomNumberHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberHelper.swift; sourceTree = "<group>"; };
 		A595A36E1FCD7FCD0017CA52 /* SocialNetworksHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetworksHelper.swift; sourceTree = "<group>"; };
 		A595A36F1FCD7FCD0017CA52 /* TableViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAnimator.swift; sourceTree = "<group>"; };
-		A595A3701FCD7FCD0017CA52 /* ShareHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
 		A595A3711FCD7FCD0017CA52 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A595A3741FCD7FCD0017CA52 /* LocalDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDataStorage.swift; sourceTree = "<group>"; };
 		A595A3761FCD7FCD0017CA52 /* TimerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
@@ -246,6 +247,9 @@
 		A5CF9F35207242FE0069FB30 /* DoneButtonHandlerSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneButtonHandlerSetting.swift; sourceTree = "<group>"; };
 		A5CF9F36207242FE0069FB30 /* DoneTitleSetting.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneTitleSetting.swift.swift; sourceTree = "<group>"; };
 		A5CF9F37207242FE0069FB30 /* PickerViewFieldReloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewFieldReloading.swift; sourceTree = "<group>"; };
+		A5E0054A20738C24002A571B /* ItemSharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSharing.swift; sourceTree = "<group>"; };
+		A5E0054C20738C2A002A571B /* ImagePickingInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickingInterface.swift; sourceTree = "<group>"; };
+		A5E0054E20738C38002A571B /* ImagePickingOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickingOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -825,6 +829,7 @@
 		A595A3481FCD7FCD0017CA52 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A5E0054E20738C38002A571B /* ImagePickingOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -832,6 +837,8 @@
 		A595A3491FCD7FCD0017CA52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A5E0054C20738C2A002A571B /* ImagePickingInterface.swift */,
+				A5E0054A20738C24002A571B /* ItemSharing.swift */,
 				A595A34A1FCD7FCD0017CA52 /* Windowable.swift */,
 				A595A34B1FCD7FCD0017CA52 /* Navigatable.swift */,
 			);
@@ -874,7 +881,6 @@
 				A595A36D1FCD7FCD0017CA52 /* RandomNumberHelper.swift */,
 				A595A36E1FCD7FCD0017CA52 /* SocialNetworksHelper.swift */,
 				A595A36F1FCD7FCD0017CA52 /* TableViewAnimator.swift */,
-				A595A3701FCD7FCD0017CA52 /* ShareHelper.swift */,
 				A595A3711FCD7FCD0017CA52 /* Utils.swift */,
 			);
 			path = Helpers;
@@ -1049,7 +1055,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Sergey;
 				TargetAttributes = {
 					A570571E1EF117C40092CDAB = {
@@ -1174,6 +1180,7 @@
 				A586EDC01FD15BF1007749A5 /* RequestExecuting.swift in Sources */,
 				A586EDAC1FD15B6D007749A5 /* ServicesRepository.swift in Sources */,
 				A595A3C31FCD7FCE0017CA52 /* Decorator.swift in Sources */,
+				A5E0054D20738C2A002A571B /* ImagePickingInterface.swift in Sources */,
 				A586EDBB1FD15BF1007749A5 /* APIRequesting.swift in Sources */,
 				A595A4031FCD7FCE0017CA52 /* TableViewAnimator.swift in Sources */,
 				A5CF9F43207242FE0069FB30 /* DoneTitleSetting.swift.swift in Sources */,
@@ -1188,7 +1195,6 @@
 				A595A4061FCD7FCE0017CA52 /* LocalDataStorage.swift in Sources */,
 				A5CF9F25207242EB0069FB30 /* ErrorParsingService.swift in Sources */,
 				A595A3DF1FCD7FCE0017CA52 /* String+JSON.swift in Sources */,
-				A595A4041FCD7FCE0017CA52 /* ShareHelper.swift in Sources */,
 				A595A3DB1FCD7FCE0017CA52 /* Image+Resize.swift in Sources */,
 				A595A3A11FCD7FCE0017CA52 /* DataSourceRepresentable.swift in Sources */,
 				A586EDD01FD15FAB007749A5 /* Validator.swift in Sources */,
@@ -1197,6 +1203,7 @@
 				A586EDBD1FD15BF1007749A5 /* APIMultipartRequesting.swift in Sources */,
 				A595A3A81FCD7FCE0017CA52 /* DropdownView.swift in Sources */,
 				A595A3C01FCD7FCE0017CA52 /* XibLoadableView.swift in Sources */,
+				A5E0054B20738C24002A571B /* ItemSharing.swift in Sources */,
 				A582AB951FD52C2200ECDE2F /* PhotoLibraryPermissions.swift in Sources */,
 				A595A3A51FCD7FCE0017CA52 /* ReusableView.swift in Sources */,
 				A586EDCA1FD15C05007749A5 /* TextInputsManager.swift in Sources */,
@@ -1206,6 +1213,7 @@
 				A5CF9F3F207242FE0069FB30 /* PassTextField.swift in Sources */,
 				A586EDBC1FD15BF1007749A5 /* APIResponsing.swift in Sources */,
 				A595A4071FCD7FCE0017CA52 /* TimerService.swift in Sources */,
+				A5E0054F20738C38002A571B /* ImagePickingOutput.swift in Sources */,
 				A586EDC11FD15BF1007749A5 /* APIClient.swift in Sources */,
 				A595A3DA1FCD7FCE0017CA52 /* UINavigationController+Utils.swift in Sources */,
 				A586EDCD1FD15C05007749A5 /* KeyboardHiding.swift in Sources */,
@@ -1312,6 +1320,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1319,6 +1328,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1368,6 +1378,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1375,6 +1386,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

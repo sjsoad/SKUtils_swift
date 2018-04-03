@@ -14,7 +14,7 @@ class ErrorParsingService {
         // TODO: - Parse error format -
         guard let json = JSON as? [String: Any] else { return nil }
         if let messages = json["message"] as? [String: String] {
-            let values = messages.flatMap({ (_, value) -> String? in
+            let values = messages.compactMap({ (_, value) -> String? in
                 return value
             })
             return ErrorFactory.error(with: values.joined(separator: ". "))
@@ -30,7 +30,7 @@ class ErrorParsingService {
 class ErrorFactory {
     
     class func error(with message: String) -> NSError {
-        return NSError(domain: API.host, code: 400, userInfo: [NSLocalizedDescriptionKey: message])
+        return NSError(domain: "API.host", code: 400, userInfo: [NSLocalizedDescriptionKey: message])
     }
     
 }
