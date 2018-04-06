@@ -110,7 +110,6 @@
 		A5C44889207777C10043273E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C44888207777C10043273E /* API.swift */; };
 		A5CF9F25207242EB0069FB30 /* ErrorParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */; };
 		A5CF9F27207242F40069FB30 /* ValidatorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */; };
-		A5CF9F38207242FE0069FB30 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F29207242FE0069FB30 /* PickerTextField.swift */; };
 		A5CF9F39207242FE0069FB30 /* ToolbarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */; };
 		A5CF9F3A207242FE0069FB30 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2C207242FE0069FB30 /* TextFieldAccessoryView.swift */; };
 		A5CF9F3B207242FE0069FB30 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */; };
@@ -236,7 +235,6 @@
 		A5C44888207777C10043273E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParsingService.swift; sourceTree = "<group>"; };
 		A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsRepository.swift; sourceTree = "<group>"; };
-		A5CF9F29207242FE0069FB30 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextView.swift; sourceTree = "<group>"; };
 		A5CF9F2C207242FE0069FB30 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
 		A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
@@ -987,16 +985,15 @@
 		A5CF9F28207242FE0069FB30 /* Text Inputs */ = {
 			isa = PBXGroup;
 			children = (
-				A5CF9F29207242FE0069FB30 /* PickerTextField.swift */,
-				A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */,
+				A5CF9F33207242FE0069FB30 /* Public Protocols */,
 				A5CF9F2B207242FE0069FB30 /* TextFieldAccessoryView */,
+				A5CF9F2A207242FE0069FB30 /* ToolbarTextView.swift */,
 				A5CF9F2D207242FE0069FB30 /* DatePickerField.swift */,
 				A5CF9F2E207242FE0069FB30 /* PickerViewField.swift */,
-				A5CF9F2F207242FE0069FB30 /* BaseTextField.swift */,
 				A5CF9F30207242FE0069FB30 /* ToolbarTextField.swift */,
+				A5CF9F2F207242FE0069FB30 /* BaseTextField.swift */,
 				A5CF9F31207242FE0069FB30 /* PassTextField.swift */,
 				A5CF9F32207242FE0069FB30 /* EmailTextField.swift */,
-				A5CF9F33207242FE0069FB30 /* Public Protocols */,
 			);
 			path = "Text Inputs";
 			sourceTree = "<group>";
@@ -1229,7 +1226,6 @@
 				A582AB961FD52C2200ECDE2F /* MicrophonePermissions.swift in Sources */,
 				A595A4011FCD7FCE0017CA52 /* RandomNumberHelper.swift in Sources */,
 				A595A39D1FCD7FCE0017CA52 /* TableViewRowMoving.swift in Sources */,
-				A5CF9F38207242FE0069FB30 /* PickerTextField.swift in Sources */,
 				A5CF9F3D207242FE0069FB30 /* BaseTextField.swift in Sources */,
 				A595A40C1FCD7FCE0017CA52 /* KeychainService.swift in Sources */,
 				A595A4121FCD7FCE0017CA52 /* ServicePermissions.swift in Sources */,

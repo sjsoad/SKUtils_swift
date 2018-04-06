@@ -26,19 +26,14 @@ class ToolbarTextField: BaseTextField {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
-                                          target: nil,
-                                          action: nil)
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         return toolBar
     }()
     
     private lazy var doneButton: UIBarButtonItem = { [unowned self] in
-        let doneButton = UIBarButtonItem(title: doneButtonTitle,
-                                         style: .plain,
-                                         target: self,
-                                         action: #selector(doneButtonPressed(_:)))
+        let doneButton = UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
         return doneButton
     }()
     
@@ -72,7 +67,7 @@ extension ToolbarTextField: DoneTitleSetting {
 
 extension ToolbarTextField: DoneButtonHandlerSetting {
     
-    func set(doneButtonHandler handler: @escaping ToolbarFieldDoneButtonHandler) {
-        doneButtonHandler = handler
+    func set<HandlerType>(doneButtonHandler handler: HandlerType) {
+        doneButtonHandler = handler as? ToolbarFieldDoneButtonHandler
     }
 }
