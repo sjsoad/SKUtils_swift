@@ -107,6 +107,7 @@
 		A595A40D1FCD7FCE0017CA52 /* CameraPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */; };
 		A595A4121FCD7FCE0017CA52 /* ServicePermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */; };
 		A595A4161FCD7FCE0017CA52 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */; };
+		A5C44889207777C10043273E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C44888207777C10043273E /* API.swift */; };
 		A5CF9F25207242EB0069FB30 /* ErrorParsingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */; };
 		A5CF9F27207242F40069FB30 /* ValidatorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */; };
 		A5CF9F38207242FE0069FB30 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CF9F29207242FE0069FB30 /* PickerTextField.swift */; };
@@ -232,6 +233,7 @@
 		A595A3831FCD7FCD0017CA52 /* CameraPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPermissions.swift; sourceTree = "<group>"; };
 		A595A38B1FCD7FCD0017CA52 /* ServicePermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicePermissions.swift; sourceTree = "<group>"; };
 		A595A3931FCD7FCD0017CA52 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		A5C44888207777C10043273E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A5CF9F24207242EB0069FB30 /* ErrorParsingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParsingService.swift; sourceTree = "<group>"; };
 		A5CF9F26207242F40069FB30 /* ValidatorsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorsRepository.swift; sourceTree = "<group>"; };
 		A5CF9F29207242FE0069FB30 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				A57057291EF117C40092CDAB /* Assets.xcassets */,
 				A570572B1EF117C40092CDAB /* LaunchScreen.storyboard */,
 				A570572E1EF117C40092CDAB /* Info.plist */,
+				A5C44888207777C10043273E /* API.swift */,
 			);
 			path = SwiftUtils;
 			sourceTree = "<group>";
@@ -1256,6 +1259,7 @@
 				A5CF9F3A207242FE0069FB30 /* TextFieldAccessoryView.swift in Sources */,
 				A595A3EF1FCD7FCE0017CA52 /* Presentable.swift in Sources */,
 				A5CF9F39207242FE0069FB30 /* ToolbarTextView.swift in Sources */,
+				A5C44889207777C10043273E /* API.swift in Sources */,
 				A595A3A61FCD7FCE0017CA52 /* DropdownPresenter.swift in Sources */,
 				A5241C521FA74A02008463EE /* ViewController.swift in Sources */,
 				A595A3DC1FCD7FCE0017CA52 /* Dictionary+JSON.swift in Sources */,
