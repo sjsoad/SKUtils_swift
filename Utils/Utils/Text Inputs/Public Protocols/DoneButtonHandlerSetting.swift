@@ -10,5 +10,6 @@ import UIKit
 import Foundation
 
 protocol DoneButtonHandlerSetting {
-    func set<HandlerType>(doneButtonHandler handler: HandlerType)
+    associatedtype HandlerType = Any
+    func set(doneButtonHandler handler: HandlerType)
 }

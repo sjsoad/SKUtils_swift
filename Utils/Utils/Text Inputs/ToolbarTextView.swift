@@ -67,7 +67,7 @@ extension ToolbarTextView: DoneTitleSetting {
 
 extension ToolbarTextView: DoneButtonHandlerSetting {
     
-    func set<HandlerType>(doneButtonHandler handler: HandlerType) {
-        doneButtonHandler = handler as? ToolbarTextViewDoneButtonHandler
+    func set(doneButtonHandler handler: @escaping ToolbarTextViewDoneButtonHandler) {
+        doneButtonHandler = handler
     }
 }
