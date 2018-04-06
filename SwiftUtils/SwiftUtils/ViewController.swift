@@ -10,18 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var bluetoothPermissions: BluetoothPermissions = {
-        let alertTitles = AlertTitles(title: "bluetooth", message: "!", actionButtonTitle: "Go Settings", cancelButtonTitle: "Cancel")
-        let bluetoothPermissions = BluetoothPermissions(settingAlertTitles: alertTitles)
+    private var photoLibraryPermissions: PhotoLibraryPermissions = {
+        let alertTitles = AlertTitles(title: "Photo Library Permissions", message: "!", actionButtonTitle: "Go Settings", cancelButtonTitle: "Cancel")
+        let bluetoothPermissions = PhotoLibraryPermissions(settingAlertTitles: alertTitles)
         return bluetoothPermissions
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bluetoothPermissions.requestPermissions { (state) in
-            print(state.authStatus.rawValue)
-            print(state.state.rawValue)
-        }
+//        DispatchQueue.global(qos: .background).async { [weak self] in
+//            /*self?.*/photoLibraryPermissions.requestPermissions { [weak self] (state) in
+//                if state == .denied {
+                    /*self?.*/photoLibraryPermissions.showSettingsAlert()
+//                }
+//            }
+//        }
+       
     }
     
 }

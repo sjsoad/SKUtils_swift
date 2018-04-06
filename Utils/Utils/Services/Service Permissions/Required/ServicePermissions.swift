@@ -39,8 +39,8 @@ class DefaultServicePermissions: NSObject {
     
     func showSettingsAlert() {
         let settingsAction = UIAlertAction.defaultAction(title: alertTitles.actionButtonTitle,
-                                                         handler: { _ in
-                                                            self.openSettings()
+                                                         handler: { [weak self] _ in
+                                                            self?.openSettings()
         })
         let cancelAction = UIAlertAction.cancelAction(title: alertTitles.cancelButtonTitle)
         let alert = UIAlertController(title: alertTitles.title,
@@ -48,20 +48,18 @@ class DefaultServicePermissions: NSObject {
                                       preferredStyle: .alert)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        if Thread.isMainThread {
-            alert.show(animated: true, completion: nil)
-        } else {
+        guard Thread.isMainThread else {
             openInMainThread(alert: alert)
+            return
         }
+        alert.show(animated: true, completion: nil)
     }
     
     // MARK: - Private -
     
     private func openSettings() {
-        let settingsURL = URL(string: UIApplicationOpenSettingsURLString)
-        if UIApplication.shared.canOpenURL(settingsURL!) {
-            UIApplication.shared.open(settingsURL!, options: [:], completionHandler: nil)
-        }
+        guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString), UIApplication.shared.canOpenURL(settingsURL) else { return }
+        UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
     }
     
     private func openInMainThread(alert: UIAlertController) {
