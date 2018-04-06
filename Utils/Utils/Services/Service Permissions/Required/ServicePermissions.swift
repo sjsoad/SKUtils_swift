@@ -43,9 +43,7 @@ class DefaultServicePermissions: NSObject {
                                                             self?.openSettings()
         })
         let cancelAction = UIAlertAction.cancelAction(title: alertTitles.cancelButtonTitle)
-        let alert = UIAlertController(title: alertTitles.title,
-                                      message: alertTitles.message,
-                                      preferredStyle: .alert)
+        let alert = UIAlertController(title: alertTitles.title, message: alertTitles.message, preferredStyle: .alert)
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
         guard Thread.isMainThread else {
