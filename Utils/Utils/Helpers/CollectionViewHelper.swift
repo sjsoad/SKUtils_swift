@@ -10,6 +10,13 @@ import UIKit
 
 class CollectionViewHelper: NSObject {
 
+    // MARK: - Registration -
+    
+    static func register(cellClass: ReusableCell.Type, for collectionView: UICollectionView) {
+        let cellNib = UINib(nibName: cellClass.nibName, bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
+    }
+    
     // MARK: - Update Height -
     
     static func updateHeight(of collectionView: UICollectionView, height constraint: NSLayoutConstraint, view: UIView) {
@@ -17,6 +24,17 @@ class CollectionViewHelper: NSObject {
         let collectionContentHeight = collectionView.contentSize.height + collectionView.contentInset.top + collectionView.contentInset.bottom
         if constraintValue != collectionContentHeight {
             constraint.constant = collectionContentHeight
+            UIView.animate(withDuration: 0.25) {
+                view.layoutIfNeeded()
+            }
+        }
+    }
+   
+    static func updateWidth(of collectionView: UICollectionView, width constraint: NSLayoutConstraint, view: UIView) {
+        let constraintValue = constraint.constant
+        let collectionContentWidth = collectionView.contentSize.width + collectionView.contentInset.left + collectionView.contentInset.right
+        if constraintValue != collectionContentWidth {
+            constraint.constant = collectionContentWidth
             UIView.animate(withDuration: 0.25) {
                 view.layoutIfNeeded()
             }

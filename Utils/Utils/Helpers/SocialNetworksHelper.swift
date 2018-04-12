@@ -42,9 +42,9 @@ class SocialNetworksHelper: NSObject {
     // MARK: - Private -
     
     private static func open(appLink: String?, alternative webLink: String?) {
-        if let appLink = appLink, let appUrl = URL(string: appLink), canOpen(appUrl) {
+        if let appUrl = appLink?.url, canOpen(appUrl) {
             open(appUrl)
-        } else  if let webLink = webLink, let webUrl = URL(string: webLink), canOpen(webUrl) {
+        } else if let webUrl = webLink?.url, canOpen(webUrl) {
             open(webUrl)
         }
     }
@@ -59,6 +59,14 @@ class SocialNetworksHelper: NSObject {
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+}
+
+private extension String {
+    
+    var url: URL? {
+        return URL(string: self)
     }
     
 }
