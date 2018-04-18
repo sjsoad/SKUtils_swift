@@ -7,37 +7,43 @@
 //
 
 import UIKit
-import GoogleMaps
+import CoreLocation
 
 class MapsHelper: NSObject {
 
-    static func navigateToMapObject(marker: GMSMarker, completionHandler: ((Bool) -> Void)?) {
-        if isGoogleMapsAvailable() {
-            openInGoogleMaps(marker: marker, completionHandler: completionHandler)
-        } else {
-            openInNativeMaps(marker: marker, completionHandler: completionHandler)
+    static func navigate(to coordinates: CLLocationCoordinate2D, completionHandler: ((Bool) -> Void)?) {
+        guard isGoogleMapsAvailable() else {
+            openInNativeMaps(for: coordinates, completionHandler: completionHandler)
+            return
         }
+        openInGoogleMaps(for: coordinates, completionHandler: completionHandler)
     }
     
     static func isGoogleMapsAvailable() -> Bool {
         guard let googleMapsURL = URL(string: "comgooglemaps://") else { return false }
-        return UIApplication.shared.canOpenURL(googleMapsURL)
+        return app().canOpenURL(googleMapsURL)
     }
     
-    private static func openInGoogleMaps(marker: GMSMarker, completionHandler: ((Bool) -> Void)?) {
-        let urlString = String(format: "comgooglemaps://?daddr=%f,%f&directionsmode=driving",
-                         marker.position.latitude,
-                         marker.position.longitude)
-        guard let url = URL(string: urlString) else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: completionHandler)
+    // MARK: - Private -
+    
+    private static func app() -> UIApplication {
+        return UIApplication.shared
+    }
+    
+    private static func openInGoogleMaps(for coordinates: CLLocationCoordinate2D, completionHandler: ((Bool) -> Void)?) {
+        let urlString = String(format: "comgooglemaps://?daddr=%f,%f&directionsmode=driving", coordinates.latitude, coordinates.longitude)
+        guard let url = URL(string: urlString), app().canOpenURL(url) else {
+            completionHandler?(false)
+            return }
+        app().open(url, options: [:], completionHandler: completionHandler)
     }
 
-    private static func openInNativeMaps(marker: GMSMarker, completionHandler: ((Bool) -> Void)?) {
-        let urlString = String(format: "http://maps.apple.com/maps?daddr=%.6f,%.6f",
-                         marker.position.latitude,
-                         marker.position.longitude)
-        guard let url = URL(string: urlString) else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: completionHandler)
+    private static func openInNativeMaps(for coordinates: CLLocationCoordinate2D, completionHandler: ((Bool) -> Void)?) {
+        let urlString = String(format: "http://maps.apple.com/maps?daddr=%.6f,%.6f", coordinates.latitude, coordinates.longitude)
+        guard let url = URL(string: urlString), app().canOpenURL(url) else {
+            completionHandler?(false)
+            return }
+        app().open(url, options: [:], completionHandler: completionHandler)
     }
     
 }
