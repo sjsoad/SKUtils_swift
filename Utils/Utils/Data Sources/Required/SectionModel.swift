@@ -30,7 +30,7 @@ extension SectionModel: DataSourceSectionAppendable {
     
     func append(newItems: [DataSourceModel], handler: DataSourceSectionChangeHandler?) {
         let lastIndex = items.count - 1
-        items.append(contentsOf: items)
+        items.append(contentsOf: newItems)
         let diff = Array(lastIndex + 1...lastIndex + newItems.count)
         handler?(diff)
     }
@@ -65,14 +65,14 @@ extension SectionModel: DataSourceSectionRemovable {
 extension SectionModel: DataSourceSectionInsertable {
     
     func insert(newItems: [DataSourceModel], at index: Int, handler: DataSourceSectionChangeHandler?) {
-        guard self.items.indices.contains(index) else { return }
-        self.items.insert(contentsOf: items, at: index)
-        let diff = Array(index...index + items.count - 1)
+        guard self.items.indices.contains(index) || index == 0 else { return }
+        self.items.insert(contentsOf: newItems, at: index)
+        let diff = Array(index...index + newItems.count - 1)
         handler?(diff)
     }
     
     func insert(item: DataSourceModel, at index: Int, handler: DataSourceSectionChangeHandler?) {
-        guard self.items.indices.contains(index) else { return }
+        guard self.items.indices.contains(index) || index == 0 else { return }
         self.items.insert(item, at: index)
         let diff = [index]
         handler?(diff)

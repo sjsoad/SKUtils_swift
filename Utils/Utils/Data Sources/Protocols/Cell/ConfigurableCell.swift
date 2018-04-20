@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 protocol ConfigurableCell: ReusableCell {
-    
+
     func configure<T>(viewModel: T)
 }
