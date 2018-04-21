@@ -104,7 +104,7 @@ extension ArrayDataSourceRepresentable where Self: NSObject {
     // MARK: - DataSourceAppendable -
     
     func append(items: [DataSourceModel], toSectionAtIndex sectionIndex: Int, handler: DataSourceSectionsChangeHandler?) {
-        guard sections.indices.contains(sectionIndex) else { return }
+        guard sections.indices.contains(sectionIndex), !items.isEmpty else { return }
         let section = sections[sectionIndex]
         section.append(newItems: items) { (indexes) in
             let indexPathes = IndexPath.generateIndexPathes(from: indexes, sectionIndex: sectionIndex)
@@ -138,7 +138,7 @@ extension ArrayDataSourceRepresentable where Self: NSObject {
     // MARK: - DataSourceInsertable -
     
     func insert(items: [DataSourceModel], at indexPath: IndexPath, handler: DataSourceSectionsChangeHandler?) {
-        guard sections.indices.contains(indexPath.section) else { return }
+        guard sections.indices.contains(indexPath.section), !items.isEmpty else { return }
         let section = sections[indexPath.section]
         section.insert(newItems: items, at: indexPath.row) { (indexes) in
             let indexPathes = IndexPath.generateIndexPathes(from: indexes, sectionIndex: indexPath.section)

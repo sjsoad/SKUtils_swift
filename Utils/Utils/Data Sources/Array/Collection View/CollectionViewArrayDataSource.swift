@@ -21,6 +21,7 @@ class CollectionViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
     // MARK: - DataSourceAppendable -
     
     func append(newSections: [SectionModel], handler: DataSourceChangeHandler?) {
+        guard !newSections.isEmpty else { return }
         let lastIndex = sections.count - 1
         self.sections.append(contentsOf: newSections)
         let diff = Array(lastIndex + 1...lastIndex + newSections.count)
@@ -49,12 +50,14 @@ class CollectionViewArrayDataSource: NSObject, ArrayDataSourceRepresentable {
     // MARK: - DataSourceInsertable -
     
     func insert(newSections: [SectionModel], at index: Int, handler: DataSourceChangeHandler?) {
+        guard !newSections.isEmpty, sections.indices.contains(index) || index == 0 else { return }
         sections.insert(contentsOf: newSections, at: index)
         let diff = Array(index...index + sections.count - 1)
         handler?(diff)
     }
     
     func insert(newSection: SectionModel, at index: Int, handler: DataSourceChangeHandler?) {
+        guard sections.indices.contains(index) || index == 0 else { return }
         self.sections.insert(newSection, at: index)
         handler?([index])
     }
