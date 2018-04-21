@@ -47,7 +47,7 @@ class ToolbarTextView: UITextView {
     // MARK: - Actions -
     
     @objc func doneButtonPressed(_ sender: UIBarButtonItem) {
-        resignFirstResponder()
+        NotificationCenter.default.post(name: .UITextViewTextDidEndEditing, object: self)
         doneButtonHandler?(self, sender)
     }
     

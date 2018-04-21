@@ -17,7 +17,7 @@ protocol ___VARIABLE_fileName:identifier___Output {
     
 }
 
-class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting, RequestErrorHandling {
+class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
     private weak var view: ___VARIABLE_fileName:identifier___Interface?
     
@@ -60,23 +60,31 @@ class ___FILEBASENAMEASIDENTIFIER___: NSObject, RequestExecuting, RequestErrorHa
          */
     }
     
-    // MARK: - ActivityViewable -
-    
-    func activityView() -> ActivityViewable? {
-        return view
-    }
-
-    // MARK: - AlertViewable -
-    
-    func alertView() -> AlertViewable? {
-        return view
-    }
-    
 }
 
 // MARK: - ___VARIABLE_fileName:identifier___Output -
 
 extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_fileName:identifier___Output {
     
+    
+}
+
+// MARK: - RequestExecuting -
+
+extension ___FILEBASENAMEASIDENTIFIER___: RequestExecuting {
+    
+    func activityView() -> ActivityViewable? {
+        return view
+    }
+    
+}
+
+// MARK: - RequestErrorHandling -
+
+extension ___FILEBASENAMEASIDENTIFIER___: RequestErrorHandling {
+    
+    func alertView() -> AlertViewable? {
+        return view
+    }
     
 }
