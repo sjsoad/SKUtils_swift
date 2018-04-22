@@ -25,7 +25,7 @@ enum AccessoryViewState: Int {
 
 typealias DrawingHandler = (_ view: TextFieldAccessoryView) -> Void
 
-class TextFieldAccessoryView: UIView {
+public class TextFieldAccessoryView: UIView {
     
     @IBInspectable var errorStateColor: UIColor = UIColor.red
     @IBInspectable var successStateColor: UIColor = UIColor.green
@@ -49,7 +49,7 @@ class TextFieldAccessoryView: UIView {
         }
     }
 
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         if let drawingHandler = drawing {
             drawingHandler(self)

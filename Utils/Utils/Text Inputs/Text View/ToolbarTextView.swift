@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias ToolbarTextViewDoneButtonHandler = ((_ textView: UITextView, _ sender: UIBarButtonItem) -> Void)
+public typealias ToolbarTextViewDoneButtonHandler = ((_ textView: UITextView, _ sender: UIBarButtonItem) -> Void)
 
-class ToolbarTextView: UITextView {
+public class ToolbarTextView: UITextView {
 
     private var doneButtonHandler: ToolbarTextViewDoneButtonHandler?
     
@@ -57,7 +57,7 @@ class ToolbarTextView: UITextView {
 
 extension ToolbarTextView: DoneTitleSetting {
     
-    func set(doneTitle title: String) {
+    public func set(doneTitle title: String) {
         doneButtonTitle = title
     }
     
@@ -67,7 +67,7 @@ extension ToolbarTextView: DoneTitleSetting {
 
 extension ToolbarTextView: DoneButtonHandlerSetting {
     
-    func set(doneButtonHandler handler: @escaping ToolbarTextViewDoneButtonHandler) {
+    public func set(doneButtonHandler handler: @escaping ToolbarTextViewDoneButtonHandler) {
         doneButtonHandler = handler
     }
 }

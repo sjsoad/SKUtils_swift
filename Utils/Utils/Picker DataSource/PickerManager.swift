@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol PickerRow {
+public protocol PickerRow {
     
     var title: String? { get }
     var attributedTitle: NSAttributedString? { get }
     
 }
 
-class PickerComponentObject: NSObject {
+public class PickerComponentObject: NSObject {
     
     var items: [PickerRow] = [PickerRow]()
     
@@ -25,10 +25,10 @@ class PickerComponentObject: NSObject {
     
 }
 
-class PickerRowObject: NSObject, PickerRow {
+public class PickerRowObject: NSObject, PickerRow {
 
-    private(set) var title: String?
-    private(set) var attributedTitle: NSAttributedString?
+    private(set) public var title: String?
+    private(set) public var attributedTitle: NSAttributedString?
 
     init(title: String? = nil,
          attributedTitle: NSAttributedString? = nil) {
@@ -38,7 +38,7 @@ class PickerRowObject: NSObject, PickerRow {
     
 }
 
-class PickerDataSourceConfigurator {
+public class PickerDataSourceConfigurator {
 
     var components: [PickerComponentObject] = [PickerComponentObject]()
 
@@ -48,13 +48,16 @@ class PickerDataSourceConfigurator {
     
 }
 
-typealias PickerManagerSelectionHandler = (PickerRow, _ component: Int, _ row: Int) -> Void
+public typealias PickerManagerSelectionHandler = (PickerRow, _ component: Int, _ row: Int) -> Void
+public typealias PickerManagerSelectionSettingHandler = ([IndexPath]) -> Void
 
-class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+public class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
 
     private var configuration: PickerDataSourceConfigurator!
     private var handler: PickerManagerSelectionHandler?
-    private(set) var selectedIndexes = [IndexPath]()
+    private(set) public var selectedIndexes = [IndexPath]()
+    
+    public var selectionSettingHandler: PickerManagerSelectionSettingHandler?
     
     init(configuration: PickerDataSourceConfigurator,
          selectionHandler: PickerManagerSelectionHandler? = nil) {
@@ -66,35 +69,35 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
     
     func set(selectedIndexes: [IndexPath]) {
         self.selectedIndexes = selectedIndexes
+        selectionSettingHandler?(selectedIndexes)
     }
     
     // MARK: - UIPickerViewDataSource -
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return configuration.components.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return configuration.components[component].items.count
     }
     
     // MARK: - UIPickerViewDelegate -
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         guard itemExistsIn(component: component, at: row) else { return nil }
         return configuration.components[component].items[row].title
     }
 
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    public func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         guard itemExistsIn(component: component, at: row) else { return nil }
         return configuration.components[component].items[row].attributedTitle
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let handler = handler, itemExistsIn(component: component, at: row) else { return }
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard itemExistsIn(component: component, at: row) else { return }
         let rowObject = configuration.components[component].items[row]
         let selectedIndex = IndexPath(row: row, section: component)
-        // TODO - Check
         if let indexPath = selectedIndexes.filter({ (indexPath) -> Bool in
             return indexPath.section == component
         }).first, let index = selectedIndexes.index(of: indexPath) {
@@ -102,7 +105,7 @@ class PickerManager: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
         } else {
             selectedIndexes.append(selectedIndex)
         }
-        handler(rowObject, component, row)
+        handler?(rowObject, component, row)
     }
     
     // MARK: - Private -

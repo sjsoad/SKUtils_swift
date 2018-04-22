@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker: UIDatePicker, _ date: Date) -> Void)
+public typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker: UIDatePicker, _ date: Date) -> Void)
 
-class DatePickerField: ToolbarTextField {
+public class DatePickerField: ToolbarTextField {
     
     private var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
     
@@ -47,7 +47,7 @@ class DatePickerField: ToolbarTextField {
 
 extension DatePickerField: DateSelectionHandlerSetting {
     
-    func set(dateSelectionHandler handler: @escaping DatePickerFieldDateSelectionHandler) {
+    public func set(dateSelectionHandler handler: @escaping DatePickerFieldDateSelectionHandler) {
         dateSelectionHandler = handler
     }
     

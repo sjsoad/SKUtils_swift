@@ -8,9 +8,9 @@
 
 import UIKit
 
-typealias ToolbarFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBarButtonItem) -> Void)
+public typealias ToolbarFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBarButtonItem) -> Void)
 
-class ToolbarTextField: BaseTextField {
+public class ToolbarTextField: BaseTextField {
     
     private var doneButtonHandler: ToolbarFieldDoneButtonHandler?
     
@@ -57,7 +57,7 @@ class ToolbarTextField: BaseTextField {
 
 extension ToolbarTextField: DoneTitleSetting {
     
-    func set(doneTitle title: String) {
+    public func set(doneTitle title: String) {
         doneButtonTitle = title
     }
     
@@ -67,7 +67,7 @@ extension ToolbarTextField: DoneTitleSetting {
 
 extension ToolbarTextField: DoneButtonHandlerSetting {
     
-    func set(doneButtonHandler handler: @escaping ToolbarFieldDoneButtonHandler) {
+    public func set(doneButtonHandler handler: @escaping ToolbarFieldDoneButtonHandler) {
         doneButtonHandler = handler
     }
 }

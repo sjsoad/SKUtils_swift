@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PickerViewManager
 
-class PickerViewField: ToolbarTextField {
+public class PickerViewField: ToolbarTextField {
     
     // MARK: - Lazy -
     
@@ -36,18 +37,33 @@ class PickerViewField: ToolbarTextField {
         super.doneButtonPressed(sender)
     }
     
+    // MARK: - Private -
+    
+    private func reloadPicker() {
+        picker.reloadAllComponents()
+    }
+    
+    private func selectRows(at indexPathes: [IndexPath]) {
+        for indexPath in indexPathes {
+            guard indexPath.row > 0, indexPath.section < picker.numberOfComponents,
+                indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
+            picker.selectRow(indexPath.row, inComponent: indexPath.section, animated: false)
+        }
+    }
+    
 }
 
 // MARK: - PickerViewFieldReloading -
 
 extension PickerViewField: PickerViewFieldReloading {
     
-    func reload(with manager: PickerManager) {
+    public func reload(with manager: PickerManager) {
         picker.dataSource = manager
         picker.delegate = manager
-        picker.reloadAllComponents()
-        for selectedIndex in manager.selectedIndexes {
-            picker.selectRow(selectedIndex.row, inComponent: selectedIndex.section, animated: false)
+        reloadPicker()
+        selectRows(at: manager.selectedIndexes)
+        manager.selectionSettingHandler = { [weak self] (selectedIndicies) in
+            self?.selectRows(at: selectedIndicies)
         }
     }
     
